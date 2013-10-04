@@ -33,7 +33,7 @@ THE SOFTWARE.
     </parent>
 
   <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
-  <artifactId>ui-samples-plugin</artifactId>
+  <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
   <packaging>hpi</packaging>
 
   <name>Jenkins UI sample plugin</name>
@@ -47,9 +47,9 @@ THE SOFTWARE.
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
+        <connection>scm:git:git://github.com/jenkinsci/ui-samples-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/ui-samples-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/ui-samples-plugin</url>
     </scm>
     <repositories>
         <repository>
