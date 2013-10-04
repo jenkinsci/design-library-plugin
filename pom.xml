@@ -34,6 +34,7 @@ THE SOFTWARE.
 
   <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
   <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
+  <version>2.0-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <name>Jenkins UI sample plugin</name>
