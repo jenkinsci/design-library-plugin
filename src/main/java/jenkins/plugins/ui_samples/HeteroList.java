@@ -24,22 +24,24 @@
 
 package jenkins.plugins.ui_samples;
 
+import com.google.common.collect.ImmutableList;
 import hudson.Extension;
 import hudson.XmlFile;
 import hudson.model.AbstractDescribableImpl;
 import hudson.model.Descriptor;
 import hudson.util.FormApply;
 import hudson.util.ListBoxModel;
+import jenkins.model.Jenkins;
+import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.HttpResponse;
+import org.kohsuke.stapler.StaplerRequest;
+
+import javax.servlet.ServletException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.servlet.ServletException;
-import jenkins.model.Jenkins;
-import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.HttpResponse;
-import org.kohsuke.stapler.StaplerRequest;
 
 @Extension public final class HeteroList extends UISample {
 
@@ -147,4 +149,23 @@ import org.kohsuke.stapler.StaplerRequest;
         }
     }
 
+    public static final class HeteroRadioEntry extends Entry {
+        private final Entry entry;
+
+        @DataBoundConstructor public HeteroRadioEntry(Entry entry) { this.entry = entry; }
+
+        public Entry getEntry() {
+            return entry;
+        }
+
+        @Extension public static class DescriptorImpl extends Descriptor<Entry> {
+
+            @Override public String getDisplayName() { return "Hetero-Radio"; }
+
+            public List<Descriptor> getEntryDescriptors() {
+                Jenkins jenkins = Jenkins.getInstance();
+                return ImmutableList.of(jenkins.getDescriptor(ChoiceEntry.class), jenkins.getDescriptor(SimpleEntry.class));
+            }
+        }
+    }
 }
