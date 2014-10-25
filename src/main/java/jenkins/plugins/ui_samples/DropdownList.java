@@ -37,7 +37,8 @@ public class DropdownList extends UISample {
 
     // Process form data and show it as serialized XML
     public void doSubmit(StaplerRequest req, StaplerResponse rsp) throws ServletException, IOException {
-        // stapler-class in form data tells Stapler which Fruit subclass to use
+        // '$class' in form data tells Stapler which Fruit subclass to use,
+        // older versions of Jenkins/Stapler used 'stapler-class'
         Fruit fruit = req.bindJSON(Fruit.class, req.getSubmittedForm().getJSONObject("fruit"));
         rsp.setContentType("text/plain");
         new XStream2().toXML(fruit, rsp.getWriter());
