@@ -96,9 +96,7 @@ import java.util.List;
             return Collections.unmodifiableList(entries);
         }
 
-        @Extension public static class DescriptorImpl extends Descriptor<Config> {
-            @Override public String getDisplayName() {return "";}
-        }
+        @Extension public static class DescriptorImpl extends Descriptor<Config> {}
 
     }
 

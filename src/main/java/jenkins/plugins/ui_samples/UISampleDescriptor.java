@@ -5,9 +5,4 @@ import hudson.model.Descriptor;
 /**
  * @author Kohsuke Kawaguchi
  */
-public abstract class UISampleDescriptor extends Descriptor<UISample> {
-    @Override
-    public String getDisplayName() {
-        return clazz.getSimpleName();
-    }
-}
+public abstract class UISampleDescriptor extends Descriptor<UISample> {}

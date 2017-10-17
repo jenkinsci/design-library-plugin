@@ -67,11 +67,6 @@ public class FormFieldValidationWithContext extends UISample {
 
         @Extension
         public static class DescriptorImpl extends Descriptor<State> {
-            @Override
-            public String getDisplayName() {
-                return "";
-            }
-
             public FormValidation doCheckName(@QueryParameter String value,
                                                    @RelativePath("capital") @QueryParameter String name) {
                 /*
@@ -98,11 +93,6 @@ public class FormFieldValidationWithContext extends UISample {
 
         @Extension
         public static class DescriptorImpl extends Descriptor<City> {
-            @Override
-            public String getDisplayName() {
-                return "";
-            }
-
             public FormValidation doCheckName(@QueryParameter String value,
                                                    @RelativePath("..") @QueryParameter String name) {
                 /*
