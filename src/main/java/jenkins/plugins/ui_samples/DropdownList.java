@@ -65,14 +65,7 @@ public class DropdownList extends UISample {
         }
     }
 
-    public static class FruitDescriptor extends Descriptor<Fruit> {
-        public FruitDescriptor(Class<? extends Fruit> clazz) {
-            super(clazz);
-        }
-        public String getDisplayName() {
-            return clazz.getSimpleName();
-        }
-    }
+    public static class FruitDescriptor extends Descriptor<Fruit> {}
 
     public static class Apple extends Fruit {
         private int seeds;
@@ -80,7 +73,8 @@ public class DropdownList extends UISample {
             super("Apple");
             this.seeds = seeds;
         }
-        @Extension public static final FruitDescriptor D = new FruitDescriptor(Apple.class);
+        @Extension
+        public static final class DescriptorImpl extends FruitDescriptor {}
     }
 
     public static class Banana extends Fruit {
@@ -89,6 +83,7 @@ public class DropdownList extends UISample {
             super("Banana");
             this.yellow = yellow;
         }
-        @Extension public static final FruitDescriptor D = new FruitDescriptor(Banana.class);
+        @Extension
+        public static final class DescriptorImpl extends FruitDescriptor {}
     }
 }

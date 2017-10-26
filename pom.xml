@@ -24,44 +24,44 @@ THE SOFTWARE.
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.533</version>
+        <version>2.36</version>
+        <relativePath />
     </parent>
 
-  <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
-  <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
-  <version>2.1-SNAPSHOT</version>
-  <packaging>hpi</packaging>
+    <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
+    <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
+    <version>2.1-SNAPSHOT</version>
+    <packaging>hpi</packaging>
 
-  <name>Jenkins UI sample plugin</name>
-  <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
-  <url>http://wiki.jenkins-ci.org/display/JENKINS/UI+Samples+Plugin</url>
+    <name>Jenkins UI sample plugin</name>
+    <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
+    <url>https://wiki.jenkins.io/display/JENKINS/UI+Samples+Plugin</url>
+
+    <properties>
+        <jenkins.version>2.7.3</jenkins.version>
+    </properties>
 
     <licenses>
         <license>
             <name>MIT</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
-    <scm>
-        <connection>scm:git:git://github.com/jenkinsci/ui-samples-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/ui-samples-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/ui-samples-plugin</url>
-    </scm>
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
+            <url>https://repo.jenkins-ci.org/public/</url>
         </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
+            <url>https://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -74,15 +74,15 @@ THE SOFTWARE.
         </dependency>
     </dependencies>
 
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-      <resource><!-- copy all Java source files as resources -->
-        <directory>src/main/java</directory>
-      </resource>
-    </resources>
-  </build>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource><!-- copy all Java source files as resources -->
+                <directory>src/main/java</directory>
+            </resource>
+        </resources>
+    </build>
 
 </project>
