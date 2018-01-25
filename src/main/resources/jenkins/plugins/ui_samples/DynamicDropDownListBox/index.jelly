@@ -26,6 +26,8 @@ THE SOFTWARE.
   <s:sample title="Dynamic Drop DownList Box Sample">
     <form>
       <table>
+        <!-- Note: If your dynamic dropdown is inside a block, such as f:radioBlock, and you want to
+             refer to a field outside the block, you must set the block's "inline" attribute to true. -->
         <f:entry title="Country" field="country">
           <f:textbox />
         </f:entry>
