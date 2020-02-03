@@ -29,7 +29,7 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>2.36</version>
+        <version>4.0-beta-4</version>
         <relativePath />
     </parent>
 
@@ -40,10 +40,10 @@ THE SOFTWARE.
 
     <name>Jenkins UI sample plugin</name>
     <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
-    <url>https://wiki.jenkins.io/display/JENKINS/UI+Samples+Plugin</url>
 
     <properties>
-        <jenkins.version>2.7.3</jenkins.version>
+        <jenkins.version>2.204.2</jenkins.version>
+        <java.level>8</java.level>
     </properties>
 
     <licenses>
