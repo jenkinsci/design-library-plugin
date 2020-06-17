@@ -42,7 +42,7 @@ THE SOFTWARE.
     <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
 
     <properties>
-        <jenkins.version>2.204.2</jenkins.version>
+        <jenkins.version>2.242-rc30041.29a109c9a377</jenkins.version>
         <java.level>8</java.level>
         <spotbugs.failOnError>false</spotbugs.failOnError> <!-- not production code -->
     </properties>
