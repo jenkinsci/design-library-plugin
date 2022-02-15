@@ -23,38 +23,14 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <l:layout title="UI Samples">
+  <l:layout title="Home">
+    <l:side-panel>
+      <s:sidepanel />
+    </l:side-panel>
+
     <l:main-panel>
-      <h1>UI Samples</h1>
-
-      <h2>Groovy Templates</h2>
-
-      <table>
-        <j:forEach var="s" items="${it.allGroovy}">
-          <t:summary icon="document.gif"
-                     href="${s.urlName}" iconOnly="true">
-            <div class="link"><a href="${href}">${s.displayName}</a></div>
-            <div style="color:gray; text-decoration:none;">
-              <j:out value="${s.description}"/>
-            </div>
-          </t:summary>
-        </j:forEach>
-      </table>
-
-      <h2>Jelly Templates</h2>
-      
-      <table>
-        <j:forEach var="s" items="${it.allOther}">
-          <t:summary icon="document.gif"
-                     href="${s.urlName}" iconOnly="true">
-            <div class="link"><a href="${href}">${s.displayName}</a></div>
-            <div style="color:gray; text-decoration:none;">
-              <j:out value="${s.description}"/>
-            </div>
-          </t:summary>
-        </j:forEach>
-      </table>
-      
+      <h1>Welcome to Design System</h1>
+      <h1>Cards will go here</h1>
     </l:main-panel>
   </l:layout>
 </j:jelly>

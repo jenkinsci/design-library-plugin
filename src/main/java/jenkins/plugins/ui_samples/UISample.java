@@ -71,41 +71,11 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
     public abstract String getDescription();
 
     public UISampleDescriptor getDescriptor() {
-        return (UISampleDescriptor) Jenkins.getInstance().getDescriptorOrDie(getClass());
+        return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
     }
 
-    /**
-     * Returns all the registered {@link UISample}s.
-     */
-    public static ExtensionList<UISample> all() {
-        return Jenkins.getInstance().getExtensionList(UISample.class);
-    }
-
-    public static List<UISample> getGroovySamples() {
-        List<UISample> r = new ArrayList<UISample>();
-        for (UISample uiSample : UISample.all()) {
-            for (SourceFile src : uiSample.getSourceFiles()) {
-                if (src.name.contains("groovy")) {
-                    r.add(uiSample);
-                    break;
-                }
-            }
-        }
-        return r;
-    }
-
-    public static List<UISample> getOtherSamples() {
-        List<UISample> r = new ArrayList<UISample>();
-        OUTER:
-        for (UISample uiSample : UISample.all()) {
-            for (SourceFile src : uiSample.getSourceFiles()) {
-                if (src.name.contains("groovy")) {
-                    continue OUTER;
-                }
-            }
-            r.add(uiSample);
-        }
-        return r;
+    public static List<UISample> getAll() {
+        return new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
     }
 
     /**
@@ -131,5 +101,4 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
             copy(resolve().openStream(),rsp.getOutputStream());
         }
     }
-
 }

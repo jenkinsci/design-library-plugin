@@ -1,0 +1,12 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
+  <h1 style="margin: 2rem 0 1rem 2rem;">UI Samples</h1>
+
+  <l:tasks>
+    <l:task title="${%Home}" href="${rootURL}/ui-samples" icon="symbol-search"/>
+
+    <j:forEach var="s" items="${it.all}">
+      <l:task title="${s.displayName}" href="${rootURL}/ui-samples/${s.urlName}" icon="document.gif"/>
+    </j:forEach>
+  </l:tasks>
+</j:jelly>
