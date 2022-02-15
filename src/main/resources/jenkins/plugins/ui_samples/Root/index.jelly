@@ -29,8 +29,7 @@ THE SOFTWARE.
     </l:side-panel>
 
     <l:main-panel>
-      <h1>Welcome to Design System</h1>
-      <h1>Cards will go here</h1>
+      <h1 class="massive-xl">Jenkins Design Library</h1>
     </l:main-panel>
   </l:layout>
 </j:jelly>

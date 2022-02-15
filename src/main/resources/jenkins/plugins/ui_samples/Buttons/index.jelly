@@ -25,54 +25,14 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-    <s:sample title="Table">
-        <table class="jenkins-table sortable">
-            <thead>
-                <th>
-                    Hello world
-                </th>
-                <th>
-                    Hello world
-                </th>
-                <th>
-                    Hello world
-                </th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        Row
-                    </td>
-                    <td>
-                        Row
-                    </td>
-                    <td>
-                        Row
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Row
-                    </td>
-                    <td>
-                        Row
-                    </td>
-                    <td>
-                        Row
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Row
-                    </td>
-                    <td>
-                        Row
-                    </td>
-                    <td>
-                        Row
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </s:sample>
+  <s:sample title="Table">
+    <button class="jenkins-button">Example</button>
+    <button class="jenkins-button jenkins-button--primary">Example</button>
+    <button class="jenkins-button jenkins-button--destructive">Example</button>
+    <button class="jenkins-button jenkins-button--transparent">Example</button>
+    <button class="jenkins-button">Example</button>
+
+    <h1>Copy button</h1>
+
+  </s:sample>
 </j:jelly>

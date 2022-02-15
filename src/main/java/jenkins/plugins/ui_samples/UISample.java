@@ -22,7 +22,7 @@ import org.kohsuke.stapler.StaplerResponse;
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
     public String getIconFileName() {
-        return "gear.png";
+        return "symbol-cube";
     }
 
     public String getUrlName() {

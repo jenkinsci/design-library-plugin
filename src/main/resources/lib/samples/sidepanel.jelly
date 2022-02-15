@@ -3,10 +3,10 @@
   <h1 style="margin: 2rem 0 1rem 2rem;">UI Samples</h1>
 
   <l:tasks>
-    <l:task title="${%Home}" href="${rootURL}/ui-samples" icon="symbol-search"/>
+    <l:task title="${%Home}" href="${rootURL}/ui-samples" icon="symbol-file-tray"/>
 
     <j:forEach var="s" items="${it.all}">
-      <l:task title="${s.displayName}" href="${rootURL}/ui-samples/${s.urlName}" icon="document.gif"/>
+      <l:task title="${s.displayName}" href="${rootURL}/ui-samples/${s.urlName}" icon="${s.iconFileName}" />
     </j:forEach>
   </l:tasks>
 </j:jelly>

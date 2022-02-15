@@ -16,11 +16,11 @@ import java.util.List;
 @Extension
 public class Root implements RootAction, ModelObjectWithContextMenu {
     public String getIconFileName() {
-        return "gear.png";
+        return "symbol-cube";
     }
 
     public String getDisplayName() {
-        return "Design System";
+        return "UI Samples";
     }
 
     public String getUrlName() {
