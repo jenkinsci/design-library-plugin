@@ -22,7 +22,7 @@ import org.kohsuke.stapler.StaplerResponse;
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
     public String getIconFileName() {
-        return "symbol-cube";
+        return "symbol-sample";
     }
 
     public String getUrlName() {

@@ -21,14 +21,23 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
+
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout">
   <st:documentation>
-    Page layout for UI samples and variable bindings that emulate the form environment.
-    <st:attribute name="title" use="required">
-      Page title
+    Page layout for UI samples
+
+    <st:attribute name="title">
+      Overrides the default page title (defaults to the class display name)
     </st:attribute>
   </st:documentation>
+
+  <st:adjunct includes="jenkins.plugins.ui_samples.style" />
+
+  <!-- Default to class display name if title isn't set -->
+  <j:if test="${title == null}">
+    <j:set var="title" value="${it.displayName}" />
+  </j:if>
 
   <l:layout title="${title}">
     <l:side-panel>
@@ -37,18 +46,9 @@ THE SOFTWARE.
 
     <l:main-panel>
       <h1>${title}</h1>
-      <p>
+      <p class="jenkins-description">
         <j:out value="${it.description}"/>
       </p>
-
-      <h3>Source Files</h3>
-      <ul>
-        <j:forEach var="f" items="${it.sourceFiles}">
-          <li><a href="sourceFile/${f.name}">${f.name}</a></li>
-        </j:forEach>
-      </ul>
-
-      <h3>Sample</h3>
       <d:invokeBody/>
     </l:main-panel>
   </l:layout>

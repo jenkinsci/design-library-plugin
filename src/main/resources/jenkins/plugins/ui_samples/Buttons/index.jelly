@@ -24,7 +24,7 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample title="Table">
     <button class="jenkins-button">Example</button>
     <button class="jenkins-button jenkins-button--primary">Example</button>
@@ -32,7 +32,21 @@ THE SOFTWARE.
     <button class="jenkins-button jenkins-button--transparent">Example</button>
     <button class="jenkins-button">Example</button>
 
-    <h1>Copy button</h1>
+    <h2>Copy button</h2>
+    <p>A small button to copy text into a clipboard</p>
 
+    <p>  <tt>l.copyButton</tt> tag creates a small button that allows users to paste text into the clipboard. \
+      Browsers make it unbelievably hard to do this simple task, so that's why we use a tag to encapsulate it. \
+      The tag requires two mandatory attributes. One is <tt>text</tt>, which represents the text to be copied into the clipboard. \
+      The other is <tt>message</tt>, which represents a message to be displayed upon the successful copying into the clipboard.</p>
+
+    <l:copyButton message="text copied" text="here comes ABC" />
+
+    <p>
+      According to <a href="https://github.com/zeroclipboard/zeroclipboard/blob/master/docs/instructions.md#gluing">ZeroClipboard documentation</a>, \
+      which is what we use for the copying, it is desirable to have an outer block element that houses a button, to improve \
+      the accuracy of positioning a hidden flash movie. This can be specified as a CSS selector in the <tt>container</tt> attribute. \
+      Note that you do not need to set the <tt>position:relative</tt> manually, as this tag will automatically set it.
+    </p>
   </s:sample>
 </j:jelly>

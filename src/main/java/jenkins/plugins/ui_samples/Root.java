@@ -16,7 +16,7 @@ import java.util.List;
 @Extension
 public class Root implements RootAction, ModelObjectWithContextMenu {
     public String getIconFileName() {
-        return "symbol-cube";
+        return "symbol-ui-samples";
     }
 
     public String getDisplayName() {
