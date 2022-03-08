@@ -23,7 +23,7 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample title="Dropdown List Sample">
+  <s:sample>
     <form action="submit" method="post">
       <table>
         <j:set var="currentFruit" value="${it.fruit}"/>

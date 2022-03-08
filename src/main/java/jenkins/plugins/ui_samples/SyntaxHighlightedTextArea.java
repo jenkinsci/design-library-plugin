@@ -17,12 +17,6 @@ public class SyntaxHighlightedTextArea extends UISample {
         return "Syntax-highlighted text area powered by CodeMirror";
     }
 
-    public List<SourceFile> getSourceFiles() {
-        // TODO: generate this from index
-        return Arrays.asList(new SourceFile(getClass().getSimpleName() + ".java"),
-                new SourceFile("index.groovy"));
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

@@ -32,6 +32,9 @@ THE SOFTWARE.
     </st:attribute>
   </st:documentation>
 
+  <j:set var="instance" value="${it}" />
+  <j:set var="descriptor" value="${it.descriptor}" />
+
   <st:adjunct includes="jenkins.plugins.ui_samples.style" />
 
   <!-- Default to class display name if title isn't set -->

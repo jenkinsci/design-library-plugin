@@ -17,11 +17,6 @@ public class ModularizeViewScript extends UISample {
         return "Define portions of view fragments in separate methods/classes to improve reuse";
     }
 
-    public List<SourceFile> getSourceFiles() {
-        // TODO: generate this from index
-        return Arrays.asList(new SourceFile("index.groovy"));
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

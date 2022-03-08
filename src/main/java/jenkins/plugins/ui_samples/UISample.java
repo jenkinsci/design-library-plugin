@@ -37,34 +37,6 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
     }
 
     /**
-     * Source files associated with this sample.
-     */
-    public List<SourceFile> getSourceFiles() {
-        List<SourceFile> r = new ArrayList<SourceFile>();
-
-        r.add(new SourceFile(getClass().getSimpleName()+".java"));
-        for (String name : new String[]{"index.jelly","index.groovy"}) {
-            SourceFile s = new SourceFile(name);
-            if (s.resolve()!=null)
-                r.add(s);
-        }
-        return r;
-    }
-
-    /**
-     * Binds {@link SourceFile}s into URL.
-     */
-    public void doSourceFile(StaplerRequest req, StaplerResponse rsp) throws IOException {
-        String name = req.getRestOfPath().substring(1); // Remove leading /
-        for (SourceFile sf : getSourceFiles())
-            if (sf.name.equals(name)) {
-                sf.doIndex(rsp);
-                return;
-            }
-        rsp.sendError(rsp.SC_NOT_FOUND);
-    }
-
-    /**
      * Returns a paragraph of natural text that describes this sample.
      * Interpreted as HTML.
      */
@@ -76,29 +48,5 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
 
     public static List<UISample> getAll() {
         return new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
-    }
-
-    /**
-     * @author Kohsuke Kawaguchi
-     */
-    public class SourceFile {
-        public final String name;
-
-        public SourceFile(String name) {
-            this.name = name;
-        }
-
-        public URL resolve() {
-            return UISample.this.getClass().getResource(
-                (name.endsWith(".jelly") || name.endsWith(".groovy")) ? UISample.this.getClass().getSimpleName()+"/"+name : name);
-        }
-
-        /**
-         * Serves this source file.
-         */
-        public void doIndex(StaplerResponse rsp) throws IOException {
-            rsp.setContentType("text/plain;charset=UTF-8");
-            copy(resolve().openStream(),rsp.getOutputStream());
-        }
     }
 }

@@ -44,14 +44,6 @@ public class Select extends UISample {
         new XStream2().toXML(fruit, rsp.getWriter());
     }
 
-    @Override
-    public List<SourceFile> getSourceFiles() {
-        List<SourceFile> list = new java.util.ArrayList<SourceFile>(super.getSourceFiles());
-        list.add(new SourceFile("Apple/config.jelly"));
-        list.add(new SourceFile("Banana/config.jelly"));
-        return list;
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

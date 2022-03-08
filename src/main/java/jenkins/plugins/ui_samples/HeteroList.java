@@ -49,11 +49,6 @@ import java.util.List;
         return "Show a heterogeneous list of subitems with different data bindings for radio buttons and checkboxes";
     }
 
-    @Override public List<SourceFile> getSourceFiles() {
-        return super.getSourceFiles();
-        // TODO add others
-    }
-
     @Extension public static final class DescriptorImpl extends UISampleDescriptor {}
 
     public XmlFile getConfigFile() {

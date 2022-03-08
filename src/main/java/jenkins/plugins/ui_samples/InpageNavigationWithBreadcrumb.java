@@ -15,13 +15,6 @@ public class InpageNavigationWithBreadcrumb extends UISample {
         return "Adds in-page navigation with extra breadcrumb";
     }
 
-    public List<SourceFile> getSourceFiles() {
-        // TODO: generate this from index
-        return Arrays.asList(
-                new SourceFile("index.groovy"),
-                new SourceFile("header.groovy"));
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

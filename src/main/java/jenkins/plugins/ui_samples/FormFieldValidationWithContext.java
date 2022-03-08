@@ -41,14 +41,6 @@ public class FormFieldValidationWithContext extends UISample {
         return states;
     }
 
-    @Override
-    public List<SourceFile> getSourceFiles() {
-        List<SourceFile> r = super.getSourceFiles();
-        r.add(new SourceFile("City/config.groovy"));
-        r.add(new SourceFile("State/config.groovy"));
-        return r;
-    }
-
     public static class State extends AbstractDescribableImpl<State> {
         /*
             I'm lazy and just exposing fields as opposed to getter/setter.

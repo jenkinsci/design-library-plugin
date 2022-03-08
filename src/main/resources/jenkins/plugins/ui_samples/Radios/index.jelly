@@ -23,8 +23,18 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    Radios!
+    <div class="app-component-sample">
+      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+    </div>
+    <xmp class="app-code">
+      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+    </xmp>
+    <xmp class="app-code">
+      public static ListUISample getRadios() {
+        return new ArrayList(Jenkins.get().getExtensionList(UISample.class)).subList(0, 4);
+      }
+    </xmp>
   </s:sample>
 </j:jelly>
