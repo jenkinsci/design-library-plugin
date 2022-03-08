@@ -34,7 +34,7 @@ import org.kohsuke.stapler.QueryParameter;
  * @author Kohsuke Kawaguchi
  */
 @Extension
-public class AutoCompleteTextBox extends UISample {
+public class TextBox extends UISample {
     @Override
     public String getDescription() {
         return "Provide auto-completion to the text box";

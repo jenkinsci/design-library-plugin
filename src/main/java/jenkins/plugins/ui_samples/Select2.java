@@ -11,7 +11,7 @@ import org.kohsuke.stapler.QueryParameter;
  * @author Kohsuke Kawaguchi
  */
 @Extension
-public class DynamicComboBox extends UISample {
+public class Select2 extends UISample {
 
     @Override
     public String getDescription() {

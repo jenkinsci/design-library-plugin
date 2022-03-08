@@ -23,14 +23,20 @@
   -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample title="Dynamic ComboBox Sample">
-    <form>
-      <table>
-        <f:entry title="U.S. State" field="state">
-          <f:textbox />
-        </f:entry>
-      </table>
-    </form>
+  <s:sample>
+    <div class="app-component-sample">
+      <f:entry title="Example">
+        <f:textbox />
+      </f:entry>
+    </div>
+
+    <h2>Auto-completion</h2>
+    ${STATES}
+    <div class="app-component-sample">
+      <f:entry title="U.S. State" field="state">
+        <f:textbox />
+      </f:entry>
+    </div>
   </s:sample>
 </j:jelly>
 

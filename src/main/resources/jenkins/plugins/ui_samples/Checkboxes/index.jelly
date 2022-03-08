@@ -1,7 +1,7 @@
 <!--
 The MIT License
 
-Copyright 2022 Jan Faracik
+Copyright 2013 - 2022 Jesse Glick, Jan Faracik
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,57 +23,8 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <div class="app-component-sample">
-      <table class="jenkins-table sortable jenkins-!-margin-bottom-0">
-      <thead>
-        <th>
-          Hello world
-        </th>
-        <th>
-          Hello world
-        </th>
-        <th>
-          Hello world
-        </th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+    Radios!
   </s:sample>
 </j:jelly>

@@ -19,7 +19,7 @@ import org.kohsuke.stapler.StaplerResponse;
  * @author Alan.Harder@oracle.com
  */
 @Extension
-public class DropdownList extends UISample {
+public class Select extends UISample {
 
     @Override
     public String getDescription() {

@@ -1,3 +1,16 @@
+/*Generic */
+.app-component-sample {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: calc(var(--section-padding) / 2);
+  padding: calc(var(--section-padding) / 2);
+  border-radius: 10px;
+  background: rgba(100, 100, 100, 0.05);
+  margin-bottom: var(--section-padding);
+}
+
+/*Colors page*/
 .app-colors {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
