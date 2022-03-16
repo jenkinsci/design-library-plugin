@@ -28,8 +28,15 @@ THE SOFTWARE.
     <div class="app-component-sample">
       <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
     </div>
-    <xmp class="app-code">
-      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+
+    <script>
+      fetch('${rootURL}/plugin/ui-samples-plugin/Radios/index.jelly')
+        .then(response => response.text())
+        .then(text => document.getElementById('jelly-example').innerHTML = text)
+    </script>
+
+
+    <xmp class="app-code" id="jelly-example">
     </xmp>
     <xmp class="app-code">
       public static ListUISample getRadios() {
