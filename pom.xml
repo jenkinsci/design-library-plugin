@@ -29,22 +29,25 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.0-beta-4</version>
+        <version>4.37</version>
         <relativePath />
     </parent>
 
     <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
     <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
-    <version>2.1-SNAPSHOT</version>
+    <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
 
     <name>Jenkins UI sample plugin</name>
     <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
+    <url>https://github.com/ui-samples-plugin</url>
 
-    <properties>
-        <jenkins.version>2.242-rc30041.29a109c9a377</jenkins.version>
+    <properties>[
+        <revision>2.1</revision>
+        <changelist>-SNAPSHOT</changelist>
+        <gitHubRepo>github.com/ui-samples-plugin</gitHubRepo>
+        <jenkins.version>2.339</jenkins.version>
         <java.level>8</java.level>
-        <spotbugs.failOnError>false</spotbugs.failOnError> <!-- not production code -->
     </properties>
 
     <licenses>
@@ -70,7 +73,7 @@ THE SOFTWARE.
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>1.5.0</version>
+            <version>3.22.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -85,5 +88,12 @@ THE SOFTWARE.
             </resource>
         </resources>
     </build>
+
+    <scm>
+        <connection>scm:git:https://${gitHubRepo}</connection>
+        <developerConnection>scm:git:https://${gitHubRepo}</developerConnection>
+        <url>https://${gitHubRepo}</url>
+        <tag>${scmTag}</tag>
+    </scm>
 
 </project>
