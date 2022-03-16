@@ -50,19 +50,27 @@ public class FormFieldValidationWithContext extends UISample {
     }
 
     public static class State extends AbstractDescribableImpl<State> {
-        /*
-            I'm lazy and just exposing fields as opposed to getter/setter.
-            Jenkins doesn't care and works correctly either way.
-         */
-        public String name;
-        public City capital;
-        public List<City> cities;
+        private final String name;
+        private final City capital;
+        private final List<City> cities;
 
         @DataBoundConstructor
         public State(String name, City capital, List<City> cities) {
             this.name = name;
             this.capital = capital;
             this.cities = cities;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public City getCapital() {
+            return capital;
+        }
+
+        public List<City> getCities() {
+            return cities;
         }
 
         @Extension
@@ -84,11 +92,15 @@ public class FormFieldValidationWithContext extends UISample {
     }
 
     public static class City extends AbstractDescribableImpl<City> {
-        public String name;
+        private final String name;
 
         @DataBoundConstructor
         public City(String name) {
             this.name = name;
+        }
+
+        public String getName() {
+            return name;
         }
 
         @Extension
