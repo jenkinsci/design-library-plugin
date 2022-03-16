@@ -25,7 +25,7 @@
       &lt;j:set var="tooltip"&gt;
       &lt;img src="${imagesURL}/svgs/logo.svg" /&gt;
       &lt;/j:set&gt;
-      <button html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
+      <button html-tooltip="$${tooltip}" class="jenkins-button jenkins-button--primary">
         Hover over me
       </button>
     </xmp>
