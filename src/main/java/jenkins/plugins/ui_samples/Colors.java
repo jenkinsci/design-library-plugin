@@ -20,5 +20,9 @@ public class Colors extends UISample {
     public List<String> getColors() {
         return Arrays.asList("red", "green", "orange", "yellow", "blue", "indigo", "violet");
     }
+
+    @Extension
+    public static final class DescriptorImpl extends UISampleDescriptor {
+    }
 }
 

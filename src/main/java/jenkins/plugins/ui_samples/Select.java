@@ -53,7 +53,7 @@ public class Select extends UISample {
         protected Fruit(String name) { this.name = name; }
 
         public Descriptor<Fruit> getDescriptor() {
-            return Jenkins.getInstance().getDescriptor(getClass());
+            return Jenkins.get().getDescriptor(getClass());
         }
     }
 
