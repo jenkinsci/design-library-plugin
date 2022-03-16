@@ -161,8 +161,8 @@ import java.util.List;
             @Override public String getDisplayName() { return "Hetero-Radio"; }
 
             public List<Descriptor> getEntryDescriptors() {
-                Jenkins jenkins = Jenkins.getInstance();
-                return ImmutableList.of(jenkins.getDescriptor(ChoiceEntry.class), jenkins.getDescriptor(SimpleEntry.class));
+                Jenkins jenkins = Jenkins.get();
+                return ImmutableList.of(jenkins.getDescriptorOrDie(ChoiceEntry.class), jenkins.getDescriptorOrDie(SimpleEntry.class));
             }
         }
     }
