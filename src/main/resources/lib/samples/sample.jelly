@@ -49,9 +49,7 @@ THE SOFTWARE.
 
     <l:main-panel>
       <h1>${title}</h1>
-      <p class="jenkins-description">
-        <j:out value="${it.description}"/>
-      </p>
+
       <d:invokeBody/>
     </l:main-panel>
   </l:layout>

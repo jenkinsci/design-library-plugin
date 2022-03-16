@@ -29,7 +29,10 @@ THE SOFTWARE.
     </l:side-panel>
 
     <l:main-panel>
-      <h1 class="massive-xl">Jenkins Design Library</h1>
+      <h1 class="massive-xl">Jenkins<br/>Design<br/>Library</h1>
+      <p>get involved in jenkins ux</p>
+      <div>gitter</div>
+      <div>find PRs</div>
     </l:main-panel>
   </l:layout>
 </j:jelly>

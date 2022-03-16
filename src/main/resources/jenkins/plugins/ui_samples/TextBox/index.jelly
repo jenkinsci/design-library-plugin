@@ -57,6 +57,23 @@
         return c;
       }
     </xmp>
+
+    <div class="app-component-sample">
+      <f:entry title="U.S. State (using editableComboBox)">
+        <f:editableComboBox items="${instance.statesNames}" />
+      </f:entry>
+    </div>
+
+    <h2>Syntax-highlighted text</h2>
+
+    <p>CodeMirror can be used to turn ordinary text area into syntax-highlighted content-assistable text area</p>
+
+    <form action="script" method="post">
+      <textarea id="script" name="script" class="script">Text</textarea>
+    </form>
+
+    <st:adjunct includes="org.kohsuke.stapler.codemirror.mode.groovy.groovy"/>
+    <st:adjunct includes="org.kohsuke.stapler.codemirror.theme.default"/>
   </s:sample>
 </j:jelly>
 

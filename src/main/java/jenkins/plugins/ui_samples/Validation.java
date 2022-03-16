@@ -18,17 +18,17 @@ import java.util.List;
  * @author Kohsuke Kawaguchi
  */
 @Extension
-public class FormFieldValidationWithContext extends UISample {
+public class Validation extends UISample {
     private List<State> states = new ArrayList<State>(Arrays.asList(
             new State("California",new City("Sacramento"),  Arrays.asList(new City("San Francisco"),new City("Los Angeles"))),
             new State("New York",new City("New York"), Arrays.asList(new City("Albany"),new City("Ithaca")))
     ));
 
-    public FormFieldValidationWithContext() {
+    public Validation() {
     }
 
     @DataBoundConstructor
-    public FormFieldValidationWithContext(List<State> states) {
+    public Validation(List<State> states) {
         this.states = states;
     }
 

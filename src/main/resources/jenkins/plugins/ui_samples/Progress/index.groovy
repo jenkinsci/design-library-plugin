@@ -5,8 +5,12 @@ import lib.JenkinsTagLib
 def st=namespace("jelly:stapler")
 
 t=namespace(JenkinsTagLib.class)
+l=namespace(lib.LayoutTagLib.class)
 
 namespace("/lib/samples").sample(title:_("Progress Bar")) {
+
+    l.spinner()
+
     // in this sample, we add extra margin around them
     style(".progress-bar {margin:1em;}")
     p("This page shows you how to use the progress bar widget")
