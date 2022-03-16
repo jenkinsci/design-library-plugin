@@ -42,7 +42,7 @@ THE SOFTWARE.
     <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
     <url>https://github.com/ui-samples-plugin</url>
 
-    <properties>[
+    <properties>
         <revision>2.1</revision>
         <changelist>-SNAPSHOT</changelist>
         <gitHubRepo>github.com/ui-samples-plugin</gitHubRepo>
