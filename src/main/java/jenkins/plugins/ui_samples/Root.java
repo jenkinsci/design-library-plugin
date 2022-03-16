@@ -28,9 +28,11 @@ public class Root implements RootAction, ModelObjectWithContextMenu {
     }
 
     public UISample getDynamic(String name) {
-        for (UISample ui : getAll())
-            if (ui.getUrlName().equals(name))
+        for (UISample ui : getAll()) {
+            String urlName = ui.getUrlName();
+            if (urlName != null && urlName.equals(name))
                 return ui;
+        }
         return null;
     }
 
