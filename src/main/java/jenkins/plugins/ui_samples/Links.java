@@ -10,7 +10,7 @@ import org.kohsuke.stapler.StaplerResponse;
  * @author Kohsuke Kawaguchi
  */
 @Extension
-public class NavigationContextMenu extends UISample implements ModelObjectWithContextMenu, ModelObjectWithChildren {
+public class Links extends UISample implements ModelObjectWithContextMenu, ModelObjectWithChildren {
     @Override
     public String getDescription() {
         return "Integrate with navigational context menu to provider quick access around object graph";

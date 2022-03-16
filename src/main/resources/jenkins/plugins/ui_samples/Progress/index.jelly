@@ -1,0 +1,19 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout">
+  <s:sample>
+    <div class="app-component-sample">
+      <l:spinner />
+    </div>
+    <xmp class="app-code">
+      &lt;l:spinner /&gt;
+    </xmp>
+
+    <div class="app-component-sample">
+      <l:spinner text="I am a label" />
+    </div>
+    <xmp class="app-code">
+      &lt;l:spinner text="I am a label" /&gt;
+    </xmp>
+  </s:sample>
+</j:jelly>
+

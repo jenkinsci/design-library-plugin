@@ -43,3 +43,10 @@
   font-family: var(--font-family-mono);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+
+/* Home */
+
+.massive-xl {
+  font-size: 4rem;
+  font-weight: 800;
+}

@@ -40,7 +40,9 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
      * Returns a paragraph of natural text that describes this sample.
      * Interpreted as HTML.
      */
-    public abstract String getDescription();
+    public String getDescription() {
+        return "";
+    }
 
     public UISampleDescriptor getDescriptor() {
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());

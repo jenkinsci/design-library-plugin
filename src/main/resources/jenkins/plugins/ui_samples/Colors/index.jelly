@@ -35,20 +35,22 @@ THE SOFTWARE.
 
     <h2>Tips</h2>
 
-    <p class="jenkins-description">
-      Don’t rely solely on color to differentiate between objects or communicate important information.
-      If your app uses color to convey information, be sure to provide text labels or glyph shapes so
-      users with colorblindness or other visual disabilities can understand it.
-    </p>
+    Tips will go here for when to use color
 
-    <p class="jenkins-description">
-      The power of color to call attention to important information is heightened when used sparingly.
-      For example, a red triangle that warns of a critical problem becomes less effective when red is
-      used elsewhere in an app for noncritical reasons.
-    </p>
+<!--    <p class="jenkins-description">-->
+<!--      Don’t rely solely on color to differentiate between objects or communicate important information.-->
+<!--      If your app uses color to convey information, be sure to provide text labels or glyph shapes so-->
+<!--      users with colorblindness or other visual disabilities can understand it.-->
+<!--    </p>-->
 
-    <p class="jenkins-description">
-      When you use a system color for your accent color, you get automatic support for both appearance modes.
-    </p>
+<!--    <p class="jenkins-description">-->
+<!--      The power of color to call attention to important information is heightened when used sparingly.-->
+<!--      For example, a red triangle that warns of a critical problem becomes less effective when red is-->
+<!--      used elsewhere in an app for noncritical reasons.-->
+<!--    </p>-->
+
+<!--    <p class="jenkins-description">-->
+<!--      When you use a system color for your accent color, you get automatic support for both appearance modes.-->
+<!--    </p>-->
   </s:sample>
 </j:jelly>

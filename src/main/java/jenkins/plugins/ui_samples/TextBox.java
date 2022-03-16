@@ -28,6 +28,10 @@ import hudson.Extension;
 import hudson.model.AutoCompletionCandidates;
 import org.kohsuke.stapler.QueryParameter;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Adding auto-completion to the text box.
  *
@@ -56,6 +60,10 @@ public class TextBox extends UISample {
                     c.add(state);
             return c;
         }
+    }
+
+    public Set<String> getStatesNames() {
+        return new HashSet<> (Arrays.asList(STATES));
     }
 
     private static final String[] STATES = new String[]{
