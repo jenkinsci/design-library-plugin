@@ -28,21 +28,11 @@ THE SOFTWARE.
     <div class="app-component-sample">
       <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm"/>
     </div>
-
-    <script>
-      fetch('${rootURL}/plugin/ui-samples-plugin/Radios/index.jelly')
-        .then(response => response.text())
-        .then(text => {
-            const html = Prism.highlight(text, Prism.languages.xml, 'xml');
-            document.getElementById('jelly-example').innerHTML = html
-        })
-    </script>
     <pre>
-      <code id="jelly-example" class="language-xml"/>
+      <code class="sample-remote language-xml" data-sample="index.jelly"/>
     </pre>
-      <pre><code class="language-java">public static ListUISample getRadios() {
-  return new ArrayList(Jenkins.get().getExtensionList(UISample.class))
-        .subList(0, 4);
-}</code></pre>
+    <pre>
+      <code class="sample-remote language-java" data-sample="Sample.java"/>
+    </pre>
   </s:sample>
 </j:jelly>
