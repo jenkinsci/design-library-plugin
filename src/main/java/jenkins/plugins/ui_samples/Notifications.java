@@ -8,6 +8,11 @@ import hudson.Extension;
 @Extension
 public class Notifications extends UISample {
     @Override
+    public String getIconFileName() {
+        return "symbol-notifications";
+    }
+
+    @Override
     public String getDescription() {
         return "Notification bar shows a transient message on the top of the page";
     }

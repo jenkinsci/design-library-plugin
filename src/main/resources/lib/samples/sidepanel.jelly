@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
-  <h1 style="margin: 2rem 0 1rem 2rem;">UI Samples</h1>
+  <h1 style="margin: 2rem 0 1rem 2rem;">Menu</h1>
 
   <l:tasks>
     <l:task title="${%Home}" href="${rootURL}/ui-samples" icon="symbol-home" />

@@ -23,16 +23,64 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+  <st:adjunct includes="jenkins.plugins.ui_samples.style" />
   <l:layout title="Home">
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
 
     <l:main-panel>
-      <h1 class="massive-xl">Jenkins<br/>Design<br/>Library</h1>
-      <p>get involved in jenkins ux</p>
-      <div>gitter</div>
-      <div>find PRs</div>
+      <div class="app-home">
+        <p class="jenkins-text">Jenkins</p>
+        <h1 class="massive-xl">Design<br/>Library</h1>
+        <p class="recent">Recently updated</p>
+        <div class="app-card__container">
+          <div class="app-card__preview">
+
+          </div>
+          <p class="app-card__title">recently updated</p>
+          <p class="app-card__description">get involved in jenkins ux</p>
+        </div>
+        <div class="app-home__side-by-side">
+          <div class="app-card__container">
+            <div class="app-card__preview"></div>
+            <p class="app-card__title">recently updated</p>
+            <p class="app-card__description">get involved in jenkins ux</p>
+          </div>
+          <div class="app-card__container">
+            <div class="app-card__preview"></div>
+            <p class="app-card__title">recently updated</p>
+            <p class="app-card__description">get involved in jenkins ux</p>
+          </div>
+        </div>
+        <p class="recent">Get involved</p>
+        <div class="app-home__side-by-side">
+          <div class="app-card__container">
+            <div class="app-card__preview"></div>
+            <p class="app-card__title">Gitter</p>
+            <p class="app-card__description">get involved in jenkins ux</p>
+          </div>
+          <div class="app-card__container">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <p class="app-card__title">Github PRs</p>
+            <p class="app-card__description">get involved in jenkins ux</p>
+          </div>
+        </div>
+        <div class="app-home__side-by-side">
+          <div class="app-card__container">
+            <div class="app-card__preview"></div>
+            <p class="app-card__title">Jenkins UX </p>
+            <p class="app-card__description">get involved in jenkins ux</p>
+          </div>
+          <div class="app-card__container">
+            <div class="app-card__preview"></div>
+            <p class="app-card__title">Github PRs</p>
+            <p class="app-card__description">get involved in jenkins ux</p>
+          </div>
+        </div>
+      </div>
     </l:main-panel>
   </l:layout>
 </j:jelly>
