@@ -26,7 +26,7 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <div class="app-component-sample">
-      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm"/>
     </div>
 
     <script>
@@ -36,12 +36,17 @@ THE SOFTWARE.
     </script>
 
 
-    <xmp class="app-code" id="jelly-example">
-    </xmp>
-    <xmp class="app-code">
-      public static ListUISample getRadios() {
-        return new ArrayList(Jenkins.get().getExtensionList(UISample.class)).subList(0, 4);
-      }
-    </xmp>
+    <pre><code class="language-css">p { color: red }</code></pre>
+
+    <pre>
+      <code class="language-xml">
+        <xmp id="jelly-example">
+        </xmp>
+      </code>
+    </pre>
+      <pre><code class="language-java">public static ListUISample getRadios() {
+  return new ArrayList(Jenkins.get().getExtensionList(UISample.class))
+        .subList(0, 4);
+}</code></pre>
   </s:sample>
 </j:jelly>
