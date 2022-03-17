@@ -12,9 +12,12 @@ document.addEventListener("DOMContentLoaded", () =>{
           const language = Array.from(element.classList)
             .filter(clazz => clazz.startsWith('language-'))
             .map(clazz => clazz.replace('language-', ''))
-            .pop()
 
-          element.innerHTML = Prism.highlight(text, Prism.languages[language], language)
+          if (language.length > 0) {
+            element.innerHTML = Prism.highlight(text, Prism.languages[language], language)
+          } else {
+            element.innerHTML = text
+          }
         })
     })
 });
