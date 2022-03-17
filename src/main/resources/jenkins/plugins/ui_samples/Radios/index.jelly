@@ -32,14 +32,13 @@ THE SOFTWARE.
     <script>
       fetch('${rootURL}/plugin/ui-samples-plugin/Radios/index.jelly')
         .then(response => response.text())
-        .then(text => document.getElementById('jelly-example').innerHTML = text)
+        .then(text => {
+            const html = Prism.highlight(text, Prism.languages.xml, 'xml');
+            document.getElementById('jelly-example').innerHTML = html
+        })
     </script>
-    
     <pre>
-      <code class="language-xml">
-        <xmp id="jelly-example">
-        </xmp>
-      </code>
+      <code id="jelly-example" class="language-xml"/>
     </pre>
       <pre><code class="language-java">public static ListUISample getRadios() {
   return new ArrayList(Jenkins.get().getExtensionList(UISample.class))
