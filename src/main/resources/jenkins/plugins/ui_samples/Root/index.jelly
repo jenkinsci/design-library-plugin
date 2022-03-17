@@ -33,52 +33,62 @@ THE SOFTWARE.
       <div class="app-home">
         <p class="jenkins-text">Jenkins</p>
         <h1 class="massive-xl">Design<br/>Library</h1>
-        <p class="recent">Recently updated</p>
         <div class="app-card__container">
           <div class="app-card__preview">
-
+            <img src="${imagesURL}/svgs/logo.svg" alt="Jenkins illustration" />
           </div>
-          <p class="app-card__title">recently updated</p>
-          <p class="app-card__description">get involved in jenkins ux</p>
+          <p class="app-card__title">Welcome</p>
+          <p class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
+        <p class="recent">Recently updated</p>
         <div class="app-home__side-by-side">
-          <div class="app-card__container">
-            <div class="app-card__preview"></div>
-            <p class="app-card__title">recently updated</p>
-            <p class="app-card__description">get involved in jenkins ux</p>
-          </div>
-          <div class="app-card__container">
-            <div class="app-card__preview"></div>
-            <p class="app-card__title">recently updated</p>
-            <p class="app-card__description">get involved in jenkins ux</p>
-          </div>
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-buttons" />
+            </div>
+            <div class="app-card__title">Buttons</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
+          <a class="app-card__container" href="Symbols">
+            <div class="app-card__preview">
+              <l:icon src="symbol-symbols" />
+            </div>
+            <div class="app-card__title">Symbols</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
         </div>
         <p class="recent">Get involved</p>
         <div class="app-home__side-by-side">
-          <div class="app-card__container">
-            <div class="app-card__preview"></div>
-            <p class="app-card__title">Gitter</p>
-            <p class="app-card__description">get involved in jenkins ux</p>
-          </div>
-          <div class="app-card__container">
+          <a class="app-card__container" href="Buttons">
             <div class="app-card__preview">
               <l:icon src="symbol-github" />
             </div>
-            <p class="app-card__title">Github PRs</p>
-            <p class="app-card__description">get involved in jenkins ux</p>
-          </div>
+            <div class="app-card__title">Gitter</div>
+            <div class="app-card__description">Join the discussion</div>
+          </a>
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">Github PRs</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
         </div>
         <div class="app-home__side-by-side">
-          <div class="app-card__container">
-            <div class="app-card__preview"></div>
-            <p class="app-card__title">Jenkins UX </p>
-            <p class="app-card__description">get involved in jenkins ux</p>
-          </div>
-          <div class="app-card__container">
-            <div class="app-card__preview"></div>
-            <p class="app-card__title">Github PRs</p>
-            <p class="app-card__description">get involved in jenkins ux</p>
-          </div>
+          <a class="app-card__container" href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">View in-progress UX work</div>
+            <div class="app-card__description">TODO</div>
+          </a>
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">Github PRs</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
         </div>
       </div>
     </l:main-panel>

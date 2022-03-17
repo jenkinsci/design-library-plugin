@@ -84,6 +84,13 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+}
+
+.app-card__container:link:hover .app-card__title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .app-card__preview {
@@ -97,7 +104,8 @@
   margin-bottom: 0.8rem;
 }
 
-.app-card__preview svg {
+.app-card__preview svg,
+.app-card__preview img {
   width: 40%;
   height: 40%;
 }
@@ -151,7 +159,6 @@
   font-weight: 600;
   font-size: 1.05rem;
   padding-bottom: 5px;
-  background-color: var(--background);
 }
 
 .app-card__description {
@@ -160,7 +167,6 @@
   line-height: 1.5;
   font-weight: 500;
   font-size: 1.05rem;
-  background-color: var(--background);
 }
 
 .recent {
