@@ -35,14 +35,22 @@ THE SOFTWARE.
 
     <h2>Copy button</h2>
     <p>A small button to copy text into a clipboard</p>
-
-    <p><tt>l.copyButton</tt> tag creates a small button that allows users to paste text into the clipboard.
-      The tag requires two mandatory attributes. One is <tt>text</tt>, which represents the text to be copied into the clipboard.
-      The other is <tt>message</tt>, which represents a message to be displayed upon the successful copying into the clipboard.
-    </p>
-
     <div class="app-component-sample">
       <l:copyButton message="text copied" text="here comes ABC" />
     </div>
+    Usage:
+    <pre>
+      <code class="language-xml"><xmp>&lt;l:copyButton message="text copied" text="here comes ABC" /&gt;</xmp></code>
+    </pre>
+
+    <p>
+      The tag creates a small button that allows users to paste text into the clipboard.
+      The tag requires two mandatory attributes:
+    </p>
+    <ul>
+      <li>text - the text to be copied into the clipboard.</li>
+      <li>message - message to be displayed upon the successful copying into the clipboard </li>
+    </ul>
+
   </s:sample>
 </j:jelly>
