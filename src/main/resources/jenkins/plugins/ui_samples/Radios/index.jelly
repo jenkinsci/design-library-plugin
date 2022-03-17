@@ -34,10 +34,7 @@ THE SOFTWARE.
         .then(response => response.text())
         .then(text => document.getElementById('jelly-example').innerHTML = text)
     </script>
-
-
-    <pre><code class="language-css">p { color: red }</code></pre>
-
+    
     <pre>
       <code class="language-xml">
         <xmp id="jelly-example">
