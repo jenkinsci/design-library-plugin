@@ -19,6 +19,11 @@ import java.util.List;
  */
 @Extension
 public class Validation extends UISample {
+    @Override
+    public String getIconFileName() {
+        return "symbol-validation";
+    }
+
     private List<State> states = new ArrayList<State>(Arrays.asList(
             new State("California",new City("Sacramento"),  Arrays.asList(new City("San Francisco"),new City("Los Angeles"))),
             new State("New York",new City("New York"), Arrays.asList(new City("Albany"),new City("Ithaca")))

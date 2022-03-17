@@ -23,16 +23,74 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+  <st:adjunct includes="jenkins.plugins.ui_samples.style" />
   <l:layout title="Home">
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
 
     <l:main-panel>
-      <h1 class="massive-xl">Jenkins<br/>Design<br/>Library</h1>
-      <p>get involved in jenkins ux</p>
-      <div>gitter</div>
-      <div>find PRs</div>
+      <div class="app-home">
+        <p class="jenkins-text">Jenkins</p>
+        <h1 class="massive-xl">Design<br/>Library</h1>
+        <div class="app-card__container">
+          <div class="app-card__preview">
+            <img src="${imagesURL}/svgs/logo.svg" alt="Jenkins illustration" />
+          </div>
+          <p class="app-card__title">Welcome</p>
+          <p class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <p class="recent">Recently updated</p>
+        <div class="app-home__side-by-side">
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-buttons" />
+            </div>
+            <div class="app-card__title">Buttons</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
+          <a class="app-card__container" href="Symbols">
+            <div class="app-card__preview">
+              <l:icon src="symbol-symbols" />
+            </div>
+            <div class="app-card__title">Symbols</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
+        </div>
+        <p class="recent">Get involved</p>
+        <div class="app-home__side-by-side">
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">Gitter</div>
+            <div class="app-card__description">Join the discussion</div>
+          </a>
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">Github PRs</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
+        </div>
+        <div class="app-home__side-by-side">
+          <a class="app-card__container" href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">View in-progress UX work</div>
+            <div class="app-card__description">TODO</div>
+          </a>
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">Github PRs</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+          </a>
+        </div>
+      </div>
     </l:main-panel>
   </l:layout>
 </j:jelly>

@@ -12,6 +12,11 @@ import org.kohsuke.stapler.StaplerResponse;
 @Extension
 public class Links extends UISample implements ModelObjectWithContextMenu, ModelObjectWithChildren {
     @Override
+    public String getIconFileName() {
+        return "symbol-links";
+    }
+
+    @Override
     public String getDescription() {
         return "Integrate with navigational context menu to provider quick access around object graph";
     }

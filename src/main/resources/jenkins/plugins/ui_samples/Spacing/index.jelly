@@ -1,0 +1,9 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout">
+  <s:sample>
+    Spacing details will go here
+    Use rem
+    2rem for gaps
+    use `var(--section-padding)`
+  </s:sample>
+</j:jelly>

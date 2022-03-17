@@ -11,6 +11,11 @@ import java.util.List;
 @Extension
 public class Symbols extends UISample {
     @Override
+    public String getIconFileName() {
+        return "symbol-symbols";
+    }
+
+    @Override
     public String getDescription() {
         return "Shows you how to use the progress bar widget that's used in the executor view and other places";
     }
