@@ -27,7 +27,7 @@ THE SOFTWARE.
   <s:sample>
     <p class="jenkins-description">Checkboxes are simple to use in Jenkins with the jelly tag.</p>
 
-    Example parameters:
+    <p class="jenkins-description">Example parameters:</p>
     <ul>
       <li>id (optional) - Sets an id for the input, useful for UI testing, one will be generated for you otherwise. Avoid using in repeatable elements as you will end up with duplicate IDs</li>
       <li>default (optional) - Can be used to set the default to true, not generally recommended as this won't affect configuration as code users,

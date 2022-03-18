@@ -19,6 +19,11 @@ public class DynamicDropDownListBox extends UISample {
         return "Updates the contents of a &lt;select> control dynamically based on selections of other controls";
     }
 
+    @Override
+    public String getDisplayName() {
+        return "Dynamic dropdown list box";
+    }
+
     // these getter methods should return the current value, which form the initial selection.
 
     public String getCountry() {
@@ -35,6 +40,7 @@ public class DynamicDropDownListBox extends UISample {
 
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
+
         public ListBoxModel doFillStateItems(@QueryParameter String country) {
             ListBoxModel m = new ListBoxModel();
             for (String s : asList("A","B","C"))
