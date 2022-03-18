@@ -25,14 +25,25 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    Checkboxes
+    <p class="jenkins-description">Checkboxes are simple to use in Jenkins with the jelly tag.</p>
+
+    Example parameters:
+    <ul>
+      <li>id (optional) - Sets an id for the input, useful for UI testing, one will be generated for you otherwise. Avoid using in repeatable elements as you will end up with duplicate IDs</li>
+      <li>default (optional) - Can be used to set the default to true, not generally recommended as this won't affect configuration as code users,
+        only use if you want to set a new default when people configure the plugin.</li>
+      <li>field - The field of the descriptor to bind to, must be of type <code>boolean</code></li>
+      <li>title - The label for the checkbox.</li>
+    </ul>
+
+    <p class="jenkins-description">There are more parameters available but they are generally not needed and should be avoided.</p>
 
     <div class="app-component-sample">
       <f:checkbox title="${%Example}" field="hello" />
       <pre>
         <code class="language-xml">
           <xmp>
-            &lt;f:checkbox title="${%Example}" /&gt;
+            &lt;f:checkbox title="${%Example}" field="hello" /&gt;
           </xmp>
         </code>
       </pre>
