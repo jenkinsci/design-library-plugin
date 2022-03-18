@@ -1,19 +1,38 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout">
   <s:sample>
+    <p class="jenkins-description">There are two components used to indicate progress to the user. Spinner is used
+    to show the user something is happening. Progress animation is used to show something is not complete (such as a log).</p>
     <div class="app-component-sample">
       <l:spinner />
     </div>
-    <xmp class="app-code">
-      &lt;l:spinner /&gt;
-    </xmp>
+    <pre>
+      <code class="language-xml">
+        <xmp class="app-code">
+          &lt;l:spinner /&gt;
+        </xmp>
+      </code>
+    </pre>
 
     <div class="app-component-sample">
       <l:spinner text="I am a label" />
     </div>
-    <xmp class="app-code">
-      &lt;l:spinner text="I am a label" /&gt;
-    </xmp>
+    <pre>
+      <code class="language-xml">
+        <xmp class="app-code">
+          &lt;l:spinner text="I am a label" /&gt;
+        </xmp>
+      </code>
+    </pre>
+
+    <l:progressAnimation />
+    <pre>
+      <code class="language-xml">
+        <xmp class="app-code">
+          &lt;l:progressAnimation /&gt;
+        </xmp>
+      </code>
+    </pre>
   </s:sample>
 </j:jelly>
 
