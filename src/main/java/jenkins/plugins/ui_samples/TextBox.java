@@ -40,6 +40,11 @@ import java.util.Set;
 @Extension
 public class TextBox extends UISample {
     @Override
+    public String getIconFileName() {
+        return "symbol-textbox";
+    }
+
+    @Override
     public String getDescription() {
         return "Provide auto-completion to the text box";
     }

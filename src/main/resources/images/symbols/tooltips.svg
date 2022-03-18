@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640px" height="640px" viewBox="0 0 640 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Slice</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M295.945658,314 L141,314 C116.147186,314 96,293.852814 96,269 L96,106 C96,81.1471863 116.147186,61 141,61 L497,61 C521.852814,61 542,81.1471863 542,106 L542,269 C542,293.852814 521.852814,314 497,314 L476.56254,314 L476.56254,314" stroke="currentColor" stroke-width="32" stroke-linecap="round"></path>
+        <polygon stroke="currentColor" stroke-width="32" points="333.26537 223.762296 333.26537 516.773941 395.513632 459.576047 460.907664 579.762296 519.379118 548.41339 460.907664 434.294505 545.283728 434.294505"></polygon>
+    </g>
+</svg>

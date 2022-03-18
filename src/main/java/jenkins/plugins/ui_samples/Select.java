@@ -20,6 +20,10 @@ import org.kohsuke.stapler.StaplerResponse;
  */
 @Extension
 public class Select extends UISample {
+    @Override
+    public String getIconFileName() {
+        return "symbol-select";
+    }
 
     @Override
     public String getDescription() {

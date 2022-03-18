@@ -27,4 +27,9 @@ package jenkins.plugins.ui_samples;
 import hudson.Extension;
 
 @Extension
-public class Tooltips extends UISample {}
+public class Tooltips extends UISample {
+	@Override
+	public String getIconFileName() {
+		return "symbol-tooltips";
+	}
+}
