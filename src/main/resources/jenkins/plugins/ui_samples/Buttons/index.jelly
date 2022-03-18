@@ -30,6 +30,8 @@ THE SOFTWARE.
       There are a number of different styles that can be added by adding another class alongside, such as
       <code>jenkins-button--primary</code>. Styling links as buttons is also supported.
     </p>
+
+    <p><strong>TODO Add when to use which</strong></p>
     <div class="app-component-sample">
       <button class="jenkins-button">Default</button>
       <pre>

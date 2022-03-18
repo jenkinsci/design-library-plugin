@@ -23,8 +23,19 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    Radios!
+    Checkboxes
+
+    <div class="app-component-sample">
+      <f:checkbox title="${%Example}" field="hello" />
+      <pre>
+        <code class="language-xml">
+          <xmp>
+            &lt;f:checkbox title="${%Example}" /&gt;
+          </xmp>
+        </code>
+      </pre>
+    </div>
   </s:sample>
 </j:jelly>
