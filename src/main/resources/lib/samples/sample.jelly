@@ -35,16 +35,16 @@ THE SOFTWARE.
   <j:set var="instance" value="${it}" />
   <j:set var="descriptor" value="${it.descriptor}" />
 
-  <st:adjunct includes="jenkins.plugins.ui_samples.sample" />
-  <st:adjunct includes="jenkins.plugins.ui_samples.preCode" />
-  <st:adjunct includes="jenkins.plugins.ui_samples.prism" />
-
   <!-- Default to class display name if title isn't set -->
   <j:if test="${title == null}">
     <j:set var="title" value="${it.displayName}" />
   </j:if>
 
   <l:layout title="${title}">
+    <st:adjunct includes="jenkins.plugins.ui_samples.sample" />
+    <st:adjunct includes="jenkins.plugins.ui_samples.preCode" />
+    <st:adjunct includes="jenkins.plugins.ui_samples.prism" />
+
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
