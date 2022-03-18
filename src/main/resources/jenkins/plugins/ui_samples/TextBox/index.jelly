@@ -42,24 +42,16 @@
     <p class="jenkins-description">
       Textboxes can feature auto-completion items by Stapler finds this method via the naming convention.
     </p>
-    <xmp class="app-code">
-      <f:entry title="U.S. State" field="state">
-        <f:textbox />
-      </f:entry>
-    </xmp>
-    <xmp class="app-code">
-      public AutoCompletionCandidates doAutoCompleteState(@QueryParameter String value) {
-        AutoCompletionCandidates c = new AutoCompletionCandidates();
-        for (String state : STATES) {
-          if (state.toLowerCase().startsWith(value.toLowerCase()))
-        }
-        c.add(state);
-        return c;
-      }
-    </xmp>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="sample.jelly" />
+    </pre>
+    <pre>
+      <code class="sample-remote language-java" data-sample="Sample.java" />
+    </pre>
 
     <div class="app-component-sample">
       <f:entry title="U.S. State (using editableComboBox)">
+        <!-- TODO this should probably have the jenkins-input class added to it in core, looks awful right now -->
         <f:editableComboBox items="${instance.statesNames}" />
       </f:entry>
     </div>
@@ -69,7 +61,7 @@
     <p>CodeMirror can be used to turn ordinary text area into syntax-highlighted content-assistable text area</p>
 
     <form action="script" method="post">
-      <textarea id="script" name="script" class="script">Text</textarea>
+      <textarea id="script" name="script" class="script">println "Hello, World!"</textarea>
     </form>
 
     <st:adjunct includes="org.kohsuke.stapler.codemirror.mode.groovy.groovy"/>
