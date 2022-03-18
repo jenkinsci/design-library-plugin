@@ -25,7 +25,7 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
          xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="Dynamic dropdown list box">
-    <p class="jenkins-description">TODO I haven't managed to figure out why this is no longer working</p>
+    <p class="jenkins-description">TODO for some reason the crumb is missing from the head tag on samples</p>
     <form method="post">
       <f:entry title="Country" field="country">
         <f:textbox/>
