@@ -33,13 +33,13 @@ THE SOFTWARE.
         <relativePath />
     </parent>
 
-    <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
-    <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
+    <groupId>io.jenkins.plugins</groupId>
+    <artifactId>design-library</artifactId>
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
 
-    <name>Jenkins UI sample plugin</name>
-    <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
+    <name>Jenkins design library</name>
+    <description>Demonstration of UI controls available in Jenkins and guidance on how to use them</description>
     <url>https://github.com/ui-samples-plugin</url>
 
     <properties>

@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () =>{
   document.querySelectorAll('.sample-remote')
     .forEach(element => {
       const fileName = element.dataset.sample;
-      const componentName = window.location.href.match(/.+ui-samples\/(.+)$/)[1]
+      const componentName = window.location.href.match(/.+design-library\/(.+)$/)[1]
 
-      const fullUrl = `${url}/plugin/ui-samples-plugin/${componentName}${fileName}`;
+      const fullUrl = `${url}/plugin/design-library/${componentName}${fileName}`;
       fetch(fullUrl)
         .then(response => response.text())
         .then(text => {
