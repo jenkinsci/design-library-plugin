@@ -70,7 +70,7 @@ THE SOFTWARE.
             <div class="app-card__preview">
               <l:icon src="symbol-youtube" />
             </div>
-            <div class="app-card__title">Watch the latest UX meetings</div>
+            <div class="app-card__title">Watch the latest UX sig meetings</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
