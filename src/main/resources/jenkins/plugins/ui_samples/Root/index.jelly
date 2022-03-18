@@ -34,7 +34,8 @@ THE SOFTWARE.
         <p class="jenkins-text">Jenkins</p>
         <h1 class="massive-xl">Design<br/>Library</h1>
         <div class="app-card__container">
-          <div class="app-card__preview" style="aspect-ratio: auto;">
+          <div class="app-card__preview app-card__preview--intro">
+            <l:icon src="symbol-sunburst" />
             <img src="${imagesURL}/svgs/logo.svg" alt="Jenkins illustration" />
           </div>
           <p class="app-card__title">Welcome</p>

@@ -104,10 +104,38 @@
   margin-bottom: 0.8rem;
 }
 
-.app-card__preview svg,
+.app-card__preview svg {
+  width: 100%;
+  height: 100%;
+  max-width: 40%;
+  max-height: 40%;
+}
+
 .app-card__preview img {
-  width: 40%;
-  height: 40%;
+  height: 100%;
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.app-card__preview--intro svg {
+  position: absolute;
+  top: -75%;
+  left: -5%;
+  bottom: -5%;
+  right: -5%;
+  width: 110%;
+  height: unset;
+  max-width: unset;
+  max-height: unset;
+  animation: sunburst-rotation 100s infinite linear;
+  z-index: -1;
+  mix-blend-mode: overlay;
+}
+
+@keyframes sunburst-rotation {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .app-card__preview::before, .app-card__preview::after {
