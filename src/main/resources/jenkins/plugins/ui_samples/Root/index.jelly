@@ -59,7 +59,7 @@ THE SOFTWARE.
         </div>
         <p class="recent">Get involved</p>
         <div class="app-home__side-by-side">
-          <a class="app-card__container" href="Buttons">
+          <a class="app-card__container" href="https://gitter.im/jenkinsci/ux-sig">
             <div class="app-card__preview">
               <l:icon src="symbol-github" />
             </div>
