@@ -19,7 +19,7 @@
 }
 
 pre {
-  margin-bottom: var(--section-padding);
+  margin: 0 0 var(--section-padding) 0 !important;
 }
 
 /*Colors page*/

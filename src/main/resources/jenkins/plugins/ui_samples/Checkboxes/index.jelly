@@ -40,13 +40,13 @@ THE SOFTWARE.
 
     <div class="app-component-sample">
       <f:checkbox title="${%Example}" field="hello" />
-      <pre>
-        <code class="language-xml">
-          <xmp>
-            &lt;f:checkbox title="${%Example}" field="hello" /&gt;
-          </xmp>
-        </code>
-      </pre>
     </div>
+    <pre>
+      <code class="language-xml">
+        <xmp>
+          &lt;f:checkbox title="${%Example}" field="hello" /&gt;
+        </xmp>
+      </code>
+    </pre>
   </s:sample>
 </j:jelly>

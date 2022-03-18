@@ -64,15 +64,13 @@ THE SOFTWARE.
             <div class="app-card__preview">
               <l:icon src="symbol-gitter" />
             </div>
-            <div class="app-card__title">Gitter</div>
-            <div class="app-card__description">Join the discussion</div>
+            <div class="app-card__title">Join the UX discussion on Gitter</div>
           </a>
           <a class="app-card__container" href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe">
             <div class="app-card__preview">
               <l:icon src="symbol-youtube" />
             </div>
-            <div class="app-card__title">Watch the latest UX sig meetings</div>
-            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            <div class="app-card__title">Watch the latest Jenkins UX meetings</div>
           </a>
         </div>
         <div class="app-home__side-by-side">
@@ -81,14 +79,12 @@ THE SOFTWARE.
               <l:icon src="symbol-github" />
             </div>
             <div class="app-card__title">View in-progress UX work</div>
-            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
           <a class="app-card__container" href="https://github.com/jenkinsci/ui-samples-plugin/">
             <div class="app-card__preview">
               <l:icon src="symbol-design-library" />
             </div>
             <div class="app-card__title">Contribute to Jenkins Design Library</div>
-            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
       </div>

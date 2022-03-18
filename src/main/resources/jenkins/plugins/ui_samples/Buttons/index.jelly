@@ -39,55 +39,66 @@ THE SOFTWARE.
 
     <div class="app-component-sample">
       <button class="jenkins-button">Default</button>
-      <pre>
-        <code class="language-html">
-          <xmp>
-            <button class="jenkins-button">Default</button>
-          </xmp>
-        </code>
-      </pre>
-      <button class="jenkins-button jenkins-button--primary">Primary</button>
-      <pre>
-        <code class="language-html">
-          <xmp>
-            <button class="jenkins-button jenkins-button--primary">Primary</button>
-          </xmp>
-        </code>
-      </pre>
-      <button class="jenkins-button jenkins-button--destructive">Destructive</button>
-      <pre>
-        <code class="language-html">
-          <xmp>
-            <button class="jenkins-button jenkins-button--destructive">Destructive</button>
-          </xmp>
-        </code>
-      </pre>
-      <button class="jenkins-button jenkins-button--transparent">Transparent</button>
-      <pre>
-        <code class="language-html">
-          <xmp>
-            <button class="jenkins-button jenkins-button--transparent">Transparent</button>
-          </xmp>
-        </code>
-      </pre>
-      <button class="jenkins-button"><l:icon src="symbol-add" /> With icon</button>
-      <pre>
-        <code class="language-html">
-          <xmp>
-            <button class="jenkins-button jenkins-button--transparent">&lt;l:icon src="symbol-add" /&gt; With icon</button>
-          </xmp>
-        </code>
-      </pre>
     </div>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          <button class="jenkins-button">Default</button>
+        </xmp>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button jenkins-button--primary">Primary</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          <button class="jenkins-button jenkins-button--primary">Primary</button>
+        </xmp>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+        </xmp>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+        </xmp>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button"><l:icon src="symbol-add" /> With icon</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          <button class="jenkins-button jenkins-button--transparent">&lt;l:icon src="symbol-add" /&gt; With icon</button>
+        </xmp>
+      </code>
+    </pre>
 
     <h2>Copy button</h2>
     <p>A small button to copy text into a clipboard</p>
     <div class="app-component-sample">
-      <l:copyButton message="text copied" text="here comes ABC" />
+      <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
     </div>
-    Usage:
     <pre>
-      <code class="language-xml"><xmp>&lt;l:copyButton message="text copied" text="here comes ABC" /&gt;</xmp></code>
+      <code class="language-xml"><xmp>&lt;l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" /&gt;</xmp></code>
     </pre>
 
     <p>
