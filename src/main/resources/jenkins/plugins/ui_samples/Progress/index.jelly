@@ -4,16 +4,24 @@
     <div class="app-component-sample">
       <l:spinner />
     </div>
-    <xmp class="app-code">
-      &lt;l:spinner /&gt;
-    </xmp>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          &lt;l:spinner /&gt;
+        </xmp>
+      </code>
+    </pre>
 
     <div class="app-component-sample">
       <l:spinner text="I am a label" />
     </div>
-    <xmp class="app-code">
-      &lt;l:spinner text="I am a label" /&gt;
-    </xmp>
+    <pre>
+      <code class="language-html">
+        <xmp>
+          &lt;l:spinner text="I am a label" /&gt;
+        </xmp>
+      </code>
+    </pre>
   </s:sample>
 </j:jelly>
 

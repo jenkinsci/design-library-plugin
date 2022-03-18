@@ -27,30 +27,17 @@ THE SOFTWARE.
   <s:sample>
     <ol class="app-colors">
       <j:forEach var="color" items="${it.colors}">
-        <li style="background-color: var(--${color});">
+        <li style="background-color: var(--${color}, --text-color-secondary);">
           <p>var(--${color})</p>
         </li>
       </j:forEach>
     </ol>
 
     <h2>Tips</h2>
-
-    Tips will go here for when to use color
-
-<!--    <p class="jenkins-description">-->
-<!--      Don’t rely solely on color to differentiate between objects or communicate important information.-->
-<!--      If your app uses color to convey information, be sure to provide text labels or glyph shapes so-->
-<!--      users with colorblindness or other visual disabilities can understand it.-->
-<!--    </p>-->
-
-<!--    <p class="jenkins-description">-->
-<!--      The power of color to call attention to important information is heightened when used sparingly.-->
-<!--      For example, a red triangle that warns of a critical problem becomes less effective when red is-->
-<!--      used elsewhere in an app for noncritical reasons.-->
-<!--    </p>-->
-
-<!--    <p class="jenkins-description">-->
-<!--      When you use a system color for your accent color, you get automatic support for both appearance modes.-->
-<!--    </p>-->
+    <ul>
+      <li>Use color to draw attention to important parts of your interface</li>
+      <li>Color shouldn't be the only way a piece of information is conveyed, use text or symbols along with it</li>
+      <li>It's best to use colors provided by Jenkins as they will automatically adapt to the user's theme</li>
+    </ul>
   </s:sample>
 </j:jelly>
