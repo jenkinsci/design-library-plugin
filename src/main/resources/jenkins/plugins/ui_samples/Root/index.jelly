@@ -31,8 +31,8 @@ THE SOFTWARE.
 
     <l:main-panel>
       <div class="app-home">
-        <p class="jenkins-text">Jenkins</p>
-        <h1 class="massive-xl">Design<br/>Library</h1>
+        <p class="app-home__jenkins-title">Jenkins</p>
+        <h1 class="app-home__heading">Design<br/>Library</h1>
         <div class="app-card__container">
           <div class="app-card__preview app-card__preview--intro">
             <l:icon src="symbol-sunburst" />
@@ -41,7 +41,7 @@ THE SOFTWARE.
           <p class="app-card__title">Welcome</p>
           <p class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
-        <p class="recent">Recently updated</p>
+        <p class="app-home__subheading">Recently updated</p>
         <div class="app-home__side-by-side">
           <a class="app-card__container" href="Buttons">
             <div class="app-card__preview">
@@ -58,7 +58,7 @@ THE SOFTWARE.
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
-        <p class="recent">Get involved</p>
+        <p class="app-home__subheading">Get involved</p>
         <div class="app-home__side-by-side">
           <a class="app-card__container" href="https://gitter.im/jenkinsci/ux-sig">
             <div class="app-card__preview">

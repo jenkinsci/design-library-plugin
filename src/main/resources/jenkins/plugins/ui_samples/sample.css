@@ -18,6 +18,10 @@
   margin-bottom: var(--section-padding);
 }
 
+pre {
+  margin-bottom: var(--section-padding);
+}
+
 /*Colors page*/
 .app-colors {
   display: grid;
@@ -44,8 +48,7 @@
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-/* Home */
-
+/* Home page */
 .app-home {
   position: relative;
   display: flex;
@@ -56,7 +59,7 @@
   gap: 2rem;
 }
 
-.jenkins-text {
+.app-home__jenkins-title {
   font-size: 1.15rem;
   font-weight: 600;
   font-family: "Georgia";
@@ -65,10 +68,18 @@
   background-color: var(--background);
 }
 
-.massive-xl {
+.app-home__heading {
   font-size: 2.5rem;
   font-weight: 800;
   margin: -2rem 0 0;
+  background-color: var(--background);
+}
+
+.app-home__subheading {
+  margin: 0 0 -1.2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-color-secondary);
   background-color: var(--background);
 }
 
@@ -88,6 +99,10 @@
   text-decoration: none !important;
 }
 
+.app-card__container:link:hover .app-card__preview {
+  filter: brightness(1.1);
+}
+
 .app-card__container:link:hover .app-card__title {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -102,6 +117,7 @@
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 0.8rem;
+  transition: var(--standard-transition);
 }
 
 .app-card__preview svg {
@@ -156,7 +172,7 @@
   radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0, transparent 50%),
   radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 50%),
   radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
-  animation: aurora-one 7s linear infinite;
+  animation: rotate-colors 7s linear infinite;
 }
 
 .app-card__preview::after {
@@ -167,18 +183,18 @@
   radial-gradient(at 0% 100%, hsla(206, 100%, 77%, 1) 0, transparent 50%),
   radial-gradient(at 80% 100%, hsla(66, 100%, 70%, 1) 0, transparent 50%),
   radial-gradient(at 0% 0%, hsla(167, 100%, 76%, 1) 0, transparent 50%);
-  animation: aurora-one 12s linear infinite;
+  animation: rotate-colors 12s linear infinite;
 }
 
-@keyframes aurora-one {
+@keyframes rotate-colors {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 
@@ -195,12 +211,4 @@
   line-height: 1.5;
   font-weight: 500;
   font-size: 1.05rem;
-}
-
-.recent {
-  margin: 0 0 -1.2rem;
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--text-color-secondary);
-  background-color: var(--background);
 }

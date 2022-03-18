@@ -27,7 +27,7 @@ THE SOFTWARE.
   <s:sample>
     <ol class="app-colors">
       <j:forEach var="color" items="${it.colors}">
-        <li style="background-color: var(--${color}, --text-color-secondary);">
+        <li style="background-color: var(--${color}, grey);">
           <p>var(--${color})</p>
         </li>
       </j:forEach>
