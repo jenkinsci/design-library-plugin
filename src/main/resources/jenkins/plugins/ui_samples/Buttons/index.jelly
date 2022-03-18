@@ -23,14 +23,54 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:st="jelly:stapler">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
+    <p class="jenkins-description">
+      Buttons are created with the <code>jenkins-button</code> CSS class.
+      There are a number of different styles that can be added by adding another class alongside, such as
+      <code>jenkins-button--primary</code>. Styling links as buttons is also supported.
+    </p>
     <div class="app-component-sample">
-      <button class="jenkins-button">Example</button>
-      <button class="jenkins-button jenkins-button--primary">Example</button>
-      <button class="jenkins-button jenkins-button--destructive">Example</button>
-      <button class="jenkins-button jenkins-button--transparent">Example</button>
-      <button class="jenkins-button">Example</button>
+      <button class="jenkins-button">Default</button>
+      <pre>
+        <code class="language-html">
+          <xmp>
+            <button class="jenkins-button">Default</button>
+          </xmp>
+        </code>
+      </pre>
+      <button class="jenkins-button jenkins-button--primary">Primary</button>
+      <pre>
+        <code class="language-html">
+          <xmp>
+            <button class="jenkins-button jenkins-button--primary">Primary</button>
+          </xmp>
+        </code>
+      </pre>
+      <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+      <pre>
+        <code class="language-html">
+          <xmp>
+            <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+          </xmp>
+        </code>
+      </pre>
+      <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+      <pre>
+        <code class="language-html">
+          <xmp>
+            <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+          </xmp>
+        </code>
+      </pre>
+      <button class="jenkins-button"><l:icon src="symbol-add" /> With icon</button>
+      <pre>
+        <code class="language-html">
+          <xmp>
+            <button class="jenkins-button jenkins-button--transparent">&lt;l:icon src="symbol-add" /&gt; With icon</button>
+          </xmp>
+        </code>
+      </pre>
     </div>
 
     <h2>Copy button</h2>
