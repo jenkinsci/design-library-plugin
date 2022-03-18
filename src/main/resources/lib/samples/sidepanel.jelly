@@ -1,10 +1,10 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
   <l:tasks>
-    <l:task title="${%Home}" href="${rootURL}/ui-samples" icon="symbol-home" />
+    <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home" />
 
     <j:forEach var="s" items="${it.all}">
-      <l:task title="${s.displayName}" href="${rootURL}/ui-samples/${s.urlName}" icon="${s.iconFileName}" />
+      <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName}" />
     </j:forEach>
   </l:tasks>
 </j:jelly>

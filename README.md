@@ -10,4 +10,4 @@ This plugin contains:
 
 Run `mvn hpi:run`
 
-Go to the **UI Samples** menu item or straight to http://localhost:8080/jenkins/ui-samples/ and play with UI components.
+Go to the **Design Library** menu item or straight to http://localhost:8080/jenkins/design-library/ and play with UI components.

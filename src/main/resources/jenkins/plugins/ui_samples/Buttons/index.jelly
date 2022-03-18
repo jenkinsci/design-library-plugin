@@ -31,7 +31,12 @@ THE SOFTWARE.
       <code>jenkins-button--primary</code>. Styling links as buttons is also supported.
     </p>
 
-    <p><strong>TODO Add when to use which</strong></p>
+    <p class="jenkins-description">Each form should have only one primary button. Most other buttons should just be the default one.
+      Destructive buttons should be used when something will be deleted or not easily undone.
+      Generally these should have a confirmation page.</p>
+
+    <!-- TODO No idea when you would use a transparent button -->
+
     <div class="app-component-sample">
       <button class="jenkins-button">Default</button>
       <pre>

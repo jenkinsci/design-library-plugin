@@ -16,15 +16,15 @@ import java.util.List;
 @Extension
 public class Root implements RootAction, ModelObjectWithContextMenu {
     public String getIconFileName() {
-        return "symbol-ui-samples";
+        return "symbol-design-library";
     }
 
     public String getDisplayName() {
-        return "UI Samples";
+        return "Design Library";
     }
 
     public String getUrlName() {
-        return "ui-samples";
+        return "design-library";
     }
 
     public UISample getDynamic(String name) {

@@ -24,7 +24,7 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <st:adjunct includes="jenkins.plugins.ui_samples.sample" />
-  <l:layout title="Home">
+  <l:layout title="Design Library">
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
@@ -71,7 +71,7 @@ THE SOFTWARE.
             <div class="app-card__preview">
               <l:icon src="symbol-youtube" />
             </div>
-            <div class="app-card__title">Watch the latest UX meetings</div>
+            <div class="app-card__title">Watch the latest UX sig meetings</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
@@ -83,9 +83,9 @@ THE SOFTWARE.
             <div class="app-card__title">View in-progress UX work</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
-          <a class="app-card__container" href="http://github.com/jenkinsci/ui-samples-plugin/">
+          <a class="app-card__container" href="https://github.com/jenkinsci/ui-samples-plugin/">
             <div class="app-card__preview">
-              <l:icon src="symbol-ui-samples" />
+              <l:icon src="symbol-design-library" />
             </div>
             <div class="app-card__title">Contribute to Jenkins Design Library</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
