@@ -25,55 +25,15 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <div class="app-component-sample">
-      <table class="jenkins-table sortable jenkins-!-margin-bottom-0">
-      <thead>
-        <th>
-          Hello world
-        </th>
-        <th>
-          Hello world
-        </th>
-        <th>
-          Hello world
-        </th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-          <td>
-            Row
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
+    <p class="jenkins-description">Jenkins Tables are created by adding the <code class="language-css">.jenkins-table</code>
+    CSS class.</p>
+
+    <!-- TODO sorted doesn't seem to be doing anything, is there more that should be added about tables? -->
+
+    <div class="sample-remote app-component-sample" data-sample="index.html"/>
+
+    <pre>
+      <code class="sample-remote language-html" data-sample="index.html"/>
+    </pre>
   </s:sample>
 </j:jelly>

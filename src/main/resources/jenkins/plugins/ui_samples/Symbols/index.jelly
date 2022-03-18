@@ -1,10 +1,13 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <p class="jenkins-description">Jenkins Symbols are an extensive and consistent collection of icons for use in Jenkins and plugins. Symbols are intended to be used everywhere a traditional icon would be used, such as in the sidebar, in buttons and in tables. Symbols are scalable, support different weights and adapt to the user’s theme.</p>
 
     <h2>Using Symbols</h2>
     <p class="jenkins-description">Using symbols in your view is simple. Use the existing icon component and set the src value to the symbol you want, prefixed with "symbol-".</p>
+    <p class="icon-md">
+      <l:icon src="symbol-search" />
+    </p>
     <pre>
       <code class="language-xml">
         <xmp>
@@ -14,6 +17,9 @@
     </pre>
 
     <p class="jenkins-description">It’s possible to add alt text and custom classes to symbols, for example:</p>
+    <p class="icon-md">
+      <l:icon src="symbol-search" alt="Search" class="custom-class" />
+    </p>
     <pre>
       <code class="language-xml">
         <xmp>
