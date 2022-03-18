@@ -80,13 +80,13 @@ THE SOFTWARE.
               <l:icon src="symbol-github" />
             </div>
             <div class="app-card__title">View in-progress UX work</div>
-            <div class="app-card__description">TODO</div>
+            <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
-          <a class="app-card__container" href="Buttons">
+          <a class="app-card__container" href="http://github.com/jenkinsci/ui-samples-plugin/">
             <div class="app-card__preview">
-              <l:icon src="symbol-github" />
+              <l:icon src="symbol-ui-samples" />
             </div>
-            <div class="app-card__title">TODO</div>
+            <div class="app-card__title">Contribute to Jenkins Design Library</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
