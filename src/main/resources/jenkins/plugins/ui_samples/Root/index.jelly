@@ -59,18 +59,18 @@ THE SOFTWARE.
         </div>
         <p class="recent">Get involved</p>
         <div class="app-home__side-by-side">
-          <a class="app-card__container" href="Buttons">
+          <a class="app-card__container" href="https://gitter.im/jenkinsci/ux-sig">
             <div class="app-card__preview">
-              <l:icon src="symbol-github" />
+              <l:icon src="symbol-gitter" />
             </div>
             <div class="app-card__title">Gitter</div>
             <div class="app-card__description">Join the discussion</div>
           </a>
-          <a class="app-card__container" href="Buttons">
+          <a class="app-card__container" href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe">
             <div class="app-card__preview">
-              <l:icon src="symbol-github" />
+              <l:icon src="symbol-youtube" />
             </div>
-            <div class="app-card__title">Github PRs</div>
+            <div class="app-card__title">Watch the latest UX meetings</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
@@ -86,7 +86,7 @@ THE SOFTWARE.
             <div class="app-card__preview">
               <l:icon src="symbol-github" />
             </div>
-            <div class="app-card__title">Github PRs</div>
+            <div class="app-card__title">TODO</div>
             <div class="app-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
           </a>
         </div>
