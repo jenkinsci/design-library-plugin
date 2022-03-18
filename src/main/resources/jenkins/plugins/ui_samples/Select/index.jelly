@@ -24,27 +24,42 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
+    <p class="jenkins-description">There are a couple of ways to create a dropdown in Jenkins.</p>
+
+    <p class="jenkins-description">You can use <code>dropdownDescriptorSelector</code> to create a fully data-bound form and the option to include a
+      config page for the <code>descriptor</code> by creating a file called <code>config.jelly</code>.
+    </p>
     <form action="submit" method="post">
-      <table>
-        <j:set var="currentFruit" value="${it.fruit}"/>
-        <!-- getJSONObject("fruit") in java code gets data for this block -->
-        <!-- A @DataBoundConstructor with parameter "Fruit fruit" can also be used -->
-        <f:dropdownList name="fruit" title="Fruits">
-          <!-- Loop through available fruit types -->
-          <j:forEach var="descriptor" items="${it.fruitDescriptors}" varStatus="loop">
-            <!-- Set "fruit" only if it matches this descriptor -->
-            <j:set var="fruit" value="${descriptor==currentFruit.descriptor?currentFruit:null}"/>
-            <f:dropdownListBlock title="${descriptor.displayName}" value="${loop.index}"
-                                 selected="${fruit!=null}" staplerClass="${descriptor.clazz.name}">
-              <!-- Include config.jelly for this fruit type -->
-              <st:include page="${descriptor.configPage}" from="${descriptor}"/>
-            </f:dropdownListBlock>
-          </j:forEach>
-        </f:dropdownList>
-        <f:entry title="" >
-          <f:submit value="Submit"/>
-        </f:entry>
-      </table>
+
+      <pre>
+        <!-- we use remote here as otherwise the it.descriptors will be interpreted in the output -->
+        <code class="sample-remote language-xml" data-sample="sample.jelly" />
+      </pre>
+      <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
+
+      <f:submit value="Save"/>
     </form>
+    <p style="margin-top: var(--section-padding);" class="jenkins-description">If you want a simpler <code>select</code> to be rendered you can use the <code>f:select</code>
+    jelly tag and create a <code>doFillFieldNameItems</code> method in the <code>descriptor</code>.</p>
+
+<!--    <pre>-->
+<!--      &lt;!&ndash; we use remote here as otherwise the it.descriptors will be interpreted in the output &ndash;&gt;-->
+<!--      <code class="sample-remote language-xml">-->
+<!--        <xmp>-->
+<!--          &lt;f:select /&gt;-->
+<!--        </xmp>-->
+<!--      </code>-->
+<!--    </pre>-->
+
+    <f:entry title="Fruits">
+      <f:select field="fruit"/>
+    </f:entry>
+
+    config.jelly:
+    <pre><code class="sample-remote language-xml" data-sample="sample2.jelly" /></pre>
+
+    Java source code:
+    <pre><code class="sample-remote language-java" data-sample="Sample.java" /></pre>
+
   </s:sample>
 </j:jelly>

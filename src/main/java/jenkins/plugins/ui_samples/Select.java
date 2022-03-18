@@ -5,6 +5,7 @@ import hudson.Extension;
 import hudson.ExtensionPoint;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
+import hudson.util.ListBoxModel;
 import jenkins.model.Jenkins;
 import hudson.util.XStream2;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class Select extends UISample {
     }
 
     public DescriptorExtensionList<Fruit,Descriptor<Fruit>> getFruitDescriptors() {
-        return Jenkins.getInstance().<Fruit,Descriptor<Fruit>>getDescriptorList(Fruit.class);
+        return Jenkins.get().getDescriptorList(Fruit.class);
     }
 
     // Process form data and show it as serialized XML
@@ -46,6 +47,13 @@ public class Select extends UISample {
 
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
+
+        public ListBoxModel doFillFruitItems() {
+            return new ListBoxModel(
+                    new ListBoxModel.Option("Apple"),
+                    new ListBoxModel.Option("Banana")
+            );
+        }
     }
 
     public static abstract class Fruit implements ExtensionPoint, Describable<Fruit> {
