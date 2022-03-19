@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () =>{
-  const url = document.querySelector('h1').dataset.url
+
+  function extractLanguageFromClassList(element) {
+    return Array.from(element.classList)
+      .filter(clazz => clazz.startsWith('language-'))
+      .map(clazz => clazz.replace('language-', ''));
+  }
+  const url = document.querySelector('head').dataset.rooturl
+
   document.querySelectorAll('.sample-remote')
     .forEach(element => {
       const fileName = element.dataset.sample;
@@ -9,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       fetch(fullUrl)
         .then(response => response.text())
         .then(text => {
-          const language = Array.from(element.classList)
-            .filter(clazz => clazz.startsWith('language-'))
-            .map(clazz => clazz.replace('language-', ''))
+          const language = extractLanguageFromClassList(element);
 
           if (language.length > 0) {
             element.innerHTML = Prism.highlight(text, Prism.languages[language], language)
@@ -20,4 +25,13 @@ document.addEventListener("DOMContentLoaded", () =>{
           }
         })
     })
+
+  document.querySelectorAll('.language-java,.language-xml,.language-html,.language-css')
+    .forEach(element => {
+      const language = extractLanguageFromClassList(element);
+
+      if (language.length > 0) {
+        element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language)
+      }
+    });
 });

@@ -14,9 +14,7 @@
     </p>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;l:icon src="symbol-search" /&gt;
-        </xmp>
+        &lt;l:icon src="symbol-search" /&gt;
       </code>
     </pre>
 
@@ -26,9 +24,7 @@
     </p>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;l:icon src="symbol-search" alt="Search" class="custom-class" /&gt;
-        </xmp>
+        &lt;l:icon src="symbol-search" alt="Search" class="custom-class" /&gt;
       </code>
     </pre>
 

@@ -8,9 +8,7 @@
     </div>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;l:spinner /&gt;
-        </xmp>
+        &lt;l:spinner /&gt;
       </code>
     </pre>
 
@@ -19,9 +17,7 @@
     </div>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;l:spinner text="I am a label" /&gt;
-        </xmp>
+        &lt;l:spinner text="I am a label" /&gt;
       </code>
     </pre>
 
@@ -30,9 +26,7 @@
     </div>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;l:progressAnimation /&gt;
-        </xmp>
+        &lt;l:progressAnimation /&gt;
       </code>
     </pre>
 

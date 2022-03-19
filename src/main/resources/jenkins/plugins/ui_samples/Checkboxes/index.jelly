@@ -43,9 +43,7 @@ THE SOFTWARE.
     </div>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;f:checkbox title="${%Example}" field="hello" /&gt;
-        </xmp>
+        &lt;f:checkbox title="${%Example}" field="hello" /&gt;
       </code>
     </pre>
   </s:sample>

@@ -42,15 +42,6 @@ THE SOFTWARE.
     <p style="margin-top: var(--section-padding);" class="jenkins-description">If you want a simpler <code>select</code> to be rendered you can use the <code>f:select</code>
     jelly tag and create a <code>doFillFieldNameItems</code> method in the <code>descriptor</code>.</p>
 
-<!--    <pre>-->
-<!--      &lt;!&ndash; we use remote here as otherwise the it.descriptors will be interpreted in the output &ndash;&gt;-->
-<!--      <code class="sample-remote language-xml">-->
-<!--        <xmp>-->
-<!--          &lt;f:select /&gt;-->
-<!--        </xmp>-->
-<!--      </code>-->
-<!--    </pre>-->
-
     <f:entry title="Fruits">
       <f:select field="fruit"/>
     </f:entry>

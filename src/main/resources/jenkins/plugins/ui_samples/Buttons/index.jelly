@@ -42,9 +42,7 @@ THE SOFTWARE.
     </div>
     <pre>
       <code class="language-html">
-        <xmp>
-          <button class="jenkins-button">Default</button>
-        </xmp>
+        <button class="jenkins-button">Default</button>
       </code>
     </pre>
 
@@ -53,9 +51,7 @@ THE SOFTWARE.
     </div>
     <pre>
       <code class="language-html">
-        <xmp>
-          <button class="jenkins-button jenkins-button--primary">Primary</button>
-        </xmp>
+        <button class="jenkins-button jenkins-button--primary">Primary</button>
       </code>
     </pre>
 
@@ -64,9 +60,7 @@ THE SOFTWARE.
     </div>
     <pre>
       <code class="language-html">
-        <xmp>
-          <button class="jenkins-button jenkins-button--destructive">Destructive</button>
-        </xmp>
+        <button class="jenkins-button jenkins-button--destructive">Destructive</button>
       </code>
     </pre>
 
@@ -75,9 +69,7 @@ THE SOFTWARE.
     </div>
     <pre>
       <code class="language-html">
-        <xmp>
-          <button class="jenkins-button jenkins-button--transparent">Transparent</button>
-        </xmp>
+        <button class="jenkins-button jenkins-button--transparent">Transparent</button>
       </code>
     </pre>
 
@@ -86,9 +78,7 @@ THE SOFTWARE.
     </div>
     <pre>
       <code class="language-html">
-        <xmp>
-          <button class="jenkins-button jenkins-button--transparent">&lt;l:icon src="symbol-add" /&gt; With icon</button>
-        </xmp>
+        <button class="jenkins-button jenkins-button--transparent">&lt;l:icon src="symbol-add" /&gt; With icon</button>
       </code>
     </pre>
 
@@ -98,7 +88,9 @@ THE SOFTWARE.
       <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
     </div>
     <pre>
-      <code class="language-xml"><xmp>&lt;l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" /&gt;</xmp></code>
+      <code class="language-xml">
+        &lt;l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" /&gt;
+      </code>
     </pre>
 
     <p>

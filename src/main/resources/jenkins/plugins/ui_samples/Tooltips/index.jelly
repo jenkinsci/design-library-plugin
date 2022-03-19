@@ -17,14 +17,12 @@
     </div>
     <pre>
       <code class="language-xml">
-        <xmp>
-          &lt;j:set var="tooltip"&gt;
-            &lt;img src="${imagesURL}/svgs/logo.svg" /&gt;
-          &lt;/j:set&gt;
-          <button html-tooltip="$${tooltip}" class="jenkins-button jenkins-button--primary">
-            Hover over me
-          </button>
-        </xmp>
+        &lt;j:set var="tooltip"&gt;
+          &lt;img src="${imagesURL}/svgs/logo.svg" /&gt;
+        &lt;/j:set&gt;
+        <button html-tooltip="$${tooltip}" class="jenkins-button jenkins-button--primary">
+          Hover over me
+        </button>
       </code>
     </pre>
     <p class="warning">

@@ -50,7 +50,7 @@ THE SOFTWARE.
     </l:side-panel>
 
     <l:main-panel>
-      <h1 data-url="${rootURL}">${title}</h1>
+      <h1>${title}</h1>
 
       <d:invokeBody/>
     </l:main-panel>
