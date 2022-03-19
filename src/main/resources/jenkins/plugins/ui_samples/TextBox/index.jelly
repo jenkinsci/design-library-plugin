@@ -25,9 +25,12 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
     <div class="app-component-sample">
-      <f:entry title="Example">
+      <f:entry title="Example" field="example">
         <f:textbox />
       </f:entry>
+      <pre>
+        <code class="sample-remote language-xml" data-sample="example.jelly" />
+      </pre>
     </div>
 
     <h2>Auto-completion</h2>
