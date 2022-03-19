@@ -109,6 +109,5 @@ THE SOFTWARE.
       <li>text - the text to be copied into the clipboard.</li>
       <li>message - message to be displayed upon the successful copying into the clipboard </li>
     </ul>
-
   </s:sample>
 </j:jelly>
