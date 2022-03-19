@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="274px" height="57px" viewBox="0 0 274 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Slice</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Jenkins" opacity="0.6" font-family="Georgia-Bold, Georgia" font-size="20" font-weight="bold" letter-spacing="-0.1" fill="#000000">
+            <tspan x="72" y="16">Jenkins</tspan>
+        </text>
+        <text id="Design-Library" font-family="SFProDisplay-Bold, SF Pro Display" font-size="30" font-weight="bold" letter-spacing="-0.15" fill="#000000">
+            <tspan x="72" y="51">Design Library</tspan>
+        </text>
+        <path d="M34.6137819,34.7272727 L4.54969389,34.7272727 C3.14153684,34.7272727 2,33.5597661 2,32.1195737 C2,31.6742072 2.11152861,31.2362622 2.32395522,30.8474824 L17.3559992,3.33607691 C18.0429283,2.07887032 19.5962915,1.6292377 20.825533,2.33179431 C21.237395,2.56718858 21.5773184,2.91484506 21.8074766,3.33607691 L36.8395205,30.8474824 C37.5264496,32.1046889 37.0868185,33.693391 35.857577,34.3959476 C35.4774452,34.6132069 35.0492417,34.7272727 34.6137819,34.7272727 Z M30.1160234,17.9775505 C37.2111906,13.9475413 46.1049062,15.2121447 51.8178648,21.06335 C57.5308233,26.9145553 58.6451013,35.900127 54.5368502,42.9893322 C50.4285992,50.0785375 42.1174634,53.5118763 34.2565807,51.3671326 C26.3956981,49.2223891 20.9360944,42.031876 20.9344262,33.8213306" id="Shape" stroke="#000000" stroke-width="4"></path>
+    </g>
+</svg>

@@ -1,4 +1,5 @@
-# Jenkins UI sample plugin
+![Jenkins Design Library](logo-dark.svg#gh-dark-mode-only)
+![Jenkins Design Library](logo.svg#gh-light-mode-only)
 
 This fake plugin shows Jenkins developers how to build user interfaces using Jenkins UI components.
 
