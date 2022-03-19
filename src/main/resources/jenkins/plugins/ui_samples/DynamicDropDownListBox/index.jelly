@@ -41,5 +41,15 @@ THE SOFTWARE.
         <f:select/>
       </f:entry>
     </form>
+
+    <code>config.jelly</code>:
+    <pre>
+      <code class="sample-remote language-xml" data-sample="sample.jelly" />
+    </pre>
+    <code>Sample.java</code>:
+
+    <pre>
+      <code class="sample-remote language-java" data-sample="Sample.java" />
+    </pre>
   </s:sample>
 </j:jelly>
