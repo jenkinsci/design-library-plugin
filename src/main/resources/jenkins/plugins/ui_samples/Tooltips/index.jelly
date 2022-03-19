@@ -1,19 +1,9 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml">
   <s:sample>
-    <div class="app-component-sample">
-      <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
-        Hover over me
-      </button>
-    </div>
+    <div class="sample-remote app-component-sample" data-sample="simple-button.html" />
     <pre>
-      <code class="language-xml">
-        <xmp>
-          <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
-            Hover over me
-          </button>
-        </xmp>
-      </code>
+      <code class="sample-remote language-html" data-sample="simple-button.html" />
     </pre>
 
     <h2>Showing HTML in tooltips</h2>

@@ -32,4 +32,8 @@ public class Tooltips extends UISample {
 	public String getIconFileName() {
 		return "symbol-tooltips";
 	}
+
+	@Extension
+	public static final class DescriptorImpl extends UISampleDescriptor {
+	}
 }
