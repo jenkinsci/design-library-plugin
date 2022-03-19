@@ -12,11 +12,6 @@ public class Colors extends UISample {
         return "symbol-colors";
     }
 
-    @Override
-    public String getDescription() {
-        return "Shows you how to use the progress bar widget that's used in the executor view and other places";
-    }
-
     public List<String> getColors() {
         return Arrays.asList("red", "green", "orange", "yellow", "blue", "indigo", "violet");
     }

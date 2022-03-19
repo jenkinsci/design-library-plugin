@@ -16,11 +16,6 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
         return "symbol-links";
     }
 
-    @Override
-    public String getDescription() {
-        return "Integrate with navigational context menu to provider quick access around object graph";
-    }
-
     /**
      * This method is called via AJAX to obtain the context menu for this model object.
      */

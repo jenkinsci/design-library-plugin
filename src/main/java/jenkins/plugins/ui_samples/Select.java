@@ -26,11 +26,6 @@ public class Select extends UISample {
         return "symbol-select";
     }
 
-    @Override
-    public String getDescription() {
-        return "Show different form elements based on choice in a &lt;select> control";
-    }
-
     public Fruit getFruit() {
         // Could return currently configured/saved item here to initialized form with this data
         return null;

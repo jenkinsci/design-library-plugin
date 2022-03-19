@@ -10,11 +10,6 @@ import java.util.List;
  */
 @Extension
 public class InpageNavigationWithBreadcrumb extends UISample {
-    @Override
-    public String getDescription() {
-        return "Adds in-page navigation with extra breadcrumb";
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

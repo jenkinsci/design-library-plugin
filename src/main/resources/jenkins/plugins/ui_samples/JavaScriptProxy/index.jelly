@@ -24,7 +24,7 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="AJAX with JavaScript Proxy">
-    <p>
+    <p class="jenkins-description">
       In Jenkins, you can export arbitrary server-side Java object to JavaScript via a proxy,
       then invoke their methods from JavaScript. See <a href="http://wiki.jenkins-ci.org/display/JENKINS/AJAX+with+JavaScript+proxy">the Wiki</a> for more details.
       In this sample, we call a method on the server to increment a counter. This object is a singleton,

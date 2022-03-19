@@ -13,11 +13,6 @@ import org.kohsuke.stapler.QueryParameter;
 @Extension
 public class Select2 extends UISample {
 
-    @Override
-    public String getDescription() {
-        return "Updates the contents of a combo box control dynamically based on selections of other controls";
-    }
-
     // these getter methods should return the current value, which form the initial selection.
 
     public String getAlbum() {

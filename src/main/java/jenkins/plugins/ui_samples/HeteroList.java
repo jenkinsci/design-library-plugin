@@ -45,14 +45,10 @@ import java.util.List;
 
 @Extension public final class HeteroList extends UISample {
 
-    @Override public String getDescription() {
-        return "Show a heterogeneous list of subitems with different data bindings for radio buttons and checkboxes";
-    }
-
     @Extension public static final class DescriptorImpl extends UISampleDescriptor {}
 
     public XmlFile getConfigFile() {
-        return new XmlFile(new File(Jenkins.getInstance().getRootDir(), "stuff.xml"));
+        return new XmlFile(new File(Jenkins.get().getRootDir(), "stuff.xml"));
     }
 
     private Config config;

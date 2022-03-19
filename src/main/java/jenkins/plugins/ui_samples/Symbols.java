@@ -15,11 +15,6 @@ public class Symbols extends UISample {
         return "symbol-symbols";
     }
 
-    @Override
-    public String getDescription() {
-        return "Shows you how to use the progress bar widget that's used in the executor view and other places";
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

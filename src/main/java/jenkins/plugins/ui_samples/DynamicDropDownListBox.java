@@ -15,11 +15,6 @@ import static java.util.Arrays.asList;
 public class DynamicDropDownListBox extends UISample {
 
     @Override
-    public String getDescription() {
-        return "Updates the contents of a &lt;select> control dynamically based on selections of other controls";
-    }
-
-    @Override
     public String getDisplayName() {
         return "Dynamic dropdown list box";
     }

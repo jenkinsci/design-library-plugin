@@ -12,11 +12,6 @@ import org.kohsuke.stapler.bind.JavaScriptMethod;
 @Extension
 public class JavaScriptProxy extends UISample {
     private int i;
-    
-    @Override
-    public String getDescription() {
-        return "Use JavaScript proxy objects to access server-side Java objects from inside the browser.";
-    }
 
     /**
      * The annotation exposes this method to JavaScript proxy.

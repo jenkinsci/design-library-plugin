@@ -26,6 +26,10 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
     <s:sample title="Hetero List Sample">
+      <p class="jenkins-description">
+        <!-- TODO I have no idea what heterogeneous means, should use a simpler word -->
+        Show a heterogeneous list of subitems with different data bindings for radio buttons and checkboxes
+      </p>
         <p>
             <a href="configure">Configure me!</a>
         </p>

@@ -44,11 +44,6 @@ public class TextBox extends UISample {
         return "symbol-textbox";
     }
 
-    @Override
-    public String getDescription() {
-        return "Provide auto-completion to the text box";
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
         /**

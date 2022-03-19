@@ -12,11 +12,6 @@ public class Notifications extends UISample {
         return "symbol-notifications";
     }
 
-    @Override
-    public String getDescription() {
-        return "Notification bar shows a transient message on the top of the page";
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
     }

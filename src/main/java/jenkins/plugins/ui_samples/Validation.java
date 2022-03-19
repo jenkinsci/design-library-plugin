@@ -37,11 +37,6 @@ public class Validation extends UISample {
         this.states = states;
     }
 
-    @Override
-    public String getDescription() {
-        return "How to access values of the nearby input fields when you do form field validation";
-    }
-
     public List<State> getStates() {
         return states;
     }
