@@ -1,7 +1,7 @@
 ![Jenkins Design Library](logo-dark.svg#gh-dark-mode-only)
 ![Jenkins Design Library](logo.svg#gh-light-mode-only)
 <img src="logo-dark.svg#gh-dark-mode-only" alt="Jenkins Design Library">
-<img src="logo.svg#gh-light-mode-only" alt="Jenkins Design Library">
+<a><img src="logo.svg#gh-light-mode-only" alt="Jenkins Design Library"></a>
 
 Design Library makes it easy for developers to build complex and consistent interfaces using Jenkins UI components
 
