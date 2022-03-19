@@ -28,6 +28,13 @@ pre {
   margin: 0 0 var(--section-padding) 0 !important;
 }
 
+#main-panel {
+  width: 100%;
+  max-width: max(900px, 65vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*Colors page*/
 .app-colors {
   display: grid;
@@ -60,7 +67,7 @@ pre {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 900px;
+  max-width: max(900px, 65vw);
   margin: auto;
   gap: 2rem;
 }
