@@ -29,7 +29,7 @@
     </pre>
     <p class="warning">
       Make sure that text is <a href="https://en.wikipedia.org/wiki/HTML_sanitization">sanitized</a> before displaying it inside of <code>html-tooltip</code> as this
-      can lead to XSS attacks
+      can lead to XSS attacks. Avoid user-controlled data like agent names or descriptions.
     </p>
   </s:sample>
 </j:jelly>
