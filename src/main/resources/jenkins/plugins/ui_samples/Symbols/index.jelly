@@ -3,6 +3,10 @@
   <s:sample>
     <p class="jenkins-description">Jenkins Symbols are an extensive and consistent collection of icons for use in Jenkins and plugins. Symbols are intended to be used everywhere a traditional icon would be used, such as in the sidebar, in buttons and in tables. Symbols are scalable, support different weights and adapt to the user’s theme.</p>
 
+    <p>Symbols should be used to help a user recognise what a task does at a glance. This means they should be easily
+    recognisable and relevant to the task, e.g. a padlock for credentials.
+    Don't add symbols to headings, they are distracting, often look out of place and do nothing to help the user.</p>
+
     <h2>Using Symbols</h2>
     <p class="jenkins-description">Using symbols in your view is simple. Use the existing icon component and set the src value to the symbol you want, prefixed with "symbol-".</p>
     <p class="icon-md">
@@ -27,6 +31,17 @@
         </xmp>
       </code>
     </pre>
+
+    <p class="jenkins-description">Sizing of the symbol can be achieved by wrapping it in a <code>span</code> element
+    with a class of <code>icon-size</code> where size is one of:</p>
+
+    <ul style="list-style: none;">
+      <li><span class="icon-sm"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-sm</li>
+      <li><span class="icon-md"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-md</li>
+      <li><span class="icon-lg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-lg</li>
+      <li><span class="icon-xlg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-xlg</li>
+    </ul>
+
 
     <h2>Custom Symbols</h2>
     <p class="jenkins-description">As a plugin developer, you’ll soon be able to add your own symbols for use in your plugin for when there isn’t an appropriate existing symbol to use.</p>
