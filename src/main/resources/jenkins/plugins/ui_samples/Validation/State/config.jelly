@@ -1,0 +1,23 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
+  <f:entry title="${%State name}" field="name">
+    <f:textbox/>
+  </f:entry>
+
+  <f:nested>
+    <div>
+      <f:section title="${%Capital city}">
+        <f:property field="capital"/>
+      </f:section>
+      <f:entry title="${%Other cities}">
+        <f:repeatableProperty field="cities">
+          <f:block>
+            <div>
+              <f:repeatableDeleteButton />
+            </div>
+          </f:block>
+        </f:repeatableProperty>
+      </f:entry>
+    </div>
+  </f:nested>
+</j:jelly>

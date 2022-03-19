@@ -82,6 +82,9 @@ public class Validation extends UISample {
 
                 so this matches the current city name entered as the capital of this state
                 */
+                if (name == null) {
+                    return FormValidation.ok();
+                }
 
                 return FormValidation.ok("Are you sure " + name + " is a capital of " + value + "?");
             }
