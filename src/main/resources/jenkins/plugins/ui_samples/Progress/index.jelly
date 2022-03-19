@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout" xmlns:f="/lib/form">
   <s:sample>
     <p class="jenkins-description">There are two components used to indicate progress to the user. Spinner is used
     to show the user something is happening. Progress animation is used to show something is not complete (such as a log).</p>
@@ -25,7 +25,9 @@
       </code>
     </pre>
 
-    <l:progressAnimation />
+    <div class="app-component-sample">
+      <l:progressAnimation />
+    </div>
     <pre>
       <code class="language-xml">
         <xmp>
@@ -33,6 +35,32 @@
         </xmp>
       </code>
     </pre>
+
+    <h2>Progressive rendering</h2>
+    <p>Shows how to do a complex operation on the server while displaying its progress, before displaying to the user</p>
+    <j:set var="number" value="${request.getParameter('number')}"/>
+    <form method="POST" action=".">
+      <f:entry title="Enter a big number">
+        <f:number name="number" value="${number}" />
+      </f:entry>
+      <button class="jenkins-button">
+        Find factors
+      </button>
+    </form>
+    <j:if test="${number != null}">
+      <script>
+        function display(r) {
+          for (var i = 0; r.newfactors.length > i; i++) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(r.newfactors[i]));
+            $(factors).appendChild(li);
+          }
+        }
+      </script>
+      <p>Factors of ${number}:</p>
+      <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
+      <ul id="factors"/>
+    </j:if>
   </s:sample>
 </j:jelly>
 
