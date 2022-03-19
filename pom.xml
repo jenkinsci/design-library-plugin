@@ -38,7 +38,7 @@ THE SOFTWARE.
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
 
-    <name>Jenkins design library</name>
+    <name>Jenkins Design Library</name>
     <description>Demonstration of UI controls available in Jenkins and guidance on how to use them</description>
     <url>https://github.com/ui-samples-plugin</url>
 
