@@ -1,4 +1,6 @@
-# Jenkins UI sample plugin
+# Jenkins Design Library
+
+TODO update this before merge
 
 This fake plugin shows Jenkins developers how to build user interfaces using Jenkins UI components.
 
