@@ -1,4 +1,4 @@
-/*Generic */
+/* Sample page */
 .app-component-sample {
   display: flex;
   align-items: flex-start;
@@ -8,6 +8,12 @@
   border-radius: 10px;
   background: rgba(100, 100, 100, 0.05);
   margin-bottom: var(--section-padding);
+}
+
+.app-component-sample .jenkins-form-item {
+  width: 100%;
+  max-width: unset;
+  margin-bottom: 0;
 }
 
 .app-code {

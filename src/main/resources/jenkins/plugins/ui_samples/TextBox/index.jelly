@@ -28,10 +28,10 @@
       <f:entry title="Example" field="example">
         <f:textbox />
       </f:entry>
-      <pre>
-        <code class="sample-remote language-xml" data-sample="example.jelly" />
-      </pre>
     </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="example.jelly" />
+    </pre>
 
     <h2>Auto-completion</h2>
     <p class="jenkins-description">
