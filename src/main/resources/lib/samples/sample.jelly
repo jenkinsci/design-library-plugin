@@ -45,6 +45,8 @@ THE SOFTWARE.
     <st:adjunct includes="jenkins.plugins.ui_samples.preCode" />
     <st:adjunct includes="jenkins.plugins.ui_samples.prism" />
 
+    <st:include page="header" optional="true" />
+
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>

@@ -42,11 +42,11 @@ THE SOFTWARE.
       </f:entry>
     </form>
 
-    <code>config.jelly</code>:
+    <code>config.jelly:</code>
     <pre>
       <code class="sample-remote language-xml" data-sample="sample.jelly" />
     </pre>
-    <code>Sample.java</code>:
+    <code>Sample.java:</code>
 
     <pre>
       <code class="sample-remote language-java" data-sample="Sample.java" />
