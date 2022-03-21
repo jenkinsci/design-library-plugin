@@ -1,0 +1,6 @@
+<f:entry title="Beatles Album" field="album">
+  <f:select />
+</f:entry>
+<f:entry title="Title" field="title">
+  <f:combobox />
+</f:entry>
