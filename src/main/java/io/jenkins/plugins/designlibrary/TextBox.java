@@ -26,6 +26,7 @@ package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
 import hudson.model.AutoCompletionCandidates;
+import hudson.util.ComboBoxModel;
 import org.kohsuke.stapler.QueryParameter;
 
 import java.util.Arrays;
@@ -60,6 +61,10 @@ public class TextBox extends UISample {
                     c.add(state);
                 }
             return c;
+        }
+
+        public ComboBoxModel doFillStateItems() {
+            return new ComboBoxModel(STATES);
         }
     }
 

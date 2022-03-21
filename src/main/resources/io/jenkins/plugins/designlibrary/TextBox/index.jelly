@@ -53,11 +53,14 @@
     </pre>
 
     <div class="app-component-sample">
-      <f:entry title="U.S. State (using editableComboBox)">
-        <!-- TODO this should probably have the jenkins-input class added to it in core, looks awful right now -->
-        <f:editableComboBox items="${instance.statesNames}" />
+      <f:entry title="U.S. State" field="state">
+        <f:combobox />
       </f:entry>
     </div>
+
+    <pre>
+      <code class="sample-remote language-xml" data-sample="combo-box.jelly"/>
+    </pre>
 
     <h2>Syntax-highlighted text</h2>
 
