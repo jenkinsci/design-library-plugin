@@ -41,9 +41,9 @@ THE SOFTWARE.
   </j:if>
 
   <l:layout title="${title}">
-    <st:adjunct includes="jenkins.plugins.ui_samples.sample" />
-    <st:adjunct includes="jenkins.plugins.ui_samples.preCode" />
-    <st:adjunct includes="jenkins.plugins.ui_samples.prism" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.preCode" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.prism" />
 
     <st:include page="header" optional="true" />
 

@@ -1,0 +1,72 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+  <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
+  <l:layout title="Design Library">
+    <l:side-panel>
+      <s:sidepanel />
+    </l:side-panel>
+
+    <l:main-panel>
+      <div class="app-home">
+        <p class="app-home__jenkins-title">Jenkins</p>
+        <h1 class="app-home__heading">Design<br/>Library</h1>
+        <div class="app-card__container">
+          <div class="app-card__preview app-card__preview--intro">
+            <l:icon src="symbol-sunburst" />
+            <img src="${imagesURL}/svgs/logo.svg" alt="Jenkins illustration" />
+          </div>
+          <p class="app-card__title">Welcome to Jenkins Design Library</p>
+          <p class="app-card__description">
+            Design Library makes it easy for developers to build complex and consistent interfaces using Jenkins UI components
+          </p>
+        </div>
+        <p class="app-home__subheading">Topics for modernising your interface</p>
+        <div class="app-home__side-by-side">
+          <a class="app-card__container" href="Buttons">
+            <div class="app-card__preview">
+              <l:icon src="symbol-buttons" />
+            </div>
+            <div class="app-card__title">Buttons</div>
+            <div class="app-card__description">Use the new Jenkins buttons design</div>
+          </a>
+          <a class="app-card__container" href="Symbols">
+            <div class="app-card__preview">
+              <l:icon src="symbol-symbols" />
+            </div>
+            <div class="app-card__title">Symbols</div>
+            <div class="app-card__description">Enhance your interface with modern iconography</div>
+          </a>
+        </div>
+        <p class="app-home__subheading">Get involved</p>
+        <div class="app-home__side-by-side">
+          <a class="app-card__container" href="https://gitter.im/jenkinsci/ux-sig">
+            <div class="app-card__preview">
+              <l:icon src="symbol-gitter" />
+            </div>
+            <div class="app-card__title">Join the UX discussion on Gitter</div>
+          </a>
+          <a class="app-card__container" href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe">
+            <div class="app-card__preview">
+              <l:icon src="symbol-youtube" />
+            </div>
+            <div class="app-card__title">Watch the latest Jenkins UX meetings</div>
+          </a>
+        </div>
+        <div class="app-home__side-by-side">
+          <a class="app-card__container" href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui">
+            <div class="app-card__preview">
+              <l:icon src="symbol-github" />
+            </div>
+            <div class="app-card__title">View in-progress UX work</div>
+          </a>
+          <a class="app-card__container" href="https://github.com/jenkinsci/ui-samples-plugin/">
+            <div class="app-card__preview">
+              <l:icon src="symbol-design-library" />
+            </div>
+            <div class="app-card__title">Contribute to Jenkins Design Library</div>
+          </a>
+        </div>
+      </div>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>
