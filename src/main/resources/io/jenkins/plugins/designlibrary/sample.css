@@ -293,8 +293,6 @@ pre {
   border-radius: 6px;
   padding: 0.9rem 1rem;
   margin: 0;
-  font-weight: 500;
-  font-family: var(--font-family-mono);
   z-index: 1;
 }
 
