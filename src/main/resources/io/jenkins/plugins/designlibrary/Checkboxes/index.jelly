@@ -42,9 +42,7 @@ THE SOFTWARE.
       <f:checkbox title="${%Example}" field="hello" />
     </div>
     <pre>
-      <code class="language-xml">
-        &lt;f:checkbox title="${%Example}" field="hello" /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="checkbox.jelly" />
     </pre>
   </s:sample>
 </j:jelly>
