@@ -77,9 +77,7 @@ THE SOFTWARE.
       <button class="jenkins-button"><l:icon src="symbol-add" /> With icon</button>
     </div>
     <pre>
-      <code class="language-html">
-        <button class="jenkins-button jenkins-button--transparent">&lt;l:icon src="symbol-add" /&gt; With icon</button>
-      </code>
+      <code class="sample-remote language-html" data-sample="iconButton.jelly"/>
     </pre>
 
     <h2>Copy button</h2>
@@ -88,9 +86,7 @@ THE SOFTWARE.
       <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
     </div>
     <pre>
-      <code class="language-xml">
-        &lt;l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="copyButton.jelly" />
     </pre>
 
     <p>
