@@ -23,7 +23,7 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
   <s:sample>
     <p class="jenkins-description">
       Buttons are created with the <code>jenkins-button</code> CSS class.
@@ -100,6 +100,26 @@ THE SOFTWARE.
     <ul>
       <li>text - the text to be copied into the clipboard.</li>
       <li>message - message to be displayed upon the successful copying into the clipboard </li>
+    </ul>
+
+    <h2>Help button</h2>
+    <div class="app-component-sample">
+      <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
+    </div>
+    <pre>
+      <code class="language-xml">
+        &lt;t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" /&gt;
+      </code>
+    </pre>
+
+    <p>
+      The tag creates a custom button to get help about a page.
+      The button should always be in the top right of a page, last in the row of components.
+      The tag requires two mandatory attributes:
+    </p>
+    <ul>
+      <li>href - the page to navigate to on click</li>
+      <li>tooltip - the text to be shown on hover</li>
     </ul>
   </s:sample>
 </j:jelly>
