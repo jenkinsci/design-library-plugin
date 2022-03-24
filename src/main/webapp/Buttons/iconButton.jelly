@@ -1,0 +1,3 @@
+<button class="jenkins-button jenkins-button--transparent">
+  <l:icon src="symbol-add" /> With icon
+</button>
