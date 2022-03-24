@@ -111,11 +111,10 @@ THE SOFTWARE.
     <p>
       The tag creates a custom button to get help about a page.
       The button should always be in the top right of a page, last in the row of components.
-      The tag requires two mandatory attributes:
+      The tag has one mandatory attribute:
     </p>
     <ul>
       <li>href - the page to navigate to on click</li>
-      <li>tooltip - the text to be shown on hover</li>
     </ul>
   </s:sample>
 </j:jelly>
