@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
   <l:layout title="Design Library">
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
