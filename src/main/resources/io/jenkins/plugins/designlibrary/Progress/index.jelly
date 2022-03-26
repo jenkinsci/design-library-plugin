@@ -7,27 +7,21 @@
       <l:spinner />
     </div>
     <pre>
-      <code class="language-xml">
-        &lt;l:spinner /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="spinner.jelly" />
     </pre>
 
     <div class="app-component-sample">
       <l:spinner text="I am a label" />
     </div>
     <pre>
-      <code class="language-xml">
-        &lt;l:spinner text="I am a label" /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="spinnerLabel.jelly"/>
     </pre>
 
     <div class="app-component-sample">
       <l:progressAnimation />
     </div>
     <pre>
-      <code class="language-xml">
-        &lt;l:progressAnimation /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="progressAnimation.jelly"/>
     </pre>
 
     <h2>Progressive rendering</h2>
@@ -55,6 +49,10 @@
       <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
       <ul id="factors"/>
     </j:if>
+
+    <pre class="jenkins-!-margin-top-3">
+      <code class="sample-remote language-xml" data-sample="progressiveRendering.jelly"/>
+    </pre>
   </s:sample>
 </j:jelly>
 

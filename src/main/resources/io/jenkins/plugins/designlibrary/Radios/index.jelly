@@ -25,7 +25,6 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jenkins-description"></p>
     <div class="app-component-sample">
       <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm"/>
     </div>
@@ -34,6 +33,16 @@ THE SOFTWARE.
     </pre>
     <pre>
       <code class="sample-remote language-java" data-sample="Sample.java"/>
+    </pre>
+
+    <h2>Boolean radio</h2>
+
+    <div class="app-component-sample">
+      <f:booleanRadio field="myField" />
+    </div>
+
+    <pre>
+      <code class="sample-remote language-xml" data-sample="booleanRadio.jelly"/>
     </pre>
   </s:sample>
 </j:jelly>

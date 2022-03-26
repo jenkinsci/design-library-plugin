@@ -1,7 +1,10 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jenkins-description">Jenkins Symbols are an extensive and consistent collection of icons for use in Jenkins and plugins. Symbols are intended to be used everywhere a traditional icon would be used, such as in the sidebar, in buttons and in tables. Symbols are scalable, support different weights and adapt to the user’s theme.</p>
+    <p class="jenkins-description">Jenkins Symbols are an extensive and consistent collection of icons for use in Jenkins and plugins.
+      Symbols are intended to be used everywhere a traditional icon would be used, such as in the sidebar, in buttons and in tables.
+      Symbols are scalable, support different weights and adapt to the user’s theme.
+    </p>
 
     <p>Symbols should be used to help a user recognise what a task does at a glance. This means they should be easily
     recognisable and relevant to the task, e.g. a padlock for credentials.
@@ -13,9 +16,7 @@
       <l:icon src="symbol-search" />
     </p>
     <pre>
-      <code class="language-xml">
-        &lt;l:icon src="symbol-search" /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="symbol.jelly" />
     </pre>
 
     <p class="jenkins-description">It’s possible to add alt text and custom classes to symbols, for example:</p>
@@ -23,12 +24,10 @@
       <l:icon src="symbol-search" alt="Search" class="custom-class" />
     </p>
     <pre>
-      <code class="language-xml">
-        &lt;l:icon src="symbol-search" alt="Search" class="custom-class" /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="symbol-alt.jelly" />
     </pre>
 
-    <p class="jenkins-description">Sizing of the symbol can be achieved by wrapping it in a <code>span</code> element
+    <p class="jenkins-description">Sizing of the symbol can be achieved by wrapping it in an element such as <code>span</code>
     with a class of <code>icon-size</code> where size is one of:</p>
 
     <ul style="list-style: none;">
@@ -38,8 +37,24 @@
       <li><span class="icon-xlg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-xlg</li>
     </ul>
 
+    <pre>
+      <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
+    </pre>
+
 
     <h2>Custom Symbols</h2>
-    <p class="jenkins-description">As a plugin developer, you’ll soon be able to add your own symbols for use in your plugin for when there isn’t an appropriate existing symbol to use.</p>
+    <p class="jenkins-description">Add your symbol to:</p>
+    <pre><code>{plugin-root}/src/main/resources/images/symbols</code></pre>
+
+    <p class="jenkins-description">Reference it with:</p>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="symbol-plugin.jelly"/>
+    </pre>
+
+    Make sure you replace the placeholder parameters:
+    <ul>
+      <li>symbolName - the file name of the symbol without the file extension (e.g. cloud)</li>
+      <li>yourArtifactId - the artifact ID of your plugin, or the one of the plugin you want to load the symbol from</li>
+    </ul>
   </s:sample>
 </j:jelly>

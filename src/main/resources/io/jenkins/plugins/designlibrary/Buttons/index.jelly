@@ -103,9 +103,7 @@ THE SOFTWARE.
       <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
     </div>
     <pre>
-      <code class="language-xml">
-        &lt;t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" /&gt;
-      </code>
+      <code class="sample-remote language-xml" data-sample="helpButton.jelly" />
     </pre>
 
     <p>
