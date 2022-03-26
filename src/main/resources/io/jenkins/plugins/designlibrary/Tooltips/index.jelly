@@ -10,22 +10,11 @@
       <code class="sample-remote language-html" data-sample="simple-button.html"/>
     </pre>
 
-    <h2>Showing HTML in tooltips</h2>
-    <div class="app-component-sample">
-      <j:set var="tooltip">
-        <img src="${imagesURL}/svgs/logo.svg"/>
-      </j:set>
-      <button html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
-        Hover over me
-      </button>
-    </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="html-tooltip.jelly"/>
-    </pre>
     <p class="warning">
-      Make sure that text is <a href="https://en.wikipedia.org/wiki/HTML_sanitization">sanitized</a> before displaying
+      Make sure that text is <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/HTML_sanitization">sanitized</a> before displaying
       it inside of <code>html-tooltip</code> as this
-      can lead to XSS attacks. Avoid user-controlled data like agent names or descriptions.
+      can lead to XSS attacks. Escape or avoid using it on user-controlled data like agent display names or descriptions.
+      See <a target="_blank" rel="noopener noreferrer" href="https://www.jenkins.io/doc/developer/security/xss-prevention/">Preventing Cross-Site Scripting in Jelly views</a>.
     </p>
   </s:sample>
 </j:jelly>
