@@ -38,7 +38,9 @@ THE SOFTWARE.
                 Current configuration:
             </p>
             <pre>
-                ${it.configFile.asString()}
+              <code class="language-xml">
+                <j:out value="${it.configFile.asString()}" />
+              </code>
             </pre>
         </j:if>
     </s:sample>
