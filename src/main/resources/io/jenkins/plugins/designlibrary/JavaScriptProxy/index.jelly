@@ -26,7 +26,7 @@ THE SOFTWARE.
   <s:sample title="AJAX with JavaScript Proxy">
     <p class="jenkins-description">
       In Jenkins, you can export arbitrary server-side Java object to JavaScript via a proxy,
-      then invoke their methods from JavaScript. See <a href="http://wiki.jenkins-ci.org/display/JENKINS/AJAX+with+JavaScript+proxy">the Wiki</a> for more details.
+      then invoke their methods from JavaScript. See <a href="https://wiki.jenkins.io/display/JENKINS/AJAX+with+JavaScript+proxy">the Wiki</a> for more details.
       In this sample, we call a method on the server to increment a counter. This object is a singleton,
       so you'll see the same counter value across all the browsers.
     </p>

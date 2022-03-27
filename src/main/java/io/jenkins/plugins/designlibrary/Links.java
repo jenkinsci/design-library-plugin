@@ -28,18 +28,18 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
             // otherwise you can also programatically create them.
             // see the javadoc for various convenience methods to add items
             return new ContextMenu()
-                    .add("http://jenkins-ci.org/","Jenkins project")
-                    .add("http://www.cloudbees.com/","CloudBees")
-                    .add(new MenuItem().withContextRelativeUrl("/").withStockIcon("gear.png").withDisplayName("top page"));
+                    .add(new MenuItem().withContextRelativeUrl("/").withIconClass("icon-up").withDisplayName("Back to Dashboard"))
+                    .add("https://www.jenkins.io/","Jenkins project")
+                    .add("https://plugins.jenkins.io/","Plugin documentation");
         }
     }
 
     public ContextMenu doChildrenContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
         // You implement this method in much the same way you do doContextMenu
         return new ContextMenu()
-                .add("http://yahoo.com/","Yahoo")
-                .add("http://google.com/","Google")
-                .add("http://microsoft.com/","Microsoft");
+                .add("https://yahoo.com/","Yahoo")
+                .add("https://google.com/","Google")
+                .add("https://microsoft.com/","Microsoft");
     }
 
     @Extension
