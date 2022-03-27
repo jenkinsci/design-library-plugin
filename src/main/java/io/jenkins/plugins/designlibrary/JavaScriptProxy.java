@@ -23,7 +23,7 @@ public class JavaScriptProxy extends UISample {
      */
     @JavaScriptMethod
     public int increment(int n) {
-        return i+=n;
+        return i += n;
     }
 
     @Extension

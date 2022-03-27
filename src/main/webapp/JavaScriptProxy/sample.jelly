@@ -2,12 +2,12 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
   ...
 
+  <st:bind var="a" value="${it}"/>
+
   <div id="msg" />
   <script>
-    var foo = <st:bind value="${some.expression.thatEvaluatesTo().fooInstance}"/>
-
-    foo.add(1,5, function(t) {
-    document.getElementById('msg').innerHTML = t.responseObject();
+    a.increment(1, function(t) {
+      document.getElementById('msg').innerHTML = t.responseObject();
     })
   </script>
   ...
