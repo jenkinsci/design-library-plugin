@@ -23,7 +23,12 @@ public class Progress extends UISample {
         return new ProgressiveRendering() {
             final List<Integer> newFactors = new LinkedList<Integer>();
             @Override protected void compute() throws Exception {
-                int number = Integer.parseInt(numberS); // try entering a nonnumeric value!
+                int number;
+                try {
+                    number = Integer.parseInt(numberS); // try entering a nonnumeric value!
+                } catch (NumberFormatException e) {
+                    number = Integer.MAX_VALUE;
+                }
                 // Deliberately inefficient:
                 for (int i = 1; i <= number; i++) {
                     if (canceled()) {
