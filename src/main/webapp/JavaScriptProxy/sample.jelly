@@ -1,0 +1,14 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
+  ...
+
+  <div id="msg" />
+  <script>
+    var foo = <st:bind value="${some.expression.thatEvaluatesTo().fooInstance}"/>
+
+    foo.add(1,5, function(t) {
+    document.getElementById('msg').innerHTML = t.responseObject();
+    })
+  </script>
+  ...
+</j:jelly>

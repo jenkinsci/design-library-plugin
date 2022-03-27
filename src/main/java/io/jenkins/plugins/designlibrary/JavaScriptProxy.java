@@ -13,6 +13,11 @@ import org.kohsuke.stapler.bind.JavaScriptMethod;
 public class JavaScriptProxy extends UISample {
     private int i;
 
+    @Override
+    public String getDisplayName() {
+        return "JavaScript Proxy";
+    }
+
     /**
      * The annotation exposes this method to JavaScript proxy.
      */
