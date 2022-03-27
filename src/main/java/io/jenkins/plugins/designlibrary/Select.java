@@ -12,8 +12,11 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 
 import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.StaplerResponse;
+
+import static java.util.Arrays.asList;
 
 /**
  * @author Alan.Harder@oracle.com
@@ -51,6 +54,22 @@ public class Select extends UISample {
                     new ListBoxModel.Option("Apple"),
                     new ListBoxModel.Option("Banana")
             );
+        }
+
+        public ListBoxModel doFillStateItems(@QueryParameter String country) {
+            ListBoxModel m = new ListBoxModel();
+            for (String s : asList("A","B","C"))
+                m.add(String.format("State %s in %s", s, country),
+                        country+':'+s);
+            return m;
+        }
+
+        public ListBoxModel doFillCityItems(@QueryParameter String country, @QueryParameter String state) {
+            ListBoxModel m = new ListBoxModel();
+            for (String s : asList("X","Y","Z"))
+                m.add(String.format("City %s in %s %s", s, state, country),
+                        state+':'+s);
+            return m;
         }
     }
 

@@ -25,31 +25,5 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
          xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="Dynamic dropdown list box">
-
-    <p class="jenkins-description">
-      Updates the contents of a 'select' control dynamically based on selections of other controls.
-    </p>
-
-    <form method="post">
-      <f:entry title="Country" field="country">
-        <f:textbox/>
-      </f:entry>
-      <f:entry title="State" field="state">
-        <f:select/>
-      </f:entry>
-      <f:entry title="City" field="city">
-        <f:select/>
-      </f:entry>
-    </form>
-
-    <code>config.jelly:</code>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="sample.jelly" />
-    </pre>
-    <code>Sample.java:</code>
-
-    <pre>
-      <code class="sample-remote language-java" data-sample="Sample.java" />
-    </pre>
   </s:sample>
 </j:jelly>

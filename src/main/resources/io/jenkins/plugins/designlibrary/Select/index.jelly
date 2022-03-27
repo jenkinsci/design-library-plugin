@@ -52,5 +52,33 @@ THE SOFTWARE.
     Java source code:
     <pre><code class="sample-remote language-java" data-sample="Sample.java" /></pre>
 
+    <h2>Dynamic select</h2>
+
+    <p class="jenkins-description">
+      Updates the contents of a 'select' control dynamically based on selections of other controls.
+    </p>
+
+    <form method="post">
+      <f:entry title="Country" field="country">
+        <f:textbox/>
+      </f:entry>
+      <f:entry title="State" field="state">
+        <f:select/>
+      </f:entry>
+      <f:entry title="City" field="city">
+        <f:select/>
+      </f:entry>
+    </form>
+
+    <code>config.jelly:</code>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="dynamic-sample.jelly" />
+    </pre>
+    <code>Sample.java:</code>
+
+    <pre>
+      <code class="sample-remote language-java" data-sample="DynamicSample.java" />
+    </pre>
+
   </s:sample>
 </j:jelly>
