@@ -47,13 +47,17 @@ THE SOFTWARE.
 
     <st:include page="header" optional="true" />
 
+    <l:app-bar title="${title}">
+      <button id="button-share" class="jenkins-button" tooltip="${%Share page}">
+        <l:icon src="symbol-share" />
+      </button>
+    </l:app-bar>
+
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
 
     <l:main-panel>
-      <h1>${title}</h1>
-
       <d:invokeBody/>
     </l:main-panel>
   </l:layout>

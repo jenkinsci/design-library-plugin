@@ -10,6 +10,10 @@
   margin-bottom: var(--section-padding);
 }
 
+.app-component-sample--full-width {
+  align-items: unset;
+}
+
 .app-component-sample .jenkins-form-item {
   width: 100%;
   max-width: unset;

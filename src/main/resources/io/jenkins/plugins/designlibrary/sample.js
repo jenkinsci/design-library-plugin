@@ -34,4 +34,21 @@ document.addEventListener("DOMContentLoaded", () =>{
         element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language)
       }
     });
+
+  if (!navigator.canShare) {
+    document.querySelector('#button-share').style.display = "none"
+  }
+
+  document.querySelector('#button-share').addEventListener('click', async () => {
+    try {
+      const shareData = {
+        title: document.title,
+        text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
+        url: document.location.href
+      }
+      await navigator.share(shareData)
+    } catch (error) {
+      console.log(error)
+    }
+  });
 });
