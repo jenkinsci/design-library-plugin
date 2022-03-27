@@ -56,5 +56,10 @@
       <li>symbolName - the file name of the symbol without the file extension (e.g. cloud)</li>
       <li>yourArtifactId - the artifact ID of your plugin, or the one of the plugin you want to load the symbol from</li>
     </ul>
+
+    <p>
+      ArtifactId can be found in your <code>pom.xml</code> for Maven plugins or as <code>shortName</code> in
+      <code>build.gradle</code> for Gradle plugins.
+    </p>
   </s:sample>
 </j:jelly>
