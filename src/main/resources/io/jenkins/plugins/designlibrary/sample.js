@@ -37,18 +37,18 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   if (!navigator.canShare) {
     document.querySelector("#button-share").style.display = "none"
-  } else {
-    document.querySelector("#button-share").addEventListener("click", async () => {
-      try {
-        const shareData = {
-          title: document.title,
-          text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
-          url: document.location.href
-        }
-        await navigator.share(shareData)
-      } catch (error) {
-        console.log(error)
-      }
-    });
   }
+
+  document.querySelector("#button-share").addEventListener("click", async (e) => {
+    try {
+      const shareData = {
+        title: document.title,
+        text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
+        url: document.location.href
+      }
+      await navigator.share(shareData)
+    } catch (error) {
+      console.log(error)
+    }
+  });
 });
