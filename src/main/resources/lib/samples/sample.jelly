@@ -49,7 +49,7 @@ THE SOFTWARE.
 
     <l:app-bar title="${title}">
       <button id="button-share" class="jenkins-button" tooltip="${%Share page}">
-        <l:icon src="symbol-share" />
+        <l:icon src="symbol-share plugin-design-library" />
       </button>
     </l:app-bar>
 
