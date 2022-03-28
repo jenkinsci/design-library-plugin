@@ -74,10 +74,10 @@ THE SOFTWARE.
     </pre>
 
     <div class="app-component-sample">
-      <button class="jenkins-button"><l:icon src="symbol-add" /> With icon</button>
+      <button class="jenkins-button"><l:icon src="symbol-add" /> With symbol</button>
     </div>
     <pre>
-      <code class="sample-remote language-html" data-sample="iconButton.jelly"/>
+      <code class="sample-remote language-html" data-sample="symbolButton.jelly"/>
     </pre>
 
     <h2>Copy button</h2>
