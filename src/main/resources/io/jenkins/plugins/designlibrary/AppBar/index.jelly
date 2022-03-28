@@ -22,7 +22,8 @@
     </pre>
 
     <p class="jenkins-description">
-      App bars provide glanceable information as well as important actions about the current page.
+      App bars provide the page heading as well as important actions about the current page.
+      It must be included before the <code>l:main-panel</code>.
     </p>
   </s:sample>
 </j:jelly>

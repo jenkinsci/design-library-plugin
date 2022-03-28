@@ -7,3 +7,6 @@
   <button class="jenkins-button">Secondary</button>
   <t:help href="https://www.jenkins.io" />
 </l:app-bar>
+<l:main-panel>
+  ...
+</l:main-panel>
