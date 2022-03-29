@@ -39,7 +39,6 @@ THE SOFTWARE.
     <packaging>hpi</packaging>
 
     <name>Jenkins Design Library</name>
-    <description>Demonstration of UI controls available in Jenkins and guidance on how to use them</description>
     <url>https://github.com/jenkinsci/design-library-plugin</url>
 
     <properties>
