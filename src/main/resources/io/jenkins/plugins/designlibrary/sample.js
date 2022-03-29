@@ -35,20 +35,25 @@ document.addEventListener("DOMContentLoaded", () =>{
       }
     });
 
-  if (!navigator.canShare) {
-    document.querySelector("#button-share").style.display = "none"
-  }
+  const shareButton = document.querySelector("#button-share");
 
-  document.querySelector("#button-share").addEventListener("click", async (e) => {
-    try {
-      const shareData = {
-        title: document.title,
-        text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
-        url: document.location.href
-      }
-      await navigator.share(shareData)
-    } catch (error) {
-      console.log(error)
+  if (shareButton) {
+    if (!navigator.canShare) {
+      shareButton.style.display = "none"
     }
-  });
+
+    shareButton
+      .addEventListener("click", async (e) => {
+        try {
+          const shareData = {
+            title: document.title,
+            text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
+            url: document.location.href
+          }
+          await navigator.share(shareData)
+        } catch (error) {
+          console.log(error)
+        }
+      });
+  }
 });
