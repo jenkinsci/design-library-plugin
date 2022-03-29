@@ -29,23 +29,22 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.37</version>
+        <version>4.38</version>
         <relativePath />
     </parent>
 
     <groupId>io.jenkins.plugins</groupId>
     <artifactId>design-library</artifactId>
-    <version>${revision}${changelist}</version>
+    <version>${changelist}</version>
     <packaging>hpi</packaging>
 
     <name>Jenkins Design Library</name>
     <description>Demonstration of UI controls available in Jenkins and guidance on how to use them</description>
-    <url>https://github.com/jenkinsci/ui-samples-plugin</url>
+    <url>https://github.com/jenkinsci/design-library-plugin</url>
 
     <properties>
-        <revision>2.1</revision>
-        <changelist>-SNAPSHOT</changelist>
-        <gitHubRepo>jenkinsci/ui-samples-plugin</gitHubRepo>
+        <changelist>999999-SNAPSHOT</changelist>
+        <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
         <jenkins.version>2.339</jenkins.version>
         <java.level>8</java.level>
     </properties>

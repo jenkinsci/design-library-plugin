@@ -59,7 +59,7 @@
             </div>
             <div class="app-card__title">View in-progress UX work</div>
           </a>
-          <a class="app-card__container" href="https://github.com/jenkinsci/ui-samples-plugin/">
+          <a class="app-card__container" href="https://github.com/jenkinsci/design-library-plugin">
             <div class="app-card__preview">
               <l:icon src="symbol-design-library plugin-design-library" />
             </div>
