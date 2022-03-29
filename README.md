@@ -1,12 +1,11 @@
-# Jenkins Design Library
+![Jenkins Design Library](logo-dark.svg#gh-dark-mode-only)
+![Jenkins Design Library](logo.svg#gh-light-mode-only)
 
-TODO update this before merge
-
-This fake plugin shows Jenkins developers how to build user interfaces using Jenkins UI components.
+Design Library makes it easy for developers to build complex and consistent interfaces using Jenkins UI components
 
 This plugin contains:
-- demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.
-- snippets of Jelly/Groovy "ready-to-use" examples
+- demonstration of UI components available in Jenkins
+- snippets of Jelly ready-to-use examples
 
 ## Usage
 
