@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:s="/lib/samples">
   <l:layout title="Design Library">
     <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
     <l:side-panel>
@@ -9,47 +9,45 @@
     <l:main-panel>
       <div class="app-home">
         <p class="app-home__jenkins-title">Jenkins</p>
-        <h1 class="app-home__heading">Design<br/>Library</h1>
+        <h1 class="app-home__heading">${%title}</h1>
         <div class="app-card__container">
           <div class="app-card__preview app-card__preview--intro">
             <l:icon src="symbol-sunburst plugin-design-library" />
             <img src="${imagesURL}/svgs/logo.svg" alt="Jenkins illustration" />
           </div>
-          <p class="app-card__title">Welcome to Jenkins Design Library</p>
-          <p class="app-card__description">
-            Design Library makes it easy for developers to build complex and consistent interfaces using Jenkins UI components
-          </p>
+          <p class="app-card__title">${%welcome}</p>
+          <p class="app-card__description">${%description}</p>
         </div>
-        <p class="app-home__subheading">Topics for modernising your interface</p>
+        <p class="app-home__subheading">${%topics}</p>
         <div class="app-home__side-by-side">
           <a class="app-card__container" href="Buttons">
             <div class="app-card__preview">
               <l:icon src="symbol-buttons plugin-design-library" />
             </div>
-            <div class="app-card__title">Buttons</div>
-            <div class="app-card__description">Use the new Jenkins buttons design</div>
+            <div class="app-card__title">${%buttons}</div>
+            <div class="app-card__description">${%buttons-description}</div>
           </a>
           <a class="app-card__container" href="Symbols">
             <div class="app-card__preview">
               <l:icon src="symbol-symbols plugin-design-library" />
             </div>
-            <div class="app-card__title">Symbols</div>
-            <div class="app-card__description">Enhance your interface with modern iconography</div>
+            <div class="app-card__title">${%symbols}</div>
+            <div class="app-card__description">${%symbols-description}</div>
           </a>
         </div>
-        <p class="app-home__subheading">Get involved</p>
+        <p class="app-home__subheading">${%gitter}</p>
         <div class="app-home__side-by-side">
           <a class="app-card__container" href="https://gitter.im/jenkinsci/ux-sig">
             <div class="app-card__preview">
               <l:icon src="symbol-gitter plugin-design-library" />
             </div>
-            <div class="app-card__title">Join the UX discussion on Gitter</div>
+            <div class="app-card__title">${%gitter-description}</div>
           </a>
           <a class="app-card__container" href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe">
             <div class="app-card__preview">
               <l:icon src="symbol-youtube plugin-design-library" />
             </div>
-            <div class="app-card__title">Watch the latest Jenkins UX meetings</div>
+            <div class="app-card__title">${%ux-youtube}</div>
           </a>
         </div>
         <div class="app-home__side-by-side">
@@ -57,13 +55,13 @@
             <div class="app-card__preview">
               <l:icon src="symbol-github plugin-design-library" />
             </div>
-            <div class="app-card__title">View in-progress UX work</div>
+            <div class="app-card__title">${%ux-wip-core}</div>
           </a>
           <a class="app-card__container" href="https://github.com/jenkinsci/design-library-plugin">
             <div class="app-card__preview">
               <l:icon src="symbol-design-library plugin-design-library" />
             </div>
-            <div class="app-card__title">Contribute to Jenkins Design Library</div>
+            <div class="app-card__title">${%contribute}</div>
           </a>
         </div>
       </div>
