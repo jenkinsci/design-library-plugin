@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-  Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.
+  Demonstration of UI controls available in Jenkins and guidance on how to use them.
 </div>
