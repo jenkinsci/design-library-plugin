@@ -1,0 +1,48 @@
+<!--
+The MIT License
+
+Copyright 2013 - 2022 Jesse Glick, Jan Faracik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+  <s:sample>
+    <div class="app-component-sample">
+      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm"/>
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="index.jelly"/>
+    </pre>
+    <pre>
+      <code class="sample-remote language-java" data-sample="Sample.java"/>
+    </pre>
+
+    <h2>Boolean radio</h2>
+
+    <div class="app-component-sample">
+      <f:booleanRadio field="myField" />
+    </div>
+
+    <pre>
+      <code class="sample-remote language-xml" data-sample="booleanRadio.jelly"/>
+    </pre>
+  </s:sample>
+</j:jelly>

@@ -1,0 +1,34 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout">
+  <s:sample>
+    <h2>Spacing override classes</h2>
+
+    <p class="jenkins-description">Jenkins features a range of spacing helper classes to enable you to set the margin and padding for your element.</p>
+
+    <p class="jenkins-description">This is done through the <code class="language-xml">jenkins-!-margin-*</code> and <code class="language-xml">jenkins-!-padding-*</code> classes. The <code class="language-xml">*</code> is the spacing modifier, it ranges from <code class="language-xml">0</code> for no spacing to <code class="language-xml">5</code> for maximum spacing.</p>
+
+    <p class="jenkins-description">You can use position modifiers if you only want to impact one side, for example, <code class="language-xml">jenkins-!-padding-left-3</code>.</p>
+
+    <h3>Examples</h3>
+
+    <div class="app-component-sample">
+      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-5</p>
+      <div class="jdl-spacing-box jdl-spacing-box--5" />
+      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-4</p>
+      <div class="jdl-spacing-box jdl-spacing-box--4" />
+      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-3</p>
+      <div class="jdl-spacing-box jdl-spacing-box--3" />
+      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-2</p>
+      <div class="jdl-spacing-box jdl-spacing-box--2" />
+      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-1</p>
+      <div class="jdl-spacing-box jdl-spacing-box--1" />
+      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-0</p>
+    </div>
+
+    <div class="app-component-sample">
+      <div class="jdl-padding-box jdl-padding-box--5">
+        <p>jenkins-!-padding-5</p>
+      </div>
+    </div>
+  </s:sample>
+</j:jelly>

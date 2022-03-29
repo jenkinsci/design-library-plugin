@@ -21,30 +21,43 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
+
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:i="jelly:fmt">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout">
   <st:documentation>
-    Page layout for UI samples and variable bindings that emulate the form environment.
-    <st:attribute name="title" use="required">
-      Page title
+    Page layout for Design Library
+
+    <st:attribute name="title">
+      Overrides the default page title (defaults to the class display name)
     </st:attribute>
   </st:documentation>
+
   <j:set var="instance" value="${it}" />
   <j:set var="descriptor" value="${it.descriptor}" />
+
+  <!-- Default to class display name if title isn't set -->
+  <j:if test="${title == null}">
+    <j:set var="title" value="${it.displayName}" />
+  </j:if>
+
   <l:layout title="${title}">
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.preCode" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.prism" />
+
     <st:include page="header" optional="true" />
+
+    <l:app-bar title="${title}">
+      <button id="button-share" class="jenkins-button" tooltip="${%Share page}">
+        <l:icon src="symbol-share plugin-design-library" />
+      </button>
+    </l:app-bar>
+
+    <l:side-panel>
+      <s:sidepanel />
+    </l:side-panel>
+
     <l:main-panel>
-      <h1>${title}</h1>
-      <p>
-        <j:out value="${it.description}"/>
-      </p>
-      <h3>Source Files</h3>
-      <ul>
-        <j:forEach var="f" items="${it.sourceFiles}">
-          <li><a href="sourceFile/${f.name}">${f.name}</a></li>
-        </j:forEach>
-      </ul>
-      <h3>Sample</h3>
       <d:invokeBody/>
     </l:main-panel>
   </l:layout>

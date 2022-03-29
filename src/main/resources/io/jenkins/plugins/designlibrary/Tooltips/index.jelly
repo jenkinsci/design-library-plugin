@@ -1,0 +1,21 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml">
+  <s:sample>
+    <div class="app-component-sample">
+      <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
+        Hover over me
+      </button>
+    </div>
+    <pre>
+      <code class="sample-remote language-html" data-sample="simple-button.html"/>
+    </pre>
+
+    <p class="warning">
+      Make sure that text is <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/HTML_sanitization">sanitized</a> before displaying
+      it inside of <code>html-tooltip</code> as this
+      can lead to XSS attacks. Escape or avoid using it on user-controlled data like agent display names or descriptions.
+      See <a target="_blank" rel="noopener noreferrer" href="https://www.jenkins.io/doc/developer/security/xss-prevention/">Preventing Cross-Site Scripting in Jelly views</a>.
+    </p>
+  </s:sample>
+</j:jelly>
+

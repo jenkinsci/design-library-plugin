@@ -1,0 +1,6 @@
+<j:set var="tooltip">
+  <img src="${imagesURL}/svgs/logo.svg" />
+</j:set>
+<button html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
+  Hover over me
+</button>

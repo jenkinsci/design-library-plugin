@@ -1,0 +1,10 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
+  <l:tasks>
+    <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home plugin-design-library" />
+
+    <j:forEach var="s" items="${it.all}">
+      <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName} plugin-design-library" />
+    </j:forEach>
+  </l:tasks>
+</j:jelly>

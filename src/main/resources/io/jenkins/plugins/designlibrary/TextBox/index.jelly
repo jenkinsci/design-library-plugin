@@ -1,0 +1,117 @@
+<!--
+  ~ The MIT License
+  ~
+  ~ Copyright (c) 2010, InfraDNA, Inc.
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+  <s:sample>
+    <div class="app-component-sample">
+      <f:entry title="Example" field="example">
+        <f:textbox />
+      </f:entry>
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="example.jelly" />
+    </pre>
+
+    <h2>Auto-completion</h2>
+    <p class="jenkins-description">
+      Start typing a US state for autocomplete results to appear.
+    </p>
+    <div class="app-component-sample">
+      <f:entry title="U.S. State" field="state">
+        <f:textbox />
+      </f:entry>
+    </div>
+    <p class="jenkins-description">
+      Textboxes can feature auto-completion items by Stapler finds this method via the naming convention.
+    </p>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="sample.jelly" />
+    </pre>
+    <pre>
+      <code class="sample-remote language-java" data-sample="Sample.java" />
+    </pre>
+
+    <p class="jenkins-description">
+      There is a similar control to the autocomplete functionality of 'textbox' called combobox:
+    </p>
+
+    <div class="app-component-sample">
+      <f:entry title="U.S. State" field="state">
+        <f:combobox />
+      </f:entry>
+    </div>
+
+    <code>config.jelly:</code>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="combo-box.jelly"/>
+    </pre>
+
+    <code>SimpleCombobox.java:</code>
+    <pre>
+      <code class="sample-remote language-java" data-sample="SimpleCombobox.java"/>
+    </pre>
+
+    <h3>Dynamic combobox</h3>
+    <p class="jenkins-description">
+      Like many other fields combo-boxes can be updated dynamically based on other field values:
+    </p>
+
+    <f:entry title="Beatles Album" field="album">
+      <f:select />
+    </f:entry>
+    <f:entry title="Title" field="title">
+      <f:combobox />
+    </f:entry>
+
+    <code>config.jelly:</code>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="dynamic-combo-box.jelly"/>
+    </pre>
+
+    <code>DynamicCombobox.java:</code>
+    <pre>
+      <code class="sample-remote language-java" data-sample="DynamicCombobox.java"/>
+    </pre>
+
+
+    <h2>Syntax-highlighted text</h2>
+
+    <p class="jenkins-description">CodeMirror can be used to turn ordinary text area into syntax-highlighted content-assistable text area</p>
+
+    <textarea class="script">println "Hello, World!"</textarea>
+
+    <pre>
+      <code class="language-html"><textarea class="script">println "Hello, World!"</textarea></code>
+    </pre>
+
+    <p class="jenkins-description">
+      You will want to use <code>f:textarea</code> to pass more CodeMirror configuration if you are doing more
+      than displaying a groovy text editor.
+    </p>
+
+    <st:adjunct includes="org.kohsuke.stapler.codemirror.mode.groovy.groovy"/>
+    <st:adjunct includes="org.kohsuke.stapler.codemirror.theme.default"/>
+  </s:sample>
+</j:jelly>
+

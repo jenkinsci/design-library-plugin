@@ -1,0 +1,14 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler">
+  ...
+
+  <st:bind var="a" value="${it}"/>
+
+  <div id="msg" />
+  <script>
+    a.increment(1, function(t) {
+      document.getElementById('msg').innerHTML = t.responseObject();
+    })
+  </script>
+  ...
+</j:jelly>

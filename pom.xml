@@ -33,19 +33,19 @@ THE SOFTWARE.
         <relativePath />
     </parent>
 
-    <groupId>org.jenkins-ci.main</groupId> <!-- historical -->
-    <artifactId>ui-samples-plugin</artifactId> <!-- historical -->
+    <groupId>io.jenkins.plugins</groupId>
+    <artifactId>design-library</artifactId>
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
 
-    <name>Jenkins UI sample plugin</name>
-    <description>Demonstration of UI controls available in Jenkins based on Stapler, Jelly, Groovy, etc.</description>
-    <url>https://github.com/ui-samples-plugin</url>
+    <name>Jenkins Design Library</name>
+    <description>Demonstration of UI controls available in Jenkins and guidance on how to use them</description>
+    <url>https://github.com/jenkinsci/ui-samples-plugin</url>
 
     <properties>
         <revision>2.1</revision>
         <changelist>-SNAPSHOT</changelist>
-        <gitHubRepo>github.com/ui-samples-plugin</gitHubRepo>
+        <gitHubRepo>jenkinsci/ui-samples-plugin</gitHubRepo>
         <jenkins.version>2.339</jenkins.version>
         <java.level>8</java.level>
     </properties>
@@ -90,9 +90,9 @@ THE SOFTWARE.
     </build>
 
     <scm>
-        <connection>scm:git:https://${gitHubRepo}</connection>
-        <developerConnection>scm:git:https://${gitHubRepo}</developerConnection>
-        <url>https://${gitHubRepo}</url>
+        <connection>scm:git:https://github.com/${gitHubRepo}</connection>
+        <developerConnection>scm:git:https://github.com/${gitHubRepo}</developerConnection>
+        <url>https://github.com/${gitHubRepo}</url>
         <tag>${scmTag}</tag>
     </scm>
 

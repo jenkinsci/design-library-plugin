@@ -1,0 +1,118 @@
+<!--
+The MIT License
+
+Copyright 2013 - 2022 Jesse Glick, Jan Faracik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
+  <s:sample>
+    <p class="jenkins-description">
+      Buttons are created with the <code>jenkins-button</code> CSS class.
+      There are a number of different styles that can be added by adding another class alongside, such as
+      <code>jenkins-button--primary</code>. Styling links as buttons is also supported.
+    </p>
+
+    <p class="jenkins-description">Each form should have only one primary button. Most other buttons should just be the default one.
+      Destructive buttons should be used when something will be deleted or not easily undone.
+      Generally these should have a confirmation page.</p>
+
+    <!-- TODO No idea when you would use a transparent button -->
+
+    <div class="app-component-sample">
+      <button class="jenkins-button">Default</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <button class="jenkins-button">Default</button>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button jenkins-button--primary">Primary</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <button class="jenkins-button jenkins-button--primary">Primary</button>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+    </div>
+    <pre>
+      <code class="language-html">
+        <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+      </code>
+    </pre>
+
+    <div class="app-component-sample">
+      <button class="jenkins-button"><l:icon src="symbol-add" /> With symbol</button>
+    </div>
+    <pre>
+      <code class="sample-remote language-html" data-sample="symbolButton.jelly"/>
+    </pre>
+
+    <h2>Copy button</h2>
+    <p>A small button to copy text into a clipboard</p>
+    <div class="app-component-sample">
+      <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="copyButton.jelly" />
+    </pre>
+
+    <p>
+      The tag creates a small button that allows users to paste text into the clipboard.
+      The tag requires two mandatory attributes:
+    </p>
+    <ul>
+      <li>text - the text to be copied into the clipboard.</li>
+      <li>message - message to be displayed upon the successful copying into the clipboard </li>
+    </ul>
+
+    <h2>Help button</h2>
+    <div class="app-component-sample">
+      <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="helpButton.jelly" />
+    </pre>
+
+    <p>
+      The tag creates a custom button to get help about a page.
+      The button should always be in the top right of a page, last in the row of components.
+      The tag has one mandatory attribute:
+    </p>
+    <ul>
+      <li>href - the page to navigate to on click</li>
+    </ul>
+  </s:sample>
+</j:jelly>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="398px" viewBox="0 0 400 398" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(89.050559, -41.226213)" fill="url(#linearGradient-1)">
+            <g id="Group-3" transform="translate(103.257073, 0.000000)">
+                <g id="Group-2" transform="translate(7.692368, 0.000000)">
+                    <polygon id="Path" points="0 214.226213 0 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="1.13686838e-13 214.226213 1.13686838e-13 1.42108547e-14 81.8022053 1.42108547e-14 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(141.260177, 203.133272) rotate(40.000000) translate(-141.260177, -203.133272) translate(61.876643, 77.977061)">
+                    <polygon id="Path" points="0 214.226213 0 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="2.27373675e-13 214.226213 2.27373675e-13 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-3" transform="translate(196.888284, 359.529106) rotate(80.000000) translate(-196.888284, -359.529106) translate(55.628107, 184.511484)">
+                <g id="Group-2" transform="translate(7.692368, 0.000000)">
+                    <polygon id="Path" points="0 214.226213 0 1.13686838e-13 81.8022053 1.13686838e-13 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="0 214.226213 0 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(141.260177, 203.133272) rotate(40.000000) translate(-141.260177, -203.133272) translate(61.876643, 77.977061)">
+                    <polygon id="Path" points="-5.68434189e-14 214.226213 -5.68434189e-14 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="0 214.226213 0 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Group-4" transform="translate(109.956350, 203.161066) rotate(160.000000) translate(-109.956350, -203.161066) translate(-86.931934, -61.356292)" fill="url(#linearGradient-1)">
+            <g id="Group-3" transform="translate(103.257073, 0.000000)">
+                <g id="Group-2" transform="translate(7.692368, 0.000000)">
+                    <polygon id="Path" points="0 214.226213 0 1.13686838e-13 81.8022053 1.13686838e-13 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="1.13686838e-13 214.226213 1.13686838e-13 -1.13686838e-13 81.8022053 -1.13686838e-13 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(141.260177, 203.133272) rotate(40.000000) translate(-141.260177, -203.133272) translate(61.876643, 77.977061)">
+                    <polygon id="Path" points="-2.27373675e-13 214.226213 -2.27373675e-13 5.68434189e-14 81.8022053 5.68434189e-14 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="0 214.226213 0 8.52651283e-14 81.8022053 8.52651283e-14 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-3" transform="translate(196.888284, 359.529106) rotate(80.000000) translate(-196.888284, -359.529106) translate(55.628107, 184.511484)">
+                <g id="Group-2" transform="translate(7.692368, 0.000000)">
+                    <polygon id="Path" points="0 214.226213 0 0 81.8022053 0 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="0 214.226213 0 -5.68434189e-14 81.8022053 -5.68434189e-14 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(141.260177, 203.133272) rotate(40.000000) translate(-141.260177, -203.133272) translate(61.876643, 77.977061)">
+                    <polygon id="Path" points="-5.68434189e-14 214.226213 -5.68434189e-14 5.68434189e-14 81.8022053 5.68434189e-14 11.6442703 221.434935"></polygon>
+                    <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                        <polygon id="Path" points="-4.26325641e-14 214.226213 -4.26325641e-14 -5.68434189e-14 81.8022053 -5.68434189e-14 11.6442703 221.434935"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Group-2" transform="translate(187.402413, 59.859048) rotate(-40.000000) translate(-187.402413, -59.859048) translate(108.018879, -65.297163)" fill="url(#linearGradient-1)">
+            <polygon id="Path" points="0 214.226213 0 -5.68434189e-14 81.8022053 -5.68434189e-14 11.6442703 221.434935"></polygon>
+            <g id="Group" transform="translate(82.465000, 132.283034) rotate(20.000000) translate(-82.465000, -132.283034) translate(41.563897, 21.565567)">
+                <polygon id="Path" points="0 214.226213 0 -5.68434189e-14 81.8022053 -5.68434189e-14 11.6442703 221.434935"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
