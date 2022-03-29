@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640px" height="640px" viewBox="0 0 640 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,480 L100,210 C100,182.385763 122.385763,160 150,160 L490,160 C517.614237,160 540,182.385763 540,210 L540,480 L540,480" stroke="currentColor" stroke-width="32" stroke-linecap="round"></path>
+        <line x1="100" y1="265.944328" x2="540" y2="265.944328" stroke="currentColor" stroke-width="32"></line>
+    </g>
+</svg>

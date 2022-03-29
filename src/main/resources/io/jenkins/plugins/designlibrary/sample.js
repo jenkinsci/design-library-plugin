@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     });
 
   if (!navigator.canShare) {
-    document.querySelector('#button-share').style.display = "none"
+    document.querySelector("#button-share").style.display = "none"
   }
 
-  document.querySelector('#button-share').addEventListener('click', async () => {
+  document.querySelector("#button-share").addEventListener("click", async (e) => {
     try {
       const shareData = {
         title: document.title,
