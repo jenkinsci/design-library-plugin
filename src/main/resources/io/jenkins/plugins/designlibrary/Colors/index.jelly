@@ -33,11 +33,11 @@ THE SOFTWARE.
       </j:forEach>
     </ol>
 
-    <h2>Tips</h2>
+    <h2>${%tips}</h2>
     <ul>
-      <li>Use color to draw attention to important parts of your interface</li>
-      <li>Color shouldn't be the only way a piece of information is conveyed, use text or symbols along with it</li>
-      <li>It's best to use colors provided by Jenkins as they will automatically adapt to the user's theme</li>
+      <li>${%tip-first}</li>
+      <li>${%tip-second}</li>
+      <li>${%tip-third}</li>
     </ul>
   </s:sample>
 </j:jelly>
