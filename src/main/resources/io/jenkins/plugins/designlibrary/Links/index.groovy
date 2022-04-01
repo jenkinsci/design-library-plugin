@@ -17,17 +17,17 @@ def example(html) {
     }
 }
 
-namespace("/lib/samples").sample(title:_("Navigational context menu integration")) {
+namespace("/lib/samples").sample(title:_("title")) {
     raw(_("blurb"))
 
-    h2(_("Defining context menu"))
+    h2(_("define.title"))
     raw(_("blurb.define"))
 
-    h2(_("Breadcrumb integration"))
+    h2(_("breadcrumb.title"))
     raw(_("blurb.breadcrumb"))
 
 
-    h2(_("Model hyperlink"))
+    h2(_("hyperlink.title"))
     raw(_("blurb.modelLink"))
     table(border:1) {
         example "<a href='.' class='model-link'>self</a>"
