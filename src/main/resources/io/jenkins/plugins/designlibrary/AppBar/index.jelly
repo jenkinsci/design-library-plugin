@@ -4,15 +4,15 @@
     <div class="app-component-sample app-component-sample--full-width">
       <div class="jenkins-app-bar jenkins-!-margin-bottom-0">
         <div class="jenkins-app-bar__content">
-          <h1>Page title</h1>
+          <h1>${%title}</h1>
         </div>
         <div class="jenkins-app-bar__controls">
           <button class="jenkins-button jenkins-button--primary">
             <l:icon src="symbol-add" />
             Primary control
           </button>
-          <button class="jenkins-button">Secondary</button>
-          <button class="jenkins-button">Secondary</button>
+          <button class="jenkins-button">${%secondary}</button>
+          <button class="jenkins-button">${%secondary}</button>
           <t:help href="https://www.jenkins.io" />
         </div>
       </div>
@@ -21,9 +21,6 @@
       <code class="sample-remote language-xml" data-sample="appBar.jelly" />
     </pre>
 
-    <p class="jenkins-description">
-      App bars provide the page heading as well as important actions about the current page.
-      It must be included before the <code>l:main-panel</code>.
-    </p>
+    <p class="jenkins-description">${%description}</p>
   </s:sample>
 </j:jelly>

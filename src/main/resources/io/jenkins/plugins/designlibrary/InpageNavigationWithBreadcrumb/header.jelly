@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
-  <l:breadcrumb title="Click me! Click me!" id="id-of-breadcrumb-item" />
+  <l:breadcrumb title="${%clickMe}" id="id-of-breadcrumb-item" />
 </j:jelly>

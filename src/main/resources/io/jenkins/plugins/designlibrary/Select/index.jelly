@@ -22,13 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
-    <p class="jenkins-description">There are a couple of ways to create a dropdown in Jenkins.</p>
+    <p class="jenkins-description">${%title}</p>
 
-    <p class="jenkins-description">You can use <code>dropdownDescriptorSelector</code> to create a fully data-bound form and the option to include a
-      config page for the <code>descriptor</code> by creating a file called <code>config.jelly</code>.
-    </p>
+    <p class="jenkins-description">${%usage.1}</p>
     <form action="submit" method="post">
 
       <pre>
@@ -39,8 +37,7 @@ THE SOFTWARE.
 
       <f:submit value="Save"/>
     </form>
-    <p style="margin-top: var(--section-padding);" class="jenkins-description">If you want a simpler <code>select</code> to be rendered you can use the <code>f:select</code>
-    jelly tag and create a <code>doFillFieldNameItems</code> method in the <code>descriptor</code>.</p>
+    <p style="margin-top: var(--section-padding);" class="jenkins-description">${%usage.2}</p>
 
     <f:entry title="Fruits">
       <f:select field="fruit"/>
@@ -52,11 +49,9 @@ THE SOFTWARE.
     Java source code:
     <pre><code class="sample-remote language-java" data-sample="Sample.java" /></pre>
 
-    <h2>Dynamic select</h2>
+    <h2>${%dynamic}</h2>
 
-    <p class="jenkins-description">
-      Updates the contents of a 'select' control dynamically based on selections of other controls.
-    </p>
+    <p class="jenkins-description">${%dynamic.description}</p>
 
     <form method="post">
       <f:entry title="Country" field="country">

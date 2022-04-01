@@ -1,12 +1,9 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <p>
-      Notification bar is a component with a JavaScript API, that you can use to show a message that disappears in a few seconds.
-      It is typically used to provide feedback for asynchronous operations.
-    </p>
+    <p>${%title}</p>
 
-    <p>To show a notification bar, use:</p>
+    <p>%{%usage.1}</p>
     <pre>
       <code class="language-javascript">notificationBar.show('message')</code>
     </pre>
@@ -15,13 +12,13 @@
       <button class="jenkins-button" onclick="notificationBar.show('This is a notification');">Show a notification bar</button>
     </p>
 
-    <p>A notification bar will auto-hide itself, but you can programmatically hide it with:</p>
+    <p>${%usage.2}</p>
     <pre>
       <code class="language-javascript">notificationBar.hide()</code>
     </pre>
     <p><button class="jenkins-button" onclick="notificationBar.hide();">Hide it now</button></p>
 
-    <p>For typical notifications, there are several pre-defined option set available as constants that you can use:</p>
+    <p>${%usage.3}</p>
     <pre>
       <code class="language-javascript">notificationBar.show(msg, notificationBar.OK)</code>
     </pre>

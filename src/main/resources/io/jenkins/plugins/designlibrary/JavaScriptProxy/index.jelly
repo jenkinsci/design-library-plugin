@@ -24,28 +24,15 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="JavaScript Proxy">
-    <p class="jenkins-description">
-      In Jenkins, you can export arbitrary server-side Java object to JavaScript via a proxy,
-      then invoke their methods from JavaScript.
-      In this sample, we call a method on the server to increment a counter. This object is a singleton,
-      so you'll see the same counter value across all the browsers.
-    </p>
+    <p class="jenkins-description">${%description.1}</p>
 
-    <p>
-      To expose a method of a Java class to JavaScript proxy, annotate the method with <code>@JavaScriptMethod</code>.
-      For security reasons, only public methods on public classes annotated with this annotation are invokable from browsers:
-    </p>
+    <p>${%description.2}</p>
 
     <pre>
       <code class="sample-remote language-java" data-sample="Foo.java"/>
     </pre>
 
-    <p>
-    Then from Jelly scripts, use <code>st:bind</code> tag to export a Java object into a proxy.
-    The "value" attribute evaluates to a server-side Java object to be exported, and the tag produces a JavaScript expression that creates a proxy.
-
-    In the example below, we are pretending that the <a href="https://commons.apache.org/proper/commons-jexl/">JEXL</a> expression evaluates to some instance of Foo.
-    </p>
+    <p>${%description.3}</p>
 
     <pre>
       <code class="sample-remote language-xml" data-sample="sample.jelly"/>
@@ -62,43 +49,22 @@ THE SOFTWARE.
       },1000);
     </script>
 
-    <h2>Invoking method</h2>
-    <p>
-      As you can see above, one can invoke methods on the proxy created by the <code>st:bind</code> tag.
-      The JavaScript method takes the arguments that the Java method takes,
-      then it can optionally take a function as an additional parameter, which is used as a callback method when the return value is available.
-      The callback method receives an Ajax.Response object.
-    </p>
+    <h2>${%invokingMethod}</h2>
+    <p>${%invokingMethod.description.1}</p>
 
-    <p>
-      If the Java method returns an object value (such as <code>int, String, Collection, Object[], JSONObject</code>, etc.),
-      you can use the <code>responseObject()</code> method to evaluate the response into a JavaScript object and use it.
-      If the Java method renders more complex HTTP response (for example by writing directly to <code>StaplerResponse</code>
-      or returning an <code>HttpResponse</code>),
-      JavaScript can use other <code>Ajax.Response</code> methods to access the full HTTP response.
-    </p>
+    <p>${%invokingMethod.description.2}</p>
 
-    <p>
-      The method call uses <code>XmlHttpRequest</code> underneath, and it gets eventually routed to the corresponding method call on the exact instance that was exported.
-    </p>
-    <h2>Tips</h2>
+    <p>${%invokingMethod.description.3}</p>
 
-    <h3>Parameters of the server Java method</h3>
-    <p>
-      The Java method can define arbitrary number of parameters for JavaScript.
-      Each parameter is converted from JSON to Java via <code>StaplerRequest.bindJSON</code>, so aside from primitive Java data types
-      and typeless <code>JSONObject</code> / <code>JSONArray</code>, you can use Stapler databinding to accept typed structured data.
-    </p>
+    <h2>${%tips}</h2>
 
-    <p>
-      After defining the parameters from JavaScript, you can additionally define parameters that are injectable by Stapler,
-      such as <code>StaplerRequest</code> or <code>StaplerResponse</code>.
-    </p>
+    <h3>${%tips.description.1}</h3>
+    <p>${%tips.description.1.body}</p>
 
-    <h3>Exporting null</h3>
+    <p>${%tips.description.1.more}</p>
 
-    <p>
-      If the value attribute of a &lt;st:bind&gt; tag evaluates to <code>null</code>, then the corresponding
-      JavaScript proxy will be <code>null</code>.</p>
+    <h3>${%tips.description.2}</h3>
+
+    <p>${%tips.description.2.body}</p>
   </s:sample>
 </j:jelly>

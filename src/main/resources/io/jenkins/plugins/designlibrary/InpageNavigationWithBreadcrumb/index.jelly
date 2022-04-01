@@ -1,20 +1,14 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jenkins-description">You can add arbitrary additional items to the breadcrumb bar (see above), and associate menus with them.
-      This mechanism is convenient for adding anchors to a large page and provide quick access to the key parts.
-      A very typical place where you want to do this is in the configuration page.
-      There's a <code>f:breadcrumb-config-outline</code> tag specifically for this use case,
-      which parses <code>f:section</code> and use that to build the context menu.
-      See the freestyle job configuration page for an example of using this tag.
-    </p>
+    <p class="jenkins-description">${%page.description}</p>
 
-    <f:section title="Section 1">
-      <p>This is section 1</p>
+    <f:section title="${%section.1.title}">
+      <p>${%section.1.description}</p>
     </f:section>
 
-    <f:section title="Section 2">
-      <p>This is section 1</p>
+    <f:section title="${%section.2.title}">
+      <p>${%section.2.description}</p>
     </f:section>
 
     <script>

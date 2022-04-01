@@ -48,7 +48,7 @@ THE SOFTWARE.
     <st:include page="header" optional="true" />
 
     <l:app-bar title="${title}">
-      <button id="button-share" class="jenkins-button" tooltip="${%Share page}">
+      <button id="button-share" class="jenkins-button" tooltip="${%sharePage}">
         <l:icon src="symbol-share plugin-design-library" />
       </button>
     </l:app-bar>

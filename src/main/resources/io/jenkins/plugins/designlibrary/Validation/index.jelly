@@ -1,12 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jenkins-description">Form field validation can access values of the nearby input controls, which is useful for performing complex context sensitive form validation.
-      The same technique can be also used for auto-completion, populating combobox/listbox, and so on.
-      The example below is a bit contrived, but all the input elements are named 'name' (for city name and state name),
-      and we use <code><a href="https://javadoc.jenkins.io/hudson/RelativePath.html">@RelativePath</a></code> so that the validation of the state name refers to the capital name,
-      and the validation of the city name refers to the state name.
-    </p>
+    <p class="jenkins-description">${%title}</p>
 
     <form method="post">
       <f:entry title="${%States}">
@@ -14,10 +9,7 @@
       </f:entry>
     </form>
 
-    <p class="jenkins-description">
-      To implement this you need to provide a <code>doCheckXXX</code> method, where XXX is the name of your field.
-      This should return a <code>FormValidation</code> object.
-    </p>
+    <p class="jenkins-description">${%validation.description}</p>
     <pre>
       <code class="sample-remote language-xml" data-sample="sample.jelly"/>
     </pre>

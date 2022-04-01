@@ -1,8 +1,7 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:x="jelly:xml" xmlns:l="/lib/layout" xmlns:f="/lib/form">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jenkins-description">There are two components used to indicate progress to the user. Spinner is used
-    to show the user something is happening. Progress animation is used to show something is not complete (such as a log).</p>
+    <p class="jenkins-description">${%title}</p>
     <div class="app-component-sample">
       <l:spinner />
     </div>
@@ -24,8 +23,8 @@
       <code class="sample-remote language-xml" data-sample="progressAnimation.jelly"/>
     </pre>
 
-    <h2>Progressive rendering</h2>
-    <p>Shows how to do a complex operation on the server while displaying its progress, before displaying to the user</p>
+    <h2>${%progressiveRendering}</h2>
+    <p>${%progressiveRendering.description}</p>
     <j:set var="number" value="${request.getParameter('number')}"/>
     <form method="POST" action=".">
       <f:entry title="Enter a big number">

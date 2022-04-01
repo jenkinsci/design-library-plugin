@@ -25,15 +25,9 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
   <s:sample>
-    <p class="jenkins-description">
-      Buttons are created with the <code>jenkins-button</code> CSS class.
-      There are a number of different styles that can be added by adding another class alongside, such as
-      <code>jenkins-button--primary</code>. Styling links as buttons is also supported.
-    </p>
+    <p class="jenkins-description">${%description.1}</p>
 
-    <p class="jenkins-description">Each form should have only one primary button. Most other buttons should just be the default one.
-      Destructive buttons should be used when something will be deleted or not easily undone.
-      Generally these should have a confirmation page.</p>
+    <p class="jenkins-description">${%description.2}</p>
 
     <!-- TODO No idea when you would use a transparent button -->
 
@@ -74,14 +68,14 @@ THE SOFTWARE.
     </pre>
 
     <div class="app-component-sample">
-      <button class="jenkins-button"><l:icon src="symbol-add" /> With symbol</button>
+      <button class="jenkins-button"><l:icon src="symbol-add" /> ${%symbol}</button>
     </div>
     <pre>
       <code class="sample-remote language-html" data-sample="symbolButton.jelly"/>
     </pre>
 
-    <h2>Copy button</h2>
-    <p>A small button to copy text into a clipboard</p>
+    <h2>${%copy}</h2>
+    <p>${%copy.description}</p>
     <div class="app-component-sample">
       <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
     </div>
@@ -89,16 +83,13 @@ THE SOFTWARE.
       <code class="sample-remote language-xml" data-sample="copyButton.jelly" />
     </pre>
 
-    <p>
-      The tag creates a small button that allows users to paste text into the clipboard.
-      The tag requires two mandatory attributes:
-    </p>
+    <p>${%copy.parameters}</p>
     <ul>
-      <li>text - the text to be copied into the clipboard.</li>
-      <li>message - message to be displayed upon the successful copying into the clipboard </li>
+      <li>text - ${%copy.parameters.text}</li>
+      <li>message - ${%copy.parameters.message}</li>
     </ul>
 
-    <h2>Help button</h2>
+    <h2>${%help}</h2>
     <div class="app-component-sample">
       <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
     </div>
@@ -106,13 +97,9 @@ THE SOFTWARE.
       <code class="sample-remote language-xml" data-sample="helpButton.jelly" />
     </pre>
 
-    <p>
-      The tag creates a custom button to get help about a page.
-      The button should always be in the top right of a page, last in the row of components.
-      The tag has one mandatory attribute:
-    </p>
+    <p>${%help.parameters}</p>
     <ul>
-      <li>href - the page to navigate to on click</li>
+      <li>href - ${%help.parameters.1}</li>
     </ul>
   </s:sample>
 </j:jelly>
