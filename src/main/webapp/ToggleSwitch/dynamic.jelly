@@ -1,0 +1,5 @@
+<f:toggleSwitch name="enable"
+                title="${%Disabled}"
+                checkedTitle="${%Enabled}"
+                checked="true"
+                tooltip="${%Enable or disable the current project}" />
