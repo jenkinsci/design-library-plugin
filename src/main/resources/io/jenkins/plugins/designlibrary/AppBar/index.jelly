@@ -11,8 +11,8 @@
             <l:icon src="symbol-add" />
             Primary control
           </button>
-          <button class="jenkins-button">${%secondary}</button>
-          <button class="jenkins-button">${%secondary}</button>
+          <button class="jenkins-button">Secondary</button>
+          <button class="jenkins-button">Secondary</button>
           <t:help href="https://www.jenkins.io" />
         </div>
       </div>
