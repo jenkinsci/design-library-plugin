@@ -131,7 +131,6 @@ pre {
   align-items: center;
   justify-content: center;
   aspect-ratio: 16 / 7;
-  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 0.8rem;
   transition: var(--standard-transition);
