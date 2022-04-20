@@ -3,6 +3,8 @@
 .project
 .classpath
 .settings/
-.idea/
+/.idea/*
+!/.idea/icon.svg
+!/.idea/.name
 .DS_Store
 *.iml
