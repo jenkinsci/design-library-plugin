@@ -14,6 +14,11 @@
   align-items: unset;
 }
 
+.app-component-sample #bottom-sticker {
+  margin-left: -1rem;
+  width: calc(100% + 2rem);
+}
+
 .app-component-sample .jenkins-form-item {
   width: 100%;
   max-width: unset;
