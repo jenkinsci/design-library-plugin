@@ -11,9 +11,10 @@
         <p class="app-home__jenkins-title">Jenkins</p>
         <h1 class="app-home__heading">${%title}</h1>
         <div class="app-card__container">
-          <div class="app-card__preview app-card__preview--intro">
-            <l:icon src="symbol-sunburst plugin-design-library" />
-            <img src="${imagesURL}/svgs/logo.svg" alt="Jenkins illustration" />
+          <div class="app-card__preview">
+            <div class="app-card__preview__introduction">
+              <img src="${imagesURL}/svgs/logo.svg" alt="${%Jenkins illustration}" />
+            </div>
           </div>
           <p class="app-card__title">${%welcome}</p>
           <p class="app-card__description">${%description}</p>
