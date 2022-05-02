@@ -134,6 +134,8 @@ pre {
   overflow: hidden;
   margin-bottom: 0.8rem;
   transition: var(--standard-transition);
+  border-radius: 10px;
+  z-index: 0;
 }
 
 .app-card__preview svg {
@@ -149,19 +151,25 @@ pre {
   max-height: 40%;
 }
 
-.app-card__preview--intro svg {
+.app-card__preview__introduction {
   position: absolute;
-  top: -75%;
-  left: -5%;
-  bottom: -5%;
-  right: -5%;
-  width: 110%;
-  height: unset;
-  max-width: unset;
-  max-height: unset;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.app-card__preview__introduction::before {
+  content: "";
+  position: absolute;
+  inset: -4rem;
+  top: -82.5%;
+  aspect-ratio: 1;
+  background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
   animation: sunburst-rotation 100s infinite linear;
   z-index: -1;
-  mix-blend-mode: overlay;
+  opacity: 0.2;
 }
 
 @keyframes sunburst-rotation {
@@ -176,8 +184,11 @@ pre {
   inset: 0;
   z-index: -1;
   background-attachment: fixed;
-  background-size: 200%;
-  opacity: 0.3;
+  background-size: max(900px, 65vw) 100vh;
+  background-repeat: no-repeat;
+  --sidebar-width: 340px;
+  --content-width: max(900px, 65vw);
+  background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
 }
 
 .app-card__preview::before {
@@ -188,7 +199,7 @@ pre {
   radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0, transparent 50%),
   radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 50%),
   radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
-  animation: rotate-colors 7s linear infinite;
+  animation: rotate-colors 10s linear infinite;
 }
 
 .app-card__preview::after {
@@ -199,18 +210,30 @@ pre {
   radial-gradient(at 0% 100%, hsla(206, 100%, 77%, 1) 0, transparent 50%),
   radial-gradient(at 80% 100%, hsla(66, 100%, 70%, 1) 0, transparent 50%),
   radial-gradient(at 0% 0%, hsla(167, 100%, 76%, 1) 0, transparent 50%);
-  animation: rotate-colors 12s linear infinite;
+  animation: rotate-colors-2 10s linear infinite;
 }
 
 @keyframes rotate-colors {
   0% {
-    background-position: 0 50%;
+    opacity: 0;
   }
   50% {
-    background-position: 100% 50%;
+    opacity: 0.45;
   }
   100% {
-    background-position: 0 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes rotate-colors-2 {
+  0% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.45;
   }
 }
 
