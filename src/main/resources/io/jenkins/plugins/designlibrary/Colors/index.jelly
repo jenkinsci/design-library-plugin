@@ -23,21 +23,60 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <ol class="app-colors">
+    <p class="jdl-leading-paragraph">${%tip-first}</p>
+    <p class="jdl-leading-paragraph">${%tip-second}</p>
+    <p class="jdl-leading-paragraph">${%tip-third}</p>
+
+    <h2>${%Semantics}</h2>
+    <ol class="jdl-colors">
       <j:forEach var="color" items="${it.colors}">
-        <li style="background-color: var(--${color}, grey);">
-          <p>var(--${color})</p>
+        <li>
+          <div style="background-color: var(--${color}, grey);">var(--${color})</div>
         </li>
       </j:forEach>
     </ol>
 
-    <h2>${%tips}</h2>
-    <ul>
-      <li>${%tip-first}</li>
-      <li>${%tip-second}</li>
-      <li>${%tip-third}</li>
-    </ul>
+    <h2>${%Palette}</h2>
+    <ol class="jdl-colors">
+      <j:forEach var="color" items="${it.colors}">
+        <li>
+          <div style="background-color: var(--dark-${color}, grey);">
+            <p>Dark ${color}</p>
+            <div>
+              <span>var(--dark-${color})</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+            </div>
+            <div>
+              <span>.jenkins-!-color-dark-${color}</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+            </div>
+          </div>
+          <div style="background-color: var(--${color}, grey);">
+            <p>${color}</p>
+            <div>
+              <span>var(--${color})</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+            </div>
+            <div>
+              <span>.jenkins-!-color-${color}</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+            </div>
+          </div>
+          <div style="background-color: var(--light-${color}, grey);">
+            <p>Light ${color}</p>
+            <div>
+              <span>var(--light-${color})</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+            </div>
+            <div>
+              <span>.jenkins-!-color-light-${color}</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+            </div>
+          </div>
+        </li>
+      </j:forEach>
+    </ol>
   </s:sample>
 </j:jelly>

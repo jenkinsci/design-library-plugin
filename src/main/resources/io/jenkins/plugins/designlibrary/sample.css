@@ -44,32 +44,6 @@ pre {
   margin-right: auto;
 }
 
-/*Colors page*/
-.app-colors {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-bottom: var(--section-padding);
-  gap: 5px;
-  padding: 0;
-  list-style-type: none;
-}
-
-.app-colors li {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  aspect-ratio: 16/9;
-  border-radius: 10px;
-}
-
-.app-colors li p {
-  color: var(--background);
-  margin: 1rem;
-  font-weight: 600;
-  font-family: var(--font-family-mono);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
 /* Home page */
 .app-home {
   position: relative;
@@ -334,4 +308,40 @@ pre {
   border-radius: inherit;
   background: var(--background);
   z-index: -1;
+}
+
+
+/*Colors page*/
+.jdl-colors {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--section-padding);
+  padding: 0;
+  list-style-type: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.jdl-colors li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.jdl-colors > li > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem 1rem 1rem 1rem;
+  gap: 0.25rem;
+}
+
+.jdl-colors > li > div p, .jdl-colors > li > div span {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-mono);
+  mix-blend-mode: darken;
+}
+
+.jdl-colors > li > div > p {
+  font-weight: 600;
 }
