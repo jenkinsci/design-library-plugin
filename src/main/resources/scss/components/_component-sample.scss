@@ -1,0 +1,25 @@
+.app-component-sample {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: calc(var(--section-padding) / 2);
+  padding: calc(var(--section-padding) / 2);
+  border-radius: 10px;
+  background: rgba(100, 100, 100, 0.05);
+  margin-bottom: var(--section-padding);
+}
+
+.app-component-sample--full-width {
+  align-items: unset;
+}
+
+.app-component-sample #bottom-sticker {
+  margin-left: -1rem;
+  width: calc(100% + 2rem);
+}
+
+.app-component-sample .jenkins-form-item {
+  width: 100%;
+  max-width: unset;
+  margin-bottom: 0;
+}
