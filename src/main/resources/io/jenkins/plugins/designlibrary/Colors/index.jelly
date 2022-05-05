@@ -25,24 +25,24 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-leading-paragraph">${%tip-first}</p>
-    <p class="jdl-leading-paragraph">${%tip-second}</p>
-    <p class="jdl-leading-paragraph">${%tip-third}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-first}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-second}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-third}</p>
 
-    <h2>${%Semantics}</h2>
+<!--    <h2 class="jdl-heading">${%Semantics}</h2>-->
+<!--    <ol class="jdl-colors">-->
+<!--      <j:forEach var="color" items="${it.colors}">-->
+<!--        <li>-->
+<!--          <div style="background-color: var(&#45;&#45;${color}, grey);">var(&#45;&#45;${color})</div>-->
+<!--        </li>-->
+<!--      </j:forEach>-->
+<!--    </ol>-->
+
+    <h2 class="jdl-heading">${%Palette}</h2>
     <ol class="jdl-colors">
       <j:forEach var="color" items="${it.colors}">
         <li>
-          <div style="background-color: var(--${color}, grey);">var(--${color})</div>
-        </li>
-      </j:forEach>
-    </ol>
-
-    <h2>${%Palette}</h2>
-    <ol class="jdl-colors">
-      <j:forEach var="color" items="${it.colors}">
-        <li>
-          <div style="background-color: var(--dark-${color}, grey);">
+          <div style="background-color: var(--dark-${color}, ${color});">
             <p>Dark ${color}</p>
             <div>
               <span>var(--dark-${color})</span>
@@ -53,7 +53,7 @@ THE SOFTWARE.
               <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
             </div>
           </div>
-          <div style="background-color: var(--${color}, grey);">
+          <div style="background-color: var(--${color}, ${color});">
             <p>${color}</p>
             <div>
               <span>var(--${color})</span>
@@ -64,7 +64,7 @@ THE SOFTWARE.
               <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
             </div>
           </div>
-          <div style="background-color: var(--light-${color}, grey);">
+          <div style="background-color: var(--light-${color}, ${color});">
             <p>Light ${color}</p>
             <div>
               <span>var(--light-${color})</span>
