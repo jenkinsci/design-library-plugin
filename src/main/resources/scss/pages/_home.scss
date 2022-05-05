@@ -44,32 +44,6 @@ pre {
   margin-right: auto;
 }
 
-/*Colors page*/
-.app-colors {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-bottom: var(--section-padding);
-  gap: 5px;
-  padding: 0;
-  list-style-type: none;
-}
-
-.app-colors li {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  aspect-ratio: 16/9;
-  border-radius: 10px;
-}
-
-.app-colors li p {
-  color: var(--background);
-  margin: 1rem;
-  font-weight: 600;
-  font-family: var(--font-family-mono);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
 /* Home page */
 .app-home {
   position: relative;
