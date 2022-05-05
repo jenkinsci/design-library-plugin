@@ -13,9 +13,7 @@ public class Colors extends UISample {
     }
 
     public List<String> getColors() {
-        // Uncomment these once these colors are in core
-        // return Arrays.asList("red", "green", "orange", "yellow", "blue", "indigo", "violet");
-        return Arrays.asList("red", "green", "orange");
+         return Arrays.asList("red", "green", "orange", "yellow", "blue", "indigo", "violet", "brown");
     }
 
     @Extension
