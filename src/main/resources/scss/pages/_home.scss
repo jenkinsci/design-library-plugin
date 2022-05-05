@@ -1,4 +1,3 @@
-/* Home page */
 .app-home {
   position: relative;
   display: flex;
@@ -12,7 +11,7 @@
 .app-home__jenkins-title {
   font-size: 1.15rem;
   font-weight: 600;
-  font-family: "Georgia";
+  font-family: "Georgia", serif;
   color: var(--text-color-secondary);
   margin: 0;
   background-color: var(--background);

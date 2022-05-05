@@ -1,25 +1,36 @@
 .app-component-sample {
+  position: relative;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   gap: calc(var(--section-padding) / 2);
   padding: calc(var(--section-padding) / 2);
   border-radius: 10px;
-  background: rgba(100, 100, 100, 0.05);
   margin-bottom: var(--section-padding);
-}
+  z-index: 0;
 
-.app-component-sample--full-width {
-  align-items: unset;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.025;
+  }
 
-.app-component-sample #bottom-sticker {
-  margin-left: -1rem;
-  width: calc(100% + 2rem);
-}
+  &--full-width {
+    align-items: unset;
+  }
 
-.app-component-sample .jenkins-form-item {
-  width: 100%;
-  max-width: unset;
-  margin-bottom: 0;
+  #bottom-sticker {
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .jenkins-form-item {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 0;
+  }
 }

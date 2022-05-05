@@ -1,78 +1,63 @@
+$margin-color: var(--blue, blue);
+$padding-color: var(--violet, violet);
+
 .jdl-spacing-box {
   position: relative;
-  border: 2px dashed #2646FF;
+  border: 2px dashed $margin-color;
   border-radius: 6px;
   width: 200px;
-}
 
-.jdl-spacing-box::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: #2646FF;
-  opacity: 0.25;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: $margin-color;
+    opacity: 0.25;
+  }
 
-.jdl-spacing-box--6 {
-  height: 6rem;
-}
-
-.jdl-spacing-box--5 {
-  height: 5rem;
-}
-
-.jdl-spacing-box--4 {
-  height: 4rem;
-}
-
-.jdl-spacing-box--3 {
-  height: 3rem;
-}
-
-.jdl-spacing-box--2 {
-  height: 2rem;
-}
-
-.jdl-spacing-box--1 {
-  height: 1rem;
+  @for $i from 1 through 6 {
+    &--#{$i} {
+      height: #{$i}rem;
+    }
+  }
 }
 
 .jdl-padding-box {
   position: relative;
-  border: 2px dashed #BF5Ff2;
+  border: 2px dashed $padding-color;
   border-radius: 6px;
   z-index: 0;
-}
 
-.jdl-padding-box::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: #BF5Ff2;
-  opacity: 0.25;
-  z-index: -1;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: $padding-color;
+    opacity: 0.25;
+    z-index: -1;
+  }
 
-.jdl-padding-box--5 {
-  padding: 5rem;
-}
+  &--5 {
+    padding: 5rem;
+  }
 
-.jdl-padding-box p {
-  position: relative;
-  border: 2px dashed #BF5Ff2;
-  border-radius: 6px;
-  padding: 0.9rem 1rem;
-  margin: 0;
-  z-index: 1;
-}
+  p {
+    position: relative;
+    border: 2px dashed $padding-color;
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    margin: 0;
+    z-index: 1;
 
-.jdl-padding-box p::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--background);
-  z-index: -1;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: var(--background);
+      z-index: -1;
+    }
+  }
 }
