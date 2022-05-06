@@ -1,4 +1,6 @@
 #main-panel {
+  display: flex !important;
+  flex-direction: column;
   width: 100%;
   max-width: max(900px, 65vw);
   margin-left: auto;

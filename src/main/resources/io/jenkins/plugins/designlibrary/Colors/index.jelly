@@ -29,14 +29,14 @@ THE SOFTWARE.
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-second}</p>
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-third}</p>
 
-<!--    <h2 class="jdl-heading">${%Semantics}</h2>-->
-<!--    <ol class="jdl-colors">-->
-<!--      <j:forEach var="color" items="${it.colors}">-->
-<!--        <li>-->
-<!--          <div style="background-color: var(&#45;&#45;${color}, grey);">var(&#45;&#45;${color})</div>-->
-<!--        </li>-->
-<!--      </j:forEach>-->
-<!--    </ol>-->
+    <h2 class="jdl-heading">${%Semantics}</h2>
+    <ol class="jdl-colors">
+      <j:forEach var="color" items="${it.colors}">
+        <li>
+          <div style="background-color: var(--${color}, grey);">var(--${color})</div>
+        </li>
+      </j:forEach>
+    </ol>
 
     <h2 class="jdl-heading">${%Palette}</h2>
     <ol class="jdl-colors">
