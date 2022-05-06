@@ -1,0 +1,10 @@
+#main-panel {
+  width: 100%;
+  max-width: max(900px, 65vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+pre {
+  margin: 0 0 var(--section-padding) 0 !important;
+}

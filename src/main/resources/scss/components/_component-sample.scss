@@ -1,0 +1,36 @@
+.app-component-sample {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: calc(var(--section-padding) / 2);
+  padding: calc(var(--section-padding) / 2);
+  border-radius: 10px;
+  margin-bottom: var(--section-padding);
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.025;
+  }
+
+  &--full-width {
+    align-items: unset;
+  }
+
+  #bottom-sticker {
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .jenkins-form-item {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 0;
+  }
+}

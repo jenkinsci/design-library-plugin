@@ -1,0 +1,63 @@
+$margin-color: var(--blue, blue);
+$padding-color: var(--violet, violet);
+
+.jdl-spacing-box {
+  position: relative;
+  border: 2px dashed $margin-color;
+  border-radius: 6px;
+  width: 200px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: $margin-color;
+    opacity: 0.25;
+  }
+
+  @for $i from 1 through 6 {
+    &--#{$i} {
+      height: #{$i}rem;
+    }
+  }
+}
+
+.jdl-padding-box {
+  position: relative;
+  border: 2px dashed $padding-color;
+  border-radius: 6px;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: $padding-color;
+    opacity: 0.25;
+    z-index: -1;
+  }
+
+  &--5 {
+    padding: 5rem;
+  }
+
+  p {
+    position: relative;
+    border: 2px dashed $padding-color;
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    margin: 0;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: var(--background);
+      z-index: -1;
+    }
+  }
+}
