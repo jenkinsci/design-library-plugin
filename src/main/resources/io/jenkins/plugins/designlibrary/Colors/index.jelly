@@ -42,7 +42,7 @@ THE SOFTWARE.
             </div>
             <div>
               <span>.jenkins-!-${semantic}-color</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-${semantic}-color"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-${semantic}-color"/>
             </div>
           </div>
         </li>
@@ -61,7 +61,7 @@ THE SOFTWARE.
             </div>
             <div>
               <span>.jenkins-!-color-dark-${color}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-color-dark-${color}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-color-dark-${color}"/>
             </div>
           </div>
           <div style="background-color: var(--${color}, ${color});">
@@ -72,7 +72,7 @@ THE SOFTWARE.
             </div>
             <div>
               <span>.jenkins-!-color-${color}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-color-${color}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-color-${color}"/>
             </div>
           </div>
           <div style="background-color: var(--light-${color}, ${color});">
@@ -83,7 +83,7 @@ THE SOFTWARE.
             </div>
             <div>
               <span>.jenkins-!-color-light-${color}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-color-light-${color}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-color-light-${color}"/>
             </div>
           </div>
         </li>
