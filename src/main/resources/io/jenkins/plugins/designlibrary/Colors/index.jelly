@@ -28,6 +28,7 @@ THE SOFTWARE.
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-first}</p>
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-second}</p>
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-third}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-fourth}</p>
 
     <h2 class="jdl-heading">${%Semantics}</h2>
     <ol class="jdl-colors jdl-colors--single">
