@@ -12,8 +12,12 @@ public class Colors extends UISample {
         return "symbol-colors";
     }
 
+    public List<String> getSemantics() {
+        return Arrays.asList("error", "warning", "success", "destructive", "build");
+    }
+
     public List<String> getColors() {
-         return Arrays.asList("red", "green", "orange", "yellow", "blue", "indigo", "violet", "brown");
+        return Arrays.asList("red", "green", "orange", "yellow", "blue", "indigo", "purple", "brown");
     }
 
     @Extension

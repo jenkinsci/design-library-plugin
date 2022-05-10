@@ -30,10 +30,20 @@ THE SOFTWARE.
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-third}</p>
 
     <h2 class="jdl-heading">${%Semantics}</h2>
-    <ol class="jdl-colors">
-      <j:forEach var="color" items="${it.colors}">
+    <ol class="jdl-colors jdl-colors--single">
+      <j:forEach var="semantic" items="${it.semantics}">
         <li>
-          <div style="background-color: var(--${color}, grey);">var(--${color})</div>
+          <div style="background-color: var(--${semantic}-color, grey);">
+            <p>${semantic}</p>
+            <div>
+              <span>var(--${semantic}-color)</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--${semantic}-color)"/>
+            </div>
+            <div>
+              <span>.jenkins-!-${semantic}-color</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-${semantic}-color"/>
+            </div>
+          </div>
         </li>
       </j:forEach>
     </ol>
@@ -43,36 +53,36 @@ THE SOFTWARE.
       <j:forEach var="color" items="${it.colors}">
         <li>
           <div style="background-color: var(--dark-${color}, ${color});">
-            <p>Dark ${color}</p>
+            <p>dark ${color}</p>
             <div>
               <span>var(--dark-${color})</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--dark-${color})"/>
             </div>
             <div>
               <span>.jenkins-!-color-dark-${color}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-color-dark-${color}"/>
             </div>
           </div>
           <div style="background-color: var(--${color}, ${color});">
             <p>${color}</p>
             <div>
               <span>var(--${color})</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--${color})"/>
             </div>
             <div>
               <span>.jenkins-!-color-${color}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-color-${color}"/>
             </div>
           </div>
           <div style="background-color: var(--light-${color}, ${color});">
-            <p>Light ${color}</p>
+            <p>light ${color}</p>
             <div>
               <span>var(--light-${color})</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--light-${color})"/>
             </div>
             <div>
               <span>.jenkins-!-color-light-${color}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="${output}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text=".jenkins-!-color-light-${color}"/>
             </div>
           </div>
         </li>
