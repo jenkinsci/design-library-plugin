@@ -1,10 +1,14 @@
 {
   "name": "design-library-plugin",
   "version": "1.0.0",
+  "config": {
+    "scssPath": "src/main/resources/scss/styles.scss",
+    "cssPath": "src/main/resources/io/jenkins/plugins/designlibrary/styles.css"
+  },
   "scripts": {
     "mvnbuild": "npm run build",
-    "build": "sass src/main/resources/scss/styles.scss src/main/resources/io/jenkins/plugins/designlibrary/styles.css",
-    "dev": "sass --watch src/main/resources/scss/styles.scss src/main/resources/io/jenkins/plugins/designlibrary/styles.css",
+    "build": "sass $npm_package_config_scssPath $npm_package_config_cssPath; postcss $npm_package_config_cssPath --replace --use autoprefixer",
+    "dev": "sass --watch $npm_package_config_scssPath $npm_package_config_cssPath; postcss $npm_package_config_cssPath --replace --use autoprefixer",
     "mvntest": "npm run test",
     "test": "exit 0"
   },
@@ -19,6 +23,8 @@
   },
   "homepage": "https://github.com/jenkinsci/design-library-plugin#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.49.8"
   }
 }
