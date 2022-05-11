@@ -96,19 +96,21 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-}
 
-.app-card__preview__introduction::before {
-  content: "";
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin: -10%;
-  aspect-ratio: 1;
-  background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
-  animation: sunburst-rotation 100s infinite linear;
-  z-index: -1;
-  opacity: 0.2;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: -10%;
+    aspect-ratio: 1;
+    background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
+    animation: sunburst-rotation 100s infinite linear;
+    z-index: -1;
+    opacity: 0.2;
+    border-radius: 100%;
+    flex: 1;
+  }
 }
 
 @keyframes sunburst-rotation {
