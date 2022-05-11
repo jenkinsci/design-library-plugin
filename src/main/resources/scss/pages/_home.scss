@@ -81,11 +81,11 @@
 
   img {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     max-width: 40%;
-    max-height: 40%;
+    max-height: max(40%, 80px)
   }
 }
 
