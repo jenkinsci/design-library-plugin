@@ -5,6 +5,10 @@
   max-width: max(950px, 65vw);
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 970px) {
+   max-width: none;
+  }
 }
 
 pre {

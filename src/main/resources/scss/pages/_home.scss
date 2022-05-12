@@ -38,6 +38,11 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   overflow: hidden;
+
+  @media (max-width: 970px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .app-card__container {
@@ -68,19 +73,20 @@
   transition: var(--standard-transition);
   border-radius: 10px;
   z-index: 0;
-}
 
-.app-card__preview svg {
-  width: 100%;
-  height: 100%;
-  max-width: 40%;
-  max-height: 40%;
-}
+  svg {
+    width: 40%;
+    height: 40%;
+  }
 
-.app-card__preview img {
-  height: 100%;
-  max-width: 40%;
-  max-height: 40%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+    max-height: max(40%, 80px)
+  }
 }
 
 .app-card__preview__introduction {
@@ -90,18 +96,21 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-}
 
-.app-card__preview__introduction::before {
-  content: "";
-  position: absolute;
-  inset: -4rem;
-  top: -82.5%;
-  aspect-ratio: 1;
-  background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
-  animation: sunburst-rotation 100s infinite linear;
-  z-index: -1;
-  opacity: 0.2;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: -10%;
+    aspect-ratio: 1;
+    background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
+    animation: sunburst-rotation 100s infinite linear;
+    z-index: -1;
+    opacity: 0.2;
+    border-radius: 100%;
+    flex: 1;
+  }
 }
 
 @keyframes sunburst-rotation {
@@ -120,6 +129,13 @@
   background-repeat: no-repeat;
   --sidebar-width: 340px;
   --content-width: max(950px, 65vw);
+
+  @media (max-width: 970px) {
+    --sidebar-width: 0;
+    --content-width: 100%;
+    background-size: 100%;
+  }
+
   background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
 }
 
@@ -135,37 +151,36 @@
 }
 
 .app-card__preview::after {
-  background-image: radial-gradient(at 40% 20%, hsla(212, 100%, 74%, 1) 0, transparent 50%),
-  radial-gradient(at 80% 0%, hsla(13, 100%, 56%, 1) 0, transparent 50%),
-  radial-gradient(at 0% 50%, hsla(179, 85%, 93%, 1) 0, transparent 50%),
+  background-image: radial-gradient(at 80% 0%, hsla(13, 100%, 56%, 1) 0, transparent 50%),
+  radial-gradient(at 0% 50%, hsl(31, 100%, 80%) 0, transparent 50%),
   radial-gradient(at 80% 50%, hsla(164, 100%, 76%, 1) 0, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(206, 100%, 77%, 1) 0, transparent 50%),
-  radial-gradient(at 80% 100%, hsla(66, 100%, 70%, 1) 0, transparent 50%),
+  radial-gradient(at 0% 100%, hsl(206, 60%, 57%) 0, transparent 50%),
+  radial-gradient(at 80% 100%, hsl(146, 64%, 79%) 0, transparent 50%),
   radial-gradient(at 0% 0%, hsla(167, 100%, 76%, 1) 0, transparent 50%);
   animation: rotate-colors-2 10s linear infinite;
 }
 
 @keyframes rotate-colors {
   0% {
-    opacity: 0;
+    opacity: 0.2;
   }
   50% {
-    opacity: 0.45;
+    opacity: 0.55;
   }
   100% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
 
 @keyframes rotate-colors-2 {
   0% {
-    opacity: 0.45;
+    opacity: 0.55;
   }
   50% {
-    opacity: 0;
+    opacity: 0.1;
   }
   100% {
-    opacity: 0.45;
+    opacity: 0.55;
   }
 }
 
