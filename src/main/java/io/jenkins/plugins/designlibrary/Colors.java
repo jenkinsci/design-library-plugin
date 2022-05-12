@@ -15,9 +15,9 @@ public class Colors extends UISample {
 
     public List<Semantic> getSemantics() {
         return Arrays.asList(
-                new Semantic("Success", "Use for success messages", "success-color"),
-                new Semantic("Warning", "Use for warning messages", "warning-color"),
-                new Semantic("Error", "Use for error messages", "error-color"),
+                new Semantic("Success", "Use for success states", "success-color"),
+                new Semantic("Warning", "Use for warning states", "warning-color"),
+                new Semantic("Error", "Use for error states", "error-color"),
                 new Semantic("Build", "Use for build kickoff", "build-color", "play"),
                 new Semantic("Destructive", "Use for destructive actions", "destructive-color", "trash")
         );

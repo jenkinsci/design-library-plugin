@@ -1,5 +1,4 @@
 .jdl-colors-tag {
-  margin: 0 0.5ch;
   background-image: -webkit-linear-gradient(45deg, var(--red, red), var(--orange, orange), var(--yellow, yellow), var(--green, green), var(--blue, blue), var(--violet, violet), var(--red, red));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -18,10 +17,18 @@
 
 .jdl-colors {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem 1rem;
   list-style-type: none;
   padding: 0;
+
+  @media(max-width: 1300px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media(max-width: 970px){
+    grid-template-columns: 1fr;
+  }
 
   & > li {
     .jdl-colors__item {
