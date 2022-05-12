@@ -10,6 +10,18 @@
       <code class="sample-remote language-html" data-sample="simple-button.html"/>
     </pre>
 
+    <h2 class="jdl-heading">${%Custom content}</h2>
+    <j:set var="tooltip">
+      <img src="${imagesURL}/svgs/logo.svg" />
+    </j:set>
+    <div class="app-component-sample">
+      <button html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
+        Hover over me
+      </button>
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="html-tooltip.jelly"/>
+    </pre>
     <p class="warning">${%warning}</p>
   </s:sample>
 </j:jelly>
