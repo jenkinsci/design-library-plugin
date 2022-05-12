@@ -1,14 +1,10 @@
 {
   "name": "design-library-plugin",
   "version": "1.0.0",
-  "config": {
-    "scssPath": "src/main/resources/scss/styles.scss",
-    "cssPath": "src/main/resources/io/jenkins/plugins/designlibrary/styles.css"
-  },
   "scripts": {
     "mvnbuild": "npm run build",
-    "build": "sass $npm_package_config_scssPath $npm_package_config_cssPath; postcss $npm_package_config_cssPath --replace --use autoprefixer",
-    "dev": "sass --watch $npm_package_config_scssPath $npm_package_config_cssPath; postcss $npm_package_config_cssPath --replace --use autoprefixer",
+    "build": "sass src/main/resources/scss/styles.scss src/main/resources/io/jenkins/plugins/designlibrary/styles.css; postcss src/main/resources/io/jenkins/plugins/designlibrary/styles.css --replace --use autoprefixer",
+    "dev": "sass --watch src/main/resources/scss/styles.scss src/main/resources/io/jenkins/plugins/designlibrary/styles.css; postcss src/main/resources/io/jenkins/plugins/designlibrary/styles.css --replace --use autoprefixer",
     "mvntest": "npm run test",
     "test": "exit 0"
   },
