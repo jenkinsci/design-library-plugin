@@ -3,7 +3,7 @@
   <s:sample>
     <p>${%title}</p>
 
-    <p>%{%usage.1}</p>
+    <p>${%usage.1}</p>
     <pre>
       <code class="language-javascript">notificationBar.show('message')</code>
     </pre>

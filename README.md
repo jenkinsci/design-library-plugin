@@ -4,7 +4,7 @@
 [![Join the chat at https://gitter.im/jenkinsci/ux-sig](https://badges.gitter.im/jenkinsci/ux-sig.svg)](https://gitter.im/jenkinsci/ux-sig)
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/design-library.svg)](https://plugins.jenkins.io/design-library/)
 [![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/design-library.svg?color=blue)](https://plugins.jenkins.io/design-library/)
-[![Crowdin](https://badges.crowdin.net/e/c38fd1b7c7de61e788c551885aaf46c8/localized.svg)](https://intellectualsites.crowdin.com/design-library)
+[![Crowdin](https://badges.crowdin.net/e/6332fe04e3c8d658f6df4f62cc70268b/localized.svg)](https://jenkins.crowdin.com/design-library-plugin)
 
 Design Library makes it easy for developers to build complex and consistent interfaces using Jenkins UI components
 

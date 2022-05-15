@@ -19,7 +19,7 @@ jobs:
           output_result: true
 
       - name: Release Drafter
-        uses: release-drafter/release-drafter@v5.19.0
+        uses: release-drafter/release-drafter@v5
         if: steps.verify-ci-status.outputs.result == 'success'
         with:
           name: next
@@ -29,7 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check interesting categories
-        uses: jenkins-infra/interesting-category-action@v1.0.0
+        uses: jenkins-infra/interesting-category-action@v1.1.0
         id: interesting-categories
         if: steps.verify-ci-status.outputs.result == 'success'
         with:
@@ -41,16 +41,16 @@ jobs:
     if: needs.validate.outputs.should_release == 'true'
     steps:
       - name: Check out
-        uses: actions/checkout@v3.0.0
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Set up JDK 11
-        uses: actions/setup-java@v3.0.0
+        uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 11
       - name: Release
-        uses: jenkins-infra/jenkins-maven-cd-action@v1.2.0
+        uses: jenkins-infra/jenkins-maven-cd-action@v1.3.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}

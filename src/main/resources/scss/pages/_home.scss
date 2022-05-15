@@ -1,0 +1,200 @@
+.app-home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: max(950px, 65vw);
+  margin: auto;
+  gap: 2rem;
+}
+
+.app-home__jenkins-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-family: "Georgia", serif;
+  color: var(--text-color-secondary);
+  margin: 0;
+  background-color: var(--background);
+}
+
+.app-home__heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: -2rem 0 0;
+  background-color: var(--background);
+}
+
+.app-home__subheading {
+  margin: 0 0 -1.2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-color-secondary);
+  background-color: var(--background);
+}
+
+.app-home__side-by-side {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  overflow: hidden;
+
+  @media (max-width: 970px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.app-card__container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+}
+
+.app-card__container:link:hover .app-card__preview {
+  filter: brightness(1.1);
+}
+
+.app-card__container:link:hover .app-card__title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.app-card__preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  transition: var(--standard-transition);
+  border-radius: 10px;
+  z-index: 0;
+
+  svg {
+    width: 40%;
+    height: 40%;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+    max-height: max(40%, 80px)
+  }
+}
+
+.app-card__preview__introduction {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: -10%;
+    aspect-ratio: 1;
+    background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
+    animation: sunburst-rotation 100s infinite linear;
+    z-index: -1;
+    opacity: 0.2;
+    border-radius: 100%;
+    flex: 1;
+  }
+}
+
+@keyframes sunburst-rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-card__preview::before, .app-card__preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-attachment: fixed;
+  background-size: max(950px, 65vw) 100vh;
+  background-repeat: no-repeat;
+  --sidebar-width: 340px;
+  --content-width: max(950px, 65vw);
+
+  @media (max-width: 970px) {
+    --sidebar-width: 0;
+    --content-width: 100%;
+    background-size: 100%;
+  }
+
+  background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
+}
+
+.app-card__preview::before {
+  background-image: radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0, transparent 50%),
+  radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0, transparent 50%),
+  radial-gradient(at 0% 50%, hsla(355, 85%, 93%, 1) 0, transparent 50%),
+  radial-gradient(at 80% 50%, hsl(359, 70%, 46%) 0, transparent 50%),
+  radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0, transparent 50%),
+  radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
+  animation: rotate-colors 10s linear infinite;
+}
+
+.app-card__preview::after {
+  background-image: radial-gradient(at 80% 0%, hsla(13, 100%, 56%, 1) 0, transparent 50%),
+  radial-gradient(at 0% 50%, hsl(31, 100%, 80%) 0, transparent 50%),
+  radial-gradient(at 80% 50%, hsla(164, 100%, 76%, 1) 0, transparent 50%),
+  radial-gradient(at 0% 100%, hsl(206, 60%, 57%) 0, transparent 50%),
+  radial-gradient(at 80% 100%, hsl(146, 64%, 79%) 0, transparent 50%),
+  radial-gradient(at 0% 0%, hsla(167, 100%, 76%, 1) 0, transparent 50%);
+  animation: rotate-colors-2 10s linear infinite;
+}
+
+@keyframes rotate-colors {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes rotate-colors-2 {
+  0% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.55;
+  }
+}
+
+.app-card__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding-bottom: 5px;
+}
+
+.app-card__description {
+  margin: 0;
+  color: var(--text-color-secondary);
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 1.05rem;
+}

@@ -3,6 +3,11 @@
 .project
 .classpath
 .settings/
-.idea/
+/.idea/*
+!/.idea/icon.svg
+!/.idea/.name
 .DS_Store
 *.iml
+node/
+node_modules/
+src/main/resources/io/jenkins/plugins/designlibrary/styles.css*
