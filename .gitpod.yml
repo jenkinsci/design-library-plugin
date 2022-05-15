@@ -6,6 +6,7 @@ tasks:
 github:
   prebuilds:
     pullRequestsFromForks: true
+    addBadge: true
 
 jetbrains:
   intellij:
