@@ -6,3 +6,8 @@ tasks:
 github:
   prebuilds:
     pullRequestsFromForks: true
+
+jetbrains:
+  intellij:
+    plugins:
+      - Stapler plugin for IntelliJ IDEA
