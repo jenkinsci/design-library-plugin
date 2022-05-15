@@ -1,27 +1,3 @@
-<!--
-The MIT License
-
-Copyright 2022 Jan Faracik
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
--->
-
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
@@ -33,27 +9,26 @@ THE SOFTWARE.
     </pre>
 
     <p class="jenkins-description">You can invert the position of the label with the <code>invertLabel</code> attribute.</p>
-    <div class="app-component-sample" style="align-items: flex-end;">
+    <div class="app-component-sample app-component-sample--right-alignment">
       <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
     </div>
     <pre>
       <code class="sample-remote language-xml" data-sample="inverted.jelly"/>
     </pre>
 
-    <f:section title="Dynamic labels">
-      <p class="jenkins-description">Toggle switches labels can update in real time to reflect their status by setting the <code>checkTitle</code> attribute.</p>
-      <p class="jenkins-description">Try clicking on the toggle switch below to see how this works.</p>
+    <h2>${%Dynamic labels}</h2>
+    <p class="jenkins-description">Toggle switches labels can update in real time to reflect their status by setting the <code>checkTitle</code> attribute.</p>
+    <p class="jenkins-description">Try clicking on the toggle switch below to see how this works.</p>
 
-      <div class="app-component-sample">
-        <f:toggleSwitch name="enable"
-                        title="${%Disabled}"
-                        checkedTitle="${%Enabled}"
-                        checked="true"
-                        tooltip="${%Enable or disable the current project}" />
-      </div>
-      <pre>
-        <code class="sample-remote language-xml" data-sample="dynamic.jelly"/>
-      </pre>
-    </f:section>
+    <div class="app-component-sample">
+      <f:toggleSwitch name="enable"
+                      title="${%Disabled}"
+                      checkedTitle="${%Enabled}"
+                      checked="true"
+                      tooltip="${%Enable or disable the current project}" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="dynamic.jelly"/>
+    </pre>
   </s:sample>
 </j:jelly>
