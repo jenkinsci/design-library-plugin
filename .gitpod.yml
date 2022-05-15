@@ -1,0 +1,4 @@
+tasks:
+  - init: npm install && npm run build && mvn install -DskipTests=false
+    command: mvn hpi:run
+  - command: gp await-port 8080 && gp url 8080 && gp preview $(gp url 8080)/jenkins
