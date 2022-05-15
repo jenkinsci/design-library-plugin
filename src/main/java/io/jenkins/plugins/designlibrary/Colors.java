@@ -32,6 +32,7 @@ public class Colors extends UISample {
                 new Color("Blue",  "blue"),
                 new Color("Indigo",  "indigo"),
                 new Color("Purple",  "purple"),
+                new Color("Pink",  "pink"),
                 new Color("Brown",  "brown")
         );
         List<Color> completeList = new ArrayList<>();
