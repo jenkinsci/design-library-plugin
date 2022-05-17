@@ -21,6 +21,7 @@
   gap: 2rem 1rem;
   list-style-type: none;
   padding: 0;
+  margin-bottom: var(--section-padding);
 
   @media(max-width: 1300px){
     grid-template-columns: repeat(2, 1fr);
