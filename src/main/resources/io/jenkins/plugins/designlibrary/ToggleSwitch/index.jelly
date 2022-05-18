@@ -1,0 +1,34 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
+  <s:sample>
+    <div class="app-component-sample">
+      <f:toggleSwitch name="enabled" title="Hello world" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="default.jelly"/>
+    </pre>
+
+    <p class="jenkins-description">You can invert the position of the label with the <code>invertLabel</code> attribute.</p>
+    <div class="app-component-sample app-component-sample--right-alignment">
+      <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="inverted.jelly"/>
+    </pre>
+
+    <h2>${%Dynamic labels}</h2>
+    <p class="jenkins-description">Toggle switches labels can update in real time to reflect their status by setting the <code>checkTitle</code> attribute.</p>
+    <p class="jenkins-description">Try clicking on the toggle switch below to see how this works.</p>
+
+    <div class="app-component-sample">
+      <f:toggleSwitch name="enable"
+                      title="${%Disabled}"
+                      checkedTitle="${%Enabled}"
+                      checked="true"
+                      tooltip="${%Enable or disable the current project}" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="dynamic.jelly"/>
+    </pre>
+  </s:sample>
+</j:jelly>
