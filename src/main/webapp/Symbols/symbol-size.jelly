@@ -1,3 +1,4 @@
-<span class="icon-md">
-  <l:icon src="symbol-search" />
-</span>
+<l:icon src="symbol-cube" class="icon-sm" />
+<l:icon src="symbol-cube" class="icon-md" />
+<l:icon src="symbol-cube" class="icon-lg" />
+<l:icon src="symbol-cube" class="icon-xlg" />

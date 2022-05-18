@@ -93,7 +93,7 @@
       <l:icon src="symbol-cube" class="icon-xlg" />
     </div>
     <pre class="jdl-symbols__symbol-code">
-      <code class="sample-remote language-xml" data-sample="symbol-alt.jelly" />
+      <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
     </pre>
 
     <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
