@@ -23,6 +23,10 @@
     align-items: unset;
   }
 
+  &--right-alignment {
+    align-items: flex-end;
+  }
+
   #bottom-sticker {
     margin-left: -1rem;
     width: calc(100% + 2rem);

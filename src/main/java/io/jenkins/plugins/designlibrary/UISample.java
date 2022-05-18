@@ -37,4 +37,20 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
     public static List<UISample> getAll() {
         return new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
     }
+
+    public UISample getPreviousPage() {
+        try {
+            return getAll().get(getAll().indexOf(this) - 1);
+        } catch (IndexOutOfBoundsException e) {
+            return null;
+        }
+    }
+
+    public UISample getNextPage() {
+        try {
+            return getAll().get(getAll().indexOf(this) + 1);
+        } catch (IndexOutOfBoundsException e) {
+            return null;
+        }
+    }
 }
