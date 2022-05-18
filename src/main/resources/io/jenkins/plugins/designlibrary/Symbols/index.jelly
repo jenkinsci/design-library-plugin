@@ -1,12 +1,66 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jenkins-description">${%title}</p>
+    <div class="jdl-symbols__masthead">
+      <div>
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+      </div>
+      <div>
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="symbol-symbols plugin-design-library" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+      </div>
+      <div>
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+        <l:icon src="${it.symbol}" />
+      </div>
+    </div>
 
-    <p>${%description}</p>
+    <p class="jdl-leading-paragraph">${%title}</p>
 
-    <h2>${%usage.title}</h2>
-    <p class="jenkins-description">${%usage.1}</p>
+    <hr/>
+
+    <table class="jdl-dos-donts">
+      <thead>
+        <tr>
+          <th class="jenkins-!-color-success-color">Do</th>
+          <th class="jenkins-!-color-error-color">Don't</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Symbols should be used to help a user recognise what a task does at a glance</td>
+          <td>Don't add symbols to headings</td>
+        </tr>
+        <tr>
+          <td>They should be recognisable and relevant, e.g. <l:icon src="symbol-lock-closed" /> for credentials</td>
+          <td>Dont add symbols to headings</td>
+        </tr>
+        <tr>
+          <td>Use a tooltip on the symbol if there isn't any accompanying text</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr/>
+
+    <h2 class="jdl-heading">${%usage.title}</h2>
+    <p class="jdl-paragraph">${%usage.1}</p>
     <p class="icon-md">
       <l:icon src="symbol-search" />
     </p>
@@ -14,7 +68,7 @@
       <code class="sample-remote language-xml" data-sample="symbol.jelly" />
     </pre>
 
-    <p class="jenkins-description">${%usage.2}</p>
+    <p class="jdl-paragraph">${%usage.2}</p>
     <p class="icon-md">
       <l:icon src="symbol-search" alt="Search" class="custom-class" />
     </p>
@@ -22,7 +76,7 @@
       <code class="sample-remote language-xml" data-sample="symbol-alt.jelly" />
     </pre>
 
-    <p class="jenkins-description">${%usage.3}</p>
+    <p class="jdl-paragraph">${%usage.3}</p>
 
     <ul style="list-style: none;">
       <li><span class="icon-sm"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-sm</li>
@@ -35,12 +89,15 @@
       <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
     </pre>
 
+    <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols">
+      View the complete list of symbols available to use on GitHub
+    </a>
 
-    <h2>${%customSymbols}</h2>
-    <p class="jenkins-description">${%customSymbols.description.1}</p>
+    <h2 class="jdl-heading">${%customSymbols}</h2>
+    <p class="jdl-paragraph">${%customSymbols.description.1}</p>
     <pre><code>{plugin-root}/src/main/resources/images/symbols</code></pre>
 
-    <p class="jenkins-description">${%customSymbols.description.2}</p>
+    <p class="jdl-paragraph">${%customSymbols.description.2}</p>
     <pre>
       <code class="sample-remote language-xml" data-sample="symbol-plugin.jelly"/>
     </pre>

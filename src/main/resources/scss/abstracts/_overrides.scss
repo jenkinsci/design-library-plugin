@@ -1,3 +1,7 @@
+:root {
+  --jdl-spacing: 2rem;
+}
+
 #main-panel {
   display: flex !important;
   flex-direction: column;
@@ -12,5 +16,15 @@
 }
 
 pre {
-  margin: 0 0 var(--section-padding) 0 !important;
+  margin: 0 0 var(--jdl-spacing) 0 !important;
+}
+
+hr {
+  display: inline-block;
+  width: 100%;
+  border: none;
+  height: 2px;
+  background: currentColor;
+  margin: 0 0 var(--jdl-spacing) 0;
+  opacity: 0.1;
 }

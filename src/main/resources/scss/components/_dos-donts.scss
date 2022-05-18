@@ -1,0 +1,83 @@
+@use "../abstracts/symbols";
+
+.jdl-dos-donts {
+  margin-bottom: var(--jdl-spacing);
+  border-collapse: collapse;
+  border-style: hidden;
+
+  th, td {
+    width: 50%;
+    padding: 0;
+    border-top: 1rem solid transparent;
+    border-left: 3rem solid transparent;
+  }
+
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 4px;
+
+    * {
+      stroke-width: 55px !important;
+    }
+  }
+
+  thead {
+    th {
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: left;
+      opacity: 0.75;
+    }
+  }
+
+  tbody {
+    td {
+      position: relative;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.66;
+      padding-left: calc(2rem + 1.5ch);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+      }
+
+      &::after {
+        background: var(--background);
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+
+      &:first-of-type {
+        &::before {
+          background: var(--success-color, var(--green));
+        }
+
+        &::after {
+          mask-image: symbols.$check;
+          mask-size: 55%;
+        }
+      }
+
+      &:not(:first-of-type) {
+        &::before {
+          background: var(--error-color, var(--red));
+        }
+
+        &::after {
+          mask-image: symbols.$cross;
+          mask-size: 60%;
+        }
+      }
+    }
+  }
+}

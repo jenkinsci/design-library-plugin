@@ -3,10 +3,10 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: calc(var(--section-padding) / 2);
-  padding: calc(var(--section-padding) / 2);
+  gap: calc(var(--jdl-spacing) / 2);
+  padding: calc(var(--jdl-spacing) / 2);
   border-radius: 10px;
-  margin-bottom: var(--section-padding);
+  margin-bottom: var(--jdl-spacing);
   z-index: 0;
 
   &::before {

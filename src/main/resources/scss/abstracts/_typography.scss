@@ -1,21 +1,34 @@
 .jdl-heading {
   font-weight: 600;
   font-size: 1.2rem;
-  margin: calc(var(--section-padding) / 2) 0;
+  margin: calc(var(--jdl-spacing) / 2) 0;
 }
 
 .jdl-leading-paragraph {
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0 0 var(--section-padding) 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 var(--jdl-spacing) 0;
+  line-height: 1.66;
 
   & + & {
-    margin-top: calc((var(--section-padding) / 2) * -1);
+    margin-top: calc((var(--jdl-spacing) / 2) * -1);
+  }
+}
+
+.jdl-paragraph {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 var(--jdl-spacing) 0;
+  line-height: 1.66;
+
+  & + & {
+    margin-top: calc((var(--jdl-spacing) / 2) * -1);
   }
 }
 
 .jdl-important-point {
   position: relative;
+  font-size: 1rem;
   padding-left: calc(1.5rem + 1ch);
 
   &::before {
