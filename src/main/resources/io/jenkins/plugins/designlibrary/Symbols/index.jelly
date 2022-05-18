@@ -63,7 +63,7 @@
     <p class="jdl-paragraph">${%usage.1}</p>
 
     <div class="jdl-symbols__symbol-container">
-      <l:icon src="symbol-search" />
+      <l:icon src="symbol-search" class="jdl-symbols__symbol" />
     </div>
     <pre class="jdl-symbols__symbol-code">
       <code class="sample-remote language-xml" data-sample="symbol.jelly" />
@@ -71,7 +71,7 @@
 
     <p class="jdl-paragraph">${%usage.2}</p>
     <div class="jdl-symbols__symbol-container">
-      <l:icon src="symbol-jenkins" tooltip="Howdy" />
+      <l:icon src="symbol-jenkins" tooltip="Howdy" class="jdl-symbols__symbol" />
     </div>
     <pre class="jdl-symbols__symbol-code">
       <code class="sample-remote language-xml" data-sample="symbol-tooltip.jelly" />
@@ -79,7 +79,7 @@
 
     <p class="jdl-paragraph">${%usage.3}</p>
     <div class="jdl-symbols__symbol-container">
-      <l:icon src="symbol-rss" class="spin" />
+      <l:icon src="symbol-rss" class="jdl-symbols__symbol spin" />
     </div>
     <pre class="jdl-symbols__symbol-code">
       <code class="sample-remote language-xml" data-sample="symbol-classes.jelly" />

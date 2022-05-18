@@ -148,11 +148,11 @@ $delay: 0.1;
     mask-size: 3rem;
     opacity: 0.5;
   }
+}
 
-  svg {
-    width: 2rem;
-    height: 2rem;
-  }
+.jdl-symbols__symbol {
+  width: 2rem;
+  height: 2rem;
 }
 
 .jdl-symbols__symbol-code {
@@ -163,11 +163,12 @@ $delay: 0.1;
 }
 
 .spin {
-  animation: spin var(--elastic-transition) infinite;
+  animation: spin 2.5s cubic-bezier(0, 0.68, 0.5, 1.2) infinite;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(-360deg);
+  30%,
+  100% {
+    transform: rotate(360deg);
   }
 }
