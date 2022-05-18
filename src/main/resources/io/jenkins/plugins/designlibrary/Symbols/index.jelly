@@ -45,11 +45,11 @@
       <tbody>
         <tr>
           <td>Symbols should be used to help a user recognise what a task does at a glance</td>
-          <td>Don't add symbols to headings</td>
+          <td>Don't use custom symbols that aren't consistent with Jenkins</td>
         </tr>
         <tr>
           <td>They should be recognisable and relevant, e.g. <l:icon src="symbol-lock-closed" /> for credentials</td>
-          <td>Dont add symbols to headings</td>
+          <td>Don't add symbols to headings, they just create visual clutter</td>
         </tr>
         <tr>
           <td>Use a tooltip on the symbol if there isn't any accompanying text</td>
@@ -61,35 +61,43 @@
 
     <h2 class="jdl-heading">${%usage.title}</h2>
     <p class="jdl-paragraph">${%usage.1}</p>
-    <p class="icon-md">
+
+    <div class="jdl-symbols__symbol-container">
       <l:icon src="symbol-search" />
-    </p>
-    <pre>
+    </div>
+    <pre class="jdl-symbols__symbol-code">
       <code class="sample-remote language-xml" data-sample="symbol.jelly" />
     </pre>
 
     <p class="jdl-paragraph">${%usage.2}</p>
-    <p class="icon-md">
-      <l:icon src="symbol-search" alt="Search" class="custom-class" />
-    </p>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="symbol-alt.jelly" />
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-jenkins" tooltip="Howdy" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
+      <code class="sample-remote language-xml" data-sample="symbol-tooltip.jelly" />
     </pre>
 
     <p class="jdl-paragraph">${%usage.3}</p>
-
-    <ul style="list-style: none;">
-      <li><span class="icon-sm"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-sm</li>
-      <li><span class="icon-md"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-md</li>
-      <li><span class="icon-lg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-lg</li>
-      <li><span class="icon-xlg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-xlg</li>
-    </ul>
-
-    <pre>
-      <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-rss" class="spin" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
+      <code class="sample-remote language-xml" data-sample="symbol-classes.jelly" />
     </pre>
 
-    <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols">
+    <p class="jdl-paragraph">${%usage.4}</p>
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-cube" class="icon-sm" />
+      <l:icon src="symbol-cube" class="icon-md" />
+      <l:icon src="symbol-cube" class="icon-lg" />
+      <l:icon src="symbol-cube" class="icon-xlg" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
+      <code class="sample-remote language-xml" data-sample="symbol-alt.jelly" />
+    </pre>
+
+    <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
+       class="jdl-paragraph jdl-link">
       View the complete list of symbols available to use on GitHub
     </a>
 
@@ -102,12 +110,12 @@
       <code class="sample-remote language-xml" data-sample="symbol-plugin.jelly"/>
     </pre>
 
-    ${%customSymbols.information}
-    <ul>
+    <p class="jdl-paragraph">${%customSymbols.information}</p>
+    <ul class="jdl-list">
       <li>symbolName - ${%customSymbols.symbolName}</li>
       <li>yourArtifactId - ${%customSymbols.artifactId}</li>
     </ul>
 
-    <p>${%customSymbols.artifactId.description}</p>
+    <p class="jdl-paragraph">${%customSymbols.artifactId.description}</p>
   </s:sample>
 </j:jelly>
