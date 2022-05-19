@@ -38,8 +38,8 @@
     <table class="jdl-dos-donts">
       <thead>
         <tr>
-          <th class="jenkins-!-color-success-color">Do</th>
-          <th class="jenkins-!-color-error-color">Don't</th>
+          <th class="jenkins-!-color-success-color">${%Do}</th>
+          <th class="jenkins-!-color-error-color">${%Don't}</th>
         </tr>
       </thead>
       <tbody>
@@ -96,10 +96,13 @@
       <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
     </pre>
 
-    <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
-       class="jdl-paragraph jdl-link">
-      View the complete list of symbols available to use on GitHub
-    </a>
+    <span>
+      <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
+         target="_blank" class="jdl-paragraph jdl-link">
+        ${%View the complete list of Jenkins Symbols on GitHub}
+        <l:icon src="symbol-external plugin-design-library" />
+      </a>
+    </span>
 
     <h2 class="jdl-heading">${%customSymbols}</h2>
     <p class="jdl-paragraph">${%customSymbols.description.1}</p>

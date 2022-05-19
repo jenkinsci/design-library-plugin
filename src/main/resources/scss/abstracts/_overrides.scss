@@ -15,8 +15,33 @@
   }
 }
 
+// Remove when code blocks follows user's theme
+// https://github.com/jenkinsci/design-library-plugin/issues/68
 pre {
+  position: relative;
   margin: 0 0 var(--jdl-spacing) 0 !important;
+  padding: calc(var(--jdl-spacing) / 2) !important;
+  background: transparent !important;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--text-color);
+    border-radius: inherit;
+    opacity: 0.05;
+    z-index: -1;
+  }
+
+  code {
+    font-size: 1rem !important;
+    text-shadow: none !important;
+  }
+}
+
+code {
+  font-family: var(--font-family-mono) !important;
 }
 
 hr {

@@ -51,3 +51,20 @@
     margin-right: 1ch;
   }
 }
+
+.jdl-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1ch;
+  text-decoration-thickness: 2px;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+
+    * {
+      stroke-width: 45px;
+    }
+  }
+}
