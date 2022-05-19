@@ -8,7 +8,7 @@
       <code class="sample-remote language-xml" data-sample="default.jelly"/>
     </pre>
 
-    <p class="jenkins-description">You can invert the position of the label with the <code>invertLabel</code> attribute.</p>
+    <p class="jenkins-description">${%toggle.usage.1}</p>
     <div class="app-component-sample app-component-sample--right-alignment">
       <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
     </div>
@@ -16,9 +16,9 @@
       <code class="sample-remote language-xml" data-sample="inverted.jelly"/>
     </pre>
 
-    <h2>${%Dynamic labels}</h2>
-    <p class="jenkins-description">Toggle switches labels can update in real time to reflect their status by setting the <code>checkTitle</code> attribute.</p>
-    <p class="jenkins-description">Try clicking on the toggle switch below to see how this works.</p>
+    <h2>${%dynamicLabels}</h2>
+    <p class="jenkins-description">${%dynamicLabels.usage.1}</p>
+    <p class="jenkins-description">${%dynamicLabels.usage.2}</p>
 
     <div class="app-component-sample">
       <f:toggleSwitch name="enable"

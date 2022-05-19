@@ -65,13 +65,13 @@ THE SOFTWARE.
         <j:if test="${it.previousPage != null}">
           <a href="${rootURL}/design-library/${it.previousPage.urlName}" class="jenkins-button jenkins-button--transparent jdl-previous-button">
             <l:icon src="symbol-arrow-left" />
-            <span>${%Previous}</span>
+            <span>${%previous}</span>
             <span>${it.previousPage.displayName}</span>
           </a>
         </j:if>
         <j:if test="${it.nextPage != null}">
           <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--transparent jdl-next-button">
-            <span>${%Next}</span>
+            <span>${%next}</span>
             <l:icon src="symbol-arrow-right" />
             <span>${it.nextPage.displayName}</span>
           </a>
