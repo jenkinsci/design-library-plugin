@@ -1,33 +1,34 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
+    <j:set var="icons" value="${it.symbols}" />
     <div class="jdl-symbols__masthead">
       <div>
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
       </div>
       <div>
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-symbols plugin-design-library" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
       </div>
       <div>
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
-        <l:icon src="${it.symbol}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
       </div>
     </div>
 

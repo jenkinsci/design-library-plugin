@@ -4,27 +4,43 @@ import hudson.Extension;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
+import java.util.Stack;
 
 @Extension
 public class Symbols extends UISample {
-    @Override
-    public String getIconFileName() {
-        return "symbol-symbols";
-    }
+	@Override
+	public String getIconFileName() {
+		return "symbol-symbols";
+	}
 
-    public List<String> getSymbols() {
-        List<String> symbols = Arrays.asList("trash", "search", "rss", "ribbon", "reload", "plugins", "jenkins", "folder");
-        Collections.shuffle(symbols);
-        return symbols;
-    }
+	public Stack<String> getSymbols() {
+		Stack<String> symbols = new Stack<>();
+		symbols.addAll(Arrays.asList("trash",
+				"search",
+				"rss",
+				"ribbon",
+				"reload",
+				"plugins",
+				"jenkins",
+				"folder",
+				"play",
+				"fingerprint",
+				"details",
+				"people",
+				"terminal",
+				"edit",
+				"cloud",
+				"analytics",
+				"computer",
+				"download",
+				"hammer",
+				"key"));
+		Collections.shuffle(symbols);
+		return symbols;
+	}
 
-    public String getSymbol() {
-        return "symbol-" + getSymbols().get(0);
-    }
-
-    @Extension
-    public static final class DescriptorImpl extends UISampleDescriptor {
-    }
+	@Extension
+	public static final class DescriptorImpl extends UISampleDescriptor {
+	}
 }
 
