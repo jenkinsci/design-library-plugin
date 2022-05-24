@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", () =>{
-
+document.addEventListener("DOMContentLoaded", () => {
   function extractLanguageFromClassList(element) {
     return Array.from(element.classList)
       .filter(clazz => clazz.startsWith('language-'))
       .map(clazz => clazz.replace('language-', ''));
   }
+
   const url = document.querySelector('head').dataset.rooturl
 
   document.querySelectorAll('.sample-remote')
@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         .then(response => response.text())
         .then(text => {
           const language = extractLanguageFromClassList(element);
-
           if (language.length > 0) {
-            element.innerHTML = Prism.highlight(text, Prism.languages[language], language)
+            element.innerHTML = Prism.highlight(text, Prism.languages[language], language.pop())
           } else {
             element.innerHTML = text
           }
@@ -31,29 +30,29 @@ document.addEventListener("DOMContentLoaded", () =>{
       const language = extractLanguageFromClassList(element);
 
       if (language.length > 0) {
-        element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language)
+        element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language.pop())
       }
     });
-
-  const shareButton = document.querySelector("#button-share");
-
-  if (shareButton) {
-    if (!navigator.canShare) {
-      shareButton.style.display = "none"
-    }
-
-    shareButton
-      .addEventListener("click", async (e) => {
-        try {
-          const shareData = {
-            title: document.title,
-            text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
-            url: document.location.href
-          }
-          await navigator.share(shareData)
-        } catch (error) {
-          console.log(error)
-        }
-      });
-  }
 });
+
+const shareButton = document.querySelector("#button-share");
+
+if (shareButton) {
+  if (!navigator.canShare) {
+    shareButton.style.display = "none"
+  }
+
+  shareButton
+    .addEventListener("click", async (e) => {
+      try {
+        const shareData = {
+          title: document.title,
+          text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
+          url: document.location.href
+        }
+        await navigator.share(shareData)
+      } catch (error) {
+        console.log(error)
+      }
+    });
+}
