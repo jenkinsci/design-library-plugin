@@ -32,28 +32,28 @@
       </div>
     </div>
 
-    <p class="jdl-leading-paragraph">${%title}</p>
+    <p class="jdl-leading-paragraph">${%leadParagraph}</p>
 
     <hr/>
 
     <table class="jdl-dos-donts">
       <thead>
         <tr>
-          <th class="jenkins-!-color-success-color">${%Do}</th>
-          <th class="jenkins-!-color-error-color">${%Don't}</th>
+          <th class="jenkins-!-color-success-color">${%do}</th>
+          <th class="jenkins-!-color-error-color">${%dont}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Symbols should be used to help a user recognise what a task does at a glance</td>
-          <td>Don't use custom symbols that aren't consistent with Jenkins</td>
+          <td>${%do.1}</td>
+          <td>${%dont.1}</td>
         </tr>
         <tr>
-          <td>They should be recognisable and relevant, e.g. <l:icon src="symbol-lock-closed" /> for credentials</td>
-          <td>Don't add symbols to headings, they just create visual clutter</td>
+          <td>${%do.2}<l:icon src="symbol-lock-closed" />${%do.2Continued}</td>
+          <td>${%dont.2}</td>
         </tr>
         <tr>
-          <td>Use a tooltip on the symbol if there isn't any accompanying text</td>
+          <td>${%do.3}</td>
         </tr>
       </tbody>
     </table>
