@@ -1,9 +1,9 @@
-<picture>
-  <a href="https://weekly.ci.jenkins.io/design-library/" target="_blank">
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jenkinsci/design-library-plugin/master/logo-dark.svg">
-      <img src="https://raw.githubusercontent.com/jenkinsci/design-library-plugin/master/logo.svg" alt="Design library banner">
-  </a>
-</picture>
+<a href="https://weekly.ci.jenkins.io/design-library/">
+  <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jenkinsci/design-library-plugin/master/logo-dark.svg">
+     <img src="https://raw.githubusercontent.com/jenkinsci/design-library-plugin/master/logo.svg">
+  </picture>
+</a>
 
 [![Join the chat at https://gitter.im/jenkinsci/ux-sig](https://badges.gitter.im/jenkinsci/ux-sig.svg)](https://gitter.im/jenkinsci/ux-sig)
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/design-library.svg)](https://plugins.jenkins.io/design-library/)
