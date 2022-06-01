@@ -1,35 +1,78 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p>${%title}</p>
+    <p class="jdl-leading-paragraph">${%title}</p>
 
-    <p>${%usage.1}</p>
-    <pre>
-      <code class="language-javascript">notificationBar.show('message')</code>
-    </pre>
+    <div class="jdl-component-sample">
+      <div class="jenkins-notification">
+        <l:icon src="symbol-info" />
+        Hello world
+      </div>
+      <div class="jenkins-notification jenkins-notification--success">
+        <l:icon src="symbol-success" />
+        Hello world
+      </div>
+      <div class="jenkins-notification jenkins-notification--warning">
+        <l:icon src="symbol-warning" />
+        Hello world
+      </div>
+      <div class="jenkins-notification jenkins-notification--error">
+        <l:icon src="symbol-error" />
+        Hello world
+      </div>
+    </div>
 
-    <p>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">Normal</h2>
+      <p class="jdl-paragraph">${%usage.1}</p>
+      <pre>
+        <code class="language-javascript">notificationBar.show('message')</code>
+      </pre>
+    </div>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">Success</h2>
+      <p class="jdl-paragraph">${%usage.1}</p>
+      <pre>
+        <code class="language-javascript">notificationBar.show('message', notificationBar.SUCCESS)</code>
+      </pre>
+    </div>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">Warning</h2>
+      <p class="jdl-paragraph">${%usage.1}</p>
+      <pre>
+        <code class="language-javascript">notificationBar.show('message', notificationBar.WARNING)</code>
+      </pre>
+    </div>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">Error</h2>
+      <p class="jdl-paragraph">${%usage.1}</p>
+      <pre>
+        <code class="language-javascript">notificationBar.show('message', notificationBar.ERROR)</code>
+      </pre>
+    </div>
+
+    <l:js src="jsbundles/section-to-tabs.js" />
+
+    <p class="jdl-paragraph">
       <button class="jenkins-button" onclick="notificationBar.show('This is a notification');">Show a notification bar</button>
     </p>
 
-    <p>${%usage.2}</p>
+    <hr />
+
+    <p class="jdl-paragraph">${%usage.2}</p>
     <pre>
       <code class="language-javascript">notificationBar.hide()</code>
     </pre>
-    <p><button class="jenkins-button" onclick="notificationBar.hide();">Hide it now</button></p>
+    <p class="jdl-paragraph"><button class="jenkins-button" onclick="notificationBar.hide();">Hide it now</button></p>
 
-    <p>${%usage.3}</p>
-    <pre>
-      <code class="language-javascript">notificationBar.show(msg, notificationBar.OK)</code>
-    </pre>
-    <p>
-      <button class="jenkins-button" onclick="notificationBar.show('it worked!', notificationBar.OK);">OK</button>
-    </p>
-    <p>
-      <button class="jenkins-button" onclick="notificationBar.show('something went wrong',notificationBar.WARNING);;">WARNING</button>
-    </p>
-    <p>
-      <button class="jenkins-button" onclick="notificationBar.show('something went wrong',notificationBar.ERROR);">ERROR</button>
-    </p>
+<!--    <p class="jdl-paragraph">-->
+<!--      <button class="jenkins-button" onclick="notificationBar.show('it worked!', notificationBar.OK);">OK</button>-->
+<!--    </p>-->
+<!--    <p class="jdl-paragraph">-->
+<!--      <button class="jenkins-button" onclick="notificationBar.show('something went wrong',notificationBar.WARNING);;">WARNING</button>-->
+<!--    </p>-->
+<!--    <p class="jdl-paragraph">-->
+<!--      <button class="jenkins-button" onclick="notificationBar.show('something went wrong',notificationBar.ERROR);">ERROR</button>-->
+<!--    </p>-->
   </s:sample>
 </j:jelly>
