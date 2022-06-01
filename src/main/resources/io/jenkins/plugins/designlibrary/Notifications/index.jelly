@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler">
   <s:sample>
     <p class="jdl-leading-paragraph">${%title}</p>
 
@@ -28,32 +28,30 @@
       <h2 class="jenkins-tab-pane__title">Default</h2>
       <p class="jdl-paragraph">${%usage.1}</p>
       <s:code language="javascript"
-              code="notificationBar.show('message')"
+              code="notificationBar.show('Hello world')"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">Success</h2>
       <p class="jdl-paragraph">${%usage.1}</p>
       <s:code language="javascript"
-              code="notificationBar.show('message', notificationBar.SUCCESS)"
+              code="notificationBar.show('Hello world', notificationBar.SUCCESS)"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">Warning</h2>
       <p class="jdl-paragraph">${%usage.1}</p>
       <s:code language="javascript"
-              code="notificationBar.show('message', notificationBar.WARNING)"
+              code="notificationBar.show('Hello world', notificationBar.WARNING)"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">Error</h2>
       <p class="jdl-paragraph">${%usage.1}</p>
       <s:code language="javascript"
-              code="notificationBar.show('message', notificationBar.ERROR)"
+              code="notificationBar.show('Hello world', notificationBar.ERROR)"
               executable="true" />
     </div>
-
-    <l:js src="jsbundles/section-to-tabs.js" />
 
     <hr />
 
@@ -61,5 +59,7 @@
     <s:code language="javascript"
             code="notificationBar.hide()"
             executable="true" />
+
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.Notifications.tabs" />
   </s:sample>
 </j:jelly>

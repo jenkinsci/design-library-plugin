@@ -1,0 +1,68 @@
+.jdl-tabs {
+  display: flex;
+  margin-bottom: var(--jdl-spacing);
+  gap: calc(var(--jdl-spacing) / 2.5);
+
+  &__tab {
+    position: relative;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    line-height: 1 !important;
+    transition: var(--standard-transition);
+    z-index: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.7rem 0.8rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      z-index: -1;
+      transition: var(--standard-transition);
+      opacity: 0;
+    }
+
+    &::before {
+      box-shadow: inset 0 0 0 2px var(--text-color);
+      opacity: 0.05;
+    }
+
+    &::after {
+      box-shadow: 0 0 0 10px var(--text-color);
+    }
+
+    &:hover {
+      text-decoration: none !important;
+
+      &::before {
+        opacity: 0.075 !important;
+        background: var(--text-color);
+      }
+    }
+
+    &:focus, &:active {
+      &::before {
+        opacity: 0.125 !important;
+      }
+
+      &::after {
+        opacity: 0.05;
+        box-shadow: 0 0 0 5px var(--text-color);
+      }
+    }
+
+    &--active {
+      cursor: default;
+      color: var(--text-color);
+      font-weight: 600;
+
+      &::before {
+        opacity: 0.05 !important;
+        background: var(--text-color);
+      }
+    }
+  }
+}

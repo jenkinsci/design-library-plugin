@@ -47,7 +47,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  aspect-ratio: 4 / 1;
+  padding: var(--jdl-spacing);
   margin-bottom: var(--jdl-spacing);
   z-index: 0;
   gap: 1rem;
@@ -64,8 +64,9 @@
     radial-gradient(at 0% 100%, hsl(264, 37%, 59%) 0, transparent 50%),
     radial-gradient(at 80% 100%, hsl(342, 55%, 41%) 0, transparent 50%),
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     z-index: -1;
+    animation: rotate-hue 100s linear infinite;
   }
 
   &::before {
@@ -77,5 +78,11 @@
     mask-position: center;
     mask-size: 3rem;
     opacity: 0.5;
+  }
+}
+
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(360deg);
   }
 }
