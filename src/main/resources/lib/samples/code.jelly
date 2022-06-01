@@ -1,0 +1,28 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout">
+  <st:documentation>
+    <st:attribute name="code" />
+    <st:attribute name="file" />
+    <st:attribute name="language" />
+    <st:attribute name="executable" />
+  </st:documentation>
+
+  <div class="jdl-component-code">
+    <pre class="jdl-component-code__code">
+      <code class="language-${language} ${file != null ? 'sample-remote' : ''}" data-sample="${file}">
+        ${code}
+      </code>
+    </pre>
+    <div class="jdl-component-code__controls">
+      <div>
+        <j:if test="${executable != null}">
+          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="Perform">
+            <l:icon src="symbol-play" />
+          </button>
+        </j:if>
+
+        <d:invokeBody />
+      </div>
+    </div>
+  </div>
+</j:jelly>
