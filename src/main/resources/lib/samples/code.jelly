@@ -15,13 +15,14 @@
     </pre>
     <div class="jdl-component-code__controls">
       <div>
+        <d:invokeBody />
+
         <j:if test="${executable != null}">
-          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="Perform">
+          <!-- This only works if the 'code' attribute is set -->
+          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
             <l:icon src="symbol-play" />
           </button>
         </j:if>
-
-        <d:invokeBody />
       </div>
     </div>
   </div>
