@@ -1,0 +1,173 @@
+$delay: 0.1;
+
+.jdl-symbols__masthead {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  z-index: 0;
+  margin-bottom: var(--jdl-spacing);
+  padding: 1rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (max-width: 970px) {
+      --sidebar-width: 0;
+      --content-width: 100%;
+      background-size: 100%;
+    }
+
+    background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(at 40% 20%, hsl(312, 42%, 60%) 0, transparent 50%),
+    radial-gradient(at 80% 0%, hsl(11, 100%, 56%) 0, transparent 50%),
+    radial-gradient(at 0% 50%, hsl(354, 64%, 72%) 0, transparent 50%),
+    radial-gradient(at 80% 50%, hsl(319, 66%, 64%) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsl(264, 37%, 59%) 0, transparent 50%),
+    radial-gradient(at 80% 100%, hsl(342, 55%, 41%) 0, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
+    animation: rotate-colors 10s linear infinite;
+  }
+  .app-card__preview::after {
+    background-image: radial-gradient(at 80% 0%, hsla(13, 100%, 56%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 50%, hsl(31, 100%, 80%) 0, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(164, 100%, 76%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsl(206, 60%, 57%) 0, transparent 50%),
+    radial-gradient(at 80% 100%, hsl(146, 64%, 79%) 0, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(167, 100%, 76%, 1) 0, transparent 50%);
+    animation: rotate-colors-2 10s linear infinite;
+  }
+
+  div {
+    display: contents;
+
+    @for $i from 0 through 3 {
+      &:nth-of-type(#{$i}) {
+        --animation-delay: #{$i * $delay}s;
+      }
+    }
+  }
+
+  svg {
+    max-width: min(5vw, 2.5rem);
+    max-height: min(5vw, 2.5rem);
+    width: min(5vw, 2.5rem);
+    opacity: 0.75;
+    mix-blend-mode: overlay;
+    animation: scale-in-symbol var(--elastic-transition) calc(var(--animation-delay) + var(--animation-svg-delay))  both;
+
+    @for $i from 1 through 7 {
+      &:nth-of-type(#{$i}) {
+        --animation-svg-delay: #{$i * $delay}s;
+      }
+    }
+  }
+
+  div:nth-of-type(2) {
+    svg {
+      &:nth-of-type(4) {
+        max-width: min(6vw, 6rem);
+        max-height: min(6vw, 6rem);
+        width: min(6vw, 6rem);
+        opacity: 1;
+        mix-blend-mode: normal;
+        animation-name: scale-in-symbol-main;
+      }
+    }
+  }
+}
+
+@keyframes scale-in-symbol {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    filter: blur(20px) brightness(2);
+  }
+}
+
+@keyframes scale-in-symbol-main {
+  from {
+    transform: scale(0) rotate(-20deg);
+    opacity: 0;
+    filter: blur(40px) brightness(2);
+  }
+}
+
+.jdl-symbols__symbol-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  margin-bottom: var(--jdl-spacing);
+  z-index: 0;
+  gap: 1rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(at 40% 20%, hsl(312, 42%, 60%) 0, transparent 50%),
+    radial-gradient(at 80% 0%, hsl(11, 100%, 56%) 0, transparent 50%),
+    radial-gradient(at 0% 50%, hsl(354, 64%, 72%) 0, transparent 50%),
+    radial-gradient(at 80% 50%, hsl(319, 66%, 64%) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsl(264, 37%, 59%) 0, transparent 50%),
+    radial-gradient(at 80% 100%, hsl(342, 55%, 41%) 0, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
+    border-radius: 10px 10px 0 0;
+    z-index: -1;
+  }
+
+  &::before {
+    opacity: 0.05;
+  }
+
+  &::after {
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='300px' height='300px' viewBox='0 0 300 300' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Ccircle id='Oval' fill='%23D8D8D8' cx='300' cy='0' r='10'%3E%3C/circle%3E%3Ccircle id='Oval' fill='%23D8D8D8' cx='0' cy='0' r='10'%3E%3C/circle%3E%3Ccircle id='Oval' fill='%23D8D8D8' cx='0' cy='300' r='10'%3E%3C/circle%3E%3Ccircle id='Oval' fill='%23D8D8D8' cx='300' cy='300' r='10'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+    mask-position: center;
+    mask-size: 3rem;
+    opacity: 0.5;
+  }
+}
+
+.jdl-symbols__symbol {
+  width: 2rem;
+  height: 2rem;
+}
+
+.jdl-symbols__symbol-code {
+  margin-top: calc(var(--jdl-spacing) * -1) !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.spin {
+  animation: spin 2.5s cubic-bezier(0, 0.68, 0.5, 1.2) infinite;
+}
+
+@keyframes spin {
+  30%,
+  100% {
+    transform: rotate(360deg);
+  }
+}

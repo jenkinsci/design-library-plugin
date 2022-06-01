@@ -1,7 +1,7 @@
 .app-code {
   word-wrap: break-word;
-  padding: calc(var(--section-padding) / 2);
+  padding: calc(var(--jdl-spacing) / 2);
   border-radius: 10px;
   background: rgba(100, 100, 100, 0.05);
-  margin-bottom: var(--section-padding);
+  margin-bottom: var(--jdl-spacing);
 }

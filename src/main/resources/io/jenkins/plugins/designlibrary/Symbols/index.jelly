@@ -1,56 +1,125 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jenkins-description">${%title}</p>
+    <j:set var="icons" value="${it.symbols}" />
+    <div class="jdl-symbols__masthead">
+      <div>
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+      </div>
+      <div>
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-symbols plugin-design-library" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+      </div>
+      <div>
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+        <l:icon src="symbol-${icons.pop()}" />
+      </div>
+    </div>
 
-    <p>${%description}</p>
+    <p class="jdl-leading-paragraph">${%leadParagraph}</p>
 
-    <h2>${%usage.title}</h2>
-    <p class="jenkins-description">${%usage.1}</p>
-    <p class="icon-md">
-      <l:icon src="symbol-search" />
-    </p>
-    <pre>
+    <hr/>
+
+    <table class="jdl-dos-donts">
+      <thead>
+        <tr>
+          <th class="jenkins-!-color-success-color">${%do}</th>
+          <th class="jenkins-!-color-error-color">${%dont}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${%do.1}</td>
+          <td>${%dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%do.2}<l:icon src="symbol-lock-closed" />${%do.2Continued}</td>
+          <td>${%dont.2}</td>
+        </tr>
+        <tr>
+          <td>${%do.3}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr/>
+
+    <h2 class="jdl-heading">${%usage.title}</h2>
+    <p class="jdl-paragraph">${%usage.1}</p>
+
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-search" class="jdl-symbols__symbol" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
       <code class="sample-remote language-xml" data-sample="symbol.jelly" />
     </pre>
 
-    <p class="jenkins-description">${%usage.2}</p>
-    <p class="icon-md">
-      <l:icon src="symbol-search" alt="Search" class="custom-class" />
-    </p>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="symbol-alt.jelly" />
+    <p class="jdl-paragraph">${%usage.2}</p>
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-jenkins" tooltip="Howdy" class="jdl-symbols__symbol" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
+      <code class="sample-remote language-xml" data-sample="symbol-tooltip.jelly" />
     </pre>
 
-    <p class="jenkins-description">${%usage.3}</p>
+    <p class="jdl-paragraph">${%usage.3}</p>
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-rss" class="jdl-symbols__symbol spin" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
+      <code class="sample-remote language-xml" data-sample="symbol-classes.jelly" />
+    </pre>
 
-    <ul style="list-style: none;">
-      <li><span class="icon-sm"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-sm</li>
-      <li><span class="icon-md"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-md</li>
-      <li><span class="icon-lg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-lg</li>
-      <li><span class="icon-xlg"><l:icon src="symbol-search" alt="Search" class="custom-class" /></span> icon-xlg</li>
-    </ul>
-
-    <pre>
+    <p class="jdl-paragraph">${%usage.4}</p>
+    <div class="jdl-symbols__symbol-container">
+      <l:icon src="symbol-cube" class="icon-sm" />
+      <l:icon src="symbol-cube" class="icon-md" />
+      <l:icon src="symbol-cube" class="icon-lg" />
+      <l:icon src="symbol-cube" class="icon-xlg" />
+    </div>
+    <pre class="jdl-symbols__symbol-code">
       <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
     </pre>
 
+    <span>
+      <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
+         target="_blank" class="jdl-paragraph jdl-link">
+        ${%View the complete list of Jenkins Symbols on GitHub}
+        <l:icon src="symbol-external plugin-design-library" />
+      </a>
+    </span>
 
-    <h2>${%customSymbols}</h2>
-    <p class="jenkins-description">${%customSymbols.description.1}</p>
+    <h2 class="jdl-heading">${%customSymbols}</h2>
+    <p class="jdl-paragraph">${%customSymbols.description.1}</p>
     <pre><code>{plugin-root}/src/main/resources/images/symbols</code></pre>
 
-    <p class="jenkins-description">${%customSymbols.description.2}</p>
+    <p class="jdl-paragraph">${%customSymbols.description.2}</p>
     <pre>
       <code class="sample-remote language-xml" data-sample="symbol-plugin.jelly"/>
     </pre>
 
-    ${%customSymbols.information}
-    <ul>
+    <p class="jdl-paragraph">${%customSymbols.information}</p>
+    <ul class="jdl-list">
       <li>symbolName - ${%customSymbols.symbolName}</li>
       <li>yourArtifactId - ${%customSymbols.artifactId}</li>
     </ul>
 
-    <p>${%customSymbols.artifactId.description}</p>
+    <p class="jdl-paragraph">${%customSymbols.artifactId.description}</p>
   </s:sample>
 </j:jelly>
