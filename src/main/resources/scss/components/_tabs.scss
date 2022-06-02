@@ -34,23 +34,26 @@
       box-shadow: 0 0 0 10px var(--text-color);
     }
 
-    &:hover {
-      text-decoration: none !important;
+    &:not(&--active) {
+      &:hover {
+        text-decoration: none !important;
 
-      &::before {
-        opacity: 0.075 !important;
-        background: var(--text-color);
-      }
-    }
-
-    &:focus, &:active {
-      &::before {
-        opacity: 0.125 !important;
+        &::before {
+          opacity: 0.075 !important;
+          background: var(--text-color);
+        }
       }
 
-      &::after {
-        opacity: 0.05;
-        box-shadow: 0 0 0 5px var(--text-color);
+      &:focus,
+      &:active {
+        &::before {
+          opacity: 0.125 !important;
+        }
+
+        &::after {
+          opacity: 0.05;
+          box-shadow: 0 0 0 5px var(--text-color);
+        }
       }
     }
 
