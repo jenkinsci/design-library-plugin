@@ -20,6 +20,20 @@ tabBar.append(activeTabBackdrop)
 
 content.insertBefore(tabBar, tabPanes[0])
 
+const mobileSelectContainer = document.createElement("div");
+mobileSelectContainer.className = "jenkins-select jenkins-!-margin-bottom-5 jdl-mobile-only"
+const mobileSelect = document.createElement("select");
+mobileSelect.className = "jenkins-select__input"
+mobileSelectContainer.append(mobileSelect)
+
+if (tabPanes.length <= 4) {
+  tabBar.classList.add("jdl-desktop-only")
+} else {
+  mobileSelectContainer.classList.add("jenkins-hidden")
+}
+
+content.insertBefore(mobileSelectContainer, tabPanes[0])
+
 // Add tabs for each tab pane
 tabPanes.forEach((tabPane, index) => {
   const tabPaneTitle = tabPane.querySelector(".jenkins-tab-pane__title")
@@ -30,6 +44,12 @@ tabPanes.forEach((tabPane, index) => {
   tab.innerText = tabPaneTitle.textContent
 
   tabBar.append(tab)
+
+  const option = document.createElement("option");
+  option.value = tabPaneTitle.textContent
+  option.text = tabPaneTitle.textContent
+  option.tab = tab
+  mobileSelect.appendChild(option);
 
   tab.addEventListener("click", function () {
     document.querySelectorAll(".jdl-tabs__tab").forEach((tab) => {
@@ -45,6 +65,8 @@ tabPanes.forEach((tabPane, index) => {
     const leftOffset = tab.getBoundingClientRect().left - tabBar.getBoundingClientRect().left
     activeTabBackdrop.style.left = leftOffset + "px"
     activeTabBackdrop.style.width = tab.getBoundingClientRect().width + "px"
+
+    mobileSelect.value = tabPaneTitle.textContent
   })
 
   // Select the first tab
@@ -52,3 +74,7 @@ tabPanes.forEach((tabPane, index) => {
     tab.click()
   }
 })
+
+mobileSelect.addEventListener('change', function() {
+  mobileSelect.selectedOptions[0].tab.click()
+});
