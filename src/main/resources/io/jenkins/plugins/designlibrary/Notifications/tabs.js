@@ -8,11 +8,17 @@ tabPanes.forEach((tabPane) => {
   tabPane.style.display = "none"
 })
 
-// Show the first
+// Show the first tab pane
 tabPanes[0].style.display = "block"
 
 const tabBar = document.createElement("div")
-tabBar.className = "jdl-tabs"
+tabBar.className = "jdl-tabs jdl-tabs--js"
+
+const activeTabBackdrop = document.createElement("div")
+activeTabBackdrop.className = "jdl-tabs__tab-backdrop"
+tabBar.append(activeTabBackdrop)
+
+content.insertBefore(tabBar, tabPanes[0])
 
 // Add tabs for each tab pane
 tabPanes.forEach((tabPane, index) => {
@@ -21,10 +27,9 @@ tabPanes.forEach((tabPane, index) => {
 
   const tab = document.createElement("div")
   tab.className = "jdl-tabs__tab"
+  tab.innerText = tabPaneTitle.textContent
 
-  if (index === 0) {
-    tab.classList.add("jdl-tabs__tab--active")
-  }
+  tabBar.append(tab)
 
   tab.addEventListener("click", function () {
     document.querySelectorAll(".jdl-tabs__tab").forEach((tab) => {
@@ -36,10 +41,14 @@ tabPanes.forEach((tabPane, index) => {
       tabPane.style.display = "none"
     })
     tabPanes[index].style.display = "block"
+
+    const leftOffset = tab.getBoundingClientRect().left - tabBar.getBoundingClientRect().left
+    activeTabBackdrop.style.left = leftOffset + "px"
+    activeTabBackdrop.style.width = tab.getBoundingClientRect().width + "px"
   })
-  tab.innerText = tabPaneTitle.textContent
 
-  tabBar.append(tab)
+  // Select the first tab
+  if (index === 0) {
+    tab.click()
+  }
 })
-
-content.insertBefore(tabBar, tabPanes[0])

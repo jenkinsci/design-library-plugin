@@ -1,4 +1,5 @@
 .jdl-tabs {
+  position: relative;
   display: flex;
   margin-bottom: var(--jdl-spacing);
   gap: calc(var(--jdl-spacing) / 2.5);
@@ -64,8 +65,27 @@
 
       &::before {
         opacity: 0.05 !important;
-        background: var(--text-color);
+        background: currentColor;
       }
+    }
+  }
+
+  &__tab-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    background: currentColor;
+    opacity: 0.05;
+  }
+}
+
+.jdl-tabs--js {
+  .jdl-tabs__tab--active {
+    &::before {
+      opacity: 0 !important;
     }
   }
 }
