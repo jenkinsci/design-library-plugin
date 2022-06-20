@@ -1,0 +1,11 @@
+.jdl-mobile-only {
+  @media (min-width: 600px) {
+    display: none !important;
+  }
+}
+
+.jdl-desktop-only {
+  @media (max-width: 600px) {
+    display: none !important;
+  }
+}
