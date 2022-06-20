@@ -23,6 +23,8 @@
             <l:icon src="symbol-play" />
           </button>
         </j:if>
+
+        <l:copyButton />
       </div>
     </div>
   </div>

@@ -28,11 +28,6 @@
     align-items: flex-end;
   }
 
-  #bottom-sticker {
-    margin-left: -1rem;
-    width: calc(100% + 2rem);
-  }
-
   .jenkins-form-item {
     width: 100%;
     max-width: unset;
@@ -78,6 +73,20 @@
     mask-position: center;
     mask-size: 3rem;
     opacity: 0.5;
+  }
+
+  &--gridless {
+    &::after {
+      display: none;
+    }
+  }
+
+  &--full-width {
+    align-items: unset;
+  }
+
+  #bottom-sticker {
+    margin: -1.5rem -2rem;
   }
 }
 
