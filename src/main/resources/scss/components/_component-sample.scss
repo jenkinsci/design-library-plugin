@@ -90,6 +90,10 @@
   }
 }
 
+.jdl-component-sample + .jdl-component-code {
+  margin-top: calc(var(--jdl-spacing) * -0.75);
+}
+
 @keyframes rotate-hue {
   to {
     filter: hue-rotate(360deg);
