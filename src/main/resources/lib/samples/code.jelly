@@ -24,7 +24,7 @@
           </button>
         </j:if>
 
-        <l:copyButton />
+        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
       </div>
     </div>
   </div>
