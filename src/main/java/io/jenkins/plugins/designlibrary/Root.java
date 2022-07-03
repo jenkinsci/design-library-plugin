@@ -4,13 +4,11 @@ import hudson.Extension;
 import hudson.model.RootAction;
 import hudson.util.HttpResponses;
 import jenkins.model.Jenkins;
-import jenkins.model.ModelObjectWithContextMenu;
 import net.sf.json.JSONArray;
 import org.jenkins.ui.icon.IconSet;
 import org.kohsuke.stapler.HttpResponse;
 import org.kohsuke.stapler.Stapler;
 import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.StaplerResponse;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +20,7 @@ import java.util.stream.Collectors;
  * @author Kohsuke Kawaguchi
  */
 @Extension
-public class Root implements RootAction, ModelObjectWithContextMenu {
+public class Root implements RootAction {
     public String getIconFileName() {
         return "symbol-design-library plugin-design-library";
     }
@@ -125,9 +123,5 @@ public class Root implements RootAction, ModelObjectWithContextMenu {
 
     public List<UISample> getAll() {
         return UISample.getAll();
-    }
-
-    public ContextMenu doContextMenu(StaplerRequest request, StaplerResponse response) {
-        return null;
     }
 }
