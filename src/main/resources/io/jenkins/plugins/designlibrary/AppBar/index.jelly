@@ -1,10 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <s:sample>
-
-    ${sections.addHeader('hello world')}
-
-    <h2 class="jdl-heading">${%Top app bar}</h2>
+    <h2 id="top-app-bar" class="jdl-heading">${%Top app bar}</h2>
     <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
       <div class="jenkins-app-bar jenkins-!-margin-bottom-0">
         <div class="jenkins-app-bar__content">
@@ -24,7 +21,7 @@
     <p class="jdl-paragraph">${%description}</p>
     <s:code language="xml" file="topAppBar.jelly" />
 
-    <h2 class="jdl-heading">${%Bottom app bar}</h2>
+    <h2 id="bottom-app-bar" class="jdl-heading">${%Bottom app bar}</h2>
     <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
       <p class="jdl-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>
       <p class="jdl-paragraph">Maecenas a elit eget est aliquam consectetur dapibus eu nibh. Suspendisse potenti. Fusce tristique nisl ut malesuada sollicitudin. Praesent sed nisl nibh. Etiam tincidunt enim sit amet eleifend maximus. Aenean molestie congue est, eu vehicula ex vulputate nec. Duis commodo, arcu a malesuada facilisis, purus ex imperdiet dolor, nec rhoncus nibh nisi eu ex. Vivamus varius eleifend sollicitudin.</p>

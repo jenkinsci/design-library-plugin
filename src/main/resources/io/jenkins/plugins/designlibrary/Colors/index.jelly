@@ -58,14 +58,14 @@ THE SOFTWARE.
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-third}</p>
     <p class="jdl-leading-paragraph jdl-important-point">${%tip-fourth}</p>
 
-    <h2 class="jdl-heading">${%Semantics}</h2>
+    <h2 id="semantics" class="jdl-heading">${%Semantics}</h2>
     <ol class="jdl-colors">
       <j:forEach var="item" items="${it.semantics}">
         <local:item item="${item}" />
       </j:forEach>
     </ol>
 
-    <h2 class="jdl-heading">${%Palette}</h2>
+    <h2 id="palette" class="jdl-heading">${%Palette}</h2>
     <ol class="jdl-colors">
       <j:forEach var="item" items="${it.colors}">
         <local:item item="${item}" />

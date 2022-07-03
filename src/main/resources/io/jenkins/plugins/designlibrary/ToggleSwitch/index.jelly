@@ -16,7 +16,7 @@
       <code class="sample-remote language-xml" data-sample="inverted.jelly"/>
     </pre>
 
-    <h2>${%dynamicLabels}</h2>
+    <h2 id="dynamic-labels" class="jdl-heading">${%dynamicLabels}</h2>
     <p class="jenkins-description">${%dynamicLabels.usage.1}</p>
     <p class="jenkins-description">${%dynamicLabels.usage.2}</p>
 

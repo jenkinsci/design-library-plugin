@@ -5,12 +5,14 @@ import hudson.model.RootAction;
 import hudson.util.HttpResponses;
 import jenkins.model.Jenkins;
 import net.sf.json.JSONArray;
+import org.apache.commons.jelly.JellyException;
 import org.jenkins.ui.icon.IconSet;
 import org.kohsuke.stapler.HttpResponse;
 import org.kohsuke.stapler.Stapler;
 import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerResponse;
 
-import java.util.Collections;
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,16 +47,14 @@ public class Root implements RootAction {
     public static class SearchResult {
         private String icon;
         private String title;
-        private String description;
         private String url;
         private List<SearchResult> children;
 
         public SearchResult() {
         }
 
-        public SearchResult(String title, String description, String url) {
+        public SearchResult(String title, String url) {
             this.title = title;
-            this.description = description;
             this.url = url;
         }
 
@@ -82,14 +82,6 @@ public class Root implements RootAction {
             this.url = url;
         }
 
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
         public List<SearchResult> getChildren() {
             return children;
         }
@@ -99,7 +91,7 @@ public class Root implements RootAction {
         }
     }
 
-    public HttpResponse doSearch() {
+    public HttpResponse doSearch(StaplerRequest req, StaplerResponse response) {
         final StaplerRequest request = Stapler.getCurrentRequest();
         final String query = request.getParameter("query");
 
@@ -112,9 +104,12 @@ public class Root implements RootAction {
                     "", "", "", "design-library", ""));
             searchResult.setTitle(sample.getDisplayName());
             searchResult.setUrl(Jenkins.get().getRootUrl() + "design-library/" + sample.getUrlName());
-            searchResult.setChildren(Collections.singletonList(
-                    new SearchResult("Tropic Morning News", "Hello world", "")));
-            return searchResult;
+                    try {
+                        searchResult.setChildren(sample.getHeadings(request, response));
+                    } catch (JellyException | IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    return searchResult;
         })
                 .collect(Collectors.toList());
 
