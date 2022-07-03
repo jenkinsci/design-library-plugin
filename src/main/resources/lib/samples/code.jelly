@@ -1,0 +1,22 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout">
+  <st:documentation>
+    <st:attribute name="code" />
+    <st:attribute name="file" />
+    <st:attribute name="language" />
+  </st:documentation>
+
+  <div class="jdl-component-code">
+    <pre class="jdl-component-code__code">
+      <code class="language-${language} ${file != null ? 'sample-remote' : ''}" data-sample="${file}">
+        ${code}
+      </code>
+    </pre>
+    <div class="jdl-component-code__controls">
+      <div>
+        <d:invokeBody />
+        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
+      </div>
+    </div>
+  </div>
+</j:jelly>

@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             element.innerHTML = text
           }
+          const codeWrapper = element.closest(".jdl-component-code");
+          if (codeWrapper) {
+            const copyButton = codeWrapper.querySelector(".copy-button, .jenkins-copy-button")
+            copyButton.setAttribute("text", text)
+          }
         })
     })
 

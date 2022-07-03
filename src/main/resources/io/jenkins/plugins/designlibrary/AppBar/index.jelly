@@ -1,46 +1,40 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <s:sample>
-    <f:section title="Top app bar">
-      <p class="jenkins-description">${%description}</p>
-      <div class="app-component-sample app-component-sample--full-width">
-        <div class="jenkins-app-bar jenkins-!-margin-bottom-0">
-          <div class="jenkins-app-bar__content">
-            <h1>${%title}</h1>
-          </div>
-          <div class="jenkins-app-bar__controls">
-            <button class="jenkins-button jenkins-button--primary">
-              <l:icon src="symbol-add" />
-              Primary control
-            </button>
-            <button class="jenkins-button">Secondary</button>
-            <button class="jenkins-button">Secondary</button>
-            <t:help href="https://www.jenkins.io" />
-          </div>
+    <h2 class="jdl-heading">${%Top app bar}</h2>
+    <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
+      <div class="jenkins-app-bar jenkins-!-margin-bottom-0">
+        <div class="jenkins-app-bar__content">
+          <h1>${%title}</h1>
+        </div>
+        <div class="jenkins-app-bar__controls">
+          <button class="jenkins-button jenkins-button--primary">
+            <l:icon src="symbol-add" />
+            Primary control
+          </button>
+          <button class="jenkins-button">Secondary</button>
+          <button class="jenkins-button">Secondary</button>
+          <t:help href="https://www.jenkins.io" />
         </div>
       </div>
-      <pre>
-        <code class="sample-remote language-xml" data-sample="topAppBar.jelly" />
-      </pre>
-    </f:section>
+    </div>
+    <p class="jdl-paragraph">${%description}</p>
+    <s:code language="xml" file="topAppBar.jelly" />
 
-    <f:section title="Bottom app bar">
-      <p>${%bottomAppBar.description}</p>
-      <div class="app-component-sample app-component-sample--full-width">
-        <p style="margin: 1rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>
-        <p style="margin: 0 1rem 1rem 1rem;">Maecenas a elit eget est aliquam consectetur dapibus eu nibh. Suspendisse potenti. Fusce tristique nisl ut malesuada sollicitudin. Praesent sed nisl nibh. Etiam tincidunt enim sit amet eleifend maximus. Aenean molestie congue est, eu vehicula ex vulputate nec. Duis commodo, arcu a malesuada facilisis, purus ex imperdiet dolor, nec rhoncus nibh nisi eu ex. Vivamus varius eleifend sollicitudin.</p>
-        <f:bottomButtonBar>
-          <div class="jenkins-buttons-row">
-            <button class="jenkins-button jenkins-button--primary">
-              Primary control
-            </button>
-            <button class="jenkins-button">Secondary</button>
-          </div>
-        </f:bottomButtonBar>
-      </div>
-      <pre>
-        <code class="sample-remote language-xml" data-sample="bottomAppBar.jelly" />
-      </pre>
-    </f:section>
+    <h2 class="jdl-heading">${%Bottom app bar}</h2>
+    <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
+      <p class="jdl-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>
+      <p class="jdl-paragraph">Maecenas a elit eget est aliquam consectetur dapibus eu nibh. Suspendisse potenti. Fusce tristique nisl ut malesuada sollicitudin. Praesent sed nisl nibh. Etiam tincidunt enim sit amet eleifend maximus. Aenean molestie congue est, eu vehicula ex vulputate nec. Duis commodo, arcu a malesuada facilisis, purus ex imperdiet dolor, nec rhoncus nibh nisi eu ex. Vivamus varius eleifend sollicitudin.</p>
+      <f:bottomButtonBar>
+        <div class="jenkins-buttons-row">
+          <button class="jenkins-button jenkins-button--primary">
+            Primary control
+          </button>
+          <button class="jenkins-button">Secondary</button>
+        </div>
+      </f:bottomButtonBar>
+    </div>
+    <p class="jdl-paragraph">${%bottomAppBar.description}</p>
+    <s:code language="xml" file="bottomAppBar.jelly" />
   </s:sample>
 </j:jelly>

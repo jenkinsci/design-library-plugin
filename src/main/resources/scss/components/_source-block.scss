@@ -1,7 +1,58 @@
+// Deprecated - use <s:code ... /> instead
 .app-code {
   word-wrap: break-word;
   padding: calc(var(--jdl-spacing) / 2);
   border-radius: 10px;
   background: rgba(100, 100, 100, 0.05);
   margin-bottom: var(--jdl-spacing);
+}
+
+$jdl-component-code-controls-spacing: 0.75rem;
+
+.jdl-component-code {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  margin-bottom: var(--jdl-spacing);
+  z-index: 0;
+  border-radius: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: currentColor;
+    z-index: -1;
+    opacity: 0.05;
+  }
+
+  &__code {
+    margin: 0 !important;
+    padding: 0;
+
+    code {
+      line-height: 1.66 !important;
+    }
+
+    &::before, &::after {
+      display: none;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: $jdl-component-code-controls-spacing;
+
+    & > div {
+      position: sticky;
+      top: calc(43px + #{$jdl-component-code-controls-spacing});
+      right: $jdl-component-code-controls-spacing;
+      display: flex;
+      gap: $jdl-component-code-controls-spacing;
+    }
+  }
 }

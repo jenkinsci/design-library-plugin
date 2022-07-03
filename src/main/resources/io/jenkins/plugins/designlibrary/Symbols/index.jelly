@@ -63,39 +63,31 @@
     <h2 class="jdl-heading">${%usage.title}</h2>
     <p class="jdl-paragraph">${%usage.1}</p>
 
-    <div class="jdl-symbols__symbol-container">
+    <div class="jdl-component-sample">
       <l:icon src="symbol-search" class="jdl-symbols__symbol" />
     </div>
-    <pre class="jdl-symbols__symbol-code">
-      <code class="sample-remote language-xml" data-sample="symbol.jelly" />
-    </pre>
+    <s:code language="xml" file="symbol.jelly" />
 
     <p class="jdl-paragraph">${%usage.2}</p>
-    <div class="jdl-symbols__symbol-container">
+    <div class="jdl-component-sample">
       <l:icon src="symbol-jenkins" tooltip="Howdy" class="jdl-symbols__symbol" />
     </div>
-    <pre class="jdl-symbols__symbol-code">
-      <code class="sample-remote language-xml" data-sample="symbol-tooltip.jelly" />
-    </pre>
+    <s:code language="xml" file="symbol-tooltip.jelly" />
 
     <p class="jdl-paragraph">${%usage.3}</p>
-    <div class="jdl-symbols__symbol-container">
+    <div class="jdl-component-sample">
       <l:icon src="symbol-rss" class="jdl-symbols__symbol spin" />
     </div>
-    <pre class="jdl-symbols__symbol-code">
-      <code class="sample-remote language-xml" data-sample="symbol-classes.jelly" />
-    </pre>
+    <s:code language="xml" file="symbol-classes.jelly" />
 
     <p class="jdl-paragraph">${%usage.4}</p>
-    <div class="jdl-symbols__symbol-container">
+    <div class="jdl-component-sample">
       <l:icon src="symbol-cube" class="icon-sm" />
       <l:icon src="symbol-cube" class="icon-md" />
       <l:icon src="symbol-cube" class="icon-lg" />
       <l:icon src="symbol-cube" class="icon-xlg" />
     </div>
-    <pre class="jdl-symbols__symbol-code">
-      <code class="sample-remote language-xml" data-sample="symbol-size.jelly" />
-    </pre>
+    <s:code language="xml" file="symbol-size.jelly" />
 
     <span>
       <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
@@ -107,12 +99,10 @@
 
     <h2 class="jdl-heading">${%customSymbols}</h2>
     <p class="jdl-paragraph">${%customSymbols.description.1}</p>
-    <pre><code>{plugin-root}/src/main/resources/images/symbols</code></pre>
+    <s:code code="{plugin-root}/src/main/resources/images/symbols" />
 
     <p class="jdl-paragraph">${%customSymbols.description.2}</p>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="symbol-plugin.jelly"/>
-    </pre>
+    <s:code language="xml" file="symbol-plugin.jelly" />
 
     <p class="jdl-paragraph">${%customSymbols.information}</p>
     <ul class="jdl-list">
