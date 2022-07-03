@@ -4,7 +4,6 @@
     <st:attribute name="code" />
     <st:attribute name="file" />
     <st:attribute name="language" />
-    <st:attribute name="executable" />
   </st:documentation>
 
   <div class="jdl-component-code">
@@ -16,14 +15,6 @@
     <div class="jdl-component-code__controls">
       <div>
         <d:invokeBody />
-
-        <j:if test="${executable != null}">
-          <!-- This only works if the 'code' attribute is set -->
-          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
-            <l:icon src="symbol-play" />
-          </button>
-        </j:if>
-
         <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
       </div>
     </div>
