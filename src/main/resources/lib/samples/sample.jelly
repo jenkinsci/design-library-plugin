@@ -42,6 +42,7 @@ THE SOFTWARE.
 
   <l:layout title="${title}">
     <st:adjunct includes="io.jenkins.plugins.designlibrary.styles" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.search" />
     <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
     <st:adjunct includes="io.jenkins.plugins.designlibrary.preCode" />
     <st:adjunct includes="io.jenkins.plugins.designlibrary.prism" />

@@ -1,6 +1,23 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
   <l:tasks>
+    <div id="search-wrapper">
+      <div class="jdl-search">
+        <input
+          class="jdl-search__input"
+          type="search"
+          id="search-bar"
+          value="${request.getParameter('search')}"
+          placeholder="Search Design Library" />
+        <div class="jdl-search__icon">
+          <l:icon src="symbol-search"/>
+        </div>
+      </div>
+      <div style="position: relative">
+        <div id="search-results" />
+      </div>
+    </div>
+
     <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home plugin-design-library" />
 
     <j:forEach var="s" items="${it.all}">

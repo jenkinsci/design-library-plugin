@@ -1,6 +1,9 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <s:sample>
+
+    ${sections.addHeader('hello world')}
+
     <h2 class="jdl-heading">${%Top app bar}</h2>
     <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
       <div class="jenkins-app-bar jenkins-!-margin-bottom-0">
