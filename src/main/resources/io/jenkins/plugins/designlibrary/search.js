@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const rootUrl = document.querySelector('head').dataset.rooturl
+  const data = document.querySelector("#search-data").textContent
   const searchWrapper = document.querySelector("#search-wrapper")
   const searchBar = document.querySelector("#search-bar")
   const searchResultsContainer = document.querySelector("#search-results-container")
   const searchBarResults = document.querySelector("#search-results")
 
   searchBar.addEventListener("input", () => {
-    const fullUrl = `${rootUrl}/design-library/search?query=${searchBar.value}`;
+    const query = searchBar.value.toLowerCase()
 
-    if (searchBar.value.length === 0) {
-      hideResultsContainer();
-      searchResultsContainer.style.height = "0px"
-      return;
+    // Hide the suggestions if the search query is empty
+    if (query.length === 0) {
+      hideResultsContainer()
+      return
     }
 
-    showResultsContainer();
+    showResultsContainer()
 
     function appendResults(container, results) {
       results.forEach(item => {
@@ -29,42 +29,46 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    fetch(fullUrl)
-      .then(response => response.json())
-      .then(json => {
-        searchBarResults.innerHTML = "";
+    // Filter results
+    const results = JSON.parse(data)
+      .filter(item => item.title.toLowerCase().includes(query) ||
+        item.children.some(child => child.title.toLowerCase().includes(query)))
+      .map(item => {
+        item.children = item.children.filter(child => child.title.toLowerCase().includes(query))
+        return item;
+      })
+      .slice(0, 5)
 
-        appendResults(searchBarResults, json["data"])
-
-        searchResultsContainer.style.height = searchBarResults.offsetHeight + "px"
-      });
-    })
+    searchBarResults.innerHTML = ""
+    appendResults(searchBarResults, results)
+    searchResultsContainer.style.height = searchBarResults.offsetHeight + "px"
+  })
 
   function createElementFromHtml(html) {
-    const template = document.createElement("template");
-    template.innerHTML = html.trim();
-    return template.content.firstElementChild;
+    const template = document.createElement("template")
+    template.innerHTML = html.trim()
+    return template.content.firstElementChild
   }
 
   function showResultsContainer() {
-    searchResultsContainer.classList.add("jdl-search-results-container--visible");
+    searchResultsContainer.classList.add("jdl-search-results-container--visible")
     document.querySelectorAll(".task").forEach(task => {
-      task.style.opacity = 0.25;
+      task.style.opacity = 0.25
     })
   }
 
   function hideResultsContainer() {
-    searchResultsContainer.classList.remove("jdl-search-results-container--visible");
+    searchResultsContainer.classList.remove("jdl-search-results-container--visible")
     searchResultsContainer.style.height = "0px"
     document.querySelectorAll(".task").forEach(task => {
-      task.style.opacity = 1;
+      task.style.opacity = 1
     })
   }
 
   searchBar.addEventListener("focusin", () => {
     if (searchBar.value.length !== 0) {
       searchResultsContainer.style.height = searchBarResults.offsetHeight + "px"
-      showResultsContainer();
+      showResultsContainer()
     }
   })
 
@@ -73,6 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return
     }
 
-    hideResultsContainer();
+    hideResultsContainer()
   })
-});
+})

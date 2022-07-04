@@ -4,6 +4,7 @@ import hudson.ExtensionPoint;
 import hudson.model.Action;
 import hudson.model.Describable;
 import jenkins.model.Jenkins;
+import net.sf.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,10 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
 
     public static List<UISample> getAll() {
         return new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
+    }
+
+    public static JSONArray getSearch() {
+        return JSONArray.fromObject(SearchHelper.getSearchResults());
     }
 
     public UISample getPreviousPage() {

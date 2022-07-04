@@ -8,6 +8,7 @@ import org.apache.commons.jelly.JellyTagException;
 import org.apache.commons.jelly.Script;
 import org.apache.commons.jelly.XMLOutput;
 import org.jenkins.ui.icon.IconSet;
+import org.kohsuke.stapler.Stapler;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.StaplerResponse;
 import org.kohsuke.stapler.WebApp;
@@ -29,7 +30,7 @@ public class SearchHelper {
 
 	private static final Map<UISample, List<SearchResult>> cachedHeadings = new HashMap<>();
 
-	public static List<SearchResult> getSearchResults(String query, StaplerRequest request, StaplerResponse response) {
+	public static List<SearchResult> getSearchResults() {
 		return UISample.getAll().stream()
 				.map(sample -> {
 					SearchResult searchResult = new SearchResult();
@@ -38,19 +39,16 @@ public class SearchHelper {
 					searchResult.setTitle(sample.getDisplayName());
 					searchResult.setUrl(Jenkins.get().getRootUrl() + "design-library/" + sample.getUrlName());
 					try {
-						searchResult.setChildren(SearchHelper.getHeadingsFromView(sample, request, response));
+						searchResult.setChildren(SearchHelper.getHeadingsFromView(sample));
 					} catch (RuntimeException | JellyException | IOException e) {
 						throw new RuntimeException(e);
 					}
 					return searchResult;
 				})
-				.filter(result -> result.getTitle().toLowerCase().contains(query.toLowerCase()) ||
-						result.getChildren().stream().anyMatch(e -> e.getTitle().toLowerCase().contains(query.toLowerCase())))
-				.limit(5)
 				.collect(Collectors.toList());
 	}
 
-	private static List<SearchResult> getHeadingsFromView(UISample uiSample, StaplerRequest request, StaplerResponse response) throws JellyException, IOException {
+	private static List<SearchResult> getHeadingsFromView(UISample uiSample) throws JellyException, IOException {
 		if (cachedHeadings.containsKey(uiSample)) {
 			return cachedHeadings.get(uiSample);
 		}
@@ -60,8 +58,10 @@ public class SearchHelper {
 		List<SearchResult> searchResults = new ArrayList<>();
 
 		if (s != null) {
+			StaplerRequest request = Stapler.getCurrentRequest();
+			StaplerResponse response = Stapler.getCurrentResponse();
 			JellyFacet facet = webApp.getFacet(JellyFacet.class);
-			request.setAttribute("mode", "main-panel");
+			request.setAttribute("disableSearch", true);
 			DefaultScriptInvoker dsi = new DefaultScriptInvoker();
 			StringWriter sw = new StringWriter();
 			XMLOutput xml = dsi.createXMLOutput(sw, true);

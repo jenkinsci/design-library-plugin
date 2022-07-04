@@ -2,11 +2,7 @@ package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
 import hudson.model.RootAction;
-import hudson.util.HttpResponses;
 import net.sf.json.JSONArray;
-import org.kohsuke.stapler.HttpResponse;
-import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.StaplerResponse;
 
 import java.util.List;
 
@@ -38,12 +34,11 @@ public class Root implements RootAction {
         return null;
     }
 
-    public HttpResponse doSearch(StaplerRequest request, StaplerResponse response) {
-        final String query = request.getParameter("query");
-        return HttpResponses.okJSON(JSONArray.fromObject(SearchHelper.getSearchResults(query, request, response)));
-    }
-
     public List<UISample> getAll() {
         return UISample.getAll();
+    }
+
+    public JSONArray getSearch() {
+        return UISample.getSearch();
     }
 }

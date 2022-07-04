@@ -2,12 +2,16 @@
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
   <l:tasks>
     <div id="search-wrapper">
+      <div id="search-data" class="jenkins-hidden">
+        <j:if test="${disableSearch != true}">
+          ${it.search}
+        </j:if>
+      </div>
       <div class="jdl-search">
         <input
           class="jenkins-search__input jdl-search__input"
           type="search"
           id="search-bar"
-          value="${request.getParameter('search')}"
           placeholder="Search Design Library" />
         <div class="jdl-search__icon">
           <l:icon src="symbol-search"/>
