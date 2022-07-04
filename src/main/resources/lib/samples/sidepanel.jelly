@@ -4,7 +4,7 @@
     <div id="search-wrapper">
       <div class="jdl-search">
         <input
-          class="jdl-search__input"
+          class="jenkins-search__input jdl-search__input"
           type="search"
           id="search-bar"
           value="${request.getParameter('search')}"
@@ -14,7 +14,9 @@
         </div>
       </div>
       <div style="position: relative">
-        <div id="search-results" />
+        <div class="jdl-search-results-container" id="search-results-container">
+          <div class="jdl-search-results" id="search-results" />
+        </div>
       </div>
     </div>
 

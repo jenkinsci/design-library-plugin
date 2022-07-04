@@ -74,7 +74,7 @@ THE SOFTWARE.
       <code class="sample-remote language-html" data-sample="symbolButton.jelly"/>
     </pre>
 
-    <h2>${%copy}</h2>
+    <h2 id="copy-button" class="jdl-heading">${%copy}</h2>
     <p>${%copy.description}</p>
     <div class="app-component-sample">
       <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
@@ -89,7 +89,7 @@ THE SOFTWARE.
       <li>message - ${%copy.parameters.message}</li>
     </ul>
 
-    <h2>${%help}</h2>
+    <h2 id="help-button" class="jdl-heading">${%help}</h2>
     <div class="app-component-sample">
       <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
     </div>
