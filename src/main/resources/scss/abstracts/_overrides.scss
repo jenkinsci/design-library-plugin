@@ -2,6 +2,10 @@
   --jdl-spacing: 2rem;
 }
 
+:target {
+  scroll-margin-top: calc(40px + var(--jdl-spacing));
+}
+
 #main-panel {
   display: flex !important;
   flex-direction: column;

@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   searchBar.addEventListener("input", () => {
     const fullUrl = `${rootUrl}/design-library/search?query=${searchBar.value}`;
 
-    searchBarResults.innerHTML = "";
-
     function appendResults(container, results) {
       results.forEach(item => {
         container.append(createElementFromHtml(`<a href="${item.url}">${item.icon} ${item.title}</a>`))
@@ -20,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(fullUrl)
       .then(response => response.json())
       .then(json => {
+        searchBarResults.innerHTML = "";
 
         appendResults(searchBarResults, json["data"])
 
