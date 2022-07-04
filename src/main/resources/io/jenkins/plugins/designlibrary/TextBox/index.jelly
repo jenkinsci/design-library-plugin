@@ -33,7 +33,7 @@
       <code class="sample-remote language-xml" data-sample="example.jelly" />
     </pre>
 
-    <h2>${%autoCompletion}</h2>
+    <h2 id="auto-completion" class="jdl-heading">${%autoCompletion}</h2>
     <p class="jenkins-description">${%autoCompletion.description.1}</p>
     <div class="app-component-sample">
       <f:entry title="U.S. State" field="state">
@@ -87,7 +87,7 @@
     </pre>
 
 
-    <h2>${%syntaxHighlight}</h2>
+    <h2 id="syntax-highlighting" class="jdl-heading">${%syntaxHighlight}</h2>
 
     <p class="jenkins-description">${%syntaxHighlight.description.1}</p>
 
