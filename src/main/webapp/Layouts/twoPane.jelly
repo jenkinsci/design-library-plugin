@@ -1,0 +1,8 @@
+<l:layout>
+  <l:side-panel>
+    ...
+  </l:side-panel>
+  <l:main-panel>
+    ...
+  </l:main-panel>
+</l:layout>
