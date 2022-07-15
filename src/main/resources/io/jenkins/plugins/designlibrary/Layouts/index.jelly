@@ -1,0 +1,91 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+  <s:sample>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">One column</h2>
+      <p class="jdl-leading-paragraph">
+        One column layouts are for pages that don't need navigation; they're ideal for standalone pages
+        that don't have child navigation.
+      </p>
+
+      <h2 class="jdl-heading">Usage</h2>
+
+      <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
+
+      <s:code code="&lt;l:layout type=&quot;one-column&quot;&gt;" />
+
+      <hr />
+
+      <table class="jdl-dos-donts">
+        <thead>
+          <tr>
+            <th class="jenkins-!-color-success-color">${%do}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>${%one-column.do.1}</td>
+          </tr>
+          <tr>
+            <td>${%one-column.do.2}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">Two column</h2>
+
+      <p class="jdl-leading-paragraph">
+        Two column layouts are for 'hub' style pages, pages that have child pages
+        for the user to navigate to.
+      </p>
+
+      <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Project' and 'Plugin Manager'.</p>
+
+      <h2 class="jdl-heading">Usage</h2>
+
+      <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
+
+      <hr />
+
+      <table class="jdl-dos-donts">
+        <thead>
+          <tr>
+            <th class="jenkins-!-color-success-color">${%do}</th>
+            <th class="jenkins-!-color-error-color">${%dont}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>${%two-column.do.1}</td>
+            <td>${%two-column.dont.1}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.2}</td>
+            <td>${%two-column.dont.2}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">Fullscreen</h2>
+
+      <p class="jdl-leading-paragraph">
+        Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
+
+        Such layouts aren't intended for the average page and should only be used if your page needs it.
+      </p>
+
+      <p class="jdl-paragraph">An example of such a page is 'Build Monitor View'.</p>
+
+      <h2 class="jdl-heading">Usage</h2>
+
+      <p class="jdl-paragraph">Set the type attribute to 'full-screen' to use this layout:</p>
+
+      <s:code code="&lt;l:layout type=&quot;full-screen&quot;&gt;" />
+    </div>
+
+    <l:js src="jsbundles/section-to-tabs.js" />
+  </s:sample>
+</j:jelly>
