@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
   const appBar = document.querySelector(".jenkins-app-bar")
+  const componentSample = document.querySelector(".jdl-component-sample")
   const tabBar = document.querySelector(".tabBar")
   const twoPaneTab = tabBar.querySelector(".tab:first-of-type")
   const onePaneTab = tabBar.querySelector(".tab:nth-of-type(2)")
@@ -7,26 +8,26 @@ window.addEventListener("load", () => {
   const layoutPreview = document.querySelector("#layout-preview")
 
   appBar.insertAdjacentElement('afterend', tabBar)
-  tabBar.insertAdjacentElement('afterend', layoutPreview)
+  appBar.insertAdjacentElement('afterend', componentSample)
 
   function resetLayoutPreview() {
-    layoutPreview.classList.remove("jdl-longhorn--one")
-    layoutPreview.classList.remove("jdl-longhorn--two")
-    layoutPreview.classList.remove("jdl-longhorn--cards")
+    layoutPreview.classList.remove("jdl-layout-preview--one-column")
+    layoutPreview.classList.remove("jdl-layout-preview--two-column")
+    layoutPreview.classList.remove("jdl-layout-preview--full-screen")
   }
 
   onePaneTab.addEventListener("click", () => {
     resetLayoutPreview()
-    layoutPreview.classList.add("jdl-longhorn--one")
+    layoutPreview.classList.add("jdl-layout-preview--one-column")
   })
 
   twoPaneTab.addEventListener("click", () => {
     resetLayoutPreview()
-    layoutPreview.classList.add("jdl-longhorn--two")
+    layoutPreview.classList.add("jdl-layout-preview--two-column")
   })
 
   fullscreenTab.addEventListener("click", () => {
     resetLayoutPreview()
-    layoutPreview.classList.add("jdl-longhorn--cards")
+    layoutPreview.classList.add("jdl-layout-preview--full-screen")
   })
 })
