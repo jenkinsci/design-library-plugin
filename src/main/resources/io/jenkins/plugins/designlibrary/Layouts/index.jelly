@@ -75,6 +75,18 @@
       <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
 
       <s:code file="twoPane.jelly" language="xml" />
+
+      <p class="jdl-paragraph">
+        You can add a title and controls to your sidebar by using an app bar:
+        <br />
+        You should only add controls if they relate to your sidebar contents.
+      </p>
+
+      <s:code file="twoPaneAppBar.jelly" language="xml" />
+
+      <p class="jdl-paragraph">It's simple to add items to your sidebar:</p>
+
+      <s:code file="twoPaneItems.jelly" language="xml" />
     </div>
 
     <div class="jenkins-tab-pane">

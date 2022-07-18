@@ -1,0 +1,7 @@
+<l:side-panel>
+  <l:app-bar title="Title">
+    <button class="jenkins-button">
+      <l:icon src="symbol-refresh" />
+    </button>
+  </l:app-bar>
+</l:side-panel>
