@@ -1,15 +1,10 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-paragraph">
-      Use the standard l:layout wrapper to keep your pages consistent with Jenkins. You can extend this
-      component if you need more functionality.
-    </p>
-
-    <h2 class="jenkins-heading" id="types">Types</h2>
-
     <div class="jenkins-tab-pane">
-      <h3 class="jenkins-tab-pane__title">Two column</h3>
+      <h2 class="jenkins-tab-pane__title">Two column</h2>
+
+      <l:icon src="symbol-layouts-two-pane plugin-design-library" class="jenkins-!-margin-bottom-5" />
 
       <p class="jdl-paragraph">
         Two column layouts are for 'hub' style pages, pages that have child pages
@@ -18,7 +13,7 @@
 
       <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Project' and 'Plugin Manager'.</p>
 
-      <h4 class="jdl-heading">${%Usage}</h4>
+      <h3 class="jdl-heading">${%Usage}</h3>
 
       <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
 
@@ -47,13 +42,16 @@
 
     </div>
     <div class="jenkins-tab-pane">
-      <h3 class="jenkins-tab-pane__title">One column</h3>
+      <h2 class="jenkins-tab-pane__title">One column</h2>
+
+      <l:icon src="symbol-layouts-one-pane plugin-design-library" class="jenkins-!-margin-bottom-5" />
+
       <p class="jdl-paragraph">
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
         that don't have child navigation.
       </p>
 
-      <h4 class="jdl-heading">${%Usage}</h4>
+      <h3 class="jdl-heading">${%Usage}</h3>
 
       <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
 
@@ -78,7 +76,9 @@
       </table>
     </div>
     <div class="jenkins-tab-pane">
-      <h3 class="jenkins-tab-pane__title">Fullscreen</h3>
+      <h2 class="jenkins-tab-pane__title">Fullscreen</h2>
+
+      <l:icon src="symbol-layouts-full-screen plugin-design-library" class="jenkins-!-margin-bottom-5" />
 
       <p class="jdl-paragraph">
         Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
@@ -88,7 +88,7 @@
 
       <p class="jdl-paragraph">An example of such a page is 'Build Monitor View'.</p>
 
-      <h4 class="jdl-heading">${%Usage}</h4>
+      <h3 class="jdl-heading">${%Usage}</h3>
 
       <p class="jdl-paragraph">Set the type attribute to 'full-screen' to use this layout:</p>
 
