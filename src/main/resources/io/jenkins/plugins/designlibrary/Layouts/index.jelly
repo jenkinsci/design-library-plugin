@@ -1,10 +1,42 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler">
   <s:sample>
+    <div id="layout-preview" class="jdl-longhorn jdl-longhorn--two">
+      <div class="jdl-longhorn__navigation" />
+      <div class="jdl-longhorn__sidebar">
+        <div class="jdl-longhorn__header" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+      </div>
+      <div class="jdl-longhorn__content">
+        <div class="jdl-longhorn__header" />
+        <div class="jdl-longhorn__button" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+        <div class="jdl-longhorn__line" />
+      </div>
+      <div class="jdl-longhorn__cards">
+        <div class="jdl-longhorn__header" />
+        <div class="jdl-longhorn__button" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+        <div class="jdl-longhorn__card" />
+      </div>
+    </div>
+
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">Two column</h2>
-
-      <l:icon src="symbol-layouts-two-pane plugin-design-library" class="jenkins-!-margin-bottom-5" />
 
       <p class="jdl-paragraph">
         Two column layouts are for 'hub' style pages, pages that have child pages
@@ -44,8 +76,6 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">One column</h2>
 
-      <l:icon src="symbol-layouts-one-pane plugin-design-library" class="jenkins-!-margin-bottom-5" />
-
       <p class="jdl-paragraph">
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
         that don't have child navigation.
@@ -78,8 +108,6 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">Fullscreen</h2>
 
-      <l:icon src="symbol-layouts-full-screen plugin-design-library" class="jenkins-!-margin-bottom-5" />
-
       <p class="jdl-paragraph">
         Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
@@ -95,6 +123,7 @@
       <s:code file="fullscreen.jelly" language="xml" />
     </div>
 
-    <l:js src="jsbundles/section-to-tabs.js" />
+    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.Layouts.layout-preview" />
   </s:sample>
 </j:jelly>
