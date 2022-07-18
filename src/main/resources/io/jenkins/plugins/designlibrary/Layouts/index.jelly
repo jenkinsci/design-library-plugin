@@ -47,12 +47,6 @@
 
       <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Project' and 'Plugin Manager'.</p>
 
-      <h3 class="jdl-heading">${%Usage}</h3>
-
-      <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
-
-      <s:code file="twoPane.jelly" language="xml" />
-
       <hr />
 
       <table class="jdl-dos-donts">
@@ -74,7 +68,15 @@
         </tbody>
       </table>
 
+      <hr />
+
+      <h3 class="jdl-heading">${%Usage}</h3>
+
+      <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
+
+      <s:code file="twoPane.jelly" language="xml" />
     </div>
+
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">One column</h2>
 
@@ -82,12 +84,6 @@
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
         that don't have child navigation.
       </p>
-
-      <h3 class="jdl-heading">${%Usage}</h3>
-
-      <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
-
-      <s:code file="onePane.jelly" language="xml" />
 
       <hr />
 
@@ -106,7 +102,16 @@
           </tr>
         </tbody>
       </table>
+
+      <hr />
+
+      <h3 class="jdl-heading">${%Usage}</h3>
+
+      <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
+
+      <s:code file="onePane.jelly" language="xml" />
     </div>
+
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">Fullscreen</h2>
 
