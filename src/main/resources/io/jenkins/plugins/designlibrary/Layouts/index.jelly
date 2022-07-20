@@ -65,6 +65,9 @@
             <td>${%two-column.do.2}</td>
             <td>${%two-column.dont.2}</td>
           </tr>
+          <tr>
+            <td>${%two-column.do.3}</td>
+          </tr>
         </tbody>
       </table>
 
@@ -74,19 +77,12 @@
 
       <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
 
-      <s:code file="twoPane.jelly" language="xml" />
+      <s:code file="twoColumn.jelly" language="xml" previewable="true" />
 
       <p class="jdl-paragraph">
-        You can add a title and controls to your sidebar by using an app bar:
-        <br />
-        You should only add controls if they relate to your sidebar contents.
+        The example above is all you need to set up a two-column page,
+        it's complete with headings, sidebar items and content.
       </p>
-
-      <s:code file="twoPaneAppBar.jelly" language="xml" />
-
-      <p class="jdl-paragraph">It's simple to add items to your sidebar:</p>
-
-      <s:code file="twoPaneItems.jelly" language="xml" />
     </div>
 
     <div class="jenkins-tab-pane">
@@ -121,7 +117,7 @@
 
       <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
 
-      <s:code file="onePane.jelly" language="xml" />
+      <s:code file="oneColumn.jelly" language="xml" previewable="true" />
     </div>
 
     <div class="jenkins-tab-pane">
@@ -139,7 +135,7 @@
 
       <p class="jdl-paragraph">Set the type attribute to 'full-screen' to use this layout:</p>
 
-      <s:code file="fullscreen.jelly" language="xml" />
+      <s:code file="fullscreen.jelly" language="xml" previewable="true" />
     </div>
 
     <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>

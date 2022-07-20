@@ -1,0 +1,21 @@
+<l:layout title="Heading">
+  <l:side-panel>
+    <l:app-bar title="Heading" />
+
+    <l:tasks>
+      <l:task title="Root" href="..." icon="symbol-home" />
+      <l:task title="Second page" href="..." icon="symbol-edit" />
+      <l:task title="Third page" href="..." icon="symbol-details" />
+    </l:tasks>
+  </l:side-panel>
+
+  <l:main-panel>
+    <l:app-bar title="Subheading">
+      <button class="jenkins-button">
+        <l:icon src="symbol-add" />
+      </button>
+    </l:app-bar>
+
+    <p class="jenkins-leading-paragraph">This is some content</p>
+  </l:main-panel>
+</l:layout>
