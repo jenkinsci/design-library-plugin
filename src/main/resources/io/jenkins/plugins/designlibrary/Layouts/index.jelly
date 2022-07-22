@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:sample>
     <div class="jdl-component-sample">
       <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
@@ -38,14 +38,14 @@
     </div>
 
     <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">Two column</h2>
+      <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
 
       <p class="jdl-leading-paragraph">
         Two column layouts are for 'hub' style pages, pages that have child pages
         for the user to navigate to.
       </p>
 
-      <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Project' and 'Plugin Manager'.</p>
+      <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
 
       <hr />
 
@@ -86,7 +86,7 @@
     </div>
 
     <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">One column</h2>
+      <h2 class="jenkins-tab-pane__title">${%One column}</h2>
 
       <p class="jdl-leading-paragraph">
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
@@ -121,7 +121,7 @@
     </div>
 
     <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">Fullscreen</h2>
+      <h2 class="jenkins-tab-pane__title">${%Fullscreen}</h2>
 
       <p class="jdl-leading-paragraph">
         Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
@@ -129,7 +129,13 @@
         Such layouts aren't intended for the average page and should only be used if your page needs it.
       </p>
 
-      <p class="jdl-paragraph">An example of such a page is 'Build Monitor View'.</p>
+      <p class="jdl-paragraph">
+        An example of such a page is
+        <a class="jdl-link" href="https://plugins.jenkins.io/build-monitor-plugin/" target="_blank">
+          Build Monitor View
+          <l:icon src="symbol-external plugin-design-library" />
+        </a>
+      </p>
 
       <h3 class="jdl-heading">${%Usage}</h3>
 
