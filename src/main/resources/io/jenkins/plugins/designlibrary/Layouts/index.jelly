@@ -99,14 +99,13 @@
         <thead>
           <tr>
             <th class="jenkins-!-color-success-color">${%do}</th>
+            <th class="jenkins-!-color-success-color">${%dont}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>${%one-column.do.1}</td>
-          </tr>
-          <tr>
-            <td>${%one-column.do.2}</td>
+            <td>${%one-column.dont.1}</td>
           </tr>
         </tbody>
       </table>
