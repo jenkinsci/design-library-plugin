@@ -68,6 +68,9 @@
           <tr>
             <td>${%two-column.do.3}</td>
           </tr>
+          <tr>
+            <td>${%two-column.do.4}</td>
+          </tr>
         </tbody>
       </table>
 
