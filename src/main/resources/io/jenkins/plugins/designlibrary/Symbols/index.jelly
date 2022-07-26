@@ -111,5 +111,12 @@
     </ul>
 
     <p class="jdl-paragraph">${%customSymbols.artifactId.description}</p>
+
+    <p class="jdl-paragraph">${%customSymbols.theme}</p>
+    <ul class="jdl-list">
+      <li>stroke="currentColor"</li>
+      <li>fill="currentColor"</li>
+    </ul>
+    <p class="jdl-paragraph">${%customSymbols.theme.clarification}</p>
   </s:sample>
 </j:jelly>
