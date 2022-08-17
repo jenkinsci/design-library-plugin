@@ -25,6 +25,8 @@ You can open this project as a [Gitpod workspace](https://www.gitpod.io/) which 
 If you prefer using IntelliJ IDEA, you can setup Gitpod integration with JetBrains Gateway using the instructions on [gitpod.io](https://www.gitpod.io/docs/ides-and-editors/intellij), 
 which will open the workspace in IntelliJ IDEA using JetBrains Gateway.
 
-Alternatively clone this project and run `mvn hpi:run`
+Alternatively clone this project and run `mvn hpi:run`.
 
 Go to the **Design Library** menu item or straight to http://localhost:8080/jenkins/design-library/ and play with UI components.
+
+If you just want to see this plugin in action then you can also visit the latest version of this plugin in our [Jenkins "weekly" live installation](https://weekly.ci.jenkins.io/design-library/).
