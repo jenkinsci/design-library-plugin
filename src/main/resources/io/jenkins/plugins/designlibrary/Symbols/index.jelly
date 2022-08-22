@@ -92,10 +92,28 @@
     <span>
       <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
          target="_blank" class="jdl-paragraph jdl-link">
-        ${%View the complete list of Jenkins Symbols on GitHub}
+        ${%View the complete list of symbols provided by Jenkins on GitHub}
         <l:icon src="symbol-external plugin-design-library" />
       </a>
     </span>
+
+    <h2 class="jdl-heading">${%ioniconsApi}</h2>
+    <p class="jdl-paragraph">${%customSymbols.ionicons-api}</p>
+
+    <span>
+      <a href="https://plugins.jenkins.io/ionicons-api/#dependencies" target="_blank" class="jdl-paragraph jdl-link">
+        ${%Click here for a sample how to add the API to your plugin}
+        <l:icon src="symbol-external plugin-design-library" />
+      </a>
+    </span>
+
+    <p class="jdl-paragraph">${%customSymbols.description.2}</p>
+    <s:code language="xml" file="symbol-ionicons-reference.jelly" />
+
+    <a href="https://ionic.io/ionicons" target="_blank" class="jdl-paragraph jdl-link">
+      ${%View the complete list of all symbols provided by the ionicons-api-plugin on ionic.io/ionicons}
+      <l:icon src="symbol-external plugin-design-library" />
+    </a>
 
     <h2 class="jdl-heading">${%customSymbols}</h2>
     <p class="jdl-paragraph">${%customSymbols.description.1}</p>
