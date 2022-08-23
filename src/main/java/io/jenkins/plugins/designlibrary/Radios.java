@@ -10,7 +10,7 @@ import java.util.List;
 public class Radios extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-radios";
+        return "symbol-radio-button-on-outline plugin-ionicons-api";
     }
 
     public List<UISample> getRadios() {
