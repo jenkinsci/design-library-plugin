@@ -30,7 +30,7 @@
           </a>
           <a class="app-card__container" href="Symbols">
             <div class="app-card__preview">
-              <l:icon src="symbol-symbols plugin-design-library" />
+              <l:icon src="symbol-star-outline plugin-ionicons-api" />
             </div>
             <div class="app-card__title">${%symbols}</div>
             <div class="app-card__description">${%symbols-description}</div>
@@ -46,7 +46,7 @@
           </a>
           <a class="app-card__container" href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe">
             <div class="app-card__preview">
-              <l:icon src="symbol-youtube plugin-design-library" />
+              <l:icon src="symbol-logo-youtube plugin-ionicons-api" />
             </div>
             <div class="app-card__title">${%ux-youtube}</div>
           </a>
@@ -54,7 +54,7 @@
         <div class="app-home__side-by-side">
           <a class="app-card__container" href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui">
             <div class="app-card__preview">
-              <l:icon src="symbol-github plugin-design-library" />
+              <l:icon src="symbol-logo-github plugin-ionicons-api" />
             </div>
             <div class="app-card__title">${%ux-wip-core}</div>
           </a>

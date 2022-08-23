@@ -16,7 +16,7 @@ import jenkins.model.Jenkins;
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
     public String getIconFileName() {
-        return "symbol-sample";
+        return "symbol-document-outline plugin-ionicons-api";
     }
 
     public String getUrlName() {

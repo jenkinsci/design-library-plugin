@@ -10,7 +10,7 @@ import java.util.List;
 public class Colors extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-colors";
+        return "symbol-water-outline plugins-ionicons-api";
     }
 
     public List<Semantic> getSemantics() {

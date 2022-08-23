@@ -16,7 +16,7 @@ import java.util.List;
 public class Progress extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-progress";
+        return "symbol-hourglass-outline plugin-ionicons-api";
     }
 
     public ProgressiveRendering factor(final String numberS) {
