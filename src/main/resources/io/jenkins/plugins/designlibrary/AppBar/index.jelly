@@ -9,7 +9,7 @@
         </div>
         <div class="jenkins-app-bar__controls">
           <button class="jenkins-button jenkins-button--primary">
-            <l:icon src="symbol-add" />
+            <l:icon src="symbol-add-outline plugin-ionicons-api" />
             Primary control
           </button>
           <button class="jenkins-button">Secondary</button>

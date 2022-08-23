@@ -68,7 +68,7 @@ THE SOFTWARE.
     </pre>
 
     <div class="app-component-sample">
-      <button class="jenkins-button"><l:icon src="symbol-add" /> ${%symbol}</button>
+      <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> ${%symbol}</button>
     </div>
     <pre>
       <code class="sample-remote language-html" data-sample="symbolButton.jelly"/>
