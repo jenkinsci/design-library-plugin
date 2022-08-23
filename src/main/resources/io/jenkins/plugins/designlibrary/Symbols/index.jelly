@@ -16,7 +16,7 @@
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-symbols plugin-design-library" />
+        <l:icon src="symbol-star-outline plugin-ionicons-api" />
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
@@ -93,7 +93,7 @@
       <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
          target="_blank" class="jdl-paragraph jdl-link">
         ${%View the complete list of Jenkins Symbols on GitHub}
-        <l:icon src="symbol-external plugin-design-library" />
+        <l:icon src="symbol-open-outline plugin-ionicons-api" />
       </a>
     </span>
 

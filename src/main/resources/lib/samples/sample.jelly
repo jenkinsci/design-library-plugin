@@ -50,7 +50,7 @@ THE SOFTWARE.
 
     <l:app-bar title="${title}">
       <button id="button-share" class="jenkins-button" tooltip="${%sharePage}">
-        <l:icon src="symbol-share plugin-design-library" />
+        <l:icon src="symbol-share-outline plugin-ionicons-api" />
       </button>
     </l:app-bar>
 
