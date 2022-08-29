@@ -25,80 +25,69 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
   <s:sample>
-    <p class="jenkins-description">${%description.1}</p>
+    <p class="jdl-paragraph">${%description.1}</p>
 
-    <p class="jenkins-description">${%description.2}</p>
+    <p class="jdl-paragraph">${%description.2}</p>
 
-    <!-- TODO No idea when you would use a transparent button -->
-
-    <div class="app-component-sample">
+    <div class="jdl-component-sample">
       <button class="jenkins-button">Default</button>
     </div>
-    <pre>
-      <code class="language-html">
-        <button class="jenkins-button">Default</button>
-      </code>
-    </pre>
+    <s:code language="xml" file="default.jelly" />
 
-    <div class="app-component-sample">
+    <div class="jdl-component-sample">
       <button class="jenkins-button jenkins-button--primary">Primary</button>
     </div>
-    <pre>
-      <code class="language-html">
-        <button class="jenkins-button jenkins-button--primary">Primary</button>
-      </code>
-    </pre>
+    <s:code language="xml" file="primary.jelly" />
 
-    <div class="app-component-sample">
-      <button class="jenkins-button jenkins-button--destructive">Destructive</button>
+    <p class="jdl-paragraph">
+      You can pair buttons with <a href="../Colors">color modifier classes</a>, like so:
+    </p>
+
+    <div class="jdl-component-sample">
+      <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
     </div>
-    <pre>
-      <code class="language-html">
-        <button class="jenkins-button jenkins-button--destructive">Destructive</button>
-      </code>
-    </pre>
+    <s:code language="xml" file="destructive.jelly" />
 
-    <div class="app-component-sample">
-      <button class="jenkins-button jenkins-button--transparent">Transparent</button>
+    <p class="jdl-paragraph">
+      Tertiary buttons should be used for buttons which have minimal interaction or for those where
+      a background creates too much visual clutter:
+    </p>
+
+    <div class="jdl-component-sample">
+      <button class="jenkins-button jenkins-button--tertiary">Tertiary</button>
     </div>
-    <pre>
-      <code class="language-html">
-        <button class="jenkins-button jenkins-button--transparent">Transparent</button>
-      </code>
-    </pre>
+    <s:code language="xml" file="tertiary.jelly" />
 
-    <div class="app-component-sample">
+    <p class="jdl-paragraph">
+      Buttons can include symbols and they'll be automatically sized to fit correctly:
+    </p>
+
+    <div class="jdl-component-sample">
       <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> ${%symbol}</button>
     </div>
-    <pre>
-      <code class="sample-remote language-html" data-sample="symbolButton.jelly"/>
-    </pre>
+    <s:code language="xml" file="symbolButton.jelly" />
 
-    <h2>${%copy}</h2>
-    <p>${%copy.description}</p>
-    <div class="app-component-sample">
-      <l:copyButton message="text copied" text="Here comes the night time" tooltip="Click to copy" />
+    <h2 class="jdl-heading">${%copy}</h2>
+    <p class="jdl-paragraph">${%copy.description}</p>
+    <div class="jdl-component-sample">
+      <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
     </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="copyButton.jelly" />
-    </pre>
+    <s:code language="xml" file="copyButton.jelly" />
 
-    <p>${%copy.parameters}</p>
-    <ul>
+    <p class="jdl-paragraph">${%copy.parameters}</p>
+    <ul class="jdl-list">
       <li>text - ${%copy.parameters.text}</li>
       <li>message - ${%copy.parameters.message}</li>
     </ul>
 
-    <h2>${%help}</h2>
-    <div class="app-component-sample">
+    <h2 class="jdl-heading">${%help}</h2>
+    <div class="jdl-component-sample">
       <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
     </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="helpButton.jelly" />
-    </pre>
+    <s:code language="xml" file="helpButton.jelly" />
 
-    <p>${%help.parameters}</p>
-    <ul>
+    <p class="jdl-paragraph">${%help.parameters}</p>
+    <ul class="jdl-list">
       <li>href - ${%help.parameters.1}</li>
     </ul>
   </s:sample>
