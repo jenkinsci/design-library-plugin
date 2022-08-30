@@ -38,26 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
         element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language.pop())
       }
     });
-});
 
-const shareButton = document.querySelector("#button-share");
+  const shareButton = document.querySelector("#button-share");
 
-if (shareButton) {
-  if (!navigator.canShare) {
-    shareButton.style.display = "none"
-  }
+  if (shareButton) {
+    if (!navigator.canShare) {
+      shareButton.style.display = "none"
+    }
 
-  shareButton
-    .addEventListener("click", async (e) => {
-      try {
-        const shareData = {
-          title: document.title,
-          text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
-          url: document.location.href
+    shareButton
+      .addEventListener("click", async (e) => {
+        try {
+          const shareData = {
+            title: document.title,
+            text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
+            url: document.location.href
+          }
+          await navigator.share(shareData)
+        } catch (error) {
+          console.log(error)
         }
-        await navigator.share(shareData)
-      } catch (error) {
-        console.log(error)
-      }
-    });
-}
+      });
+  }
+});
