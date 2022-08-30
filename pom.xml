@@ -72,7 +72,7 @@ THE SOFTWARE.
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>ionicons-api</artifactId>
-            <version>22.v868b_0c347756</version>
+            <version>24.va_745a_b_a_97fc3</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
