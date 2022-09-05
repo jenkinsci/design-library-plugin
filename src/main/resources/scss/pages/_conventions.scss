@@ -17,9 +17,13 @@
 
     dd {
       margin: 0;
-      color: var(--text-color-secondary)
+      color: var(--text-color-secondary);
     }
   }
+}
+
+.jdl-inline-code {
+  color: var(--text-color-secondary);
 }
 
 .jdl-\!-bem-block-color {
