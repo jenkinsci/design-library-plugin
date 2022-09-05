@@ -35,7 +35,7 @@ THE SOFTWARE.
       <code class="sample-remote language-java" data-sample="Sample.java"/>
     </pre>
 
-    <h2>Boolean radio</h2>
+    <h2 class="jdl-heading">Boolean radio</h2>
 
     <div class="app-component-sample">
       <f:booleanRadio field="myField" />

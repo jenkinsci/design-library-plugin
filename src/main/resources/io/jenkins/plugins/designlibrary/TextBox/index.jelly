@@ -33,14 +33,14 @@
       <code class="sample-remote language-xml" data-sample="example.jelly" />
     </pre>
 
-    <h2>${%autoCompletion}</h2>
-    <p class="jenkins-description">${%autoCompletion.description.1}</p>
+    <h2 class="jdl-heading">${%autoCompletion}</h2>
+    <p class="jdl-paragraph">${%autoCompletion.description.1}</p>
     <div class="app-component-sample">
       <f:entry title="U.S. State" field="state">
         <f:textbox />
       </f:entry>
     </div>
-    <p class="jenkins-description">${%autoCompletion.description.2}</p>
+    <p class="jdl-paragraph">${%autoCompletion.description.2}</p>
     <pre>
       <code class="sample-remote language-xml" data-sample="sample.jelly" />
     </pre>
@@ -48,7 +48,7 @@
       <code class="sample-remote language-java" data-sample="Sample.java" />
     </pre>
 
-    <p class="jenkins-description">${%combobox.description}</p>
+    <p class="jdl-paragraph">${%combobox.description}</p>
 
     <div class="app-component-sample">
       <f:entry title="U.S. State" field="state">
@@ -67,7 +67,7 @@
     </pre>
 
     <h3>${%dynamicCombobox}</h3>
-    <p class="jenkins-description">${%dynamicCombobox.description}</p>
+    <p class="jdl-paragraph">${%dynamicCombobox.description}</p>
 
     <f:entry title="Beatles Album" field="album">
       <f:select />
@@ -87,9 +87,11 @@
     </pre>
 
 
-    <h2>${%syntaxHighlight}</h2>
+    <h2 class="jdl-heading">${%syntaxHighlight}</h2>
 
-    <p class="jenkins-description">${%syntaxHighlight.description.1}</p>
+    <div>
+      <p class="jdl-paragraph">${%syntaxHighlight.description.1}</p>
+    </div>
 
     <textarea class="script">println "Hello, World!"</textarea>
 
@@ -97,7 +99,7 @@
       <code class="language-html"><textarea class="script">println "Hello, World!"</textarea></code>
     </pre>
 
-    <p class="jenkins-description">${%syntaxHighlight.description.2}</p>
+    <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
 
     <st:adjunct includes="org.kohsuke.stapler.codemirror.mode.groovy.groovy"/>
     <st:adjunct includes="org.kohsuke.stapler.codemirror.theme.default"/>

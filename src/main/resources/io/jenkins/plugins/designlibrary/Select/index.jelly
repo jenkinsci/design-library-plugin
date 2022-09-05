@@ -24,9 +24,9 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
-    <p class="jenkins-description">${%title}</p>
+    <p class="jdl-paragraph">${%title}</p>
 
-    <p class="jenkins-description">${%usage.1}</p>
+    <p class="jdl-paragraph">${%usage.1}</p>
     <form action="submit" method="post">
 
       <pre>
@@ -37,7 +37,7 @@ THE SOFTWARE.
 
       <f:submit value="Save"/>
     </form>
-    <p style="margin-top: var(--section-padding);" class="jenkins-description">${%usage.2}</p>
+    <p style="margin-top: var(--section-padding);" class="jdl-paragraph">${%usage.2}</p>
 
     <f:entry title="Fruits">
       <f:select field="fruit"/>
@@ -49,9 +49,9 @@ THE SOFTWARE.
     Java source code:
     <pre><code class="sample-remote language-java" data-sample="Sample.java" /></pre>
 
-    <h2>${%dynamic}</h2>
+    <h2 class="jdl-heading">${%dynamic}</h2>
 
-    <p class="jenkins-description">${%dynamic.description}</p>
+    <p class="jdl-paragraph">${%dynamic.description}</p>
 
     <form method="post">
       <f:entry title="Country" field="country">
