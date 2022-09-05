@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" >
   <s:sample>
-    <p class="jdl-leading-paragraph">${%title}</p>
+    <p class="jdl-leading-paragraph">${%description}</p>
 
     <div class="jdl-component-sample">
       <div class="jdl-notifications-group">
@@ -24,27 +24,29 @@
       </div>
     </div>
 
-    <p class="jdl-paragraph">${%usage.1}</p>
-
     <div class="jenkins-tab-pane">
+      <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Default</h2>
       <s:code language="javascript"
               code="notificationBar.show('Default')"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
+      <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Success</h2>
       <s:code language="javascript"
               code="notificationBar.show('Success', notificationBar.SUCCESS)"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
+      <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Warning</h2>
       <s:code language="javascript"
               code="notificationBar.show('Warning', notificationBar.WARNING)"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
+      <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Error</h2>
       <s:code language="javascript"
               code="notificationBar.show('Error', notificationBar.ERROR)"
@@ -58,6 +60,6 @@
             code="notificationBar.hide()"
             executable="true" />
 
-    <st:adjunct includes="io.jenkins.plugins.designlibrary.Notifications.tabs" />
+    <l:js src="jsbundles/section-to-tabs.js" />
   </s:sample>
 </j:jelly>
