@@ -26,15 +26,15 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
     <s:sample title="Hetero List Sample">
-      <p class="jenkins-description">
+      <p class="jdl-paragraph">
         <!-- TODO I have no idea what heterogeneous means, should use a simpler word -->
         Show a heterogeneous list of subitems with different data bindings for radio buttons and checkboxes
       </p>
-        <p>
+        <p class="jdl-paragraph">
             <a href="configure">Configure me!</a>
         </p>
         <j:if test="${it.configFile.exists()}">
-            <p>
+            <p class="jdl-paragraph">
                 Current configuration:
             </p>
             <pre>
