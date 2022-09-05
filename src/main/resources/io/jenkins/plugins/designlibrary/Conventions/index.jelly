@@ -52,7 +52,7 @@ THE SOFTWARE.
     <p class="jdl-paragraph">An example classname following this strategy could be <code class="jdl-inline-code">.jenkins-<span class="jdl-!-bem-block-color">cards</span><span class="jdl-!-bem-element-color">__item</span><span class="jdl-!-bem-modifier-color">--large</span></code> or <code class="jdl-inline-code">.jenkins-<span class="jdl-!-bem-block-color">button</span><span class="jdl-!-bem-modifier-color">--disabled</span></code>.</p>
 
     <p class="jdl-paragraph">
-      Not every class falls neatly into BEM, for example a class that does not belong to a particular component - such as a spacing or color class. For those classes we use the <code class="jdl-inline-code">-!-</code> convention created by GOV.UK to indicate that the classes can be used on any component.
+      Not every class falls neatly into BEM, for example a class that does not belong to a particular component - such as a spacing or color class. For those classes we use the <code class="jdl-inline-code">-!-</code> convention to indicate that the classes can be used on any component.
     </p>
 
     <p class="jdl-paragraph">
