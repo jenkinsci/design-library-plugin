@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .jdl-colors-tag {
   background-image: -webkit-linear-gradient(45deg, var(--red, red), var(--orange, orange), var(--yellow, yellow), var(--green, green), var(--blue, blue), var(--violet, violet), var(--red, red));
   -webkit-background-clip: text;
@@ -68,28 +70,34 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 0.5rem;
+        gap: 0.5rem 0.25rem;
 
         .jdl-colors__item__contents__title {
-          font-size: 1rem;
-          font-weight: 600;
-          line-height: 1.5rem;
+          @include mixins.base-text;
+          font-weight: 500;
           margin: 0;
         }
 
         .jdl-colors__item__contents__description {
-          font-size: 0.95rem;
-          font-weight: 500;
+          @include mixins.base-text;
           color: var(--text-color-secondary);
           margin: 0 0 0.5rem 0;
         }
 
         .jdl-colors__item__contents__line {
+          display: flex;
+          align-items: center;
+          justify-content: start;
           font-family: var(--font-family-mono);
           font-size: 0.85rem;
           font-weight: 500;
           color: var(--text-color-secondary);
           opacity: 0.85;
+
+          .jenkins-button {
+            margin-block: -0.66rem;
+            margin-inline-start: 0.33rem;
+          }
         }
       }
     }
