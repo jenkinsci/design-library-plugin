@@ -29,7 +29,7 @@ THE SOFTWARE.
 
     <h3 class="jdl-heading">Naming</h3>
 
-    <p class="jdl-paragraph">Class names should follow <a class="jdl-link" href="https://getbem.com">Block Element Modifier (BEM) methodology</a> and be prefixed.</p>
+    <p class="jdl-paragraph">Classnames should follow <a class="jdl-link" href="https://getbem.com">Block Element Modifier (BEM) methodology</a> and be prefixed.</p>
 
     <div class="jdl-bem-table">
       <div>
