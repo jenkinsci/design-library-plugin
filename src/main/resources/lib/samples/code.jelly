@@ -23,6 +23,8 @@
             <l:icon src="symbol-play" />
           </button>
         </j:if>
+
+        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
       </div>
     </div>
   </div>
