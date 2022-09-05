@@ -62,7 +62,7 @@ THE SOFTWARE.
     <h3 class="jdl-heading">Prefixes</h3>
 
     <p class="jdl-paragraph">
-      Classes should be prefixed in a way that is unique to your service or plugin. We use prefixes due to the extensible nature of Jenkins, without prefixing we couldn't be certain a plugin class wouldn't interfere with a Jenkins class. We also use prefixing due to older libraries, such as Bootstrap, still being in use in Jenkins.
+      Classes should be prefixed in a way that is unique to your service or plugin. We use prefixes due to the extensible nature of Jenkins, without prefixing we couldn't be certain a plugin class wouldn't interfere with a Jenkins class. We also use prefixing to prevent clashes with other libraries, such as Bootstrap.
     </p>
 
     <p class="jdl-paragraph">
