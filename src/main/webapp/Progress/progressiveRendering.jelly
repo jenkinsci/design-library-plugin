@@ -16,6 +16,6 @@
     }
   }
 </script>
-<p>Factors of ${number}:</p>
+<p class="jdl-paragraph">Factors of ${number}:</p>
 <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
 <ul id="factors"/>

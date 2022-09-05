@@ -1,5 +1,5 @@
 <div>
-  <p>...</p>
+  <p class="jdl-paragraph">...</p>
   <f:bottomButtonBar>
     <div class="jenkins-buttons-row">
       <button class="jenkins-button jenkins-button--primary">

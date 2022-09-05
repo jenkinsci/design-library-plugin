@@ -10,7 +10,7 @@
       <code class="sample-remote language-html" data-sample="simple-button.html"/>
     </pre>
 
-    <p class="warning">${%warning}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%warning}</p>
   </s:sample>
 </j:jelly>
 

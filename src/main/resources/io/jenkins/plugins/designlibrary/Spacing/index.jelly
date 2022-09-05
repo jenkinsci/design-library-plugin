@@ -1,13 +1,13 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <h2>${%title}</h2>
+    <h2 class="jdl-heading">${%title}</h2>
 
-    <p class="jenkins-description">${%description.1}</p>
+    <p class="jdl-paragraph">${%description.1}</p>
 
-    <p class="jenkins-description">${%description.2}</p>
+    <p class="jdl-paragraph">${%description.2}</p>
 
-    <p class="jenkins-description">${%description.3}</p>
+    <p class="jdl-paragraph">${%description.3}</p>
 
     <h3>${%examples}</h3>
 
@@ -27,7 +27,7 @@
 
     <div class="app-component-sample">
       <div class="jdl-padding-box jdl-padding-box--5">
-        <p>jenkins-!-padding-5</p>
+        <p class="jdl-paragraph">jenkins-!-padding-5</p>
       </div>
     </div>
   </s:sample>
