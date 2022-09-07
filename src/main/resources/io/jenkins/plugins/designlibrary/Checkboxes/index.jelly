@@ -25,17 +25,17 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jenkins-description">${%checkbox.description}</p>
+    <p class="jdl-paragraph">${%checkbox.description}</p>
 
-    <p class="jenkins-description">${%checkbox.parameters}</p>
-    <ul>
+    <p class="jdl-paragraph">${%checkbox.parameters}</p>
+    <ul class="jdl-list">
       <li>id (optional) - ${%checkbox.parameters.id}</li>
       <li>default (optional) - ${%checkbox.parameters.default}</li>
       <li>field - ${%checkbox.parameters.field}</li>
       <li>title - ${%checkbox.parameters.title}</li>
     </ul>
 
-    <p class="jenkins-description">${%checkbox.additionalParameters}</p>
+    <p class="jdl-paragraph">${%checkbox.additionalParameters}</p>
 
     <div class="app-component-sample">
       <f:checkbox title="${%Example}" field="hello" />

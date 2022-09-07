@@ -8,7 +8,7 @@
       <code class="sample-remote language-xml" data-sample="default.jelly"/>
     </pre>
 
-    <p class="jenkins-description">${%toggle.usage.1}</p>
+    <p class="jdl-paragraph">${%toggle.usage.1}</p>
     <div class="app-component-sample app-component-sample--right-alignment">
       <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
     </div>
@@ -16,9 +16,9 @@
       <code class="sample-remote language-xml" data-sample="inverted.jelly"/>
     </pre>
 
-    <h2>${%dynamicLabels}</h2>
-    <p class="jenkins-description">${%dynamicLabels.usage.1}</p>
-    <p class="jenkins-description">${%dynamicLabels.usage.2}</p>
+    <h2 class="jdl-heading">${%dynamicLabels}</h2>
+    <p class="jdl-paragraph">${%dynamicLabels.usage.1}</p>
+    <p class="jdl-paragraph">${%dynamicLabels.usage.2}</p>
 
     <div class="app-component-sample">
       <f:toggleSwitch name="enable"

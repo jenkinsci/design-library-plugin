@@ -1,3 +1,5 @@
+@use "mixins";
+
 .jdl-heading {
   font-weight: 600;
   font-size: 1.2rem;
@@ -17,10 +19,8 @@
 }
 
 .jdl-paragraph {
-  font-size: 1.1rem;
-  font-weight: 500;
+  @include mixins.base-text;
   margin: 0 0 var(--jdl-spacing) 0;
-  line-height: 1.66;
 
   & + & {
     margin-top: calc((var(--jdl-spacing) / 2) * -1);
@@ -28,16 +28,16 @@
 }
 
 .jdl-list {
-  font-size: 1.1rem;
-  font-weight: 500;
+  @include mixins.base-text;
   margin: 0 0 var(--jdl-spacing) 0;
-  line-height: 1.66;
 }
 
 .jdl-important-point {
+  @include mixins.base-text;
   position: relative;
-  font-size: 1rem;
+  font-weight: 500;
   padding-left: calc(1.5rem + 1ch);
+  line-height: 1.5;
 
   &::before {
     content: "";

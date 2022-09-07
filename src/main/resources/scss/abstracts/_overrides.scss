@@ -71,6 +71,7 @@ pre {
 
 code {
   font-family: var(--font-family-mono) !important;
+  color: var(--text-color-secondary);
 }
 
 hr {
@@ -81,4 +82,8 @@ hr {
   background: currentColor;
   margin: 0 0 var(--jdl-spacing) 0;
   opacity: 0.05;
+}
+
+a {
+  font-weight: inherit;
 }

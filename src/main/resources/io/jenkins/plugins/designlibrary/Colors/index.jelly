@@ -40,11 +40,11 @@ THE SOFTWARE.
             </j:if>
             <div class="jdl-colors__item__contents__line">
               <span>var(--${item.className ?: item.variable})</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--${item.className ?: item.variable})"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--${item.className ?: item.variable})" iconOnly="true" />
             </div>
             <div class="jdl-colors__item__contents__line">
               <span>.jenkins-!-${item.variable}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-${item.variable}"/>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-${item.variable}" iconOnly="true" />
             </div>
           </div>
         </div>

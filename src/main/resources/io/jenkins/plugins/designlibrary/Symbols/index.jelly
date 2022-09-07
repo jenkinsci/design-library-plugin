@@ -16,7 +16,7 @@
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-symbols plugin-design-library" />
+        <l:icon src="symbol-star-outline plugin-ionicons-api" />
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
         <l:icon src="symbol-${icons.pop()}" />
@@ -49,7 +49,7 @@
           <td>${%dont.1}</td>
         </tr>
         <tr>
-          <td>${%do.2}<l:icon src="symbol-lock-closed" />${%do.2Continued}</td>
+          <td>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</td>
           <td>${%dont.2}</td>
         </tr>
         <tr>
@@ -64,28 +64,28 @@
     <p class="jdl-paragraph">${%usage.1}</p>
 
     <div class="jdl-component-sample">
-      <l:icon src="symbol-search" class="jdl-symbols__symbol" />
+      <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
     </div>
     <s:code language="xml" file="symbol.jelly" />
 
     <p class="jdl-paragraph">${%usage.2}</p>
     <div class="jdl-component-sample">
-      <l:icon src="symbol-jenkins" tooltip="Howdy" class="jdl-symbols__symbol" />
+      <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
     </div>
     <s:code language="xml" file="symbol-tooltip.jelly" />
 
     <p class="jdl-paragraph">${%usage.3}</p>
     <div class="jdl-component-sample">
-      <l:icon src="symbol-rss" class="jdl-symbols__symbol spin" />
+      <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
     </div>
     <s:code language="xml" file="symbol-classes.jelly" />
 
     <p class="jdl-paragraph">${%usage.4}</p>
     <div class="jdl-component-sample">
-      <l:icon src="symbol-cube" class="icon-sm" />
-      <l:icon src="symbol-cube" class="icon-md" />
-      <l:icon src="symbol-cube" class="icon-lg" />
-      <l:icon src="symbol-cube" class="icon-xlg" />
+      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
+      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
+      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
+      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
     </div>
     <s:code language="xml" file="symbol-size.jelly" />
 
@@ -93,9 +93,27 @@
       <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
          target="_blank" class="jdl-paragraph jdl-link">
         ${%View the complete list of Jenkins Symbols on GitHub}
-        <l:icon src="symbol-external plugin-design-library" />
+        <l:icon src="symbol-open-outline plugin-ionicons-api" />
       </a>
     </span>
+
+    <h2 class="jdl-heading">${%ioniconsApi}</h2>
+    <p class="jdl-paragraph">${%customSymbols.ionicons-api}</p>
+
+    <span>
+      <a href="https://plugins.jenkins.io/ionicons-api/#dependencies" target="_blank" class="jdl-paragraph jdl-link">
+        ${%Click here for a sample how to add the API to your plugin}
+        <l:icon src="symbol-open-outline plugin-ionicons-api" />
+      </a>
+    </span>
+
+    <p class="jdl-paragraph">${%customSymbols.description.2}</p>
+    <s:code language="xml" file="symbol-ionicons-reference.jelly" />
+
+    <a href="https://ionic.io/ionicons" target="_blank" class="jdl-paragraph jdl-link">
+      ${%View the complete list of all symbols provided by the ionicons-api-plugin on ionic.io/ionicons}
+      <l:icon src="symbol-open-outline plugin-ionicons-api" />
+    </a>
 
     <h2 class="jdl-heading">${%customSymbols}</h2>
     <p class="jdl-paragraph">${%customSymbols.description.1}</p>

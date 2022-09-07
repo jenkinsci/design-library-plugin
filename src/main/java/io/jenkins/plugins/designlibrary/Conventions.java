@@ -2,14 +2,11 @@ package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
 
-/**
- * @author Kohsuke Kawaguchi
- */
 @Extension
-public class Checkboxes extends UISample {
+public class Conventions extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-checkbox-outline plugin-ionicons-api";
+        return "symbol-school-outline plugin-ionicons-api";
     }
 
     @Extension
