@@ -48,17 +48,17 @@ THE SOFTWARE.
 
     <st:include page="header" optional="true" />
 
-    <l:app-bar title="${title}">
-      <button id="button-share" class="jenkins-button" tooltip="${%sharePage}">
-        <l:icon src="symbol-share-outline plugin-ionicons-api" />
-      </button>
-    </l:app-bar>
-
     <l:side-panel>
       <s:sidepanel />
     </l:side-panel>
 
     <l:main-panel>
+      <l:app-bar title="${title}">
+        <button id="button-share" class="jenkins-button" tooltip="${%sharePage}">
+          <l:icon src="symbol-share-outline plugin-ionicons-api" />
+        </button>
+      </l:app-bar>
+
       <d:invokeBody/>
 
       <div class="jdl-previous-next-controls">
