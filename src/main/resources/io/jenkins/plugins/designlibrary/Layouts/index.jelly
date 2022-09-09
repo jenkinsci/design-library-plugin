@@ -86,6 +86,25 @@
         The example above is all you need to set up a two-column page,
         it's complete with headings, sidebar items and content.
       </p>
+
+      <h3 class="jdl-heading">${%Badges}</h3>
+
+      <p class="jdl-paragraph">
+        You can include badges in your sidebar to highlight important information.
+        You should only use a badge if the information is useful to the user, for example:
+      </p>
+
+      <ul class="jdl-list">
+        <li>
+          Updates count on the 'Plugins' page
+        </li>
+        <li>
+          Passing/failed tests count
+        </li>
+        <li>
+          Unread notifications
+        </li>
+      </ul>
     </div>
 
     <div class="jenkins-tab-pane">
