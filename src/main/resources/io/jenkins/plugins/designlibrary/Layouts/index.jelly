@@ -154,7 +154,7 @@
         An example of such a page is
         <a class="jdl-link" href="https://plugins.jenkins.io/build-monitor-plugin/" target="_blank">
           Build Monitor View
-          <l:icon src="symbol-external plugin-design-library" />
+          <l:icon src="symbol-open-outline plugin-ionicons-api" />
         </a>
       </p>
 
