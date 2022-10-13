@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/jenkinsci/design-library-plugin#readme",
   "devDependencies": {
-    "autoprefixer": "10.4.8",
+    "autoprefixer": "10.4.12",
     "postcss-cli": "10.0.0",
-    "sass": "1.54.8"
+    "sass": "1.55.0"
   }
 }

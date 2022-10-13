@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .jdl-previous-next-controls {
   position: relative;
   display: flex;
@@ -18,10 +20,10 @@
 
   .jdl-previous-button,
   .jdl-next-button {
+    @include mixins.base-text;
     display: grid;
     grid-template-columns: auto auto;
     gap: 0.5rem 0.75rem;
-    font-size: 1.1rem;
 
     span {
       margin: 0;

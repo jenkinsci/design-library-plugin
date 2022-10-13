@@ -1,0 +1,39 @@
+.jdl-bem-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  margin-bottom: var(--jdl-spacing);
+  font-size: 1.1rem;
+  gap: 1rem;
+  font-weight: 500;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    dt {
+      font-weight: 550;
+    }
+
+    dd {
+      margin: 0;
+      color: var(--text-color-secondary);
+    }
+  }
+}
+
+.jdl-inline-code {
+  color: var(--text-color-secondary);
+}
+
+.jdl-\!-bem-block-color {
+  color: var(--green) !important;
+}
+
+.jdl-\!-bem-element-color {
+  color: var(--orange) !important;
+}
+
+.jdl-\!-bem-modifier-color {
+  color: var(--red) !important;
+}
