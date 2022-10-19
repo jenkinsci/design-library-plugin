@@ -6,7 +6,7 @@
   display: flex !important;
   flex-direction: column;
   width: 100%;
-  max-width: max(950px, 65vw);
+  max-width: min(1200px, 65vw);
   margin-left: auto;
   margin-right: auto;
 
@@ -81,7 +81,7 @@ hr {
   height: 2px;
   background: currentColor;
   margin: 0 0 var(--jdl-spacing) 0;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 
 a {
