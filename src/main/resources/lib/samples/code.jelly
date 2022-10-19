@@ -4,6 +4,7 @@
     <st:attribute name="code" />
     <st:attribute name="file" />
     <st:attribute name="language" />
+    <st:attribute name="previewable" />
   </st:documentation>
 
   <div class="jdl-component-code">
@@ -15,6 +16,11 @@
     <div class="jdl-component-code__controls">
       <div>
         <d:invokeBody />
+        <j:if test="${previewable == 'true'}">
+          <a href="${file.replace('.jelly', '')}" class="jenkins-button" tooltip="${%Preview in new tab}" target="_blank">
+            <l:icon src="symbol-open-outline plugin-ionicons-api" />
+          </a>
+        </j:if>
         <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
       </div>
     </div>

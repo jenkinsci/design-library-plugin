@@ -1,0 +1,171 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+  <s:sample>
+    <div class="jdl-component-sample">
+      <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
+        <div class="jdl-layout-preview__navigation" />
+        <div class="jdl-layout-preview__sidebar">
+          <div class="jdl-layout-preview__header" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+        </div>
+        <div class="jdl-layout-preview__content">
+          <div class="jdl-layout-preview__header" />
+          <div class="jdl-layout-preview__button" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+          <div class="jdl-layout-preview__line" />
+        </div>
+        <div class="jdl-layout-preview__cards">
+          <div class="jdl-layout-preview__header" />
+          <div class="jdl-layout-preview__button" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+          <div class="jdl-layout-preview__card" />
+        </div>
+      </div>
+    </div>
+
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
+
+      <p class="jdl-leading-paragraph">
+        Two column layouts are for 'hub' style pages, pages that have child pages
+        for the user to navigate to.
+      </p>
+
+      <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
+
+      <hr />
+
+      <table class="jdl-dos-donts">
+        <thead>
+          <tr>
+            <th class="jenkins-!-color-success-color">${%do}</th>
+            <th class="jenkins-!-color-error-color">${%dont}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>${%two-column.do.1}</td>
+            <td>${%two-column.dont.1}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.2}</td>
+            <td>${%two-column.dont.2}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.3}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.4}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h3 class="jdl-heading">${%Usage}</h3>
+
+      <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
+
+      <s:code file="twoColumn.jelly" language="xml" previewable="true" />
+
+      <p class="jdl-paragraph">
+        The example above is all you need to set up a two-column page,
+        it's complete with headings, sidebar items and content.
+      </p>
+
+      <h3 class="jdl-heading">${%Badges}</h3>
+
+      <p class="jdl-paragraph">
+        You can include badges in your sidebar to highlight important information.
+        You should only use a badge if the information is useful to the user, for example:
+      </p>
+
+      <ul class="jdl-list">
+        <li>
+          Updates count on the 'Plugins' page
+        </li>
+        <li>
+          Passing/failed tests count
+        </li>
+        <li>
+          Unread notifications
+        </li>
+      </ul>
+    </div>
+
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">${%One column}</h2>
+
+      <p class="jdl-leading-paragraph">
+        One column layouts are for pages that don't need navigation; they're ideal for standalone pages
+        that don't have child navigation.
+      </p>
+
+      <hr />
+
+      <table class="jdl-dos-donts">
+        <thead>
+          <tr>
+            <th class="jenkins-!-color-success-color">${%do}</th>
+            <th class="jenkins-!-color-success-color">${%dont}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>${%one-column.do.1}</td>
+            <td>${%one-column.dont.1}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h3 class="jdl-heading">${%Usage}</h3>
+
+      <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
+
+      <s:code file="oneColumn.jelly" language="xml" previewable="true" />
+    </div>
+
+    <div class="jenkins-tab-pane">
+      <h2 class="jenkins-tab-pane__title">${%Fullscreen}</h2>
+
+      <p class="jdl-leading-paragraph">
+        Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
+
+        Such layouts aren't intended for the average page and should only be used if your page needs it.
+      </p>
+
+      <p class="jdl-paragraph">
+        An example of such a page is
+        <a class="jdl-link" href="https://plugins.jenkins.io/build-monitor-plugin/" target="_blank">
+          Build Monitor View
+          <l:icon src="symbol-open-outline plugin-ionicons-api" />
+        </a>
+      </p>
+
+      <h3 class="jdl-heading">${%Usage}</h3>
+
+      <p class="jdl-paragraph">Set the type attribute to 'full-screen' to use this layout:</p>
+
+      <s:code file="fullscreen.jelly" language="xml" previewable="true" />
+    </div>
+
+    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.Layouts.layout-preview" />
+  </s:sample>
+</j:jelly>

@@ -1,0 +1,11 @@
+<l:layout title="Heading" type="one-column">
+  <l:main-panel>
+    <l:app-bar title="Heading">
+      <button class="jenkins-button">
+        <l:icon src="symbol-add" />
+      </button>
+    </l:app-bar>
+
+    <p class="jenkins-leading-paragraph">This is some content</p>
+  </l:main-panel>
+</l:layout>

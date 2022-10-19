@@ -1,0 +1,14 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
+  <l:layout title="Heading" type="full-screen">
+    <l:main-panel>
+      <l:app-bar title="Heading">
+        <button class="jenkins-button">
+          <l:icon src="symbol-add" />
+        </button>
+      </l:app-bar>
+
+      <p class="jenkins-leading-paragraph">This is some content</p>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>

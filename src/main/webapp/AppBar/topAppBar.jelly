@@ -1,12 +1,12 @@
-<l:app-bar title="Page title">
-  <button class="jenkins-button jenkins-button--primary">
-    <l:icon src="symbol-add" />
-    Primary control
-  </button>
-  <button class="jenkins-button">Secondary</button>
-  <button class="jenkins-button">Secondary</button>
-  <t:help href="https://www.jenkins.io" />
-</l:app-bar>
 <l:main-panel>
+  <l:app-bar title="Page title">
+    <button class="jenkins-button jenkins-button--primary">
+      <l:icon src="symbol-add" />
+      Primary control
+    </button>
+    <button class="jenkins-button">Secondary</button>
+    <button class="jenkins-button">Secondary</button>
+    <t:help href="https://www.jenkins.io" />
+  </l:app-bar>
   ...
 </l:main-panel>
