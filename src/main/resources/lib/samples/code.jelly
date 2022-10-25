@@ -4,6 +4,7 @@
     <st:attribute name="code" />
     <st:attribute name="file" />
     <st:attribute name="language" />
+    <st:attribute name="executable" />
     <st:attribute name="previewable" />
   </st:documentation>
 
@@ -16,6 +17,13 @@
     <div class="jdl-component-code__controls">
       <div>
         <d:invokeBody />
+
+        <j:if test="${executable != null}">
+          <!-- This only works if the 'code' attribute is set -->
+          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
+            <l:icon src="symbol-play" />
+          </button>
+        </j:if>
         <j:if test="${previewable == 'true'}">
           <a href="${file.replace('.jelly', '')}" class="jenkins-button" tooltip="${%Preview in new tab}" target="_blank">
             <l:icon src="symbol-open-outline plugin-ionicons-api" />
