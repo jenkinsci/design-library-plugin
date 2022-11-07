@@ -29,7 +29,7 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.49</version>
+        <version>4.50-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -46,7 +46,9 @@ THE SOFTWARE.
         <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
         <jenkins.version>2.375</jenkins.version>
         <node.version>18.12.0</node.version>
-        <npm.version>9.1.0</npm.version>
+        <npm.version>9.0.1</npm.version>
+        <frontend-version>1.12.1</frontend-version>
+        <yarn.version>1.22.19</yarn.version>
     </properties>
 
     <licenses>
