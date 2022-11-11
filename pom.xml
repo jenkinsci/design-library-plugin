@@ -67,12 +67,23 @@ THE SOFTWARE.
             <url>https://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jenkins.tools.bom</groupId>
+                <artifactId>bom-weekly</artifactId>
+                <version>1678.vc1feb_6a_3c0f1</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>ionicons-api</artifactId>
-            <version>31.v4757b_6987003</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
