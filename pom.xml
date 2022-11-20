@@ -29,7 +29,7 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.40</version>
+        <version>4.48</version>
         <relativePath />
     </parent>
 
@@ -44,9 +44,9 @@ THE SOFTWARE.
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
-        <jenkins.version>2.341</jenkins.version>
-        <node.version>16.14.2</node.version>
-        <npm.version>8.6.0</npm.version>
+        <jenkins.version>2.375</jenkins.version>
+        <node.version>18.12.0</node.version>
+        <npm.version>9.0.1</npm.version>
     </properties>
 
     <licenses>
@@ -70,9 +70,14 @@ THE SOFTWARE.
 
     <dependencies>
         <dependency>
+            <groupId>io.jenkins.plugins</groupId>
+            <artifactId>ionicons-api</artifactId>
+            <version>31.v4757b_6987003</version>
+        </dependency>
+        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.22.0</version>
+            <version>3.23.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

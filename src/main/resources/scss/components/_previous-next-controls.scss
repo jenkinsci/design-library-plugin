@@ -1,0 +1,69 @@
+@use "../abstracts/mixins";
+
+.jdl-previous-next-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--section-padding);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.05;
+    border-radius: 2px;
+  }
+
+  .jdl-previous-button,
+  .jdl-next-button {
+    @include mixins.base-text;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem 0.75rem;
+
+    span {
+      margin: 0;
+      padding: 0;
+
+      &:last-of-type {
+        opacity: 0.5;
+        margin-top: -0.3rem;
+      }
+    }
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      transition: transform var(--elastic-transition);
+    }
+  }
+
+  .jdl-previous-button {
+    justify-items: flex-start;
+
+    span:last-of-type {
+      grid-column: 2;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(-2px);
+      }
+    }
+  }
+
+  .jdl-next-button {
+    justify-items: flex-end;
+    margin-left: auto;
+
+    &:hover {
+      svg {
+        transform: translateX(2px);
+      }
+    }
+  }
+}

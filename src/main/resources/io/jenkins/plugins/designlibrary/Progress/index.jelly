@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jenkins-description">${%title}</p>
+    <p class="jdl-paragraph">${%title}</p>
     <div class="app-component-sample">
       <l:spinner />
     </div>
@@ -23,8 +23,8 @@
       <code class="sample-remote language-xml" data-sample="progressAnimation.jelly"/>
     </pre>
 
-    <h2>${%progressiveRendering}</h2>
-    <p>${%progressiveRendering.description}</p>
+    <h2 class="jdl-heading">${%progressiveRendering}</h2>
+    <p class="jdl-paragraph">${%progressiveRendering.description}</p>
     <j:set var="number" value="${request.getParameter('number')}"/>
     <form method="POST" action=".">
       <f:entry title="Enter a big number">
@@ -44,9 +44,9 @@
           }
         }
       </script>
-      <p>Factors of ${number}:</p>
+      <p class="jdl-paragraph">Factors of ${number}:</p>
       <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
-      <ul id="factors"/>
+      <ul class="jdl-list" id="factors"/>
     </j:if>
 
     <pre class="jenkins-!-margin-top-3">

@@ -24,15 +24,15 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="JavaScript Proxy">
-    <p class="jenkins-description">${%description.1}</p>
+    <p class="jdl-paragraph">${%description.1}</p>
 
-    <p>${%description.2}</p>
+    <p class="jdl-paragraph">${%description.2}</p>
 
     <pre>
       <code class="sample-remote language-java" data-sample="Foo.java"/>
     </pre>
 
-    <p>${%description.3}</p>
+    <p class="jdl-paragraph">${%description.3}</p>
 
     <pre>
       <code class="sample-remote language-xml" data-sample="sample.jelly"/>
@@ -49,22 +49,22 @@ THE SOFTWARE.
       },1000);
     </script>
 
-    <h2>${%invokingMethod}</h2>
-    <p>${%invokingMethod.description.1}</p>
+    <h2 class="jdl-heading">${%invokingMethod}</h2>
+    <p class="jdl-paragraph">${%invokingMethod.description.1}</p>
 
-    <p>${%invokingMethod.description.2}</p>
+    <p class="jdl-paragraph">${%invokingMethod.description.2}</p>
 
-    <p>${%invokingMethod.description.3}</p>
+    <p class="jdl-paragraph">${%invokingMethod.description.3}</p>
 
-    <h2>${%tips}</h2>
+    <h2 class="jdl-heading">${%tips}</h2>
 
     <h3>${%tips.description.1}</h3>
-    <p>${%tips.description.1.body}</p>
+    <p class="jdl-paragraph">${%tips.description.1.body}</p>
 
-    <p>${%tips.description.1.more}</p>
+    <p class="jdl-paragraph">${%tips.description.1.more}</p>
 
     <h3>${%tips.description.2}</h3>
 
-    <p>${%tips.description.2.body}</p>
+    <p class="jdl-paragraph">${%tips.description.2.body}</p>
   </s:sample>
 </j:jelly>

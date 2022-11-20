@@ -1,0 +1,34 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
+  <s:sample>
+    <div class="app-component-sample">
+      <f:toggleSwitch name="enabled" title="Hello world" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="default.jelly"/>
+    </pre>
+
+    <p class="jdl-paragraph">${%toggle.usage.1}</p>
+    <div class="app-component-sample app-component-sample--right-alignment">
+      <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="inverted.jelly"/>
+    </pre>
+
+    <h2 class="jdl-heading">${%dynamicLabels}</h2>
+    <p class="jdl-paragraph">${%dynamicLabels.usage.1}</p>
+    <p class="jdl-paragraph">${%dynamicLabels.usage.2}</p>
+
+    <div class="app-component-sample">
+      <f:toggleSwitch name="enable"
+                      title="${%Disabled}"
+                      checkedTitle="${%Enabled}"
+                      checked="true"
+                      tooltip="${%Enable or disable the current project}" />
+    </div>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="dynamic.jelly"/>
+    </pre>
+  </s:sample>
+</j:jelly>

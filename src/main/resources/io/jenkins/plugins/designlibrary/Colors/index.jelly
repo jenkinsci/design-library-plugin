@@ -23,21 +23,53 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
-    <ol class="app-colors">
-      <j:forEach var="color" items="${it.colors}">
-        <li style="background-color: var(--${color}, grey);">
-          <p>var(--${color})</p>
-        </li>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:d="jelly:define">
+  <d:taglib uri="local">
+    <d:tag name="item">
+      <li>
+        <div class="jdl-colors__item">
+          <div class="jdl-colors__item__icon" style="background-color: var(--${item.className ?: item.variable}, grey);">
+            <j:if test="${item.symbol != null}">
+              <l:icon src="symbol-${item.symbol}" />
+            </j:if>
+          </div>
+          <div class="jdl-colors__item__contents">
+            <p class="jdl-colors__item__contents__title">${item.name}</p>
+            <j:if test="${item.description != null}">
+              <p class="jdl-colors__item__contents__description">${item.description}</p>
+            </j:if>
+            <div class="jdl-colors__item__contents__line">
+              <span>var(--${item.className ?: item.variable})</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--${item.className ?: item.variable})" iconOnly="true" />
+            </div>
+            <div class="jdl-colors__item__contents__line">
+              <span>.jenkins-!-${item.variable}</span>
+              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-${item.variable}" iconOnly="true" />
+            </div>
+          </div>
+        </div>
+      </li>
+    </d:tag>
+  </d:taglib>
+
+  <s:sample xmlns:local="local">
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-first}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-second}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-third}</p>
+    <p class="jdl-leading-paragraph jdl-important-point">${%tip-fourth}</p>
+
+    <h2 class="jdl-heading">${%Semantics}</h2>
+    <ol class="jdl-colors">
+      <j:forEach var="item" items="${it.semantics}">
+        <local:item item="${item}" />
       </j:forEach>
     </ol>
 
-    <h2>${%tips}</h2>
-    <ul>
-      <li>${%tip-first}</li>
-      <li>${%tip-second}</li>
-      <li>${%tip-third}</li>
-    </ul>
+    <h2 class="jdl-heading">${%Palette}</h2>
+    <ol class="jdl-colors">
+      <j:forEach var="item" items="${it.colors}">
+        <local:item item="${item}" />
+      </j:forEach>
+    </ol>
   </s:sample>
 </j:jelly>
