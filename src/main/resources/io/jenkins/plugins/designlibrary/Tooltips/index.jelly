@@ -1,28 +1,24 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <div class="app-component-sample">
+    <div class="jdl-component-sample">
       <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
         Hover over me
       </button>
     </div>
-    <pre>
-      <code class="sample-remote language-html" data-sample="simple-button.html"/>
-    </pre>
+    <s:code language="xml" file="tooltip.jelly" />
 
-    <h2 class="jdl-heading">${%Custom content}</h2>
+    <h2 class="jdl-heading">${%HTML and interactive content}</h2>
     <j:set var="tooltip">
       <img src="${imagesURL}/svgs/logo.svg" />
     </j:set>
-    <div class="app-component-sample">
-      <button data-html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
+    <div class="jdl-component-sample">
+      <button data-html-tooltip="${tooltip}" data-tooltip-interactive="true" class="jenkins-button jenkins-button--primary">
         Hover over me
       </button>
     </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="html-tooltip.jelly"/>
-    </pre>
-    <p class="warning">${%warning}</p>
+    <s:code language="xml" file="html-tooltip.jelly" />
+    <p class="jdl-leading-paragraph jdl-important-point">${%warning}</p>
   </s:sample>
 </j:jelly>
 
