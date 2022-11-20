@@ -1,0 +1,4 @@
+<j:set var="tooltip">
+  <img src="${imagesURL}/svgs/logo.svg" />
+</j:set>
+<l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />

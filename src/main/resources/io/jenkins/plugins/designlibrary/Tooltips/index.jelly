@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <div class="jdl-component-sample">
       <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
@@ -18,6 +18,11 @@
       </button>
     </div>
     <s:code language="xml" file="html-tooltip.jelly" />
+    <p class="jdl-paragraph">${%symbols-description}</p>
+    <div class="jdl-component-sample">
+      <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
+    </div>
+    <s:code language="xml" file="symbol-tooltip.jelly" />
     <p class="jdl-leading-paragraph jdl-important-point">${%warning}</p>
   </s:sample>
 </j:jelly>
