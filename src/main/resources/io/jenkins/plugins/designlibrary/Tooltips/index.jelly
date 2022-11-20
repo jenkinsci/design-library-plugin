@@ -15,7 +15,7 @@
       <img src="${imagesURL}/svgs/logo.svg" />
     </j:set>
     <div class="app-component-sample">
-      <button html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
+      <button data-html-tooltip="${tooltip}" class="jenkins-button jenkins-button--primary">
         Hover over me
       </button>
     </div>
