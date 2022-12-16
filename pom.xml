@@ -29,7 +29,7 @@ THE SOFTWARE.
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.48</version>
+        <version>4.53</version>
         <relativePath />
     </parent>
 
@@ -45,8 +45,8 @@ THE SOFTWARE.
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
         <jenkins.version>2.375</jenkins.version>
-        <node.version>18.12.0</node.version>
-        <npm.version>9.0.1</npm.version>
+        <node.version>18.12.1</node.version>
+        <npm.version>9.2.0</npm.version>
     </properties>
 
     <licenses>
@@ -67,12 +67,23 @@ THE SOFTWARE.
             <url>https://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jenkins.tools.bom</groupId>
+                <artifactId>bom-weekly</artifactId>
+                <version>1750.v0071fa_4c4a_e3</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>ionicons-api</artifactId>
-            <version>31.v4757b_6987003</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
