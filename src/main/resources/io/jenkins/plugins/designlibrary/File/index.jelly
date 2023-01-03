@@ -28,9 +28,6 @@ THE SOFTWARE.
     <p class="jdl-paragraph">${%description}</p>
     <p class="jdl-paragraph">${%parameters}</p>
     <ul class="jdl-list">
-      <li>id (optional) - ${%parameters.id}</li>
-      <li>accept (optional) - ${%parameters.accept}</li>
-      <li>jsonAware (optional) - ${%parameters.jsonAware}</li>
       <li>field - ${%parameters.field}</li>
     </ul>
 
