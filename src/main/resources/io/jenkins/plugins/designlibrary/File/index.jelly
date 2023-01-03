@@ -29,7 +29,9 @@ THE SOFTWARE.
     <p class="jdl-paragraph">${%parameters}</p>
     <ul class="jdl-list">
       <li>field - ${%parameters.field}</li>
+      <li>clazz - ${%parameters.clazz}</li>
     </ul>
+
 
     <div class="app-component-sample">
       <f:file field="hello" />
@@ -39,7 +41,14 @@ THE SOFTWARE.
       <code class="sample-remote language-xml" data-sample="file.jelly" />
     </pre>
 
+    <p class="jdl-paragraph">${%parameters.additional}</p>
 
+    <div class="app-component-sample">
+      <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
+    </div>
 
+    <pre>
+      <code class="sample-remote language-xml" data-sample="file-accept.jelly" />
+    </pre>
   </s:sample>
 </j:jelly>
