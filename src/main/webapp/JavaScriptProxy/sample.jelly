@@ -5,10 +5,6 @@
   <st:bind var="a" value="${it}"/>
 
   <div id="msg" />
-  <script>
-    a.increment(1, function(t) {
-      document.getElementById('msg').innerHTML = t.responseObject();
-    })
-  </script>
+  <st:adjunct includes="io.jenkins.plugins.<your-plugin>.<your-path>"/>
   ...
 </j:jelly>

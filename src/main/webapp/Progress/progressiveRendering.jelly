@@ -7,15 +7,7 @@
   </button>
 </form>
 <j:if test="${number != null}">
-<script>
-  function display(r) {
-    for (var i = 0; r.newfactors.length > i; i++) {
-      var li = document.createElement("li");
-      li.appendChild(document.createTextNode(r.newfactors[i]));
-      $(factors).appendChild(li);
-    }
-  }
-</script>
+<st:adjunct includes="io.jenkins.plugins.<your-plugin>.<your-path>"/>
 <p>Factors of ${number}:</p>
 <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
 <ul id="factors"/>
