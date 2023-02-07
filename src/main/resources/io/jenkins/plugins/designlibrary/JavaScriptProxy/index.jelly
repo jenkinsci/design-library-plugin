@@ -41,13 +41,7 @@ THE SOFTWARE.
     <st:bind var="a" value="${it}"/>
 
     <div id="msg" style="color: var(--red); font-size: 5rem;" />
-    <script>
-      window.setInterval(function () {
-        a.increment(1, function(t) {
-          document.getElementById('msg').innerHTML = t.responseObject();
-        })
-      },1000);
-    </script>
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.JavaScriptProxy.counter"/>
 
     <h2 class="jdl-heading">${%invokingMethod}</h2>
     <p class="jdl-paragraph">${%invokingMethod.description.1}</p>

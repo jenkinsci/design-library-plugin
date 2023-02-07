@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form" xmlns:st="jelly:stapler">
   <s:sample>
     <p class="jdl-paragraph">${%title}</p>
     <div class="app-component-sample">
@@ -35,15 +35,7 @@
       </button>
     </form>
     <j:if test="${number != null}">
-      <script>
-        function display(r) {
-          for (var i = 0; r.newfactors.length > i; i++) {
-            var li = document.createElement("li");
-            li.appendChild(document.createTextNode(r.newfactors[i]));
-            $(factors).appendChild(li);
-          }
-        }
-      </script>
+      <st:adjunct includes="io.jenkins.plugins.designlibrary.Progress.progressive-rendering"/>
       <p class="jdl-paragraph">Factors of ${number}:</p>
       <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
       <ul class="jdl-list" id="factors"/>
