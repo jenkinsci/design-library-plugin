@@ -38,6 +38,12 @@ THE SOFTWARE.
       <code class="sample-remote language-xml" data-sample="sample.jelly"/>
     </pre>
 
+    <p class="jdl-paragraph">${%description.4}</p>
+
+    <pre>
+      <code class="sample-remote language-xml" data-sample="sample-adjunct.js"/>
+    </pre>
+
     <st:bind var="a" value="${it}"/>
 
     <div id="msg" style="color: var(--red); font-size: 5rem;" />

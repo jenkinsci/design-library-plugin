@@ -44,6 +44,10 @@
     <pre class="jenkins-!-margin-top-3">
       <code class="sample-remote language-xml" data-sample="progressiveRendering.jelly"/>
     </pre>
+    <p class="jdl-paragraph">${%description.adjuncts}</p>
+    <pre>
+      <code class="sample-remote language-xml" data-sample="display.js"/>
+    </pre>
   </s:sample>
 </j:jelly>
 
