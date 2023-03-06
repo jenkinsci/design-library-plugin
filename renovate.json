@@ -36,5 +36,5 @@
     "dependencies"
   ],
   "rebaseWhen": "conflicted",
-  "schedule": ["on the first day of the week"]
+  "schedule": ["every Monday"]
 }
