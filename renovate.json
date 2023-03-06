@@ -35,5 +35,6 @@
   "labels": [
     "dependencies"
   ],
-  "rebaseWhen": "conflicted"
+  "rebaseWhen": "conflicted",
+  "schedule": ["every Monday"]
 }
