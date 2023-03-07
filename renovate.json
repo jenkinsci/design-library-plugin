@@ -36,5 +36,5 @@
   "labels": [
     "dependencies"
   ],
-  "rebaseWhen": "conflicted",
+  "rebaseWhen": "conflicted"
 }
