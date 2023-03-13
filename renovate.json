@@ -8,6 +8,7 @@
   "reviewers": [
     "team:sig-ux"
   ],
+  "automerge": true,
   "packageRules": [
     {
       "matchDatasources": ["npm"],
