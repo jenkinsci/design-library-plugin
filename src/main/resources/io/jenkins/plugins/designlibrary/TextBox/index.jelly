@@ -50,11 +50,13 @@
 
     <p class="jdl-paragraph">${%combobox.description}</p>
 
-    <div class="app-component-sample">
-      <f:entry title="U.S. State" field="state">
-        <f:combobox />
-      </f:entry>
-    </div>
+    <form>
+      <div class="app-component-sample">
+        <f:entry title="U.S. State" field="state">
+          <f:combobox />
+        </f:entry>
+      </div>
+    </form>
 
     <code>config.jelly:</code>
     <pre>
@@ -69,12 +71,14 @@
     <h3>${%dynamicCombobox}</h3>
     <p class="jdl-paragraph">${%dynamicCombobox.description}</p>
 
-    <f:entry title="Beatles Album" field="album">
-      <f:select />
-    </f:entry>
-    <f:entry title="Title" field="title">
-      <f:combobox />
-    </f:entry>
+    <form>
+      <f:entry title="Beatles Album" field="album">
+        <f:select />
+      </f:entry>
+      <f:entry title="Title" field="title">
+        <f:combobox />
+      </f:entry>
+    </form>
 
     <code>config.jelly:</code>
     <pre>
