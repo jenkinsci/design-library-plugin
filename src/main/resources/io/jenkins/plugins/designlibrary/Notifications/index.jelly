@@ -60,6 +60,6 @@
             code="notificationBar.hide()"
             executable="true" />
 
-    <l:js src="jsbundles/section-to-tabs.js" />
+    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
   </s:sample>
 </j:jelly>
