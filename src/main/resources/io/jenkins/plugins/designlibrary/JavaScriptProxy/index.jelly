@@ -28,21 +28,15 @@ THE SOFTWARE.
 
     <p class="jdl-paragraph">${%description.2}</p>
 
-    <pre>
-      <code class="sample-remote language-java" data-sample="Foo.java"/>
-    </pre>
+    <s:code language="java" file="Foo.java" />
 
     <p class="jdl-paragraph">${%description.3}</p>
 
-    <pre>
-      <code class="sample-remote language-xml" data-sample="sample.jelly"/>
-    </pre>
+    <s:code language="xml" file="sample.jelly" />
 
     <p class="jdl-paragraph">${%description.4}</p>
 
-    <pre>
-      <code class="sample-remote language-xml" data-sample="sample-adjunct.js"/>
-    </pre>
+    <s:code language="java" file="sample-adjunct.js" />
 
     <st:bind var="a" value="${it}"/>
 

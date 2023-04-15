@@ -63,31 +63,39 @@
     <h2 class="jdl-heading">${%usage.title}</h2>
     <p class="jdl-paragraph">${%usage.1}</p>
 
-    <div class="jdl-component-sample">
-      <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
+      </div>
+      <s:code language="xml" file="symbol.jelly" />
     </div>
-    <s:code language="xml" file="symbol.jelly" />
 
     <p class="jdl-paragraph">${%usage.2}</p>
-    <div class="jdl-component-sample">
-      <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
+      </div>
+      <s:code language="xml" file="symbol-tooltip.jelly" />
     </div>
-    <s:code language="xml" file="symbol-tooltip.jelly" />
 
     <p class="jdl-paragraph">${%usage.3}</p>
-    <div class="jdl-component-sample">
-      <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
+      </div>
+      <s:code language="xml" file="symbol-classes.jelly" />
     </div>
-    <s:code language="xml" file="symbol-classes.jelly" />
 
     <p class="jdl-paragraph">${%usage.4}</p>
-    <div class="jdl-component-sample">
-      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
-      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
-      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
-      <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
+        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
+        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
+        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
+      </div>
+      <s:code language="xml" file="symbol-size.jelly" />
     </div>
-    <s:code language="xml" file="symbol-size.jelly" />
 
     <span>
       <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"

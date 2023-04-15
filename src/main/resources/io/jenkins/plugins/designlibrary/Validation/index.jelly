@@ -10,12 +10,9 @@
     </form>
 
     <p class="jdl-paragraph">${%validation.description}</p>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="sample.jelly"/>
-    </pre>
-    <pre>
-      <code class="sample-remote language-java" data-sample="Sample.java"/>
-    </pre>
+    <s:code language="xml" file="sample.jelly" />
+
+    <s:code language="java" file="Sample.java" />
 
   </s:sample>
 </j:jelly>

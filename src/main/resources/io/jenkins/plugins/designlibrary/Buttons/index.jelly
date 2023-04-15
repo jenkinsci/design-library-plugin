@@ -29,50 +29,62 @@ THE SOFTWARE.
 
     <p class="jdl-paragraph">${%description.2}</p>
 
-    <div class="jdl-component-sample">
-      <button class="jenkins-button">Default</button>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <button class="jenkins-button">Default</button>
+      </div>
+      <s:code language="xml" file="default.jelly" />
     </div>
-    <s:code language="xml" file="default.jelly" />
 
-    <div class="jdl-component-sample">
-      <button class="jenkins-button jenkins-button--primary">Primary</button>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <button class="jenkins-button jenkins-button--primary">Primary</button>
+      </div>
+      <s:code language="xml" file="primary.jelly" />
     </div>
-    <s:code language="xml" file="primary.jelly" />
 
     <p class="jdl-paragraph">
       You can pair buttons with <a href="../Colors">color modifier classes</a>, like so:
     </p>
 
-    <div class="jdl-component-sample">
-      <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
+      </div>
+      <s:code language="xml" file="destructive.jelly" />
     </div>
-    <s:code language="xml" file="destructive.jelly" />
 
     <p class="jdl-paragraph">
       Tertiary buttons should be used for buttons which have minimal interaction or for those where
       a background creates too much visual clutter:
     </p>
 
-    <div class="jdl-component-sample">
-      <button class="jenkins-button jenkins-button--tertiary">Tertiary</button>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <button class="jenkins-button jenkins-button--tertiary">Tertiary</button>
+      </div>
+      <s:code language="xml" file="tertiary.jelly" />
     </div>
-    <s:code language="xml" file="tertiary.jelly" />
 
     <p class="jdl-paragraph">
       Buttons can include symbols and they'll be automatically sized to fit correctly:
     </p>
 
-    <div class="jdl-component-sample">
-      <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> ${%symbol}</button>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> ${%symbol}</button>
+      </div>
+      <s:code language="xml" file="symbolButton.jelly" />
     </div>
-    <s:code language="xml" file="symbolButton.jelly" />
 
     <h2 class="jdl-heading">${%copy}</h2>
     <p class="jdl-paragraph">${%copy.description}</p>
-    <div class="jdl-component-sample">
-      <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
+      </div>
+      <s:code language="xml" file="copyButton.jelly" />
     </div>
-    <s:code language="xml" file="copyButton.jelly" />
 
     <p class="jdl-paragraph">${%copy.parameters}</p>
     <ul class="jdl-list">
@@ -81,10 +93,12 @@ THE SOFTWARE.
     </ul>
 
     <h2 class="jdl-heading">${%help}</h2>
-    <div class="jdl-component-sample">
-      <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
+      </div>
+      <s:code language="xml" file="helpButton.jelly" />
     </div>
-    <s:code language="xml" file="helpButton.jelly" />
 
     <p class="jdl-paragraph">${%help.parameters}</p>
     <ul class="jdl-list">

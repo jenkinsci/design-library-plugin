@@ -11,7 +11,7 @@
 
     <h3>${%examples}</h3>
 
-    <div class="app-component-sample">
+    <div class="jdl-component-sample">
       <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-5</p>
       <div class="jdl-spacing-box jdl-spacing-box--5" />
       <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-4</p>
@@ -25,7 +25,7 @@
       <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-0</p>
     </div>
 
-    <div class="app-component-sample">
+    <div class="jdl-component-sample">
       <div class="jdl-padding-box jdl-padding-box--5">
         <p class="jdl-paragraph">jenkins-!-padding-5</p>
       </div>

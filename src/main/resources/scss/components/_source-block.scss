@@ -1,12 +1,3 @@
-// Deprecated - use <s:code ... /> instead
-.app-code {
-  word-wrap: break-word;
-  padding: calc(var(--jdl-spacing) / 2);
-  border-radius: 10px;
-  background: rgba(100, 100, 100, 0.05);
-  margin-bottom: var(--jdl-spacing);
-}
-
 $jdl-component-code-controls-spacing: 0.75rem;
 
 .jdl-component-code {
@@ -16,16 +7,16 @@ $jdl-component-code-controls-spacing: 0.75rem;
   grid-template-columns: 1fr auto;
   margin-bottom: var(--jdl-spacing);
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 0.66rem;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: currentColor;
+    background: var(--button-background);
     z-index: -1;
-    opacity: 0.05;
+    opacity: 0.75;
   }
 
   &__code {
@@ -53,6 +44,17 @@ $jdl-component-code-controls-spacing: 0.75rem;
       right: $jdl-component-code-controls-spacing;
       display: flex;
       gap: $jdl-component-code-controls-spacing;
+    }
+  }
+
+  &:not(:hover) {
+    .jenkins-button {
+      transition: var(--standard-transition);
+      opacity: 0.5;
+
+      &::before {
+        opacity: 0;
+      }
     }
   }
 }
