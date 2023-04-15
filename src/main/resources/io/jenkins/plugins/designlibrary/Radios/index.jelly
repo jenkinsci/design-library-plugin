@@ -41,12 +41,13 @@ THE SOFTWARE.
 
     <h2 class="jdl-heading">Boolean radio</h2>
 
-    <div class="jdl-component-sample jdl-component-sample--gridless">
-      <div>
-        <f:booleanRadio field="myField" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample jdl-component-sample--gridless">
+        <div>
+          <f:booleanRadio field="myField" />
+        </div>
       </div>
+      <s:code language="xml" file="booleanRadio.jelly" />
     </div>
-
-    <s:code language="xml" file="booleanRadio.jelly" />
   </s:sample>
 </j:jelly>
