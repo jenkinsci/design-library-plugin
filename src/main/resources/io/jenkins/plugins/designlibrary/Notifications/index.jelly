@@ -27,28 +27,28 @@
     <div class="jenkins-tab-pane">
       <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Default</h2>
-      <s:code language="javascript"
+      <s:code language="java"
               code="notificationBar.show('Default')"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
       <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Success</h2>
-      <s:code language="javascript"
+      <s:code language="java"
               code="notificationBar.show('Success', notificationBar.SUCCESS)"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
       <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Warning</h2>
-      <s:code language="javascript"
+      <s:code language="java"
               code="notificationBar.show('Warning', notificationBar.WARNING)"
               executable="true" />
     </div>
     <div class="jenkins-tab-pane">
       <p class="jdl-paragraph">${%usage.1}</p>
       <h2 class="jenkins-tab-pane__title">Error</h2>
-      <s:code language="javascript"
+      <s:code language="java"
               code="notificationBar.show('Error', notificationBar.ERROR)"
               executable="true" />
     </div>
@@ -56,7 +56,7 @@
     <hr />
 
     <p class="jdl-paragraph">${%usage.2}</p>
-    <s:code language="javascript"
+    <s:code language="java"
             code="notificationBar.hide()"
             executable="true" />
 

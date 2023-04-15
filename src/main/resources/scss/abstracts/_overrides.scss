@@ -10,8 +10,12 @@
   margin-left: auto;
   margin-right: auto;
 
+  .tabBar {
+    align-self: start;
+  }
+
   @media (max-width: 970px) {
-   max-width: none;
+    max-width: none;
   }
 }
 

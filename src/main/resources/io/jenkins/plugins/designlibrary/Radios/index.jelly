@@ -23,26 +23,31 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <div class="app-component-sample">
-      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm"/>
+    <h2 class="jdl-heading">Descriptor radio list</h2>
+
+    <div class="jdl-component-sample jdl-component-sample--gridless jenkins-!-padding-bottom-0">
+      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
     </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="index.jelly"/>
-    </pre>
-    <pre>
-      <code class="sample-remote language-java" data-sample="Sample.java"/>
-    </pre>
+
+    <l:tabPane title="index.jelly">
+      <s:code language="xml" file="index.jelly" />
+    </l:tabPane>
+    <l:tabPane title="Sample.java">
+      <s:code language="java" file="Sample.java" />
+    </l:tabPane>
+    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
 
     <h2 class="jdl-heading">Boolean radio</h2>
 
-    <div class="app-component-sample">
-      <f:booleanRadio field="myField" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample jdl-component-sample--gridless">
+        <div>
+          <f:booleanRadio field="myField" />
+        </div>
+      </div>
+      <s:code language="xml" file="booleanRadio.jelly" />
     </div>
-
-    <pre>
-      <code class="sample-remote language-xml" data-sample="booleanRadio.jelly"/>
-    </pre>
   </s:sample>
 </j:jelly>

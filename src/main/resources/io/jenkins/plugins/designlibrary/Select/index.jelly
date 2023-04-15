@@ -28,11 +28,7 @@ THE SOFTWARE.
 
     <p class="jdl-paragraph">${%usage.1}</p>
     <form action="submit" method="post">
-
-      <pre>
-        <!-- we use remote here as otherwise the it.descriptors will be interpreted in the output -->
-        <code class="sample-remote language-xml" data-sample="sample.jelly" />
-      </pre>
+      <s:code language="xml" file="sample.jelly" />
       <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
 
       <f:submit value="Save"/>
@@ -44,10 +40,10 @@ THE SOFTWARE.
     </f:entry>
 
     config.jelly:
-    <pre><code class="sample-remote language-xml" data-sample="sample2.jelly" /></pre>
+    <s:code language="xml" file="sample2.jelly" />
 
     Java source code:
-    <pre><code class="sample-remote language-java" data-sample="Sample.java" /></pre>
+    <s:code language="java" file="Sample.java" />
 
     <h2 class="jdl-heading">${%dynamic}</h2>
 
@@ -66,14 +62,9 @@ THE SOFTWARE.
     </form>
 
     <code>config.jelly:</code>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="dynamic-sample.jelly" />
-    </pre>
+    <s:code language="xml" file="dynamic-sample.jelly" />
+
     <code>Sample.java:</code>
-
-    <pre>
-      <code class="sample-remote language-java" data-sample="DynamicSample.java" />
-    </pre>
-
+    <s:code language="java" file="DynamicSample.java" />
   </s:sample>
 </j:jelly>

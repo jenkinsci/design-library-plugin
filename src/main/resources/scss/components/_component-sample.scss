@@ -1,40 +1,3 @@
-// Deprecated - use .jdl-component-sample instead
-.app-component-sample {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: calc(var(--jdl-spacing) / 2);
-  padding: calc(var(--jdl-spacing) / 2);
-  border-radius: 10px;
-  margin-bottom: var(--jdl-spacing);
-  z-index: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: currentColor;
-    border-radius: inherit;
-    z-index: -1;
-    opacity: 0.025;
-  }
-
-  &--full-width {
-    align-items: unset;
-  }
-
-  &--right-alignment {
-    align-items: flex-end;
-  }
-
-  .jenkins-form-item {
-    width: 100%;
-    max-width: unset;
-    margin-bottom: 0;
-  }
-}
-
 .jdl-component-sample {
   position: relative;
   display: flex;
@@ -46,6 +9,7 @@
   margin-bottom: var(--jdl-spacing);
   z-index: 0;
   gap: 1rem;
+  border-radius: 0.66rem;
 
   &::before,
   &::after {
@@ -59,7 +23,7 @@
     radial-gradient(at 0% 100%, hsl(264, 37%, 59%) 0, transparent 50%),
     radial-gradient(at 80% 100%, hsl(342, 55%, 41%) 0, transparent 50%),
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
-    border-radius: 10px;
+    border-radius: inherit;
     z-index: -1;
     animation: rotate-hue 100s linear infinite;
   }
@@ -88,10 +52,6 @@
   #bottom-sticker {
     margin: -1.5rem -2rem;
   }
-}
-
-.jdl-component-sample + .jdl-component-code {
-  margin-top: calc(var(--jdl-spacing) * -0.75);
 }
 
 @keyframes rotate-hue {

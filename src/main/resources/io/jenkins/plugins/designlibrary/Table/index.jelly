@@ -29,10 +29,9 @@ THE SOFTWARE.
 
     <!-- TODO sorted doesn't seem to be doing anything, is there more that should be added about tables? -->
 
-    <div class="sample-remote app-component-sample" data-sample="index.html"/>
-
-    <pre>
-      <code class="sample-remote language-html" data-sample="index.html"/>
-    </pre>
+    <div class="jdl-component-group">
+      <div class="sample-remote jdl-component-sample" data-sample="index.html" />
+      <s:code language="xml" file="index.html" />
+    </div>
   </s:sample>
 </j:jelly>

@@ -25,30 +25,26 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jdl-paragraph">${%description}</p>
     <p class="jdl-paragraph">${%parameters}</p>
     <ul class="jdl-list">
       <li>field - ${%parameters.field}</li>
       <li>clazz - ${%parameters.clazz}</li>
     </ul>
 
-
-    <div class="app-component-sample">
-      <f:file field="hello" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <f:file field="hello" />
+      </div>
+      <s:code language="xml" file="file.jelly" />
     </div>
-
-    <pre>
-      <code class="sample-remote language-xml" data-sample="file.jelly" />
-    </pre>
 
     <p class="jdl-paragraph">${%parameters.additional}</p>
 
-    <div class="app-component-sample">
-      <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
+      </div>
+      <s:code language="xml" file="file-accept.jelly" />
     </div>
-
-    <pre>
-      <code class="sample-remote language-xml" data-sample="file-accept.jelly" />
-    </pre>
   </s:sample>
 </j:jelly>

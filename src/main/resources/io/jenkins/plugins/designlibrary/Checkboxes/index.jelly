@@ -25,8 +25,6 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jdl-paragraph">${%checkbox.description}</p>
-
     <p class="jdl-paragraph">${%checkbox.parameters}</p>
     <ul class="jdl-list">
       <li>id (optional) - ${%checkbox.parameters.id}</li>
@@ -37,11 +35,11 @@ THE SOFTWARE.
 
     <p class="jdl-paragraph">${%checkbox.additionalParameters}</p>
 
-    <div class="app-component-sample">
-      <f:checkbox title="${%Example}" field="hello" />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <f:checkbox title="${%Example}" field="hello" />
+      </div>
+      <s:code language="xml" file="checkbox.jelly" />
     </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="checkbox.jelly" />
-    </pre>
   </s:sample>
 </j:jelly>

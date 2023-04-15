@@ -24,34 +24,31 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
-    <div class="app-component-sample">
-      <f:entry title="Example" field="example">
-        <f:textbox />
-      </f:entry>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <f:entry title="Example" field="example">
+          <f:textbox />
+        </f:entry>
+      </div>
+      <s:code language="xml" file="example.jelly" />
     </div>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="example.jelly" />
-    </pre>
 
     <h2 class="jdl-heading">${%autoCompletion}</h2>
     <p class="jdl-paragraph">${%autoCompletion.description.1}</p>
-    <div class="app-component-sample">
+    <div class="jdl-component-sample">
       <f:entry title="U.S. State" field="state">
         <f:textbox />
       </f:entry>
     </div>
     <p class="jdl-paragraph">${%autoCompletion.description.2}</p>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="sample.jelly" />
-    </pre>
-    <pre>
-      <code class="sample-remote language-java" data-sample="Sample.java" />
-    </pre>
+
+    <s:code language="xml" file="sample.jelly" />
+    <s:code language="java" file="Sample.java" />
 
     <p class="jdl-paragraph">${%combobox.description}</p>
 
     <form>
-      <div class="app-component-sample">
+      <div class="jdl-component-sample">
         <f:entry title="U.S. State" field="state">
           <f:combobox />
         </f:entry>
@@ -59,14 +56,10 @@
     </form>
 
     <code>config.jelly:</code>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="combo-box.jelly"/>
-    </pre>
+    <s:code language="xml" file="combo-box.jelly" />
 
     <code>SimpleCombobox.java:</code>
-    <pre>
-      <code class="sample-remote language-java" data-sample="SimpleCombobox.java"/>
-    </pre>
+    <s:code language="java" file="SimpleCombobox.java" />
 
     <h3>${%dynamicCombobox}</h3>
     <p class="jdl-paragraph">${%dynamicCombobox.description}</p>
@@ -81,15 +74,10 @@
     </form>
 
     <code>config.jelly:</code>
-    <pre>
-      <code class="sample-remote language-xml" data-sample="dynamic-combo-box.jelly"/>
-    </pre>
+    <s:code language="xml" file="dynamic-combo-box.jelly" />
 
     <code>DynamicCombobox.java:</code>
-    <pre>
-      <code class="sample-remote language-java" data-sample="DynamicCombobox.java"/>
-    </pre>
-
+    <s:code language="java" file="DynamicCombobox.java" />
 
     <h2 class="jdl-heading">${%syntaxHighlight}</h2>
 
@@ -99,9 +87,7 @@
 
     <textarea class="script">println "Hello, World!"</textarea>
 
-    <pre>
-      <code class="language-html"><textarea class="script">println "Hello, World!"</textarea></code>
-    </pre>
+    <s:code language="xml" file="codemirror.jelly" />
 
     <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
 
