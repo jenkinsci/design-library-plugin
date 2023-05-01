@@ -46,7 +46,7 @@ THE SOFTWARE.
         <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
         <jenkins.version>2.385</jenkins.version>
         <node.version>18.15.0</node.version>
-        <npm.version>9.6.4</npm.version>
+        <npm.version>9.6.5</npm.version>
     </properties>
 
     <licenses>
