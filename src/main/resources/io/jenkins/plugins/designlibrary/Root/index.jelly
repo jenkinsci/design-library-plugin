@@ -8,8 +8,6 @@
 
     <l:main-panel>
       <div class="app-home">
-        <p class="app-home__jenkins-title">Jenkins</p>
-        <h1 class="app-home__heading">${%title}</h1>
         <div class="app-card__container">
           <div class="app-card__preview">
             <div class="app-card__preview__introduction">

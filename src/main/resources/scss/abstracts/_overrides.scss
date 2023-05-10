@@ -7,6 +7,7 @@
   flex-direction: column;
   width: 100%;
   max-width: min(1200px, 65vw);
+  margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
 
@@ -90,4 +91,20 @@ hr {
 
 a {
   font-weight: inherit;
+}
+
+#side-panel .jenkins-app-bar {
+  margin-top: 50px;
+  margin-bottom: -10px;
+}
+
+.app-sidepanel__jenkins-logo {
+  position: absolute;
+  top: 130px;
+  left: var(--section-padding);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: "Georgia", serif;
+  color: var(--text-color-secondary);
+  margin: 0;
 }

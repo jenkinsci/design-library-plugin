@@ -1,7 +1,11 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:st="jelly:stapler">
+  <div class="app-sidepanel__jenkins-logo">Jenkins</div>
+
+  <l:app-bar title="Design Library" />
+
   <l:tasks>
-    <l:search-bar placeholder="${%Search Design Library}" id="design-library-search-bar" autofocus="true"  />
+    <l:search-bar placeholder="${%Search Design Library}" id="design-library-search-bar" />
 
     <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home-outline plugin-ionicons-api" />
 
