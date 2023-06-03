@@ -31,10 +31,10 @@
         <style>
             @media (prefers-color-scheme: dark) {
                 .figures {
-                    stroke: #c9d1d9;
+                    stroke: #ffffff;
                 }
                 .text {
-                    fill: #c9d1d9;
+                    fill: #ffffff;
                 }
             }
         </style>
