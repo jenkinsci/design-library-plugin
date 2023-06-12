@@ -1,0 +1,15 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
+  <l:layout title="Forms">
+    <l:side-panel>
+      <s:sidepanel />
+    </l:side-panel>
+    <l:main-panel>
+
+      <h2>Hello ${request.getParameter("_.name")}</h2>
+      <b>Here are your order details</b><br/>
+      Quantity: ${request.getParameter("_.quantity")}<br/>
+      Flavor: ${request.getParameter("_.flavor")}<br/>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>
