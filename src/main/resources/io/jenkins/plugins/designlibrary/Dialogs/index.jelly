@@ -59,8 +59,8 @@
         <li><code>okText</code>: Adjust the text of the OK button, defaults to <code>OK</code> or <code>Yes</code></li>
         <li><code>cancelText</code>: Adjust the text of the Cancel button, defaults to <code>Cancel</code></li>
         <li><code>type</code>: Change the color of the <code>OK</code> button. Allowed values: <code>destructive</code></li>
-        <li><code>maxWidth</code>: Set the maximum width of the dialog, defaults to <code>475px</code></li>
         <li><code>minWidth</code>: Set the minimum width of the dialog, defaults to <code>300px</code></li>
+        <li><code>maxWidth</code>: Set the maximum width of the dialog, defaults to <code>475px</code></li>
         <li><code>hideCloseButton</code>: Hides the close button in modal dialogs, defaults to <code>false</code></li>
         <li><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
           prompt dialog as long as the input field is empty or contains only whitespace, defaults to <code>false</code></li>
