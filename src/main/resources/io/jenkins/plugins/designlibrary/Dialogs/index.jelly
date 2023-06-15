@@ -5,7 +5,7 @@
     <template id="demo-template" data-title="${%Modal}">
       <div>
         <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>
-        ${%Click on the "X" in the top right or outside to close me}.
+        ${%closeme}.
         <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">${%You can include icons}</h2>
         <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/> ${%Dialogs are cool}.
       </div>
@@ -56,10 +56,10 @@
       All dialogs take a second optional parameter with options that allow to change certain aspects.
       <ul>
         <li><code>title</code>: Adds a title to the dialog</li>
-        <li><code>okText</code>: Adjust the text of the OK button, defaults to <code>OK</code> or <code>Yes</code></li>
+        <li><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog</li>
         <li><code>cancelText</code>: Adjust the text of the Cancel button, defaults to <code>Cancel</code></li>
         <li><code>type</code>: Change the color of the <code>OK</code> button. Allowed values: <code>destructive</code></li>
-        <li><code>minWidth</code>: Set the minimum width of the dialog, defaults to <code>300px</code></li>
+        <li><code>minWidth</code>: Set the minimum width of the dialog, the default depends on the type of dialog</li>
         <li><code>maxWidth</code>: Set the maximum width of the dialog, defaults to <code>475px</code></li>
         <li><code>hideCloseButton</code>: Hides the close button in modal dialogs, defaults to <code>false</code></li>
         <li><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
@@ -68,6 +68,19 @@
           the form will be submitted to the <code>action</code> attribute of the form. When <code>false</code>, a
           <code>FormData</code> object is passed to the <code>resolve</code> method of the <code>Promise</code>.
           Defaults to <code>true</code></li>
+      </ul>
+      <hr/>
+      <h2>${%OK Button texts}</h2>
+      ${%buttontexts}
+      <ul>
+        <li><code>ok</code>: OK</li>
+        <li><code>cancel</code>: Cancel</li>
+        <li><code>yes</code>: Yes</li>
+        <li><code>no</code>: No</li>
+        <li><code>add</code>: Add</li>
+        <li><code>save</code>: Save</li>
+        <li><code>apply</code>: Apply</li>
+        <li><code>submit</code>: Submit</li>
       </ul>
     </div>
     <st:adjunct includes="io.jenkins.plugins.designlibrary.Dialogs.dialogs"/>
