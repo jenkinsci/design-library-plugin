@@ -1,7 +1,7 @@
 function showPrompt() {
     dialog
-      .prompt("How should I call you?", {
-        title: "Welcome to the Dialog demo",
+      .prompt("Welcome to the Dialog demo", {
+        message: "How should I call you?",
         minWidth: "450px",
         maxWidth: "600px" })
       .then(

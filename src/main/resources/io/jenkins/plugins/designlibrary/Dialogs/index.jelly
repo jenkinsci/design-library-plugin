@@ -12,11 +12,11 @@
     </template>
     <div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">
       <f:form action="form" method="post">
-        <f:entry field="name" title="${%Name}">
-          <f:textbox/>
+        <f:entry title="${%Name}">
+          <f:textbox name="name"/>
         </f:entry>
-        <f:entry field="quantity" title="${%Quantity}">
-          <f:number min="1" max="9"/>
+        <f:entry title="${%Quantity}">
+          <f:number name="quantity" min="1" max="9"/>
         </f:entry>
         <f:entry title="${%Choose flavor}">
           <f:select field="flavor"/>
@@ -55,7 +55,7 @@
       <h2>Customizing the appearance and behaviour</h2>
       All dialogs take a second optional parameter with options that allow to change certain aspects.
       <ul>
-        <li><code>title</code>: Adds a title to the dialog</li>
+        <li><code>message</code>: Adds a message to the dialog</li>
         <li><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog</li>
         <li><code>cancelText</code>: Adjust the text of the Cancel button, defaults to <code>Cancel</code></li>
         <li><code>type</code>: Change the color of the <code>OK</code> button. Allowed values: <code>destructive</code></li>

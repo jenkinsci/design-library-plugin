@@ -7,10 +7,10 @@ function showForm() {
       title: title, okText: "Order", submitButton: toggle.checked
      }).then(formData => {
         let title = "Order status"
-        let message = "Thank you " + formData.get("_.name")
+        let message = "Thank you " + formData.get("name")
         + ".\n We received your order. Here are the details:"
-        + "\n\nQuantity: " + formData.get("_.quantity")
+        + "\n\nQuantity: " + formData.get("quantity")
         + "\nFlavor: " + formData.get("_.flavor")
-        dialog.alert(message, {title: title});
+        dialog.alert(title, {message: message});
     });
 }
