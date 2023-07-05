@@ -83,7 +83,6 @@
         <li><code>submit</code>: Submit</li>
       </ul>
     </div>
-    <st:adjunct includes="io.jenkins.plugins.designlibrary.Dialogs.dialogs"/>
     <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
   </s:sample>
 </j:jelly>
