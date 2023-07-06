@@ -5,7 +5,7 @@
     <template id="demo-template" data-title="${%Modal}">
       <div>
         <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>
-        ${%closeme}.
+        ${%closeme}
         <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">${%You can include icons}</h2>
         <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/> ${%Dialogs are cool}.
       </div>
