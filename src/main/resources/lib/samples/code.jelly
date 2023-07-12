@@ -10,7 +10,7 @@
 
   <div class="jdl-component-code">
     <pre class="jdl-component-code__code">
-      <code class="language-${language} ${file != null ? 'sample-remote' : ''}" data-sample="${file}">
+      <code class="language-${language} ${file != null ? 'sample-remote' : ''}" data-sample="${file}" data-executable="${executable}">
         ${code}
       </code>
     </pre>

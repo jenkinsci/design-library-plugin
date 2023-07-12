@@ -1,0 +1,13 @@
+<div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">
+  <f:form action="form" method="post">
+    <f:entry title="${%Name}">
+      <f:textbox name="name"/>
+    </f:entry>
+    <f:entry title="${%Quantity}">
+      <f:number name="quantity" min="1" max="9"/>
+    </f:entry>
+    <f:entry title="${%Choose flavor}">
+      <f:select field="flavor"/>
+    </f:entry>
+  </f:form>
+</div>

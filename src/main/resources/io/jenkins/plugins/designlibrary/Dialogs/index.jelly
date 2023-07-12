@@ -1,0 +1,88 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
+  <s:sample>
+    <p class="jdl-leading-paragraph">${%description}</p>
+    <template id="demo-template" data-title="${%Modal}">
+      <div>
+        <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>
+        ${%closeme}
+        <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">${%You can include icons}</h2>
+        <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/> ${%Dialogs are cool}.
+      </div>
+    </template>
+    <div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">
+      <f:form action="form" method="post">
+        <f:entry title="${%Name}">
+          <f:textbox name="name"/>
+        </f:entry>
+        <f:entry title="${%Quantity}">
+          <f:number name="quantity" min="1" max="9"/>
+        </f:entry>
+        <f:entry title="${%Choose flavor}">
+          <f:select field="flavor"/>
+        </f:entry>
+      </f:form>
+    </div>
+
+    <l:tabPane title="${%Alerts}">
+        <p class="jdl-paragraph">${%alerts}</p>
+        <s:code language="java" file="alert.js" code="showAlert()" executable="true"/>
+      </l:tabPane>
+      <l:tabPane title="${%Prompts}">
+        <p class="jdl-paragraph">${%prompts}</p>
+        <s:code language="java" file="prompt.js" code="showPrompt()" executable="true"/>
+      </l:tabPane>
+      <l:tabPane title="${%Confirmations}">
+        <p class="jdl-paragraph">${%confirmations}</p>
+        <s:code language="java" file="confirm.js" code="showConfirm()" executable="true"/>
+      </l:tabPane>
+      <l:tabPane title="${%Modals}">
+        <p class="jdl-paragraph">${%modals}</p>
+        <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
+        <s:code language="xml" file="modal.jelly"/>
+      </l:tabPane>
+    <l:tabPane title="${%Forms}">
+      <p class="jdl-paragraph">${%forms}</p>
+      <br/><br/>
+      <f:toggleSwitch id="formsubmit" checkedTitle="${%Submit form}" checked="true"
+                      title="${%Handle form in javascript}."
+      />
+      <s:code language="java" file="form.js" code="showForm()" executable="true"/>
+      <s:code language="xml" file="form.jelly"/>
+    </l:tabPane>
+    <hr/>
+    <div>
+      <h2>Customizing the appearance and behaviour</h2>
+      All dialogs take a second optional parameter with options that allow to change certain aspects.
+      <ul>
+        <li><code>message</code>: Adds a message to the dialog</li>
+        <li><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog</li>
+        <li><code>cancelText</code>: Adjust the text of the Cancel button, defaults to <code>Cancel</code></li>
+        <li><code>type</code>: Change the color of the <code>OK</code> button. Allowed values: <code>destructive</code></li>
+        <li><code>minWidth</code>: Set the minimum width of the dialog, the default depends on the type of dialog</li>
+        <li><code>maxWidth</code>: Set the maximum width of the dialog, defaults to <code>475px</code></li>
+        <li><code>hideCloseButton</code>: Hides the close button in modal dialogs, defaults to <code>false</code></li>
+        <li><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
+          prompt dialog as long as the input field is empty or contains only whitespace, defaults to <code>false</code></li>
+        <li><code>submitButton</code>: Change the behaviour of the submit button in a form dialog. When <code>true</code>
+          the form will be submitted to the <code>action</code> attribute of the form. When <code>false</code>, a
+          <code>FormData</code> object is passed to the <code>resolve</code> method of the <code>Promise</code>.
+          Defaults to <code>true</code></li>
+      </ul>
+      <hr/>
+      <h2>${%OK Button texts}</h2>
+      ${%buttontexts}
+      <ul>
+        <li><code>ok</code>: OK</li>
+        <li><code>cancel</code>: Cancel</li>
+        <li><code>yes</code>: Yes</li>
+        <li><code>no</code>: No</li>
+        <li><code>add</code>: Add</li>
+        <li><code>save</code>: Save</li>
+        <li><code>apply</code>: Apply</li>
+        <li><code>submit</code>: Submit</li>
+      </ul>
+    </div>
+    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
+  </s:sample>
+</j:jelly>
