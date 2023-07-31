@@ -1,5 +1,5 @@
 function showForm() {
-    const formTemplate = document.getElementById("#demo-form");
+    const formTemplate = document.getElementById("demo-form");
     const form = formTemplate.firstElementChild.cloneNode(true);
     const toggle = document.getElementById("formsubmit");
     const title = formTemplate.dataset.title;
