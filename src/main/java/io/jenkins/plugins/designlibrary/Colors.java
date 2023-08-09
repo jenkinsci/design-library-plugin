@@ -3,7 +3,6 @@ package io.jenkins.plugins.designlibrary;
 import hudson.Extension;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Extension
@@ -14,7 +13,10 @@ public class Colors extends UISample {
     }
 
     public List<Semantic> getSemantics() {
-        return Arrays.asList(
+        return List.of(
+                new Semantic("Accent", "Use for branding", "accent-color"),
+                new Semantic("Text", "Use for text", "text-color"),
+                new Semantic("Secondary text", "Use for secondary text", "text-color-secondary"),
                 new Semantic("Success", "Use for success states", "success-color"),
                 new Semantic("Warning", "Use for warning states", "warning-color"),
                 new Semantic("Error", "Use for error states", "error-color"),
@@ -24,7 +26,7 @@ public class Colors extends UISample {
     }
 
     public List<Color> getColors() {
-        List<Color> colors = Arrays.asList(
+        List<Color> colors = List.of(
                 new Color("Red", "red"),
                 new Color("Green", "green"),
                 new Color("Orange", "orange"),
