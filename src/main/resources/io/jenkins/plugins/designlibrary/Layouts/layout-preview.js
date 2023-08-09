@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  const appBar = document.querySelector(".jenkins-app-bar")
+  const appBar = document.querySelector("#main-panel .jenkins-app-bar")
   const componentSample = document.querySelector(".jdl-component-sample")
   const tabBar = document.querySelector(".tabBar")
   const twoPaneTab = tabBar.querySelector(".tab:first-of-type")
