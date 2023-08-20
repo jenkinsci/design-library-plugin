@@ -73,7 +73,7 @@ THE SOFTWARE.
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-weekly</artifactId>
-                <version>1841.v7b_22c5218e1a</version>
+                <version>2357.v1043f8578392</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
