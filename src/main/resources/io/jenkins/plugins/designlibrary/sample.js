@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  function extractLanguageFromClassList(element) {
-    return Array.from(element.classList)
-      .filter(clazz => clazz.startsWith('language-'))
-      .map(clazz => clazz.replace('language-', ''));
-  }
 
   const url = document.querySelector('head').dataset.rooturl
 
@@ -17,12 +12,29 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch(fullUrl)
         .then(response => response.text())
         .then(text => {
-          const language = extractLanguageFromClassList(element);
-          if (language.length > 0) {
-            element.innerHTML = Prism.highlight(text, Prism.languages[language], language.pop())
-          } else {
-            element.innerHTML = text
+          element.innerText = text
+
+          Prism.highlightElement(element)
+
+          function setPrismBackgroundVariable() {
+            const computedStyle = window.getComputedStyle(element.parentElement)
+            const background = computedStyle.getPropertyValue('background')
+
+            document.documentElement.style
+              .setProperty(prismVariable, background);
           }
+
+          const prismVariable = '--prism-background'
+          if (!getComputedStyle(document.documentElement).getPropertyValue(prismVariable)) {
+            setPrismBackgroundVariable()
+
+            if (window.isSystemRespectingTheme) {
+              window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                setPrismBackgroundVariable()
+              });
+            }
+          }
+
           const codeWrapper = element.closest(".jdl-component-code");
           if (codeWrapper) {
             const copyButton = codeWrapper.querySelector(".copy-button, .jenkins-copy-button")
@@ -30,20 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       if (executable === "true") {
-        var script = document.createElement("script");  // create a script DOM node
-          script.src = fullUrl;  // set its src to the provided URL
-          document.head.appendChild(script);
+        const script = document.createElement("script");  // create a script DOM node
+        script.src = fullUrl;  // set its src to the provided URL
+        document.head.appendChild(script);
       }
     })
-
-  document.querySelectorAll('.language-java,.language-xml,.language-html,.language-css')
-    .forEach(element => {
-      const language = extractLanguageFromClassList(element);
-
-      if (language.length > 0) {
-        element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language.pop())
-      }
-    });
 
   const shareButton = document.querySelector("#button-share");
 

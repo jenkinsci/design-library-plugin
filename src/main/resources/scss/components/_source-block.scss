@@ -14,9 +14,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: var(--button-background);
+    background: var(--prism-background);
     z-index: -1;
-    opacity: 0.75;
   }
 
   &__code {
@@ -37,14 +36,6 @@ $jdl-component-code-controls-spacing: 0.75rem;
     flex-direction: column;
     height: 100%;
     padding: $jdl-component-code-controls-spacing;
-
-    & > div {
-      position: sticky;
-      top: calc(43px + #{$jdl-component-code-controls-spacing});
-      right: $jdl-component-code-controls-spacing;
-      display: flex;
-      gap: $jdl-component-code-controls-spacing;
-    }
   }
 
   &:not(:hover) {
