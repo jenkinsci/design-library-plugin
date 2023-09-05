@@ -90,7 +90,7 @@
       <h3 class="jdl-heading">${%Badges}</h3>
 
       <p class="jdl-paragraph">
-        You can include badges in your sidebar to highlight important information.
+        You can include badges (instances of <a href="https://javadoc.jenkins.io/jenkins/management/Badge.html" target="_blank"><code>jenkins.management.badge</code></a>) in your sidebar to highlight important information.
         You should only use a badge if the information is useful to the user, for example:
       </p>
 
