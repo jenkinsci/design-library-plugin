@@ -24,15 +24,31 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
     <s:sample title="Hetero List Sample">
       <p class="jdl-paragraph">
         <!-- TODO I have no idea what heterogeneous means, should use a simpler word -->
-        Show a heterogeneous list of subitems with different data bindings for radio buttons and checkboxes
+        ${%description}
       </p>
         <p class="jdl-paragraph">
-            <a href="configure">Configure me!</a>
+            <a href="configure" class="jenkins-button">Configure me!</a>
         </p>
+        <l:tabPane title="Config.java">
+          <s:code language="java" file="Config.java" />
+        </l:tabPane>
+        <l:tabPane title="config.jelly">
+          <s:code language="xml" file="config.jelly" />
+        </l:tabPane>
+        <l:tabPane title="Entry.java">
+          <s:code language="java" file="Entry.java" />
+        </l:tabPane>
+        <l:tabPane title="ChoiceEntry.java">
+          <s:code language="java" file="ChoiceEntry.java" />
+        </l:tabPane>
+        <l:tabPane title="SimpleEntry.java">
+          <s:code language="java" file="SimpleEntry.java" />
+        </l:tabPane>
+        <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
         <j:if test="${it.configFile.exists()}">
             <p class="jdl-paragraph">
                 Current configuration:

@@ -60,6 +60,11 @@ import java.util.List;
         }
     }
 
+    @Override
+    public String getDisplayName() {
+        return "Hetero List";
+    }
+
     public Config getConfig() {
         return config;
     }
