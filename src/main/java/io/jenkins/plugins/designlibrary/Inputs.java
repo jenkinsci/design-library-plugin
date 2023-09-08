@@ -40,12 +40,24 @@ import java.util.Set;
  * @author Kohsuke Kawaguchi
  */
 @Extension
-public class TextBox extends UISample {
+public class Inputs extends UISample {
     @Override
     public String getIconFileName() {
         return "symbol-textbox";
     }
 
+    @Override
+    public String getDisplayName() {
+        return "Input Fields";
+    }
+
+    public String getShell() {
+        return "echo \"Hello World\"";
+    }
+
+    public String getHtml() {
+        return "<a href=\"https://jenkins.io\" target=\"_blank\">Jenkins</a>";
+    }
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
         /**
