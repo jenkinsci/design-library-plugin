@@ -28,7 +28,8 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
             // otherwise you can also programatically create them.
             // see the javadoc for various convenience methods to add items
             return new ContextMenu()
-                    .add(new MenuItem().withContextRelativeUrl("/").withIconClass("icon-up").withDisplayName("Back to Dashboard"))
+                    .add(new MenuItem().withContextRelativeUrl("/").withIconClass("symbol-arrow-up-outline plugins-ionicons-api")
+                            .withDisplayName("Back to Dashboard"))
                     .add("https://www.jenkins.io/","Jenkins project")
                     .add("https://plugins.jenkins.io/","Plugin documentation");
         }
