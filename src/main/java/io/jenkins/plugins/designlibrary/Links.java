@@ -13,7 +13,7 @@ import org.kohsuke.stapler.StaplerResponse;
 public class Links extends UISample implements ModelObjectWithContextMenu, ModelObjectWithChildren {
     @Override
     public String getIconFileName() {
-        return "symbol-at-outline plugins-ionicons-api";
+        return "symbol-at-outline plugin-ionicons-api";
     }
 
     /**
@@ -28,7 +28,7 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
             // otherwise you can also programatically create them.
             // see the javadoc for various convenience methods to add items
             return new ContextMenu()
-                    .add(new MenuItem().withContextRelativeUrl("/").withIconClass("symbol-arrow-up-outline plugins-ionicons-api")
+                    .add(new MenuItem().withContextRelativeUrl("/").withIconClass("symbol-arrow-up-outline plugin-ionicons-api")
                             .withDisplayName("Back to Dashboard"))
                     .add("https://www.jenkins.io/","Jenkins project")
                     .add("https://plugins.jenkins.io/","Plugin documentation");
