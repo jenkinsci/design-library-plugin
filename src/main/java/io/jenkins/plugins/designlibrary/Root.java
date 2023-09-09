@@ -35,12 +35,11 @@ public class Root implements RootAction, ModelObjectWithContextMenu {
     @Override
     public ContextMenu doContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
         ContextMenu menu = new ContextMenu();
-        String url = Jenkins.get().getRootUrl() + getUrlName();
         for (UISample s: getAll()) {
             String iconFilename = s.getIconFileName() + " plugin-design-library";
             menu.add(new MenuItem().withDisplayName(s.getDisplayName())
                     .withIconClass(iconFilename)
-                    .withContextRelativeUrl(url + "/" + s.getUrlName())
+                    .withContextRelativeUrl("/" + getUrlName() + "/" + s.getUrlName())
             );
         }
 
