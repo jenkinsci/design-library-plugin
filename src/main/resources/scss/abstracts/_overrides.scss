@@ -22,9 +22,8 @@
 
 // Remove when code blocks follows user's theme
 // https://github.com/jenkinsci/design-library-plugin/issues/68
-pre {
+pre.jdl-component-code__code {
   position: relative;
-  margin: 0 0 var(--jdl-spacing) 0 !important;
   padding: calc(var(--jdl-spacing) / 2) !important;
   background: transparent !important;
   z-index: 0;

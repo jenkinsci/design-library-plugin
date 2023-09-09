@@ -1,0 +1,3 @@
+<f:entry title="Number" field="count">
+  <f:number min="1" max="99" default="5"/>
+</f:entry>
