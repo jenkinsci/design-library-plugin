@@ -28,7 +28,9 @@ THE SOFTWARE.
     <h2 class="jdl-heading">Descriptor radio list</h2>
 
     <div class="jdl-component-sample jdl-component-sample--gridless jenkins-!-padding-bottom-0">
-      <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+      <f:form>
+        <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+      </f:form>
     </div>
 
     <l:tabPane title="index.jelly">
