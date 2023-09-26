@@ -6,10 +6,13 @@ import hudson.ExtensionPoint;
 import hudson.model.Action;
 import hudson.model.Describable;
 
+import io.jenkins.plugins.prism.PrismConfiguration;
 import java.util.ArrayList;
 import java.util.List;
 
 import jenkins.model.Jenkins;
+import org.kohsuke.accmod.Restricted;
+import org.kohsuke.accmod.restrictions.NoExternalUse;
 
 /**
  * @author Kohsuke Kawaguchi
@@ -32,6 +35,11 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
 
     public UISampleDescriptor getDescriptor() {
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
+    }
+
+    @Restricted(NoExternalUse.class)
+    public PrismConfiguration getPrismConfiguration() {
+        return PrismConfiguration.getInstance();
     }
 
     public static List<UISample> getAll() {
