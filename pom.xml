@@ -88,7 +88,7 @@ THE SOFTWARE.
         <dependency>
             <groupId>io.jenkins.plugins</groupId>
             <artifactId>prism-api</artifactId>
-            <version>1.29.0-7-rc295.1064eb_c55f37</version>
+            <version>1.29.0-8</version>
         </dependency>
         <!-- For some reason need to explicitly depend on commons-text-api and commons-lang3-api for plugin-util-api to load -->
         <dependency>
