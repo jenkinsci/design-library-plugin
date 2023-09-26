@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach(element => {
       const fileName = element.dataset.sample;
       const executable = element.dataset.executable;
-      const componentName = window.location.href.match(/.+design-library\/(.+)$/)[1]
+
+      // On the inputs page the preview markup link adds a hash to the url which breaks the regex extraction
+      const strippedHash = window.location.href.replace('#', '')
+      const componentName = strippedHash.match(/.+design-library\/(.+)$/)[1]
 
       const fullUrl = `${url}/plugin/design-library/${componentName}${fileName}`;
       fetch(fullUrl)
@@ -24,13 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
               .setProperty(prismVariable, background);
           }
 
+          // This is for the copy clipboard section which doesn't use prism
+          // We need to match the colour
           const prismVariable = '--prism-background'
           if (!getComputedStyle(document.documentElement).getPropertyValue(prismVariable)) {
             setPrismBackgroundVariable()
 
             if (window.isSystemRespectingTheme) {
               window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                setPrismBackgroundVariable()
+                // If done immediately while appearance is changing from light to dark sometimes the wrong value is retrieved
+                // A slight delay fixes this
+                setTimeout(() => setPrismBackgroundVariable(), 50)
               });
             }
           }
