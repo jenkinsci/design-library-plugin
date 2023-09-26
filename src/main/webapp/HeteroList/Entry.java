@@ -1,0 +1,1 @@
+public static abstract class Entry extends AbstractDescribableImpl<Entry> {}

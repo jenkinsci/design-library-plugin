@@ -7,7 +7,7 @@
       <l:tasks>
         <l:task title="Root" href="./twoColumn" icon="symbol-jenkins" />
         <l:task title="Second page" href="./twoColumn" icon="symbol-edit" />
-        <l:task title="Third page" href="./twoColumn" icon="symbol-details" badge="123" />
+        <l:task title="Third page" href="./twoColumn" icon="symbol-details" badge="${it.badge}" />
       </l:tasks>
     </l:side-panel>
 

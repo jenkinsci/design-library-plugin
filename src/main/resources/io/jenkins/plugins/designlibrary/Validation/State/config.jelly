@@ -11,11 +11,7 @@
       </f:section>
       <f:entry title="${%Other cities}">
         <f:repeatableProperty field="cities">
-          <f:block>
-            <div>
-              <f:repeatableDeleteButton />
-            </div>
-          </f:block>
+            <f:repeatableDeleteButton />
         </f:repeatableProperty>
       </f:entry>
     </div>
