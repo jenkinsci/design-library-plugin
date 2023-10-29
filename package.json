@@ -21,6 +21,6 @@
   "devDependencies": {
     "autoprefixer": "10.4.16",
     "postcss-cli": "10.1.0",
-    "sass": "1.58.3"
+    "sass": "1.69.5"
   }
 }
