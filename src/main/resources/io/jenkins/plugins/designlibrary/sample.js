@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach(element => {
       const fileName = element.dataset.sample;
       const executable = element.dataset.executable;
+      const render = element.dataset.render
 
       // On the inputs page the preview markup link adds a hash to the url which breaks the regex extraction
       const strippedHash = window.location.href.replace('#', '')
@@ -15,37 +16,41 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch(fullUrl)
         .then(response => response.text())
         .then(text => {
-          element.innerText = text
+          if (render === "true") {
+            element.innerHTML = text
+          } else {
+            element.innerText = text
 
-          Prism.highlightElement(element)
+            Prism.highlightElement(element)
 
-          function setPrismBackgroundVariable() {
-            const computedStyle = window.getComputedStyle(element.parentElement)
-            const background = computedStyle.getPropertyValue('background')
+            function setPrismBackgroundVariable() {
+              const computedStyle = window.getComputedStyle(element.parentElement)
+              const background = computedStyle.getPropertyValue('background')
 
-            document.documentElement.style
-              .setProperty(prismVariable, background);
-          }
-
-          // This is for the copy clipboard section which doesn't use prism
-          // We need to match the colour
-          const prismVariable = '--prism-background'
-          if (!getComputedStyle(document.documentElement).getPropertyValue(prismVariable)) {
-            setPrismBackgroundVariable()
-
-            if (window.isSystemRespectingTheme) {
-              window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                // If done immediately while appearance is changing from light to dark sometimes the wrong value is retrieved
-                // A slight delay fixes this
-                setTimeout(() => setPrismBackgroundVariable(), 50)
-              });
+              document.documentElement.style
+                .setProperty(prismVariable, background);
             }
-          }
 
-          const codeWrapper = element.closest(".jdl-component-code");
-          if (codeWrapper) {
-            const copyButton = codeWrapper.querySelector(".copy-button, .jenkins-copy-button")
-            copyButton.setAttribute("text", text)
+            // This is for the copy clipboard section which doesn't use prism
+            // We need to match the colour
+            const prismVariable = '--prism-background'
+            if (!getComputedStyle(document.documentElement).getPropertyValue(prismVariable)) {
+              setPrismBackgroundVariable()
+
+              if (window.isSystemRespectingTheme) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                  // If done immediately while appearance is changing from light to dark sometimes the wrong value is retrieved
+                  // A slight delay fixes this
+                  setTimeout(() => setPrismBackgroundVariable(), 50)
+                });
+              }
+            }
+
+            const codeWrapper = element.closest(".jdl-component-code");
+            if (codeWrapper) {
+              const copyButton = codeWrapper.querySelector(".copy-button, .jenkins-copy-button")
+              copyButton.setAttribute("text", text)
+            }
           }
         });
       if (executable === "true") {
