@@ -44,7 +44,7 @@ THE SOFTWARE.
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
-        <jenkins.version>2.426</jenkins.version>
+        <jenkins.version>2.426.1</jenkins.version>
         <node.version>18.18.2</node.version>
         <npm.version>10.2.5</npm.version>
     </properties>
