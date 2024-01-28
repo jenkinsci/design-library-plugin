@@ -11,3 +11,4 @@
 <p>Factors of ${number}:</p>
 <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
 <ul id="factors"/>
+</j:if>
