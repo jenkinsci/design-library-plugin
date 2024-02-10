@@ -1,28 +1,22 @@
 <l:overflowButton>
-  <button class="jenkins-dropdown__item">
-    <div class="jenkins-dropdown__item__icon">
-      <l:icon src="symbol-star-outline plugin-ionicons-api" />
-    </div>
-    ${%Action 1}
-  </button>
-  <button class="jenkins-dropdown__item">
-    <div class="jenkins-dropdown__item__icon">
-      <l:icon src="symbol-star-outline plugin-ionicons-api" />
-    </div>
-    ${%Action 2}
-  </button>
-  <div class="jenkins-dropdown__separator"></div>
-  <button class="jenkins-dropdown__item">
-    <div class="jenkins-dropdown__item__icon">
-      <l:icon src="symbol-star-outline plugin-ionicons-api" />
-    </div>
-    ${%Submenu}
-  </button>
-  <div class="jenkins-dropdown__separator"></div>
-  <button class="jenkins-dropdown__item jenkins-!-error-color">
-    <div class="jenkins-dropdown__item__icon">
-      <l:icon src="symbol-trash-outline plugin-ionicons-api" />
-    </div>
-    ${%Delete}
-  </button>
+  <dd:item icon="symbol-star-outline plugin-ionicons-api"
+           text="${%Action 1}" />
+  <dd:item icon="symbol-star-outline plugin-ionicons-api"
+           text="${%Action 2}" />
+  <dd:separator />
+  <dd:header text="${%Heading}" />
+  <dd:item icon="symbol-star-outline plugin-ionicons-api"
+           text="${%Action 3}" />
+  <dd:item icon="symbol-star-outline plugin-ionicons-api"
+           text="${%Action 4}" />
+  <dd:separator />
+  <dd:submenu icon="symbol-star-outline plugin-ionicons-api" text="${%Submenu}">
+    <dd:item icon="symbol-star-outline plugin-ionicons-api"
+             text="${%Subaction 1}" />
+    <dd:item icon="symbol-star-outline plugin-ionicons-api"
+             text="${%Subaction 2}" />
+  </dd:submenu>
+  <dd:separator />
+  <dd:item icon="symbol-trash-outline plugin-ionicons-api"
+           text="${%Delete}" />
 </l:overflowButton>
