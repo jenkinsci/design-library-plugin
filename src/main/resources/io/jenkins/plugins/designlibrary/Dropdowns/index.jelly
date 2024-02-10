@@ -1,7 +1,7 @@
 <!--
 The MIT License
 
-Copyright 2013 - 2022 Jesse Glick, Jan Faracik
+Copyright 2024 Jan Faracik
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,82 +27,57 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-paragraph">${%description.1}</p>
 
-    <p class="jdl-paragraph">${%description.2}</p>
-
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
-        <button class="jenkins-button">Default</button>
+        <l:overflowButton>
+          <button class="jenkins-dropdown__item">
+            <div class="jenkins-dropdown__item__icon">
+              <l:icon src="symbol-star-outline plugin-ionicons-api" />
+            </div>
+            ${%Action 1}
+          </button>
+          <button class="jenkins-dropdown__item">
+            <div class="jenkins-dropdown__item__icon">
+              <l:icon src="symbol-star-outline plugin-ionicons-api" />
+            </div>
+            ${%Action 2}
+          </button>
+          <div class="jenkins-dropdown__separator"></div>
+          <button class="jenkins-dropdown__item">
+            <div class="jenkins-dropdown__item__icon">
+              <l:icon src="symbol-star-outline plugin-ionicons-api" />
+            </div>
+            ${%Submenu}
+          </button>
+          <div class="jenkins-dropdown__separator"></div>
+          <button class="jenkins-dropdown__item jenkins-!-error-color">
+            <div class="jenkins-dropdown__item__icon">
+              <l:icon src="symbol-trash-outline plugin-ionicons-api" />
+            </div>
+            ${%Delete}
+          </button>
+        </l:overflowButton>
       </div>
       <s:code language="xml" file="default.jelly" />
     </div>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-button--primary">Primary</button>
-      </div>
-      <s:code language="xml" file="primary.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">
-      You can pair buttons with <a href="../Colors">color modifier classes</a>, like so:
-    </p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
-      </div>
-      <s:code language="xml" file="destructive.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">
-      Tertiary buttons should be used for buttons which have minimal interaction or for those where
-      a background creates too much visual clutter:
-    </p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-button--tertiary">Tertiary</button>
-      </div>
-      <s:code language="xml" file="tertiary.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">
-      Buttons can include symbols and they'll be automatically sized to fit correctly:
-    </p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> ${%symbol}</button>
-      </div>
-      <s:code language="xml" file="symbolButton.jelly" />
-    </div>
-
-    <h2 class="jdl-heading">${%copy}</h2>
-    <p class="jdl-paragraph">${%copy.description}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
-      </div>
-      <s:code language="xml" file="copyButton.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">${%copy.parameters}</p>
-    <ul class="jdl-list">
-      <li>text - ${%copy.parameters.text}</li>
-      <li>message - ${%copy.parameters.message}</li>
-    </ul>
-
-    <h2 class="jdl-heading">${%help}</h2>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
-      </div>
-      <s:code language="xml" file="helpButton.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">${%help.parameters}</p>
-    <ul class="jdl-list">
-      <li>href - ${%help.parameters.1}</li>
-    </ul>
+    <table class="jdl-dos-donts">
+      <thead>
+        <tr>
+          <th class="jenkins-!-success-color">${%do}</th>
+          <th class="jenkins-!-error-color">${%dont}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${%do.1}</td>
+          <td>${%dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%do.2}</td>
+          <td>${%dont.2}</td>
+        </tr>
+      </tbody>
+    </table>
   </s:sample>
 </j:jelly>

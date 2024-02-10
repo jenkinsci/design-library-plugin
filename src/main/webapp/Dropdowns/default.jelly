@@ -1,0 +1,28 @@
+<l:overflowButton>
+  <button class="jenkins-dropdown__item">
+    <div class="jenkins-dropdown__item__icon">
+      <l:icon src="symbol-star-outline plugin-ionicons-api" />
+    </div>
+    ${%Action 1}
+  </button>
+  <button class="jenkins-dropdown__item">
+    <div class="jenkins-dropdown__item__icon">
+      <l:icon src="symbol-star-outline plugin-ionicons-api" />
+    </div>
+    ${%Action 2}
+  </button>
+  <div class="jenkins-dropdown__separator"></div>
+  <button class="jenkins-dropdown__item">
+    <div class="jenkins-dropdown__item__icon">
+      <l:icon src="symbol-star-outline plugin-ionicons-api" />
+    </div>
+    ${%Submenu}
+  </button>
+  <div class="jenkins-dropdown__separator"></div>
+  <button class="jenkins-dropdown__item jenkins-!-error-color">
+    <div class="jenkins-dropdown__item__icon">
+      <l:icon src="symbol-trash-outline plugin-ionicons-api" />
+    </div>
+    ${%Delete}
+  </button>
+</l:overflowButton>
