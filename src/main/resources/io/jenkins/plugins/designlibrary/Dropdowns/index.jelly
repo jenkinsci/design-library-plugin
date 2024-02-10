@@ -51,7 +51,8 @@ THE SOFTWARE.
           </dd:submenu>
           <dd:separator />
           <dd:item icon="symbol-trash-outline plugin-ionicons-api"
-                   text="${%Delete}" />
+                   text="${%Delete}"
+                   clazz="jenkins-!-destructive-color" />
         </l:overflowButton>
       </div>
       <s:code language="xml" file="default.jelly" />
