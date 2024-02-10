@@ -23,9 +23,11 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-paragraph">${%description.1}</p>
+    <p class="jdl-leading-paragraph">${%description.1}</p>
+
+    <p class="jdl-paragraph">${%description.2}</p>
 
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
@@ -76,6 +78,9 @@ THE SOFTWARE.
         <tr>
           <td>${%do.2}</td>
           <td>${%dont.2}</td>
+        </tr>
+        <tr>
+          <td>${%do.3}</td>
         </tr>
       </tbody>
     </table>
