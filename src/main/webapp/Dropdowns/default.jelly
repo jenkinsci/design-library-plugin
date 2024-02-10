@@ -18,5 +18,6 @@
   </dd:submenu>
   <dd:separator />
   <dd:item icon="symbol-trash-outline plugin-ionicons-api"
-           text="${%Delete}" />
+           text="${%Delete}"
+           clazz="jenkins-!-destructive-color" />
 </l:overflowButton>
