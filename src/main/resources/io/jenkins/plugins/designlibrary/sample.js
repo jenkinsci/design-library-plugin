@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  function extractLanguageFromClassList(element) {
-    return Array.from(element.classList)
-      .filter(clazz => clazz.startsWith('language-'))
-      .map(clazz => clazz.replace('language-', ''));
-  }
 
   const url = document.querySelector('head').dataset.rooturl
 
@@ -11,39 +6,59 @@ document.addEventListener("DOMContentLoaded", () => {
     .forEach(element => {
       const fileName = element.dataset.sample;
       const executable = element.dataset.executable;
-      const componentName = window.location.href.match(/.+design-library\/(.+)$/)[1]
+      const render = element.dataset.render
+
+      // On the inputs page the preview markup link adds a hash to the url which breaks the regex extraction
+      const strippedHash = window.location.href.replace('#', '')
+      const componentName = strippedHash.match(/.+design-library\/(.+)$/)[1]
 
       const fullUrl = `${url}/plugin/design-library/${componentName}${fileName}`;
       fetch(fullUrl)
         .then(response => response.text())
         .then(text => {
-          const language = extractLanguageFromClassList(element);
-          if (language.length > 0) {
-            element.innerHTML = Prism.highlight(text, Prism.languages[language], language.pop())
-          } else {
+          if (render === "true") {
             element.innerHTML = text
-          }
-          const codeWrapper = element.closest(".jdl-component-code");
-          if (codeWrapper) {
-            const copyButton = codeWrapper.querySelector(".copy-button, .jenkins-copy-button")
-            copyButton.setAttribute("text", text)
+          } else {
+            element.innerText = text
+
+            Prism.highlightElement(element)
+
+            function setPrismBackgroundVariable() {
+              const computedStyle = window.getComputedStyle(element.parentElement)
+              const background = computedStyle.getPropertyValue('background')
+
+              document.documentElement.style
+                .setProperty(prismVariable, background);
+            }
+
+            // This is for the copy clipboard section which doesn't use prism
+            // We need to match the colour
+            const prismVariable = '--prism-background'
+            if (!getComputedStyle(document.documentElement).getPropertyValue(prismVariable)) {
+              setPrismBackgroundVariable()
+
+              if (window.isSystemRespectingTheme) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                  // If done immediately while appearance is changing from light to dark sometimes the wrong value is retrieved
+                  // A slight delay fixes this
+                  setTimeout(() => setPrismBackgroundVariable(), 50)
+                });
+              }
+            }
+
+            const codeWrapper = element.closest(".jdl-component-code");
+            if (codeWrapper) {
+              const copyButton = codeWrapper.querySelector(".copy-button, .jenkins-copy-button")
+              copyButton.setAttribute("text", text)
+            }
           }
         });
       if (executable === "true") {
-        var script = document.createElement("script");  // create a script DOM node
-          script.src = fullUrl;  // set its src to the provided URL
-          document.head.appendChild(script);
+        const script = document.createElement("script");  // create a script DOM node
+        script.src = fullUrl;  // set its src to the provided URL
+        document.head.appendChild(script);
       }
     })
-
-  document.querySelectorAll('.language-java,.language-xml,.language-html,.language-css')
-    .forEach(element => {
-      const language = extractLanguageFromClassList(element);
-
-      if (language.length > 0) {
-        element.innerHTML = Prism.highlight(element.innerHTML, Prism.languages[language], language.pop())
-      }
-    });
 
   const shareButton = document.querySelector("#button-share");
 

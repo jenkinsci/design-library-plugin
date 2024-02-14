@@ -7,7 +7,7 @@
   <l:tasks>
     <l:search-bar placeholder="${%Search Design Library}" id="design-library-search-bar" />
 
-    <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home-outline plugin-ionicons-api" />
+    <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home-outline plugin-ionicons-api" contextMenu="false" />
 
     <j:forEach var="s" items="${it.all}">
       <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName} plugin-design-library" />

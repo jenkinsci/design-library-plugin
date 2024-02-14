@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form" xmlns:st="jelly:stapler">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form" xmlns:t="/lib/hudson" xmlns:st="jelly:stapler">
   <s:sample>
-    <p class="jdl-paragraph">${%title}</p>
+    <p class="jdl-paragraph">${%spinner.description}</p>
 
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
@@ -17,11 +17,29 @@
       <s:code language="xml" file="spinnerLabel.jelly" />
     </div>
 
+    <p class="jdl-paragraph">${%progressAnimation.description}</p>
+
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <l:progressAnimation />
       </div>
       <s:code language="xml" file="progressAnimation.jelly" />
+    </div>
+
+    <p class="jdl-paragraph">${%progressBar.description}</p>
+
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <t:progressBar pos="50" />
+      </div>
+      <s:code language="xml" file="progressBar.jelly" />
+    </div>
+
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <t:progressBar pos="-1" />
+      </div>
+      <s:code language="xml" file="progressBarIndeterminate.jelly" />
     </div>
 
     <h2 class="jdl-heading">${%progressiveRendering}</h2>

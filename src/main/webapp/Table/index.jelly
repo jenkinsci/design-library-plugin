@@ -1,48 +1,48 @@
 <table class="jenkins-table sortable jenkins-!-margin-bottom-0">
   <thead>
     <th>
-      Hello world
+      Name
     </th>
     <th>
-      Hello world
+      Status
     </th>
     <th>
-      Hello world
+      Reason
     </th>
   </thead>
   <tbody>
   <tr>
     <td>
-      <a href="#" class="jenkins-table__link">Link</a>
+      <a href="#" class="jenkins-table__link">Link 1</a>
     </td>
     <td>
-      Row
+      Success
       <a href="#" class="jenkins-table__link jenkins-table__badge model-link inside">#7</a>
     </td>
     <td>
-      Row
+      No Errors
     </td>
   </tr>
   <tr>
     <td>
-      <a href="#" class="jenkins-table__link">Link</a>
+      <a href="#" class="jenkins-table__link">Link 2</a>
     </td>
     <td>
-      Row
+      Failure
     </td>
     <td>
-      Row
+      Can't compile
     </td>
   </tr>
   <tr>
     <td>
-      <a href="#" class="jenkins-table__link">Link</a>
+      <a href="#" class="jenkins-table__link">Link 3</a>
     </td>
     <td>
-      Row
+      Unstable
     </td>
     <td>
-      Row
+      Test Failed
     </td>
   </tr>
   </tbody>
