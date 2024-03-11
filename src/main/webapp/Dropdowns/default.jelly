@@ -17,7 +17,15 @@
              text="${%Subaction 2}" />
   </dd:submenu>
   <dd:separator />
-  <dd:item icon="symbol-trash-outline plugin-ionicons-api"
-           text="${%Delete}"
-           clazz="jenkins-!-destructive-color" />
+  <dd:custom>
+    <l:confirmationLink class="jenkins-dropdown__item jenkins-!-destructive-color"
+                        href="doDelete"
+                        message="Delete"
+                        post="true">
+      <div class="jenkins-dropdown__item__icon jenkins-!-destructive-color">
+        <l:icon src="symbol-trash-outline plugin-ionicons-api" />
+      </div>
+      ${%Delete}
+    </l:confirmationLink>
+  </dd:custom>
 </l:overflowButton>
