@@ -1,4 +1,4 @@
-<l:layout title="Heading" type="one-column">
+<l:layout title="Heading">
   <l:main-panel>
     <l:app-bar title="Heading">
       <button class="jenkins-button">
