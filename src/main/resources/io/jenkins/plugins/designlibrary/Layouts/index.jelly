@@ -38,10 +38,10 @@
     </div>
 
     <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
+      <h2 class="jenkins-tab-pane__title">${%Multi column}</h2>
 
       <p class="jdl-leading-paragraph">
-        Two column layouts are for 'hub' style pages, pages that have child pages
+        Multi column layouts are for 'hub' style pages, pages that have child pages
         for the user to navigate to.
       </p>
 
@@ -58,18 +58,18 @@
         </thead>
         <tbody>
           <tr>
-            <td>${%two-column.do.1}</td>
-            <td>${%two-column.dont.1}</td>
+            <td>${%multi-column.do.1}</td>
+            <td>${%multi-column.dont.1}</td>
           </tr>
           <tr>
-            <td>${%two-column.do.2}</td>
-            <td>${%two-column.dont.2}</td>
+            <td>${%multi-column.do.2}</td>
+            <td>${%multi-column.dont.2}</td>
           </tr>
           <tr>
-            <td>${%two-column.do.3}</td>
+            <td>${%multi-column.do.3}</td>
           </tr>
           <tr>
-            <td>${%two-column.do.4}</td>
+            <td>${%multi-column.do.4}</td>
           </tr>
         </tbody>
       </table>
@@ -78,14 +78,18 @@
 
       <h3 class="jdl-heading">${%Usage}</h3>
 
-      <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
-
-      <s:code file="twoColumn.jelly" language="xml" previewable="true" />
+      <s:code file="multiColumn.jelly" language="xml" previewable="true" />
 
       <p class="jdl-paragraph">
-        The example above is all you need to set up a two-column page,
+        The example above is all you need to set up a multi column page,
         it's complete with headings, sidebar items and content.
       </p>
+
+      <p class="jdl-paragraph">
+        There's two built in components for creating multi column pages, these are `l:side-panel` and `l:main-panel`. You can define your own columns easily:
+      </p>
+
+      <s:code file="customColumn.jelly" language="xml" />
 
       <h3 class="jdl-heading">${%Badges}</h3>
 
@@ -135,8 +139,6 @@
       <hr />
 
       <h3 class="jdl-heading">${%Usage}</h3>
-
-      <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
 
       <s:code file="oneColumn.jelly" language="xml" previewable="true" />
     </div>
