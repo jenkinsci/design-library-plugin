@@ -1,0 +1,22 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+  <s:sample>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
+        <div class="alert alert-info">
+          Hello world
+        </div>
+        <div class="alert alert-warning">
+          Hello world
+        </div>
+        <div class="alert alert-danger">
+          Hello world
+        </div>
+        <div class="alert alert-success jenkins-!-margin-bottom-0">
+          Hello world
+        </div>
+      </div>
+      <s:code language="xml" file="index.jelly" />
+    </div>
+  </s:sample>
+</j:jelly>
