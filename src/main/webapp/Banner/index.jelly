@@ -7,6 +7,6 @@
 <div class="alert alert-danger">
   Hello world
 </div>
-<div class="alert alert-success jenkins-!-margin-bottom-0">
+<div class="alert alert-success">
   Hello world
 </div>

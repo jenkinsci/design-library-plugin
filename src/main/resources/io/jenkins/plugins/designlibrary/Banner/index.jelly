@@ -1,6 +1,9 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
+    <div class="jdl-leading-paragraph">
+      Banners are a handy way to display small snippets of text and actions.
+    </div>
     <div class="jdl-component-group">
       <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
         <div class="alert alert-info">

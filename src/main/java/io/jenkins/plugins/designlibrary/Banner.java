@@ -6,12 +6,12 @@ import hudson.Extension;
 public class Banner extends UISample {
     @Override
     public String getDisplayName() {
-        return "Alert";
+        return "Banner";
     }
 
     @Override
     public String getIconFileName() {
-        return "symbol-warning-outline plugin-ionicons-api";
+        return "symbol-information-circle-outline plugin-ionicons-api";
     }
 
     @Extension
