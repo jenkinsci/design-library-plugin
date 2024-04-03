@@ -1,0 +1,12 @@
+<div class="alert alert-info">
+  Hello world
+</div>
+<div class="alert alert-warning">
+  Hello world
+</div>
+<div class="alert alert-danger">
+  Hello world
+</div>
+<div class="alert alert-success">
+  Hello world
+</div>
