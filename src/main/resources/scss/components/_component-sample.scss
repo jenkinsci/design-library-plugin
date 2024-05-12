@@ -49,6 +49,10 @@
     align-items: unset;
   }
 
+  &--horizontal {
+    flex-direction: row;
+  }
+
   #bottom-sticker {
     margin: -1.5rem -2rem;
   }
