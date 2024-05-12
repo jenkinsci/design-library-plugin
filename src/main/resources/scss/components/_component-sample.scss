@@ -58,6 +58,10 @@
     min-width: 360px;
   }
 
+  &--no-bottom-padding {
+    padding-bottom: 0;
+  }
+
   #bottom-sticker {
     margin: -1.5rem -2rem;
   }
