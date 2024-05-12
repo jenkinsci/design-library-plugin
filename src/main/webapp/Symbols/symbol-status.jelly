@@ -1,0 +1,6 @@
+<l:icon src="symbol-status-blue" />
+<l:icon src="symbol-status-yellow" />
+<l:icon src="symbol-status-red" />
+<l:icon src="symbol-status-nobuilt" />
+<l:icon src="symbol-status-aborted" />
+<l:icon src="symbol-status-disabled" />
