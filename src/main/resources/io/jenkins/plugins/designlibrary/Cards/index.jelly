@@ -1,9 +1,8 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
   <s:sample>
-    <h2 class="jdl-heading">${%Cards}</h2>
-    <p class="jdl-paragraph">${%description}</p>
-    <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
+    <p class="jdl-leading-paragraph">${%description}</p>
+    <div class="jdl-component-sample">
       <l:card title="Card title" expandable="hello">
         Hello I am card content
       </l:card>
