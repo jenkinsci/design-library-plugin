@@ -1,7 +1,39 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:dd="/lib/layout/dropdowns">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <p class="jdl-leading-paragraph">${%description}</p>
+
+    <div class="jdl-examples">
+        <l:card title="Tests" expandable="#">
+          Passing tests
+        </l:card>
+        <l:card title="Details" expandable="#">
+          Build info
+        </l:card>
+        <j:set var="controls">
+          <a class="jenkins-card__reveal" href="#" tooltip="Download">
+            <l:icon src="symbol-download-outline plugin-ionicons-api" />
+          </a>
+        </j:set>
+        <l:card title="Card title" expandable="#" controls="${controls}">
+          Terminal
+        </l:card>
+        <l:card title="Test history" expandable="#">
+          Graph view
+        </l:card>
+    </div>
+
+    <s:dos-donts>
+      <tr>
+        <td>${%do.1}</td>
+        <td>${%dont.1}</td>
+      </tr>
+      <tr>
+        <td>${%do.2}</td>
+        <td>${%dont.2}</td>
+      </tr>
+    </s:dos-donts>
+
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <j:set var="controls">
@@ -15,6 +47,5 @@
       </div>
       <s:code language="xml" file="card.jelly" />
     </div>
-
   </s:sample>
 </j:jelly>

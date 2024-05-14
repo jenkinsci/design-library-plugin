@@ -1,3 +1,23 @@
 @use "abstracts";
 @use "components";
 @use "pages";
+
+.jdl-examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--section-padding);
+  background: #fdfefe;
+  padding: 100px;
+  gap: 100px;
+  border-radius: 1rem;
+
+  .jenkins-card {
+    background: white !important;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    margin: auto;
+  }
+}
