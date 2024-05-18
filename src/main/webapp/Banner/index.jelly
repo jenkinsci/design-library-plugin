@@ -1,12 +1,12 @@
-<div class="alert alert-info">
+<div class="jenkins-alert jenkins-alert-info">
   Hello world
 </div>
-<div class="alert alert-warning">
+<div class="jenkins-alert jenkins-alert-warning">
   Hello world
 </div>
-<div class="alert alert-danger">
+<div class="jenkins-alert jenkins-alert-danger">
   Hello world
 </div>
-<div class="alert alert-success">
+<div class="jenkins-alert jenkins-alert-success">
   Hello world
 </div>

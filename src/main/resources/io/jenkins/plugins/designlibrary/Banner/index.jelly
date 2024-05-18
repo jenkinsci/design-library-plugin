@@ -6,20 +6,24 @@
     </div>
     <div class="jdl-component-group">
       <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
-        <div class="alert alert-info">
+        <div class="jenkins-alert jenkins-alert-info">
           Hello world
         </div>
-        <div class="alert alert-warning">
+        <div class="jenkins-alert jenkins-alert-warning">
           Hello world
         </div>
-        <div class="alert alert-danger">
+        <div class="jenkins-alert jenkins-alert-danger">
           Hello world
         </div>
-        <div class="alert alert-success jenkins-!-margin-bottom-0">
+        <div class="jenkins-alert jenkins-alert-success jenkins-!-margin-bottom-0">
           Hello world
         </div>
       </div>
       <s:code language="xml" file="index.jelly" />
+    </div>
+    <div class="jenkins-alert jenkins-alert-warning">
+      Since 2.459. The css classes have been without the <em>jenkins-</em> prefix in older versions and can still be used but they might interfere with
+      classes defined in bootstrap.
     </div>
   </s:sample>
 </j:jelly>
