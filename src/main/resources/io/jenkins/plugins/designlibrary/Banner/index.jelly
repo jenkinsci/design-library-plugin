@@ -22,7 +22,7 @@
       <s:code language="xml" file="index.jelly" />
     </div>
     <div class="jenkins-alert jenkins-alert-warning">
-      Since 2.459. The css classes have been without the <em>jenkins-</em> prefix in older versions and can still be used but they might interfere with
+      Since 2.459. The css classes have the <em>jenkins-</em> prefix. Older versions should use the non prefixed form which interfere with
       classes defined in bootstrap.
     </div>
   </s:sample>
