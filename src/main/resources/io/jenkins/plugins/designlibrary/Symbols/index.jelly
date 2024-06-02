@@ -97,6 +97,31 @@
       <s:code language="xml" file="symbol-size.jelly" />
     </div>
 
+    <p class="jdl-paragraph">${%usage.5}</p>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample jdl-component-sample--horizontal">
+        <l:icon src="symbol-status-blue" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-status-yellow" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-status-red" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-status-nobuilt" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-status-aborted" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-status-disabled" class="jdl-symbols__symbol" />
+      </div>
+      <s:code language="xml" file="symbol-status.jelly" />
+    </div>
+
+    <p class="jdl-paragraph">${%usage.6}</p>
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample jdl-component-sample--horizontal">
+        <l:icon src="symbol-weather-icon-health-00to19" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-weather-icon-health-20to39" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-weather-icon-health-40to59" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-weather-icon-health-60to79" class="jdl-symbols__symbol" />
+        <l:icon src="symbol-weather-icon-health-80plus" class="jdl-symbols__symbol" />
+      </div>
+      <s:code language="xml" file="symbol-weather.jelly" />
+    </div>
+
     <span>
       <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
          target="_blank" class="jdl-paragraph jdl-link">
