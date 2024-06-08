@@ -82,8 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  //
-
+  // 'On this page' side-panel
   function createElementFromHtml(html) {
     const template = document.createElement("template");
     template.innerHTML = html.trim();
