@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     onThisPageList.append(newNode);
   });
 
-  if (headings.length > 1) {
+  if (headings.length <= 1) {
     onThisPageList.parentNode.style.display = 'none';
   }
 });
