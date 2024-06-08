@@ -81,4 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
   }
+
+  // 'On this page' side-panel
+  function createElementFromHtml(html) {
+    const template = document.createElement("template");
+    template.innerHTML = html.trim();
+    return template.content.firstElementChild;
+  }
+
+  const headings = [...document.querySelectorAll("h2")].filter(e => e.checkVisibility());
+  const onThisPageList = document.querySelector(".jdl-on-this-page__list");
+
+  headings.forEach(heading => {
+    heading.setAttribute("id", heading.textContent);
+    const newNode = createElementFromHtml(`<li><a href="#${heading.id}">${heading.textContent}</a></li>`);
+    onThisPageList.append(newNode);
+  });
+
+  if (headings.length === 0) {
+    onThisPageList.parentNode.style.display = 'none';
+  }
 });
