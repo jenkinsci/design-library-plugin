@@ -52,8 +52,8 @@
       <table class="jdl-dos-donts">
         <thead>
           <tr>
-            <th class="jenkins-!-color-success-color">${%do}</th>
-            <th class="jenkins-!-color-error-color">${%dont}</th>
+            <th class="jenkins-!-success-color">${%do}</th>
+            <th class="jenkins-!-error-color">${%dont}</th>
           </tr>
         </thead>
         <tbody>
@@ -124,8 +124,8 @@
       <table class="jdl-dos-donts">
         <thead>
           <tr>
-            <th class="jenkins-!-color-success-color">${%do}</th>
-            <th class="jenkins-!-color-success-color">${%dont}</th>
+            <th class="jenkins-!-success-color">${%do}</th>
+            <th class="jenkins-!-success-color">${%dont}</th>
           </tr>
         </thead>
         <tbody>

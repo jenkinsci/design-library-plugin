@@ -1,0 +1,91 @@
+<!--
+The MIT License
+
+Copyright 2024 Jan Faracik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:dd="/lib/layout/dropdowns">
+  <s:sample>
+    <p class="jdl-leading-paragraph">${%description.1}</p>
+
+    <p class="jdl-paragraph">${%description.2}</p>
+
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:overflowButton>
+          <dd:item icon="symbol-star-outline plugin-ionicons-api"
+                   text="${%Action 1}" />
+          <dd:item icon="symbol-star-outline plugin-ionicons-api"
+                   text="${%Action 2}" />
+          <dd:separator />
+          <dd:header text="${%Heading}" />
+          <dd:item icon="symbol-star-outline plugin-ionicons-api"
+                   text="${%Action 3}" />
+          <dd:item icon="symbol-star-outline plugin-ionicons-api"
+                   text="${%Action 4}" />
+          <dd:separator />
+          <dd:submenu icon="symbol-star-outline plugin-ionicons-api" text="${%Submenu}">
+            <dd:item icon="symbol-star-outline plugin-ionicons-api"
+                     text="${%Subaction 1}" />
+            <dd:item icon="symbol-star-outline plugin-ionicons-api"
+                     text="${%Subaction 2}" />
+          </dd:submenu>
+          <dd:separator />
+          <dd:custom>
+            <l:confirmationLink class="jenkins-dropdown__item jenkins-!-destructive-color"
+                                href="doDelete"
+                                message="Delete"
+                                post="true">
+              <div class="jenkins-dropdown__item__icon jenkins-!-destructive-color">
+                <l:icon src="symbol-trash-outline plugin-ionicons-api" />
+              </div>
+              ${%Delete}
+            </l:confirmationLink>
+          </dd:custom>
+        </l:overflowButton>
+      </div>
+      <s:code language="xml" file="default.jelly" />
+    </div>
+
+    <table class="jdl-dos-donts">
+      <thead>
+        <tr>
+          <th class="jenkins-!-success-color">${%do}</th>
+          <th class="jenkins-!-error-color">${%dont}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${%do.1}</td>
+          <td>${%dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%do.2}</td>
+          <td>${%dont.2}</td>
+        </tr>
+        <tr>
+          <td>${%do.3}</td>
+        </tr>
+      </tbody>
+    </table>
+  </s:sample>
+</j:jelly>
