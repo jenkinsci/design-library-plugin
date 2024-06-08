@@ -1,0 +1,5 @@
+<j:if test="${mode == 'side-panel' or mode == 'main'}">
+  <div>
+    My custom column
+  </div>
+</j:if>

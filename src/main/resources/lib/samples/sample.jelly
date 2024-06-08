@@ -79,5 +79,12 @@ THE SOFTWARE.
         </j:if>
       </div>
     </l:main-panel>
+
+    <j:if test="${mode == 'main'}">
+      <div class="jdl-on-this-page">
+        <l:app-bar title="On this page" />
+        <ol class="jdl-on-this-page__list" />
+      </div>
+    </j:if>
   </l:layout>
 </j:jelly>
