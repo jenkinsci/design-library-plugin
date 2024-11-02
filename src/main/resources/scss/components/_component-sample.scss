@@ -49,6 +49,10 @@
     align-items: unset;
   }
 
+  &--no-bottom-padding {
+    padding-bottom: 0;
+  }
+
   &--horizontal {
     flex-direction: row;
   }
