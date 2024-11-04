@@ -4,23 +4,71 @@
     <p class="jdl-leading-paragraph">${%description}</p>
 
     <div class="jdl-examples">
-        <l:card title="Tests" expandable="#">
-          Passing tests
-        </l:card>
-        <l:card title="Details" expandable="#">
-          Build info
-        </l:card>
-        <j:set var="controls">
-          <a class="jenkins-card__reveal" href="#" tooltip="Download">
-            <l:icon src="symbol-download-outline plugin-ionicons-api" />
-          </a>
-        </j:set>
-        <l:card title="Card title" expandable="#" controls="${controls}">
-          Terminal
-        </l:card>
-        <l:card title="Test history" expandable="#">
-          Graph view
-        </l:card>
+      <l:card title="Pipeline" expandable="#">
+        Pipeline will go here!
+      </l:card>
+      <l:card title="Details">
+        <p class="app-details__item">
+          <l:icon src="symbol-checkmark-circle-outline plugin-ionicons-api"/>
+          Last success 16 hours ago
+          <a href="#">#375</a>
+        </p>
+        <p class="app-details__item">
+          <l:icon src="symbol-close-circle-outline plugin-ionicons-api"/>
+          Last failure One day ago
+          <a href="#">#370</a>
+        </p>
+        <p class="app-details__item">
+          <l:icon src="symbol-timer-outline plugin-ionicons-api"/>
+          Last duration 30 seconds
+          <a href="#">#375</a>
+        </p>
+        <p class="app-details__item">
+          <l:icon src="symbol-logo-github plugin-ionicons-api"/>
+          <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a>
+        </p>
+      </l:card>
+      <j:set var="controls">
+        <a class="jenkins-card__reveal" href="#" tooltip="Download">
+          <l:icon src="symbol-download-outline plugin-ionicons-api"/>
+        </a>
+      </j:set>
+      <l:card title="Console" expandable="#" controls="${controls}" id="app-console">
+        <code class="app-terminal">
+          03:27:50  [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
+          03:27:50  [INFO]   from pom.xml
+          03:27:50  [INFO] --------------------------------[ hpi ]---------------------------------
+          03:27:52  [INFO]
+          03:27:52  [INFO] --- clean:3.4.0:clean (default-clean) @ design-library ---
+          03:27:52  [INFO]
+          03:27:52  [INFO] --- hpi:3.57:validate (default-validate) @ design-library ---
+          03:27:52  [INFO] Created marker file /home/jenkins/agent/workspace/ins_design-library-plugin_master/target/java-level/11
+          03:27:52  [INFO]
+          03:27:52  [INFO] --- hpi:3.57:validate-hpi (default-validate-hpi) @ design-library ---
+          03:27:52  [INFO]
+          03:27:52  [INFO] --- enforcer:3.5.0:enforce (display-info) @ design-library ---
+          03:27:52  [INFO] Rule 0: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
+          03:27:52  [INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+          03:27:52  [INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+          03:27:53  [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+          03:27:53  [INFO] Rule 4: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+          03:27:53  [INFO] Ignoring requireUpperBoundDeps in org.ow2.asm:asm
+          03:27:53  [INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+        </code>
+      </l:card>
+      <l:card title="Tests" expandable="#">
+        <div class="app-linting-card">
+          <span height="22px" width="22px" color="#000000" rotate="0" class="sc-bczRLJ dbIYMZ">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M464 128L240 384l-96-96M144 384l-96-96M368 128L232 284"></path>
+            </svg>
+          </span>
+          <p>All tests passed</p>
+          <p class="appp">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
+          <p class="appp">Took 15 hours</p>
+        </div>
+      </l:card>
     </div>
 
     <s:dos-donts>
@@ -38,14 +86,14 @@
       <div class="jdl-component-sample">
         <j:set var="controls">
           <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
-            <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
+            <l:icon src="symbol-sparkles-outline plugin-ionicons-api"/>
           </a>
         </j:set>
         <l:card title="Card title" expandable="#" controls="${controls}">
           Card content
         </l:card>
       </div>
-      <s:code language="xml" file="card.jelly" />
+      <s:code language="xml" file="card.jelly"/>
     </div>
   </s:sample>
 </j:jelly>
