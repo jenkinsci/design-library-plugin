@@ -23,14 +23,14 @@
             <div class="app-card__preview">
               <l:icon src="symbol-cards plugin-design-library" />
             </div>
-            <div class="app-card__title">${%cards}</div>
+            <div class="app-card__title">${%cards} <span class="app-card__new">${%New}</span></div>
             <div class="app-card__description">${%cards-description}</div>
           </a>
           <a class="app-card__container" href="Dropdowns">
             <div class="app-card__preview">
               <l:icon src="symbol-dropdowns plugin-design-library" />
             </div>
-            <div class="app-card__title">${%dropdowns}</div>
+            <div class="app-card__title">${%dropdowns} <span class="app-card__new">${%New}</span></div>
             <div class="app-card__description">${%dropdowns-description}</div>
           </a>
           <a class="app-card__container" href="Buttons">
