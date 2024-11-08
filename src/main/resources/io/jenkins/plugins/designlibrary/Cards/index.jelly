@@ -123,10 +123,13 @@
         <td>${%do.2}</td>
         <td>${%dont.2}</td>
       </tr>
+      <tr>
+        <td>${%do.3}</td>
+      </tr>
     </s:dos-donts>
 
     <div class="jdl-component-group">
-      <div class="jdl-component-sample">
+      <div class="jdl-component-sample" id="bigg">
         <j:set var="controls">
           <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
             <l:icon src="symbol-sparkles-outline plugin-ionicons-api"/>
