@@ -11,7 +11,7 @@ public class Cards extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-app-bar";
+        return "symbol-cards";
     }
 
     @Extension

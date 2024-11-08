@@ -70,3 +70,99 @@
     color: var(--text-color-secondary);
   }
 }
+
+.app-graphview {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-top: -20px;
+  z-index: 0;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 24px);
+    bottom: calc(50% - 26px);
+    left: 65px;
+    right: 65px;
+    background: color-mix(in srgb, var(--text-color-secondary) 25%, var(--background));
+    z-index: -1;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      z-index: 0;
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 100%;
+      }
+
+      &::before {
+        background: var(--card-background);
+        z-index: -1;
+      }
+
+      &::after {
+        background: var(--card-background);
+        z-index: 0;
+      }
+
+      &:not(:has(svg)) {
+        width: 20px;
+        height: 20px;
+        margin-block: 5px;
+
+        &::after {
+          background: color-mix(in srgb, var(--text-color-secondary) 25%, var(--background));
+        }
+      }
+
+      &:has(svg) {
+        width: 30px;
+        height: 30px;
+
+        &::after {
+          background: color-mix(in srgb, var(--green) 20%, var(--background));
+          box-shadow: 0 0 0 2px var(--background);
+        }
+
+        span {
+          display: contents;
+        }
+
+        svg {
+          color: var(--green) !important;
+          width: 18px !important;
+          height: 18px !important;
+          z-index: 1;
+
+          * {
+            stroke-width: 60px;
+          }
+        }
+      }
+    }
+  }
+}

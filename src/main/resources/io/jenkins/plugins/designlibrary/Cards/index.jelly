@@ -5,7 +5,49 @@
 
     <div class="jdl-examples">
       <l:card title="Pipeline" expandable="#">
-        Pipeline will go here!
+        <div class="app-graphview">
+          <div class="app-graphview__item">
+            <p>Start</p>
+            <div></div>
+          </div>
+          <div class="app-graphview__item">
+            <p>Parallel</p>
+            <div>
+              <span height="22px" width="22px" color="#000000" rotate="0" class="sc-bczRLJ dbIYMZ">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M416 128L192 384l-96-96"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="app-graphview__item">
+            <p>Deploy</p>
+            <div>
+              <span height="22px" width="22px" color="#000000" rotate="0" class="sc-bczRLJ dbIYMZ">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M416 128L192 384l-96-96"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="app-graphview__item">
+            <p>Linux publishing</p>
+            <div>
+              <span height="22px" width="22px" color="#000000" rotate="0" class="sc-bczRLJ dbIYMZ">
+                <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M416 128L192 384l-96-96"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="app-graphview__item">
+            <p>End</p>
+            <div></div>
+          </div>
+        </div>
       </l:card>
       <l:card title="Details">
         <p class="app-details__item">
@@ -48,25 +90,26 @@
       </j:set>
       <l:card title="Console" expandable="#" controls="${controls}" id="app-console">
         <code class="app-terminal">
-          03:27:50  [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
-          03:27:50  [INFO]   from pom.xml
-          03:27:50  [INFO] --------------------------------[ hpi ]---------------------------------
-          03:27:52  [INFO]
-          03:27:52  [INFO] --- clean:3.4.0:clean (default-clean) @ design-library ---
-          03:27:52  [INFO]
-          03:27:52  [INFO] --- hpi:3.57:validate (default-validate) @ design-library ---
-          03:27:52  [INFO] Created marker file /home/jenkins/agent/workspace/ins_design-library-plugin_master/target/java-level/11
-          03:27:52  [INFO]
-          03:27:52  [INFO] --- hpi:3.57:validate-hpi (default-validate-hpi) @ design-library ---
-          03:27:52  [INFO]
-          03:27:52  [INFO] --- enforcer:3.5.0:enforce (display-info) @ design-library ---
-          03:27:52  [INFO] Rule 0: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
-          03:27:52  [INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
-          03:27:52  [INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
-          03:27:53  [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
-          03:27:53  [INFO] Rule 4: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
-          03:27:53  [INFO] Ignoring requireUpperBoundDeps in org.ow2.asm:asm
-          03:27:53  [INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+          03:27:50 [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
+          03:27:50 [INFO] from pom.xml
+          03:27:50 [INFO] --------------------------------[ hpi ]---------------------------------
+          03:27:52 [INFO]
+          03:27:52 [INFO] --- clean:3.4.0:clean (default-clean) @ design-library ---
+          03:27:52 [INFO]
+          03:27:52 [INFO] --- hpi:3.57:validate (default-validate) @ design-library ---
+          03:27:52 [INFO] Created marker file
+          /home/jenkins/agent/workspace/ins_design-library-plugin_master/target/java-level/11
+          03:27:52 [INFO]
+          03:27:52 [INFO] --- hpi:3.57:validate-hpi (default-validate-hpi) @ design-library ---
+          03:27:52 [INFO]
+          03:27:52 [INFO] --- enforcer:3.5.0:enforce (display-info) @ design-library ---
+          03:27:52 [INFO] Rule 0: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
+          03:27:52 [INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+          03:27:52 [INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+          03:27:53 [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+          03:27:53 [INFO] Rule 4: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+          03:27:53 [INFO] Ignoring requireUpperBoundDeps in org.ow2.asm:asm
+          03:27:53 [INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
         </code>
       </l:card>
     </div>
