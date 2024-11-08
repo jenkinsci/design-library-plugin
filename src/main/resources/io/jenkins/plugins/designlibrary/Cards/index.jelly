@@ -28,6 +28,19 @@
           <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a>
         </p>
       </l:card>
+      <l:card title="Tests" expandable="#">
+        <div class="app-linting-card">
+          <span height="22px" width="22px" color="#000000" rotate="0" class="sc-bczRLJ dbIYMZ">
+            <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M464 128L240 384l-96-96M144 384l-96-96M368 128L232 284"></path>
+            </svg>
+          </span>
+          <p>All tests passed</p>
+          <p class="appp">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
+          <p class="appp">Took 15 hours</p>
+        </div>
+      </l:card>
       <j:set var="controls">
         <a class="jenkins-card__reveal" href="#" tooltip="Download">
           <l:icon src="symbol-download-outline plugin-ionicons-api"/>
@@ -55,19 +68,6 @@
           03:27:53  [INFO] Ignoring requireUpperBoundDeps in org.ow2.asm:asm
           03:27:53  [INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
         </code>
-      </l:card>
-      <l:card title="Tests" expandable="#">
-        <div class="app-linting-card">
-          <span height="22px" width="22px" color="#000000" rotate="0" class="sc-bczRLJ dbIYMZ">
-            <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
-                    d="M464 128L240 384l-96-96M144 384l-96-96M368 128L232 284"></path>
-            </svg>
-          </span>
-          <p>All tests passed</p>
-          <p class="appp">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
-          <p class="appp">Took 15 hours</p>
-        </div>
       </l:card>
     </div>
 

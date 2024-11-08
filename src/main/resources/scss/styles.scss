@@ -13,14 +13,19 @@
 
 .jdl-examples {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  height: 700px;
+  height: 680px;
   margin-bottom: var(--section-padding);
 
   .jenkins-card {
     margin-bottom: 0;
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      grid-column: span 2;
+    }
   }
 }
 
