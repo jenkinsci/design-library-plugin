@@ -114,6 +114,8 @@
       </l:card>
     </div>
 
+    <hr />
+
     <s:dos-donts>
       <tr>
         <td>${%do.1}</td>
@@ -127,6 +129,8 @@
         <td>${%do.3}</td>
       </tr>
     </s:dos-donts>
+
+    <hr />
 
     <div class="jdl-component-group">
       <div class="jdl-component-sample" id="bigg">
