@@ -4,6 +4,7 @@ import hudson.Extension;
 
 @Extension
 public class Cards extends UISample {
+
     @Override
     public String getDisplayName() {
         return "Cards";
