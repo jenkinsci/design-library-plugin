@@ -36,22 +36,22 @@
       </l:card>
       <l:card title="Details">
         <p class="app-details__item">
-          <l:icon src="symbol-checkmark-circle-outline plugin-ionicons-api"/>
+          <l:icon src="symbol-checkmark-circle-outline plugin-ionicons-api" />
           Last success 16 hours ago
           <a href="#">#375</a>
         </p>
         <p class="app-details__item">
-          <l:icon src="symbol-close-circle-outline plugin-ionicons-api"/>
+          <l:icon src="symbol-close-circle-outline plugin-ionicons-api" />
           Last failure One day ago
           <a href="#">#370</a>
         </p>
         <p class="app-details__item">
-          <l:icon src="symbol-timer-outline plugin-ionicons-api"/>
+          <l:icon src="symbol-timer-outline plugin-ionicons-api" />
           Last duration 30 seconds
           <a href="#">#375</a>
         </p>
         <p class="app-details__item">
-          <l:icon src="symbol-logo-github plugin-ionicons-api"/>
+          <l:icon src="symbol-logo-github plugin-ionicons-api" />
           <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a>
         </p>
       </l:card>
@@ -65,7 +65,7 @@
       </l:card>
       <j:set var="controls">
         <a class="jenkins-card__reveal" href="#" tooltip="Download">
-          <l:icon src="symbol-download-outline plugin-ionicons-api"/>
+          <l:icon src="symbol-download-outline plugin-ionicons-api" />
         </a>
       </j:set>
       <l:card title="Console" expandable="#" controls="${controls}" id="app-console">
@@ -116,14 +116,14 @@
       <div class="jdl-component-sample" id="bigg">
         <j:set var="controls">
           <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
-            <l:icon src="symbol-sparkles-outline plugin-ionicons-api"/>
+            <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
           </a>
         </j:set>
         <l:card title="Card title" expandable="#" controls="${controls}">
           Card content
         </l:card>
       </div>
-      <s:code language="xml" file="card.jelly"/>
+      <s:code language="xml" file="card.jelly" />
     </div>
   </s:sample>
 </j:jelly>

@@ -108,19 +108,11 @@
       border-radius: 100%;
       z-index: 0;
 
-      &::before, &::after {
+      &::after {
         content: "";
         position: absolute;
         inset: 0;
         border-radius: 100%;
-      }
-
-      &::before {
-        background: var(--card-background);
-        z-index: -1;
-      }
-
-      &::after {
         background: var(--card-background);
         z-index: 0;
       }
@@ -136,27 +128,17 @@
       }
 
       &:has(svg) {
-        width: 30px;
-        height: 30px;
-
-        &::after {
-          background: color-mix(in srgb, var(--green) 20%, var(--background));
-          box-shadow: 0 0 0 3px var(--background);
-        }
+        width: 2rem;
+        height: 2rem;
 
         span {
           display: contents;
         }
 
         svg {
-          color: var(--green) !important;
-          width: 18px !important;
-          height: 18px !important;
+          width: 2rem;
+          height: 2rem;
           z-index: 1;
-
-          * {
-            stroke-width: 60px;
-          }
         }
       }
     }
