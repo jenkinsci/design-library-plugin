@@ -11,7 +11,7 @@
 
 .app-home__subheading {
   margin: 0 0 -1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.05rem;
   color: var(--text-color-secondary);
   background-color: var(--background);
@@ -39,7 +39,7 @@
 }
 
 .app-card__container:link:hover .app-card__preview {
-  filter: brightness(1.1);
+  filter: brightness(1.2);
 }
 
 .app-card__container:link:hover .app-card__title {
@@ -182,8 +182,30 @@
 
 .app-card__title {
   @include mixins.base-text;
+  display: flex;
+  align-items: center;
   margin: 0;
   font-weight: 500;
+  gap: 1.15rem;
+}
+
+.app-card__new-tag {
+  @include mixins.base-text;
+  position: relative;
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  z-index: 0;
+  color: var(--background);
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -1px -8px;
+    border-radius: 100px;
+    background: var(--text-color);
+    z-index: -1;
+  }
 }
 
 .app-card__description {

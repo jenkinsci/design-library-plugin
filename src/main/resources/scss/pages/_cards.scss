@@ -1,0 +1,177 @@
+.app-cards__examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  height: 680px;
+  margin-bottom: calc(var(--section-padding) * 1.5);
+
+  .jenkins-card {
+    margin-bottom: 0;
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+
+    .jenkins-card {
+      min-height: 220px;
+    }
+  }
+}
+
+.app-cards__graph-view {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-top: -20px;
+  z-index: 0;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 24px);
+    bottom: calc(50% - 26px);
+    left: 65px;
+    right: 65px;
+    background: color-mix(in srgb, var(--text-color-secondary) 25%, var(--background));
+    z-index: -1;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      z-index: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 100%;
+        background: var(--card-background);
+        z-index: 0;
+      }
+
+      &:not(:has(svg)) {
+        width: 20px;
+        height: 20px;
+        margin-block: 5px;
+
+        &::after {
+          background: color-mix(in srgb, var(--text-color-secondary) 25%, var(--background));
+        }
+      }
+
+      &:has(svg) {
+        width: 2rem;
+        height: 2rem;
+
+        span {
+          display: contents;
+        }
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+.app-cards__details__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 1rem 0;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+#app-cards__console {
+  --card-background: black;
+  --text-color: white;
+  --text-color-secondary: white;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: black;
+  color: white;
+  overflow: hidden;
+  text-wrap: wrap;
+  color-scheme: dark;
+
+  .jenkins-card__content {
+    display: contents;
+  }
+
+  code {
+    white-space: pre-line;
+    overflow-y: auto;
+    height: 100%;
+    padding: 0 1rem 1rem 1rem;
+    max-height: 300px;
+  }
+}
+
+.app-cards__tests {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  pointer-events: none;
+
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--success-color);
+  }
+
+  &__description {
+    font-size: 0.9rem !important;
+    color: var(--text-color-secondary);
+  }
+}
+
+#app-cards__example {
+  width: 340px;
+}
