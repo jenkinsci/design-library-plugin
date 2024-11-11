@@ -1,13 +1,4 @@
-#app-console {
-  --card-background: black;
-  --text-color-secondary: white;
-  background: black;
-  color: white;
-  overflow: hidden;
-  text-wrap: wrap;
-}
-
-.jdl-examples {
+.app-cards__examples {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -23,51 +14,19 @@
       grid-column: span 2;
     }
   }
-}
 
-.app-details__item {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin: 0 0 1rem 0;
+  @media (max-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+    height: unset;
 
-  svg {
-    width: 1.25rem;
-    height: 1.25rem;
+    .jenkins-card {
+      min-height: 220px;
+    }
   }
 }
 
-.app-linting-card {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-align: center;
-  padding: 2rem;
-  pointer-events: none;
-
-  p {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-
-  svg {
-    width: 3rem;
-    height: 3rem;
-    color: var(--success-color);
-  }
-
-  .appp {
-    font-size: 0.9rem !important;
-    color: var(--text-color-secondary);
-  }
-}
-
-.app-graphview {
+.app-cards__graph-view {
   position: absolute;
   inset: 0;
   display: flex;
@@ -142,6 +101,74 @@
         }
       }
     }
+  }
+}
+
+.app-cards__details__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 1rem 0;
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+#app-console {
+  --card-background: black;
+  --text-color: white;
+  --text-color-secondary: white;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: black;
+  color: white;
+  overflow: hidden;
+  text-wrap: wrap;
+  color-scheme: dark;
+
+  .jenkins-card__content {
+    display: contents;
+  }
+
+  code {
+    white-space: pre-line;
+    overflow-y: auto;
+    height: 100%;
+    padding: 0 1rem 1rem 1rem;
+    max-height: 300px;
+  }
+}
+
+.app-cards__tests {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  pointer-events: none;
+
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    color: var(--success-color);
+  }
+
+  &__description {
+    font-size: 0.9rem !important;
+    color: var(--text-color-secondary);
   }
 }
 

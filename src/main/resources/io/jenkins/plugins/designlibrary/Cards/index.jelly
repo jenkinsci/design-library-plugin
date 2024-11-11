@@ -3,64 +3,64 @@
   <s:sample>
     <p class="jdl-leading-paragraph">${%description}</p>
 
-    <div class="jdl-examples">
+    <div class="app-cards__examples">
       <l:card title="Pipeline" expandable="#">
-        <div class="app-graphview">
-          <div class="app-graphview__item">
+        <div class="app-cards__graph-view">
+          <div class="app-cards__graph-view__item">
             <p>Start</p>
             <div />
           </div>
-          <div class="app-graphview__item">
+          <div class="app-cards__graph-view__item">
             <p>Parallel</p>
             <div>
               <l:icon src="symbol-status-blue" />
             </div>
           </div>
-          <div class="app-graphview__item">
+          <div class="app-cards__graph-view__item">
             <p>Deploy</p>
             <div>
               <l:icon src="symbol-status-blue" />
             </div>
           </div>
-          <div class="app-graphview__item">
+          <div class="app-cards__graph-view__item">
             <p>Linux publishing</p>
             <div>
               <l:icon src="symbol-status-blue" />
             </div>
           </div>
-          <div class="app-graphview__item">
+          <div class="app-cards__graph-view__item">
             <p>End</p>
             <div />
           </div>
         </div>
       </l:card>
       <l:card title="Details">
-        <p class="app-details__item">
+        <p class="app-cards__details__item">
           <l:icon src="symbol-checkmark-circle-outline plugin-ionicons-api" />
           Last success 16 hours ago
           <a href="#">#375</a>
         </p>
-        <p class="app-details__item">
+        <p class="app-cards__details__item">
           <l:icon src="symbol-close-circle-outline plugin-ionicons-api" />
           Last failure One day ago
           <a href="#">#370</a>
         </p>
-        <p class="app-details__item">
+        <p class="app-cards__details__item">
           <l:icon src="symbol-timer-outline plugin-ionicons-api" />
           Last duration 30 seconds
           <a href="#">#375</a>
         </p>
-        <p class="app-details__item">
+        <p class="app-cards__details__item">
           <l:icon src="symbol-logo-github plugin-ionicons-api" />
           <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a>
         </p>
       </l:card>
       <l:card title="Tests" expandable="#">
-        <div class="app-linting-card">
+        <div class="app-cards__tests">
           <l:icon src="symbol-checkmark-done-outline plugin-ionicons-api" />
           <p>All tests passed</p>
-          <p class="appp">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
-          <p class="appp">Took 15 hours</p>
+          <p class="app-cards__tests__description">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
+          <p class="app-cards__tests__description">Took 15 hours</p>
         </div>
       </l:card>
       <j:set var="controls">
@@ -69,8 +69,7 @@
         </a>
       </j:set>
       <l:card title="Console" expandable="#" controls="${controls}" id="app-console">
-        <code class="app-terminal">
-          03:27:50 [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
+        <code>03:27:50 [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
           03:27:50 [INFO] from pom.xml
           03:27:50 [INFO] --------------------------------[ hpi ]---------------------------------
           03:27:52 [INFO]
