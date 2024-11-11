@@ -68,7 +68,7 @@
           <l:icon src="symbol-download-outline plugin-ionicons-api" />
         </a>
       </j:set>
-      <l:card title="Console" expandable="#" controls="${controls}" id="app-console">
+      <l:card title="Console" expandable="#" controls="${controls}" id="app-cards__console">
         <code>03:27:50 [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
           03:27:50 [INFO] from pom.xml
           03:27:50 [INFO] --------------------------------[ hpi ]---------------------------------
@@ -112,13 +112,13 @@
     <hr />
 
     <div class="jdl-component-group">
-      <div class="jdl-component-sample" id="bigg">
+      <div class="jdl-component-sample">
         <j:set var="controls">
           <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
             <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
           </a>
         </j:set>
-        <l:card title="Card title" expandable="#" controls="${controls}">
+        <l:card title="Card title" expandable="#" controls="${controls}" id="app-cards__example">
           Card content
         </l:card>
       </div>

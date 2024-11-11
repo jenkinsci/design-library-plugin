@@ -116,7 +116,7 @@
   }
 }
 
-#app-console {
+#app-cards__console {
   --card-background: black;
   --text-color: white;
   --text-color-secondary: white;
@@ -172,8 +172,6 @@
   }
 }
 
-#bigg {
-  .jenkins-card {
-    width: 340px;
-  }
+#app-cards__example {
+  width: 340px;
 }
