@@ -1,10 +1,9 @@
 package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
-import jenkins.model.Jenkins;
-
 import java.util.ArrayList;
 import java.util.List;
+import jenkins.model.Jenkins;
 
 @Extension
 public class Radios extends UISample {
@@ -18,7 +17,5 @@ public class Radios extends UISample {
     }
 
     @Extension
-    public static final class DescriptorImpl extends UISampleDescriptor {
-    }
+    public static final class DescriptorImpl extends UISampleDescriptor {}
 }
-

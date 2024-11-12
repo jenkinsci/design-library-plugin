@@ -1,13 +1,12 @@
 package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
+import java.util.LinkedList;
+import java.util.List;
 import jenkins.util.ProgressiveRendering;
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author Kohsuke Kawaguchi
@@ -22,7 +21,9 @@ public class Progress extends UISample {
     public ProgressiveRendering factor(final String numberS) {
         return new ProgressiveRendering() {
             final List<Integer> newFactors = new LinkedList<Integer>();
-            @Override protected void compute() throws Exception {
+
+            @Override
+            protected void compute() throws Exception {
                 int number;
                 try {
                     number = Integer.parseInt(numberS); // try entering a nonnumeric value!
@@ -45,7 +46,9 @@ public class Progress extends UISample {
                     progress(((double) i) / number);
                 }
             }
-            @Override protected synchronized JSON data() {
+
+            @Override
+            protected synchronized JSON data() {
                 JSONArray r = new JSONArray();
                 for (int i : newFactors) {
                     r.add(i);
@@ -57,7 +60,5 @@ public class Progress extends UISample {
     }
 
     @Extension
-    public static final class DescriptorImpl extends UISampleDescriptor {
-    }
+    public static final class DescriptorImpl extends UISampleDescriptor {}
 }
-

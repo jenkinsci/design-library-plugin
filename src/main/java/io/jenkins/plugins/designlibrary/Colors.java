@@ -1,7 +1,6 @@
 package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +20,7 @@ public class Colors extends UISample {
                 new Semantic("Warning", "Use for warning states", "warning-color"),
                 new Semantic("Error", "Use for error states", "error-color"),
                 new Semantic("Build", "Use for build kickoff", "build-color", "play"),
-                new Semantic("Destructive", "Use for destructive actions", "destructive-color", "trash")
-        );
+                new Semantic("Destructive", "Use for destructive actions", "destructive-color", "trash"));
     }
 
     public List<Color> getColors() {
@@ -30,13 +28,12 @@ public class Colors extends UISample {
                 new Color("Red", "red"),
                 new Color("Green", "green"),
                 new Color("Orange", "orange"),
-                new Color("Yellow",  "yellow"),
-                new Color("Blue",  "blue"),
-                new Color("Indigo",  "indigo"),
-                new Color("Purple",  "purple"),
-                new Color("Pink",  "pink"),
-                new Color("Brown",  "brown")
-        );
+                new Color("Yellow", "yellow"),
+                new Color("Blue", "blue"),
+                new Color("Indigo", "indigo"),
+                new Color("Purple", "purple"),
+                new Color("Pink", "pink"),
+                new Color("Brown", "brown"));
         List<Color> completeList = new ArrayList<>();
         colors.forEach(color -> {
             completeList.add(new Color("Light " + color.name, "light-" + color.className));
@@ -47,8 +44,7 @@ public class Colors extends UISample {
     }
 
     @Extension
-    public static final class DescriptorImpl extends UISampleDescriptor {
-    }
+    public static final class DescriptorImpl extends UISampleDescriptor {}
 
     public static final class Semantic {
         private String name;
@@ -136,4 +132,3 @@ public class Colors extends UISample {
         }
     }
 }
-

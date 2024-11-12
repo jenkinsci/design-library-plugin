@@ -1,22 +1,22 @@
 package io.jenkins.plugins.designlibrary;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import hudson.XmlFile;
+import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.jvnet.hudson.test.JenkinsRule;
 
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class HeteroListTest {
 
     public static final String CONFIGURE_URL = "configure";
     public static final String CONFIG_FORM_NAME = "config";
+
     @Rule
     public JenkinsRule j = new JenkinsRule();
 

@@ -10,6 +10,5 @@ public class Spacing extends UISample {
     }
 
     @Extension
-    public static class DescriptorImpl extends UISampleDescriptor {
-    }
+    public static class DescriptorImpl extends UISampleDescriptor {}
 }

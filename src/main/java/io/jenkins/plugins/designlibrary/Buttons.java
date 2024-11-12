@@ -13,7 +13,5 @@ public class Buttons extends UISample {
     }
 
     @Extension
-    public static final class DescriptorImpl extends UISampleDescriptor {
-    }
+    public static final class DescriptorImpl extends UISampleDescriptor {}
 }
-

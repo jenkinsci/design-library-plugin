@@ -5,12 +5,11 @@ import hudson.RelativePath;
 import hudson.model.AbstractDescribableImpl;
 import hudson.model.Descriptor;
 import hudson.util.FormValidation;
-import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.QueryParameter;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.QueryParameter;
 
 /**
  * How to access values of the nearby input fields when you do form field validation.
@@ -25,12 +24,13 @@ public class Validation extends UISample {
     }
 
     private List<State> states = new ArrayList<State>(Arrays.asList(
-            new State("California",new City("Sacramento"),  Arrays.asList(new City("San Francisco"),new City("Los Angeles"))),
-            new State("New York",new City("New York"), Arrays.asList(new City("Albany"),new City("Ithaca")))
-    ));
+            new State(
+                    "California",
+                    new City("Sacramento"),
+                    Arrays.asList(new City("San Francisco"), new City("Los Angeles"))),
+            new State("New York", new City("New York"), Arrays.asList(new City("Albany"), new City("Ithaca")))));
 
-    public Validation() {
-    }
+    public Validation() {}
 
     @DataBoundConstructor
     public Validation(List<State> states) {
@@ -67,8 +67,8 @@ public class Validation extends UISample {
 
         @Extension
         public static class DescriptorImpl extends Descriptor<State> {
-            public FormValidation doCheckName(@QueryParameter String value,
-                                                   @RelativePath("capital") @QueryParameter String name) {
+            public FormValidation doCheckName(
+                    @QueryParameter String value, @RelativePath("capital") @QueryParameter String name) {
                 /*
                 @RelativePath("capital") @QueryParameter
                  ... is short for
@@ -100,8 +100,8 @@ public class Validation extends UISample {
 
         @Extension
         public static class DescriptorImpl extends Descriptor<City> {
-            public FormValidation doCheckName(@QueryParameter String value,
-                                                   @RelativePath("..") @QueryParameter String name) {
+            public FormValidation doCheckName(
+                    @QueryParameter String value, @RelativePath("..") @QueryParameter String name) {
                 /*
                 @RelativePath("..") @QueryParameter
                  ... is short for
@@ -112,13 +112,12 @@ public class Validation extends UISample {
                 to the name field in the state.
                 */
 
-                if (name==null || value==null || value.contains(name))             return FormValidation.ok();
-                return FormValidation.warning("City name doesn't contain "+name);
+                if (name == null || value == null || value.contains(name)) return FormValidation.ok();
+                return FormValidation.warning("City name doesn't contain " + name);
             }
         }
     }
 
     @Extension
-    public static class DescriptorImpl extends UISampleDescriptor {
-    }
+    public static class DescriptorImpl extends UISampleDescriptor {}
 }

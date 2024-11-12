@@ -28,11 +28,10 @@ import hudson.Extension;
 import hudson.model.AutoCompletionCandidates;
 import hudson.util.ComboBoxModel;
 import hudson.util.ListBoxModel;
-import org.kohsuke.stapler.QueryParameter;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import org.kohsuke.stapler.QueryParameter;
 
 /**
  * Adding auto-completion to the text box.
@@ -58,6 +57,7 @@ public class Inputs extends UISample {
     public String getHtml() {
         return "<a href=\"https://jenkins.io\" target=\"_blank\">Jenkins</a>";
     }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
         /**
@@ -82,20 +82,20 @@ public class Inputs extends UISample {
 
         public ListBoxModel doFillAlbumItems() {
             ListBoxModel m = new ListBoxModel();
-            m.add("Yellow Submarine","1");
-            m.add("Abbey Road","2");
-            m.add("Let It Be","3");
+            m.add("Yellow Submarine", "1");
+            m.add("Abbey Road", "2");
+            m.add("Let It Be", "3");
             return m;
         }
 
         public ComboBoxModel doFillTitleItems(@QueryParameter int album) {
             switch (album) {
                 case 1:
-                    return new ComboBoxModel("Yellow Submarine","Only a Northern Song","All You Need Is Love");
+                    return new ComboBoxModel("Yellow Submarine", "Only a Northern Song", "All You Need Is Love");
                 case 2:
-                    return new ComboBoxModel("Come Together","Something","I Want You");
+                    return new ComboBoxModel("Come Together", "Something", "I Want You");
                 case 3:
-                    return new ComboBoxModel("The One After 909","Rocker","Get Back");
+                    return new ComboBoxModel("The One After 909", "Rocker", "Get Back");
                 default:
                     // if no value is selected on the album, we'll get 0
                     return new ComboBoxModel();
@@ -104,59 +104,59 @@ public class Inputs extends UISample {
     }
 
     public Set<String> getStatesNames() {
-        return new HashSet<> (Arrays.asList(STATES));
+        return new HashSet<>(Arrays.asList(STATES));
     }
 
-    private static final String[] STATES = new String[]{
-            "Alabama",
-            "Alaska",
-            "Arizona",
-            "Arkansas",
-            "California",
-            "Colorado",
-            "Connecticut",
-            "Delaware",
-            "Florida",
-            "Georgia",
-            "Hawaii",
-            "Idaho",
-            "Illinois",
-            "Indiana",
-            "Iowa",
-            "Kansas",
-            "Kentucky",
-            "Louisiana",
-            "Maine",
-            "Maryland",
-            "Massachusetts",
-            "Michigan",
-            "Minnesota",
-            "Mississippi",
-            "Missouri",
-            "Montana",
-            "Nebraska",
-            "Nevada",
-            "New Hampshire",
-            "New Jersey",
-            "New Mexico",
-            "New York",
-            "North Carolina",
-            "North Dakota",
-            "Ohio",
-            "Oklahoma",
-            "Oregon",
-            "Pennsylvania",
-            "Rhode Island",
-            "South Carolina",
-            "South Dakota",
-            "Tennessee",
-            "Texas",
-            "Utah",
-            "Vermont",
-            "Virginia",
-            "Washington",
-            "West Virginia",
-            "Wisconsin",
-            "Wyoming"
+    private static final String[] STATES = new String[] {
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
     };
 }

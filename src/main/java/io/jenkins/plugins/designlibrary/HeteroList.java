@@ -31,21 +31,22 @@ import hudson.model.AbstractDescribableImpl;
 import hudson.model.Descriptor;
 import hudson.util.FormApply;
 import hudson.util.ListBoxModel;
-import jenkins.model.Jenkins;
-import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.HttpResponse;
-import org.kohsuke.stapler.StaplerRequest;
-
-import javax.servlet.ServletException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.servlet.ServletException;
+import jenkins.model.Jenkins;
+import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.HttpResponse;
+import org.kohsuke.stapler.StaplerRequest;
 
-@Extension public final class HeteroList extends UISample {
+@Extension
+public final class HeteroList extends UISample {
 
-    @Extension public static final class DescriptorImpl extends UISampleDescriptor {}
+    @Extension
+    public static final class DescriptorImpl extends UISampleDescriptor {}
 
     public XmlFile getConfigFile() {
         return new XmlFile(new File(Jenkins.get().getRootDir(), "stuff.xml"));
@@ -84,7 +85,8 @@ import java.util.List;
 
         private final List<Entry> entries;
 
-        @DataBoundConstructor public Config(List<Entry> entries) {
+        @DataBoundConstructor
+        public Config(List<Entry> entries) {
             this.entries = entries != null ? new ArrayList<Entry>(entries) : Collections.<Entry>emptyList();
         }
 
@@ -92,17 +94,18 @@ import java.util.List;
             return Collections.unmodifiableList(entries);
         }
 
-        @Extension public static class DescriptorImpl extends Descriptor<Config> {}
-
+        @Extension
+        public static class DescriptorImpl extends Descriptor<Config> {}
     }
 
-    public static abstract class Entry extends AbstractDescribableImpl<Entry> {}
+    public abstract static class Entry extends AbstractDescribableImpl<Entry> {}
 
     public static final class SimpleEntry extends Entry {
 
         private final String text;
 
-        @DataBoundConstructor public SimpleEntry(String text) {
+        @DataBoundConstructor
+        public SimpleEntry(String text) {
             this.text = text;
         }
 
@@ -110,19 +113,21 @@ import java.util.List;
             return text;
         }
 
-        @Extension public static class DescriptorImpl extends Descriptor<Entry> {
-            @Override public String getDisplayName() {
+        @Extension
+        public static class DescriptorImpl extends Descriptor<Entry> {
+            @Override
+            public String getDisplayName() {
                 return "Simple Entry";
             }
         }
-
     }
 
     public static final class ChoiceEntry extends Entry {
 
         private final String choice;
 
-        @DataBoundConstructor public ChoiceEntry(String choice) {
+        @DataBoundConstructor
+        public ChoiceEntry(String choice) {
             this.choice = choice;
         }
 
@@ -130,35 +135,44 @@ import java.util.List;
             return choice;
         }
 
-        @Extension public static class DescriptorImpl extends Descriptor<Entry> {
+        @Extension
+        public static class DescriptorImpl extends Descriptor<Entry> {
 
-            @Override public String getDisplayName() {
+            @Override
+            public String getDisplayName() {
                 return "Choice Entry";
             }
 
             public ListBoxModel doFillChoiceItems() {
                 return new ListBoxModel().add("good").add("bad").add("ugly");
             }
-
         }
     }
 
     public static final class HeteroRadioEntry extends Entry {
         private final Entry entry;
 
-        @DataBoundConstructor public HeteroRadioEntry(Entry entry) { this.entry = entry; }
+        @DataBoundConstructor
+        public HeteroRadioEntry(Entry entry) {
+            this.entry = entry;
+        }
 
         public Entry getEntry() {
             return entry;
         }
 
-        @Extension public static class DescriptorImpl extends Descriptor<Entry> {
+        @Extension
+        public static class DescriptorImpl extends Descriptor<Entry> {
 
-            @Override public String getDisplayName() { return "Hetero-Radio"; }
+            @Override
+            public String getDisplayName() {
+                return "Hetero-Radio";
+            }
 
             public List<Descriptor> getEntryDescriptors() {
                 Jenkins jenkins = Jenkins.get();
-                return ImmutableList.of(jenkins.getDescriptorOrDie(ChoiceEntry.class), jenkins.getDescriptorOrDie(SimpleEntry.class));
+                return ImmutableList.of(
+                        jenkins.getDescriptorOrDie(ChoiceEntry.class), jenkins.getDescriptorOrDie(SimpleEntry.class));
             }
         }
     }

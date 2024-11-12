@@ -1,15 +1,11 @@
 package io.jenkins.plugins.designlibrary;
 
-import static org.apache.commons.io.IOUtils.copy;
-
 import hudson.ExtensionPoint;
 import hudson.model.Action;
 import hudson.model.Describable;
-
 import io.jenkins.plugins.prism.PrismConfiguration;
 import java.util.ArrayList;
 import java.util.List;
-
 import jenkins.model.Jenkins;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;

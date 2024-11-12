@@ -1,6 +1,5 @@
 package io.jenkins.plugins.designlibrary;
 
-
 import hudson.Extension;
 import hudson.util.ListBoxModel;
 
@@ -19,8 +18,7 @@ public class Dialogs extends UISample {
                     new ListBoxModel.Option("Acai"),
                     new ListBoxModel.Option("Banana"),
                     new ListBoxModel.Option("Strawberry"),
-                    new ListBoxModel.Option("Vanilla")
-            );
+                    new ListBoxModel.Option("Vanilla"));
         }
     }
 }
