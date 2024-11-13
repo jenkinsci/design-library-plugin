@@ -1,20 +1,15 @@
 package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
-import hudson.Functions;
 import hudson.model.RootAction;
-
 import java.util.List;
-import jenkins.model.Jenkins;
 import jenkins.model.ModelObjectWithContextMenu;
-import org.jenkins.ui.icon.IconSet;
-import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.StaplerResponse;
 
 /**
  * Entry point to all the UI samples.
- * 
+ *
  * @author Kohsuke Kawaguchi
  */
 @Extension
@@ -31,16 +26,15 @@ public class Root implements RootAction, ModelObjectWithContextMenu {
         return "design-library";
     }
 
-
     @Override
     public ContextMenu doContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
         ContextMenu menu = new ContextMenu();
-        for (UISample s: getAll()) {
+        for (UISample s : getAll()) {
             String iconFilename = s.getIconFileName() + " plugin-design-library";
-            menu.add(new MenuItem().withDisplayName(s.getDisplayName())
+            menu.add(new MenuItem()
+                    .withDisplayName(s.getDisplayName())
                     .withIconClass(iconFilename)
-                    .withContextRelativeUrl("/" + getUrlName() + "/" + s.getUrlName())
-            );
+                    .withContextRelativeUrl("/" + getUrlName() + "/" + s.getUrlName()));
         }
 
         return menu.from(this, request, response);
@@ -49,8 +43,7 @@ public class Root implements RootAction, ModelObjectWithContextMenu {
     public UISample getDynamic(String name) {
         for (UISample ui : getAll()) {
             String urlName = ui.getUrlName();
-            if (urlName != null && urlName.equals(name))
-                return ui;
+            if (urlName != null && urlName.equals(name)) return ui;
         }
         return null;
     }

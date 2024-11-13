@@ -1,22 +1,21 @@
 package io.jenkins.plugins.designlibrary;
 
+import static java.util.Arrays.asList;
+
 import hudson.DescriptorExtensionList;
 import hudson.Extension;
 import hudson.ExtensionPoint;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
 import hudson.util.ListBoxModel;
-import jenkins.model.Jenkins;
 import hudson.util.XStream2;
 import java.io.IOException;
 import javax.servlet.ServletException;
-
+import jenkins.model.Jenkins;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.StaplerResponse;
-
-import static java.util.Arrays.asList;
 
 /**
  * @author Alan.Harder@oracle.com
@@ -33,7 +32,7 @@ public class Select extends UISample {
         return null;
     }
 
-    public DescriptorExtensionList<Fruit,Descriptor<Fruit>> getFruitDescriptors() {
+    public DescriptorExtensionList<Fruit, Descriptor<Fruit>> getFruitDescriptors() {
         return Jenkins.get().getDescriptorList(Fruit.class);
     }
 
@@ -50,32 +49,30 @@ public class Select extends UISample {
     public static final class DescriptorImpl extends UISampleDescriptor {
 
         public ListBoxModel doFillFruitItems() {
-            return new ListBoxModel(
-                    new ListBoxModel.Option("Apple"),
-                    new ListBoxModel.Option("Banana")
-            );
+            return new ListBoxModel(new ListBoxModel.Option("Apple"), new ListBoxModel.Option("Banana"));
         }
 
         public ListBoxModel doFillStateItems(@QueryParameter String country) {
             ListBoxModel m = new ListBoxModel();
-            for (String s : asList("A","B","C"))
-                m.add(String.format("State %s in %s", s, country),
-                        country+':'+s);
+            for (String s : asList("A", "B", "C"))
+                m.add(String.format("State %s in %s", s, country), country + ':' + s);
             return m;
         }
 
         public ListBoxModel doFillCityItems(@QueryParameter String country, @QueryParameter String state) {
             ListBoxModel m = new ListBoxModel();
-            for (String s : asList("X","Y","Z"))
-                m.add(String.format("City %s in %s %s", s, state, country),
-                        state+':'+s);
+            for (String s : asList("X", "Y", "Z"))
+                m.add(String.format("City %s in %s %s", s, state, country), state + ':' + s);
             return m;
         }
     }
 
-    public static abstract class Fruit implements ExtensionPoint, Describable<Fruit> {
+    public abstract static class Fruit implements ExtensionPoint, Describable<Fruit> {
         protected String name;
-        protected Fruit(String name) { this.name = name; }
+
+        protected Fruit(String name) {
+            this.name = name;
+        }
 
         public Descriptor<Fruit> getDescriptor() {
             return Jenkins.get().getDescriptor(getClass());
@@ -86,7 +83,9 @@ public class Select extends UISample {
 
     public static class Apple extends Fruit {
         private final int seeds;
-        @DataBoundConstructor public Apple(int seeds) {
+
+        @DataBoundConstructor
+        public Apple(int seeds) {
             super("Apple");
             this.seeds = seeds;
         }
@@ -101,7 +100,9 @@ public class Select extends UISample {
 
     public static class Banana extends Fruit {
         private final boolean yellow;
-        @DataBoundConstructor public Banana(boolean yellow) {
+
+        @DataBoundConstructor
+        public Banana(boolean yellow) {
             super("Banana");
             this.yellow = yellow;
         }
