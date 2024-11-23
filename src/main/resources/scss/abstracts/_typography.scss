@@ -16,6 +16,16 @@
   }
 }
 
+.jdl-leading-paragraph {
+  @include mixins.base-text;
+  margin: calc(var(--jdl-spacing) * -0.25) 0 var(--jdl-spacing) 0;
+  color: var(--text-color-secondary);
+
+  & + & {
+    margin-top: calc((var(--jdl-spacing) / 2) * -1);
+  }
+}
+
 .jdl-paragraph {
   @include mixins.base-text;
   margin: 0 0 var(--jdl-spacing) 0;

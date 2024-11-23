@@ -27,14 +27,14 @@ THE SOFTWARE.
   <d:taglib uri="local">
     <d:tag name="item">
       <li>
-        <div class="jdl-colors__item">
-          <div class="jdl-colors__item__icon" style="background-color: var(--${item.className ?: item.variable}, grey);">
+        <div class="jdl-colors__item" style="--color: var(--${item.className ?: item.variable}, grey);">
+          <p class="jdl-colors__item__title" >
             <j:if test="${item.symbol != null}">
               <l:icon src="symbol-${item.symbol}" />
             </j:if>
-          </div>
+            ${item.name}
+          </p>
           <div class="jdl-colors__item__contents">
-            <p class="jdl-colors__item__contents__title">${item.name}</p>
             <j:if test="${item.description != null}">
               <p class="jdl-colors__item__contents__description">${item.description}</p>
             </j:if>
@@ -53,10 +53,24 @@ THE SOFTWARE.
   </d:taglib>
 
   <s:sample xmlns:local="local">
-    <p class="jdl-important-point">${%tip-first}</p>
-    <p class="jdl-important-point">${%tip-second}</p>
-    <p class="jdl-important-point">${%tip-third}</p>
-    <p class="jdl-important-point">${%tip-fourth}</p>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
+    <hr />
+
+    <s:dos-donts>
+      <tr>
+        <td>${%tip-first}</td>
+        <td>${%tip-second}</td>
+      </tr>
+      <tr>
+        <td>${%tip-third}</td>
+      </tr>
+      <tr>
+        <td>${%tip-fourth}</td>
+      </tr>
+    </s:dos-donts>
+
+    <hr />
 
     <h2 class="jdl-heading">${%Semantics}</h2>
     <ol class="jdl-colors">
@@ -64,6 +78,8 @@ THE SOFTWARE.
         <local:item item="${item}" />
       </j:forEach>
     </ol>
+
+    <hr />
 
     <h2 class="jdl-heading">${%Palette}</h2>
     <ol class="jdl-colors">

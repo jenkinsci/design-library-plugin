@@ -1,6 +1,8 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
     <h2 class="jdl-heading">${%title}</h2>
 
     <p class="jdl-paragraph">${%description.1}</p>

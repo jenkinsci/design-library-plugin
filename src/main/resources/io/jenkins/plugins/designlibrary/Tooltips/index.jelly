@@ -1,6 +1,8 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">

@@ -25,6 +25,8 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
   <s:sample>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
     <p class="jdl-paragraph">${%description.1}</p>
 
     <p class="jdl-paragraph">${%description.2}</p>

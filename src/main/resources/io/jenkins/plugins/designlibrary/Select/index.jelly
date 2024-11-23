@@ -24,6 +24,8 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
     <p class="jdl-paragraph">${%title}</p>
 
     <p class="jdl-paragraph">${%usage.1}</p>

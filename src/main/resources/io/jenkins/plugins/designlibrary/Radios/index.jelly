@@ -25,6 +25,8 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
     <h2 class="jdl-heading">Descriptor radio list</h2>
 
     <div class="jdl-component-sample jdl-component-sample--gridless jenkins-!-padding-bottom-0">

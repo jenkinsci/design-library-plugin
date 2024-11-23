@@ -1,6 +1,8 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:sample>
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
     <div class="jdl-component-sample">
       <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
         <div class="jdl-layout-preview__navigation" />

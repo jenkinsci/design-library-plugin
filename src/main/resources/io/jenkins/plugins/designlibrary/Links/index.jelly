@@ -1,0 +1,55 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/samples" xmlns:t="/lib/hudson">
+  <l:sample title="${%title}">
+    <p class="jdl-leading-paragraph">${%page.description}</p>
+
+    ${%blurb}
+
+    <h2>${%define.title}</h2>
+    ${%blurb.define}
+    <l:code language="java" file="Links.java"/>
+
+    <h2>${%breadcrumb.title}</h2>
+    ${%blurb.breadcrumb}
+
+    <h2>${%hyperlink.title}</h2>
+    ${%blurb.modelLink}
+    <table class="jenkins-table">
+      <tr>
+        <td>
+          &lt;a href='.' class='model-link'&gt;self&lt;/a&gt;
+        </td>
+        <td>
+          <a href="." class="model-link">self</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &lt;a href='..' class='model-link'&gt;up&lt;/a&gt;
+        </td>
+        <td>
+          <a href=".." class="model-link">up</a>
+        </td>
+      </tr>
+    </table>
+
+    ${%blurb.modelLink.inside}
+    <table class="jenkins-table">
+      <tr>
+        <td>
+          &lt;a href='.' class='model-link inside'&gt;self&lt;/a&gt;
+        </td>
+        <td>
+          <a href="." class="model-link inside">self</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          &lt;a href='..' class='model-link inside'&gt;up&lt;/a&gt;
+        </td>
+        <td>
+          <a href=".." class="model-link inside">up</a>
+        </td>
+      </tr>
+    </table>
+  </l:sample>
+</j:jelly>

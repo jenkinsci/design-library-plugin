@@ -20,9 +20,10 @@
 .jdl-colors {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 1rem;
+  gap: var(--jdl-spacing);
   list-style-type: none;
   padding: 0;
+  margin-top: calc(var(--section-padding) * -0.25);
   margin-bottom: var(--section-padding);
 
   @media(max-width: 1300px){
@@ -36,7 +37,9 @@
   & > li {
     .jdl-colors__item {
       display: flex;
-      gap: 0.75rem;
+      flex-direction: column;
+      align-items: start;
+      gap: calc(var(--jdl-spacing) * 0.4);
 
       .copy-button {
         opacity: 0;
@@ -49,39 +52,49 @@
         }
       }
 
-      .jdl-colors__item__icon {
+      .jdl-colors__item__title {
+        @include mixins.base-text;
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 2.75rem;
-        height: 2.75rem;
-        flex-shrink: 0;
-        border-radius: 100%;
+        gap: 0.5rem;
+        font-weight: 450;
+        margin: 0;
+        font-size: 0.875rem;
+        padding: 0.35rem 0.9rem;
+        background: var(--color);
+        text-shadow: 0 0 1px rgb(0 0 0 / 40%);
+        border-radius: 100px;
+        color: white;
 
         svg {
-          width: 50%;
-          height: 50%;
-          color: var(--background);
+          width: 1rem;
+          height: 1rem;
         }
       }
 
       .jdl-colors__item__contents {
+        position: relative;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 0.5rem 0.25rem;
+        gap: inherit;
+        padding-left: calc(2rem + 2px);
 
-        .jdl-colors__item__contents__title {
-          @include mixins.base-text;
-          font-weight: 500;
-          margin: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0.2rem;
+          left: 1rem;
+          bottom: 0.2rem;
+          background: var(--color);
+          border-radius: 100px;
+          width: 2px;
+          opacity: 0.2;
         }
 
         .jdl-colors__item__contents__description {
           @include mixins.base-text;
           color: var(--text-color-secondary);
-          margin: 0 0 0.5rem 0;
+          margin: 0;
         }
 
         .jdl-colors__item__contents__line {
@@ -89,8 +102,6 @@
           align-items: center;
           justify-content: start;
           font-family: var(--font-family-mono);
-          font-size: 0.85rem;
-          font-weight: 500;
           color: var(--text-color-secondary);
           opacity: 0.85;
 
