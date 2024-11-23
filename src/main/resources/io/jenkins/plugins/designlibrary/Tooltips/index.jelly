@@ -31,7 +31,7 @@
       </div>
       <s:code language="xml" file="symbol-tooltip.jelly" />
     </div>
-    <p class="jdl-leading-paragraph jdl-important-point">${%warning}</p>
+    <p class="jdl-important-point">${%warning}</p>
   </s:sample>
 </j:jelly>
 

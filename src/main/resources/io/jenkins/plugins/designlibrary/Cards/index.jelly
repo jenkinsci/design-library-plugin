@@ -111,6 +111,23 @@
 
     <hr />
 
+    <h2 class="jdl-heading">${%creating-a-card.title}</h2>
+
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <l:card title="Card title" id="app-cards__example">
+          Card content
+        </l:card>
+      </div>
+      <s:code language="xml" file="card.jelly" />
+    </div>
+
+    <p class="jdl-paragraph">${%creating-a-card.description}</p>
+
+    <hr />
+
+    <h2 class="jdl-heading">${%setting-actions-on-a-card.title}</h2>
+
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <j:set var="controls">
@@ -118,11 +135,13 @@
             <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
           </a>
         </j:set>
-        <l:card title="Card title" expandable="#" controls="${controls}" id="app-cards__example">
+        <l:card title="Card with actions" expandable="#" controls="${controls}" id="app-cards__example">
           Card content
         </l:card>
       </div>
-      <s:code language="xml" file="card.jelly" />
+      <s:code language="xml" file="actions.jelly" />
     </div>
+
+    <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>
   </s:sample>
 </j:jelly>
