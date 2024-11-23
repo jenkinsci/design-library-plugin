@@ -1,7 +1,8 @@
 <a href="https://weekly.ci.jenkins.io/design-library/">
-  <img src="https://raw.githubusercontent.com/jenkinsci/design-library-plugin/master/logo.svg">
+  <img src="logo.svg">
 </a>
 
+[![View Design Library](https://img.shields.io/badge/view-design_library-F2709C)](https://weekly.ci.jenkins.io/design-library)
 [![Join the chat at https://gitter.im/jenkinsci/ux-sig](https://badges.gitter.im/jenkinsci/ux-sig.svg)](https://gitter.im/jenkinsci/ux-sig)
 [![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/design-library.svg)](https://plugins.jenkins.io/design-library/)
 [![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/design-library.svg?color=blue)](https://plugins.jenkins.io/design-library/)
@@ -13,7 +14,7 @@ This plugin contains:
 - demonstration of UI components available in Jenkins
 - snippets of Jelly ready-to-use examples
 
-## Usage
+## Contributing
 
 You can open this project as a [Gitpod workspace](https://www.gitpod.io/) which comes pre-configured with all the tools you will need.
 
@@ -25,5 +26,3 @@ which will open the workspace in IntelliJ IDEA using JetBrains Gateway.
 Alternatively clone this project and run `mvn hpi:run`.
 
 Go to the **Design Library** menu item or straight to http://localhost:8080/jenkins/design-library/ and play with UI components.
-
-If you just want to see this plugin in action then you can also visit the latest version of this plugin in our [Jenkins "weekly" live installation](https://weekly.ci.jenkins.io/design-library/).
