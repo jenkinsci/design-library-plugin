@@ -1,5 +1,5 @@
 <a href="https://weekly.ci.jenkins.io/design-library/">
-  <img src="logo.svg?123" alt="Logo">
+  <img src="logo.svg" alt="Logo">
 </a>
 
 [![View Design Library](https://img.shields.io/badge/view-design_library-F2709C)](https://weekly.ci.jenkins.io/design-library)
