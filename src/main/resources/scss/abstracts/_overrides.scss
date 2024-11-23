@@ -29,10 +29,11 @@ hr {
   display: inline-block;
   width: 100%;
   border: none;
-  height: 2px;
-  background: currentColor;
+  height: 1.5px;
+  background: var(--text-color-secondary);
+  opacity: 0.1;
   margin: 0 0 var(--jdl-spacing) 0;
-  opacity: 0.05;
+  border-radius: 2px;
 }
 
 a {

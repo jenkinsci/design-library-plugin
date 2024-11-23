@@ -65,16 +65,20 @@ THE SOFTWARE.
       <div class="jdl-previous-next-controls">
         <j:if test="${it.previousPage != null}">
           <a href="${rootURL}/design-library/${it.previousPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
-            <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" />
-            <span>${%previous}</span>
+            <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+            <div class="jdl-previous-next-controls__icon">
+              <l:icon src="${it.previousPage.iconFileName} plugin-design-library" />
+            </div>
             <span>${it.previousPage.displayName}</span>
           </a>
         </j:if>
         <j:if test="${it.nextPage != null}">
           <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
-            <span>${%next}</span>
-            <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" />
             <span>${it.nextPage.displayName}</span>
+            <div class="jdl-previous-next-controls__icon">
+              <l:icon src="${it.nextPage.iconFileName} plugin-design-library" />
+            </div>
+            <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
           </a>
         </j:if>
       </div>
