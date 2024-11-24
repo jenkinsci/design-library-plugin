@@ -62,9 +62,9 @@
         font-size: 0.875rem;
         padding: 0.35rem 0.9rem;
         background: var(--color);
-        text-shadow: 0 0 1px rgb(0 0 0 / 40%);
+        text-shadow: 0 2px 2px color-mix(in srgb, var(--text-color) 10%, transparent);
         border-radius: 100px;
-        color: white;
+        color: var(--background);
 
         svg {
           width: 1rem;
