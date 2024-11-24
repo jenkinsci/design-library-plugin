@@ -26,7 +26,8 @@
   <s:sample title="Input Fields">
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
-    <p class="jdl-paragraph">${%inputs}</p>
+    <hr />
+
     <h2>${%Textbox}</h2>
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
@@ -37,7 +38,9 @@
       <s:code language="xml" file="example.jelly" />
     </div>
 
-    <h3 class="jdl-heading">${%autoCompletion}</h3>
+    <hr />
+
+    <h2 class="jdl-heading">${%autoCompletion}</h2>
     <p class="jdl-paragraph">${%autoCompletion.description.1}</p>
     <div class="jdl-component-sample">
       <f:entry title="U.S. State" field="state">

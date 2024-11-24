@@ -27,13 +27,11 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
-    <p class="jdl-paragraph">${%title}</p>
-
-    <!-- TODO sorted doesn't seem to be doing anything, is there more that should be added about tables? -->
-
     <div class="jdl-component-group">
       <div class="sample-remote jdl-component-sample" data-sample="index.jelly" data-render="true"/>
       <s:code language="xml" file="index.jelly" />
     </div>
+
+    <!-- TODO sorted doesn't seem to be doing anything, is there more that should be added about tables? -->
   </s:sample>
 </j:jelly>

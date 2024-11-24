@@ -27,6 +27,8 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
     <h2 class="jdl-heading">Descriptor radio list</h2>
 
     <div class="jdl-component-sample jdl-component-sample--gridless jenkins-!-padding-bottom-0">

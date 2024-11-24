@@ -3,6 +3,9 @@
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
+    <h2 class="jdl-heading">${%Basic tooltip}</h2>
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
@@ -11,6 +14,8 @@
       </div>
       <s:code language="xml" file="tooltip.jelly" />
     </div>
+
+    <hr />
 
     <h2 class="jdl-heading">${%HTML and interactive content}</h2>
     <j:set var="tooltip">

@@ -26,47 +26,64 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
-    <p class="jdl-paragraph">${%title}</p>
+    <hr />
 
-    <p class="jdl-paragraph">${%usage.1}</p>
-    <form action="submit" method="post">
-      <s:code language="xml" file="sample.jelly" />
-      <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
+    <h2 class="jdl-heading">Simple select</h2>
 
-      <f:submit value="Save"/>
-    </form>
-    <p style="margin-top: var(--section-padding);" class="jdl-paragraph">${%usage.2}</p>
+    <div class="jdl-component-sample jdl-component-sample--full-width">
+      <f:entry title="Fruits">
+        <f:select field="fruit"/>
+      </f:entry>
+    </div>
 
-    <f:entry title="Fruits">
-      <f:select field="fruit"/>
-    </f:entry>
+    <p class="jdl-paragraph">${%usage.2}</p>
 
-    config.jelly:
+    <h3>config.jelly:</h3>
     <s:code language="xml" file="sample2.jelly" />
 
-    Java source code:
+    <h3>Java source code:</h3>
     <s:code language="java" file="Sample.java" />
+
+    <hr />
+
+    <h2 class="jdl-heading">Advanced select</h2>
+    <p class="jdl-paragraph">${%usage.1}</p>
+
+
+    <div class="jdl-component-sample jdl-component-sample--full-width">
+      <form action="submit" method="post">
+        <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
+
+        <f:submit value="Save"/>
+      </form>
+    </div>
+    
+    <s:code language="xml" file="sample.jelly" />
+
+    <hr />
 
     <h2 class="jdl-heading">${%dynamic}</h2>
 
     <p class="jdl-paragraph">${%dynamic.description}</p>
 
-    <form method="post">
-      <f:entry title="Country" field="country">
-        <f:textbox/>
-      </f:entry>
-      <f:entry title="State" field="state">
-        <f:select/>
-      </f:entry>
-      <f:entry title="City" field="city">
-        <f:select/>
-      </f:entry>
-    </form>
+    <div class="jdl-component-sample jdl-component-sample--full-width">
+      <form method="post">
+        <f:entry title="Country" field="country">
+          <f:textbox/>
+        </f:entry>
+        <f:entry title="State" field="state">
+          <f:select/>
+        </f:entry>
+        <f:entry title="City" field="city">
+          <f:select/>
+        </f:entry>
+      </form>
+    </div>
 
-    <code>config.jelly:</code>
+    <h3>config.jelly:</h3>
     <s:code language="xml" file="dynamic-sample.jelly" />
 
-    <code>Sample.java:</code>
+    <h3>Sample.java:</h3>
     <s:code language="java" file="DynamicSample.java" />
   </s:sample>
 </j:jelly>

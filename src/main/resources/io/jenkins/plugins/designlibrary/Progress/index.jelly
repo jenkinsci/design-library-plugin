@@ -3,6 +3,8 @@
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
     <p class="jdl-paragraph">${%spinner.description}</p>
 
     <div class="jdl-component-group">

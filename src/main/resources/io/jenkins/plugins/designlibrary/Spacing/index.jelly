@@ -3,6 +3,8 @@
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
     <h2 class="jdl-heading">${%title}</h2>
 
     <p class="jdl-paragraph">${%description.1}</p>

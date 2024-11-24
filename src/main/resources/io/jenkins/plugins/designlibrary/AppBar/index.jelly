@@ -2,6 +2,11 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <s:sample>
     <p class="jdl-leading-paragraph">${%topAppBar.description}</p>
+
+    <hr />
+
+    <h2 class="jdl-heading">${%topAppBar}</h2>
+    <p class="jdl-leading-paragraph">${%topAppBar.description}</p>
     <div class="jdl-component-group">
       <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--no-bottom-padding jdl-component-sample--gridless">
         <l:app-bar title="${%title}" subtitle="3">
