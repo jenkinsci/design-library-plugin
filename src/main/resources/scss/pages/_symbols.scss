@@ -23,10 +23,12 @@ $delay: 0.1;
     border-radius: 10px;
     overflow: hidden;
 
-    @media (max-width: 970px) {
-      --sidebar-width: 0;
-      --content-width: 100%;
-      background-size: 100%;
+    & > {
+      @media (max-width: 970px) {
+        --sidebar-width: 0;
+        --content-width: 100%;
+        background-size: 100%;
+      }
     }
 
     background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
