@@ -19,63 +19,39 @@
         </div>
         <p class="app-home__subheading">${%topics}</p>
         <div class="app-home__side-by-side">
-          <a class="app-card__container" href="Cards">
-            <div class="app-card__preview">
-              <l:icon src="symbol-cards plugin-design-library" />
-            </div>
-            <div class="app-card__title">${%cards} <span class="app-card__new-tag">${%New}</span></div>
-            <div class="app-card__description">${%cards-description}</div>
-          </a>
-          <a class="app-card__container" href="Dropdowns">
-            <div class="app-card__preview">
-              <l:icon src="symbol-dropdowns plugin-design-library" />
-            </div>
-            <div class="app-card__title">${%dropdowns} <span class="app-card__new-tag">${%New}</span></div>
-            <div class="app-card__description">${%dropdowns-description}</div>
-          </a>
-          <a class="app-card__container" href="Buttons">
-            <div class="app-card__preview">
-              <l:icon src="symbol-buttons plugin-design-library" />
-            </div>
-            <div class="app-card__title">${%buttons}</div>
-            <div class="app-card__description">${%buttons-description}</div>
-          </a>
-          <a class="app-card__container" href="Symbols">
-            <div class="app-card__preview">
-              <l:icon src="symbol-star-outline plugin-ionicons-api" />
-            </div>
-            <div class="app-card__title">${%symbols}</div>
-            <div class="app-card__description">${%symbols-description}</div>
-          </a>
+          <s:card icon="symbol-cards plugin-design-library"
+                  title="${%cards}"
+                  description="${%cards-description}"
+                  href="Cards"
+                  tag="${%New}" />
+          <s:card icon="symbol-dropdowns plugin-design-library"
+                  title="${%dropdowns}"
+                  description="${%dropdowns-description}"
+                  href="Dropdowns"
+                  tag="${%New}" />
+          <s:card icon="symbol-buttons plugin-design-library"
+                  title="${%buttons}"
+                  description="${%buttons-description}"
+                  href="Buttons" />
+          <s:card icon="symbol-star-outline plugin-ionicons-api"
+                  title="${%symbols}"
+                  description="${%symbols-description}"
+                  href="Symbols" />
         </div>
-        <p class="app-home__subheading">${%gitter}</p>
+        <p class="app-home__subheading">${%get-involved}</p>
         <div class="app-home__side-by-side">
-          <a class="app-card__container" href="https://gitter.im/jenkinsci/ux-sig">
-            <div class="app-card__preview">
-              <l:icon src="symbol-gitter plugin-design-library" />
-            </div>
-            <div class="app-card__title">${%gitter-description}</div>
-          </a>
-          <a class="app-card__container" href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe">
-            <div class="app-card__preview">
-              <l:icon src="symbol-logo-youtube plugin-ionicons-api" />
-            </div>
-            <div class="app-card__title">${%ux-youtube}</div>
-          </a>
-        </div>
-        <div class="app-home__side-by-side">
-          <a class="app-card__container" href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui">
-            <div class="app-card__preview">
-              <l:icon src="symbol-logo-github plugin-ionicons-api" />
-            </div>
-            <div class="app-card__title">${%ux-wip-core}</div>
-          </a>
-          <a class="app-card__container" href="https://github.com/jenkinsci/design-library-plugin">
-            <div class="app-card__preview">
-              <l:icon src="symbol-design-library plugin-design-library" />
-            </div>
-            <div class="app-card__title">${%contribute}</div>
-          </a>
+          <s:card icon="symbol-gitter plugin-design-library"
+                  title="${%gitter-description}"
+                  href="https://gitter.im/jenkinsci/ux-sig" />
+          <s:card icon="symbol-logo-youtube plugin-ionicons-api"
+                  title="${%ux-youtube}"
+                  href="https://www.youtube.com/playlist?list=PLN7ajX_VdyaOnsIIsZHsv_fM9QhOcajWe" />
+          <s:card icon="symbol-logo-github plugin-ionicons-api"
+                  title="${%ux-wip-core}"
+                  href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui" />
+          <s:card icon="symbol-design-library plugin-design-library"
+                  title="${%contribute}"
+                  href="https://github.com/jenkinsci/design-library-plugin" />
         </div>
       </div>
     </l:main-panel>

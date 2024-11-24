@@ -1,0 +1,20 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+  <st:documentation>
+    <st:attribute name="icon" use="required" />
+    <st:attribute name="title" use="required" />
+    <st:attribute name="href" use="required" />
+    <st:attribute name="description" />
+    <st:attribute name="tag" />
+  </st:documentation>
+
+  <a class="app-card__container" href="${attrs.href}">
+    <div class="app-card__preview">
+      <l:icon src="${attrs.icon}" />
+    </div>
+    <div class="app-card__title">${attrs.title} <j:if test="${attrs.tag != null}"><span class="app-card__new-tag">${attrs.tag}</span></j:if></div>
+    <j:if test="${attrs.description != null}">
+      <div class="app-card__description">${attrs.description}</div>
+    </j:if>
+  </a>
+</j:jelly>

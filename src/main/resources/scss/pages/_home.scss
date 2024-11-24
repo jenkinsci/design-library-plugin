@@ -6,15 +6,13 @@
   flex-direction: column;
   width: 100%;
   max-width: max(950px, 65vw);
-  gap: 2rem;
+  gap: 3.5rem;
 }
 
 .app-home__subheading {
-  margin: 0 0 -1.2rem;
+  @include mixins.base-text;
+  margin: 0 0 -2.5rem;
   font-weight: 500;
-  font-size: 1.05rem;
-  color: var(--text-color-secondary);
-  background-color: var(--background);
 }
 
 .app-home__side-by-side {
