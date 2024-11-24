@@ -27,9 +27,9 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
-    <p class="jdl-paragraph">${%description.1}</p>
+    <hr />
 
-    <p class="jdl-paragraph">${%description.2}</p>
+    <h2 class="jdl-heading">Default</h2>
 
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
@@ -38,12 +38,22 @@ THE SOFTWARE.
       <s:code language="xml" file="default.jelly" />
     </div>
 
+    <hr />
+
+    <h2 class="jdl-heading">Primary</h2>
+
+    <p class="jdl-paragraph">${%primary.description}</p>
+
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <button class="jenkins-button jenkins-button--primary">Primary</button>
       </div>
       <s:code language="xml" file="primary.jelly" />
     </div>
+
+    <hr />
+
+    <h2 class="jdl-heading">Modifiers</h2>
 
     <p class="jdl-paragraph">
       You can pair buttons with <a href="../Colors">color modifier classes</a>, like so:
@@ -57,6 +67,14 @@ THE SOFTWARE.
     </div>
 
     <p class="jdl-paragraph">
+      ${%destructive.description}
+    </p>
+
+    <hr />
+
+    <h2 class="jdl-heading">Tertiary</h2>
+
+    <p class="jdl-paragraph">
       Tertiary buttons should be used for buttons which have minimal interaction or for those where
       a background creates too much visual clutter:
     </p>
@@ -68,6 +86,10 @@ THE SOFTWARE.
       <s:code language="xml" file="tertiary.jelly" />
     </div>
 
+    <hr />
+
+    <h2 class="jdl-heading">Symbols</h2>
+
     <p class="jdl-paragraph">
       Buttons can include symbols and they'll be automatically sized to fit correctly:
     </p>
@@ -78,6 +100,8 @@ THE SOFTWARE.
       </div>
       <s:code language="xml" file="symbolButton.jelly" />
     </div>
+
+    <hr />
 
     <h2 class="jdl-heading">${%copy}</h2>
     <p class="jdl-paragraph">${%copy.description}</p>
@@ -93,6 +117,8 @@ THE SOFTWARE.
       <li>text - ${%copy.parameters.text}</li>
       <li>message - ${%copy.parameters.message}</li>
     </ul>
+
+    <hr />
 
     <h2 class="jdl-heading">${%help}</h2>
     <div class="jdl-component-group">

@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   margin-bottom: var(--jdl-spacing);
-  font-size: 1.1rem;
-  gap: 1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  gap: 1.5rem;
+  font-weight: 450;
 
   & > div {
     display: flex;

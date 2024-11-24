@@ -1,6 +1,7 @@
 $jdl-component-code-controls-spacing: 0.75rem;
 
 .jdl-component-code {
+  --prism-background: var(--background);
   position: relative;
   display: grid;
   align-items: center;
@@ -8,6 +9,10 @@ $jdl-component-code-controls-spacing: 0.75rem;
   margin-bottom: var(--jdl-spacing);
   z-index: 0;
   border-radius: 0.66rem;
+
+  pre {
+    background-color: var(--prism-background) !important;
+  }
 
   &::before {
     content: "";
@@ -42,6 +47,10 @@ $jdl-component-code-controls-spacing: 0.75rem;
     .jenkins-button {
       transition: var(--standard-transition);
       opacity: 0.5;
+
+      span {
+        color: var(--text-color-secondary) !important;
+      }
 
       &::before {
         opacity: 0;

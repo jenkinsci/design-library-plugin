@@ -1,4 +1,8 @@
 .jdl-component-group {
+  border: 1.5px solid color-mix(in srgb, var(--text-color-secondary) 7.5%, transparent);
+  border-radius: 0.66rem;
+  margin-bottom: var(--jdl-spacing);
+
   .jdl-component-sample {
     margin-bottom: 0;
     border-bottom-left-radius: 0;
@@ -9,5 +13,6 @@
     margin-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    margin-bottom: 0;
   }
 }

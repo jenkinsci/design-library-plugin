@@ -27,6 +27,8 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
     <h2 class="jdl-heading">Stylesheets (CSS/SCSS)</h2>
 
     <h3 class="jdl-heading">Naming</h3>
@@ -60,6 +62,8 @@ THE SOFTWARE.
     <p class="jdl-paragraph">
       Examples include: <code class="jdl-inline-code">.jenkins-!-padding-6</code>, <code class="jdl-inline-code">.jenkins-!-margin-6</code> and <code class="jdl-inline-code">.jenkins-!-destructive-color</code>.
     </p>
+
+    <hr />
 
     <h3 class="jdl-heading">Prefixes</h3>
 
