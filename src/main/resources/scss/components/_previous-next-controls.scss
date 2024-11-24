@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: var(--section-padding);
-
+  
   &::before {
     content: "";
     position: absolute;
@@ -20,7 +20,6 @@
 
   .jdl-previous-button,
   .jdl-next-button {
-    @include mixins.base-text;
     display: flex;
     gap: 0.8rem;
 
@@ -59,8 +58,6 @@
   }
 
   .jdl-previous-button {
-    justify-items: flex-start;
-
     &:hover {
       transform: translateX(-1px);
 
@@ -71,9 +68,6 @@
   }
 
   .jdl-next-button {
-    justify-items: flex-end;
-    margin-left: auto;
-
     &:hover {
       transform: translateX(1px);
 

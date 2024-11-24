@@ -54,11 +54,7 @@ THE SOFTWARE.
     </l:side-panel>
 
     <l:main-panel>
-      <l:app-bar title="${title}">
-        <button id="button-share" class="jenkins-button" tooltip="${%sharePage}">
-          <l:icon src="symbol-share-outline plugin-ionicons-api" />
-        </button>
-      </l:app-bar>
+      <l:app-bar title="${title}" />
 
       <d:invokeBody/>
 
@@ -72,6 +68,12 @@ THE SOFTWARE.
             <span>${it.previousPage.displayName}</span>
           </a>
         </j:if>
+        <a class="jenkins-button jenkins-button--tertiary"
+           href="${'https://github.com/jenkinsci/design-library-plugin/blob/master/src/main/resources/io/jenkins/plugins/designlibrary/' + it.class.simpleName + '/index.jelly'}"
+           target="_blank">
+          <l:icon src="symbol-edit" />
+          ${%Edit this page}
+        </a>
         <j:if test="${it.nextPage != null}">
           <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
             <span>${it.nextPage.displayName}</span>
