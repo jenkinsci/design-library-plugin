@@ -34,31 +34,23 @@
       </div>
     </div>
 
-    <p class="jdl-leading-paragraph">${%leadParagraph}</p>
+    <p class="jdl-paragraph">${%leadParagraph}</p>
 
     <hr/>
 
-    <table class="jdl-dos-donts">
-      <thead>
-        <tr>
-          <th class="jenkins-!-success-color">${%do}</th>
-          <th class="jenkins-!-error-color">${%dont}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>${%do.1}</td>
-          <td>${%dont.1}</td>
-        </tr>
-        <tr>
-          <td>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</td>
-          <td>${%dont.2}</td>
-        </tr>
-        <tr>
-          <td>${%do.3}</td>
-        </tr>
-      </tbody>
-    </table>
+    <s:dos-donts>
+      <tr>
+        <td>${%do.1}</td>
+        <td>${%dont.1}</td>
+      </tr>
+      <tr>
+        <td>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</td>
+        <td>${%dont.2}</td>
+      </tr>
+      <tr>
+        <td>${%do.3}</td>
+      </tr>
+    </s:dos-donts>
 
     <hr/>
 

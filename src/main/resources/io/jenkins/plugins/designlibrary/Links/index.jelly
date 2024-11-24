@@ -2,6 +2,8 @@
   <l:sample title="${%title}">
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
     ${%blurb}
 
     <h2>${%define.title}</h2>

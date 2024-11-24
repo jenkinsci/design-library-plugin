@@ -26,6 +26,8 @@ THE SOFTWARE.
   <s:sample title="JavaScript Proxy">
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
+    <hr />
+
     <p class="jdl-paragraph">${%description.1}</p>
 
     <p class="jdl-paragraph">${%description.2}</p>

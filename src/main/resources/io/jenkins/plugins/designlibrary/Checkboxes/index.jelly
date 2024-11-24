@@ -27,7 +27,12 @@ THE SOFTWARE.
   <s:sample>
     <p class="jdl-leading-paragraph">${%page.description}</p>
 
-    <hr />
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <f:checkbox title="${%Example}" field="hello" />
+      </div>
+      <s:code language="xml" file="checkbox.jelly" />
+    </div>
 
     <p class="jdl-paragraph">${%checkbox.parameters}</p>
     <ul class="jdl-list">
@@ -39,11 +44,5 @@ THE SOFTWARE.
 
     <p class="jdl-paragraph">${%checkbox.additionalParameters}</p>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:checkbox title="${%Example}" field="hello" />
-      </div>
-      <s:code language="xml" file="checkbox.jelly" />
-    </div>
   </s:sample>
 </j:jelly>

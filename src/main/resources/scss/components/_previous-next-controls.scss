@@ -17,7 +17,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 1.5px;
+    height: var(--jdl-border-width);
     background: var(--text-color-secondary);
     opacity: 0.1;
     border-radius: 2px;

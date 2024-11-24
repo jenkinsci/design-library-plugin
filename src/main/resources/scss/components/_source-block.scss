@@ -9,6 +9,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
   margin-bottom: var(--jdl-spacing);
   z-index: 0;
   border-radius: 0.66rem;
+  border: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 7.5%, transparent);
 
   pre {
     background-color: var(--prism-background) !important;

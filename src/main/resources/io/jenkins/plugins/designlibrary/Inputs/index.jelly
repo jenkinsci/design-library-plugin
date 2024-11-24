@@ -28,7 +28,7 @@
 
     <hr />
 
-    <h2>${%Textbox}</h2>
+    <h2 class="jdl-heading">${%Textbox}</h2>
     <div class="jdl-component-group">
       <div class="jdl-component-sample">
         <f:entry title="Example" field="example">
@@ -69,6 +69,8 @@
     <code>SimpleCombobox.java:</code>
     <s:code language="java" file="SimpleCombobox.java" />
 
+    <hr />
+
     <h3>${%dynamicCombobox}</h3>
     <p class="jdl-paragraph">${%dynamicCombobox.description}</p>
 
@@ -88,6 +90,8 @@
     <code>DynamicCombobox.java:</code>
     <s:code language="java" file="DynamicCombobox.java" />
 
+    <hr />
+
     <h2 class="jdl-heading">${%Number fields}</h2>
 
     <div class="jdl-component-group">
@@ -99,6 +103,8 @@
       <s:code language="xml" file="number.jelly" />
     </div>
 
+    <hr />
+
     <h2 class="jdl-heading">${%Password fields}</h2>
 
     <div class="jdl-component-group">
@@ -109,6 +115,8 @@
       </div>
       <s:code language="xml" file="password.jelly" />
     </div>
+
+    <hr />
 
     <h2 class="jdl-heading">${%syntaxHighlight}</h2>
 

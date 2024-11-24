@@ -57,7 +57,7 @@ THE SOFTWARE.
         <f:submit value="Save"/>
       </form>
     </div>
-    
+
     <s:code language="xml" file="sample.jelly" />
 
     <hr />

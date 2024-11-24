@@ -1,5 +1,6 @@
 :root {
   --jdl-spacing: var(--section-padding);
+  --jdl-border-width: 1.5px;
 }
 
 #main-panel {
@@ -29,7 +30,7 @@ hr {
   display: inline-block;
   width: 100%;
   border: none;
-  height: 1.5px;
+  height: var(--jdl-border-width);
   background: var(--text-color-secondary);
   opacity: 0.1;
   margin: 0 0 var(--jdl-spacing) 0;
