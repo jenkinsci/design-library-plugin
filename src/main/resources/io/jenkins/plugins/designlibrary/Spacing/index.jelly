@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <p class="jdl-leading-paragraph">${%page.description}</p>
+    <p class="jdl-subtitle">${%page.description}</p>
 
     <hr />
 

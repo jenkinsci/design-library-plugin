@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-leading-paragraph">${%page.description}</p>
+    <p class="jdl-subtitle">${%page.description}</p>
 
     <div class="jdl-component-sample">
       <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
@@ -42,7 +42,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
 
-      <p class="jdl-leading-paragraph">
+      <p class="jdl-subtitle">
         Two column layouts are for 'hub' style pages, pages that have child pages
         for the user to navigate to.
       </p>
@@ -51,30 +51,22 @@
 
       <hr />
 
-      <table class="jdl-dos-donts">
-        <thead>
-          <tr>
-            <th class="jenkins-!-success-color">${%do}</th>
-            <th class="jenkins-!-error-color">${%dont}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>${%two-column.do.1}</td>
-            <td>${%two-column.dont.1}</td>
-          </tr>
-          <tr>
-            <td>${%two-column.do.2}</td>
-            <td>${%two-column.dont.2}</td>
-          </tr>
-          <tr>
-            <td>${%two-column.do.3}</td>
-          </tr>
-          <tr>
-            <td>${%two-column.do.4}</td>
-          </tr>
-        </tbody>
-      </table>
+      <s:dos-donts>
+        <tr>
+          <td>${%two-column.do.1}</td>
+          <td>${%two-column.dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%two-column.do.2}</td>
+          <td>${%two-column.dont.2}</td>
+        </tr>
+        <tr>
+          <td>${%two-column.do.3}</td>
+        </tr>
+        <tr>
+          <td>${%two-column.do.4}</td>
+        </tr>
+      </s:dos-donts>
 
       <hr />
 
@@ -112,27 +104,19 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%One column}</h2>
 
-      <p class="jdl-leading-paragraph">
+      <p class="jdl-subtitle">
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
         that don't have child navigation.
       </p>
 
       <hr />
 
-      <table class="jdl-dos-donts">
-        <thead>
-          <tr>
-            <th class="jenkins-!-success-color">${%do}</th>
-            <th class="jenkins-!-success-color">${%dont}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>${%one-column.do.1}</td>
-            <td>${%one-column.dont.1}</td>
-          </tr>
-        </tbody>
-      </table>
+      <s:dos-donts>
+        <tr>
+          <td>${%one-column.do.1}</td>
+          <td>${%one-column.dont.1}</td>
+        </tr>
+      </s:dos-donts>
 
       <hr />
 
@@ -146,7 +130,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%Fullscreen}</h2>
 
-      <p class="jdl-leading-paragraph">
+      <p class="jdl-subtitle">
         Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
         Such layouts aren't intended for the average page and should only be used if your page needs it.

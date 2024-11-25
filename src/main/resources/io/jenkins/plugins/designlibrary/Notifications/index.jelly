@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" >
   <s:sample>
-    <p class="jdl-leading-paragraph">${%description}</p>
+    <p class="jdl-subtitle">${%description}</p>
 
     <div class="jdl-component-sample">
       <div class="jdl-notifications-group">

@@ -1,12 +1,12 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jdl-leading-paragraph">${%topAppBar.description}</p>
+    <p class="jdl-subtitle">${%topAppBar.description}</p>
 
     <hr />
 
     <h2 class="jdl-heading">${%topAppBar}</h2>
-    <p class="jdl-leading-paragraph">${%topAppBar.description}</p>
+    <p class="jdl-subtitle">${%topAppBar.description}</p>
     <div class="jdl-component-group">
       <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--no-bottom-padding jdl-component-sample--gridless">
         <l:app-bar title="${%title}" subtitle="3">
@@ -36,7 +36,7 @@
     <hr />
 
     <h2 class="jdl-heading">${%bottomAppBar}</h2>
-    <p class="jdl-leading-paragraph">${%bottomAppBar.description}</p>
+    <p class="jdl-subtitle">${%bottomAppBar.description}</p>
     <div class="jdl-component-group">
       <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
         <p class="jdl-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>

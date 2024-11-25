@@ -12,6 +12,15 @@ public class Buttons extends UISample {
         return "symbol-buttons";
     }
 
+    @Override
+    public String getDescription() {
+        return "Hello";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
+
+    public static String magic() {
+        return "<button class=\"jenkins-button\"><l:icon src=\"symbol-add\" /> With symbol</button>";
+    }
 }

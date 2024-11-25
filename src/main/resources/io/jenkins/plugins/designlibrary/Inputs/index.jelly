@@ -24,7 +24,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="Input Fields">
-    <p class="jdl-leading-paragraph">${%page.description}</p>
+    <p class="jdl-subtitle">${%page.description}</p>
 
     <hr />
 

@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jdl-leading-paragraph">${%description}</p>
+    <p class="jdl-subtitle">${%description}</p>
     <template id="demo-template" data-title="${%Modal}">
       <div>
         <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>

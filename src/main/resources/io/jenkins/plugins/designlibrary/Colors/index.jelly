@@ -53,7 +53,7 @@ THE SOFTWARE.
   </d:taglib>
 
   <s:sample xmlns:local="local">
-    <p class="jdl-leading-paragraph">${%page.description}</p>
+    <p class="jdl-subtitle">${%page.description}</p>
 
     <hr />
 

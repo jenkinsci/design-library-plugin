@@ -7,6 +7,14 @@
   margin-top: var(--section-padding);
   padding-top: var(--section-padding);
 
+  @media (min-width: 767px) {
+    & > div:nth-of-type(2) {
+      position: absolute;
+      left: 50%;
+      translate: -50% 0;
+    }
+  }
+
   .jenkins-button {
     font-size: 1rem;
   }

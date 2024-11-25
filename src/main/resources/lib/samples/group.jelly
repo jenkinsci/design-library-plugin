@@ -1,0 +1,13 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:s="/lib/samples">
+  <j:set var="sure">
+    <d:invokeBody />
+  </j:set>
+
+  <div class="jdl-component-group">
+    <div class="jdl-component-sample">
+      <d:invokeBody />
+    </div>
+    <s:code language="xml" code="${sure}" />
+  </div>
+</j:jelly>

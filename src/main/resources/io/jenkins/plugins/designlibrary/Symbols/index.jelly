@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-leading-paragraph">${%page.description}</p>
+    <p class="jdl-subtitle">${%page.description}</p>
 
     <j:set var="icons" value="${it.symbols}" />
     <div class="jdl-symbols__masthead">

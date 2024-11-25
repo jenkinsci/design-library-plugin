@@ -1,6 +1,6 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/samples" xmlns:t="/lib/hudson">
   <l:sample title="${%title}">
-    <p class="jdl-leading-paragraph">${%page.description}</p>
+    <p class="jdl-subtitle">${%page.description}</p>
 
     <hr />
 
@@ -38,18 +38,18 @@
     <table class="jenkins-table">
       <tr>
         <td>
-          &lt;a href='.' class='model-link inside'&gt;self&lt;/a&gt;
+          &lt;a href='.' class='model-link'&gt;self&lt;/a&gt;
         </td>
         <td>
-          <a href="." class="model-link inside">self</a>
+          <a href="." class="model-link">self</a>
         </td>
       </tr>
       <tr>
         <td>
-          &lt;a href='..' class='model-link inside'&gt;up&lt;/a&gt;
+          &lt;a href='..' class='model-link'&gt;up&lt;/a&gt;
         </td>
         <td>
-          <a href=".." class="model-link inside">up</a>
+          <a href=".." class="model-link">up</a>
         </td>
       </tr>
     </table>

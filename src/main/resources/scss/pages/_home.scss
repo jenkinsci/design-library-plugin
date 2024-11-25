@@ -12,7 +12,7 @@
 .app-home__subheading {
   @include mixins.base-text;
   margin: 0 0 -2.5rem;
-  font-weight: 500;
+  font-weight: 450;
 }
 
 .app-home__side-by-side {
@@ -183,7 +183,7 @@
   display: flex;
   align-items: center;
   margin: 0;
-  font-weight: 500;
+  font-weight: 450;
   gap: 1.15rem;
 }
 

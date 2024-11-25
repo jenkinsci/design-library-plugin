@@ -29,6 +29,10 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
         return getClass().getSimpleName();
     }
 
+    public String getDescription() {
+        return null;
+    }
+
     public UISampleDescriptor getDescriptor() {
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
     }

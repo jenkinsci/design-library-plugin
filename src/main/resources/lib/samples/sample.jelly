@@ -56,27 +56,35 @@ THE SOFTWARE.
     <l:main-panel>
       <l:app-bar title="${title}" />
 
+      <p class="jdl-subtitle">${%it.description}</p>
+
       <d:invokeBody/>
 
       <div class="jdl-previous-next-controls">
-        <j:if test="${it.previousPage != null}">
-          <a href="${rootURL}/design-library/${it.previousPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
-            <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
-            <span>${it.previousPage.displayName}</span>
+        <div>
+          <j:if test="${it.previousPage != null}">
+            <a href="${rootURL}/design-library/${it.previousPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
+              <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+              <span>${it.previousPage.displayName}</span>
+            </a>
+          </j:if>
+        </div>
+        <div class="jenkins-mobile-hide">
+          <a class="jenkins-button jenkins-button--tertiary"
+             href="${'https://github.com/jenkinsci/design-library-plugin/blob/master/src/main/resources/io/jenkins/plugins/designlibrary/' + it.class.simpleName + '/index.jelly'}"
+             target="_blank">
+            <l:icon src="symbol-edit" />
+            ${%Edit this page}
           </a>
-        </j:if>
-        <a class="jenkins-button jenkins-button--tertiary"
-           href="${'https://github.com/jenkinsci/design-library-plugin/blob/master/src/main/resources/io/jenkins/plugins/designlibrary/' + it.class.simpleName + '/index.jelly'}"
-           target="_blank">
-          <l:icon src="symbol-edit" />
-          ${%Edit this page}
-        </a>
-        <j:if test="${it.nextPage != null}">
-          <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
-            <span>${it.nextPage.displayName}</span>
-            <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
-          </a>
-        </j:if>
+        </div>
+        <div>
+          <j:if test="${it.nextPage != null}">
+            <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
+              <span>${it.nextPage.displayName}</span>
+              <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+            </a>
+          </j:if>
+        </div>
       </div>
     </l:main-panel>
   </l:layout>

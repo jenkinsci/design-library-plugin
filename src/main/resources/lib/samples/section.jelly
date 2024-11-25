@@ -1,0 +1,15 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
+  <st:documentation>
+    <st:attribute name="title" use="required" />
+    <st:attribute name="description" />
+  </st:documentation>
+
+  <div class="jdl-section">
+    <h2 class="jdl-section__title">${attrs.title}</h2>
+    <j:if test="${attrs.description != null}">
+      <p class="jdl-section__description"><j:out value="${attrs.description}" /></p>
+    </j:if>
+    <d:invokeBody />
+  </div>
+</j:jelly>
