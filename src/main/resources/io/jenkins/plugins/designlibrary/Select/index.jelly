@@ -24,66 +24,62 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
-    <p class="jdl-subtitle2">${%page.description}</p>
+    <s:section title="Simple select" description="${%usage.2}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <f:entry title="Fruits">
+            <f:select field="fruit"/>
+          </f:entry>
+        </div>
+        <s:codePanes>
+          <s:codePane title="Jelly">
+            <s:code language="xml" file="sample2.jelly"/>
+          </s:codePane>
+          <s:codePane title="Java">
+            <s:code language="java" file="Sample.java"/>
+          </s:codePane>
+        </s:codePanes>
+      </div>
+    </s:section>
 
-    <hr />
+    <s:section title="Advanced select" description="${%usage.1}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <form action="submit" method="post">
+            <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}"/>
 
-    <h2 class="jdl-heading">Simple select</h2>
+            <f:submit value="Save"/>
+          </form>
+        </div>
 
-    <div class="jdl-component-sample">
-      <f:entry title="Fruits">
-        <f:select field="fruit"/>
-      </f:entry>
-    </div>
+        <s:code language="xml" file="sample.jelly"/>
+      </div>
+    </s:section>
 
-    <p class="jdl-paragraph">${%usage.2}</p>
-
-    <h3>config.jelly:</h3>
-    <s:code language="xml" file="sample2.jelly" />
-
-    <h3>Java source code:</h3>
-    <s:code language="java" file="Sample.java" />
-
-    <hr />
-
-    <h2 class="jdl-heading">Advanced select</h2>
-    <p class="jdl-paragraph">${%usage.1}</p>
-
-
-    <div class="jdl-component-sample">
-      <form action="submit" method="post">
-        <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
-
-        <f:submit value="Save"/>
-      </form>
-    </div>
-
-    <s:code language="xml" file="sample.jelly" />
-
-    <hr />
-
-    <h2 class="jdl-heading">${%dynamic}</h2>
-
-    <p class="jdl-paragraph">${%dynamic.description}</p>
-
-    <div class="jdl-component-sample">
-      <form method="post">
-        <f:entry title="Country" field="country">
-          <f:textbox/>
-        </f:entry>
-        <f:entry title="State" field="state">
-          <f:select/>
-        </f:entry>
-        <f:entry title="City" field="city">
-          <f:select/>
-        </f:entry>
-      </form>
-    </div>
-
-    <h3>config.jelly:</h3>
-    <s:code language="xml" file="dynamic-sample.jelly" />
-
-    <h3>Sample.java:</h3>
-    <s:code language="java" file="DynamicSample.java" />
+    <s:section title="${%dynamic}" description="${%dynamic.description}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <form method="post">
+            <f:entry title="Country" field="country">
+              <f:textbox/>
+            </f:entry>
+            <f:entry title="State" field="state">
+              <f:select/>
+            </f:entry>
+            <f:entry title="City" field="city">
+              <f:select/>
+            </f:entry>
+          </form>
+        </div>
+        <s:codePanes>
+          <s:codePane title="Jelly">
+            <s:code language="xml" file="dynamic-sample.jelly"/>
+          </s:codePane>
+          <s:codePane title="Java">
+            <s:code language="java" file="DynamicSample.java"/>
+          </s:codePane>
+        </s:codePanes>
+      </div>
+    </s:section>
   </s:sample>
 </j:jelly>

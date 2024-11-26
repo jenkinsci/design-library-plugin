@@ -24,6 +24,10 @@
     display: flex;
     gap: 0.8rem;
 
+    svg * {
+      stroke-width: 36px;
+    }
+
     & > * {
       transition: transform var(--elastic-transition);
     }

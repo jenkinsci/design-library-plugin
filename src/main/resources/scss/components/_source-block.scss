@@ -44,6 +44,49 @@ $jdl-component-code-controls-spacing: 0.75rem;
     padding: $jdl-component-code-controls-spacing;
   }
 
+  &__tab-bar {
+    border-left: var(--jdl-border);
+    border-right: var(--jdl-border);
+    display: flex;
+    gap: 0.9rem;
+    padding: 1em;
+
+    .tab {
+      position: relative;
+      appearance: none;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 4px 6px;
+      color: var(--text-color-secondary);
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: var(--font-family-mono) !important;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: -2px -5px;
+        border-radius: 100px;
+        background: color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
+        border: 1px solid color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
+      }
+
+      &:hover {
+        color: var(--text-color);
+      }
+
+      &.active {
+        color: var(--text-color);
+
+        &::before {
+          background: color-mix(in srgb, var(--text-color-secondary) 4.5%, transparent);
+          border: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 5%, transparent);
+        }
+      }
+    }
+  }
+
   &:not(:hover) {
     .jenkins-button {
       transition: var(--standard-transition);
@@ -58,4 +101,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
       }
     }
   }
+}
+
+.jdl-tab-pane pre {
+  padding-top: 0 !important;
 }

@@ -9,6 +9,7 @@
 // TODO remove this
 .jdl-subtitle2 {
   color: var(--red);
+  font-size: 2rem;
 }
 
 .jdl-heading {
@@ -22,28 +23,10 @@
   margin: calc(var(--jdl-spacing) * -0.25) 0 var(--jdl-spacing) 0;
 }
 
-// TODO remove this
-.jdl-todo-magic {
-  //@include mixins.base-text;
-  //margin: 0 0 var(--jdl-spacing) 0;
-  //max-width: 95ch;
-  //color: var(--text-color-secondary);
-  background: red;
-
-  //& + & {
-  //  margin-top: calc((var(--jdl-spacing) / 2) * -1);
-  //}
-}
-
 .jdl-paragraph {
   @include mixins.base-text;
-  //margin: 0 0 var(--jdl-spacing) 0;
   max-width: 100ch;
   margin: 0;
-
-  & + & {
-    margin-top: calc((var(--jdl-spacing) / 2) * -1);
-  }
 }
 
 .jdl-list {
