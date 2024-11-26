@@ -1,7 +1,7 @@
 $jdl-component-code-controls-spacing: 0.75rem;
 
 .jdl-component-code {
-  --prism-background: var(--background);
+  --prism-background: var(--card-background);
   position: relative;
   display: grid;
   align-items: center;
@@ -12,7 +12,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
   border: var(--jdl-border);
 
   pre {
-    background-color: var(--prism-background) !important;
+    background-color: transparent !important;
   }
 
   &::before {
@@ -80,8 +80,12 @@ $jdl-component-code-controls-spacing: 0.75rem;
         color: var(--text-color);
 
         &::before {
-          background: color-mix(in srgb, var(--text-color-secondary) 4.5%, transparent);
-          border: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 5%, transparent);
+          background: color-mix(in srgb, var(--text-color-secondary) 4%, transparent);
+          border: var(--jdl-border);
+
+          @media (prefers-contrast: more) {
+            border: var(--jdl-border-width) solid var(--text-color);
+          }
         }
       }
     }
@@ -101,6 +105,15 @@ $jdl-component-code-controls-spacing: 0.75rem;
       }
     }
   }
+}
+
+.jdl-tab-pane__text {
+  padding: 0 1em 1em 1em;
+  border-left: var(--jdl-border);
+  border-right: var(--jdl-border);
+  font-family: var(--font-family-mono) !important;
+  color: var(--text-color-secondary);
+  margin: 0;
 }
 
 .jdl-tab-pane pre {

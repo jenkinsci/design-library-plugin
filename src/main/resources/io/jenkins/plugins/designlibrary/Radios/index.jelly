@@ -23,33 +23,35 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
-    <h2 class="jdl-heading">Descriptor radio list</h2>
-
-    <div class="jdl-component-sample jenkins-!-padding-bottom-0">
-      <f:form>
-        <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
-      </f:form>
-    </div>
-
-    <l:tabPane title="index.jelly">
-      <s:code language="xml" file="index.jelly" />
-    </l:tabPane>
-    <l:tabPane title="Sample.java">
-      <s:code language="java" file="Sample.java" />
-    </l:tabPane>
-    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
-
-    <h2 class="jdl-heading">Boolean radio</h2>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <div>
-          <f:booleanRadio field="myField" />
+    <s:section title="Simple radios">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample jenkins-!-padding-bottom-0">
+          <f:form>
+            <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+          </f:form>
         </div>
+        <s:codePanes>
+          <s:codePane title="Jelly">
+            <s:code language="xml" file="index.jelly" />
+          </s:codePane>
+          <s:codePane title="Java">
+            <s:code language="java" file="Sample.java" />
+          </s:codePane>
+        </s:codePanes>
       </div>
-      <s:code language="xml" file="booleanRadio.jelly" />
-    </div>
+    </s:section>
+
+    <s:section title="Boolean radio">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <div>
+            <f:booleanRadio field="myField" />
+          </div>
+        </div>
+        <s:code language="xml" file="booleanRadio.jelly" />
+      </div>
+    </s:section>
   </s:sample>
 </j:jelly>
