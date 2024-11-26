@@ -14,6 +14,11 @@ public class AppBar extends UISample {
         return "symbol-app-bar";
     }
 
+    @Override
+    public String getDescription() {
+        return "App bars provide the page heading as well as important actions for the current page.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

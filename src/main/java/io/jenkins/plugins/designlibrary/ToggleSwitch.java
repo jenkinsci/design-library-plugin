@@ -14,6 +14,11 @@ public class ToggleSwitch extends UISample {
         return "symbol-toggle-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Enables users to switch between two states, such as on or off.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

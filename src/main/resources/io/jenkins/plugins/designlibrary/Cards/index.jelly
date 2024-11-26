@@ -1,8 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-subtitle">${%description}</p>
-
     <div class="app-cards__examples">
       <l:card title="Pipeline" expandable="#">
         <div class="app-cards__graph-view">
@@ -93,8 +91,6 @@
       </l:card>
     </div>
 
-    <hr />
-
     <s:dos-donts>
       <tr>
         <td>${%do.1}</td>
@@ -109,39 +105,35 @@
       </tr>
     </s:dos-donts>
 
-    <hr />
-
-    <h2 class="jdl-heading">${%creating-a-card.title}</h2>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:card title="Card title" id="app-cards__example">
-          Card content
-        </l:card>
+    <s:section title="${%creating-a-card.title}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <l:card title="Card title" id="app-cards__example">
+            Card content
+          </l:card>
+        </div>
+        <s:code language="xml" file="card.jelly" />
       </div>
-      <s:code language="xml" file="card.jelly" />
-    </div>
 
-    <p class="jdl-paragraph">${%creating-a-card.description}</p>
+      <p class="jdl-paragraph">${%creating-a-card.description}</p>
+    </s:section>
 
-    <hr />
-
-    <h2 class="jdl-heading">${%setting-actions-on-a-card.title}</h2>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <j:set var="controls">
-          <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
-            <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
-          </a>
-        </j:set>
-        <l:card title="Card with actions" expandable="#" controls="${controls}" id="app-cards__example">
-          Card content
-        </l:card>
+    <s:section title="${%setting-actions-on-a-card.title}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <j:set var="controls">
+            <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
+              <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
+            </a>
+          </j:set>
+          <l:card title="Card with actions" expandable="#" controls="${controls}" id="app-cards__example">
+            Card content
+          </l:card>
+        </div>
+        <s:code language="xml" file="actions.jelly" />
       </div>
-      <s:code language="xml" file="actions.jelly" />
-    </div>
 
-    <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>
+      <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>
+    </s:section>
   </s:sample>
 </j:jelly>

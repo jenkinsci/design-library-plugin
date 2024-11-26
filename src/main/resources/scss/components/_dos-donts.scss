@@ -1,7 +1,12 @@
 @use "../abstracts/symbols";
 
-.jdl-dos-donts {
+.jdl-dos-dont-container {
+  border-top: var(--jdl-border);
   margin-bottom: var(--jdl-spacing);
+  padding-top: var(--jdl-spacing);
+}
+
+.jdl-dos-donts {
   border-collapse: collapse;
   border-style: hidden;
 
@@ -33,7 +38,7 @@
   tbody {
     td {
       position: relative;
-      font-size: 1rem;
+      font-size: 0.9375rem;
       font-weight: 450;
       line-height: 1.66;
       padding-left: calc(2rem + 1.5ch);

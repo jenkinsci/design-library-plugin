@@ -56,7 +56,7 @@ THE SOFTWARE.
     <l:main-panel>
       <l:app-bar title="${title}" />
 
-      <p class="jdl-subtitle">${%it.description}</p>
+      <p class="jdl-subtitle">${it.description}</p>
 
       <d:invokeBody/>
 

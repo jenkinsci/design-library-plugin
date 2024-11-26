@@ -24,13 +24,13 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample>
-    <p class="jdl-subtitle">${%page.description}</p>
+    <p class="jdl-subtitle2">${%page.description}</p>
 
     <hr />
 
     <h2 class="jdl-heading">Simple select</h2>
 
-    <div class="jdl-component-sample jdl-component-sample--full-width">
+    <div class="jdl-component-sample">
       <f:entry title="Fruits">
         <f:select field="fruit"/>
       </f:entry>
@@ -50,7 +50,7 @@ THE SOFTWARE.
     <p class="jdl-paragraph">${%usage.1}</p>
 
 
-    <div class="jdl-component-sample jdl-component-sample--full-width">
+    <div class="jdl-component-sample">
       <form action="submit" method="post">
         <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
 
@@ -66,7 +66,7 @@ THE SOFTWARE.
 
     <p class="jdl-paragraph">${%dynamic.description}</p>
 
-    <div class="jdl-component-sample jdl-component-sample--full-width">
+    <div class="jdl-component-sample">
       <form method="post">
         <f:entry title="Country" field="country">
           <f:textbox/>

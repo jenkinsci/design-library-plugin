@@ -3,10 +3,10 @@
 .jdl-section {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--jdl-spacing) / 2);
-  border-bottom: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 10%, transparent);
+  gap: calc(var(--jdl-spacing) / 3);
+  border-top: var(--jdl-border);
+  padding-top: var(--jdl-spacing);
   margin-bottom: var(--jdl-spacing);
-  padding-bottom: var(--jdl-spacing);
 
   &__title {
     @include mixins.base-text;
@@ -20,9 +20,5 @@
     max-width: 95ch;
     color: var(--text-color-secondary);
     margin: 0;
-  }
-
-  & > .jdl-component-group {
-    margin-bottom: 0;
   }
 }

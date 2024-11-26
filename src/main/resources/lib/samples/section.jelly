@@ -5,11 +5,11 @@
     <st:attribute name="description" />
   </st:documentation>
 
-  <div class="jdl-section">
+  <section class="jdl-section">
     <h2 class="jdl-section__title">${attrs.title}</h2>
     <j:if test="${attrs.description != null}">
       <p class="jdl-section__description"><j:out value="${attrs.description}" /></p>
     </j:if>
     <d:invokeBody />
-  </div>
+  </section>
 </j:jelly>

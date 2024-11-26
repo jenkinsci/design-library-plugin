@@ -1,8 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <p class="jdl-subtitle">${%page.description}</p>
-
     <p class="jdl-paragraph">${%title}</p>
 
     <form method="post">

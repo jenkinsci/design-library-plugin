@@ -1,29 +1,36 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <div class="jdl-subtitle">
-      Banners are a handy way to display small snippets of text and actions.
-    </div>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
+    <s:section title="${%info}">
+      <s:group fullWidth="true">
         <div class="jenkins-alert jenkins-alert-info">
           Hello world
         </div>
+      </s:group>
+    </s:section>
+
+    <s:section title="${%warning}">
+      <s:group fullWidth="true">
         <div class="jenkins-alert jenkins-alert-warning">
           Hello world
         </div>
+      </s:group>
+    </s:section>
+
+    <s:section title="${%danger}">
+      <s:group fullWidth="true">
         <div class="jenkins-alert jenkins-alert-danger">
           Hello world
         </div>
-        <div class="jenkins-alert jenkins-alert-success jenkins-!-margin-bottom-0">
+      </s:group>
+    </s:section>
+
+    <s:section title="${%success}">
+      <s:group fullWidth="true">
+        <div class="jenkins-alert jenkins-alert-success">
           Hello world
         </div>
-      </div>
-      <s:code language="xml" file="index.jelly" />
-    </div>
-    <div class="jenkins-alert jenkins-alert-warning">
-      Since 2.459. The css classes have the <em>jenkins-</em> prefix. Older versions should use the non prefixed form which interfere with
-      classes defined in bootstrap.
-    </div>
+      </s:group>
+    </s:section>
   </s:sample>
 </j:jelly>

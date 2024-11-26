@@ -1,9 +1,5 @@
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/samples" xmlns:t="/lib/hudson">
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/samples">
   <l:sample title="${%title}">
-    <p class="jdl-subtitle">${%page.description}</p>
-
-    <hr />
-
     ${%blurb}
 
     <h2>${%define.title}</h2>

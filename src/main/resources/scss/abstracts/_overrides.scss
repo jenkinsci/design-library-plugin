@@ -1,6 +1,7 @@
 :root {
   --jdl-spacing: var(--section-padding);
   --jdl-border-width: 1.5px;
+  --jdl-border: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 7.5%, transparent);
 }
 
 #main-panel {

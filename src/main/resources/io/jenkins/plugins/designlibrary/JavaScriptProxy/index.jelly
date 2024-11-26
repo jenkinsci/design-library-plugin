@@ -24,9 +24,9 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:sample title="JavaScript Proxy">
-    <p class="jdl-subtitle">${%page.description}</p>
-
-    <hr />
+    <div class="jdl-component-sample">
+      <div id="msg" style="color: var(--red); font-size: 5rem;" />
+    </div>
 
     <p class="jdl-paragraph">${%description.1}</p>
 
@@ -44,7 +44,6 @@ THE SOFTWARE.
 
     <st:bind var="a" value="${it}"/>
 
-    <div id="msg" style="color: var(--red); font-size: 5rem;" />
     <st:adjunct includes="io.jenkins.plugins.designlibrary.JavaScriptProxy.counter"/>
 
     <h2 class="jdl-heading">${%invokingMethod}</h2>

@@ -10,6 +10,11 @@ public class Dialogs extends UISample {
         return "symbol-chatbox-ellipses-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Displays overlay windows for additional information or user input without navigating away.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
         public ListBoxModel doFillFlavorItems() {

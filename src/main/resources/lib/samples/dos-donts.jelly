@@ -1,14 +1,16 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define">
-  <table class="jdl-dos-donts">
-    <thead>
-      <tr>
-        <th class="jenkins-!-success-color">${%do}</th>
-        <th class="jenkins-!-error-color">${%dont}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <d:invokeBody />
-    </tbody>
-  </table>
+  <div class="jdl-dos-dont-container">
+    <table class="jdl-dos-donts">
+      <thead>
+        <tr>
+          <th class="jenkins-!-success-color">${%do}</th>
+          <th class="jenkins-!-error-color">${%dont}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <d:invokeBody />
+      </tbody>
+    </table>
+  </div>
 </j:jelly>

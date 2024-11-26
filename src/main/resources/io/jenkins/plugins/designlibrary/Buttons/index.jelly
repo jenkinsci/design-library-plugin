@@ -25,10 +25,6 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
   <s:sample>
-    <p class="jdl-subtitle">${%page.description}</p>
-
-    <hr />
-
     <s:section title="${%default}">
       <s:group>
         <button class="jenkins-button">Default</button>

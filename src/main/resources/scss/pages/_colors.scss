@@ -23,8 +23,6 @@
   gap: var(--jdl-spacing);
   list-style-type: none;
   padding: 0;
-  margin-top: calc(var(--section-padding) * -0.25);
-  margin-bottom: var(--section-padding);
 
   @media(max-width: 1300px){
     grid-template-columns: repeat(2, 1fr);
@@ -87,7 +85,7 @@
           bottom: 0.2rem;
           background: var(--color);
           border-radius: 100px;
-          width: 2px;
+          width: var(--jdl-border-width);
           opacity: 0.2;
         }
 

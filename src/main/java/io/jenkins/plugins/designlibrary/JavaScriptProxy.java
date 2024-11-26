@@ -14,8 +14,18 @@ public class JavaScriptProxy extends UISample {
     private int i;
 
     @Override
+    public String getIconFileName() {
+        return "symbol-logo-javascript plugin-ionicons-api";
+    }
+
+    @Override
     public String getDisplayName() {
         return "JavaScript Proxy";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Captures user input through various text or data entry formats.";
     }
 
     /**

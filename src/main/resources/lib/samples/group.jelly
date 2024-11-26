@@ -1,11 +1,15 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:s="/lib/samples" xmlns:st="jelly:stapler">
+  <st:documentation>
+    <st:attribute name="fullWidth" />
+  </st:documentation>
+
   <j:set var="sure">
     <d:invokeBody />
   </j:set>
 
   <div class="jdl-component-group">
-    <div class="jdl-component-sample">
+    <div class="jdl-component-sample ${attrs.classes} ${attrs.fullWidth ? ' jdl-component-sample--full-width' : ''}">
       <d:invokeBody />
     </div>
     <s:code language="xml" code="${sure}" />

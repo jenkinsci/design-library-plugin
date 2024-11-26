@@ -66,6 +66,11 @@ public final class HeteroList extends UISample {
         return "Hetero List";
     }
 
+    @Override
+    public String getDescription() {
+        return "Displays lists with varying content types or layouts within the same container.";
+    }
+
     public Config getConfig() {
         return config;
     }

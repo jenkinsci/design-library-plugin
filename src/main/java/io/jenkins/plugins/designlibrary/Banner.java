@@ -14,6 +14,11 @@ public class Banner extends UISample {
         return "symbol-information-circle-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Banners are a handy way to display small snippets of text and actions.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

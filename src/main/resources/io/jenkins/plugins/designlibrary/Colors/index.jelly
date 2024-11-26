@@ -53,10 +53,6 @@ THE SOFTWARE.
   </d:taglib>
 
   <s:sample xmlns:local="local">
-    <p class="jdl-subtitle">${%page.description}</p>
-
-    <hr />
-
     <s:dos-donts>
       <tr>
         <td>${%tip-first}</td>
@@ -70,22 +66,20 @@ THE SOFTWARE.
       </tr>
     </s:dos-donts>
 
-    <hr />
+    <s:section title="${%Semantics}">
+      <ol class="jdl-colors">
+        <j:forEach var="item" items="${it.semantics}">
+          <local:item item="${item}" />
+        </j:forEach>
+      </ol>
+    </s:section>
 
-    <h2 class="jdl-heading">${%Semantics}</h2>
-    <ol class="jdl-colors">
-      <j:forEach var="item" items="${it.semantics}">
-        <local:item item="${item}" />
-      </j:forEach>
-    </ol>
-
-    <hr />
-
-    <h2 class="jdl-heading">${%Palette}</h2>
-    <ol class="jdl-colors">
-      <j:forEach var="item" items="${it.colors}">
-        <local:item item="${item}" />
-      </j:forEach>
-    </ol>
+    <s:section title="${%Palette}">
+      <ol class="jdl-colors">
+        <j:forEach var="item" items="${it.colors}">
+          <local:item item="${item}" />
+        </j:forEach>
+      </ol>
+    </s:section>
   </s:sample>
 </j:jelly>

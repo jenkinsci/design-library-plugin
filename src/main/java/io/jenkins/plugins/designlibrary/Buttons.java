@@ -14,13 +14,9 @@ public class Buttons extends UISample {
 
     @Override
     public String getDescription() {
-        return "Hello";
+        return "Triggers specific actions or commands with a click or tap.";
     }
 
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
-
-    public static String magic() {
-        return "<button class=\"jenkins-button\"><l:icon src=\"symbol-add\" /> With symbol</button>";
-    }
 }

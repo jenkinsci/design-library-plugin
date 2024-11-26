@@ -1,8 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:sample>
-    <p class="jdl-subtitle">${%page.description}</p>
-
     <div class="jdl-component-sample">
       <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
         <div class="jdl-layout-preview__navigation" />
@@ -42,7 +40,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
 
-      <p class="jdl-subtitle">
+      <p class="jdl-subtitle2">
         Two column layouts are for 'hub' style pages, pages that have child pages
         for the user to navigate to.
       </p>
@@ -104,7 +102,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%One column}</h2>
 
-      <p class="jdl-subtitle">
+      <p class="jdl-subtitle2">
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
         that don't have child navigation.
       </p>
@@ -130,7 +128,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%Fullscreen}</h2>
 
-      <p class="jdl-subtitle">
+      <p class="jdl-subtitle2">
         Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
         Such layouts aren't intended for the average page and should only be used if your page needs it.

@@ -4,8 +4,8 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: var(--section-padding);
-  padding-top: var(--section-padding);
+  border-top: var(--jdl-border);
+  padding-top: var(--jdl-spacing);
 
   @media (min-width: 767px) {
     & > div:nth-of-type(2) {
@@ -16,19 +16,7 @@
   }
 
   .jenkins-button {
-    font-size: 1rem;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--jdl-border-width);
-    background: var(--text-color-secondary);
-    opacity: 0.1;
-    border-radius: 2px;
+    font-size: 0.9375rem;
   }
 
   .jdl-previous-button,

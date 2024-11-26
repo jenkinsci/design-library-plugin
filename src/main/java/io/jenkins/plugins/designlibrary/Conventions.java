@@ -9,6 +9,11 @@ public class Conventions extends UISample {
         return "symbol-school-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Provides reusable design principles and standards for maintaining consistency.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

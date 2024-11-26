@@ -4,14 +4,15 @@ import hudson.Extension;
 
 @Extension
 public class File extends UISample {
-    @Override
-    public String getDisplayName() {
-        return "File";
-    }
 
     @Override
     public String getIconFileName() {
         return "symbol-cloud-upload-outline plugin-ionicons-api";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Enables file upload or management functionality.";
     }
 
     @Extension

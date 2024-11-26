@@ -25,66 +25,58 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <p class="jdl-subtitle">${%page.description}</p>
+    <s:sectiwon title="Naming">
+      <p class="jdl-paragraph">Classnames should follow <a class="jdl-link" href="https://getbem.com">Block Element Modifier (BEM) methodology</a> and be prefixed.</p>
 
-    <hr />
-
-    <h2 class="jdl-heading">Stylesheets (CSS/SCSS)</h2>
-
-    <h3 class="jdl-heading">Naming</h3>
-
-    <p class="jdl-paragraph">Classnames should follow <a class="jdl-link" href="https://getbem.com">Block Element Modifier (BEM) methodology</a> and be prefixed.</p>
-
-    <div class="jdl-bem-table">
-      <div>
-        <dt class="jdl-!-bem-block-color">Block</dt>
-        <dd>Standalone entity that is meaningful on its own</dd>
-        <dd>e.g. <code class="jdl-inline-code">header</code>, <code class="jdl-inline-code">container</code>, <code class="jdl-inline-code">menu</code>, <code class="jdl-inline-code">checkbox</code>, <code class="jdl-inline-code">input</code></dd>
+      <div class="jdl-bem-table">
+        <div>
+          <dt class="jdl-!-bem-block-color">Block</dt>
+          <dd>Standalone entity that is meaningful on its own</dd>
+          <dd>e.g. <code class="jdl-inline-code">header</code>, <code class="jdl-inline-code">container</code>, <code class="jdl-inline-code">menu</code>, <code class="jdl-inline-code">checkbox</code>, <code class="jdl-inline-code">input</code></dd>
+        </div>
+        <div>
+          <dt class="jdl-!-bem-element-color">Element</dt>
+          <dd>A part of a block that has no standalone meaning and is semantically tied to its block</dd>
+          <dd>e.g. <code class="jdl-inline-code">__item</code>, <code class="jdl-inline-code">__checkbox-caption</code>, <code class="jdl-inline-code">__header</code></dd>
+        </div>
+        <div>
+          <dt class="jdl-!-bem-modifier-color">Modifier</dt>
+          <dd>A flag on a block or element. Use them to change appearance or behavior</dd>
+          <dd>e.g. <code class="jdl-inline-code">--disabled</code>, <code class="jdl-inline-code">--selected</code>, <code class="jdl-inline-code">--large</code></dd>
+        </div>
       </div>
-      <div>
-        <dt class="jdl-!-bem-element-color">Element</dt>
-        <dd>A part of a block that has no standalone meaning and is semantically tied to its block</dd>
-        <dd>e.g. <code class="jdl-inline-code">__item</code>, <code class="jdl-inline-code">__checkbox-caption</code>, <code class="jdl-inline-code">__header</code></dd>
-      </div>
-      <div>
-        <dt class="jdl-!-bem-modifier-color">Modifier</dt>
-        <dd>A flag on a block or element. Use them to change appearance or behavior</dd>
-        <dd>e.g. <code class="jdl-inline-code">--disabled</code>, <code class="jdl-inline-code">--selected</code>, <code class="jdl-inline-code">--large</code></dd>
-      </div>
-    </div>
 
-    <p class="jdl-paragraph">An example classname following this strategy could be <code class="jdl-inline-code">.jenkins-<span class="jdl-!-bem-block-color">cards</span><span class="jdl-!-bem-element-color">__item</span><span class="jdl-!-bem-modifier-color">--large</span></code> or <code class="jdl-inline-code">.jenkins-<span class="jdl-!-bem-block-color">button</span><span class="jdl-!-bem-modifier-color">--disabled</span></code>.</p>
+      <p class="jdl-paragraph">An example classname following this strategy could be <code class="jdl-inline-code">.jenkins-<span class="jdl-!-bem-block-color">cards</span><span class="jdl-!-bem-element-color">__item</span><span class="jdl-!-bem-modifier-color">--large</span></code> or <code class="jdl-inline-code">.jenkins-<span class="jdl-!-bem-block-color">button</span><span class="jdl-!-bem-modifier-color">--disabled</span></code>.</p>
 
-    <p class="jdl-paragraph">
-      Not every class falls neatly into BEM, for example a class that does not belong to a particular component - such as a spacing or color class. For those classes we use the <code class="jdl-inline-code">-!-</code> convention to indicate that the classes can be used on any component.
-    </p>
+      <p class="jdl-paragraph">
+        Not every class falls neatly into BEM, for example a class that does not belong to a particular component - such as a spacing or color class. For those classes we use the <code class="jdl-inline-code">-!-</code> convention to indicate that the classes can be used on any component.
+      </p>
 
-    <p class="jdl-paragraph">
-      Examples include: <code class="jdl-inline-code">.jenkins-!-padding-6</code>, <code class="jdl-inline-code">.jenkins-!-margin-6</code> and <code class="jdl-inline-code">.jenkins-!-destructive-color</code>.
-    </p>
+      <p class="jdl-paragraph">
+        Examples include: <code class="jdl-inline-code">.jenkins-!-padding-6</code>, <code class="jdl-inline-code">.jenkins-!-margin-6</code> and <code class="jdl-inline-code">.jenkins-!-destructive-color</code>.
+      </p>
+    </s:sectiwon>
 
-    <hr />
+    <s:section title="Prefixes">
+      <p class="jdl-paragraph">
+        Classes should be prefixed in a way that is unique to your service or plugin. We use prefixes due to the extensible nature of Jenkins, without prefixing we couldn't be certain a plugin class wouldn't interfere with a Jenkins class. We also use prefixing to prevent clashes with other libraries, such as Bootstrap.
+      </p>
 
-    <h3 class="jdl-heading">Prefixes</h3>
+      <p class="jdl-paragraph">
+        Jenkins uses the prefixes <code class="jdl-inline-code">jenkins-</code> and <code class="jdl-inline-code">app-</code> to namespace CSS classes, these prefixes should not be used in your plugins. Due to legacy reasons, some classes in use in Jenkins aren't namespaced however they are okay to use in your plugin.
+      </p>
 
-    <p class="jdl-paragraph">
-      Classes should be prefixed in a way that is unique to your service or plugin. We use prefixes due to the extensible nature of Jenkins, without prefixing we couldn't be certain a plugin class wouldn't interfere with a Jenkins class. We also use prefixing to prevent clashes with other libraries, such as Bootstrap.
-    </p>
+      <p class="jdl-paragraph">
+        Classes prefixed with <code class="jdl-inline-code">jenkins-</code> indicate that they can be used in your plugin with confidence that they will only receive minimal changes.
+      </p>
 
-    <p class="jdl-paragraph">
-      Jenkins uses the prefixes <code class="jdl-inline-code">jenkins-</code> and <code class="jdl-inline-code">app-</code> to namespace CSS classes, these prefixes should not be used in your plugins. Due to legacy reasons, some classes in use in Jenkins aren't namespaced however they are okay to use in your plugin.
-    </p>
+      <p class="jdl-paragraph">
+        Classes prefixed with <code class="jdl-inline-code">app-</code> indicate that they should not be used in your plugin as these classes are internal to Jenkins and may change at any time.
+      </p>
 
-    <p class="jdl-paragraph">
-      Classes prefixed with <code class="jdl-inline-code">jenkins-</code> indicate that they can be used in your plugin with confidence that they will only receive minimal changes.
-    </p>
-
-    <p class="jdl-paragraph">
-      Classes prefixed with <code class="jdl-inline-code">app-</code> indicate that they should not be used in your plugin as these classes are internal to Jenkins and may change at any time.
-    </p>
-
-    <p class="jdl-paragraph">
-      A simple way to come up with a prefix for your plugin is to abbreviate your plugin name, e.g. Jenkins Design Library becomes <code class="jdl-inline-code">jdl-</code>.
-    </p>
+      <p class="jdl-paragraph">
+        A simple way to come up with a prefix for your plugin is to abbreviate your plugin name, e.g. Jenkins Design Library becomes <code class="jdl-inline-code">jdl-</code>.
+      </p>
+    </s:section>
   </s:sample>
 </j:jelly>
