@@ -62,6 +62,11 @@ public final class HeteroList extends UISample {
     }
 
     @Override
+    public String getIconFileName() {
+        return "symbol-list-outline plugin-ionicons-api";
+    }
+
+    @Override
     public String getDisplayName() {
         return "Hetero List";
     }

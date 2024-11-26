@@ -14,10 +14,6 @@ import org.kohsuke.accmod.restrictions.NoExternalUse;
  * @author Kohsuke Kawaguchi
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
-    public String getIconFileName() {
-        return "symbol-document-outline plugin-ionicons-api";
-    }
-
     public String getUrlName() {
         return getClass().getSimpleName();
     }
@@ -29,9 +25,10 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
         return getClass().getSimpleName();
     }
 
-    public String getDescription() {
-        return null;
-    }
+    /**
+     * Description for the UI sample, visible at the top of every page.
+     */
+    public abstract String getDescription();
 
     public UISampleDescriptor getDescriptor() {
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
