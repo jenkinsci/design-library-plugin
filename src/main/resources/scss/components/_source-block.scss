@@ -45,6 +45,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
   }
 
   &__tab-bar {
+    background: var(--card-background);
     border-left: var(--jdl-border);
     border-right: var(--jdl-border);
     display: flex;

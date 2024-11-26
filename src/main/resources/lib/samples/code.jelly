@@ -20,16 +20,16 @@
 
         <j:if test="${executable != null}">
           <!-- This only works if the 'code' attribute is set -->
-          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
+          <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
             <l:icon src="symbol-play" />
           </button>
         </j:if>
         <j:if test="${previewable == 'true'}">
-          <a href="${file.replace('.jelly', '')}" class="jenkins-button" tooltip="${%Preview in new tab}" target="_blank">
+          <a href="${file.replace('.jelly', '')}" class="jenkins-button jenkins-button--tertiary" tooltip="${%Preview in new tab}" target="_blank">
             <l:icon src="symbol-open-outline plugin-ionicons-api" />
           </a>
         </j:if>
-        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
+        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" clazz="jenkins-button--tertiary" />
       </div>
     </div>
   </div>
