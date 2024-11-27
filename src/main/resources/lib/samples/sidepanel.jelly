@@ -9,8 +9,11 @@
 
     <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home-outline plugin-ionicons-api" contextMenu="false" />
 
-    <j:forEach var="s" items="${it.all}">
-      <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName} plugin-design-library" />
+    <j:forEach var="s" items="${it.grouped.entrySet()}">
+      <div class="jdl-fireproof">${s.key.displayName}</div>
+      <j:forEach var="s" items="${s.value}">
+        <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName} plugin-design-library" />
+      </j:forEach>
     </j:forEach>
   </l:tasks>
 

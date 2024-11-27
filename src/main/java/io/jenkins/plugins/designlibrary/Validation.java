@@ -28,6 +28,11 @@ public class Validation extends UISample {
         return "Ensures user inputs meet specified criteria or rules before submission.";
     }
 
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     private List<State> states = new ArrayList<State>(Arrays.asList(
             new State(
                     "California",

@@ -6,6 +6,10 @@ import hudson.model.Describable;
 import io.jenkins.plugins.prism.PrismConfiguration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
+
 import jenkins.model.Jenkins;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
@@ -25,6 +29,10 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
         return getClass().getSimpleName();
     }
 
+    public Category getCategory() {
+        return Category.COMPONENT;
+    }
+
     /**
      * Description for the UI sample, visible at the top of every page.
      */
@@ -41,6 +49,11 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
 
     public static List<UISample> getAll() {
         return new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
+    }
+
+    public static Map<Category, List<UISample>> getGrouped() {
+        return new TreeMap<>(getAll().stream()
+                .collect(Collectors.groupingBy(UISample::getCategory)));
     }
 
     public UISample getPreviousPage() {

@@ -14,6 +14,11 @@ public class Conventions extends UISample {
         return "Provides reusable design principles and standards for maintaining consistency.";
     }
 
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

@@ -28,6 +28,11 @@ public class JavaScriptProxy extends UISample {
         return "Captures user input through various text or data entry formats.";
     }
 
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     /**
      * The annotation exposes this method to JavaScript proxy.
      */
