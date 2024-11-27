@@ -38,15 +38,13 @@ THE SOFTWARE.
       <li>clazz - ${%parameters.clazz}</li>
     </ul>
 
-    <hr />
-
-    <p class="jdl-paragraph">${%parameters.additional}</p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
+    <s:section title="Additional parameters" description="${%parameters.additional}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
+        </div>
+        <s:code language="xml" file="file-accept.jelly" />
       </div>
-      <s:code language="xml" file="file-accept.jelly" />
-    </div>
+    </s:section>
   </s:sample>
 </j:jelly>
