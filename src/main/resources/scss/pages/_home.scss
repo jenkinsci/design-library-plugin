@@ -27,6 +27,7 @@
   overflow: hidden;
   color: var(--text-color) !important;
   text-decoration: none !important;
+  gap: 0.2rem;
 }
 
 .app-card__container:link:hover .app-card__preview {
@@ -45,7 +46,7 @@
   justify-content: center;
   aspect-ratio: 16 / 7;
   overflow: hidden;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   transition: var(--standard-transition);
   border-radius: 1rem;
   z-index: 0;
@@ -173,6 +174,7 @@
 
 .app-card__title {
   @include mixins.base-text;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   margin: 0;
@@ -201,6 +203,7 @@
 
 .app-card__description {
   @include mixins.base-text;
+  font-size: 1rem;
   margin: 0;
   color: var(--text-color-secondary);
 }

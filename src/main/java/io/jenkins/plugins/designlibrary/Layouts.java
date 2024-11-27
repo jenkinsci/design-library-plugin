@@ -16,6 +16,11 @@ public class Layouts extends UISample {
         return "Captures user input through various text or data entry formats.";
     }
 
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     public Badge getBadge() {
         return new Badge("123", "A tooltip describing the badge", Badge.Severity.INFO);
     }

@@ -14,6 +14,11 @@ public class Spacing extends UISample {
         return "Defines consistent padding, margins, and gaps between elements.";
     }
 
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     @Extension
     public static class DescriptorImpl extends UISampleDescriptor {}
 }
