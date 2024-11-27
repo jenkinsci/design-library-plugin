@@ -3,7 +3,12 @@ package io.jenkins.plugins.designlibrary;
 import hudson.Extension;
 
 @Extension
-public class Conventions extends UISample {
+public class Stylesheets extends UISample {
+    @Override
+    public String getDisplayName() {
+        return "Stylesheets";
+    }
+
     @Override
     public String getIconFileName() {
         return "symbol-school-outline plugin-ionicons-api";

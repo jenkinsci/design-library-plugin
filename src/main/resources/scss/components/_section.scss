@@ -3,7 +3,8 @@
 .jdl-section {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--jdl-spacing) / 3);
+  //gap: calc(var(--jdl-spacing) / 3);
+  gap: calc(var(--jdl-spacing) / 1);
   border-top: var(--jdl-border);
   padding-top: var(--jdl-spacing);
   margin-bottom: var(--jdl-spacing);
@@ -20,5 +21,10 @@
     max-width: 95ch;
     color: var(--text-color-secondary);
     margin: 0;
+  }
+
+  &--no-border {
+    border-top: none;
+    padding-top: 0;
   }
 }

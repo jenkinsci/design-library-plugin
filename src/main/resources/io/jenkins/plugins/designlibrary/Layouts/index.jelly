@@ -47,8 +47,6 @@
 
       <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
 
-      <hr />
-
       <s:dos-donts>
         <tr>
           <td>${%two-column.do.1}</td>
@@ -66,37 +64,35 @@
         </tr>
       </s:dos-donts>
 
-      <hr />
+      <s:section title="${%Usage}">
+        <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
 
-      <h3 class="jdl-heading">${%Usage}</h3>
+        <s:code file="twoColumn.jelly" language="xml" previewable="true" />
 
-      <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
+        <p class="jdl-paragraph">
+          The example above is all you need to set up a two-column page,
+          it's complete with headings, sidebar items and content.
+        </p>
+      </s:section>
 
-      <s:code file="twoColumn.jelly" language="xml" previewable="true" />
+      <s:section title="${%Badges}">
+        <p class="jdl-paragraph">
+          You can include badges (instances of <a href="https://javadoc.jenkins.io/jenkins/management/Badge.html" target="_blank"><code>jenkins.management.badge</code></a>) in your sidebar to highlight important information.
+          You should only use a badge if the information is useful to the user, for example:
+        </p>
 
-      <p class="jdl-paragraph">
-        The example above is all you need to set up a two-column page,
-        it's complete with headings, sidebar items and content.
-      </p>
-
-      <h3 class="jdl-heading">${%Badges}</h3>
-
-      <p class="jdl-paragraph">
-        You can include badges (instances of <a href="https://javadoc.jenkins.io/jenkins/management/Badge.html" target="_blank"><code>jenkins.management.badge</code></a>) in your sidebar to highlight important information.
-        You should only use a badge if the information is useful to the user, for example:
-      </p>
-
-      <ul class="jdl-list">
-        <li>
-          Updates count on the 'Plugins' page
-        </li>
-        <li>
-          Passing/failed tests count
-        </li>
-        <li>
-          Unread notifications
-        </li>
-      </ul>
+        <ul class="jdl-list">
+          <li>
+            Updates count on the 'Plugins' page
+          </li>
+          <li>
+            Passing/failed tests count
+          </li>
+          <li>
+            Unread notifications
+          </li>
+        </ul>
+      </s:section>
     </div>
 
     <div class="jenkins-tab-pane">
@@ -116,13 +112,9 @@
         </tr>
       </s:dos-donts>
 
-      <hr />
-
-      <h3 class="jdl-heading">${%Usage}</h3>
-
-      <p class="jdl-paragraph">Set the type attribute to 'one-column' to use this layout:</p>
-
-      <s:code file="oneColumn.jelly" language="xml" previewable="true" />
+      <s:section title="${%Usage}" description="Set the type attribute to 'one-column' to use this layout:">
+        <s:code file="oneColumn.jelly" language="xml" previewable="true" />
+      </s:section>
     </div>
 
     <div class="jenkins-tab-pane">
@@ -142,11 +134,9 @@
         </a>
       </p>
 
-      <h3 class="jdl-heading">${%Usage}</h3>
-
-      <p class="jdl-paragraph">Set the type attribute to 'full-screen' to use this layout:</p>
-
-      <s:code file="fullscreen.jelly" language="xml" previewable="true" />
+      <s:section title="${%Usage}" description="Set the type attribute to 'full-screen' to use this layout:">
+        <s:code file="fullscreen.jelly" language="xml" previewable="true" />
+      </s:section>
     </div>
 
     <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>

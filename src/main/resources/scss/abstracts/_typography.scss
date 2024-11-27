@@ -31,7 +31,7 @@
 
 .jdl-list {
   @include mixins.base-text;
-  margin: 0 0 var(--jdl-spacing) 0;
+  margin: 0;
 }
 
 .jdl-important-point {

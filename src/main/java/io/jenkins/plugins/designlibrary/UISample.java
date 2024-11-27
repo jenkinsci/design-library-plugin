@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
-
 import jenkins.model.Jenkins;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
@@ -52,8 +51,7 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
     }
 
     public static Map<Category, List<UISample>> getGrouped() {
-        return new TreeMap<>(getAll().stream()
-                .collect(Collectors.groupingBy(UISample::getCategory)));
+        return new TreeMap<>(getAll().stream().collect(Collectors.groupingBy(UISample::getCategory)));
     }
 
     public UISample getPreviousPage() {

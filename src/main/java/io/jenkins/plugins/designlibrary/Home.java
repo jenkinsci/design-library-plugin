@@ -2,10 +2,11 @@ package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
 import hudson.model.RootAction;
-import jenkins.model.ModelObjectWithContextMenu;
-
 import java.util.List;
 import java.util.Map;
+import jenkins.model.ModelObjectWithContextMenu;
+import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerResponse;
 
 /**
  * Entry point to all the UI samples.
@@ -25,6 +26,20 @@ public class Home implements RootAction, ModelObjectWithContextMenu {
 
     public String getUrlName() {
         return "design-library";
+    }
+
+    @Override
+    public ContextMenu doContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
+        ContextMenu menu = new ContextMenu();
+        for (UISample s : getAll()) {
+            String iconFilename = s.getIconFileName() + " plugin-design-library";
+            menu.add(new MenuItem()
+                    .withDisplayName(s.getDisplayName())
+                    .withIconClass(iconFilename)
+                    .withContextRelativeUrl("/" + getUrlName() + "/" + s.getUrlName()));
+        }
+
+        return menu.from(this, request, response);
     }
 
     public UISample getDynamic(String name) {

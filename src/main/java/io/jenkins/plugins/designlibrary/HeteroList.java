@@ -43,7 +43,7 @@ import org.kohsuke.stapler.HttpResponse;
 import org.kohsuke.stapler.StaplerRequest;
 
 @Extension
-public final class HeteroList extends UISample {
+public class HeteroList extends UISample {
 
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}

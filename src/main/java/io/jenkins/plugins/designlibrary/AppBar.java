@@ -16,7 +16,7 @@ public class AppBar extends UISample {
 
     @Override
     public String getDescription() {
-        return "App bars provide the page heading as well as important actions for the current page.";
+        return "TODO TODO TODO TODO TODO";
     }
 
     @Extension

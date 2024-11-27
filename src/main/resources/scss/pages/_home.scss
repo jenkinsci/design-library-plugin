@@ -6,20 +6,13 @@
   flex-direction: column;
   width: 100%;
   max-width: max(950px, 65vw);
-  gap: 3.5rem;
-}
-
-.app-home__subheading {
-  @include mixins.base-text;
-  margin: 0 0 -2.5rem;
-  font-weight: 450;
 }
 
 .app-home__side-by-side {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: var(--jdl-spacing);
   overflow: hidden;
 
   @media (max-width: 970px) {

@@ -5,9 +5,9 @@
   <l:app-bar title="Design Library" />
 
   <l:tasks>
-    <l:search-bar placeholder="${%Search Design Library}" id="design-library-search-bar" />
+    <l:search-bar id="design-library-search-bar" />
 
-    <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-home-outline plugin-ionicons-api" contextMenu="false" />
+    <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-design-library plugin-design-library" contextMenu="false" />
 
     <j:forEach var="s" items="${it.grouped.entrySet()}">
       <div class="jdl-fireproof">${s.key.displayName}</div>
