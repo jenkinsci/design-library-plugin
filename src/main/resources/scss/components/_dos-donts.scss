@@ -1,3 +1,4 @@
+@use "../abstracts/mixins";
 @use "../abstracts/symbols";
 
 .jdl-dos-dont-container {
@@ -18,9 +19,9 @@
   }
 
   svg {
-    width: 1.2rem;
-    height: 1.2rem;
-    margin-top: 4px;
+    width: 1rem;
+    height: 1rem;
+    translate: 0 3px;
 
     * {
       stroke-width: 55px !important;
@@ -37,10 +38,8 @@
 
   tbody {
     td {
+      @include mixins.base-text;
       position: relative;
-      font-size: 0.9375rem;
-      font-weight: 450;
-      line-height: 1.66;
       padding-left: calc(2rem + 1.5ch);
 
       &::before,

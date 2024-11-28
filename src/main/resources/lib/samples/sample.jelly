@@ -66,6 +66,12 @@ THE SOFTWARE.
               <span>${it.previousPage.displayName}</span>
             </a>
           </j:if>
+          <j:if test="${it.previousPage == null}">
+            <a href="${rootURL}/design-library/" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
+              <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+              <span>Home</span>
+            </a>
+          </j:if>
         </div>
         <div class="jenkins-mobile-hide">
           <a class="jenkins-button jenkins-button--tertiary"

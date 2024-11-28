@@ -59,6 +59,19 @@
                     href="https://github.com/jenkinsci/design-library-plugin" />
           </div>
         </s:section>
+
+        <div class="jdl-previous-next-controls">
+          <div>
+          </div>
+          <div class="jenkins-mobile-hide">
+          </div>
+          <div>
+            <a href="${rootURL}/design-library/${it.all.0.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
+              <span>${it.all.0.displayName}</span>
+              <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+            </a>
+          </div>
+        </div>
       </div>
     </l:main-panel>
   </l:layout>
