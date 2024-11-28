@@ -25,21 +25,21 @@
             <s:card icon="symbol-cards plugin-design-library"
                     title="${%cards}"
                     description="${%cards-description}"
-                    href="Cards"
+                    href="cards"
                     tag="${%New}" />
             <s:card icon="symbol-dropdowns plugin-design-library"
                     title="${%dropdowns}"
                     description="${%dropdowns-description}"
-                    href="Dropdowns"
+                    href="dropdowns"
                     tag="${%New}" />
             <s:card icon="symbol-buttons plugin-design-library"
                     title="${%buttons}"
                     description="${%buttons-description}"
-                    href="Buttons" />
+                    href="buttons" />
             <s:card icon="symbol-star-outline plugin-ionicons-api"
                     title="${%symbols}"
                     description="${%symbols-description}"
-                    href="Symbols" />
+                    href="symbols" />
           </div>
         </s:section>
 

@@ -1,53 +1,58 @@
-<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/samples">
-  <l:sample title="${%title}">
-    ${%blurb}
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/samples" xmlns:s="/lib/samples">
+  <l:sample>
+    <s:section2>
+      ${%blurb}
+    </s:section2>
 
-    <h2>${%define.title}</h2>
-    ${%blurb.define}
-    <l:code language="java" file="Links.java"/>
+    <s:section title="${%define.title}" description="${%blurb.define}">
+      <l:code language="java" file="Links.java"/>
+    </s:section>
 
-    <h2>${%breadcrumb.title}</h2>
-    ${%blurb.breadcrumb}
+    <s:section title="${%breadcrumb.title}">
+      ${%blurb.breadcrumb}
+    </s:section>
 
-    <h2>${%hyperlink.title}</h2>
-    ${%blurb.modelLink}
-    <table class="jenkins-table">
-      <tr>
-        <td>
-          &lt;a href='.' class='model-link'&gt;self&lt;/a&gt;
-        </td>
-        <td>
-          <a href="." class="model-link">self</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          &lt;a href='..' class='model-link'&gt;up&lt;/a&gt;
-        </td>
-        <td>
-          <a href=".." class="model-link">up</a>
-        </td>
-      </tr>
-    </table>
+    <s:section title="${%hyperlink.title}">
+      ${%blurb.modelLink}
+      <table class="jenkins-table jenkins-!-margin-0">
+        <tr>
+          <td>
+            &lt;a href='.' class='model-link'&gt;self&lt;/a&gt;
+          </td>
+          <td>
+            <a href="." class="model-link">self</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            &lt;a href='..' class='model-link'&gt;up&lt;/a&gt;
+          </td>
+          <td>
+            <a href=".." class="model-link">up</a>
+          </td>
+        </tr>
+      </table>
 
-    ${%blurb.modelLink.inside}
-    <table class="jenkins-table">
-      <tr>
-        <td>
-          &lt;a href='.' class='model-link'&gt;self&lt;/a&gt;
-        </td>
-        <td>
-          <a href="." class="model-link">self</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          &lt;a href='..' class='model-link'&gt;up&lt;/a&gt;
-        </td>
-        <td>
-          <a href=".." class="model-link">up</a>
-        </td>
-      </tr>
-    </table>
+      ${%blurb.modelLink.inside}
+      <table class="jenkins-table jenkins-!-margin-0">
+        <tr>
+          <td>
+            &lt;a href='.' class='model-link'&gt;self&lt;/a&gt;
+          </td>
+          <td>
+            <a href="." class="model-link">self</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            &lt;a href='..' class='model-link'&gt;up&lt;/a&gt;
+          </td>
+          <td>
+            <a href=".." class="model-link">up</a>
+          </td>
+        </tr>
+      </table>
+    </s:section>
   </l:sample>
 </j:jelly>

@@ -5,6 +5,7 @@ import hudson.model.Action;
 import hudson.model.Describable;
 import io.jenkins.plugins.prism.PrismConfiguration;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -18,7 +19,7 @@ import org.kohsuke.accmod.restrictions.NoExternalUse;
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
     public String getUrlName() {
-        return getClass().getSimpleName();
+        return getDisplayName().replaceAll(" ", "-").toLowerCase();
     }
 
     /**
@@ -37,6 +38,10 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
      */
     public abstract String getDescription();
 
+    public String getSince() {
+        return null;
+    }
+
     public UISampleDescriptor getDescriptor() {
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
     }
@@ -47,7 +52,13 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
     }
 
     public static List<UISample> getAll() {
-        return new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
+        // Get the list of UISample objects
+        List<UISample> uiSamples = new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
+
+        // Sort the list by displayName property
+        uiSamples.sort(Comparator.comparing(UISample::getDisplayName));
+
+        return uiSamples;
     }
 
     public static Map<Category, List<UISample>> getGrouped() {

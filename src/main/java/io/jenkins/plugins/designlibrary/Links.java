@@ -21,6 +21,11 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
         return "Creates navigational connections to internal or external destinations.";
     }
 
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     /**
      * This method is called via AJAX to obtain the context menu for this model object.
      */

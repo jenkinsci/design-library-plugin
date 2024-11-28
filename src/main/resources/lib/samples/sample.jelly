@@ -26,21 +26,12 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:p="/prism">
   <st:documentation>
     Page layout for Design Library
-
-    <st:attribute name="title">
-      Overrides the default page title (defaults to the class display name)
-    </st:attribute>
   </st:documentation>
 
   <j:set var="instance" value="${it}" />
   <j:set var="descriptor" value="${it.descriptor}" />
 
-  <!-- Default to class display name if title isn't set -->
-  <j:if test="${title == null}">
-    <j:set var="title" value="${it.displayName}" />
-  </j:if>
-
-  <l:layout title="${title}">
+  <l:layout title="${it.displayName} - Design Library">
     <p:prism configuration="${it.prismConfiguration}" />
 
     <st:adjunct includes="io.jenkins.plugins.designlibrary.styles" />
@@ -55,7 +46,13 @@ THE SOFTWARE.
     </l:side-panel>
 
     <l:main-panel>
-      <l:app-bar title="${title}" />
+      <l:app-bar title="${it.displayName}">
+        <j:if test="${it.since != null}">
+          <div class="jdl-since-tag">
+            Since ${it.since}
+          </div>
+        </j:if>
+      </l:app-bar>
 
       <p class="jdl-subtitle">${it.description}</p>
 

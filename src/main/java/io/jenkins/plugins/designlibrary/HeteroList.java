@@ -68,7 +68,7 @@ public class HeteroList extends UISample {
 
     @Override
     public String getDisplayName() {
-        return "Hetero List";
+        return "Repeatable list";
     }
 
     @Override

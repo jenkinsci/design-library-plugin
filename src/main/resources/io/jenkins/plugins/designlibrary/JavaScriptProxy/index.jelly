@@ -23,7 +23,7 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:s="/lib/samples">
-  <s:sample title="JavaScript Proxy">
+  <s:sample>
     <s:section2>
       <div class="jdl-component-sample">
         <div id="msg" style="color: var(--red); font-size: 5rem;">
