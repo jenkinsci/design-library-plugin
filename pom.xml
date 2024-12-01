@@ -59,7 +59,7 @@ THE SOFTWARE.
     <changelist>999999-SNAPSHOT</changelist>
     <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
     <jenkins.version>2.479.1</jenkins.version>
-    <node.version>20.18.0</node.version>
+    <node.version>20.18.1</node.version>
     <npm.version>10.9.0</npm.version>
     <spotless.check.skip>false</spotless.check.skip>
   </properties>
