@@ -25,18 +25,20 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:file field="hello" />
+    <s:section2>
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <f:file field="hello" />
+        </div>
+        <s:code language="xml" file="file.jelly" />
       </div>
-      <s:code language="xml" file="file.jelly" />
-    </div>
 
-    <p class="jdl-paragraph">${%parameters}</p>
-    <ul class="jdl-list">
-      <li>field - ${%parameters.field}</li>
-      <li>clazz - ${%parameters.clazz}</li>
-    </ul>
+      <p class="jdl-paragraph">${%parameters}</p>
+      <ul class="jdl-list">
+        <li>field - ${%parameters.field}</li>
+        <li>clazz - ${%parameters.clazz}</li>
+      </ul>
+    </s:section2>
 
     <s:section title="Additional parameters" description="${%parameters.additional}">
       <div class="jdl-component-group">

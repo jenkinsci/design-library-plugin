@@ -5,17 +5,20 @@
   border-top: var(--jdl-border);
   margin-bottom: var(--jdl-spacing);
   padding-top: var(--jdl-spacing);
+
+  &--hide-border {
+    border-top: none;
+    padding-top: 0 !important;
+  }
 }
 
 .jdl-dos-donts {
-  border-collapse: collapse;
-  border-style: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--jdl-spacing) * 0.5);
 
-  th, td {
-    width: 50%;
-    padding: 0;
-    border-top: 1rem solid transparent;
-    border-left: 3rem solid transparent;
+  thead, tbody {
+    display: contents;
   }
 
   svg {
@@ -29,6 +32,9 @@
   }
 
   thead {
+    tr {
+      display: contents;
+    }
     th {
       font-weight: 500;
       font-size: 1.125rem;
@@ -37,8 +43,15 @@
   }
 
   tbody {
+    tr {
+      display: flex;
+      flex-direction: column;
+      gap: var(--jdl-spacing);
+    }
+
     td {
       @include mixins.base-text;
+      display: flex;
       position: relative;
       padding-left: calc(2rem + 1.5ch);
 
@@ -49,7 +62,7 @@
         display: inline-block;
         width: 2rem;
         height: 2rem;
-        top: 0;
+        top: -4px;
         left: 0;
         border-radius: 100%;
       }

@@ -23,6 +23,7 @@
   gap: var(--jdl-spacing);
   list-style-type: none;
   padding: 0;
+  margin: 0;
 
   @media(max-width: 1300px){
     grid-template-columns: repeat(2, 1fr);

@@ -9,14 +9,14 @@
     <l:main-panel>
       <div class="app-home">
         <s:section2>
-          <div class="app-card__container">
+          <div class="app-card__container app-card__container--large">
             <div class="app-card__preview">
               <div class="app-card__preview__introduction">
                 <img src="${imagesURL}/svgs/logo.svg" alt="${%Jenkins illustration}" />
               </div>
             </div>
-            <p class="app-card__title">${%welcome}</p>
-            <p class="app-card__description">${%description}</p>
+            <p class="jdl-section__title">${%welcome}</p>
+            <p class="jdl-section__description">${%description}</p>
           </div>
         </s:section2>
 
@@ -54,7 +54,7 @@
             <s:card icon="symbol-logo-github plugin-ionicons-api"
                     title="${%ux-wip-core}"
                     href="https://github.com/jenkinsci/jenkins/pulls?q=is%3Apr+is%3Aopen+label%3Aweb-ui" />
-            <s:card icon="symbol-design-library plugin-design-library"
+            <s:card icon="symbol-heart-outline plugin-ionicons-api"
                     title="${%contribute}"
                     href="https://github.com/jenkinsci/design-library-plugin" />
           </div>

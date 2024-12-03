@@ -11,5 +11,4 @@ public static final class Config extends AbstractDescribableImpl<Config> {
   }
 
   @Extension public static class DescriptorImpl extends Descriptor<Config> {}
-
 }

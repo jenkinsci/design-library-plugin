@@ -4,10 +4,10 @@
     <s:section title="${%topAppBar}" description="${%topAppBar.description}">
       <div class="jdl-component-group">
         <div class="jdl-component-sample jdl-component-sample--no-bottom-padding jdl-component-sample--full-width">
-          <l:app-bar title="${%title}" subtitle="3">
+          <l:app-bar title="Page title" subtitle="3">
             <button class="jenkins-button jenkins-button--primary">
               <l:icon src="symbol-add-outline plugin-ionicons-api" />
-              Primary control
+              Primary action
             </button>
             <button class="jenkins-button">Secondary</button>
             <button class="jenkins-button">Secondary</button>
@@ -18,7 +18,7 @@
       </div>
     </s:section>
 
-    <s:dos-donts>
+    <s:dos-donts hideBorder="true">
       <tr>
         <td>${%topAppBar.do.1}</td>
         <td>${%topAppBar.dont.1}</td>

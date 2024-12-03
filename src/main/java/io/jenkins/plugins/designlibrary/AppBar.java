@@ -16,7 +16,7 @@ public class AppBar extends UISample {
 
     @Override
     public String getDescription() {
-        return "TODO TODO TODO TODO TODO";
+        return "Frames your page and contains your most important actions.";
     }
 
     @Extension

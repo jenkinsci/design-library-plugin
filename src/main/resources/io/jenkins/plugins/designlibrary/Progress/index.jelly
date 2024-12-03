@@ -62,13 +62,13 @@
           </j:if>
         </div>
         <s:codePanes>
-        <s:codePane title="Jelly">
-          <s:code language="xml" file="progressiveRendering.jelly" />
-        </s:codePane>
-        <s:codePane title="JavaScript">
-        <p class="jdl-tab-pane__text">${%description.adjuncts}</p>
-        <s:code language="java" file="display.js" />
-        </s:codePane>
+          <s:codePane title="Jelly">
+            <s:code language="xml" file="progressiveRendering.jelly" />
+          </s:codePane>
+          <s:codePane title="JavaScript">
+          <p class="jdl-tab-pane__text">${%description.adjuncts}</p>
+          <s:code language="java" file="display.js" />
+          </s:codePane>
         </s:codePanes>
       </div>
     </s:section>

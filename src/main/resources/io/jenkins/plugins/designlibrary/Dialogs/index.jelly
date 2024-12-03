@@ -1,6 +1,11 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
+
+    <s:section title="TODO">
+      TODO
+    </s:section>
+
     <template id="demo-template" data-title="${%Modal}">
       <div>
         <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>
@@ -9,6 +14,7 @@
         <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/> ${%Dialogs are cool}.
       </div>
     </template>
+
     <div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">
       <f:form action="form" method="post">
         <f:entry title="${%Name}">
