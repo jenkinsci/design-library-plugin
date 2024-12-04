@@ -2,37 +2,40 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <j:set var="icons" value="${it.symbols}" />
-    <div class="jdl-symbols__masthead">
-      <div>
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-      </div>
-      <div>
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-star-outline plugin-ionicons-api" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-      </div>
-      <div>
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-      </div>
-    </div>
 
-    <p class="jdl-paragraph">${%leadParagraph}</p>
+    <s:section2>
+      <div class="jdl-component-sample jdl-symbols__masthead">
+        <div>
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+        </div>
+        <div>
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-star-outline plugin-ionicons-api" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+        </div>
+        <div>
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+        </div>
+      </div>
+
+      <p class="jdl-paragraph">${%leadParagraph}</p>
+    </s:section2>
 
     <s:dos-donts>
       <tr>
