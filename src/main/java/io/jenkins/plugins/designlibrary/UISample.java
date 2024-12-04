@@ -18,26 +18,51 @@ import org.kohsuke.accmod.restrictions.NoExternalUse;
  * @author Kohsuke Kawaguchi
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
+
+    /**
+     * Gets the URL-friendly name of the UI sample.
+     * Converts the display name to lowercase and replaces spaces with dashes.
+     *
+     * @return a URL-friendly string representation of the display name.
+     */
     public String getUrlName() {
         return getDisplayName().replaceAll(" ", "-").toLowerCase();
     }
 
     /**
-     * Default display name.
+     * Gets the default display name for the UI sample.
+     * This is typically the simple class name of the implementing class.
+     *
+     * @return the display name.
      */
     public String getDisplayName() {
         return getClass().getSimpleName();
     }
 
+    /**
+     * Retrieves the category of this UI sample.
+     * Defaults to {@link Category#COMPONENT}.
+     *
+     * @return the category of the UI sample.
+     */
     public Category getCategory() {
         return Category.COMPONENT;
     }
 
     /**
-     * Description for the UI sample, visible at the top of every page.
+     * Provides a description for the UI sample.
+     * The description is displayed at the top of every UI page for the sample.
+     *
+     * @return the description of the UI sample.
      */
     public abstract String getDescription();
 
+    /**
+     * Gets the version of Jenkins where this UI sample was introduced.
+     * By default, returns null if version information is irrelevant.
+     *
+     * @return the version as a string, or null if irrelevant.
+     */
     public String getSince() {
         return null;
     }
