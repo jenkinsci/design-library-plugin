@@ -1,32 +1,9 @@
-$margin-color: var(--blue, blue);
-$padding-color: var(--violet, violet);
-
-.jdl-spacing-box {
-  position: relative;
-  border: 2px dashed $margin-color;
-  border-radius: 6px;
-  width: 200px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: $margin-color;
-    opacity: 0.25;
-  }
-
-  @for $i from 1 through 6 {
-    &--#{$i} {
-      height: #{$i}rem;
-    }
-  }
-}
+$padding-color: var(--purple);
 
 .jdl-padding-box {
   position: relative;
-  border: 2px dashed $padding-color;
-  border-radius: 6px;
+  border: 1.5px dashed $padding-color;
+  border-radius: 0.66rem;
   z-index: 0;
 
   &::before {
@@ -35,7 +12,7 @@ $padding-color: var(--violet, violet);
     inset: -2px;
     border-radius: inherit;
     background: $padding-color;
-    opacity: 0.25;
+    opacity: 0.2;
     z-index: -1;
   }
 
@@ -45,11 +22,12 @@ $padding-color: var(--violet, violet);
 
   p {
     position: relative;
-    border: 2px dashed $padding-color;
-    border-radius: 6px;
-    padding: 0.9rem 1rem;
+    border: 1.5px dashed $padding-color;
+    border-radius: 0.66rem;
+    padding: 1rem;
     margin: 0;
     z-index: 1;
+    font-family: var(--font-family-mono);
 
     &::before {
       content: "";
