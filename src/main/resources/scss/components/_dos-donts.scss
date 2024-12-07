@@ -13,8 +13,8 @@
 }
 
 .jdl-dos-donts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: calc(var(--jdl-spacing) * 0.5);
 
   thead, tbody {
@@ -31,10 +31,13 @@
     }
   }
 
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--jdl-spacing) * 0.5);
+  }
+
   thead {
-    tr {
-      display: contents;
-    }
     th {
       font-weight: 500;
       font-size: 1.125rem;
@@ -43,15 +46,9 @@
   }
 
   tbody {
-    tr {
-      display: flex;
-      flex-direction: column;
-      gap: var(--jdl-spacing);
-    }
-
     td {
       @include mixins.base-text;
-      display: flex;
+      display: block;
       position: relative;
       padding-left: calc(2rem + 1.5ch);
 

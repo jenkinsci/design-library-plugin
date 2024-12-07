@@ -59,11 +59,6 @@ public class HeteroList extends UISample {
         if (xml.exists()) {
             xml.unmarshal(this);
         }
-
-        // TODO - Remove
-        System.out.println("Somewhere in London");
-        System.out.println(xml.asString());
-        System.out.println("Loving your life in the rain...");
     }
 
     @Override
