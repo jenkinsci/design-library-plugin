@@ -6,11 +6,6 @@ import hudson.Extension;
 public class Cards extends UISample {
 
     @Override
-    public String getDisplayName() {
-        return "Cards";
-    }
-
-    @Override
     public String getIconFileName() {
         return "symbol-cards";
     }

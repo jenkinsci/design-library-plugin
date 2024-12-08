@@ -25,6 +25,7 @@
 package io.jenkins.plugins.designlibrary;
 
 import com.google.common.collect.ImmutableList;
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.XmlFile;
 import hudson.model.AbstractDescribableImpl;
@@ -66,6 +67,7 @@ public class HeteroList extends UISample {
         return "symbol-list-outline plugin-ionicons-api";
     }
 
+    @NonNull
     @Override
     public String getDisplayName() {
         return "Repeatable list";

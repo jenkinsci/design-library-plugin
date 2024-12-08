@@ -1,5 +1,6 @@
 package io.jenkins.plugins.designlibrary;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.ExtensionPoint;
 import hudson.model.Action;
 import hudson.model.Describable;
@@ -35,7 +36,7 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
      *
      * @return the display name.
      */
-    public String getDisplayName() {
+    public @NonNull String getDisplayName() {
         return getClass().getSimpleName();
     }
 

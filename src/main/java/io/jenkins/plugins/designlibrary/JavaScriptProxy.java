@@ -1,5 +1,6 @@
 package io.jenkins.plugins.designlibrary;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import org.kohsuke.stapler.bind.JavaScriptMethod;
 
@@ -19,7 +20,7 @@ public class JavaScriptProxy extends UISample {
     }
 
     @Override
-    public String getDisplayName() {
+    public @NonNull String getDisplayName() {
         return "JavaScript Proxy";
     }
 

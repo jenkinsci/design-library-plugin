@@ -4,10 +4,6 @@ import hudson.Extension;
 
 @Extension
 public class Stylesheets extends UISample {
-    @Override
-    public String getDisplayName() {
-        return "Stylesheets";
-    }
 
     @Override
     public String getIconFileName() {

@@ -4,10 +4,6 @@ import hudson.Extension;
 
 @Extension
 public class Banner extends UISample {
-    @Override
-    public String getDisplayName() {
-        return "Banner";
-    }
 
     @Override
     public String getIconFileName() {
