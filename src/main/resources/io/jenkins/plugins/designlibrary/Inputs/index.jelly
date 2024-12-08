@@ -22,7 +22,7 @@
   ~ THE SOFTWARE.
   -->
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <s:section title="${%Textbox}">
       <div class="jdl-component-group">
@@ -70,8 +70,16 @@
       </div>
     </s:section>
 
-    <s:section title="${%Code editor}">
-      <h1 style="color: red">TODO</h1>
+    <s:section title="${%Code editor}" description="${%syntaxHighlight.description.1}">
+
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <f:textarea codemirror-mode="shell" codemirror-config="lineNumbers: true" value="println 'Hello, World!'" />
+        </div>
+        <s:code language="xml" file="codemirror.jelly" />
+      </div>
+
+      <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
     </s:section>
   </s:sample>
 </j:jelly>
