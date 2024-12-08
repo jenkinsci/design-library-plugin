@@ -6,6 +6,7 @@ import hudson.model.Action;
 import hudson.model.Describable;
 import io.jenkins.plugins.prism.PrismConfiguration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -78,17 +79,15 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
     }
 
     public static List<UISample> getAll() {
-        // Get the list of UISample objects
-        List<UISample> uiSamples = new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
-
-        // Sort the list by displayName property
-        uiSamples.sort(Comparator.comparing(UISample::getDisplayName));
-
-        return uiSamples;
+        return getGrouped().values().stream().flatMap(Collection::stream).toList();
     }
 
     public static Map<Category, List<UISample>> getGrouped() {
-        return new TreeMap<>(getAll().stream().collect(Collectors.groupingBy(UISample::getCategory)));
+        List<UISample> uiSamples = new ArrayList<>(Jenkins.get().getExtensionList(UISample.class));
+
+        uiSamples.sort(Comparator.comparing(UISample::getDisplayName));
+
+        return new TreeMap<>(uiSamples.stream().collect(Collectors.groupingBy(UISample::getCategory)));
     }
 
     public UISample getPreviousPage() {
