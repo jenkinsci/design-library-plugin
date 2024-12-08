@@ -26,7 +26,7 @@ THE SOFTWARE.
   <s:sample>
     <s:section2>
       <div class="jdl-component-sample">
-        <div id="msg" style="color: var(--red); font-size: 5rem;">
+        <div id="msg" class="jdl-javascript-proxy__counter">
           0
         </div>
       </div>
@@ -58,14 +58,13 @@ THE SOFTWARE.
       <p class="jdl-paragraph">${%invokingMethod.description.3}</p>
     </s:section>
 
-    <s:section title="${%tips}">
-      <h3>${%tips.description.1}</h3>
+    <s:section title="${%tips.description.1}">
       <p class="jdl-paragraph">${%tips.description.1.body}</p>
 
       <p class="jdl-paragraph">${%tips.description.1.more}</p>
+    </s:section>
 
-      <h3>${%tips.description.2}</h3>
-
+    <s:section title="${%tips.description.2}">
       <p class="jdl-paragraph">${%tips.description.2.body}</p>
     </s:section>
   </s:sample>

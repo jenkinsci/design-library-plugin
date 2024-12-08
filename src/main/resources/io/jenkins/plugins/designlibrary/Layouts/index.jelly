@@ -1,51 +1,53 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:sample>
-    <div class="jdl-component-sample">
-      <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
-        <div class="jdl-layout-preview__navigation" />
-        <div class="jdl-layout-preview__sidebar">
-          <div class="jdl-layout-preview__header" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-        </div>
-        <div class="jdl-layout-preview__content">
-          <div class="jdl-layout-preview__header" />
-          <div class="jdl-layout-preview__button" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-          <div class="jdl-layout-preview__line" />
-        </div>
-        <div class="jdl-layout-preview__cards">
-          <div class="jdl-layout-preview__header" />
-          <div class="jdl-layout-preview__button" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
-          <div class="jdl-layout-preview__card" />
+    <s:section2>
+      <div class="jdl-component-sample">
+        <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
+          <div class="jdl-layout-preview__navigation" />
+          <div class="jdl-layout-preview__sidebar">
+            <div class="jdl-layout-preview__header" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+          </div>
+          <div class="jdl-layout-preview__content">
+            <div class="jdl-layout-preview__header" />
+            <div class="jdl-layout-preview__button" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+            <div class="jdl-layout-preview__line" />
+          </div>
+          <div class="jdl-layout-preview__cards">
+            <div class="jdl-layout-preview__header" />
+            <div class="jdl-layout-preview__button" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+            <div class="jdl-layout-preview__card" />
+          </div>
         </div>
       </div>
-    </div>
+    </s:section2>
 
-    <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
+    <l:tabPane title="${%Two column}">
+      <s:section2>
+        <p class="jdl-paragraph">
+          Two column layouts are for 'hub' style pages, pages that have child pages
+          for the user to navigate to.
+        </p>
 
-      <p class="jdl-paragraph">
-        Two column layouts are for 'hub' style pages, pages that have child pages
-        for the user to navigate to.
-      </p>
-
-      <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
+        <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
+      </s:section2>
 
       <s:dos-donts>
         <tr>
@@ -93,17 +95,15 @@
           </li>
         </ul>
       </s:section>
-    </div>
+    </l:tabPane>
 
-    <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">${%One column}</h2>
-
-      <p class="jdl-paragraph">
-        One column layouts are for pages that don't need navigation; they're ideal for standalone pages
-        that don't have child navigation.
-      </p>
-
-      <hr />
+    <l:tabPane title="${%One column}">
+      <s:section2>
+        <p class="jdl-paragraph">
+          One column layouts are for pages that don't need navigation; they're ideal for standalone pages
+          that don't have child navigation.
+        </p>
+      </s:section2>
 
       <s:dos-donts>
         <tr>
@@ -115,29 +115,29 @@
       <s:section title="${%Usage}" description="Set the type attribute to 'one-column' to use this layout:">
         <s:code file="oneColumn.jelly" language="xml" previewable="true" />
       </s:section>
-    </div>
+    </l:tabPane>
 
-    <div class="jenkins-tab-pane">
-      <h2 class="jenkins-tab-pane__title">${%Fullscreen}</h2>
+    <l:tabPane title="${%Fullscreen}">
+      <s:section2>
+        <p class="jdl-paragraph">
+          Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
-      <p class="jdl-paragraph">
-        Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
+          Such layouts aren't intended for the average page and should only be used if your page needs it.
+        </p>
 
-        Such layouts aren't intended for the average page and should only be used if your page needs it.
-      </p>
-
-      <p class="jdl-paragraph">
-        An example of such a page is
-        <a class="jdl-link" href="https://plugins.jenkins.io/build-monitor-plugin/" target="_blank">
-          Build Monitor View
-          <l:icon src="symbol-open-outline plugin-ionicons-api" />
-        </a>
-      </p>
+        <p class="jdl-paragraph">
+          An example of such a page is
+          <a class="jdl-link" href="https://plugins.jenkins.io/build-monitor-plugin/" target="_blank">
+            Build Monitor View
+            <l:icon src="symbol-open-outline plugin-ionicons-api" />
+          </a>
+        </p>
+      </s:section2>
 
       <s:section title="${%Usage}" description="Set the type attribute to 'full-screen' to use this layout:">
         <s:code file="fullscreen.jelly" language="xml" previewable="true" />
       </s:section>
-    </div>
+    </l:tabPane>
 
     <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>
     <st:adjunct includes="io.jenkins.plugins.designlibrary.Layouts.layout-preview" />
