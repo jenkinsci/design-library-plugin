@@ -33,6 +33,11 @@ public class Tooltips extends UISample {
         return "symbol-tooltips";
     }
 
+    @Override
+    public String getDescription() {
+        return "Offers brief, contextual information when hovering over an element.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

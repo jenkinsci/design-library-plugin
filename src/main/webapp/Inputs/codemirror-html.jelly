@@ -1,3 +1,0 @@
-<f:textarea codemirror-mode="${app.markupFormatter.codeMirrorMode}"
-            codemirror-config="${app.markupFormatter.codeMirrorConfig}"
-            previewEndpoint="/markupFormatter/previewDescription" />

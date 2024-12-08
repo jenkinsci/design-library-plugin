@@ -1,5 +1,6 @@
 package io.jenkins.plugins.designlibrary;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import org.kohsuke.stapler.bind.JavaScriptMethod;
 
@@ -14,8 +15,23 @@ public class JavaScriptProxy extends UISample {
     private int i;
 
     @Override
-    public String getDisplayName() {
+    public String getIconFileName() {
+        return "symbol-logo-javascript plugin-ionicons-api";
+    }
+
+    @Override
+    public @NonNull String getDisplayName() {
         return "JavaScript Proxy";
+    }
+
+    @Override
+    public String getDescription() {
+        return "TODO TODO TODO TODO";
+    }
+
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
     }
 
     /**

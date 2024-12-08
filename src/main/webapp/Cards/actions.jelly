@@ -1,0 +1,8 @@
+<j:set var="controls">
+  <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
+    <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
+  </a>
+</j:set>
+<l:card title="Card with actions" expandable="#" controls="${controls}">
+  Card content
+</l:card>

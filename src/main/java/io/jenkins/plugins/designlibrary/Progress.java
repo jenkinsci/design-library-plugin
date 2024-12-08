@@ -18,6 +18,11 @@ public class Progress extends UISample {
         return "symbol-hourglass-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Indicates the completion status of a task or operation.";
+    }
+
     public ProgressiveRendering factor(final String numberS) {
         return new ProgressiveRendering() {
             final List<Integer> newFactors = new LinkedList<Integer>();

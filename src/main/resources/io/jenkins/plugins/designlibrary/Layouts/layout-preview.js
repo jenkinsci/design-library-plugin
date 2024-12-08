@@ -1,14 +1,9 @@
 window.addEventListener("load", () => {
-  const appBar = document.querySelector("#main-panel .jenkins-app-bar")
-  const componentSample = document.querySelector(".jdl-component-sample")
   const tabBar = document.querySelector(".tabBar")
   const twoPaneTab = tabBar.querySelector(".tab:first-of-type")
   const onePaneTab = tabBar.querySelector(".tab:nth-of-type(2)")
   const fullscreenTab = tabBar.querySelector(".tab:last-of-type")
   const layoutPreview = document.querySelector("#layout-preview")
-
-  appBar.insertAdjacentElement('afterend', tabBar)
-  appBar.insertAdjacentElement('afterend', componentSample)
 
   function resetLayoutPreview() {
     layoutPreview.classList.remove("jdl-layout-preview--one-column")

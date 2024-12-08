@@ -12,6 +12,11 @@ public class Symbols extends UISample {
         return "symbol-star-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Jenkins Symbols are an extensive and consistent collection of icons for use in Jenkins and plugins.";
+    }
+
     public Stack<String> getSymbols() {
         Stack<String> symbols = new Stack<>();
         symbols.addAll(Arrays.asList(
