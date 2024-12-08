@@ -22,7 +22,7 @@
   ~ THE SOFTWARE.
   -->
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
     <s:section title="${%Textbox}">
       <div class="jdl-component-group">
@@ -40,7 +40,12 @@
     </s:section>
 
     <s:section title="${%Search}">
-      <h1 style="color: red">TODO</h1>
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <l:search-bar />
+        </div>
+        <s:code language="xml" file="search.jelly" />
+      </div>
     </s:section>
 
     <s:section title="${%Number fields}">

@@ -6,12 +6,6 @@
   color: var(--text-color-secondary);
 }
 
-// TODO remove this
-.jdl-subtitle2 {
-  color: var(--red);
-  font-size: 2rem;
-}
-
 .jdl-paragraph {
   @include mixins.base-text;
   max-width: 100ch;
@@ -28,7 +22,6 @@
   position: relative;
   font-weight: 500;
   padding-left: calc(1.5rem + 1ch);
-  margin: calc(var(--jdl-spacing) * -0.25) 0 var(--jdl-spacing) 0;
   line-height: 1.5;
 
   &::before {

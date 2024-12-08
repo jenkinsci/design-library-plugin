@@ -40,7 +40,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%Two column}</h2>
 
-      <p class="jdl-subtitle2">
+      <p class="jdl-paragraph">
         Two column layouts are for 'hub' style pages, pages that have child pages
         for the user to navigate to.
       </p>
@@ -98,7 +98,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%One column}</h2>
 
-      <p class="jdl-subtitle2">
+      <p class="jdl-paragraph">
         One column layouts are for pages that don't need navigation; they're ideal for standalone pages
         that don't have child navigation.
       </p>
@@ -120,7 +120,7 @@
     <div class="jenkins-tab-pane">
       <h2 class="jenkins-tab-pane__title">${%Fullscreen}</h2>
 
-      <p class="jdl-subtitle2">
+      <p class="jdl-paragraph">
         Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
         Such layouts aren't intended for the average page and should only be used if your page needs it.
