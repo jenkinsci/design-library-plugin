@@ -25,7 +25,7 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:dd="/lib/layout/dropdowns">
   <s:sample>
-    <s:section2>
+    <s:section hideBorder="true">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
           <l:overflowButton>
@@ -62,20 +62,20 @@ THE SOFTWARE.
         </div>
         <s:code language="xml" file="default.jelly" />
       </div>
-    </s:section2>
 
-    <s:dos-donts hideBorder="true">
-      <tr>
-        <td>${%do.1}</td>
-        <td>${%dont.1}</td>
-      </tr>
-      <tr>
-        <td>${%do.2}</td>
-        <td>${%dont.2}</td>
-      </tr>
-      <tr>
-        <td>${%do.3}</td>
-      </tr>
-    </s:dos-donts>
+      <s:dos-donts>
+        <tr>
+          <td>${%do.1}</td>
+          <td>${%dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%do.2}</td>
+          <td>${%dont.2}</td>
+        </tr>
+        <tr>
+          <td>${%do.3}</td>
+        </tr>
+      </s:dos-donts>
+    </s:section>
   </s:sample>
 </j:jelly>

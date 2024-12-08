@@ -1,20 +1,14 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
-  <st:documentation>
-    <st:attribute name="hideBorder" />
-  </st:documentation>
-
-  <div class="jdl-dos-dont-container ${hideBorder ? 'jdl-dos-dont-container--hide-border' : ''}">
-    <table class="jdl-dos-donts">
-      <thead>
-        <tr>
-          <th class="jenkins-!-success-color">${%do}</th>
-          <th class="jenkins-!-error-color">${%dont}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <d:invokeBody />
-      </tbody>
-    </table>
-  </div>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define">
+  <table class="jdl-dos-donts">
+    <thead>
+      <tr>
+        <th class="jenkins-!-success-color">${%do}</th>
+        <th class="jenkins-!-error-color">${%dont}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <d:invokeBody />
+    </tbody>
+  </table>
 </j:jelly>

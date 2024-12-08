@@ -15,6 +15,12 @@ public class Cards extends UISample {
         return "Use cards to surface related information and controls to users.";
     }
 
+    @Override
+    public String getSince() {
+        // TODO - Validate if we want the LTS vs Weekly
+        return "2.479.1";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

@@ -26,7 +26,7 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
     <s:sample>
-      <s:section2>
+      <s:section hideBorder="true">
         <div class="jdl-component-group">
           <div class="jdl-component-sample jdl-component-sample--full-width">
             <f:property field="config" />
@@ -52,6 +52,6 @@ THE SOFTWARE.
         <p class="jdl-paragraph">
           ${%description}
         </p>
-      </s:section2>
+      </s:section>
     </s:sample>
 </j:jelly>

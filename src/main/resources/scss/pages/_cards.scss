@@ -174,22 +174,3 @@
 #app-cards__example {
   width: 340px;
 }
-
-// TODO - Rename this!
-.jdl-fireproof {
-  font-size: 0.875rem;
-  color: var(--text-color-secondary);
-  font-weight: 450;
-  margin: 1rem 0 0.25rem 0;
-}
-
-.jdl-since-tag {
-  background: var(--card-background);
-  border: var(--jdl-border);
-  font-size: 12px;
-  border-radius: 100px;
-  padding: 0.25rem 0.75rem;
-  white-space: nowrap;
-  justify-self: center;
-  font-weight: 450;
-}

@@ -1,12 +1,15 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
   <st:documentation>
-    <st:attribute name="title" use="required" />
+    <st:attribute name="title" />
     <st:attribute name="description" />
+    <st:attribute name="hideBorder" />
   </st:documentation>
 
-  <section class="jdl-section">
-    <h2 class="jdl-section__title">${attrs.title}</h2>
+  <section class="jdl-section ${hideBorder ? 'jdl-section--no-border' : ''}">
+    <j:if test="${attrs.title != null}">
+      <h2 class="jdl-section__title">${attrs.title}</h2>
+    </j:if>
     <j:if test="${attrs.description != null}">
       <div class="jdl-section__description"><j:out value="${attrs.description}" /></div>
     </j:if>

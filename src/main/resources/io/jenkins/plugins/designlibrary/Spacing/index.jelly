@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:sample>
-    <s:section2>
+    <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div class="jdl-padding-box jdl-padding-box--5">
           <p class="jdl-paragraph">.jenkins-!-padding-5</p>
@@ -13,6 +13,6 @@
       <p class="jdl-paragraph">${%description.2}</p>
 
       <p class="jdl-paragraph">${%description.3}</p>
-    </s:section2>
+    </s:section>
   </s:sample>
 </j:jelly>

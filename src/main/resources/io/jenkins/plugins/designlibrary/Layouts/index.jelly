@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:sample>
-    <s:section2>
+    <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
           <div class="jdl-layout-preview__navigation" />
@@ -37,34 +37,34 @@
           </div>
         </div>
       </div>
-    </s:section2>
+    </s:section>
 
     <l:tabPane title="${%Two column}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">
           Two column layouts are for 'hub' style pages, pages that have child pages
           for the user to navigate to.
         </p>
 
         <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
-      </s:section2>
 
-      <s:dos-donts>
-        <tr>
-          <td>${%two-column.do.1}</td>
-          <td>${%two-column.dont.1}</td>
-        </tr>
-        <tr>
-          <td>${%two-column.do.2}</td>
-          <td>${%two-column.dont.2}</td>
-        </tr>
-        <tr>
-          <td>${%two-column.do.3}</td>
-        </tr>
-        <tr>
-          <td>${%two-column.do.4}</td>
-        </tr>
-      </s:dos-donts>
+        <s:dos-donts>
+          <tr>
+            <td>${%two-column.do.1}</td>
+            <td>${%two-column.dont.1}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.2}</td>
+            <td>${%two-column.dont.2}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.3}</td>
+          </tr>
+          <tr>
+            <td>${%two-column.do.4}</td>
+          </tr>
+        </s:dos-donts>
+      </s:section>
 
       <s:section title="${%Usage}">
         <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
@@ -98,19 +98,19 @@
     </l:tabPane>
 
     <l:tabPane title="${%One column}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">
           One column layouts are for pages that don't need navigation; they're ideal for standalone pages
           that don't have child navigation.
         </p>
-      </s:section2>
 
-      <s:dos-donts>
-        <tr>
-          <td>${%one-column.do.1}</td>
-          <td>${%one-column.dont.1}</td>
-        </tr>
-      </s:dos-donts>
+        <s:dos-donts>
+          <tr>
+            <td>${%one-column.do.1}</td>
+            <td>${%one-column.dont.1}</td>
+          </tr>
+        </s:dos-donts>
+      </s:section>
 
       <s:section title="${%Usage}" description="Set the type attribute to 'one-column' to use this layout:">
         <s:code file="oneColumn.jelly" language="xml" previewable="true" />
@@ -118,7 +118,7 @@
     </l:tabPane>
 
     <l:tabPane title="${%Fullscreen}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">
           Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
@@ -132,7 +132,7 @@
             <l:icon src="symbol-open-outline plugin-ionicons-api" />
           </a>
         </p>
-      </s:section2>
+      </s:section>
 
       <s:section title="${%Usage}" description="Set the type attribute to 'full-screen' to use this layout:">
         <s:code file="fullscreen.jelly" language="xml" previewable="true" />

@@ -1,17 +1,6 @@
 @use "../abstracts/mixins";
 @use "../abstracts/symbols";
 
-.jdl-dos-dont-container {
-  border-top: var(--jdl-border);
-  margin-bottom: var(--jdl-spacing);
-  padding-top: var(--jdl-spacing);
-
-  &--hide-border {
-    border-top: none;
-    padding-top: 0 !important;
-  }
-}
-
 .jdl-dos-donts {
   display: flex;
   flex-direction: column;

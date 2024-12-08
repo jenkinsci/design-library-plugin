@@ -24,7 +24,7 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:s="/lib/samples">
   <s:sample>
-    <s:section2>
+    <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div id="msg" class="jdl-javascript-proxy__counter">
           0
@@ -48,7 +48,7 @@ THE SOFTWARE.
       <st:bind var="a" value="${it}"/>
 
       <st:adjunct includes="io.jenkins.plugins.designlibrary.JavaScriptProxy.counter"/>
-    </s:section2>
+    </s:section>
 
     <s:section title="${%invokingMethod}">
       <p class="jdl-paragraph">${%invokingMethod.description.1}</p>

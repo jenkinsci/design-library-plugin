@@ -1,0 +1,43 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+  <st:documentation>
+    <st:attribute name="previousPage" use="required" />
+    <st:attribute name="nextPage" use="required" />
+  </st:documentation>
+
+  <j:set var="isHome" value="${it.class.simpleName == 'Home'}" />
+  <div class="jdl-previous-next-controls">
+    <div>
+      <j:if test="${attrs.previousPage != null}">
+        <a href="${rootURL}/design-library/${attrs.previousPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
+          <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+          <span>${attrs.previousPage.displayName}</span>
+        </a>
+      </j:if>
+      <j:if test="${attrs.previousPage == null and !isHome}">
+        <a href="${rootURL}/design-library/" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
+          <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+          <span>${%Home}</span>
+        </a>
+      </j:if>
+    </div>
+    <div class="jenkins-mobile-hide">
+      <j:if test="${!isHome}">
+        <a class="jenkins-button jenkins-button--tertiary"
+           href="https://github.com/jenkinsci/design-library-plugin/blob/master/src/main/resources/io/jenkins/plugins/designlibrary/${it.class.simpleName}/index.jelly"
+           target="_blank">
+          <l:icon src="symbol-edit" />
+          ${%Edit this page}
+        </a>
+      </j:if>
+    </div>
+    <div>
+      <j:if test="${attrs.nextPage != null}">
+        <a href="${rootURL}/design-library/${attrs.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
+          <span>${attrs.nextPage.displayName}</span>
+          <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
+        </a>
+      </j:if>
+    </div>
+  </div>
+</j:jelly>

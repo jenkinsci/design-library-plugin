@@ -1,9 +1,9 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/samples" xmlns:s="/lib/samples">
   <l:sample>
-    <s:section2>
+    <s:section hideBorder="true">
       ${%blurb}
-    </s:section2>
+    </s:section>
 
     <s:section title="${%define.title}" description="${%blurb.define}">
       <l:code language="java" file="Links.java"/>

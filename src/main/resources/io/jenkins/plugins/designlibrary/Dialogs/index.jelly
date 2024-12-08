@@ -26,36 +26,36 @@
     </div>
 
     <l:tabPane title="${%Alerts}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">${%alerts}</p>
         <s:code language="java" file="alert.js" code="showAlert()" executable="true"/>
-      </s:section2>
+      </s:section>
     </l:tabPane>
 
     <l:tabPane title="${%Prompts}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">${%prompts}</p>
         <s:code language="java" file="prompt.js" code="showPrompt()" executable="true"/>
-      </s:section2>
+      </s:section>
     </l:tabPane>
 
     <l:tabPane title="${%Confirmations}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">${%confirmations}</p>
         <s:code language="java" file="confirm.js" code="showConfirm()" executable="true"/>
-      </s:section2>
+      </s:section>
     </l:tabPane>
 
     <l:tabPane title="${%Modals}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">${%modals}</p>
         <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
         <s:code language="xml" file="modal.jelly"/>
-      </s:section2>
+      </s:section>
     </l:tabPane>
 
     <l:tabPane title="${%Forms}">
-      <s:section2>
+      <s:section hideBorder="true">
         <p class="jdl-paragraph">${%forms}</p>
         <br/>
         <br/>
@@ -64,7 +64,7 @@
         />
         <s:code language="java" file="form.js" code="showForm()" executable="true"/>
         <s:code language="xml" file="form.jelly"/>
-      </s:section2>
+      </s:section>
     </l:tabPane>
 
     <s:section title="Customizing the appearance and behaviour">

@@ -16,18 +16,18 @@
         </div>
         <s:code language="xml" file="topAppBar.jelly" />
       </div>
-    </s:section>
 
-    <s:dos-donts hideBorder="true">
-      <tr>
-        <td>${%topAppBar.do.1}</td>
-        <td>${%topAppBar.dont.1}</td>
-      </tr>
-      <tr>
-        <td>${%topAppBar.do.2}</td>
-        <td>${%topAppBar.dont.2}</td>
-      </tr>
-    </s:dos-donts>
+      <s:dos-donts>
+        <tr>
+          <td>${%topAppBar.do.1}</td>
+          <td>${%topAppBar.dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%topAppBar.do.2}</td>
+          <td>${%topAppBar.dont.2}</td>
+        </tr>
+      </s:dos-donts>
+    </s:section>
 
     <s:section title="${%bottomAppBar}" description="${%bottomAppBar.description}">
       <div class="jdl-component-group">

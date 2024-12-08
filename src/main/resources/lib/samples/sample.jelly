@@ -48,9 +48,10 @@ THE SOFTWARE.
     <l:main-panel>
       <l:app-bar title="${it.displayName}">
         <j:if test="${it.since != null}">
-          <div class="jdl-since-tag">
+          <a href="https://www.jenkins.io/changelog-stable/${it.since}" class="jenkins-button jenkins-button--tertiary jdl-since-tag" target="_blank">
+            <l:icon src="symbol-information-circle-outline plugin-ionicons-api" />
             Since ${it.since}
-          </div>
+          </a>
         </j:if>
       </l:app-bar>
 
@@ -58,38 +59,7 @@ THE SOFTWARE.
 
       <d:invokeBody/>
 
-      <div class="jdl-previous-next-controls">
-        <div>
-          <j:if test="${it.previousPage != null}">
-            <a href="${rootURL}/design-library/${it.previousPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
-              <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
-              <span>${it.previousPage.displayName}</span>
-            </a>
-          </j:if>
-          <j:if test="${it.previousPage == null}">
-            <a href="${rootURL}/design-library/" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
-              <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
-              <span>Home</span>
-            </a>
-          </j:if>
-        </div>
-        <div class="jenkins-mobile-hide">
-          <a class="jenkins-button jenkins-button--tertiary"
-             href="${'https://github.com/jenkinsci/design-library-plugin/blob/master/src/main/resources/io/jenkins/plugins/designlibrary/' + it.class.simpleName + '/index.jelly'}"
-             target="_blank">
-            <l:icon src="symbol-edit" />
-            ${%Edit this page}
-          </a>
-        </div>
-        <div>
-          <j:if test="${it.nextPage != null}">
-            <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
-              <span>${it.nextPage.displayName}</span>
-              <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" class="jdl-previous-next-controls__arrow" />
-            </a>
-          </j:if>
-        </div>
-      </div>
+      <s:previous-next-controls previousPage="${it.previousPage}" nextPage="${it.nextPage}" />
     </l:main-panel>
   </l:layout>
 </j:jelly>

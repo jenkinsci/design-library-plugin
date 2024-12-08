@@ -31,18 +31,6 @@ code {
   color: var(--text-color-secondary);
 }
 
-hr {
-  display: inline-block;
-  width: 100%;
-  border: none;
-  height: var(--jdl-border-width);
-  background: var(--text-color-secondary);
-  opacity: 0.1;
-  margin: 0 0 var(--jdl-spacing) 0;
-  border-radius: 2px;
-  //opacity: 0;
-}
-
 a {
   font-weight: inherit;
 }
@@ -61,4 +49,11 @@ a {
   font-family: "Georgia", serif;
   color: var(--text-color-secondary);
   margin: 0;
+}
+
+.app-sidepanel__heading {
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+  font-weight: 450;
+  margin: 1rem 0 0.25rem 0;
 }

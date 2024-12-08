@@ -3,7 +3,7 @@
   <s:sample>
     <j:set var="icons" value="${it.symbols}" />
 
-    <s:section2>
+    <s:section hideBorder="true">
       <div class="jdl-component-sample jdl-symbols__masthead">
         <div>
           <l:icon src="symbol-${icons.pop()}" />
@@ -35,21 +35,21 @@
       </div>
 
       <p class="jdl-paragraph">${%leadParagraph}</p>
-    </s:section2>
 
-    <s:dos-donts>
-      <tr>
-        <td>${%do.1}</td>
-        <td>${%dont.1}</td>
-      </tr>
-      <tr>
-        <td>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</td>
-        <td>${%dont.2}</td>
-      </tr>
-      <tr>
-        <td>${%do.3}</td>
-      </tr>
-    </s:dos-donts>
+      <s:dos-donts>
+        <tr>
+          <td>${%do.1}</td>
+          <td>${%dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</td>
+          <td>${%dont.2}</td>
+        </tr>
+        <tr>
+          <td>${%do.3}</td>
+        </tr>
+      </s:dos-donts>
+    </s:section>
 
     <s:section title="${%usage.title}">
       <p class="jdl-paragraph">${%usage.1}</p>

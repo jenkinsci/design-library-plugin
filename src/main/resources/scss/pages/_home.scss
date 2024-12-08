@@ -1,13 +1,5 @@
 @use "../abstracts/mixins";
 
-.app-home {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: max(950px, 65vw);
-}
-
 .app-home__side-by-side {
   position: relative;
   display: grid;
