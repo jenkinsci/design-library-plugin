@@ -1,97 +1,101 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:sample>
-    <div class="app-cards__examples">
-      <l:card title="Pipeline" expandable="#">
-        <div class="app-cards__graph-view">
-          <div class="app-cards__graph-view__item">
-            <p>Start</p>
-            <div />
-          </div>
-          <div class="app-cards__graph-view__item">
-            <p>Parallel</p>
-            <div>
-              <l:icon src="symbol-status-blue" />
+    <s:section2>
+      <div class="jdl-component-sample">
+        <div class="app-cards__examples">
+          <l:card title="Pipeline" expandable="#">
+            <div class="app-cards__graph-view">
+              <div class="app-cards__graph-view__item">
+                <p>Start</p>
+                <div />
+              </div>
+              <div class="app-cards__graph-view__item">
+                <p>Parallel</p>
+                <div>
+                  <l:icon src="symbol-status-blue" />
+                </div>
+              </div>
+              <div class="app-cards__graph-view__item">
+                <p>Deploy</p>
+                <div>
+                  <l:icon src="symbol-status-blue" />
+                </div>
+              </div>
+              <div class="app-cards__graph-view__item">
+                <p>Linux publishing</p>
+                <div>
+                  <l:icon src="symbol-status-blue" />
+                </div>
+              </div>
+              <div class="app-cards__graph-view__item">
+                <p>End</p>
+                <div />
+              </div>
             </div>
-          </div>
-          <div class="app-cards__graph-view__item">
-            <p>Deploy</p>
-            <div>
-              <l:icon src="symbol-status-blue" />
+          </l:card>
+          <l:card title="Details">
+            <p class="app-cards__details__item">
+              <l:icon src="symbol-checkmark-circle-outline plugin-ionicons-api" />
+              Last success 16 hours ago
+              <a href="#">#375</a>
+            </p>
+            <p class="app-cards__details__item">
+              <l:icon src="symbol-close-circle-outline plugin-ionicons-api" />
+              Last failure One day ago
+              <a href="#">#370</a>
+            </p>
+            <p class="app-cards__details__item">
+              <l:icon src="symbol-timer-outline plugin-ionicons-api" />
+              Last duration 30 seconds
+              <a href="#">#375</a>
+            </p>
+            <p class="app-cards__details__item">
+              <l:icon src="symbol-logo-github plugin-ionicons-api" />
+              <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a>
+            </p>
+          </l:card>
+          <l:card title="Tests" expandable="#">
+            <div class="app-cards__tests">
+              <l:icon src="symbol-checkmark-done-outline plugin-ionicons-api" />
+              <p>All tests passed</p>
+              <p class="app-cards__tests__description">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
+              <p class="app-cards__tests__description">Took 15 hours</p>
             </div>
-          </div>
-          <div class="app-cards__graph-view__item">
-            <p>Linux publishing</p>
-            <div>
-              <l:icon src="symbol-status-blue" />
-            </div>
-          </div>
-          <div class="app-cards__graph-view__item">
-            <p>End</p>
-            <div />
-          </div>
+          </l:card>
+          <j:set var="controls">
+            <a class="jenkins-card__reveal" href="#" tooltip="Download">
+              <l:icon src="symbol-download-outline plugin-ionicons-api" />
+            </a>
+          </j:set>
+          <l:card title="Console" expandable="#" controls="${controls}" id="app-cards__console">
+            <code>03:27:50 [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
+              03:27:50 [INFO] from pom.xml
+              03:27:50 [INFO] --------------------------------[ hpi ]---------------------------------
+              03:27:52 [INFO]
+              03:27:52 [INFO] --- clean:3.4.0:clean (default-clean) @ design-library ---
+              03:27:52 [INFO]
+              03:27:52 [INFO] --- hpi:3.57:validate (default-validate) @ design-library ---
+              03:27:52 [INFO] Created marker file
+              /home/jenkins/agent/workspace/ins_design-library-plugin_master/target/java-level/11
+              03:27:52 [INFO]
+              03:27:52 [INFO] --- hpi:3.57:validate-hpi (default-validate-hpi) @ design-library ---
+              03:27:52 [INFO]
+              03:27:52 [INFO] --- enforcer:3.5.0:enforce (display-info) @ design-library ---
+              03:27:52 [INFO] Rule 0: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
+              03:27:52 [INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+              03:27:52 [INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+              03:27:53 [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
+              03:27:53 [INFO] Rule 4: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+              03:27:53 [INFO] Ignoring requireUpperBoundDeps in org.ow2.asm:asm
+              03:27:53 [INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+            </code>
+          </l:card>
         </div>
-      </l:card>
-      <l:card title="Details">
-        <p class="app-cards__details__item">
-          <l:icon src="symbol-checkmark-circle-outline plugin-ionicons-api" />
-          Last success 16 hours ago
-          <a href="#">#375</a>
-        </p>
-        <p class="app-cards__details__item">
-          <l:icon src="symbol-close-circle-outline plugin-ionicons-api" />
-          Last failure One day ago
-          <a href="#">#370</a>
-        </p>
-        <p class="app-cards__details__item">
-          <l:icon src="symbol-timer-outline plugin-ionicons-api" />
-          Last duration 30 seconds
-          <a href="#">#375</a>
-        </p>
-        <p class="app-cards__details__item">
-          <l:icon src="symbol-logo-github plugin-ionicons-api" />
-          <a href="https://github.com/jenkinsci/jenkins">jenkinsci/jenkins</a>
-        </p>
-      </l:card>
-      <l:card title="Tests" expandable="#">
-        <div class="app-cards__tests">
-          <l:icon src="symbol-checkmark-done-outline plugin-ionicons-api" />
-          <p>All tests passed</p>
-          <p class="app-cards__tests__description">0 failures (±0), 273 skipped (+273), 56,679 ran</p>
-          <p class="app-cards__tests__description">Took 15 hours</p>
-        </div>
-      </l:card>
-      <j:set var="controls">
-        <a class="jenkins-card__reveal" href="#" tooltip="Download">
-          <l:icon src="symbol-download-outline plugin-ionicons-api" />
-        </a>
-      </j:set>
-      <l:card title="Console" expandable="#" controls="${controls}" id="app-cards__console">
-        <code>03:27:50 [INFO] Building Jenkins Design Library 322.vd4663a_6c03f8
-          03:27:50 [INFO] from pom.xml
-          03:27:50 [INFO] --------------------------------[ hpi ]---------------------------------
-          03:27:52 [INFO]
-          03:27:52 [INFO] --- clean:3.4.0:clean (default-clean) @ design-library ---
-          03:27:52 [INFO]
-          03:27:52 [INFO] --- hpi:3.57:validate (default-validate) @ design-library ---
-          03:27:52 [INFO] Created marker file
-          /home/jenkins/agent/workspace/ins_design-library-plugin_master/target/java-level/11
-          03:27:52 [INFO]
-          03:27:52 [INFO] --- hpi:3.57:validate-hpi (default-validate-hpi) @ design-library ---
-          03:27:52 [INFO]
-          03:27:52 [INFO] --- enforcer:3.5.0:enforce (display-info) @ design-library ---
-          03:27:52 [INFO] Rule 0: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
-          03:27:52 [INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
-          03:27:52 [INFO] Rule 2: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
-          03:27:53 [INFO] Rule 3: org.codehaus.mojo.extraenforcer.dependencies.EnforceBytecodeVersion passed
-          03:27:53 [INFO] Rule 4: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
-          03:27:53 [INFO] Ignoring requireUpperBoundDeps in org.ow2.asm:asm
-          03:27:53 [INFO] Rule 5: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
-        </code>
-      </l:card>
-    </div>
+      </div>
+    </s:section2>
 
-    <s:dos-donts>
+    <s:dos-donts hideBorder="true">
       <tr>
         <td>${%do.1}</td>
         <td>${%dont.1}</td>

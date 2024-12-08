@@ -13,7 +13,7 @@ public class Layouts extends UISample {
 
     @Override
     public String getDescription() {
-        return "Captures user input through various text or data entry formats.";
+        return "TODO TODO TODO TODO";
     }
 
     @Override
