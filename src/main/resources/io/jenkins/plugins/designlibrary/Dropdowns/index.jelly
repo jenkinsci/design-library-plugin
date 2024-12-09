@@ -28,7 +28,7 @@ THE SOFTWARE.
     <s:section hideBorder="true">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
-          <l:overflowButton>
+          <l:overflowButton text="Menu" tooltip="${null}">
             <dd:item icon="symbol-star-outline plugin-ionicons-api"
                      text="${%Action 1}" />
             <dd:item icon="symbol-star-outline plugin-ionicons-api"

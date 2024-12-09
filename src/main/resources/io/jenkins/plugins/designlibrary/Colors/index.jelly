@@ -53,18 +53,20 @@ THE SOFTWARE.
   </d:taglib>
 
   <s:sample xmlns:local="local">
-    <s:dos-donts>
-      <tr>
-        <td>${%tip-first}</td>
-        <td>${%tip-second}</td>
-      </tr>
-      <tr>
-        <td>${%tip-third}</td>
-      </tr>
-      <tr>
-        <td>${%tip-fourth}</td>
-      </tr>
-    </s:dos-donts>
+    <s:section>
+      <s:dos-donts>
+        <tr>
+          <td>${%tip-first}</td>
+          <td>${%tip-second}</td>
+        </tr>
+        <tr>
+          <td>${%tip-third}</td>
+        </tr>
+        <tr>
+          <td>${%tip-fourth}</td>
+        </tr>
+      </s:dos-donts>
+    </s:section>
 
     <s:section title="${%Semantics}">
       <ol class="jdl-colors">

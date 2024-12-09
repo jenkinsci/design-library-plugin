@@ -54,4 +54,10 @@
   .jenkins-file-upload {
     width: unset;
   }
+
+  .jenkins-dialog {
+    position: relative;
+    width: 400px;
+    animation: none;
+  }
 }

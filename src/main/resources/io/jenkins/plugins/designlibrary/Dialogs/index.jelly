@@ -1,71 +1,129 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:sample>
-    <template id="demo-template" data-title="${%Modal}">
-      <div>
-        <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>
-        ${%closeme}
-        <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">${%You can include icons}</h2>
-        <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/>
-        ${%Dialogs are cool}.
-      </div>
-    </template>
-
-    <div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">
-      <f:form action="form" method="post">
-        <f:entry title="${%Name}">
-          <f:textbox name="name"/>
-        </f:entry>
-        <f:entry title="${%Quantity}">
-          <f:number name="quantity" min="1" max="9"/>
-        </f:entry>
-        <f:entry title="${%Choose flavor}">
-          <f:select field="flavor"/>
-        </f:entry>
-      </f:form>
-    </div>
-
-    <l:tabPane title="${%Alerts}">
-      <s:section hideBorder="true">
-        <p class="jdl-paragraph">${%alerts}</p>
+    <s:section title="Alerts">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <dialog class="jenkins-dialog">
+            <div class="jenkins-dialog__title">Error</div>
+            <div class="jenkins-dialog__contents">This doesn't work.</div>
+            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
+              <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK</button>
+              <button data-id="cancel" class="jenkins-button" style="display: none;">Cancel</button>
+            </div>
+          </dialog>
+        </div>
         <s:code language="java" file="alert.js" code="showAlert()" executable="true"/>
-      </s:section>
-    </l:tabPane>
+      </div>
+      <p class="jdl-paragraph">${%alerts}</p>
+    </s:section>
 
-    <l:tabPane title="${%Prompts}">
-      <s:section hideBorder="true">
-        <p class="jdl-paragraph">${%prompts}</p>
+    <s:section title="${%Prompts}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <dialog class="jenkins-dialog">
+            <div class="jenkins-dialog__title">Welcome to the Dialog demo</div>
+            <div class="jenkins-dialog__contents">How should I call you?</div>
+            <div class="jenkins-dialog__input">
+              <input data-id="input" type="text" class="jenkins-input" />
+            </div>
+            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
+              <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary " disabled="">OK</button>
+              <button data-id="cancel" class="jenkins-button">Cancel</button>
+            </div>
+          </dialog>
+        </div>
         <s:code language="java" file="prompt.js" code="showPrompt()" executable="true"/>
-      </s:section>
-    </l:tabPane>
+      </div>
+      <p class="jdl-paragraph">${%prompts}</p>
+    </s:section>
 
-    <l:tabPane title="${%Confirmations}">
-      <s:section hideBorder="true">
-        <p class="jdl-paragraph">${%confirmations}</p>
+    <s:section title="${%Confirmations}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          Hello world!
+        </div>
         <s:code language="java" file="confirm.js" code="showConfirm()" executable="true"/>
-      </s:section>
-    </l:tabPane>
+      </div>
+      <p class="jdl-paragraph">${%confirmations}</p>
+    </s:section>
 
-    <l:tabPane title="${%Modals}">
-      <s:section hideBorder="true">
-        <p class="jdl-paragraph">${%modals}</p>
-        <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
-        <s:code language="xml" file="modal.jelly"/>
-      </s:section>
-    </l:tabPane>
+    <s:section title="${%Modals}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          Hello world!
+        </div>
+        <s:codePanes>
+          <s:codePane title="JavaScript">
+            <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
+          </s:codePane>
+          <s:codePane title="Jelly">
+            <s:code language="xml" file="modal.jelly"/>
+          </s:codePane>
+        </s:codePanes>
+      </div>
+      <p class="jdl-paragraph">${%modals}</p>
+    </s:section>
 
-    <l:tabPane title="${%Forms}">
-      <s:section hideBorder="true">
-        <p class="jdl-paragraph">${%forms}</p>
-        <br/>
-        <br/>
-        <f:toggleSwitch id="formsubmit" checkedTitle="${%Submit form}" checked="true"
-                        title="${%Handle form in javascript}."
-        />
-        <s:code language="java" file="form.js" code="showForm()" executable="true"/>
-        <s:code language="xml" file="form.jelly"/>
-      </s:section>
-    </l:tabPane>
+    <s:section title="${%Forms}">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          Hello world!
+        </div>
+        <s:codePanes>
+          <s:codePane title="JavaScript">
+            <s:code language="java" file="form.js" code="showForm()" executable="true"/>
+          </s:codePane>
+          <s:codePane title="Jelly">
+            <s:code language="xml" file="form.jelly"/>
+          </s:codePane>
+        </s:codePanes>
+      </div>
+      <f:toggleSwitch id="formsubmit" checkedTitle="${%Submit form}" checked="true"
+                      title="${%Handle form in javascript}."
+      />
+
+      <p class="jdl-paragraph">${%forms}</p>
+    </s:section>
+
+    <!--    <template id="demo-template" data-title="${%Modal}">-->
+    <!--      <div>-->
+    <!--        <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>-->
+    <!--        ${%closeme}-->
+    <!--        <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">${%You can include icons}</h2>-->
+    <!--        <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/>-->
+    <!--        ${%Dialogs are cool}.-->
+    <!--      </div>-->
+    <!--    </template>-->
+
+    <!--    <div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">-->
+    <!--      <f:form action="form" method="post">-->
+    <!--        <f:entry title="${%Name}">-->
+    <!--          <f:textbox name="name"/>-->
+    <!--        </f:entry>-->
+    <!--        <f:entry title="${%Quantity}">-->
+    <!--          <f:number name="quantity" min="1" max="9"/>-->
+    <!--        </f:entry>-->
+    <!--        <f:entry title="${%Choose flavor}">-->
+    <!--          <f:select field="flavor"/>-->
+    <!--        </f:entry>-->
+    <!--      </f:form>-->
+    <!--    </div>-->
+
+    <!--    <l:tabPane title="${%Alerts}">-->
+    <!--      <s:section hideBorder="true">-->
+    <!--        <p class="jdl-paragraph">${%alerts}</p>-->
+    <!--        <s:code language="java" file="alert.js" code="showAlert()" executable="true"/>-->
+    <!--      </s:section>-->
+    <!--    </l:tabPane>-->
+
+    <!--    <l:tabPane title="${%Prompts}">-->
+    <!--      <s:section hideBorder="true">-->
+    <!--        <p class="jdl-paragraph">${%prompts}</p>-->
+    <!--        <s:code language="java" file="prompt.js" code="showPrompt()" executable="true"/>-->
+    <!--      </s:section>-->
+    <!--    </l:tabPane>-->
+
 
     <s:section title="Customizing the appearance and behaviour">
       <div class="jdl-paragraph">All dialogs take a second optional parameter with options that allow to change certain
