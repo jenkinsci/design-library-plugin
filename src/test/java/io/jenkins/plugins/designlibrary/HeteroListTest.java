@@ -53,6 +53,6 @@ public class HeteroListTest {
     }
 
     private String getUiSampleConfigureUrl(UISample uiSample) {
-        return Joiner.on('/').join(new Root().getUrlName(), uiSample.getUrlName(), CONFIGURE_URL);
+        return Joiner.on('/').join(new Home().getUrlName(), uiSample.getUrlName(), CONFIGURE_URL);
     }
 }

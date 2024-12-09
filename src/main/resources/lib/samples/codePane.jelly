@@ -1,0 +1,13 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
+  <st:documentation>
+    <st:attribute name="title" use="required">
+      The title of the tab
+    </st:attribute>
+  </st:documentation>
+
+  <div class="jdl-tab-pane">
+    <p class="jdl-tab-pane__title">${attrs.title}</p>
+    <d:invokeBody />
+  </div>
+</j:jelly>

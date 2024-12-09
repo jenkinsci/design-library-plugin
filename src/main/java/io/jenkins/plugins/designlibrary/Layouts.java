@@ -5,14 +5,20 @@ import jenkins.management.Badge;
 
 @Extension
 public class Layouts extends UISample {
-    @Override
-    public String getDisplayName() {
-        return "Layouts";
-    }
 
     @Override
     public String getIconFileName() {
         return "symbol-layouts";
+    }
+
+    @Override
+    public String getDescription() {
+        return "TODO TODO TODO TODO";
+    }
+
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
     }
 
     public Badge getBadge() {

@@ -25,6 +25,7 @@
 package io.jenkins.plugins.designlibrary;
 
 import com.google.common.collect.ImmutableList;
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.XmlFile;
 import hudson.model.AbstractDescribableImpl;
@@ -43,7 +44,7 @@ import org.kohsuke.stapler.HttpResponse;
 import org.kohsuke.stapler.StaplerRequest;
 
 @Extension
-public final class HeteroList extends UISample {
+public class HeteroList extends UISample {
 
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
@@ -62,8 +63,19 @@ public final class HeteroList extends UISample {
     }
 
     @Override
+    public String getIconFileName() {
+        return "symbol-list-outline plugin-ionicons-api";
+    }
+
+    @NonNull
+    @Override
     public String getDisplayName() {
-        return "Hetero List";
+        return "Repeatable list";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Displays lists with varying content types or layouts within the same container.";
     }
 
     public Config getConfig() {

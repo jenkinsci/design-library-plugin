@@ -46,8 +46,8 @@ public class Inputs extends UISample {
     }
 
     @Override
-    public String getDisplayName() {
-        return "Input Fields";
+    public String getDescription() {
+        return "Captures user input through various text or data entry formats.";
     }
 
     public String getShell() {

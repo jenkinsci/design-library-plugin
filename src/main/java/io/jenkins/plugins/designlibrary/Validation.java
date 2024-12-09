@@ -23,6 +23,16 @@ public class Validation extends UISample {
         return "symbol-checkmark-circle-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Ensures user inputs meet specified criteria or rules before submission.";
+    }
+
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     private List<State> states = new ArrayList<State>(Arrays.asList(
             new State(
                     "California",

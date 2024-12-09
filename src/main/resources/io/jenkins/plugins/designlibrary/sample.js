@@ -4,15 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll('.sample-remote')
     .forEach(element => {
+      const uiComponentName = element.dataset.componentName;
       const fileName = element.dataset.sample;
       const executable = element.dataset.executable;
       const render = element.dataset.render
 
       // On the inputs page the preview markup link adds a hash to the url which breaks the regex extraction
-      const strippedHash = window.location.href.replace('#', '')
-      const componentName = strippedHash.match(/.+design-library\/(.+)$/)[1]
-
-      const fullUrl = `${url}/plugin/design-library/${componentName}${fileName}`;
+      const fullUrl = `${url}/plugin/design-library/${uiComponentName}/${fileName}`;
       fetch(fullUrl)
         .then(response => response.text())
         .then(text => {

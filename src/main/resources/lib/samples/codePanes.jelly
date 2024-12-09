@@ -1,0 +1,6 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define">
+  <div class="jdl-tab-panes">
+    <d:invokeBody />
+  </div>
+</j:jelly>
