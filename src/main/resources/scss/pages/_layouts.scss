@@ -5,8 +5,7 @@
   aspect-ratio: 16 / 10;
   border-radius: 1rem;
   background: var(--background);
-  box-shadow: 0 0 0 var(--jdl-border-width) color-mix(in srgb, currentColor 5%, transparent),
-              0 10px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--jdl-box-shadow);
   overflow: hidden;
 
   * {

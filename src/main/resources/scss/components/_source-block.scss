@@ -94,10 +94,12 @@ $jdl-component-code-controls-spacing: 0.75rem;
   &:not(:hover) {
     .jenkins-button {
       transition: var(--standard-transition);
-      opacity: 0.5;
+      @media (prefers-contrast: no-preference) {
+        opacity: 0.5;
 
-      span {
-        color: var(--text-color-secondary) !important;
+        span {
+          color: var(--text-color-secondary) !important;
+        }
       }
 
       &::before {
