@@ -2,34 +2,46 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:layout>
     <s:section title="${%info}">
-      <s:group fullWidth="true">
-        <div class="jenkins-alert jenkins-alert-info">
-          Hello world
-        </div>
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-info">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="info.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%warning}">
-      <s:group fullWidth="true">
-        <div class="jenkins-alert jenkins-alert-warning">
-          Hello world
-        </div>
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-warning">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="info.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%danger}">
-      <s:group fullWidth="true">
-        <div class="jenkins-alert jenkins-alert-danger">
-          Hello world
-        </div>
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-danger">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="info.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%success}">
-      <s:group fullWidth="true">
-        <div class="jenkins-alert jenkins-alert-success">
-          Hello world
-        </div>
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-success">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="info.jelly" />
       </s:group>
     </s:section>
   </s:layout>
