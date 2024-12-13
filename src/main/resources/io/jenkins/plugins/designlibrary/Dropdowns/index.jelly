@@ -26,7 +26,7 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:dd="/lib/layout/dropdowns">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:overflowButton text="Menu" tooltip="${null}">
             <dd:item icon="symbol-star-outline plugin-ionicons-api"
@@ -61,7 +61,7 @@ THE SOFTWARE.
           </l:overflowButton>
         </div>
         <s:code language="xml" file="default.jelly" />
-      </div>
+      </s:group>
 
       <s:dos-donts>
         <tr>

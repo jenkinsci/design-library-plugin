@@ -110,20 +110,20 @@
     </s:section>
 
     <s:section title="${%creating-a-card.title}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:card title="Card title" id="app-cards__example">
             Card content
           </l:card>
         </div>
         <s:code language="xml" file="card.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%creating-a-card.description}</p>
     </s:section>
 
     <s:section title="${%setting-actions-on-a-card.title}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <j:set var="controls">
             <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
@@ -135,7 +135,7 @@
           </l:card>
         </div>
         <s:code language="xml" file="actions.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>
     </s:section>

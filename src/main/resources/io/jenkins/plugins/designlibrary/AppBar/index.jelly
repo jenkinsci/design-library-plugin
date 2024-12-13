@@ -2,7 +2,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <s:layout>
     <s:section title="${%topAppBar}" description="${%topAppBar.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample jdl-component-sample--no-bottom-padding jdl-component-sample--full-width">
           <l:app-bar title="Page title" subtitle="3">
             <button class="jenkins-button jenkins-button--primary">
@@ -15,7 +15,7 @@
           </l:app-bar>
         </div>
         <s:code language="xml" file="topAppBar.jelly" />
-      </div>
+      </s:group>
 
       <s:dos-donts>
         <tr>
@@ -30,7 +30,7 @@
     </s:section>
 
     <s:section title="${%bottomAppBar}" description="${%bottomAppBar.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample jdl-component-sample--full-width">
           <p class="jdl-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>
           <p class="jdl-paragraph">Maecenas a elit eget est aliquam consectetur dapibus eu nibh. Suspendisse potenti. Fusce tristique nisl ut malesuada sollicitudin. Praesent sed nisl nibh. Etiam tincidunt enim sit amet eleifend maximus. Aenean molestie congue est, eu vehicula ex vulputate nec. Duis commodo, arcu a malesuada facilisis, purus ex imperdiet dolor, nec rhoncus nibh nisi eu ex. Vivamus varius eleifend sollicitudin.</p>
@@ -44,7 +44,7 @@
           </f:bottomButtonBar>
         </div>
         <s:code language="xml" file="bottomAppBar.jelly" />
-      </div>
+      </s:group>
     </s:section>
   </s:layout>
 </j:jelly>

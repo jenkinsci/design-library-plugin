@@ -6,7 +6,7 @@
     <st:attribute name="code" />
     <st:attribute name="file" />
     <st:attribute name="language" use="optional">
-      Defaults to XML.
+      Defaults to 'xml'.
     </st:attribute>
     <st:attribute name="executable" type="boolean" />
     <st:attribute name="previewable" type="boolean" />
@@ -14,7 +14,7 @@
 
   <div class="jdl-component-code">
     <pre class="jdl-component-code__code">
-      <code class="language-${language ? language : 'xml'} ${file != null ? 'sample-remote' : ''}" data-component-name="${it.class.simpleName}" data-sample="${file}" data-executable="${executable}">
+      <code class="language-${language != null ? language : 'xml'} ${file != null ? 'sample-remote' : ''}" data-component-name="${it.class.simpleName}" data-sample="${file}" data-executable="${executable}">
         ${code}
       </code>
     </pre>

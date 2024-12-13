@@ -2,7 +2,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:layout>
     <s:section title="Default">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <div class="jdl-notifications-group">
             <div class="jenkins-notification">
@@ -18,11 +18,11 @@
         <s:code language="java"
                 code="notificationBar.show('Default')"
                 executable="true"/>
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Success">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
 
           <div class="jdl-notifications-group">
@@ -39,11 +39,11 @@
         <s:code language="java"
                 code="notificationBar.show('Success', notificationBar.SUCCESS)"
                 executable="true"/>
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Warning">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <div class="jdl-notifications-group">
             <div class="jenkins-notification jenkins-notification--warning">
@@ -59,11 +59,11 @@
         <s:code language="java"
                 code="notificationBar.show('Warning', notificationBar.WARNING)"
                 executable="true"/>
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Error">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <div class="jdl-notifications-group">
             <div class="jenkins-notification jenkins-notification--error">
@@ -79,7 +79,7 @@
         <s:code language="java"
                 code="notificationBar.show('Error', notificationBar.ERROR)"
                 executable="true"/>
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Closing notifications" description="${%usage.2}">

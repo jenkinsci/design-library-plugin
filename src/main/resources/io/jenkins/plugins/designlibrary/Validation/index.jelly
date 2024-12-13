@@ -2,7 +2,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <form method="post">
             <f:entry title="${%States}">
@@ -18,7 +18,7 @@
             <s:code language="java" file="Sample.java" />
           </s:code-pane>
         </s:code-panes>
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%title}</p>
 

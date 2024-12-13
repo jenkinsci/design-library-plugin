@@ -2,14 +2,14 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:layout>
     <s:section title="${%Basic tooltip}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
             Hover over me
           </button>
         </div>
         <s:code language="xml" file="tooltip.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%HTML and interactive content}">
@@ -17,22 +17,22 @@
         <img src="${imagesURL}/svgs/logo.svg" />
       </j:set>
 
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <button data-html-tooltip="${tooltip}" data-tooltip-interactive="true" class="jenkins-button jenkins-button--primary">
             Hover over me
           </button>
         </div>
         <s:code language="xml" file="html-tooltip.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%symbols-description}</p>
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
         </div>
         <s:code language="xml" file="symbol-tooltip.jelly" />
-      </div>
+      </s:group>
       <p class="jdl-important-point">${%warning}</p>
     </s:section>
   </s:layout>

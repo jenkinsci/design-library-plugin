@@ -25,54 +25,54 @@
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:layout>
     <s:section title="${%Textbox}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:entry title="Example" field="example">
             <f:textbox />
           </f:entry>
         </div>
         <s:code language="xml" file="example.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%Search}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:search-bar />
         </div>
         <s:code language="xml" file="search.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%Number fields}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:entry title="Number" field="count">
             <f:number min="1" max="99" default="5"/>
           </f:entry>
         </div>
         <s:code language="xml" file="number.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%Password fields}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:entry title="Password" field="password" description="The password to access the system.">
             <f:password/>
           </f:entry>
         </div>
         <s:code language="xml" file="password.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%Code editor}" description="${%syntaxHighlight.description.1}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:textarea codemirror-mode="shell" codemirror-config="lineNumbers: true" value="println 'Hello, World!'" />
         </div>
         <s:code language="xml" file="codemirror.jelly" />
-      </div>
+      </s:group>
       <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
     </s:section>
   </s:layout>

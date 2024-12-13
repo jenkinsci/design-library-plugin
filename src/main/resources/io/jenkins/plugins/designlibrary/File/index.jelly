@@ -26,12 +26,12 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:file field="hello" />
         </div>
         <s:code language="xml" file="file.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%parameters}</p>
       <ul class="jdl-list">
@@ -41,12 +41,12 @@ THE SOFTWARE.
     </s:section>
 
     <s:section title="Additional parameters" description="${%parameters.additional}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
         </div>
         <s:code language="xml" file="file-accept.jelly" />
-      </div>
+      </s:group>
     </s:section>
   </s:layout>
 </j:jelly>

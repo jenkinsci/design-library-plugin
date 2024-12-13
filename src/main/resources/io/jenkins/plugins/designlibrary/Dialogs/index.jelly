@@ -2,7 +2,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:layout>
     <s:section title="Alerts">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Error</div>
@@ -14,12 +14,12 @@
           </dialog>
         </div>
         <s:code language="java" file="alert.js" code="showAlert()" executable="true"/>
-      </div>
+      </s:group>
       <p class="jdl-paragraph">${%alerts}</p>
     </s:section>
 
     <s:section title="${%Prompts}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Welcome to the Dialog demo</div>
@@ -34,22 +34,22 @@
           </dialog>
         </div>
         <s:code language="java" file="prompt.js" code="showPrompt()" executable="true"/>
-      </div>
+      </s:group>
       <p class="jdl-paragraph">${%prompts}</p>
     </s:section>
 
     <s:section title="${%Confirmations}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           Hello world!
         </div>
         <s:code language="java" file="confirm.js" code="showConfirm()" executable="true"/>
-      </div>
+      </s:group>
       <p class="jdl-paragraph">${%confirmations}</p>
     </s:section>
 
     <s:section title="${%Modals}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           Hello world!
         </div>
@@ -61,12 +61,12 @@
             <s:code language="xml" file="modal.jelly"/>
           </s:code-pane>
         </s:code-panes>
-      </div>
+      </s:group>
       <p class="jdl-paragraph">${%modals}</p>
     </s:section>
 
     <s:section title="${%Forms}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           Hello world!
         </div>
@@ -78,7 +78,7 @@
             <s:code language="xml" file="form.jelly"/>
           </s:code-pane>
         </s:code-panes>
-      </div>
+      </s:group>
       <f:toggleSwitch id="formsubmit" checkedTitle="${%Submit form}" checked="true"
                       title="${%Handle form in javascript}."
       />

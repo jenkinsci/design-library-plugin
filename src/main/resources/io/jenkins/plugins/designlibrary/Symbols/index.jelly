@@ -54,31 +54,31 @@
     <s:section title="${%usage.title}">
       <p class="jdl-paragraph">${%usage.1}</p>
 
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
         </div>
         <s:code language="xml" file="symbol.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%usage.2}</p>
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
         </div>
         <s:code language="xml" file="symbol-tooltip.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%usage.3}</p>
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
         </div>
         <s:code language="xml" file="symbol-classes.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%usage.4}</p>
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
@@ -86,10 +86,10 @@
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
         </div>
         <s:code language="xml" file="symbol-size.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%usage.5}</p>
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample jdl-component-sample--horizontal">
           <l:icon src="symbol-status-blue" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-yellow" class="jdl-symbols__symbol" />
@@ -99,10 +99,10 @@
           <l:icon src="symbol-status-disabled" class="jdl-symbols__symbol" />
         </div>
         <s:code language="xml" file="symbol-status.jelly" />
-      </div>
+      </s:group>
 
       <p class="jdl-paragraph">${%usage.6}</p>
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample jdl-component-sample--horizontal">
           <l:icon src="symbol-weather-icon-health-00to19" class="jdl-symbols__symbol" />
           <l:icon src="symbol-weather-icon-health-20to39" class="jdl-symbols__symbol" />
@@ -111,7 +111,7 @@
           <l:icon src="symbol-weather-icon-health-80plus" class="jdl-symbols__symbol" />
         </div>
         <s:code language="xml" file="symbol-weather.jelly" />
-      </div>
+      </s:group>
 
       <span>
         <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"

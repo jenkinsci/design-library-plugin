@@ -25,7 +25,7 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:layout>
     <s:section title="Simple select" description="${%usage.2}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:entry title="Fruits">
             <f:select field="fruit"/>
@@ -39,11 +39,11 @@ THE SOFTWARE.
             <s:code language="java" file="Sample.java"/>
           </s:code-pane>
         </s:code-panes>
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Advanced select" description="${%usage.1}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <form action="submit" method="post">
             <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}"/>
@@ -53,11 +53,11 @@ THE SOFTWARE.
         </div>
 
         <s:code language="xml" file="sample.jelly"/>
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%dynamic}" description="${%dynamic.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <form method="post">
             <f:entry title="Country" field="country">
@@ -79,7 +79,7 @@ THE SOFTWARE.
             <s:code language="java" file="DynamicSample.java"/>
           </s:code-pane>
         </s:code-panes>
-      </div>
+      </s:group>
     </s:section>
   </s:layout>
 </j:jelly>

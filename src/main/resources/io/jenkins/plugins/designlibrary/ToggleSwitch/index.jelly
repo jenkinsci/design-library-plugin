@@ -2,25 +2,25 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
   <s:layout>
     <s:section title="Default">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:toggleSwitch name="enabled" title="Hello world" />
         </div>
         <s:code language="xml" file="default.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Inverted">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample jdl-component-sample--right-alignment">
           <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
         </div>
         <s:code language="xml" file="inverted.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%dynamicLabels}" description="${%dynamicLabels.usage.1}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <f:toggleSwitch name="enable"
                           title="${%Disabled}"
@@ -29,7 +29,7 @@
                           tooltip="${%Enable or disable the current project}" />
         </div>
         <s:code language="xml" file="dynamic.jelly" />
-      </div>
+      </s:group>
     </s:section>
   </s:layout>
 </j:jelly>

@@ -2,48 +2,48 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form" xmlns:t="/lib/hudson" xmlns:st="jelly:stapler">
   <s:layout>
     <s:section title="Spinner" description="${%spinner.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:spinner />
         </div>
         <s:code language="xml" file="spinner.jelly" />
-      </div>
+      </s:group>
 
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:spinner text="I am a label" />
         </div>
         <s:code language="xml" file="spinnerLabel.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Progress bar" description="${%progressAnimation.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <l:progressAnimation />
         </div>
         <s:code language="xml" file="progressAnimation.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="Progress bar" description="${%progressBar.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <t:progressBar pos="50" />
         </div>
         <s:code language="xml" file="progressBar.jelly" />
-      </div>
+      </s:group>
 
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <t:progressBar pos="-1" />
         </div>
         <s:code language="xml" file="progressBarIndeterminate.jelly" />
-      </div>
+      </s:group>
     </s:section>
 
     <s:section title="${%progressiveRendering}" description="${%progressiveRendering.description}">
-      <div class="jdl-component-group">
+      <s:group>
         <div class="jdl-component-sample">
           <j:set var="number" value="${request.getParameter('number')}"/>
           <form method="POST" action=".">
@@ -70,7 +70,7 @@
           <s:code language="java" file="display.js" />
           </s:code-pane>
         </s:code-panes>
-      </div>
+      </s:group>
     </s:section>
   </s:layout>
 </j:jelly>
