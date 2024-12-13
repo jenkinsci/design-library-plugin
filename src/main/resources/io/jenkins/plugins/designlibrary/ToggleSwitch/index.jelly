@@ -3,31 +3,31 @@
   <s:layout>
     <s:section title="Default">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:toggleSwitch name="enabled" title="Hello world" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="default.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="Inverted">
       <s:group>
-        <div class="jdl-component-sample jdl-component-sample--right-alignment">
+        <s:preview>
           <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
-        </div>
+        </s:preview>>
         <s:code language="xml" file="inverted.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%dynamicLabels}" description="${%dynamicLabels.usage.1}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:toggleSwitch name="enable"
                           title="${%Disabled}"
                           checkedTitle="${%Enabled}"
                           checked="true"
                           tooltip="${%Enable or disable the current project}" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="dynamic.jelly" />
       </s:group>
     </s:section>

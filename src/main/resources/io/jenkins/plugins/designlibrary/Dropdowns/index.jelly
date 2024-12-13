@@ -27,7 +27,7 @@ THE SOFTWARE.
   <s:layout>
     <s:section hideBorder="true">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:overflowButton text="Menu" tooltip="${null}">
             <dd:item icon="symbol-star-outline plugin-ionicons-api"
                      text="${%Action 1}" />
@@ -59,7 +59,7 @@ THE SOFTWARE.
               </l:confirmationLink>
             </dd:custom>
           </l:overflowButton>
-        </div>
+        </s:preview>
         <s:code language="xml" file="default.jelly" />
       </s:group>
 

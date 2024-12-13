@@ -25,11 +25,11 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:s="/lib/samples">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-sample">
+      <s:preview>
         <div id="msg" class="jdl-javascript-proxy__counter">
           0
         </div>
-      </div>
+      </s:preview>
 
       <p class="jdl-paragraph">${%description.1}</p>
 

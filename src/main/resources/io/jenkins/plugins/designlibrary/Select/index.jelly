@@ -26,11 +26,11 @@ THE SOFTWARE.
   <s:layout>
     <s:section title="Simple select" description="${%usage.2}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:entry title="Fruits">
             <f:select field="fruit"/>
           </f:entry>
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
             <s:code language="xml" file="sample2.jelly"/>
@@ -44,13 +44,13 @@ THE SOFTWARE.
 
     <s:section title="Advanced select" description="${%usage.1}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <form action="submit" method="post">
             <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}"/>
 
             <f:submit value="Save"/>
           </form>
-        </div>
+        </s:preview>
 
         <s:code language="xml" file="sample.jelly"/>
       </s:group>
@@ -58,7 +58,7 @@ THE SOFTWARE.
 
     <s:section title="${%dynamic}" description="${%dynamic.description}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <form method="post">
             <f:entry title="Country" field="country">
               <f:textbox/>
@@ -70,7 +70,7 @@ THE SOFTWARE.
               <f:select/>
             </f:entry>
           </form>
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
             <s:code language="xml" file="dynamic-sample.jelly"/>

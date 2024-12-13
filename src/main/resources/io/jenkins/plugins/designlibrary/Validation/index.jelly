@@ -3,13 +3,13 @@
   <s:layout>
     <s:section hideBorder="true">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <form method="post">
             <f:entry title="${%States}">
               <f:repeatableProperty field="states" />
             </f:entry>
           </form>
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="sample.jelly">
             <s:code language="xml" file="sample.jelly" />

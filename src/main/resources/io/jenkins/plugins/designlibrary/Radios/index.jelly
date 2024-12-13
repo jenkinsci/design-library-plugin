@@ -27,11 +27,11 @@ THE SOFTWARE.
   <s:layout>
     <s:section title="Simple radios">
       <s:group>
-        <div class="jdl-component-sample jenkins-!-padding-bottom-0">
+        <s:preview>
           <f:form>
             <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
           </f:form>
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
             <s:code language="xml" file="index.jelly" />
@@ -45,11 +45,11 @@ THE SOFTWARE.
 
     <s:section title="Boolean radio">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <div>
             <f:booleanRadio field="myField" />
           </div>
-        </div>
+        </s:preview>
         <s:code language="xml" file="booleanRadio.jelly" />
       </s:group>
     </s:section>

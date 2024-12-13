@@ -2,7 +2,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-sample">
+      <s:preview>
         <div class="app-cards__examples">
           <l:card title="Pipeline" expandable="#">
             <div class="app-cards__graph-view">
@@ -92,7 +92,7 @@
             </code>
           </l:card>
         </div>
-      </div>
+      </s:preview>
 
       <s:dos-donts>
         <tr>
@@ -111,11 +111,11 @@
 
     <s:section title="${%creating-a-card.title}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:card title="Card title" id="app-cards__example">
             Card content
           </l:card>
-        </div>
+        </s:preview>
         <s:code language="xml" file="card.jelly" />
       </s:group>
 
@@ -124,7 +124,7 @@
 
     <s:section title="${%setting-actions-on-a-card.title}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <j:set var="controls">
             <a class="jenkins-card__reveal" href="#" tooltip="Custom action">
               <l:icon src="symbol-sparkles-outline plugin-ionicons-api" />
@@ -133,7 +133,7 @@
           <l:card title="Card with actions" expandable="#" controls="${controls}" id="app-cards__example">
             Card content
           </l:card>
-        </div>
+        </s:preview>
         <s:code language="xml" file="actions.jelly" />
       </s:group>
 

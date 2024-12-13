@@ -3,11 +3,11 @@
   <s:layout>
     <s:section title="${%Basic tooltip}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
             Hover over me
           </button>
-        </div>
+        </s:preview>
         <s:code language="xml" file="tooltip.jelly" />
       </s:group>
     </s:section>
@@ -18,19 +18,19 @@
       </j:set>
 
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <button data-html-tooltip="${tooltip}" data-tooltip-interactive="true" class="jenkins-button jenkins-button--primary">
             Hover over me
           </button>
-        </div>
+        </s:preview>
         <s:code language="xml" file="html-tooltip.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%symbols-description}</p>
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol-tooltip.jelly" />
       </s:group>
       <p class="jdl-important-point">${%warning}</p>

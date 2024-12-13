@@ -3,7 +3,7 @@
   <s:layout>
     <s:section title="Default">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <div class="jdl-notifications-group">
             <div class="jenkins-notification">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -14,7 +14,7 @@
               Default
             </div>
           </div>
-        </div>
+        </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Default')"
                 executable="true"/>
@@ -23,8 +23,7 @@
 
     <s:section title="Success">
       <s:group>
-        <div class="jdl-component-sample">
-
+        <s:preview>
           <div class="jdl-notifications-group">
             <div class="jenkins-notification jenkins-notification--success">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -35,7 +34,7 @@
               Success
             </div>
           </div>
-        </div>
+        </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Success', notificationBar.SUCCESS)"
                 executable="true"/>
@@ -44,7 +43,7 @@
 
     <s:section title="Warning">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <div class="jdl-notifications-group">
             <div class="jenkins-notification jenkins-notification--warning">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -55,7 +54,7 @@
               Warning
             </div>
           </div>
-        </div>
+        </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Warning', notificationBar.WARNING)"
                 executable="true"/>
@@ -64,7 +63,7 @@
 
     <s:section title="Error">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <div class="jdl-notifications-group">
             <div class="jenkins-notification jenkins-notification--error">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -75,7 +74,7 @@
               Error
             </div>
           </div>
-        </div>
+        </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Error', notificationBar.ERROR)"
                 executable="true"/>

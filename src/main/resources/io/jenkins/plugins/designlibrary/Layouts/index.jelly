@@ -2,7 +2,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-sample">
+      <s:preview>
         <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
           <div class="jdl-layout-preview__navigation" />
           <div class="jdl-layout-preview__sidebar">
@@ -36,7 +36,7 @@
             <div class="jdl-layout-preview__card" />
           </div>
         </div>
-      </div>
+      </s:preview>
     </s:section>
 
     <l:tabPane title="${%Two column}">

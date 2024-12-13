@@ -26,51 +26,51 @@
   <s:layout>
     <s:section title="${%Textbox}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:entry title="Example" field="example">
             <f:textbox />
           </f:entry>
-        </div>
+        </s:preview>
         <s:code language="xml" file="example.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%Search}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:search-bar />
-        </div>
+        </s:preview>
         <s:code language="xml" file="search.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%Number fields}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:entry title="Number" field="count">
             <f:number min="1" max="99" default="5"/>
           </f:entry>
-        </div>
+        </s:preview>
         <s:code language="xml" file="number.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%Password fields}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:entry title="Password" field="password" description="The password to access the system.">
             <f:password/>
           </f:entry>
-        </div>
+        </s:preview>
         <s:code language="xml" file="password.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%Code editor}" description="${%syntaxHighlight.description.1}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <f:textarea codemirror-mode="shell" codemirror-config="lineNumbers: true" value="println 'Hello, World!'" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="codemirror.jelly" />
       </s:group>
       <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>

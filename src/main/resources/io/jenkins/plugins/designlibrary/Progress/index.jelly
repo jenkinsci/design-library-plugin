@@ -3,48 +3,48 @@
   <s:layout>
     <s:section title="Spinner" description="${%spinner.description}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:spinner />
-        </div>
+        </s:preview>
         <s:code language="xml" file="spinner.jelly" />
       </s:group>
 
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:spinner text="I am a label" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="spinnerLabel.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="Progress bar" description="${%progressAnimation.description}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:progressAnimation />
-        </div>
+        </s:preview>
         <s:code language="xml" file="progressAnimation.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="Progress bar" description="${%progressBar.description}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <t:progressBar pos="50" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="progressBar.jelly" />
       </s:group>
 
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <t:progressBar pos="-1" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="progressBarIndeterminate.jelly" />
       </s:group>
     </s:section>
 
     <s:section title="${%progressiveRendering}" description="${%progressiveRendering.description}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <j:set var="number" value="${request.getParameter('number')}"/>
           <form method="POST" action=".">
             <f:entry title="Enter a big number">
@@ -60,7 +60,7 @@
             <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
             <ul class="jdl-list" id="factors"/>
           </j:if>
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
             <s:code language="xml" file="progressiveRendering.jelly" />

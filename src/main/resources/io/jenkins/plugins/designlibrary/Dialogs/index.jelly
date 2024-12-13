@@ -3,7 +3,7 @@
   <s:layout>
     <s:section title="Alerts">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Error</div>
             <div class="jenkins-dialog__contents">This doesn't work.</div>
@@ -12,7 +12,7 @@
               <button data-id="cancel" class="jenkins-button" style="display: none;">Cancel</button>
             </div>
           </dialog>
-        </div>
+        </s:preview>
         <s:code language="java" file="alert.js" code="showAlert()" executable="true"/>
       </s:group>
       <p class="jdl-paragraph">${%alerts}</p>
@@ -20,7 +20,7 @@
 
     <s:section title="${%Prompts}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Welcome to the Dialog demo</div>
             <div class="jenkins-dialog__contents">How should I call you?</div>
@@ -32,7 +32,7 @@
               <button data-id="cancel" class="jenkins-button">Cancel</button>
             </div>
           </dialog>
-        </div>
+        </s:preview>
         <s:code language="java" file="prompt.js" code="showPrompt()" executable="true"/>
       </s:group>
       <p class="jdl-paragraph">${%prompts}</p>
@@ -40,9 +40,9 @@
 
     <s:section title="${%Confirmations}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           Hello world!
-        </div>
+        </s:preview>
         <s:code language="java" file="confirm.js" code="showConfirm()" executable="true"/>
       </s:group>
       <p class="jdl-paragraph">${%confirmations}</p>
@@ -50,9 +50,9 @@
 
     <s:section title="${%Modals}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           Hello world!
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="JavaScript">
             <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
@@ -67,9 +67,9 @@
 
     <s:section title="${%Forms}">
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           Hello world!
-        </div>
+        </s:preview>
         <s:code-panes>
           <s:code-pane title="JavaScript">
             <s:code language="java" file="form.js" code="showForm()" executable="true"/>

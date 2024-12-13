@@ -2,11 +2,11 @@
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
   <s:layout>
     <s:section hideBorder="true">
-      <div class="jdl-component-sample">
+      <s:preview>
         <div class="jdl-padding-box jdl-padding-box--5">
           <p class="jdl-paragraph">.jenkins-!-padding-5</p>
         </div>
-      </div>
+      </s:preview>
 
       <p class="jdl-paragraph">${%description.1}</p>
 

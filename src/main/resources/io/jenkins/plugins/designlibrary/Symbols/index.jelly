@@ -4,7 +4,7 @@
     <j:set var="icons" value="${it.symbols}" />
 
     <s:section hideBorder="true">
-      <div class="jdl-component-sample jdl-symbols__masthead">
+      <s:preview classes="jdl-symbols__masthead">
         <div>
           <l:icon src="symbol-${icons.pop()}" />
           <l:icon src="symbol-${icons.pop()}" />
@@ -32,7 +32,7 @@
           <l:icon src="symbol-${icons.pop()}" />
           <l:icon src="symbol-${icons.pop()}" />
         </div>
-      </div>
+      </s:preview>
 
       <p class="jdl-paragraph">${%leadParagraph}</p>
 
@@ -55,61 +55,61 @@
       <p class="jdl-paragraph">${%usage.1}</p>
 
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.2}</p>
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol-tooltip.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.3}</p>
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol-classes.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.4}</p>
       <s:group>
-        <div class="jdl-component-sample">
+        <s:preview>
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol-size.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.5}</p>
       <s:group>
-        <div class="jdl-component-sample jdl-component-sample--horizontal">
+        <s:preview>
           <l:icon src="symbol-status-blue" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-yellow" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-red" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-nobuilt" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-aborted" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-disabled" class="jdl-symbols__symbol" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol-status.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.6}</p>
       <s:group>
-        <div class="jdl-component-sample jdl-component-sample--horizontal">
+        <s:preview>
           <l:icon src="symbol-weather-icon-health-00to19" class="jdl-symbols__symbol" />
           <l:icon src="symbol-weather-icon-health-20to39" class="jdl-symbols__symbol" />
           <l:icon src="symbol-weather-icon-health-40to59" class="jdl-symbols__symbol" />
           <l:icon src="symbol-weather-icon-health-60to79" class="jdl-symbols__symbol" />
           <l:icon src="symbol-weather-icon-health-80plus" class="jdl-symbols__symbol" />
-        </div>
+        </s:preview>
         <s:code language="xml" file="symbol-weather.jelly" />
       </s:group>
 
