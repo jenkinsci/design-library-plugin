@@ -27,7 +27,7 @@ THE SOFTWARE.
   <s:layout>
     <s:section title="Simple radios">
       <s:group>
-        <s:preview>
+        <s:preview noBottomPadding="true">
           <f:form>
             <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
           </f:form>

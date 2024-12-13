@@ -25,7 +25,6 @@
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
     background-attachment: fixed;
     background-position: center;
-    //border-radius: inherit;
     z-index: -1;
     opacity: 0.075;
   }
@@ -36,10 +35,6 @@
 
   &--no-bottom-padding {
     padding-bottom: 0;
-  }
-
-  &--horizontal {
-    flex-direction: row;
   }
 
   .jenkins-form-item, .jenkins-search-container {

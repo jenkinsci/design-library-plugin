@@ -3,7 +3,7 @@
   <s:layout>
     <s:section title="${%topAppBar}" description="${%topAppBar.description}">
       <s:group>
-        <s:preview fullWidth="true">
+        <s:preview fullWidth="true" noBottomPadding="true">
           <l:app-bar title="Page title" subtitle="3">
             <button class="jenkins-button jenkins-button--primary">
               <l:icon src="symbol-add-outline plugin-ionicons-api" />
