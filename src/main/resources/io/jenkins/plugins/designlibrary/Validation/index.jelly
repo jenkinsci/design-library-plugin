@@ -1,18 +1,28 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-  <s:sample>
-    <p class="jdl-paragraph">${%title}</p>
+  <s:layout>
+    <s:section hideBorder="true">
+      <div class="jdl-component-group">
+        <div class="jdl-component-sample">
+          <form method="post">
+            <f:entry title="${%States}">
+              <f:repeatableProperty field="states" />
+            </f:entry>
+          </form>
+        </div>
+        <s:code-panes>
+          <s:code-pane title="sample.jelly">
+            <s:code language="xml" file="sample.jelly" />
+          </s:code-pane>
+          <s:code-pane title="Sample.java">
+            <s:code language="java" file="Sample.java" />
+          </s:code-pane>
+        </s:code-panes>
+      </div>
 
-    <form method="post">
-      <f:entry title="${%States}">
-        <f:repeatableProperty field="states" />
-      </f:entry>
-    </form>
+      <p class="jdl-paragraph">${%title}</p>
 
-    <p class="jdl-paragraph">${%validation.description}</p>
-    <s:code language="xml" file="sample.jelly" />
-
-    <s:code language="java" file="Sample.java" />
-
-  </s:sample>
+      <p class="jdl-paragraph">${%validation.description}</p>
+    </s:section>
+  </s:layout>
 </j:jelly>

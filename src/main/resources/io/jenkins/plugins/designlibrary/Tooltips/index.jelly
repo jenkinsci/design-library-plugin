@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
+  <s:layout>
     <s:section title="${%Basic tooltip}">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -35,6 +35,6 @@
       </div>
       <p class="jdl-important-point">${%warning}</p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>
 

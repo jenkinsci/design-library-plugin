@@ -23,7 +23,7 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div id="msg" class="jdl-javascript-proxy__counter">
@@ -67,5 +67,5 @@ THE SOFTWARE.
     <s:section title="${%tips.description.2}">
       <p class="jdl-paragraph">${%tips.description.2.body}</p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

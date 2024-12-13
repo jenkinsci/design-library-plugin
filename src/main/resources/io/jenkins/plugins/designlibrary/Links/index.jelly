@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/samples" xmlns:s="/lib/samples">
-  <l:sample>
+  <l:layout>
     <s:section>
       ${%blurb}
     </s:section>
@@ -54,5 +54,5 @@
         </tr>
       </table>
     </s:section>
-  </l:sample>
+  </l:layout>
 </j:jelly>

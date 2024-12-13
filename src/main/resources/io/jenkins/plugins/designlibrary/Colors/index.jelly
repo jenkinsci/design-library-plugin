@@ -52,7 +52,7 @@ THE SOFTWARE.
     </d:tag>
   </d:taglib>
 
-  <s:sample xmlns:local="local">
+  <s:layout xmlns:local="local">
     <s:section>
       <s:dos-donts>
         <tr>
@@ -83,5 +83,5 @@ THE SOFTWARE.
         </j:forEach>
       </ol>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

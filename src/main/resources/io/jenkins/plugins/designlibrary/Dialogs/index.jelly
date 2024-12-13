@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-  <s:sample>
+  <s:layout>
     <s:section title="Alerts">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -53,14 +53,14 @@
         <div class="jdl-component-sample">
           Hello world!
         </div>
-        <s:codePanes>
-          <s:codePane title="JavaScript">
+        <s:code-panes>
+          <s:code-pane title="JavaScript">
             <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
-          </s:codePane>
-          <s:codePane title="Jelly">
+          </s:code-pane>
+          <s:code-pane title="Jelly">
             <s:code language="xml" file="modal.jelly"/>
-          </s:codePane>
-        </s:codePanes>
+          </s:code-pane>
+        </s:code-panes>
       </div>
       <p class="jdl-paragraph">${%modals}</p>
     </s:section>
@@ -70,14 +70,14 @@
         <div class="jdl-component-sample">
           Hello world!
         </div>
-        <s:codePanes>
-          <s:codePane title="JavaScript">
+        <s:code-panes>
+          <s:code-pane title="JavaScript">
             <s:code language="java" file="form.js" code="showForm()" executable="true"/>
-          </s:codePane>
-          <s:codePane title="Jelly">
+          </s:code-pane>
+          <s:code-pane title="Jelly">
             <s:code language="xml" file="form.jelly"/>
-          </s:codePane>
-        </s:codePanes>
+          </s:code-pane>
+        </s:code-panes>
       </div>
       <f:toggleSwitch id="formsubmit" checkedTitle="${%Submit form}" checked="true"
                       title="${%Handle form in javascript}."
@@ -185,5 +185,5 @@
       </ul>
     </s:section>
     <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>
-  </s:sample>
+  </s:layout>
 </j:jelly>

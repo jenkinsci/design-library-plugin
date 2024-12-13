@@ -25,33 +25,33 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-    <s:sample>
+    <s:layout>
       <s:section hideBorder="true">
         <div class="jdl-component-group">
           <div class="jdl-component-sample jdl-component-sample--full-width">
             <f:property field="config" />
           </div>
-          <s:codePanes>
-            <s:codePane title="Config.java">
+          <s:code-panes>
+            <s:code-pane title="Config.java">
               <s:code language="java" file="Config.java" />
-            </s:codePane>
-            <s:codePane title="config.jelly">
+            </s:code-pane>
+            <s:code-pane title="config.jelly">
               <s:code language="xml" file="config.jelly" />
-            </s:codePane>
-            <s:codePane title="Entry.java">
+            </s:code-pane>
+            <s:code-pane title="Entry.java">
               <s:code language="java" file="Entry.java" />
-            </s:codePane>
-            <s:codePane title="ChoiceEntry.java">
+            </s:code-pane>
+            <s:code-pane title="ChoiceEntry.java">
               <s:code language="java" file="ChoiceEntry.java" />
-            </s:codePane>
-            <s:codePane title="SimpleEntry.java">
+            </s:code-pane>
+            <s:code-pane title="SimpleEntry.java">
               <s:code language="java" file="SimpleEntry.java" />
-            </s:codePane>
-          </s:codePanes>
+            </s:code-pane>
+          </s:code-panes>
         </div>
         <p class="jdl-paragraph">
           ${%description}
         </p>
       </s:section>
-    </s:sample>
+    </s:layout>
 </j:jelly>

@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div class="jdl-padding-box jdl-padding-box--5">
@@ -14,5 +14,5 @@
 
       <p class="jdl-paragraph">${%description.3}</p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

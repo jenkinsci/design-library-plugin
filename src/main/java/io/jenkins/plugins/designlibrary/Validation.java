@@ -20,7 +20,7 @@ import org.kohsuke.stapler.QueryParameter;
 public class Validation extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-checkmark-circle-outline plugin-ionicons-api";
+        return "symbol-checkmark-done-outline plugin-ionicons-api";
     }
 
     @Override

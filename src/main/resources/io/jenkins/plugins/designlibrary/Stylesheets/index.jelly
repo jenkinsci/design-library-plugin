@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section title="Naming">
       <p class="jdl-paragraph">Classnames should follow <a class="jdl-link" href="https://getbem.com">Block Element Modifier (BEM) methodology</a> and be prefixed.</p>
 
@@ -78,5 +78,5 @@ THE SOFTWARE.
         A simple way to come up with a prefix for your plugin is to abbreviate your plugin name, e.g. Jenkins Design Library becomes <code class="jdl-inline-code">jdl-</code>.
       </p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section title="Simple radios">
       <div class="jdl-component-group">
         <div class="jdl-component-sample jenkins-!-padding-bottom-0">
@@ -32,14 +32,14 @@ THE SOFTWARE.
             <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
           </f:form>
         </div>
-        <s:codePanes>
-          <s:codePane title="Jelly">
+        <s:code-panes>
+          <s:code-pane title="Jelly">
             <s:code language="xml" file="index.jelly" />
-          </s:codePane>
-          <s:codePane title="Java">
+          </s:code-pane>
+          <s:code-pane title="Java">
             <s:code language="java" file="Sample.java" />
-          </s:codePane>
-        </s:codePanes>
+          </s:code-pane>
+        </s:code-panes>
       </div>
     </s:section>
 
@@ -53,5 +53,5 @@ THE SOFTWARE.
         <s:code language="xml" file="booleanRadio.jelly" />
       </div>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

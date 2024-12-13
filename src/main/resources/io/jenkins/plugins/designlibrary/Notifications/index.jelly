@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section title="Default">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -87,5 +87,5 @@
               code="notificationBar.hide()"
               executable="true"/>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

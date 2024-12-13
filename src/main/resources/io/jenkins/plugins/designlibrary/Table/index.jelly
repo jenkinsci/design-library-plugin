@@ -24,12 +24,62 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
-    <div class="jdl-component-group">
-      <div class="sample-remote jdl-component-sample" data-sample="index.jelly" data-render="true"/>
-      <s:code language="xml" file="index.jelly" />
-    </div>
-
-    <!-- TODO sorted doesn't seem to be doing anything, is there more that should be added about tables? -->
-  </s:sample>
+  <s:layout>
+    <s:section hideBorder="true">
+      <s:group>
+        <s:preview>
+          <table class="jenkins-table sortable jenkins-!-margin-bottom-0">
+            <thead>
+              <th>
+                Name
+              </th>
+              <th>
+                Status
+              </th>
+              <th>
+                Reason
+              </th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="#" class="jenkins-table__link">Link 1</a>
+                </td>
+                <td>
+                  Success
+                  <a href="#" class="jenkins-table__link jenkins-table__badge model-link">#7</a>
+                </td>
+                <td>
+                  No Errors
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="jenkins-table__link">Link 2</a>
+                </td>
+                <td>
+                  Failure
+                </td>
+                <td>
+                  Can't compile
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#" class="jenkins-table__link">Link 3</a>
+                </td>
+                <td>
+                  Unstable
+                </td>
+                <td>
+                  Test Failed
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </s:preview>
+        <s:code language="xml" file="index.jelly" />
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

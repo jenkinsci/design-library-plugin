@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-  <s:sample>
+  <s:layout>
     <s:section title="Default">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -31,5 +31,5 @@
         <s:code language="xml" file="dynamic.jelly" />
       </div>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

@@ -4,7 +4,7 @@
     <st:attribute name="fullWidth" />
   </st:documentation>
 
-  <div class="jdl-component-group">
+  <div class="jdl-component-sample ${attrs.classes} ${attrs.fullWidth ? ' jdl-component-sample--full-width' : ''}">
     <d:invokeBody />
   </div>
 </j:jelly>

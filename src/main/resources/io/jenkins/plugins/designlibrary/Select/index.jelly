@@ -23,7 +23,7 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section title="Simple select" description="${%usage.2}">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -31,14 +31,14 @@ THE SOFTWARE.
             <f:select field="fruit"/>
           </f:entry>
         </div>
-        <s:codePanes>
-          <s:codePane title="Jelly">
+        <s:code-panes>
+          <s:code-pane title="Jelly">
             <s:code language="xml" file="sample2.jelly"/>
-          </s:codePane>
-          <s:codePane title="Java">
+          </s:code-pane>
+          <s:code-pane title="Java">
             <s:code language="java" file="Sample.java"/>
-          </s:codePane>
-        </s:codePanes>
+          </s:code-pane>
+        </s:code-panes>
       </div>
     </s:section>
 
@@ -71,15 +71,15 @@ THE SOFTWARE.
             </f:entry>
           </form>
         </div>
-        <s:codePanes>
-          <s:codePane title="Jelly">
+        <s:code-panes>
+          <s:code-pane title="Jelly">
             <s:code language="xml" file="dynamic-sample.jelly"/>
-          </s:codePane>
-          <s:codePane title="Java">
+          </s:code-pane>
+          <s:code-pane title="Java">
             <s:code language="java" file="DynamicSample.java"/>
-          </s:codePane>
-        </s:codePanes>
+          </s:code-pane>
+        </s:code-panes>
       </div>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

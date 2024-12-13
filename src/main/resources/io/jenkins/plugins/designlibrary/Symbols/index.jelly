@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
+  <s:layout>
     <j:set var="icons" value="${it.symbols}" />
 
     <s:section hideBorder="true">
@@ -163,5 +163,5 @@
       </ul>
       <p class="jdl-paragraph">${%customSymbols.theme.clarification}</p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

@@ -24,7 +24,7 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-  <s:sample>
+  <s:layout>
     <s:section hideBorder="true">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -48,5 +48,5 @@ THE SOFTWARE.
         <s:code language="xml" file="file-accept.jelly" />
       </div>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

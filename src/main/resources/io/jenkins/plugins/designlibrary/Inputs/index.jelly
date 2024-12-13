@@ -23,7 +23,7 @@
   -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
+  <s:layout>
     <s:section title="${%Textbox}">
       <div class="jdl-component-group">
         <div class="jdl-component-sample">
@@ -75,6 +75,6 @@
       </div>
       <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>
 

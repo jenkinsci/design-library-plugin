@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
-  <s:sample>
+  <s:layout>
     <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div id="layout-preview" class="jdl-layout-preview jdl-layout-preview--two-column">
@@ -141,5 +141,5 @@
 
     <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript"/>
     <st:adjunct includes="io.jenkins.plugins.designlibrary.Layouts.layout-preview" />
-  </s:sample>
+  </s:layout>
 </j:jelly>

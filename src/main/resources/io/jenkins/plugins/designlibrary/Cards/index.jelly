@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
+  <s:layout>
     <s:section hideBorder="true">
       <div class="jdl-component-sample">
         <div class="app-cards__examples">
@@ -139,5 +139,5 @@
 
       <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

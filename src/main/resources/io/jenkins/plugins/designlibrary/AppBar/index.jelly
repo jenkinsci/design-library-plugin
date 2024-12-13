@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
-  <s:sample>
+  <s:layout>
     <s:section title="${%topAppBar}" description="${%topAppBar.description}">
       <div class="jdl-component-group">
         <div class="jdl-component-sample jdl-component-sample--no-bottom-padding jdl-component-sample--full-width">
@@ -46,5 +46,5 @@
         <s:code language="xml" file="bottomAppBar.jelly" />
       </div>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>

@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
+  <s:layout>
     <s:section title="${%info}">
       <s:group fullWidth="true">
         <div class="jenkins-alert jenkins-alert-info">
@@ -32,5 +32,5 @@
         </div>
       </s:group>
     </s:section>
-  </s:sample>
+  </s:layout>
 </j:jelly>
