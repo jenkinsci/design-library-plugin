@@ -19,7 +19,7 @@
             Hello world
           </div>
         </s:preview>
-        <s:code file="info.jelly" />
+        <s:code file="warning.jelly" />
       </s:group>
     </s:section>
 
@@ -30,7 +30,7 @@
             Hello world
           </div>
         </s:preview>
-        <s:code file="info.jelly" />
+        <s:code file="danger.jelly" />
       </s:group>
     </s:section>
 
@@ -41,7 +41,7 @@
             Hello world
           </div>
         </s:preview>
-        <s:code file="info.jelly" />
+        <s:code file="success.jelly" />
       </s:group>
     </s:section>
   </s:layout>
