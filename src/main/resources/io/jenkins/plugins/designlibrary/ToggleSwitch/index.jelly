@@ -14,7 +14,7 @@
       <s:group>
         <s:preview>
           <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
-        </s:preview>>
+        </s:preview>
         <s:code language="xml" file="inverted.jelly" />
       </s:group>
     </s:section>

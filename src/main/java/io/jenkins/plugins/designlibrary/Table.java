@@ -14,7 +14,7 @@ public class Table extends UISample {
 
     @Override
     public String getDescription() {
-        return "Organizes data into sortable rows and columns for easy viewing and comparison.";
+        return "TODO - Organizes data into sortable rows and columns for easy viewing and comparison.";
     }
 
     @Extension

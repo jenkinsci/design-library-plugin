@@ -1,10 +1,18 @@
 package io.jenkins.plugins.designlibrary;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.util.ListBoxModel;
 
 @Extension
 public class Dialogs extends UISample {
+
+    @NonNull
+    @Override
+    public String getDisplayName() {
+        return super.getDisplayName() + " - TODO";
+    }
+
     @Override
     public String getIconFileName() {
         return "symbol-chatbox-ellipses-outline plugin-ionicons-api";

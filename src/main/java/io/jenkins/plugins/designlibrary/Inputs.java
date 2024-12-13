@@ -24,6 +24,7 @@
 
 package io.jenkins.plugins.designlibrary;
 
+import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
 import hudson.model.AutoCompletionCandidates;
 import hudson.util.ComboBoxModel;
@@ -40,6 +41,13 @@ import org.kohsuke.stapler.QueryParameter;
  */
 @Extension
 public class Inputs extends UISample {
+
+    @NonNull
+    @Override
+    public String getDisplayName() {
+        return super.getDisplayName() + " - TODO";
+    }
+
     @Override
     public String getIconFileName() {
         return "symbol-textbox";
