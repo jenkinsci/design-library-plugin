@@ -27,40 +27,19 @@ package io.jenkins.plugins.designlibrary;
 import com.google.common.collect.ImmutableList;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
-import hudson.XmlFile;
 import hudson.model.AbstractDescribableImpl;
 import hudson.model.Descriptor;
-import hudson.util.FormApply;
 import hudson.util.ListBoxModel;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.servlet.ServletException;
 import jenkins.model.Jenkins;
+import org.kohsuke.accmod.Restricted;
+import org.kohsuke.accmod.restrictions.NoExternalUse;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.HttpResponse;
-import org.kohsuke.stapler.StaplerRequest;
 
 @Extension
-public class HeteroList extends UISample {
-
-    @Extension
-    public static final class DescriptorImpl extends UISampleDescriptor {}
-
-    public XmlFile getConfigFile() {
-        return new XmlFile(new File(Jenkins.get().getRootDir(), "stuff.xml"));
-    }
-
-    private Config config;
-
-    public HeteroList() throws IOException {
-        XmlFile xml = getConfigFile();
-        if (xml.exists()) {
-            xml.unmarshal(this);
-        }
-    }
+public class RepeatableList extends UISample {
 
     @Override
     public String getIconFileName() {
@@ -75,22 +54,15 @@ public class HeteroList extends UISample {
 
     @Override
     public String getDescription() {
-        return "Displays lists with varying content types or layouts within the same container.";
+        return "Displays lists with varying content types within the same container.";
     }
 
+    @Extension
+    public static final class DescriptorImpl extends UISampleDescriptor {}
+
+    @Restricted(NoExternalUse.class)
     public Config getConfig() {
-        return config;
-    }
-
-    public void setConfig(Config config) {
-        this.config = config;
-    }
-
-    public HttpResponse doConfigSubmit(StaplerRequest req) throws ServletException, IOException {
-        config = null; // otherwise bindJSON will never clear it once set
-        req.bindJSON(this, req.getSubmittedForm());
-        getConfigFile().write(this);
-        return FormApply.success(".");
+        return new Config(List.of(new ChoiceEntry(""), new SimpleEntry(""), new HeteroRadioEntry(new ChoiceEntry(""))));
     }
 
     public static final class Config extends AbstractDescribableImpl<Config> {
@@ -99,7 +71,7 @@ public class HeteroList extends UISample {
 
         @DataBoundConstructor
         public Config(List<Entry> entries) {
-            this.entries = entries != null ? new ArrayList<Entry>(entries) : Collections.<Entry>emptyList();
+            this.entries = entries != null ? new ArrayList<>(entries) : Collections.emptyList();
         }
 
         public List<Entry> getEntries() {
@@ -129,7 +101,7 @@ public class HeteroList extends UISample {
         public static class DescriptorImpl extends Descriptor<Entry> {
             @Override
             public String getDisplayName() {
-                return "Simple Entry";
+                return "Textbox";
             }
         }
     }
@@ -152,7 +124,7 @@ public class HeteroList extends UISample {
 
             @Override
             public String getDisplayName() {
-                return "Choice Entry";
+                return "Select";
             }
 
             public ListBoxModel doFillChoiceItems() {
@@ -178,10 +150,10 @@ public class HeteroList extends UISample {
 
             @Override
             public String getDisplayName() {
-                return "Hetero-Radio";
+                return "Radio";
             }
 
-            public List<Descriptor> getEntryDescriptors() {
+            public List<Descriptor<Entry>> getEntryDescriptors() {
                 Jenkins jenkins = Jenkins.get();
                 return ImmutableList.of(
                         jenkins.getDescriptorOrDie(ChoiceEntry.class), jenkins.getDescriptorOrDie(SimpleEntry.class));

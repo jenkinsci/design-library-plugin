@@ -9,13 +9,13 @@
   z-index: 0;
   gap: 1rem;
   border-radius: 0.66rem;
-  overflow: hidden;
   border: var(--jdl-border);
 
   &::before {
     content: "";
     position: absolute;
-    inset: -10px;
+    inset: 0;
+    border-radius: inherit;
     background: radial-gradient(at 40% 20%, hsl(312, 42%, 60%) 0, transparent 50%),
     radial-gradient(at 80% 0%, hsl(11, 100%, 56%) 0, transparent 50%),
     radial-gradient(at 0% 50%, hsl(354, 64%, 72%) 0, transparent 50%),
@@ -25,7 +25,7 @@
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
     background-attachment: fixed;
     background-position: center;
-    z-index: -1;
+    //z-index: -1;
     opacity: 0.075;
   }
 
@@ -35,6 +35,10 @@
 
   &--no-bottom-padding {
     padding-bottom: 0;
+  }
+
+  * > & {
+    z-index: 1;
   }
 
   /* Component preview styling */
