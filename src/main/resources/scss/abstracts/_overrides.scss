@@ -36,6 +36,10 @@ code {
 
 a {
   font-weight: inherit;
+
+  code {
+    color: unset;
+  }
 }
 
 #side-panel .jenkins-app-bar {
