@@ -10,7 +10,7 @@ public class Dialogs extends UISample {
     @NonNull
     @Override
     public String getDisplayName() {
-        return super.getDisplayName() + " - TODO";
+        return super.getDisplayName();
     }
 
     @Override
