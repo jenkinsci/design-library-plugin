@@ -44,5 +44,12 @@
         <s:code file="success.jelly" />
       </s:group>
     </s:section>
+    
+    <s:section>
+      <div class="jenkins-alert jenkins-alert-warning jenkins-!-margin-0">
+        Since <a href="https://www.jenkins.io/changelog/2.459/" target="_blank">2.459</a>. The css classes have the <em>jenkins-</em> prefix. Older versions should use the non prefixed form which interfere with
+        classes defined in bootstrap.
+      </div>
+    </s:section>
   </s:layout>
 </j:jelly>
