@@ -26,12 +26,8 @@ package io.jenkins.plugins.designlibrary;
 
 import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.Extension;
-import hudson.model.AutoCompletionCandidates;
 import hudson.util.ComboBoxModel;
 import hudson.util.ListBoxModel;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 import org.kohsuke.stapler.QueryParameter;
 
 /**
@@ -45,7 +41,7 @@ public class Inputs extends UISample {
     @NonNull
     @Override
     public String getDisplayName() {
-        return super.getDisplayName() + " - TODO";
+        return super.getDisplayName();
     }
 
     @Override
@@ -62,31 +58,8 @@ public class Inputs extends UISample {
         return "echo \"Hello World\"";
     }
 
-    public String getHtml() {
-        return "<a href=\"https://jenkins.io\" target=\"_blank\">Jenkins</a>";
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
-        /**
-         * This method provides auto-completion items for the 'state' field.
-         * Stapler finds this method via the naming convention.
-         *
-         * @param value
-         *      The text that the user entered.
-         */
-        public AutoCompletionCandidates doAutoCompleteState(@QueryParameter String value) {
-            AutoCompletionCandidates c = new AutoCompletionCandidates();
-            for (String state : STATES)
-                if (state.toLowerCase().startsWith(value.toLowerCase())) {
-                    c.add(state);
-                }
-            return c;
-        }
-
-        public ComboBoxModel doFillStateItems() {
-            return new ComboBoxModel(STATES);
-        }
 
         public ListBoxModel doFillAlbumItems() {
             ListBoxModel m = new ListBoxModel();
@@ -110,61 +83,4 @@ public class Inputs extends UISample {
             }
         }
     }
-
-    public Set<String> getStatesNames() {
-        return new HashSet<>(Arrays.asList(STATES));
-    }
-
-    private static final String[] STATES = new String[] {
-        "Alabama",
-        "Alaska",
-        "Arizona",
-        "Arkansas",
-        "California",
-        "Colorado",
-        "Connecticut",
-        "Delaware",
-        "Florida",
-        "Georgia",
-        "Hawaii",
-        "Idaho",
-        "Illinois",
-        "Indiana",
-        "Iowa",
-        "Kansas",
-        "Kentucky",
-        "Louisiana",
-        "Maine",
-        "Maryland",
-        "Massachusetts",
-        "Michigan",
-        "Minnesota",
-        "Mississippi",
-        "Missouri",
-        "Montana",
-        "Nebraska",
-        "Nevada",
-        "New Hampshire",
-        "New Jersey",
-        "New Mexico",
-        "New York",
-        "North Carolina",
-        "North Dakota",
-        "Ohio",
-        "Oklahoma",
-        "Oregon",
-        "Pennsylvania",
-        "Rhode Island",
-        "South Carolina",
-        "South Dakota",
-        "Tennessee",
-        "Texas",
-        "Utah",
-        "Vermont",
-        "Virginia",
-        "Washington",
-        "West Virginia",
-        "Wisconsin",
-        "Wyoming"
-    };
 }

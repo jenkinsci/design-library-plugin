@@ -33,7 +33,7 @@ THE SOFTWARE.
         </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
-            <s:code language="xml" file="sample2.jelly"/>
+            <s:code file="sample2.jelly"/>
           </s:code-pane>
           <s:code-pane title="Java">
             <s:code language="java" file="Sample.java"/>
@@ -52,7 +52,7 @@ THE SOFTWARE.
           </form>
         </s:preview>
 
-        <s:code language="xml" file="sample.jelly"/>
+        <s:code file="sample.jelly"/>
       </s:group>
     </s:section>
 
@@ -60,9 +60,6 @@ THE SOFTWARE.
       <s:group>
         <s:preview>
           <form method="post">
-            <f:entry title="Country" field="country">
-              <f:textbox/>
-            </f:entry>
             <f:entry title="State" field="state">
               <f:select/>
             </f:entry>
@@ -73,10 +70,51 @@ THE SOFTWARE.
         </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
-            <s:code language="xml" file="dynamic-sample.jelly"/>
+            <s:code file="dynamic-sample.jelly"/>
           </s:code-pane>
           <s:code-pane title="Java">
             <s:code language="java" file="DynamicSample.java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
+
+    <s:section title="${%searchable}" description="${%searchable.description}">
+      <div class="jenkins-paragraph">${%textbox}</div>
+
+      <s:group>
+        <s:preview>
+          <f:entry title="U.S. State" field="state">
+            <f:textbox/>
+          </f:entry>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="textbox.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code file="Textbox.java" language="java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+
+      <div class="jenkins-paragraph">${%combobox}</div>
+
+      <s:group>
+        <s:preview>
+          <form>
+            <button type="submit" disabled="true" style="display: none" aria-hidden="true"/>
+            <f:entry title="U.S. State" field="state2">
+              <f:combobox/>
+            </f:entry>
+          </form>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="combobox.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code file="Combobox.java" language="java"/>
           </s:code-pane>
         </s:code-panes>
       </s:group>

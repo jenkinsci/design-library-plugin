@@ -2,6 +2,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
 .jdl-component-code {
   --prism-background: var(--card-background);
+  background: var(--card-background);
   position: relative;
   display: grid;
   align-items: center;

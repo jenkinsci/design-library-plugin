@@ -1,22 +1,17 @@
 public static final class DescriptorImpl extends UISampleDescriptor {
-    public ListBoxModel doFillStateItems(@QueryParameter String country) {
-        ListBoxModel model = new ListBoxModel();
-        for (String state : asList("A", "B", "C")) {
-            model.add(String.format("State %s in %s", state, country),
-                    country + ':' + state);
+    public ListBoxModel doFillStateItems() {
+        ListBoxModel m = new ListBoxModel();
+        for (String s : asList("A", "B", "C")) {
+            m.add(String.format("State %s", s), s);
         }
-        return model;
+        return m;
     }
 
-    public ListBoxModel doFillCityItems(
-            @QueryParameter String country,
-            @QueryParameter String state
-    ) {
-        ListBoxModel model = new ListBoxModel();
-        for (String city : asList("X", "Y", "Z")) {
-            model.add(String.format("City %s in %s %s", city, state, country),
-                    state + ':' + city);
+    public ListBoxModel doFillCityItems(@QueryParameter String state) {
+        ListBoxModel m = new ListBoxModel();
+        for (String s : asList("X", "Y", "Z")) {
+            m.add(String.format("City %s in %s", s, state), state + ':' + s);
         }
-        return model;
+        return m;
     }
 }
