@@ -1,50 +1,50 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
-  <s:sample>
-    <p class="jdl-leading-paragraph">${%topAppBar.description}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--no-bottom-padding jdl-component-sample--gridless">
-        <l:app-bar title="${%title}" subtitle="3">
-          <button class="jenkins-button jenkins-button--primary">
-            <l:icon src="symbol-add-outline plugin-ionicons-api" />
-            Primary control
-          </button>
-          <button class="jenkins-button">Secondary</button>
-          <button class="jenkins-button">Secondary</button>
-          <t:help href="https://www.jenkins.io" />
-        </l:app-bar>
-      </div>
-      <s:code language="xml" file="topAppBar.jelly" />
-    </div>
-
-    <s:dos-donts>
-      <tr>
-        <td>${%topAppBar.do.1}</td>
-        <td>${%topAppBar.dont.1}</td>
-      </tr>
-      <tr>
-        <td>${%topAppBar.do.2}</td>
-        <td>${%topAppBar.dont.2}</td>
-      </tr>
-    </s:dos-donts>
-
-    <hr />
-
-    <p class="jdl-leading-paragraph">${%bottomAppBar.description}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
-        <p class="jdl-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>
-        <p class="jdl-paragraph">Maecenas a elit eget est aliquam consectetur dapibus eu nibh. Suspendisse potenti. Fusce tristique nisl ut malesuada sollicitudin. Praesent sed nisl nibh. Etiam tincidunt enim sit amet eleifend maximus. Aenean molestie congue est, eu vehicula ex vulputate nec. Duis commodo, arcu a malesuada facilisis, purus ex imperdiet dolor, nec rhoncus nibh nisi eu ex. Vivamus varius eleifend sollicitudin.</p>
-        <f:bottomButtonBar>
-          <div class="jenkins-buttons-row">
+  <s:layout>
+    <s:section title="${%topAppBar}" description="${%topAppBar.description}">
+      <s:group>
+        <s:preview fullWidth="true" noBottomPadding="true">
+          <l:app-bar title="Page title" subtitle="3">
             <button class="jenkins-button jenkins-button--primary">
-              Primary control
+              <l:icon src="symbol-add-outline plugin-ionicons-api" />
+              Primary action
             </button>
             <button class="jenkins-button">Secondary</button>
-          </div>
-        </f:bottomButtonBar>
-      </div>
-      <s:code language="xml" file="bottomAppBar.jelly" />
-    </div>
-  </s:sample>
+            <button class="jenkins-button">Secondary</button>
+            <t:help href="https://www.jenkins.io" />
+          </l:app-bar>
+        </s:preview>
+        <s:code language="xml" file="topAppBar.jelly" />
+      </s:group>
+
+      <s:dos-donts>
+        <tr>
+          <td>${%topAppBar.do.1}</td>
+          <td>${%topAppBar.dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%topAppBar.do.2}</td>
+          <td>${%topAppBar.dont.2}</td>
+        </tr>
+      </s:dos-donts>
+    </s:section>
+
+    <s:section title="${%bottomAppBar}" description="${%bottomAppBar.description}">
+      <s:group>
+        <s:preview fullWidth="true">
+          <p class="jdl-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis accumsan lorem vel maximus. Vestibulum malesuada velit elementum, finibus arcu nec, maximus eros. Donec varius lacus at orci ultrices volutpat. Nulla ex dui, fringilla a sem a, imperdiet auctor enim. Aliquam ipsum orci, volutpat quis porta sit amet, commodo et sem.</p>
+          <p class="jdl-paragraph">Maecenas a elit eget est aliquam consectetur dapibus eu nibh. Suspendisse potenti. Fusce tristique nisl ut malesuada sollicitudin. Praesent sed nisl nibh. Etiam tincidunt enim sit amet eleifend maximus. Aenean molestie congue est, eu vehicula ex vulputate nec. Duis commodo, arcu a malesuada facilisis, purus ex imperdiet dolor, nec rhoncus nibh nisi eu ex. Vivamus varius eleifend sollicitudin.</p>
+          <f:bottomButtonBar>
+            <div class="jenkins-buttons-row">
+              <button class="jenkins-button jenkins-button--primary">
+                Primary control
+              </button>
+              <button class="jenkins-button">Secondary</button>
+            </div>
+          </f:bottomButtonBar>
+        </s:preview>
+        <s:code language="xml" file="bottomAppBar.jelly" />
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

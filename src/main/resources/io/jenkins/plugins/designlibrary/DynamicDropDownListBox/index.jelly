@@ -23,6 +23,6 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample title="Dynamic dropdown list box">
-  </s:sample>
+  <s:layout title="Dynamic dropdown list box">
+  </s:layout>
 </j:jelly>

@@ -24,27 +24,29 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-  <s:sample>
-    <p class="jdl-paragraph">${%parameters}</p>
-    <ul class="jdl-list">
-      <li>field - ${%parameters.field}</li>
-      <li>clazz - ${%parameters.clazz}</li>
-    </ul>
+  <s:layout>
+    <s:section hideBorder="true">
+      <s:group>
+        <s:preview>
+          <f:file field="hello" />
+        </s:preview>
+        <s:code language="xml" file="file.jelly" />
+      </s:group>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:file field="hello" />
-      </div>
-      <s:code language="xml" file="file.jelly" />
-    </div>
+      <p class="jdl-paragraph">${%parameters}</p>
+      <ul class="jdl-list">
+        <li>field - ${%parameters.field}</li>
+        <li>clazz - ${%parameters.clazz}</li>
+      </ul>
+    </s:section>
 
-    <p class="jdl-paragraph">${%parameters.additional}</p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
-      </div>
-      <s:code language="xml" file="file-accept.jelly" />
-    </div>
-  </s:sample>
+    <s:section title="Additional parameters" description="${%parameters.additional}">
+      <s:group>
+        <s:preview>
+          <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
+        </s:preview>
+        <s:code language="xml" file="file-accept.jelly" />
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

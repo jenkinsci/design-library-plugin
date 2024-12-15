@@ -24,40 +24,34 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-    <s:sample title="Hetero List Sample">
-      <p class="jdl-paragraph">
-        <!-- TODO I have no idea what heterogeneous means, should use a simpler word -->
-        ${%description}
-      </p>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
+    <s:layout>
+      <s:section hideBorder="true">
+        <s:group>
+          <s:preview fullWidth="true">
+            <f:property field="config" />
+          </s:preview>
+          <s:code-panes>
+            <s:code-pane title="Config.java">
+              <s:code language="java" file="Config.java" />
+            </s:code-pane>
+            <s:code-pane title="config.jelly">
+              <s:code language="xml" file="config.jelly" />
+            </s:code-pane>
+            <s:code-pane title="Entry.java">
+              <s:code language="java" file="Entry.java" />
+            </s:code-pane>
+            <s:code-pane title="ChoiceEntry.java">
+              <s:code language="java" file="ChoiceEntry.java" />
+            </s:code-pane>
+            <s:code-pane title="SimpleEntry.java">
+              <s:code language="java" file="SimpleEntry.java" />
+            </s:code-pane>
+          </s:code-panes>
+        </s:group>
         <p class="jdl-paragraph">
-            <a href="configure" class="jenkins-button">Configure me!</a>
+          ${%description}
         </p>
-        <l:tabPane title="Config.java">
-          <s:code language="java" file="Config.java" />
-        </l:tabPane>
-        <l:tabPane title="config.jelly">
-          <s:code language="xml" file="config.jelly" />
-        </l:tabPane>
-        <l:tabPane title="Entry.java">
-          <s:code language="java" file="Entry.java" />
-        </l:tabPane>
-        <l:tabPane title="ChoiceEntry.java">
-          <s:code language="java" file="ChoiceEntry.java" />
-        </l:tabPane>
-        <l:tabPane title="SimpleEntry.java">
-          <s:code language="java" file="SimpleEntry.java" />
-        </l:tabPane>
-        <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
-        <j:if test="${it.configFile.exists()}">
-            <p class="jdl-paragraph">
-                Current configuration:
-            </p>
-            <pre>
-              <code class="language-xml">
-                <j:out value="${it.configFile.asString()}" />
-              </code>
-            </pre>
-        </j:if>
-    </s:sample>
+      </s:section>
+    </s:layout>
 </j:jelly>

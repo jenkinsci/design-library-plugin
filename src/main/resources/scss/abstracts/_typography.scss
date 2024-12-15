@@ -1,34 +1,20 @@
 @use "mixins";
 
-.jdl-heading {
-  font-weight: 500;
-  font-size: 1.2rem;
-  margin: 0 0 var(--jdl-spacing) 0;
-}
-
-.jdl-leading-paragraph {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0 0 var(--jdl-spacing) 0;
-  line-height: 1.66;
-
-  & + & {
-    margin-top: calc((var(--jdl-spacing) / 2) * -1);
-  }
+.jdl-subtitle {
+  @include mixins.base-text;
+  margin: calc(var(--jdl-spacing) * -0.25) 0 var(--jdl-spacing) 0;
+  color: var(--text-color-secondary);
 }
 
 .jdl-paragraph {
   @include mixins.base-text;
-  margin: 0 0 var(--jdl-spacing) 0;
-
-  & + & {
-    margin-top: calc((var(--jdl-spacing) / 2) * -1);
-  }
+  max-width: 100ch;
+  margin: 0;
 }
 
 .jdl-list {
   @include mixins.base-text;
-  margin: 0 0 var(--jdl-spacing) 0;
+  margin: 0;
 }
 
 .jdl-important-point {
@@ -36,7 +22,6 @@
   position: relative;
   font-weight: 500;
   padding-left: calc(1.5rem + 1ch);
-  line-height: 1.5;
 
   &::before {
     content: "";

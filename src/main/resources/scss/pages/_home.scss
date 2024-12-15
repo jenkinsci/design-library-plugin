@@ -1,27 +1,10 @@
 @use "../abstracts/mixins";
 
-.app-home {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: max(950px, 65vw);
-  gap: 2rem;
-}
-
-.app-home__subheading {
-  margin: 0 0 -1.2rem;
-  font-weight: 500;
-  font-size: 1.05rem;
-  color: var(--text-color-secondary);
-  background-color: var(--background);
-}
-
 .app-home__side-by-side {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: var(--jdl-spacing);
   overflow: hidden;
 
   @media (max-width: 970px) {
@@ -31,18 +14,43 @@
 }
 
 .app-card__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   color: var(--text-color) !important;
   text-decoration: none !important;
+  gap: 0.15rem;
+
+  &--large {
+    gap: var(--jdl-spacing);
+
+    .jdl-section__title {
+      margin-bottom: calc(var(--jdl-spacing) * -0.75);
+    }
+
+    .jdl-section__description {
+      font-size: 1rem;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    aspect-ratio: 16 / 7;
+    border: var(--jdl-border);
+    border-radius: 1rem;
+  }
 }
 
 .app-card__container:link:hover .app-card__preview {
   filter: brightness(1.2);
 }
 
-.app-card__container:link:hover .app-card__title {
+.app-card__container:link:hover .app-card__title span:first-of-type {
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
@@ -54,7 +62,6 @@
   justify-content: center;
   aspect-ratio: 16 / 7;
   overflow: hidden;
-  margin-bottom: 0.8rem;
   transition: var(--standard-transition);
   border-radius: 1rem;
   z-index: 0;
@@ -69,8 +76,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 40%;
-    max-height: max(40%, 80px)
+    max-width: 45%;
+    max-height: max(45%, 80px)
   }
 }
 
@@ -89,10 +96,17 @@
     width: 100%;
     margin: -10%;
     aspect-ratio: 1;
-    background: repeating-conic-gradient(var(--background) 0deg, rgba(100, 100, 100, 0.25) 20deg);
-    animation: sunburst-rotation 100s infinite linear;
+    backdrop-filter: invert(2%) blur(100px);
+    mask-image: repeating-conic-gradient(
+                    from 90deg,
+                    var(--background) 0deg,
+                    transparent 20deg
+    );
+    @media (prefers-reduced-motion: no-preference) {
+      animation: sunburst-rotation 100s infinite linear;
+    }
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.4;
     border-radius: 100%;
     flex: 1;
   }
@@ -104,40 +118,42 @@
   }
 }
 
-.app-card__preview::before, .app-card__preview::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-attachment: fixed;
-  background-size: max(950px, 65vw) 100vh;
-  background-repeat: no-repeat;
-  --sidebar-width: 340px;
-  --content-width: max(950px, 65vw);
+.app-card__preview {
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: max(950px, 65vw) 100vh;
+    background-repeat: no-repeat;
+    --sidebar-width: 340px;
+    --content-width: max(950px, 65vw);
+    background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
+    opacity: 0.25;
 
-  @media (max-width: 970px) {
-    --sidebar-width: 0;
-    --content-width: 100%;
-    background-size: 100%;
+    @media (max-width: 970px) {
+      --sidebar-width: 0;
+      --content-width: 100%;
+      background-size: 100%;
+    }
   }
 
-  background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
-}
-
-.app-card__preview {
   &::before {
     background-image: radial-gradient(
                     at 40% 20%,
-                    var(--orange) 0,
+                    var(--light-orange) 0,
                     transparent 50%
     ),
-    radial-gradient(at 80% 0%, var(--cyan) 0, transparent 50%),
+    radial-gradient(at 80% 0%, var(--light-cyan) 0, transparent 50%),
     radial-gradient(at 0% 50%, var(--light-pink) 0, transparent 50%),
     radial-gradient(at 80% 50%, var(--light-red) 0, transparent 50%),
     radial-gradient(at 0% 100%, var(--light-yellow) 0, transparent 50%),
-    radial-gradient(at 80% 100%, var(--dark-purple) 0, transparent 50%),
-    radial-gradient(at 0% 0%, var(--pink) 0, transparent 50%);
-    animation: aurora-one 5s linear infinite;
+    radial-gradient(at 80% 100%, var(--light-purple) 0, transparent 50%),
+    radial-gradient(at 0% 0%, var(--light-pink) 0, transparent 50%);
+    @media (prefers-reduced-motion: no-preference) {
+      animation: aurora-one 5s linear infinite;
+    }
   }
 
   &::after {
@@ -146,13 +162,15 @@
                     var(--light-cyan) 0,
                     transparent 50%
     ),
-    radial-gradient(at 80% 0%, var(--dark-orange) 0, transparent 50%),
+    radial-gradient(at 80% 0%, var(--light-orange) 0, transparent 50%),
     radial-gradient(at 0% 50%, var(--light-blue) 0, transparent 50%),
     radial-gradient(at 80% 50%, var(--light-green) 0, transparent 50%),
     radial-gradient(at 0% 100%, var(--light-red) 0, transparent 50%),
     radial-gradient(at 80% 100%, var(--light-yellow) 0, transparent 50%),
-    radial-gradient(at 0% 0%, var(--cyan) 0, transparent 50%);
-    animation: aurora-two 8s linear infinite;
+    radial-gradient(at 0% 0%, var(--light-cyan) 0, transparent 50%);
+    @media (prefers-reduced-motion: no-preference) {
+      animation: aurora-two 8s linear infinite;
+    }
   }
 }
 
@@ -182,11 +200,12 @@
 
 .app-card__title {
   @include mixins.base-text;
-  display: flex;
+  display: inline-flex;
+  font-size: 1rem;
   align-items: center;
-  margin: 0;
-  font-weight: 500;
+  font-weight: 450;
   gap: 1.15rem;
+  margin: 0.6rem 0 0;
 }
 
 .app-card__new-tag {
@@ -210,6 +229,7 @@
 
 .app-card__description {
   @include mixins.base-text;
+  font-size: 1rem;
   margin: 0;
   color: var(--text-color-secondary);
 }

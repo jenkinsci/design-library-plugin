@@ -1,0 +1,29 @@
+@use "../abstracts/mixins";
+
+.jdl-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jdl-spacing);
+  border-top: var(--jdl-border);
+  padding-top: var(--jdl-spacing);
+  margin-bottom: var(--jdl-spacing);
+
+  &__title {
+    font-weight: 450;
+    font-size: 1.125rem;
+    line-height: 1;
+    margin: 0;
+  }
+
+  &__description {
+    @include mixins.base-text;
+    max-width: 95ch;
+    color: var(--text-color-secondary);
+    margin: 0;
+  }
+
+  &--no-border {
+    border-top: none;
+    padding-top: 0;
+  }
+}

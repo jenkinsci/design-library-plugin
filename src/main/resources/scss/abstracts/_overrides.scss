@@ -1,12 +1,21 @@
 :root {
   --jdl-spacing: var(--section-padding);
+  --jdl-border-width: 1.5px;
+  --jdl-border: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 9%, transparent);
+  --jdl-box-shadow: 0 0 0 var(--jdl-border-width) color-mix(in srgb, currentColor 5%, transparent),
+  0 10px 15px rgba(0, 0, 0, 0.05);
+
+  @media (prefers-contrast: more) {
+    --jdl-border: var(--jdl-border-width) solid var(--text-color);
+    --jdl-box-shadow: 0 0 0 var(--jdl-border-width) var(--text-color);
+  }
 }
 
 #main-panel {
   display: flex !important;
   flex-direction: column;
   width: 100%;
-  max-width: min(1200px, 65vw);
+  max-width: min(1200px, 60vw);
   margin-top: 18px;
   margin-left: auto;
   margin-right: auto;
@@ -25,16 +34,6 @@ code {
   color: var(--text-color-secondary);
 }
 
-hr {
-  display: inline-block;
-  width: 100%;
-  border: none;
-  height: 2px;
-  background: currentColor;
-  margin: 0 0 var(--jdl-spacing) 0;
-  opacity: 0.05;
-}
-
 a {
   font-weight: inherit;
 }
@@ -48,9 +47,16 @@ a {
   position: absolute;
   top: 130px;
   left: var(--section-padding);
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   font-family: "Georgia", serif;
   color: var(--text-color-secondary);
   margin: 0;
+}
+
+.app-sidepanel__heading {
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+  font-weight: 450;
+  margin: 1rem 0 0.25rem 0;
 }

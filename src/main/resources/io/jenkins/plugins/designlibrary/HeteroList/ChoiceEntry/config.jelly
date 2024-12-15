@@ -28,5 +28,4 @@ THE SOFTWARE.
     <f:entry field="choice" title="Choice">
         <f:select/>
     </f:entry>
-    <!-- TODO figure out if f:radioBlock can also be used for form binding: Failed to instantiate class java.lang.String from {"value":"good"} -->
 </j:jelly>

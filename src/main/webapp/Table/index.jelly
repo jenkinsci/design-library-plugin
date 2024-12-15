@@ -1,4 +1,4 @@
-<table class="jenkins-table sortable jenkins-!-margin-bottom-0">
+<table class="jenkins-table sortable">
   <thead>
     <th>
       Name
@@ -17,7 +17,7 @@
     </td>
     <td>
       Success
-      <a href="#" class="jenkins-table__link jenkins-table__badge model-link inside">#7</a>
+      <a href="#" class="jenkins-table__link jenkins-table__badge model-link">#7</a>
     </td>
     <td>
       No Errors

@@ -1,37 +1,40 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
-          Hover over me
-        </button>
-      </div>
-      <s:code language="xml" file="tooltip.jelly" />
-    </div>
+  <s:layout>
+    <s:section title="${%Basic tooltip}">
+      <s:group>
+        <s:preview>
+          <button tooltip="I am a tooltip" class="jenkins-button jenkins-button--primary">
+            Hover over me
+          </button>
+        </s:preview>
+        <s:code language="xml" file="tooltip.jelly" />
+      </s:group>
+    </s:section>
 
-    <h2 class="jdl-heading">${%HTML and interactive content}</h2>
-    <j:set var="tooltip">
-      <img src="${imagesURL}/svgs/logo.svg" />
-    </j:set>
+    <s:section title="${%HTML and interactive content}">
+      <j:set var="tooltip">
+        <img src="${imagesURL}/svgs/logo.svg" />
+      </j:set>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button data-html-tooltip="${tooltip}" data-tooltip-interactive="true" class="jenkins-button jenkins-button--primary">
-          Hover over me
-        </button>
-      </div>
-      <s:code language="xml" file="html-tooltip.jelly" />
-    </div>
+      <s:group>
+        <s:preview>
+          <button data-html-tooltip="${tooltip}" data-tooltip-interactive="true" class="jenkins-button jenkins-button--primary">
+            Hover over me
+          </button>
+        </s:preview>
+        <s:code language="xml" file="html-tooltip.jelly" />
+      </s:group>
 
-    <p class="jdl-paragraph">${%symbols-description}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
-      </div>
-      <s:code language="xml" file="symbol-tooltip.jelly" />
-    </div>
-    <p class="jdl-leading-paragraph jdl-important-point">${%warning}</p>
-  </s:sample>
+      <p class="jdl-paragraph">${%symbols-description}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
+        </s:preview>
+        <s:code language="xml" file="symbol-tooltip.jelly" />
+      </s:group>
+      <p class="jdl-important-point">${%warning}</p>
+    </s:section>
+  </s:layout>
 </j:jelly>
 

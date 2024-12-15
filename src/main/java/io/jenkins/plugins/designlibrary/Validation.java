@@ -20,7 +20,17 @@ import org.kohsuke.stapler.QueryParameter;
 public class Validation extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-checkmark-circle-outline plugin-ionicons-api";
+        return "symbol-checkmark-done-outline plugin-ionicons-api";
+    }
+
+    @Override
+    public String getDescription() {
+        return "Ensures user inputs meet specified criteria or rules before submission.";
+    }
+
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
     }
 
     private List<State> states = new ArrayList<State>(Arrays.asList(

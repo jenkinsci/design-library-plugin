@@ -26,26 +26,18 @@ THE SOFTWARE.
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:p="/prism">
   <st:documentation>
     Page layout for Design Library
-
-    <st:attribute name="title">
-      Overrides the default page title (defaults to the class display name)
-    </st:attribute>
   </st:documentation>
 
   <j:set var="instance" value="${it}" />
   <j:set var="descriptor" value="${it.descriptor}" />
 
-  <!-- Default to class display name if title isn't set -->
-  <j:if test="${title == null}">
-    <j:set var="title" value="${it.displayName}" />
-  </j:if>
-
-  <l:layout title="${title}">
+  <l:layout title="${it.displayName} - Design Library">
     <p:prism configuration="${it.prismConfiguration}" />
 
     <st:adjunct includes="io.jenkins.plugins.designlibrary.styles" />
     <st:adjunct includes="io.jenkins.plugins.designlibrary.sample" />
     <st:adjunct includes="io.jenkins.plugins.designlibrary.preCode" />
+    <st:adjunct includes="io.jenkins.plugins.designlibrary.tabs" />
 
     <st:include page="header" optional="true" />
 
@@ -54,30 +46,20 @@ THE SOFTWARE.
     </l:side-panel>
 
     <l:main-panel>
-      <l:app-bar title="${title}">
-        <button id="button-share" class="jenkins-button" tooltip="${%sharePage}">
-          <l:icon src="symbol-share-outline plugin-ionicons-api" />
-        </button>
+      <l:app-bar title="${it.displayName}">
+        <j:if test="${it.since != null}">
+          <a href="https://www.jenkins.io/changelog-stable/${it.since}" class="jenkins-button jenkins-button--tertiary jdl-since-tag" target="_blank">
+            <l:icon src="symbol-information-circle-outline plugin-ionicons-api" />
+            Since ${it.since}
+          </a>
+        </j:if>
       </l:app-bar>
+
+      <p class="jdl-subtitle">${it.description}</p>
 
       <d:invokeBody/>
 
-      <div class="jdl-previous-next-controls">
-        <j:if test="${it.previousPage != null}">
-          <a href="${rootURL}/design-library/${it.previousPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-previous-button">
-            <l:icon src="symbol-arrow-back-outline plugin-ionicons-api" />
-            <span>${%previous}</span>
-            <span>${it.previousPage.displayName}</span>
-          </a>
-        </j:if>
-        <j:if test="${it.nextPage != null}">
-          <a href="${rootURL}/design-library/${it.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
-            <span>${%next}</span>
-            <l:icon src="symbol-arrow-forward-outline plugin-ionicons-api" />
-            <span>${it.nextPage.displayName}</span>
-          </a>
-        </j:if>
-      </div>
+      <s:previous-next-controls previousPage="${it.previousPage}" nextPage="${it.nextPage}" />
     </l:main-panel>
   </l:layout>
 </j:jelly>

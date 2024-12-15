@@ -23,33 +23,35 @@ THE SOFTWARE.
 -->
 
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
-    <h2 class="jdl-heading">Descriptor radio list</h2>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
+  <s:layout>
+    <s:section title="Simple radios">
+      <s:group>
+        <s:preview noBottomPadding="true">
+          <f:form>
+            <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
+          </f:form>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code language="xml" file="index.jelly" />
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code language="java" file="Sample.java" />
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
 
-    <div class="jdl-component-sample jdl-component-sample--gridless jenkins-!-padding-bottom-0">
-      <f:form>
-        <f:descriptorRadioList descriptors="${it.radios}" title="Test title" instance="${instance}" varName="realm" />
-      </f:form>
-    </div>
-
-    <l:tabPane title="index.jelly">
-      <s:code language="xml" file="index.jelly" />
-    </l:tabPane>
-    <l:tabPane title="Sample.java">
-      <s:code language="java" file="Sample.java" />
-    </l:tabPane>
-    <script src="${resURL}/jsbundles/section-to-tabs.js" type="text/javascript" />
-
-    <h2 class="jdl-heading">Boolean radio</h2>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--gridless">
-        <div>
-          <f:booleanRadio field="myField" />
-        </div>
-      </div>
-      <s:code language="xml" file="booleanRadio.jelly" />
-    </div>
-  </s:sample>
+    <s:section title="Boolean radio">
+      <s:group>
+        <s:preview>
+          <div>
+            <f:booleanRadio field="myField" />
+          </div>
+        </s:preview>
+        <s:code language="xml" file="booleanRadio.jelly" />
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

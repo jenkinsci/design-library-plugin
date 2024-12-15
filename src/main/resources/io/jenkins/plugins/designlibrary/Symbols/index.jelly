@@ -1,49 +1,42 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
-  <s:sample>
+  <s:layout>
     <j:set var="icons" value="${it.symbols}" />
-    <div class="jdl-symbols__masthead">
-      <div>
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-      </div>
-      <div>
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-star-outline plugin-ionicons-api" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-      </div>
-      <div>
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-        <l:icon src="symbol-${icons.pop()}" />
-      </div>
-    </div>
 
-    <p class="jdl-leading-paragraph">${%leadParagraph}</p>
+    <s:section hideBorder="true">
+      <s:preview classes="jdl-symbols__masthead">
+        <div>
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+        </div>
+        <div>
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-star-outline plugin-ionicons-api" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+        </div>
+        <div>
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+          <l:icon src="symbol-${icons.pop()}" />
+        </div>
+      </s:preview>
 
-    <hr/>
+      <p class="jdl-paragraph">${%leadParagraph}</p>
 
-    <table class="jdl-dos-donts">
-      <thead>
-        <tr>
-          <th class="jenkins-!-success-color">${%do}</th>
-          <th class="jenkins-!-error-color">${%dont}</th>
-        </tr>
-      </thead>
-      <tbody>
+      <s:dos-donts>
         <tr>
           <td>${%do.1}</td>
           <td>${%dont.1}</td>
@@ -55,119 +48,120 @@
         <tr>
           <td>${%do.3}</td>
         </tr>
-      </tbody>
-    </table>
+      </s:dos-donts>
+    </s:section>
 
-    <hr/>
+    <s:section title="${%usage.title}">
+      <p class="jdl-paragraph">${%usage.1}</p>
 
-    <h2 class="jdl-heading">${%usage.title}</h2>
-    <p class="jdl-paragraph">${%usage.1}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
+        </s:preview>
+        <s:code language="xml" file="symbol.jelly" />
+      </s:group>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
-      </div>
-      <s:code language="xml" file="symbol.jelly" />
-    </div>
+      <p class="jdl-paragraph">${%usage.2}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
+        </s:preview>
+        <s:code language="xml" file="symbol-tooltip.jelly" />
+      </s:group>
 
-    <p class="jdl-paragraph">${%usage.2}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
-      </div>
-      <s:code language="xml" file="symbol-tooltip.jelly" />
-    </div>
+      <p class="jdl-paragraph">${%usage.3}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
+        </s:preview>
+        <s:code language="xml" file="symbol-classes.jelly" />
+      </s:group>
 
-    <p class="jdl-paragraph">${%usage.3}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
-      </div>
-      <s:code language="xml" file="symbol-classes.jelly" />
-    </div>
+      <p class="jdl-paragraph">${%usage.4}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
+          <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
+          <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
+          <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
+        </s:preview>
+        <s:code language="xml" file="symbol-size.jelly" />
+      </s:group>
 
-    <p class="jdl-paragraph">${%usage.4}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-sm" />
-        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-md" />
-        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
-        <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
-      </div>
-      <s:code language="xml" file="symbol-size.jelly" />
-    </div>
+      <p class="jdl-paragraph">${%usage.5}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-status-blue" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-status-yellow" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-status-red" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-status-nobuilt" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-status-aborted" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-status-disabled" class="jdl-symbols__symbol" />
+        </s:preview>
+        <s:code language="xml" file="symbol-status.jelly" />
+      </s:group>
 
-    <p class="jdl-paragraph">${%usage.5}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--horizontal">
-        <l:icon src="symbol-status-blue" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-status-yellow" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-status-red" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-status-nobuilt" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-status-aborted" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-status-disabled" class="jdl-symbols__symbol" />
-      </div>
-      <s:code language="xml" file="symbol-status.jelly" />
-    </div>
+      <p class="jdl-paragraph">${%usage.6}</p>
+      <s:group>
+        <s:preview>
+          <l:icon src="symbol-weather-icon-health-00to19" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-weather-icon-health-20to39" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-weather-icon-health-40to59" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-weather-icon-health-60to79" class="jdl-symbols__symbol" />
+          <l:icon src="symbol-weather-icon-health-80plus" class="jdl-symbols__symbol" />
+        </s:preview>
+        <s:code language="xml" file="symbol-weather.jelly" />
+      </s:group>
 
-    <p class="jdl-paragraph">${%usage.6}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--horizontal">
-        <l:icon src="symbol-weather-icon-health-00to19" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-weather-icon-health-20to39" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-weather-icon-health-40to59" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-weather-icon-health-60to79" class="jdl-symbols__symbol" />
-        <l:icon src="symbol-weather-icon-health-80plus" class="jdl-symbols__symbol" />
-      </div>
-      <s:code language="xml" file="symbol-weather.jelly" />
-    </div>
+      <span>
+        <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
+           target="_blank" class="jdl-paragraph jdl-link">
+          ${%View the complete list of Jenkins Symbols on GitHub}
+          <l:icon src="symbol-open-outline plugin-ionicons-api" />
+        </a>
+      </span>
+    </s:section>
 
-    <span>
-      <a href="https://github.com/jenkinsci/jenkins/tree/master/war/src/main/resources/images/symbols"
-         target="_blank" class="jdl-paragraph jdl-link">
-        ${%View the complete list of Jenkins Symbols on GitHub}
+    <s:section title="${%ioniconsApi}">
+      <p class="jdl-paragraph">${%customSymbols.ionicons-api}</p>
+
+      <span>
+        <a href="https://plugins.jenkins.io/ionicons-api/#dependencies" target="_blank" class="jdl-paragraph jdl-link">
+          ${%Click here for a sample how to add the API to your plugin}
+          <l:icon src="symbol-open-outline plugin-ionicons-api" />
+        </a>
+      </span>
+
+      <p class="jdl-paragraph">${%customSymbols.description.2}</p>
+      <s:code language="xml" file="symbol-ionicons-reference.jelly" />
+
+      <a href="https://ionic.io/ionicons" target="_blank" class="jdl-paragraph jdl-link">
+        ${%View the complete list of all symbols provided by the ionicons-api-plugin on ionic.io/ionicons}
         <l:icon src="symbol-open-outline plugin-ionicons-api" />
       </a>
-    </span>
+    </s:section>
 
-    <h2 class="jdl-heading">${%ioniconsApi}</h2>
-    <p class="jdl-paragraph">${%customSymbols.ionicons-api}</p>
+    <s:section title="${%customSymbols}">
+      <p class="jdl-paragraph">${%customSymbols.description.1}</p>
+      <s:code code="{plugin-root}/src/main/resources/images/symbols" />
 
-    <span>
-      <a href="https://plugins.jenkins.io/ionicons-api/#dependencies" target="_blank" class="jdl-paragraph jdl-link">
-        ${%Click here for a sample how to add the API to your plugin}
-        <l:icon src="symbol-open-outline plugin-ionicons-api" />
-      </a>
-    </span>
+      <p class="jdl-paragraph">${%customSymbols.description.2}</p>
+      <s:code language="xml" file="symbol-plugin.jelly" />
 
-    <p class="jdl-paragraph">${%customSymbols.description.2}</p>
-    <s:code language="xml" file="symbol-ionicons-reference.jelly" />
+      <p class="jdl-paragraph">${%customSymbols.information}</p>
+      <ul class="jdl-list">
+        <li>symbolName - ${%customSymbols.symbolName}</li>
+        <li>yourArtifactId - ${%customSymbols.artifactId}</li>
+      </ul>
 
-    <a href="https://ionic.io/ionicons" target="_blank" class="jdl-paragraph jdl-link">
-      ${%View the complete list of all symbols provided by the ionicons-api-plugin on ionic.io/ionicons}
-      <l:icon src="symbol-open-outline plugin-ionicons-api" />
-    </a>
+      <p class="jdl-paragraph">${%customSymbols.artifactId.description}</p>
 
-    <h2 class="jdl-heading">${%customSymbols}</h2>
-    <p class="jdl-paragraph">${%customSymbols.description.1}</p>
-    <s:code code="{plugin-root}/src/main/resources/images/symbols" />
-
-    <p class="jdl-paragraph">${%customSymbols.description.2}</p>
-    <s:code language="xml" file="symbol-plugin.jelly" />
-
-    <p class="jdl-paragraph">${%customSymbols.information}</p>
-    <ul class="jdl-list">
-      <li>symbolName - ${%customSymbols.symbolName}</li>
-      <li>yourArtifactId - ${%customSymbols.artifactId}</li>
-    </ul>
-
-    <p class="jdl-paragraph">${%customSymbols.artifactId.description}</p>
-
-    <p class="jdl-paragraph">${%customSymbols.theme}</p>
-    <ul class="jdl-list">
-      <li>stroke="currentColor"</li>
-      <li>fill="currentColor"</li>
-    </ul>
-    <p class="jdl-paragraph">${%customSymbols.theme.clarification}</p>
-  </s:sample>
+      <p class="jdl-paragraph">${%customSymbols.theme}</p>
+      <ul class="jdl-list">
+        <li>stroke="currentColor"</li>
+        <li>fill="currentColor"</li>
+      </ul>
+      <p class="jdl-paragraph">${%customSymbols.theme.clarification}</p>
+    </s:section>
+  </s:layout>
 </j:jelly>
