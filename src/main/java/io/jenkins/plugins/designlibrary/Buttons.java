@@ -14,7 +14,7 @@ public class Buttons extends UISample {
 
     @Override
     public String getDescription() {
-        return "Triggers specific actions or commands with a click or tap.";
+        return "Triggers specific actions with a click or tap.";
     }
 
     @Extension

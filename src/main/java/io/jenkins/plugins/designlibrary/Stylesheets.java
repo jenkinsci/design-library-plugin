@@ -12,7 +12,7 @@ public class Stylesheets extends UISample {
 
     @Override
     public String getDescription() {
-        return "Provides reusable design principles and standards for maintaining consistency.";
+        return "Provides reusable stylesheet principles and standards for maintaining consistency.";
     }
 
     @Override
