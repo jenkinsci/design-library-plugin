@@ -9,14 +9,9 @@ import hudson.model.AutoCompletionCandidates;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
 import hudson.util.ListBoxModel;
-import hudson.util.XStream2;
-import java.io.IOException;
-import javax.servlet.ServletException;
 import jenkins.model.Jenkins;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
-import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.StaplerResponse;
 
 /**
  * @author Alan.Harder@oracle.com
@@ -40,15 +35,6 @@ public class Select extends UISample {
 
     public DescriptorExtensionList<Fruit, Descriptor<Fruit>> getFruitDescriptors() {
         return Jenkins.get().getDescriptorList(Fruit.class);
-    }
-
-    // Process form data and show it as serialized XML
-    public void doSubmit(StaplerRequest req, StaplerResponse rsp) throws ServletException, IOException {
-        // '$class' in form data tells Stapler which Fruit subclass to use,
-        // older versions of Jenkins/Stapler used 'stapler-class'
-        Fruit fruit = req.bindJSON(Fruit.class, req.getSubmittedForm().getJSONObject("fruit"));
-        rsp.setContentType("text/plain");
-        new XStream2().toXML(fruit, rsp.getWriter());
     }
 
     @Extension
