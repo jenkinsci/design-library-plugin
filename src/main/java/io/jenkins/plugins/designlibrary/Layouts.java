@@ -13,7 +13,7 @@ public class Layouts extends UISample {
 
     @Override
     public String getDescription() {
-        return "TODO TODO TODO TODO";
+        return "Predefined layout structures and patterns to organize page content.";
     }
 
     @Override

@@ -17,7 +17,6 @@ public class Cards extends UISample {
 
     @Override
     public String getSince() {
-        // TODO - Validate if we want the LTS vs Weekly
         return "2.479.1";
     }
 

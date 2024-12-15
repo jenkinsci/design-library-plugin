@@ -26,7 +26,7 @@ public class JavaScriptProxy extends UISample {
 
     @Override
     public String getDescription() {
-        return "TODO TODO TODO TODO";
+        return "Export arbitrary server-side Java object to JavaScript and invoke their methods from JavaScript.";
     }
 
     @Override
