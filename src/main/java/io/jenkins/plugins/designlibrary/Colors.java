@@ -40,6 +40,7 @@ public class Colors extends UISample {
                 new Color("Orange", "orange"),
                 new Color("Yellow", "yellow"),
                 new Color("Blue", "blue"),
+                new Color("Cyan", "cyan"),
                 new Color("Indigo", "indigo"),
                 new Color("Purple", "purple"),
                 new Color("Pink", "pink"),
