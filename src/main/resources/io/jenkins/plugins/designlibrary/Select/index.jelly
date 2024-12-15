@@ -80,8 +80,6 @@ THE SOFTWARE.
     </s:section>
 
     <s:section title="${%searchable}" description="${%searchable.description}">
-      <div class="jenkins-paragraph">${%textbox}</div>
-
       <s:group>
         <s:preview>
           <f:entry title="U.S. State" field="state">
@@ -94,27 +92,6 @@ THE SOFTWARE.
           </s:code-pane>
           <s:code-pane title="Java">
             <s:code file="Textbox.java" language="java"/>
-          </s:code-pane>
-        </s:code-panes>
-      </s:group>
-
-      <div class="jenkins-paragraph">${%combobox}</div>
-
-      <s:group>
-        <s:preview>
-          <form>
-            <button type="submit" disabled="true" style="display: none" aria-hidden="true"/>
-            <f:entry title="U.S. State" field="state2">
-              <f:combobox/>
-            </f:entry>
-          </form>
-        </s:preview>
-        <s:code-panes>
-          <s:code-pane title="Jelly">
-            <s:code file="combobox.jelly"/>
-          </s:code-pane>
-          <s:code-pane title="Java">
-            <s:code file="Combobox.java" language="java"/>
           </s:code-pane>
         </s:code-panes>
       </s:group>

@@ -59,10 +59,6 @@ public class Select extends UISample {
             return new ListBoxModel(new ListBoxModel.Option("Apple"), new ListBoxModel.Option("Banana"));
         }
 
-        public ComboBoxModel doFillState2Items() {
-            return new ComboBoxModel(STATES);
-        }
-
         public ListBoxModel doFillStateItems() {
             ListBoxModel m = new ListBoxModel();
             for (String s : asList("A", "B", "C")) {
