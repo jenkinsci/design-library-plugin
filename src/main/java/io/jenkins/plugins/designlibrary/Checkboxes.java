@@ -14,7 +14,7 @@ public class Checkboxes extends UISample {
 
     @Override
     public String getDescription() {
-        return "Allows users to select one or more options from a list.";
+        return "Allows users to select one or more items from a list.";
     }
 
     @Extension

@@ -4,7 +4,7 @@
     <s:section title="Default">
       <s:group>
         <s:preview>
-          <f:toggleSwitch name="enabled" title="Hello world" />
+          <f:toggleSwitch name="enabled" title="Enabled" />
         </s:preview>
         <s:code file="default.jelly" />
       </s:group>
@@ -13,7 +13,7 @@
     <s:section title="Inverted">
       <s:group>
         <s:preview>
-          <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
+          <f:toggleSwitch name="enabled" title="Enabled" invertLabel="true" />
         </s:preview>
         <s:code file="inverted.jelly" />
       </s:group>
