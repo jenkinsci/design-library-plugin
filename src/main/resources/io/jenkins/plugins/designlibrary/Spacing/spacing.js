@@ -1,7 +1,6 @@
 let type, position, amount;
 const valueElement = document.querySelector("[data-type='value'] span");
-const marginElement = document.querySelector("[data-type='margin']");
-const paddingElement = document.querySelector("[data-type='padding']");
+const spacingElement = document.querySelector("[data-type='spacing']");
 const typeElement = document.querySelector("[data-type='type']");
 const positionElement = document.querySelector("[data-type='position']");
 const amountElement = document.querySelector("[data-type='amount']");
@@ -20,12 +19,10 @@ function onChange() {
 
     const positionPart = position === 'all' ? '' : `-${position}`;
 
-    if (type === 'margin') {
-        marginElement.className = 'jdl-margin-box ' + `jenkins-!-padding${positionPart}-${amount}`;
-        paddingElement.className = '';
-    } else {
-        marginElement.className = '';
-        paddingElement.className = 'jdl-padding-box ' + `jenkins-!-padding${positionPart}-${amount}`;
+    spacingElement.className = 'jdl-spacing-box ' + `jenkins-!-padding${positionPart}-${amount}`;
+
+    if (type === 'padding') {
+        spacingElement.classList.add('jdl-spacing-box--padding');
     }
 
     valueElement.textContent = `.jenkins-!-${type}${positionPart}-${amount}`;

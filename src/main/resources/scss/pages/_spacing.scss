@@ -1,8 +1,5 @@
 @use "../abstracts/symbols";
 
-$margin-color: var(--blue);
-$padding-color: var(--purple);
-
 .jdl-spacing-container {
   display: flex;
   flex-direction: column;
@@ -73,9 +70,11 @@ $padding-color: var(--purple);
   }
 }
 
-.jdl-margin-box {
+.jdl-spacing-box {
+  --box-color: var(--purple);
+
   position: relative;
-  border: 1.5px dashed $margin-color;
+  border: var(--jdl-border-width) dashed var(--box-color);
   border-radius: 0.66rem;
   transition: var(--elastic-transition);
   z-index: 0;
@@ -83,9 +82,9 @@ $padding-color: var(--purple);
   &::before {
     content: "";
     position: absolute;
-    inset: -2px;
+    inset: calc(var(--jdl-border-width) * -1);
     border-radius: inherit;
-    background: $margin-color;
+    background: var(--box-color);
     opacity: 0.2;
     z-index: -1;
   }
@@ -99,47 +98,20 @@ $padding-color: var(--purple);
     place-items: center;
     gap: 1rem;
     position: relative;
-    border: 1.5px dashed $margin-color;
-    padding: 1rem;
     margin: 0;
     z-index: 1;
-    border-radius: 0.2rem;
     font-family: var(--font-family-mono);
+    transition: var(--elastic-transition);
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
+  &:not(.jdl-spacing-box--padding) {
+    --box-color: var(--blue);
+
+    p {
+      border: var(--jdl-border-width) dashed var(--box-color);
+      border-radius: 0.2rem;
       background: var(--background);
-      z-index: -1;
+      padding: 1rem;
     }
-  }
-}
-
-.jdl-padding-box {
-  position: relative;
-  border: 1.5px dashed $padding-color;
-  border-radius: 0.66rem;
-  transition: var(--elastic-transition);
-  z-index: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: $padding-color;
-    opacity: 0.2;
-    z-index: -1;
-  }
-
-  p {
-    display: flex;
-    place-items: center;
-    gap: 1rem;
-    margin: 0;
-    z-index: 1;
-    font-family: var(--font-family-mono);
   }
 }

@@ -28,16 +28,15 @@
                 <option selected="true">3</option>
                 <option>4</option>
                 <option>5</option>
+                <option>6</option>
               </select>
             </div>
           </div>
-          <div data-type="margin" class="jdl-margin-box jenkins-!-padding-3">
-            <div data-type="padding" class="jdl-padding-box">
-              <p class="jdl-paragraph" data-type="value" id="value">
-                <span>.jenkins-!-margin-3</span>
-                <l:copyButton ref="value" clazz="jenkins-button--tertiary" />
-              </p>
-            </div>
+          <div data-type="spacing" class="jdl-spacing-box jenkins-!-padding-3">
+            <p class="jdl-paragraph" data-type="value" id="value">
+              <span>.jenkins-!-margin-3</span>
+              <l:copyButton ref="value" clazz="jenkins-button--tertiary" />
+            </p>
           </div>
         </div>
       </s:preview>
