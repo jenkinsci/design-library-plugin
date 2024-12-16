@@ -69,7 +69,7 @@
     <s:section title="${%Code editor}" description="${%syntaxHighlight.description.1}">
       <s:group>
         <s:preview>
-          <f:textarea codemirror-mode="shell" codemirror-config="lineNumbers: true" value="println 'Hello, World!'" />
+          <f:textarea codemirror-mode="shell" codemirror-config='"lineNumbers": true' value="println 'Hello, World!'" />
         </s:preview>
         <s:code file="codemirror.jelly" />
       </s:group>
