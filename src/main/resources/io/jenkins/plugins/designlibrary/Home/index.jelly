@@ -1,6 +1,6 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:l="/lib/layout" xmlns:s="/lib/samples">
-  <l:layout title="Design Library">
+  <l:layout title="Home - Design Library">
     <st:adjunct includes="io.jenkins.plugins.designlibrary.styles" />
 
     <l:side-panel>
