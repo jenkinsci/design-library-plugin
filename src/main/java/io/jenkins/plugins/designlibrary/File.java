@@ -12,7 +12,7 @@ public class File extends UISample {
 
     @Override
     public String getDescription() {
-        return "Enables file upload or management functionality.";
+        return "Enables file upload functionality.";
     }
 
     @Extension
