@@ -90,7 +90,7 @@ $padding-color: var(--purple);
     z-index: -1;
   }
 
-  &.jenkins-\!-padding-0 p {
+  &[class$="-0"] p {
     border-radius: 0.66rem;
   }
 
