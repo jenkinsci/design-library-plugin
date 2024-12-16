@@ -12,7 +12,7 @@
         </s:preview>
         <s:code-panes>
           <s:code-pane title="sample.jelly">
-            <s:code language="xml" file="sample.jelly" />
+            <s:code file="sample.jelly" />
           </s:code-pane>
           <s:code-pane title="Sample.java">
             <s:code language="java" file="Sample.java" />

@@ -90,7 +90,7 @@
             <s:code language="java" file="modal.js" code="showModal()" executable="true"/>
           </s:code-pane>
           <s:code-pane title="Jelly">
-            <s:code language="xml" file="modal.jelly"/>
+            <s:code file="modal.jelly"/>
           </s:code-pane>
         </s:code-panes>
       </s:group>
@@ -154,7 +154,7 @@
             <s:code language="java" file="form.js" code="showForm()" executable="true"/>
           </s:code-pane>
           <s:code-pane title="Jelly">
-            <s:code language="xml" file="form.jelly"/>
+            <s:code file="form.jelly"/>
           </s:code-pane>
         </s:code-panes>
       </s:group>

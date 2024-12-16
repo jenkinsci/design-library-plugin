@@ -69,7 +69,7 @@
       <s:section title="${%Usage}">
         <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
 
-        <s:code file="twoColumn.jelly" language="xml" previewable="true" />
+        <s:code file="twoColumn.jelly" previewable="true" />
 
         <p class="jdl-paragraph">
           The example above is all you need to set up a two-column page,
@@ -113,7 +113,7 @@
       </s:section>
 
       <s:section title="${%Usage}" description="Set the type attribute to 'one-column' to use this layout:">
-        <s:code file="oneColumn.jelly" language="xml" previewable="true" />
+        <s:code file="oneColumn.jelly" previewable="true" />
       </s:section>
     </l:tabPane>
 
@@ -135,7 +135,7 @@
       </s:section>
 
       <s:section title="${%Usage}" description="Set the type attribute to 'full-screen' to use this layout:">
-        <s:code file="fullscreen.jelly" language="xml" previewable="true" />
+        <s:code file="fullscreen.jelly" previewable="true" />
       </s:section>
     </l:tabPane>
 

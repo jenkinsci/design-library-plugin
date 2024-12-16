@@ -34,7 +34,7 @@ THE SOFTWARE.
         </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
-            <s:code language="xml" file="index.jelly" />
+            <s:code file="index.jelly" />
           </s:code-pane>
           <s:code-pane title="Java">
             <s:code language="java" file="Sample.java" />
@@ -50,7 +50,7 @@ THE SOFTWARE.
             <f:booleanRadio field="myField" />
           </div>
         </s:preview>
-        <s:code language="xml" file="booleanRadio.jelly" />
+        <s:code file="booleanRadio.jelly" />
       </s:group>
     </s:section>
   </s:layout>

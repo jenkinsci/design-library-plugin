@@ -31,7 +31,7 @@
             <f:textbox />
           </f:entry>
         </s:preview>
-        <s:code language="xml" file="example.jelly" />
+        <s:code file="example.jelly" />
       </s:group>
     </s:section>
 
@@ -40,7 +40,7 @@
         <s:preview>
           <l:search-bar />
         </s:preview>
-        <s:code language="xml" file="search.jelly" />
+        <s:code file="search.jelly" />
       </s:group>
     </s:section>
 
@@ -51,7 +51,7 @@
             <f:number min="1" max="99" default="5"/>
           </f:entry>
         </s:preview>
-        <s:code language="xml" file="number.jelly" />
+        <s:code file="number.jelly" />
       </s:group>
     </s:section>
 
@@ -62,7 +62,7 @@
             <f:password/>
           </f:entry>
         </s:preview>
-        <s:code language="xml" file="password.jelly" />
+        <s:code file="password.jelly" />
       </s:group>
     </s:section>
 
@@ -71,7 +71,7 @@
         <s:preview>
           <f:textarea codemirror-mode="shell" codemirror-config="lineNumbers: true" value="println 'Hello, World!'" />
         </s:preview>
-        <s:code language="xml" file="codemirror.jelly" />
+        <s:code file="codemirror.jelly" />
       </s:group>
       <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
     </s:section>

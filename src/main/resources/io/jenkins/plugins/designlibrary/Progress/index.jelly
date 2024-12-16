@@ -6,14 +6,14 @@
         <s:preview>
           <l:spinner />
         </s:preview>
-        <s:code language="xml" file="spinner.jelly" />
+        <s:code file="spinner.jelly" />
       </s:group>
 
       <s:group>
         <s:preview>
           <l:spinner text="I am a label" />
         </s:preview>
-        <s:code language="xml" file="spinnerLabel.jelly" />
+        <s:code file="spinnerLabel.jelly" />
       </s:group>
     </s:section>
 
@@ -22,7 +22,7 @@
         <s:preview>
           <l:progressAnimation />
         </s:preview>
-        <s:code language="xml" file="progressAnimation.jelly" />
+        <s:code file="progressAnimation.jelly" />
       </s:group>
     </s:section>
 
@@ -31,14 +31,14 @@
         <s:preview>
           <t:progressBar pos="50" />
         </s:preview>
-        <s:code language="xml" file="progressBar.jelly" />
+        <s:code file="progressBar.jelly" />
       </s:group>
 
       <s:group>
         <s:preview>
           <t:progressBar pos="-1" />
         </s:preview>
-        <s:code language="xml" file="progressBarIndeterminate.jelly" />
+        <s:code file="progressBarIndeterminate.jelly" />
       </s:group>
     </s:section>
 
@@ -63,7 +63,7 @@
         </s:preview>
         <s:code-panes>
           <s:code-pane title="Jelly">
-            <s:code language="xml" file="progressiveRendering.jelly" />
+            <s:code file="progressiveRendering.jelly" />
           </s:code-pane>
           <s:code-pane title="JavaScript">
           <p class="jdl-tab-pane__text">${%description.adjuncts}</p>

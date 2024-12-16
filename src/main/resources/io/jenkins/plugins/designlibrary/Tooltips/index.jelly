@@ -8,7 +8,7 @@
             Hover over me
           </button>
         </s:preview>
-        <s:code language="xml" file="tooltip.jelly" />
+        <s:code file="tooltip.jelly" />
       </s:group>
     </s:section>
 
@@ -23,7 +23,7 @@
             Hover over me
           </button>
         </s:preview>
-        <s:code language="xml" file="html-tooltip.jelly" />
+        <s:code file="html-tooltip.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%symbols-description}</p>
@@ -31,7 +31,7 @@
         <s:preview>
           <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
         </s:preview>
-        <s:code language="xml" file="symbol-tooltip.jelly" />
+        <s:code file="symbol-tooltip.jelly" />
       </s:group>
       <p class="jdl-important-point">${%warning}</p>
     </s:section>

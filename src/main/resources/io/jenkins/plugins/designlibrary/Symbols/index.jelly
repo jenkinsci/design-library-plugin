@@ -58,7 +58,7 @@
         <s:preview>
           <l:icon src="symbol-search-outline plugin-ionicons-api" class="jdl-symbols__symbol" />
         </s:preview>
-        <s:code language="xml" file="symbol.jelly" />
+        <s:code file="symbol.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.2}</p>
@@ -66,7 +66,7 @@
         <s:preview>
           <l:icon src="symbol-jenkins plugin-ionicons-api" tooltip="Howdy" class="jdl-symbols__symbol" />
         </s:preview>
-        <s:code language="xml" file="symbol-tooltip.jelly" />
+        <s:code file="symbol-tooltip.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.3}</p>
@@ -74,7 +74,7 @@
         <s:preview>
           <l:icon src="symbol-logo-rss plugin-ionicons-api" class="jdl-symbols__symbol spin" />
         </s:preview>
-        <s:code language="xml" file="symbol-classes.jelly" />
+        <s:code file="symbol-classes.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.4}</p>
@@ -85,7 +85,7 @@
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-lg" />
           <l:icon src="symbol-cube-outline plugin-ionicons-api" class="icon-xlg" />
         </s:preview>
-        <s:code language="xml" file="symbol-size.jelly" />
+        <s:code file="symbol-size.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.5}</p>
@@ -98,7 +98,7 @@
           <l:icon src="symbol-status-aborted" class="jdl-symbols__symbol" />
           <l:icon src="symbol-status-disabled" class="jdl-symbols__symbol" />
         </s:preview>
-        <s:code language="xml" file="symbol-status.jelly" />
+        <s:code file="symbol-status.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%usage.6}</p>
@@ -110,7 +110,7 @@
           <l:icon src="symbol-weather-icon-health-60to79" class="jdl-symbols__symbol" />
           <l:icon src="symbol-weather-icon-health-80plus" class="jdl-symbols__symbol" />
         </s:preview>
-        <s:code language="xml" file="symbol-weather.jelly" />
+        <s:code file="symbol-weather.jelly" />
       </s:group>
 
       <span>
@@ -133,7 +133,7 @@
       </span>
 
       <p class="jdl-paragraph">${%customSymbols.description.2}</p>
-      <s:code language="xml" file="symbol-ionicons-reference.jelly" />
+      <s:code file="symbol-ionicons-reference.jelly" />
 
       <a href="https://ionic.io/ionicons" target="_blank" class="jdl-paragraph jdl-link">
         ${%View the complete list of all symbols provided by the ionicons-api-plugin on ionic.io/ionicons}
@@ -146,7 +146,7 @@
       <s:code code="{plugin-root}/src/main/resources/images/symbols" />
 
       <p class="jdl-paragraph">${%customSymbols.description.2}</p>
-      <s:code language="xml" file="symbol-plugin.jelly" />
+      <s:code file="symbol-plugin.jelly" />
 
       <p class="jdl-paragraph">${%customSymbols.information}</p>
       <ul class="jdl-list">

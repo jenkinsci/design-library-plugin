@@ -14,7 +14,7 @@
             <t:help href="https://www.jenkins.io" />
           </l:app-bar>
         </s:preview>
-        <s:code language="xml" file="topAppBar.jelly" />
+        <s:code file="topAppBar.jelly" />
       </s:group>
 
       <s:dos-donts>
@@ -43,7 +43,7 @@
             </div>
           </f:bottomButtonBar>
         </s:preview>
-        <s:code language="xml" file="bottomAppBar.jelly" />
+        <s:code file="bottomAppBar.jelly" />
       </s:group>
     </s:section>
   </s:layout>

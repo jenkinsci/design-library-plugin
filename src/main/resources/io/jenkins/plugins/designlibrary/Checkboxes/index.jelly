@@ -30,7 +30,7 @@ THE SOFTWARE.
         <s:preview>
           <f:checkbox title="${%Example}" field="hello" />
         </s:preview>
-        <s:code language="xml" file="checkbox.jelly" />
+        <s:code file="checkbox.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%checkbox.parameters}</p>

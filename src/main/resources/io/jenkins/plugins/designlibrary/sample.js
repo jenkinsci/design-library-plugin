@@ -53,25 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
 
-  const shareButton = document.querySelector("#button-share");
-
-  if (shareButton) {
-    if (!navigator.canShare) {
-      shareButton.style.display = "none"
-    }
-
-    shareButton
-      .addEventListener("click", async () => {
-        try {
-          const shareData = {
-            title: document.title,
-            text: `Learn about ${document.querySelector("h1").textContent} on Jenkins Design Library`,
-            url: document.location.href
-          }
-          await navigator.share(shareData)
-        } catch (error) {
-          console.log(error)
-        }
-      });
-  }
+  document.querySelectorAll(".jdl-component-code__expander").forEach((expander) => {
+    expander.addEventListener("click", () => {
+        expander.closest('.jdl-component-code').classList.toggle("jdl-component-code--minimized");
+    })
+  });
 });

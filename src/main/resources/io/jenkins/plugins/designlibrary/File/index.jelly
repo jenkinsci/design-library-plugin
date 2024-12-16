@@ -30,7 +30,7 @@ THE SOFTWARE.
         <s:preview>
           <f:file field="hello" />
         </s:preview>
-        <s:code language="xml" file="file.jelly" />
+        <s:code file="file.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%parameters}</p>
@@ -45,7 +45,7 @@ THE SOFTWARE.
         <s:preview>
           <f:file field="hello" accept=".hpi,.jpi" clazz="extra-class" />
         </s:preview>
-        <s:code language="xml" file="file-accept.jelly" />
+        <s:code file="file-accept.jelly" />
       </s:group>
     </s:section>
   </s:layout>

@@ -39,7 +39,7 @@ THE SOFTWARE.
 
       <p class="jdl-paragraph">${%description.3}</p>
 
-      <s:code language="xml" file="sample.jelly" />
+      <s:code file="sample.jelly" />
 
       <p class="jdl-paragraph">${%description.4}</p>
 

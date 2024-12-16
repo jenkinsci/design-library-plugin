@@ -60,7 +60,7 @@ THE SOFTWARE.
             </dd:custom>
           </l:overflowButton>
         </s:preview>
-        <s:code language="xml" file="default.jelly" />
+        <s:code file="default.jelly" />
       </s:group>
 
       <s:dos-donts>

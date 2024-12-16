@@ -36,7 +36,7 @@ THE SOFTWARE.
               <s:code language="java" file="Config.java" />
             </s:code-pane>
             <s:code-pane title="config.jelly">
-              <s:code language="xml" file="config.jelly" />
+              <s:code file="config.jelly" />
             </s:code-pane>
             <s:code-pane title="Entry.java">
               <s:code language="java" file="Entry.java" />

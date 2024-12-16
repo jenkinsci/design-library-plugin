@@ -116,7 +116,7 @@
             Card content
           </l:card>
         </s:preview>
-        <s:code language="xml" file="card.jelly" />
+        <s:code file="card.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%creating-a-card.description}</p>
@@ -134,7 +134,7 @@
             Card content
           </l:card>
         </s:preview>
-        <s:code language="xml" file="actions.jelly" />
+        <s:code file="actions.jelly" />
       </s:group>
 
       <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>

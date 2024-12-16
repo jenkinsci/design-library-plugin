@@ -78,7 +78,7 @@ THE SOFTWARE.
             </tbody>
           </table>
         </s:preview>
-        <s:code language="xml" file="index.jelly" />
+        <s:code file="index.jelly" />
       </s:group>
     </s:section>
   </s:layout>
