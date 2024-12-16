@@ -1,9 +1,127 @@
+@use "../abstracts/symbols";
+
+$margin-color: var(--blue);
 $padding-color: var(--purple);
+
+.jdl-spacing-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center start;
+  gap: var(--jdl-spacing);
+}
+
+.jdl-spacing-controller {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  gap: 2px;
+  width: 300px;
+
+  div {
+    position: relative;
+    display: flex;
+    background: color-mix(in srgb, var(--text-color-secondary) 2.5%, transparent);
+    border: var(--jdl-border);
+    border-radius: 4px;
+    transition: background var(--standard-transition);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      aspect-ratio: 1;
+      background: currentColor;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-image: symbols.$down;
+      mask-size: 45%;
+      pointer-events: none;
+
+      @media (prefers-contrast: no-preference) {
+        opacity: 0.4;
+      }
+    }
+
+    select {
+      appearance: none;
+      background: none;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: var(--font-size-sm);
+      text-align-last: center;
+      cursor: pointer;
+      padding: 0 20px 0 0;
+      height: 2rem;
+      font-family: var(--font-family-mono);
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 18px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+
+    &:hover {
+      background: color-mix(in srgb, var(--text-color-secondary) 10%, transparent);
+    }
+  }
+}
+
+.jdl-margin-box {
+  position: relative;
+  border: 1.5px dashed $margin-color;
+  border-radius: 0.66rem;
+  transition: var(--elastic-transition);
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: $margin-color;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  &.jenkins-\!-padding-0 p {
+    border-radius: 0.66rem;
+  }
+
+  p {
+    display: flex;
+    place-items: center;
+    gap: 1rem;
+    position: relative;
+    border: 1.5px dashed $margin-color;
+    padding: 1rem;
+    margin: 0;
+    z-index: 1;
+    border-radius: 0.2rem;
+    font-family: var(--font-family-mono);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: var(--background);
+      z-index: -1;
+    }
+  }
+}
 
 .jdl-padding-box {
   position: relative;
   border: 1.5px dashed $padding-color;
   border-radius: 0.66rem;
+  transition: var(--elastic-transition);
   z-index: 0;
 
   &::before {
@@ -16,26 +134,12 @@ $padding-color: var(--purple);
     z-index: -1;
   }
 
-  &--5 {
-    padding: 5rem;
-  }
-
   p {
-    position: relative;
-    border: 1.5px dashed $padding-color;
-    border-radius: 0.66rem;
-    padding: 1rem;
+    display: flex;
+    place-items: center;
+    gap: 1rem;
     margin: 0;
     z-index: 1;
     font-family: var(--font-family-mono);
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: var(--background);
-      z-index: -1;
-    }
   }
 }
