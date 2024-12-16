@@ -55,6 +55,18 @@ THE SOFTWARE.
     </div>
 
     <p class="jdl-paragraph">
+      You can create as well filled buttons, like so:
+    </p>
+
+    <div class="jdl-component-group">
+      <div class="jdl-component-sample">
+        <button class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">Danger</button>
+        <button class="jenkins-button jenkins-button--primary jenkins-!-success-color">Success</button>
+      </div>
+      <s:code language="xml" file="filled.jelly" />
+    </div>
+
+    <p class="jdl-paragraph">
       Tertiary buttons should be used for buttons which have minimal interaction or for those where
       a background creates too much visual clutter:
     </p>

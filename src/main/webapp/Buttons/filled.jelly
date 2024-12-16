@@ -1,0 +1,2 @@
+<button class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">Danger</button>
+<button class="jenkins-button jenkins-button--primary jenkins-!-success-color">Success</button>
