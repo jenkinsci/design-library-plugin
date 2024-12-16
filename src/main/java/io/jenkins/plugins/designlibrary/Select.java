@@ -8,6 +8,7 @@ import hudson.ExtensionPoint;
 import hudson.model.AutoCompletionCandidates;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
+import hudson.util.ComboBoxModel;
 import hudson.util.ListBoxModel;
 import jenkins.model.Jenkins;
 import org.kohsuke.stapler.DataBoundConstructor;
@@ -50,6 +51,10 @@ public class Select extends UISample {
                 m.add(String.format("State %s", s), s);
             }
             return m;
+        }
+
+        public ComboBoxModel doFillState2Items() {
+            return new ComboBoxModel(STATES);
         }
 
         public ListBoxModel doFillCityItems(@QueryParameter String state) {
