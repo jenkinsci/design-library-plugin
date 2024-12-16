@@ -21,12 +21,16 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
    */
   public ContextMenu doContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
     if (false) {
-      // this implementation is suffice for most ModelObjects. It uses sidepanel.jelly/.groovy to
-      // generate the context menu
+      /*
+        this implementation is sufficient for most ModelObjects. It uses sidepanel.jelly to
+        generate the context menu
+      */
       return new ContextMenu().from(this,request,response);
     } else {
-      // otherwise you can also programatically create them.
-      // see the javadoc for various convenience methods to add items
+      /*
+       otherwise you can also programatically create them.
+       see the javadoc for various convenience methods to add items
+       */
       return new ContextMenu()
               .add(new MenuItem().withUrl("https://www.jenkins.io/")
                       .withDisplayName("Jenkins project")
@@ -38,7 +42,7 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
   }
 
   public ContextMenu doChildrenContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
-    // You implement this method in much the same way you do doContextMenu
+    /* You implement this method in much the same way you do doContextMenu */
     return new ContextMenu()
             .add("https://yahoo.com/","Yahoo")
             .add("https://google.com/","Google")
