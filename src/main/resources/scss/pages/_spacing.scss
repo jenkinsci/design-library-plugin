@@ -34,6 +34,7 @@
       mask-image: symbols.$down;
       mask-size: 45%;
       pointer-events: none;
+      transition: translate var(--elastic-transition);
 
       @media (prefers-contrast: no-preference) {
         opacity: 0.4;
@@ -66,6 +67,10 @@
 
     &:hover {
       background: color-mix(in srgb, var(--text-color-secondary) 10%, transparent);
+
+      &::after {
+        translate: 0 1px;
+      }
     }
   }
 }
