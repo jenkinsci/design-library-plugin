@@ -17,6 +17,7 @@
           </div>
           <p class="jdl-section__title">${%welcome}</p>
           <p class="jdl-section__description">${%description}</p>
+          <p>Current Version: ${it.pluginVersion}</p>
         </div>
       </s:section>
 
