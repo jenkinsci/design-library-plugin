@@ -27,10 +27,10 @@
                   description="${%cards-description}"
                   href="cards"
                   tag="${%New}" />
-          <s:card icon="symbol-dropdowns plugin-design-library"
-                  title="${%dropdowns}"
-                  description="${%dropdowns-description}"
-                  href="dropdowns"
+          <s:card icon="symbol-dropdown-menu plugin-design-library"
+                  title="${%menu}"
+                  description="${%menu-description}"
+                  href="menu"
                   tag="${%New}" />
           <s:card icon="symbol-buttons plugin-design-library"
                   title="${%buttons}"
