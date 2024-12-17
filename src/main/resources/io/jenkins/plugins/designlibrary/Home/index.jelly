@@ -25,7 +25,7 @@
           <s:card icon="symbol-cards plugin-design-library"
                   title="${%cards}"
                   description="${%cards-description}"
-                  href="I don't exist!"
+                  href="cards"
                   tag="${%New}" />
           <s:card icon="symbol-dropdown-menu plugin-design-library"
                   title="${%menu}"
