@@ -16,7 +16,7 @@ import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 
 @WithJenkins
 @TestInstance(PER_CLASS)
-class ValidUrlsTest {
+class ValidRelativeUrlsTest {
 
     private JenkinsRule jenkins;
 
@@ -33,7 +33,7 @@ class ValidUrlsTest {
      */
     @ParameterizedTest
     @MethodSource("getPages")
-    void validUrls(String url) throws Exception {
+    void validRelativeUrls(String url) throws Exception {
         try (var webClient = jenkins.createWebClient().withJavaScriptEnabled(false)) {
             // We get a bunch of spam in our logs about missing CSS, let's ignore that
             webClient.getOptions().setPrintContentOnFailingStatusCode(false);
@@ -46,7 +46,7 @@ class ValidUrlsTest {
             var links = page.querySelectorAll(".jdl-section a");
 
             if (links.isEmpty()) {
-                System.out.println("🤷 No URLs on this page");
+                System.out.println("🤷 No URLs on: " + url);
                 return;
             }
 
