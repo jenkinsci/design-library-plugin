@@ -61,14 +61,9 @@ class ValidUrlsTest {
     }
 
     private Stream<String> getPages() {
-        // Create a stream with the first item "design-library"
-        Stream<String> firstItem = Stream.of("design-library");
-
-        // Generate the rest of the items
+        Stream<String> homePage = Stream.of("design-library");
         Stream<String> otherItems = samples.stream().map(e -> "design-library/" + e.getUrlName());
-
-        // Combine both streams
-        return Stream.concat(firstItem, otherItems);
+        return Stream.concat(homePage, otherItems);
     }
 
     private boolean filterUrl(DomNode anchor) {
