@@ -4,6 +4,8 @@ import hudson.Extension;
 import hudson.model.RootAction;
 import java.util.List;
 import java.util.Map;
+import jenkins.model.Jenkins;
+import hudson.PluginWrapper;
 
 /**
  * Entry point to all the UI samples.
@@ -44,5 +46,15 @@ public class Home implements RootAction {
             }
         }
         return null;
+    }
+    public String getPluginVersion() {
+        Jenkins jenkins = Jenkins.get();
+        if (jenkins != null && jenkins.getPluginManager() != null) {
+            PluginWrapper plugin = jenkins.getPluginManager().getPlugin("design-library");
+            if (plugin != null) {
+                return plugin.getVersion();
+            }
+        }
+        return "Version not available";
     }
 }
