@@ -5,17 +5,14 @@ import static java.util.Arrays.asList;
 import hudson.DescriptorExtensionList;
 import hudson.Extension;
 import hudson.ExtensionPoint;
+import hudson.model.AutoCompletionCandidates;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
+import hudson.util.ComboBoxModel;
 import hudson.util.ListBoxModel;
-import hudson.util.XStream2;
-import java.io.IOException;
-import javax.servlet.ServletException;
 import jenkins.model.Jenkins;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
-import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.StaplerResponse;
 
 /**
  * @author Alan.Harder@oracle.com
@@ -27,6 +24,11 @@ public class Select extends UISample {
         return "symbol-select";
     }
 
+    @Override
+    public String getDescription() {
+        return "Provides a dropdown for choosing one option from a predefined list.";
+    }
+
     public Fruit getFruit() {
         // Could return currently configured/saved item here to initialized form with this data
         return null;
@@ -36,15 +38,6 @@ public class Select extends UISample {
         return Jenkins.get().getDescriptorList(Fruit.class);
     }
 
-    // Process form data and show it as serialized XML
-    public void doSubmit(StaplerRequest req, StaplerResponse rsp) throws ServletException, IOException {
-        // '$class' in form data tells Stapler which Fruit subclass to use,
-        // older versions of Jenkins/Stapler used 'stapler-class'
-        Fruit fruit = req.bindJSON(Fruit.class, req.getSubmittedForm().getJSONObject("fruit"));
-        rsp.setContentType("text/plain");
-        new XStream2().toXML(fruit, rsp.getWriter());
-    }
-
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
 
@@ -52,18 +45,40 @@ public class Select extends UISample {
             return new ListBoxModel(new ListBoxModel.Option("Apple"), new ListBoxModel.Option("Banana"));
         }
 
-        public ListBoxModel doFillStateItems(@QueryParameter String country) {
+        public ListBoxModel doFillStateItems() {
             ListBoxModel m = new ListBoxModel();
-            for (String s : asList("A", "B", "C"))
-                m.add(String.format("State %s in %s", s, country), country + ':' + s);
+            for (String s : asList("A", "B", "C")) {
+                m.add(String.format("State %s", s), s);
+            }
             return m;
         }
 
-        public ListBoxModel doFillCityItems(@QueryParameter String country, @QueryParameter String state) {
+        public ComboBoxModel doFillState2Items() {
+            return new ComboBoxModel(STATES);
+        }
+
+        public ListBoxModel doFillCityItems(@QueryParameter String state) {
             ListBoxModel m = new ListBoxModel();
-            for (String s : asList("X", "Y", "Z"))
-                m.add(String.format("City %s in %s %s", s, state, country), state + ':' + s);
+            for (String s : asList("X", "Y", "Z")) {
+                m.add(String.format("City %s in %s", s, state), state + ':' + s);
+            }
             return m;
+        }
+
+        /**
+         * This method provides auto-completion items for the 'state' field.
+         * Stapler finds this method via the naming convention.
+         *
+         * @param value
+         *      The text that the user entered.
+         */
+        public AutoCompletionCandidates doAutoCompleteState(@QueryParameter String value) {
+            AutoCompletionCandidates c = new AutoCompletionCandidates();
+            for (String state : STATES)
+                if (state.toLowerCase().startsWith(value.toLowerCase())) {
+                    c.add(state);
+                }
+            return c;
         }
     }
 
@@ -114,4 +129,57 @@ public class Select extends UISample {
         @Extension
         public static final class DescriptorImpl extends FruitDescriptor {}
     }
+
+    private static final String[] STATES = new String[] {
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+    };
 }

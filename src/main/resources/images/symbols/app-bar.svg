@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="640px" height="640px" viewBox="0 0 640 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M100,480 L100,210 C100,182.385763 122.385763,160 150,160 L490,160 C517.614237,160 540,182.385763 540,210 L540,480 L540,480" stroke="currentColor" stroke-width="32" stroke-linecap="round"></path>
-        <line x1="100" y1="265.944328" x2="540" y2="265.944328" stroke="currentColor" stroke-width="32"></line>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Define the clipping path -->
+        <clipPath id="taperClip">
+            <rect x="0" y="0" width="512" height="300"></rect>
+        </clipPath>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="32">
+        <rect x="40" y="110" width="416" height="340" rx="70" clip-path="url(#taperClip)"></rect>
+        <line x1="40" y1="200" x2="440" y2="200"></line>
+        <line x1="40" y1="190" x2="40" y2="370" stroke-linecap="round"></line>
+        <line x1="456" y1="190" x2="456" y2="370" stroke-linecap="round"></line>
     </g>
 </svg>

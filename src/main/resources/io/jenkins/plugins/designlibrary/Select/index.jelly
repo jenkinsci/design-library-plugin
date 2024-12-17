@@ -23,48 +23,108 @@ THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample>
-    <p class="jdl-paragraph">${%title}</p>
+  <s:layout>
+    <s:section title="Simple select" description="${%usage.2}">
+      <s:group>
+        <s:preview>
+          <f:entry title="Fruits">
+            <f:select field="fruit"/>
+          </f:entry>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="simple.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code language="java" file="simple.java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
 
-    <p class="jdl-paragraph">${%usage.1}</p>
-    <form action="submit" method="post">
-      <s:code language="xml" file="sample.jelly" />
-      <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}" />
+    <s:section title="Advanced select" description="${%usage.1}">
+      <s:group>
+        <s:preview>
+          <form action="submit" method="post">
+            <f:dropdownDescriptorSelector field="fruit" title="Fruits" descriptors="${it.fruitDescriptors}"/>
 
-      <f:submit value="Save"/>
-    </form>
-    <p style="margin-top: var(--section-padding);" class="jdl-paragraph">${%usage.2}</p>
+            <f:submit value="Save"/>
+          </form>
+        </s:preview>
 
-    <f:entry title="Fruits">
-      <f:select field="fruit"/>
-    </f:entry>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="advanced.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code language="java" file="Advanced.java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
 
-    config.jelly:
-    <s:code language="xml" file="sample2.jelly" />
+    <s:section title="${%dynamic}" description="${%dynamic.description}">
+      <s:group>
+        <s:preview>
+          <form method="post">
+            <f:entry title="State" field="state">
+              <f:select/>
+            </f:entry>
+            <f:entry title="City" field="city">
+              <f:select/>
+            </f:entry>
+          </form>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="dynamic-sample.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code language="java" file="DynamicSample.java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
 
-    Java source code:
-    <s:code language="java" file="Sample.java" />
+    <s:section title="${%searchable}" description="${%searchable.description}">
+      <div class="jenkins-paragraph">${%combobox}</div>
 
-    <h2 class="jdl-heading">${%dynamic}</h2>
+      <s:group>
+        <s:preview>
+          <form>
+            <button type="submit" disabled="true" style="display: none" aria-hidden="true"/>
+            <f:entry title="U.S. State" field="state2">
+              <f:combobox/>
+            </f:entry>
+          </form>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="combobox.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code file="Combobox.java" language="java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
 
-    <p class="jdl-paragraph">${%dynamic.description}</p>
+      <div class="jenkins-paragraph">${%textbox}</div>
 
-    <form method="post">
-      <f:entry title="Country" field="country">
-        <f:textbox/>
-      </f:entry>
-      <f:entry title="State" field="state">
-        <f:select/>
-      </f:entry>
-      <f:entry title="City" field="city">
-        <f:select/>
-      </f:entry>
-    </form>
-
-    <code>config.jelly:</code>
-    <s:code language="xml" file="dynamic-sample.jelly" />
-
-    <code>Sample.java:</code>
-    <s:code language="java" file="DynamicSample.java" />
-  </s:sample>
+      <s:group>
+        <s:preview>
+          <f:entry title="U.S. State" field="state">
+            <f:textbox/>
+          </f:entry>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="textbox.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code file="Textbox.java" language="java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

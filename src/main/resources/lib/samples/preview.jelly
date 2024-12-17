@@ -1,0 +1,12 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:st="jelly:stapler">
+  <st:documentation>
+    <st:attribute name="fullWidth" type="boolean" />
+    <st:attribute name="noBottomPadding" type="boolean" />
+    <st:attribute name="classes" />
+  </st:documentation>
+
+  <div class="jdl-component-sample ${attrs.classes} ${attrs.fullWidth ? ' jdl-component-sample--full-width' : ''} ${attrs.noBottomPadding ? ' jdl-component-sample--no-bottom-padding' : ''}">
+    <d:invokeBody />
+  </div>
+</j:jelly>

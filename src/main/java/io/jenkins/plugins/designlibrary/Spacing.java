@@ -9,6 +9,16 @@ public class Spacing extends UISample {
         return "symbol-filter-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Defines consistent padding, margins, and gaps between elements.";
+    }
+
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     @Extension
     public static class DescriptorImpl extends UISampleDescriptor {}
 }

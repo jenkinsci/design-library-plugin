@@ -1,0 +1,10 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:st="jelly:stapler" xmlns:s="/lib/samples">
+  <st:documentation>
+    Groups a <s:preview /> with a <s:code /> or <s:code-panes />
+  </st:documentation>
+
+  <div class="jdl-component-group">
+    <d:invokeBody />
+  </div>
+</j:jelly>

@@ -1,34 +1,53 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
-    <h2 class="jdl-heading">${%title}</h2>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+  <s:layout>
+    <s:section hideBorder="true">
+      <s:preview>
+        <div class="jdl-spacing-container">
+          <div class="jdl-spacing-controller">
+            <div>
+              <select data-type="type">
+                <option>margin</option>
+                <option>padding</option>
+              </select>
+            </div>
+            <div>
+              <select data-type="position">
+                <option>all</option>
+                <option>left</option>
+                <option>top</option>
+                <option>right</option>
+                <option>bottom</option>
+              </select>
+            </div>
+            <div>
+              <select data-type="amount">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option selected="true">3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+          </div>
+          <div data-type="spacing" class="jdl-spacing-box jenkins-!-padding-3">
+            <p class="jdl-paragraph" data-type="value" id="value">
+              <span>.jenkins-!-margin-3</span>
+              <l:copyButton ref="value" clazz="jenkins-button--tertiary" />
+            </p>
+          </div>
+        </div>
+      </s:preview>
 
-    <p class="jdl-paragraph">${%description.1}</p>
+      <p class="jdl-paragraph">${%description.1}</p>
 
-    <p class="jdl-paragraph">${%description.2}</p>
+      <p class="jdl-paragraph">${%description.2}</p>
 
-    <p class="jdl-paragraph">${%description.3}</p>
+      <p class="jdl-paragraph">${%description.3}</p>
 
-    <h3>${%examples}</h3>
-
-    <div class="jdl-component-sample">
-      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-5</p>
-      <div class="jdl-spacing-box jdl-spacing-box--5" />
-      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-4</p>
-      <div class="jdl-spacing-box jdl-spacing-box--4" />
-      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-3</p>
-      <div class="jdl-spacing-box jdl-spacing-box--3" />
-      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-2</p>
-      <div class="jdl-spacing-box jdl-spacing-box--2" />
-      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-1</p>
-      <div class="jdl-spacing-box jdl-spacing-box--1" />
-      <p class="jenkins-!-margin-0">jenkins-!-margin-bottom-0</p>
-    </div>
-
-    <div class="jdl-component-sample">
-      <div class="jdl-padding-box jdl-padding-box--5">
-        <p class="jdl-paragraph">jenkins-!-padding-5</p>
-      </div>
-    </div>
-  </s:sample>
+      <st:adjunct includes="io.jenkins.plugins.designlibrary.Spacing.spacing" />
+    </s:section>
+  </s:layout>
 </j:jelly>

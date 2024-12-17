@@ -1,34 +1,35 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form">
-  <s:sample>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:toggleSwitch name="enabled" title="Hello world" />
-      </div>
-      <s:code language="xml" file="default.jelly" />
-    </div>
+  <s:layout>
+    <s:section title="Default">
+      <s:group>
+        <s:preview>
+          <f:toggleSwitch name="enabled" title="Enabled" />
+        </s:preview>
+        <s:code file="default.jelly" />
+      </s:group>
+    </s:section>
 
-    <p class="jdl-paragraph">${%toggle.usage.1}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--right-alignment">
-        <f:toggleSwitch name="enabled" title="Hello world" invertLabel="true" />
-      </div>
-      <s:code language="xml" file="inverted.jelly" />
-    </div>
+    <s:section title="Inverted">
+      <s:group>
+        <s:preview>
+          <f:toggleSwitch name="enabled" title="Enabled" invertLabel="true" />
+        </s:preview>
+        <s:code file="inverted.jelly" />
+      </s:group>
+    </s:section>
 
-    <h2 class="jdl-heading">${%dynamicLabels}</h2>
-    <p class="jdl-paragraph">${%dynamicLabels.usage.1}</p>
-    <p class="jdl-paragraph">${%dynamicLabels.usage.2}</p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:toggleSwitch name="enable"
-                        title="${%Disabled}"
-                        checkedTitle="${%Enabled}"
-                        checked="true"
-                        tooltip="${%Enable or disable the current project}" />
-      </div>
-      <s:code language="xml" file="dynamic.jelly" />
-    </div>
-  </s:sample>
+    <s:section title="${%dynamicLabels}" description="${%dynamicLabels.usage.1}">
+      <s:group>
+        <s:preview>
+          <f:toggleSwitch name="enable"
+                          title="${%Disabled}"
+                          checkedTitle="${%Enabled}"
+                          checked="true"
+                          tooltip="${%Enable or disable the current project}" />
+        </s:preview>
+        <s:code file="dynamic.jelly" />
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

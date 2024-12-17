@@ -5,56 +5,11 @@ $delay: 0.1;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1fr;
   align-items: center;
   justify-items: center;
   width: 100%;
   aspect-ratio: 3 / 1;
   z-index: 0;
-  margin-bottom: var(--jdl-spacing);
-  padding: 1rem 0;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: 10px;
-    overflow: hidden;
-
-    @media (max-width: 970px) {
-      --sidebar-width: 0;
-      --content-width: 100%;
-      background-size: 100%;
-    }
-
-    background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image: radial-gradient(at 40% 20%, hsl(312, 42%, 60%) 0, transparent 50%),
-    radial-gradient(at 80% 0%, hsl(11, 100%, 56%) 0, transparent 50%),
-    radial-gradient(at 0% 50%, hsl(354, 64%, 72%) 0, transparent 50%),
-    radial-gradient(at 80% 50%, hsl(319, 66%, 64%) 0, transparent 50%),
-    radial-gradient(at 0% 100%, hsl(264, 37%, 59%) 0, transparent 50%),
-    radial-gradient(at 80% 100%, hsl(342, 55%, 41%) 0, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
-    animation: rotate-colors 10s linear infinite;
-  }
-  .app-card__preview::after {
-    background-image: radial-gradient(at 80% 0%, hsla(13, 100%, 56%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 50%, hsl(31, 100%, 80%) 0, transparent 50%),
-    radial-gradient(at 80% 50%, hsla(164, 100%, 76%, 1) 0, transparent 50%),
-    radial-gradient(at 0% 100%, hsl(206, 60%, 57%) 0, transparent 50%),
-    radial-gradient(at 80% 100%, hsl(146, 64%, 79%) 0, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(167, 100%, 76%, 1) 0, transparent 50%);
-    animation: rotate-colors-2 10s linear infinite;
-  }
 
   div {
     display: contents;

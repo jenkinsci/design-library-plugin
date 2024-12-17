@@ -1,6 +1,8 @@
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
-  <f:descriptorRadioList descriptors="${it.radios}"
-                         title="Test title"
-                         instance="${instance}"
-                         varName="realm" />
+  <f:descriptorRadioList
+    descriptors="${it.radios}"
+    title="Test title"
+    instance="${instance}"
+    varName="realm"
+  />
 </j:jelly>

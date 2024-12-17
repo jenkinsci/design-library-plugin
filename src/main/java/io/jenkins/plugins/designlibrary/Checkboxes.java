@@ -12,6 +12,11 @@ public class Checkboxes extends UISample {
         return "symbol-checkbox-outline plugin-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Allows users to select one or more items from a list.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }
