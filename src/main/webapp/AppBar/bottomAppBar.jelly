@@ -1,11 +1,10 @@
 <div>
-  <p>...</p>
   <f:bottomButtonBar>
     <div class="jenkins-buttons-row">
       <button class="jenkins-button jenkins-button--primary">
-        Primary control
+        Save
       </button>
-      <button class="jenkins-button">Secondary</button>
+      <button class="jenkins-button">Apply</button>
     </div>
   </f:bottomButtonBar>
 </div>
