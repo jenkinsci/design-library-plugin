@@ -37,7 +37,7 @@
           target="_blank" 
           class="jenkins-button jenkins-button--tertiary jdl-plugin-version-link">
           <l:icon src="symbol-design-library plugin-design-library" />
-          <span>current version: ${it.pluginVersion}</span>
+          ${it.pluginVersion}
         </a>
       </j:if>
     </div>
