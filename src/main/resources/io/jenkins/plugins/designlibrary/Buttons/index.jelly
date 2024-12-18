@@ -73,7 +73,10 @@ THE SOFTWARE.
       </s:group>
       <s:group>
         <s:preview>
-          <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
+          <button class="jenkins-button jenkins-!-destructive-color">
+            <l:icon src="symbol-trash" />
+            Delete
+          </button>
         </s:preview>
         <s:code file="destructive.jelly" />
       </s:group>
