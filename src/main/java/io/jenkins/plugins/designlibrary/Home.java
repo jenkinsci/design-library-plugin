@@ -52,9 +52,7 @@ public class Home implements RootAction {
         Jenkins jenkins = Jenkins.get();
         if (jenkins != null) {
             PluginWrapper plugin = jenkins.getPluginManager().getPlugin("design-library");
-            if (plugin != null) {
-                return plugin.getVersion(); // Return the plugin version
-            }
+            return plugin.getVersion();
         }
         return "Version not available"; // Fallback message if version is not found
     }
