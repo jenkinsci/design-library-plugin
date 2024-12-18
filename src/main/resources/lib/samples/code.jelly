@@ -1,16 +1,20 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout">
   <st:documentation>
+    Displays a copyable code snippet.
+
     <st:attribute name="code" />
     <st:attribute name="file" />
-    <st:attribute name="language" />
-    <st:attribute name="executable" />
-    <st:attribute name="previewable" />
+    <st:attribute name="language" use="optional">
+      Defaults to 'xml'.
+    </st:attribute>
+    <st:attribute name="executable" type="boolean" />
+    <st:attribute name="previewable" type="boolean" />
   </st:documentation>
 
   <div class="jdl-component-code">
     <pre class="jdl-component-code__code">
-      <code class="language-${language} ${file != null ? 'sample-remote' : ''}" data-sample="${file}" data-executable="${executable}">
+      <code class="language-${language != null ? language : 'xml'} ${file != null ? 'sample-remote' : ''}" data-component-name="${it.class.simpleName}" data-sample="${file}" data-executable="${executable}">
         ${code}
       </code>
     </pre>
@@ -20,16 +24,16 @@
 
         <j:if test="${executable != null}">
           <!-- This only works if the 'code' attribute is set -->
-          <button class="jenkins-button jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
+          <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
             <l:icon src="symbol-play" />
           </button>
         </j:if>
         <j:if test="${previewable == 'true'}">
-          <a href="${file.replace('.jelly', '')}" class="jenkins-button" tooltip="${%Preview in new tab}" target="_blank">
+          <a href="${file.replace('.jelly', '')}" class="jenkins-button jenkins-button--tertiary" tooltip="${%Preview in new tab}" target="_blank">
             <l:icon src="symbol-open-outline plugin-ionicons-api" />
           </a>
         </j:if>
-        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" />
+        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" clazz="jenkins-button--tertiary" />
       </div>
     </div>
   </div>

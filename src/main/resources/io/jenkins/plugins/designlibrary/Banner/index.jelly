@@ -1,29 +1,55 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
-  <s:sample>
-    <div class="jdl-leading-paragraph">
-      Banners are a handy way to display small snippets of text and actions.
-    </div>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample jdl-component-sample--full-width jdl-component-sample--gridless">
-        <div class="jenkins-alert jenkins-alert-info">
-          Hello world
-        </div>
-        <div class="jenkins-alert jenkins-alert-warning">
-          Hello world
-        </div>
-        <div class="jenkins-alert jenkins-alert-danger">
-          Hello world
-        </div>
-        <div class="jenkins-alert jenkins-alert-success jenkins-!-margin-bottom-0">
-          Hello world
-        </div>
+  <s:layout>
+    <s:section title="${%info}">
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-info">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="info.jelly" />
+      </s:group>
+    </s:section>
+
+    <s:section title="${%warning}">
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-warning">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="warning.jelly" />
+      </s:group>
+    </s:section>
+
+    <s:section title="${%danger}">
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-danger">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="danger.jelly" />
+      </s:group>
+    </s:section>
+
+    <s:section title="${%success}">
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jenkins-alert jenkins-alert-success">
+            Hello world
+          </div>
+        </s:preview>
+        <s:code file="success.jelly" />
+      </s:group>
+    </s:section>
+    
+    <s:section>
+      <div class="jenkins-alert jenkins-alert-warning jenkins-!-margin-0">
+        Since <a href="https://www.jenkins.io/changelog/2.459/" target="_blank">2.459</a>. The css classes have the <em>jenkins-</em> prefix. Older versions should use the non prefixed form which interfere with
+        classes defined in bootstrap.
       </div>
-      <s:code language="xml" file="index.jelly" />
-    </div>
-    <div class="jenkins-alert jenkins-alert-warning">
-      Since 2.459. The css classes have the <em>jenkins-</em> prefix. Older versions should use the non prefixed form which interfere with
-      classes defined in bootstrap.
-    </div>
-  </s:sample>
+    </s:section>
+  </s:layout>
 </j:jelly>

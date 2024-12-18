@@ -12,6 +12,11 @@ public class Buttons extends UISample {
         return "symbol-buttons";
     }
 
+    @Override
+    public String getDescription() {
+        return "Triggers specific actions with a click or tap.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

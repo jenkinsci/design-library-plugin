@@ -11,6 +11,16 @@ public class Colors extends UISample {
         return "symbol-water-outline plugins-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Defines the palette for consistent use of color throughout the design system.";
+    }
+
+    @Override
+    public Category getCategory() {
+        return Category.PATTERN;
+    }
+
     public List<Semantic> getSemantics() {
         return List.of(
                 new Semantic("Accent", "Use for branding", "accent-color"),

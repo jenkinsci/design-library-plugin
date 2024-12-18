@@ -12,6 +12,11 @@ public class Notifications extends UISample {
         return "symbol-notifications-outline plugins-ionicons-api";
     }
 
+    @Override
+    public String getDescription() {
+        return "Jenkins can display in-page notifications with a simple-to-use JavaScript API.";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }

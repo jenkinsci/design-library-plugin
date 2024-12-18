@@ -22,43 +22,50 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample title="JavaScript Proxy">
-    <p class="jdl-paragraph">${%description.1}</p>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:s="/lib/samples">
+  <s:layout>
+    <s:section hideBorder="true">
+      <s:preview>
+        <div id="msg" class="jdl-javascript-proxy__counter">
+          0
+        </div>
+      </s:preview>
 
-    <p class="jdl-paragraph">${%description.2}</p>
+      <p class="jdl-paragraph">${%description.1}</p>
 
-    <s:code language="java" file="Foo.java" />
+      <p class="jdl-paragraph">${%description.2}</p>
 
-    <p class="jdl-paragraph">${%description.3}</p>
+      <s:code language="java" file="Foo.java" />
 
-    <s:code language="xml" file="sample.jelly" />
+      <p class="jdl-paragraph">${%description.3}</p>
 
-    <p class="jdl-paragraph">${%description.4}</p>
+      <s:code file="sample.jelly" />
 
-    <s:code language="java" file="sample-adjunct.js" />
+      <p class="jdl-paragraph">${%description.4}</p>
 
-    <st:bind var="a" value="${it}"/>
+      <s:code language="java" file="sample-adjunct.js" />
 
-    <div id="msg" style="color: var(--red); font-size: 5rem;" />
-    <st:adjunct includes="io.jenkins.plugins.designlibrary.JavaScriptProxy.counter"/>
+      <st:bind var="a" value="${it}"/>
 
-    <h2 class="jdl-heading">${%invokingMethod}</h2>
-    <p class="jdl-paragraph">${%invokingMethod.description.1}</p>
+      <st:adjunct includes="io.jenkins.plugins.designlibrary.JavaScriptProxy.counter"/>
+    </s:section>
 
-    <p class="jdl-paragraph">${%invokingMethod.description.2}</p>
+    <s:section title="${%invokingMethod}">
+      <p class="jdl-paragraph">${%invokingMethod.description.1}</p>
 
-    <p class="jdl-paragraph">${%invokingMethod.description.3}</p>
+      <p class="jdl-paragraph">${%invokingMethod.description.2}</p>
 
-    <h2 class="jdl-heading">${%tips}</h2>
+      <p class="jdl-paragraph">${%invokingMethod.description.3}</p>
+    </s:section>
 
-    <h3>${%tips.description.1}</h3>
-    <p class="jdl-paragraph">${%tips.description.1.body}</p>
+    <s:section title="${%tips.description.1}">
+      <p class="jdl-paragraph">${%tips.description.1.body}</p>
 
-    <p class="jdl-paragraph">${%tips.description.1.more}</p>
+      <p class="jdl-paragraph">${%tips.description.1.more}</p>
+    </s:section>
 
-    <h3>${%tips.description.2}</h3>
-
-    <p class="jdl-paragraph">${%tips.description.2.body}</p>
-  </s:sample>
+    <s:section title="${%tips.description.2}">
+      <p class="jdl-paragraph">${%tips.description.2.body}</p>
+    </s:section>
+  </s:layout>
 </j:jelly>

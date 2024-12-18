@@ -24,97 +24,81 @@ THE SOFTWARE.
 
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson">
-  <s:sample>
-    <p class="jdl-paragraph">${%description.1}</p>
+  <s:layout>
+    <s:section title="${%default}">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button">Default</button>
+        </s:preview>
+        <s:code file="default.jelly" />
+      </s:group>
+    </s:section>
 
-    <p class="jdl-paragraph">${%description.2}</p>
+    <s:section title="${%primary}" description="${%primary.description}">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-button--primary">Primary</button>
+        </s:preview>
+        <s:code file="primary.jelly" />
+      </s:group>
+    </s:section>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button">Default</button>
-      </div>
-      <s:code language="xml" file="default.jelly" />
-    </div>
+    <s:section title="${%modifiers}" description="${%modifiers.description}">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
+        </s:preview>
+        <s:code file="destructive.jelly" />
+      </s:group>
+      <p class="jdl-section__description">
+        ${%destructive.description}
+      </p>
+    </s:section>
+    
+    <s:section title="Filled button" description="You can create as well filled buttons.">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">Danger</button>
+          <button class="jenkins-button jenkins-button--primary jenkins-!-success-color">Success</button>
+        </s:preview>
+        <s:code language="xml" file="filled.jelly" />
+      </s:group>
+    </s:section>
+    
+    <s:section title="${%tertiary}" description="${%tertiary.description}">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-button--tertiary">Tertiary</button>
+        </s:preview>
+        <s:code file="tertiary.jelly" />
+      </s:group>
+    </s:section>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-button--primary">Primary</button>
-      </div>
-      <s:code language="xml" file="primary.jelly" />
-    </div>
+    <s:section title="${%symbol}" description="${%symbol.description}">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> With symbol</button>
+        </s:preview>
+        <s:code file="symbolButton.jelly" />
+      </s:group>
+    </s:section>
 
-    <p class="jdl-paragraph">
-      You can pair buttons with <a href="../Colors">color modifier classes</a>, like so:
-    </p>
+    <s:section title="${%copy}" description="${%copy.description}">
+      <s:group>
+        <s:preview>
+          <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
+        </s:preview>
+        <s:code file="copyButton.jelly" />
+      </s:group>
+    </s:section>
 
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
-      </div>
-      <s:code language="xml" file="destructive.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">
-      You can create as well filled buttons, like so:
-    </p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">Danger</button>
-        <button class="jenkins-button jenkins-button--primary jenkins-!-success-color">Success</button>
-      </div>
-      <s:code language="xml" file="filled.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">
-      Tertiary buttons should be used for buttons which have minimal interaction or for those where
-      a background creates too much visual clutter:
-    </p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button jenkins-button--tertiary">Tertiary</button>
-      </div>
-      <s:code language="xml" file="tertiary.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">
-      Buttons can include symbols and they'll be automatically sized to fit correctly:
-    </p>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <button class="jenkins-button"><l:icon src="symbol-add-outline plugin-ionicons-api" /> ${%symbol}</button>
-      </div>
-      <s:code language="xml" file="symbolButton.jelly" />
-    </div>
-
-    <h2 class="jdl-heading">${%copy}</h2>
-    <p class="jdl-paragraph">${%copy.description}</p>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
-      </div>
-      <s:code language="xml" file="copyButton.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">${%copy.parameters}</p>
-    <ul class="jdl-list">
-      <li>text - ${%copy.parameters.text}</li>
-      <li>message - ${%copy.parameters.message}</li>
-    </ul>
-
-    <h2 class="jdl-heading">${%help}</h2>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
-      </div>
-      <s:code language="xml" file="helpButton.jelly" />
-    </div>
-
-    <p class="jdl-paragraph">${%help.parameters}</p>
-    <ul class="jdl-list">
-      <li>href - ${%help.parameters.1}</li>
-    </ul>
-  </s:sample>
+    <s:section title="${%help}" description="${%help.description}">
+      <s:group>
+        <s:preview>
+          <t:help href="https://www.jenkins.io" tooltip="${%Additional information on buttons}" />
+        </s:preview>
+        <s:code file="helpButton.jelly" />
+      </s:group>
+    </s:section>
+  </s:layout>
 </j:jelly>

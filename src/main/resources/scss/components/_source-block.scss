@@ -1,13 +1,19 @@
 $jdl-component-code-controls-spacing: 0.75rem;
 
 .jdl-component-code {
+  --prism-background: var(--card-background);
+  background: var(--card-background);
   position: relative;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr auto;
-  margin-bottom: var(--jdl-spacing);
   z-index: 0;
   border-radius: 0.66rem;
+  border: var(--jdl-border);
+
+  pre {
+    background-color: transparent !important;
+  }
 
   &::before {
     content: "";
@@ -38,14 +44,81 @@ $jdl-component-code-controls-spacing: 0.75rem;
     padding: $jdl-component-code-controls-spacing;
   }
 
+  &__tab-bar {
+    background: var(--card-background);
+    border-left: var(--jdl-border);
+    border-right: var(--jdl-border);
+    display: flex;
+    gap: 0.9rem;
+    padding: 1em;
+
+    .tab {
+      position: relative;
+      appearance: none;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 4px 6px;
+      color: var(--text-color-secondary);
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: var(--font-family-mono) !important;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: -2px -5px;
+        border-radius: 100px;
+        background: color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
+        border: 1px solid color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
+      }
+
+      &:hover {
+        color: var(--text-color);
+      }
+
+      &.active {
+        color: var(--text-color);
+
+        &::before {
+          background: color-mix(in srgb, var(--text-color-secondary) 4%, transparent);
+          border: var(--jdl-border);
+
+          @media (prefers-contrast: more) {
+            border: var(--jdl-border-width) solid var(--text-color);
+          }
+        }
+      }
+    }
+  }
+
   &:not(:hover) {
     .jenkins-button {
       transition: var(--standard-transition);
-      opacity: 0.5;
+      @media (prefers-contrast: no-preference) {
+        opacity: 0.5;
+
+        span {
+          color: var(--text-color-secondary) !important;
+        }
+      }
 
       &::before {
         opacity: 0;
       }
     }
   }
+}
+
+.jdl-tab-pane__text {
+  padding: 0 1em 1em 1em;
+  border-left: var(--jdl-border);
+  border-right: var(--jdl-border);
+  font-family: var(--font-family-mono) !important;
+  color: var(--text-color-secondary);
+  margin: 0;
+}
+
+.jdl-tab-pane pre {
+  padding-top: 0 !important;
 }

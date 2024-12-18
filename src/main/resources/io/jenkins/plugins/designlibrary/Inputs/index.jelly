@@ -22,115 +22,59 @@
   ~ THE SOFTWARE.
   -->
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:f="/lib/form" xmlns:s="/lib/samples">
-  <s:sample title="Input Fields">
-    <p class="jdl-paragraph">${%inputs}</p>
-    <h2>${%Textbox}</h2>
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:entry title="Example" field="example">
-          <f:textbox />
-        </f:entry>
-      </div>
-      <s:code language="xml" file="example.jelly" />
-    </div>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+  <s:layout>
+    <s:section title="${%Textbox}">
+      <s:group>
+        <s:preview>
+          <f:entry title="Example" field="example">
+            <f:textbox />
+          </f:entry>
+        </s:preview>
+        <s:code file="example.jelly" />
+      </s:group>
+    </s:section>
 
-    <h3 class="jdl-heading">${%autoCompletion}</h3>
-    <p class="jdl-paragraph">${%autoCompletion.description.1}</p>
-    <div class="jdl-component-sample">
-      <f:entry title="U.S. State" field="state">
-        <f:textbox />
-      </f:entry>
-    </div>
-    <p class="jdl-paragraph">${%autoCompletion.description.2}</p>
+    <s:section title="${%Search}">
+      <s:group>
+        <s:preview>
+          <l:search-bar />
+        </s:preview>
+        <s:code file="search.jelly" />
+      </s:group>
+    </s:section>
 
-    <s:code language="xml" file="sample.jelly" />
-    <s:code language="java" file="Sample.java" />
+    <s:section title="${%Number fields}">
+      <s:group>
+        <s:preview>
+          <f:entry title="Number" field="count">
+            <f:number min="1" max="99" default="5"/>
+          </f:entry>
+        </s:preview>
+        <s:code file="number.jelly" />
+      </s:group>
+    </s:section>
 
-    <p class="jdl-paragraph">${%combobox.description}</p>
+    <s:section title="${%Password fields}">
+      <s:group>
+        <s:preview>
+          <f:entry title="Password" field="password" description="The password to access the system.">
+            <f:password/>
+          </f:entry>
+        </s:preview>
+        <s:code file="password.jelly" />
+      </s:group>
+    </s:section>
 
-    <form>
-      <button type="submit" disabled="true" style="display: none" aria-hidden="true"/>
-      <div class="jdl-component-sample">
-        <f:entry title="U.S. State" field="state">
-          <f:combobox />
-        </f:entry>
-      </div>
-    </form>
-
-    <code>config.jelly:</code>
-    <s:code language="xml" file="combo-box.jelly" />
-
-    <code>SimpleCombobox.java:</code>
-    <s:code language="java" file="SimpleCombobox.java" />
-
-    <h3>${%dynamicCombobox}</h3>
-    <p class="jdl-paragraph">${%dynamicCombobox.description}</p>
-
-    <form>
-      <button type="submit" disabled="true" style="display: none" aria-hidden="true"/>
-      <f:entry title="Beatles Album" field="album">
-        <f:select default="1"/>
-      </f:entry>
-      <f:entry title="Title" field="title">
-        <f:combobox />
-      </f:entry>
-    </form>
-
-    <code>config.jelly:</code>
-    <s:code language="xml" file="dynamic-combo-box.jelly" />
-
-    <code>DynamicCombobox.java:</code>
-    <s:code language="java" file="DynamicCombobox.java" />
-
-    <h2 class="jdl-heading">${%Number fields}</h2>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:entry title="Number" field="count">
-          <f:number min="1" max="99" default="5"/>
-        </f:entry>
-      </div>
-      <s:code language="xml" file="number.jelly" />
-    </div>
-
-    <h2 class="jdl-heading">${%Password fields}</h2>
-
-    <div class="jdl-component-group">
-      <div class="jdl-component-sample">
-        <f:entry title="Password" field="password" description="The password to access the system.">
-          <f:password/>
-        </f:entry>
-      </div>
-      <s:code language="xml" file="password.jelly" />
-    </div>
-
-    <h2 class="jdl-heading">${%syntaxHighlight}</h2>
-
-    <div>
-      <p class="jdl-paragraph">${%syntaxHighlight.description.1}</p>
-    </div>
-
-    <textarea class="script">println "Hello, World!"</textarea>
-
-    <s:code language="xml" file="codemirror.jelly" />
-
-    <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
-
-    <h3 class="jdl-heading">${%Shell}</h3>
-    <f:textarea field="shell"  codemirror-mode="shell" codemirror-config="lineNumbers: true"/>
-
-    <s:code language="xml" file="codemirror-shell.jelly" />
-
-    <h3 class="jdl-heading">${%HTML}</h3>
-    <p class="jdl-paragraph">${%html.description}</p>
-    <f:entry field="html">
-        <f:textarea codemirror-mode="${app.markupFormatter.codeMirrorMode}" codemirror-config="${app.markupFormatter.codeMirrorConfig}"
-              previewEndpoint="/markupFormatter/previewDescription" />
-    </f:entry>
-    <s:code language="xml" file="codemirror-html.jelly" />
-
-    <st:adjunct includes="org.kohsuke.stapler.codemirror.mode.groovy.groovy"/>
-  </s:sample>
+    <s:section title="${%Code editor}" description="${%syntaxHighlight.description.1}">
+      <s:group>
+        <s:preview>
+          <f:textarea codemirror-mode="shell" codemirror-config='"lineNumbers": true' value="println 'Hello, World!'" />
+        </s:preview>
+        <s:code file="codemirror.jelly" />
+      </s:group>
+      <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
+    </s:section>
+  </s:layout>
 </j:jelly>
 
