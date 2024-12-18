@@ -1,0 +1,83 @@
+.jdl-app-bars-page__example {
+  padding: var(--jdl-spacing);
+  border: var(--jdl-border);
+
+  .jenkins-app-bar {
+    margin-bottom: 0;
+  }
+
+  #bottom-sticker {
+    margin-bottom: calc(var(--jdl-spacing) * -0.5);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: var(--jdl-border-width);
+    right: var(--jdl-border-width);
+    height: calc(var(--jdl-spacing) * 2);
+    pointer-events: none;
+    backdrop-filter: blur(20px);
+    border-radius: 0.66rem;
+  }
+
+  &--top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    margin-bottom: calc(var(--jdl-spacing) * -1);
+    padding-bottom: calc(var(--jdl-spacing) * 2);
+    background: linear-gradient(var(--background) 90%, transparent);
+
+    &::after {
+      bottom: 0;
+      mask-image: linear-gradient(transparent, black 80%);
+    }
+  }
+
+  &--bottom {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-top: calc(var(--jdl-spacing) * -1);
+    padding-top: calc(var(--jdl-spacing) * 2);
+    background: linear-gradient(transparent, var(--background) 10%);
+
+    &::after {
+      top: 0;
+      mask-image: linear-gradient(black 20%, transparent);
+    }
+  }
+}
+
+.jdl-app-bars-page__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: calc(var(--jdl-spacing) * 0.5);
+
+  div {
+    width: 50%;
+    height: 10px;
+    border-radius: 0.25rem;
+    background: var(--text-color-secondary);
+
+    @media (prefers-contrast: no-preference) {
+      opacity: 0.5;
+    }
+
+    &:nth-of-type(2) {
+      width: 40%;
+    }
+
+    &:nth-of-type(3) {
+      width: 30%;
+    }
+
+    &:nth-of-type(4) {
+      width: 45%;
+    }
+
+    &:nth-of-type(5) {
+      width: 40%;
+    }
+  }
+}
