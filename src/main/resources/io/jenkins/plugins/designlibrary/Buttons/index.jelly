@@ -43,18 +43,6 @@ THE SOFTWARE.
       </s:group>
     </s:section>
 
-    <s:section title="${%modifiers}" description="${%modifiers.description}">
-      <s:group>
-        <s:preview>
-          <button class="jenkins-button jenkins-!-destructive-color">Destructive</button>
-        </s:preview>
-        <s:code file="destructive.jelly" />
-      </s:group>
-      <p class="jdl-section__description">
-        ${%destructive.description}
-      </p>
-    </s:section>
-
     <s:section title="${%tertiary}" description="${%tertiary.description}">
       <s:group>
         <s:preview>
@@ -71,6 +59,30 @@ THE SOFTWARE.
         </s:preview>
         <s:code file="symbolButton.jelly" />
       </s:group>
+    </s:section>
+
+    <s:section title="${%modifiers}" description="${%modifiers.description}">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-button--primary jenkins-!-build-color">
+            <l:icon src="symbol-play" />
+            Build
+          </button>
+        </s:preview>
+        <s:code file="build.jelly" />
+      </s:group>
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-!-destructive-color">
+            <l:icon src="symbol-trash" />
+            Delete
+          </button>
+        </s:preview>
+        <s:code file="destructive.jelly" />
+      </s:group>
+      <p class="jdl-section__description">
+        ${%destructive.description}
+      </p>
     </s:section>
 
     <s:section title="${%copy}" description="${%copy.description}">
