@@ -11,3 +11,4 @@
 node/
 node_modules/
 src/main/resources/io/jenkins/plugins/designlibrary/styles.css*
+.java-version

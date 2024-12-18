@@ -1,11 +1,11 @@
 package io.jenkins.plugins.designlibrary;
 
 import hudson.Extension;
+import hudson.PluginWrapper;
 import hudson.model.RootAction;
 import java.util.List;
 import java.util.Map;
 import jenkins.model.Jenkins;
-import hudson.PluginWrapper;
 
 /**
  * Entry point to all the UI samples.
@@ -47,6 +47,7 @@ public class Home implements RootAction {
         }
         return null;
     }
+
     public String getPluginVersion() {
         Jenkins jenkins = Jenkins.get();
         if (jenkins != null && jenkins.getPluginManager() != null) {
