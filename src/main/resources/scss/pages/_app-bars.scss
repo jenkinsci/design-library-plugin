@@ -13,12 +13,11 @@
   &::after {
     content: "";
     position: absolute;
-    left: var(--jdl-border-width);
-    right: var(--jdl-border-width);
+    left: 0;
+    right: 0;
     height: calc(var(--jdl-spacing) * 2);
     pointer-events: none;
     backdrop-filter: blur(20px);
-    border-radius: 0.66rem;
   }
 
   &--top {
@@ -44,6 +43,8 @@
     &::after {
       top: 0;
       mask-image: linear-gradient(black 20%, transparent);
+      border-top-left-radius: calc(0.66rem - var(--jdl-border-width));
+      border-top-right-radius: calc(0.66rem - var(--jdl-border-width));
     }
   }
 }
