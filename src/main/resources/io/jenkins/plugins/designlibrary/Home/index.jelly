@@ -59,7 +59,6 @@
                   href="https://github.com/jenkinsci/design-library-plugin" />
         </div>
       </s:section>
-
       <s:previous-next-controls previousPage="${null}" nextPage="${it.all.0}" />
     </l:main-panel>
   </l:layout>

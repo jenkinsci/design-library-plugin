@@ -32,6 +32,16 @@
       </j:if>
     </div>
     <div>
+      <j:if test="${attrs.previousPage == null and isHome}">
+        <a href="https://github.com/jenkinsci/design-library-plugin/releases/tag/${it.pluginVersion}" 
+          target="_blank" 
+          class="jenkins-button jenkins-button--tertiary jdl-plugin-version-link">
+          <l:icon src="symbol-design-library plugin-design-library" />
+          <span>current version: ${it.pluginVersion}</span>
+        </a>
+      </j:if>
+    </div>
+    <div>
       <j:if test="${attrs.nextPage != null}">
         <a href="${rootURL}/design-library/${attrs.nextPage.urlName}" class="jenkins-button jenkins-button--tertiary jdl-next-button">
           <span>${attrs.nextPage.displayName}</span>
