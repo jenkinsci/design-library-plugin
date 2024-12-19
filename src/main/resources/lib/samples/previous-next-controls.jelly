@@ -20,6 +20,14 @@
           <span>${%Home}</span>
         </a>
       </j:if>
+      <j:if test="${attrs.previousPage == null and isHome}">
+        <a href="https://github.com/jenkinsci/design-library-plugin/releases/tag/${it.pluginVersion}" 
+          target="_blank" 
+          class="jenkins-button jenkins-button--tertiary jdl-plugin-version-link">
+          <l:icon src="symbol-design-library plugin-design-library" />
+          ${it.pluginVersion}
+        </a>
+      </j:if>
     </div>
     <div class="jenkins-mobile-hide">
       <j:if test="${!isHome}">
@@ -28,16 +36,6 @@
            target="_blank">
           <l:icon src="symbol-edit" />
           ${%Edit this page}
-        </a>
-      </j:if>
-    </div>
-    <div>
-      <j:if test="${attrs.previousPage == null and isHome}">
-        <a href="https://github.com/jenkinsci/design-library-plugin/releases/tag/${it.pluginVersion}" 
-          target="_blank" 
-          class="jenkins-button jenkins-button--tertiary jdl-plugin-version-link">
-          <l:icon src="symbol-design-library plugin-design-library" />
-          <span>current version: ${it.pluginVersion}</span>
         </a>
       </j:if>
     </div>
