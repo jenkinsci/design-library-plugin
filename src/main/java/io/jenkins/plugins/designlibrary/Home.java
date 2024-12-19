@@ -47,7 +47,7 @@ public class Home implements RootAction {
         }
         return null;
     }
-
+    
     public String getPluginVersion() {
         Jenkins jenkins = Jenkins.get();
         PluginWrapper plugin = jenkins.getPluginManager().getPlugin("design-library");
