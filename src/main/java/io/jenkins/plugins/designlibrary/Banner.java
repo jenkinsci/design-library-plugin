@@ -7,7 +7,7 @@ public class Banner extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-information-circle-outline plugin-ionicons-api";
+        return "symbol-banner plugin-design-library";
     }
 
     @Override
