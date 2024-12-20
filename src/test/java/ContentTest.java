@@ -35,7 +35,7 @@ class ContentTest {
      */
     @ParameterizedTest
     @MethodSource("getPages")
-    void validRelativeUrls(String url) throws Exception {
+    void validContent(String url) throws Exception {
         try (var webClient = jenkins.createWebClient().withJavaScriptEnabled(false)) {
             // We get a bunch of spam in our logs about missing CSS, let's ignore that
             webClient.getOptions().setPrintContentOnFailingStatusCode(false);
@@ -45,7 +45,10 @@ class ContentTest {
             var links = page.querySelectorAll(".jdl-section__description, .jdl-dos-donts td").stream()
                     .map(DomNode::getTextContent).toList();
 
-            links.forEach(e -> assertThat(e).endsWith("."));
+            links.forEach(e -> assertThat(e).satisfiesAnyOf(
+                    listParam -> assertThat(listParam).endsWith("."),
+                    listParam -> assertThat(listParam).endsWith(":")
+            ));
         }
     }
 
