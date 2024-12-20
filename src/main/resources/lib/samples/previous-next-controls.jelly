@@ -20,6 +20,14 @@
           <span>${%Home}</span>
         </a>
       </j:if>
+      <j:if test="${attrs.previousPage == null and isHome}">
+        <a href="https://github.com/jenkinsci/design-library-plugin/releases/tag/${it.pluginVersion}"
+          target="_blank"
+          class="jenkins-button jenkins-button--tertiary">
+          <l:icon src="symbol-design-library plugin-design-library" />
+          ${it.pluginVersion}
+        </a>
+      </j:if>
     </div>
     <div class="jenkins-mobile-hide">
       <j:if test="${!isHome}">
