@@ -66,9 +66,7 @@
         </s:dos-donts>
       </s:section>
 
-      <s:section title="${%Usage}">
-        <p class="jdl-paragraph">The 'two-column' layout is default, so you don't need to do anything to use it.</p>
-
+      <s:section title="${%Usage}" description="The 'two-column' layout is default, so you don't need to do anything to use it.">
         <s:code file="twoColumn.jelly" previewable="true" />
 
         <p class="jdl-paragraph">
