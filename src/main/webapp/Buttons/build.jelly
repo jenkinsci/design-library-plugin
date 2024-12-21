@@ -1,0 +1,4 @@
+<button class="jenkins-button jenkins-button--primary jenkins-!-build-color">
+  <l:icon src="symbol-play" />
+  Build
+</button>
