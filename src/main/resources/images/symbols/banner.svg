@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+    <rect x="48" y="86" width="416" height="340" rx="70" fill="none" stroke="currentColor"
+          stroke-linejoin="round" stroke-width="32" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+          d="M220 230h32v116"/>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+          d="M208 350h88"/>
+    <path d="M248 140a26 26 0 1026 26 26 26 0 00-26-26z" fill="currentColor" />
+</svg>

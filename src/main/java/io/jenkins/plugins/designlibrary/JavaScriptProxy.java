@@ -16,7 +16,7 @@ public class JavaScriptProxy extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-logo-javascript plugin-ionicons-api";
+        return "symbol-javascript-proxy plugin-design-library";
     }
 
     @Override
