@@ -1,8 +1,14 @@
 tasks:
-  - init: mvn install -P quick-build
+  - init: |
+      # Install and set Java 21
+      curl -s "https://get.sdkman.io" | bash
+      source "$HOME/.sdkman/bin/sdkman-init.sh"
+      sdk install java 21.0.1-tem # Installs Java 21 (replace the version if needed)
+      sdk use java 21.0.1-tem     # Sets Java 21 as the active version
+      java -version               # Prints the Java version to confirm
+      mvn install -P quick-build
     command: |
       curl https://gist.githubusercontent.com/timja/fe73f0a0f98afe4d9356e7ce6752d95b/raw/98ad71080e91ed75824ec410ff905419e3788065/init.sh | bash
-      # without host being `0.0.0.0` redirects will go to localhost ignoring the forwarded values for some reason
       mvn hpi:run -Dhost=0.0.0.0
     name: Run
   - command: gp ports await 8080 && gp url 8080 && gp preview $(gp url 8080)/jenkins/
