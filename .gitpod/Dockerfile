@@ -1,7 +1,3 @@
-FROM gitpod/workspace-full:latest
-
-USER gitpod
-
 # Define version arguments
 ARG JAVA_VERSION=21.0.4-tem
 ARG NODE_VERSION=22.12.0
