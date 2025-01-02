@@ -1,20 +1,16 @@
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
+
 import io.jenkins.plugins.designlibrary.UISample;
+import java.util.List;
+import java.util.stream.Stream;
 import org.htmlunit.html.DomNode;
-import org.htmlunit.html.HtmlAnchor;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.jvnet.hudson.test.JenkinsRule;
 import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
 @WithJenkins
 @TestInstance(PER_CLASS)
@@ -31,7 +27,7 @@ class ContentTest {
     }
 
     /**
-     * Validate that relative URLs on a page actually link to a {@link UISample}
+     * Validate that descriptive elements end with a full stop or a colon
      */
     @ParameterizedTest
     @MethodSource("getPages")
@@ -43,12 +39,12 @@ class ContentTest {
 
             var page = webClient.goTo(url);
             var links = page.querySelectorAll(".jdl-section__description, .jdl-dos-donts td").stream()
-                    .map(DomNode::getTextContent).toList();
+                    .map(DomNode::getTextContent)
+                    .toList();
 
-            links.forEach(e -> assertThat(e).satisfiesAnyOf(
-                    listParam -> assertThat(listParam).endsWith("."),
-                    listParam -> assertThat(listParam).endsWith(":")
-            ));
+            links.forEach(e -> assertThat(e)
+                    .satisfiesAnyOf(listParam -> assertThat(listParam).endsWith("."), listParam -> assertThat(listParam)
+                            .endsWith(":")));
         }
     }
 
