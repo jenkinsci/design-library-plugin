@@ -17,7 +17,7 @@
       </s:group>
     </s:section>
 
-    <s:section title="Progress bar" description="${%progressAnimation.description}">
+    <s:section title="Progress animation" description="${%progressAnimation.description}">
       <s:group>
         <s:preview>
           <l:progressAnimation />
