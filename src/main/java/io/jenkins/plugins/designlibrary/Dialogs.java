@@ -23,6 +23,11 @@ public class Dialogs extends UISample {
         return "Displays overlay windows for additional information or user input without navigating away.";
     }
 
+    @Override
+    public String getSince() {
+        return "2.426.1";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {
         public ListBoxModel doFillFlavorItems() {
