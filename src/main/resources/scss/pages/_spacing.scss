@@ -17,7 +17,7 @@
     position: relative;
     display: flex;
     background: color-mix(in srgb, var(--text-color-secondary) 2.5%, transparent);
-    border: var(--jdl-border);
+    border: var(--jdl-border-translucent);
     border-radius: 4px;
     transition: background var(--standard-transition);
 
