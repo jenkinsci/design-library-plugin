@@ -54,7 +54,17 @@ THE SOFTWARE.
         ${%destructive.description}
       </p>
     </s:section>
-
+    
+    <s:section title="Filled button" description="You can create as well filled buttons.">
+      <s:group>
+        <s:preview>
+          <button class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">Danger</button>
+          <button class="jenkins-button jenkins-button--primary jenkins-!-success-color">Success</button>
+        </s:preview>
+        <s:code language="xml" file="filled.jelly" />
+      </s:group>
+    </s:section>
+    
     <s:section title="${%tertiary}" description="${%tertiary.description}">
       <s:group>
         <s:preview>
