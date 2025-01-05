@@ -1,10 +1,8 @@
 <div>
   <f:bottomButtonBar>
-    <div class="jenkins-buttons-row">
-      <button class="jenkins-button jenkins-button--primary">
-        Save
-      </button>
-      <button class="jenkins-button">Apply</button>
-    </div>
+    <button class="jenkins-button jenkins-button--primary">
+      Save
+    </button>
+    <button class="jenkins-button">Apply</button>
   </f:bottomButtonBar>
 </div>
