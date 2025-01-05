@@ -120,7 +120,7 @@
                   </div>
                   <div class="validation-error-area"></div>
                 </div>
-                <div class="jenkins-form-item tr ">
+                <div class="jenkins-form-item tr jenkins-form-item-dialog-last">
                   <div class="jenkins-form-label help-sibling">Choose flavor</div>
                   <div class="setting-main">
                     <script src="/jenkins/adjuncts/c0f0c004/lib/form/select/select.js"

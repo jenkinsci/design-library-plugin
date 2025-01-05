@@ -35,10 +35,12 @@
   }
 
   .jenkins-form-item, .jenkins-search-container {
-    margin-bottom: 0;
     min-width: 300px;
   }
 
+  :nth-last-child(1 of .jenkins-form-item) {
+    margin-bottom: 0;
+  }
   .repeated-container {
     min-width: 600px;
   }
