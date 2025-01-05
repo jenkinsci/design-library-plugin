@@ -4,7 +4,7 @@
       <f:textbox name="name"/>
     </f:entry>
     <f:entry title="${%Quantity}">
-      <f:number name="quantity" min="1" max="9"/>
+      <f:number name="quantity" min="1" max="9" default="1"/>
     </f:entry>
     <f:entry title="${%Choose flavor}">
       <f:select field="flavor"/>
