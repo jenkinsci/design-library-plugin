@@ -49,9 +49,10 @@
       padding: 0 20px 0 0;
       height: 2rem;
       font-family: var(--font-family-mono);
+      transition: var(--standard-transition);
 
       &:hover {
-        border-color: var(--input-border-hover)
+        border-color: var(--input-border-hover);
       }
     }
 
