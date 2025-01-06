@@ -16,10 +16,6 @@
   div {
     position: relative;
     display: flex;
-    background: color-mix(in srgb, var(--text-color-secondary) 2.5%, transparent);
-    border: var(--jdl-border-translucent);
-    border-radius: 4px;
-    transition: background var(--standard-transition);
 
     &::after {
       content: "";
@@ -43,8 +39,8 @@
 
     select {
       appearance: none;
-      background: none;
-      border: none;
+      border: var(--jdl-border-translucent);
+      border-radius: 4px;
       outline: none;
       width: 100%;
       font-size: var(--font-size-sm);
@@ -53,21 +49,24 @@
       padding: 0 20px 0 0;
       height: 2rem;
       font-family: var(--font-family-mono);
+      transition: var(--standard-transition);
+
+      &:hover {
+        border-color: var(--input-border-hover);
+      }
     }
 
-    &:first-of-type {
+    &:first-of-type select {
       border-top-left-radius: 18px;
       border-bottom-left-radius: 18px;
     }
 
-    &:last-of-type {
+    &:last-of-type select {
       border-top-right-radius: 18px;
       border-bottom-right-radius: 18px;
     }
 
     &:hover {
-      background: color-mix(in srgb, var(--text-color-secondary) 10%, transparent);
-
       &::after {
         translate: 0 1px;
       }
