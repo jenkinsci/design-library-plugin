@@ -28,7 +28,7 @@ THE SOFTWARE.
     <s:section hideBorder="true">
       <s:group>
         <s:preview>
-          <div style="width: 100%" class="jenkins-!-margin-bottom-0">
+          <div class="jdl-table-container">
             <t:setIconSize/>
             <table class="jenkins-table sortable ${iconSize == '16x16' ? 'jenkins-table--small' : iconSize == '24x24' ? 'jenkins-table--medium' : ''}">
               <thead>
