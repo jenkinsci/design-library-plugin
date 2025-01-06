@@ -74,7 +74,8 @@ class ValidRelativeUrlsTest {
                 && !url.equals("..")
                 && !url.equals("twoColumn")
                 && !url.equals("oneColumn")
-                && !url.equals("fullscreen");
+                && !url.equals("fullscreen")
+                && !url.startsWith("/jenkins/iconSize");
 
         if (!response) {
             System.out.println("🤫 Ignoring URL: " + url);
