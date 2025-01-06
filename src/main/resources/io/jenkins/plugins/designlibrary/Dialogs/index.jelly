@@ -104,43 +104,15 @@
             <div class="jenkins-dialog__title">Order your ice cream</div>
             <div class="jenkins-dialog__contents">
               <div width="100%">
-                <div class="jenkins-form-item tr ">
-                  <div class="jenkins-form-label help-sibling">Name</div>
-                  <div class="setting-main">
-
-
-                    <input name="name" placeholder="" type="text" class="jenkins-input   " value=""/>
-                  </div>
-                  <div class="validation-error-area"></div>
-                </div>
-                <div class="jenkins-form-item tr ">
-                  <div class="jenkins-form-label help-sibling">Quantity</div>
-                  <div class="setting-main">
-                    <input min="1" max="9" name="quantity" type="number" class="jenkins-input  " value=""/>
-                  </div>
-                  <div class="validation-error-area"></div>
-                </div>
-                <div class="jenkins-form-item tr jenkins-form-item-dialog-last">
-                  <div class="jenkins-form-label help-sibling">Choose flavor</div>
-                  <div class="setting-main">
-                    <script src="/jenkins/adjuncts/c0f0c004/lib/form/select/select.js"
-                            type="text/javascript"></script>
-
-
-                    <div class="jenkins-select">
-                      <select
-                        fillurl="/jenkins/descriptorByName/io.jenkins.plugins.designlibrary.Dialogs/fillFlavorItems"
-                        name="_.flavor" class="jenkins-select__input select" value="">
-                        <option value="Apple">Apple</option>
-                        <option value="Acai">Acai</option>
-                        <option value="Banana">Banana</option>
-                        <option value="Strawberry">Strawberry</option>
-                        <option value="Vanilla">Vanilla</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="validation-error-area"></div>
-                </div>
+                <f:entry title="${%Name}">
+                  <f:textbox name="name"/>
+                </f:entry>
+                <f:entry title="${%Quantity}">
+                  <f:number name="quantity" min="1" max="9"/>
+                </f:entry>
+                <f:entry title="${%Choose flavor}" class="jdl-dialog-form--last">
+                  <f:select field="flavor"/>
+                </f:entry>
               </div>
               <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
                 <button data-id="ok" type="submit" class="jenkins-button jenkins-button--primary ">Order</button>
