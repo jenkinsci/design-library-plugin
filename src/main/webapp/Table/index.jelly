@@ -1,19 +1,26 @@
-<table class="jenkins-table sortable">
-  <thead>
-    <th>
-      Name
-    </th>
-    <th>
-      Status
-    </th>
-    <th>
-      Reason
-    </th>
-  </thead>
-  <tbody>
+<t:setIconSize/>
+<table class="jenkins-table sortable ${iconSize == '16x16' ? 'jenkins-table--small' : iconSize == '24x24' ? 'jenkins-table--medium' : ''}">
+<thead>
+  <th>
+    Name
+  </th>
+  <th class="jenkins-table__cell--tight">S</th>
+  <th>
+    Status
+  </th>
+  <th>
+    Reason
+  </th>
+</thead>
+<tbody>
   <tr>
     <td>
       <a href="#" class="jenkins-table__link">Link 1</a>
+    </td>
+    <td class="jenkins-table__cell--tight jenkins-table__icon">
+      <div class="jenkins-table__cell__button-wrapper">
+        <l:icon src="symbol-status-blue"/>
+      </div>
     </td>
     <td>
       Success
@@ -27,6 +34,11 @@
     <td>
       <a href="#" class="jenkins-table__link">Link 2</a>
     </td>
+    <td class="jenkins-table__cell--tight jenkins-table__icon">
+      <div class="jenkins-table__cell__button-wrapper">
+        <l:icon src="symbol-status-red"/>
+      </div>
+    </td>
     <td>
       Failure
     </td>
@@ -38,6 +50,11 @@
     <td>
       <a href="#" class="jenkins-table__link">Link 3</a>
     </td>
+    <td class="jenkins-table__cell--tight jenkins-table__icon">
+      <div class="jenkins-table__cell__button-wrapper">
+        <l:icon src="symbol-status-yellow"/>
+      </div>
+    </td>
     <td>
       Unstable
     </td>
@@ -45,5 +62,6 @@
       Test Failed
     </td>
   </tr>
-  </tbody>
+</tbody>
 </table>
+<t:iconSize/>
