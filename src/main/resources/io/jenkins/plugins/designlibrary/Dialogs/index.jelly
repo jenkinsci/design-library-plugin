@@ -5,8 +5,8 @@
       <s:group>
         <s:preview>
           <dialog class="jenkins-dialog">
-            <div class="jenkins-dialog__title">Error</div>
-            <div class="jenkins-dialog__contents">This doesn't work.</div>
+            <div class="jenkins-dialog__title">Example alert</div>
+            <div class="jenkins-dialog__contents">I'm an example of an error alert.</div>
             <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
               <button data-id="ok" type="button"
                       class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK

@@ -1,5 +1,5 @@
 function showAlert() {
-    dialog.alert("Error", {
-      message: "This doesn't work.", type: "destructive"
+    dialog.alert("Example alert", {
+      message: "I'm an example of an error alert.", type: "destructive"
     });
 }
