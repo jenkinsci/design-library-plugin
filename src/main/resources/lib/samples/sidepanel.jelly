@@ -1,7 +1,5 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:st="jelly:stapler">
-  <div class="app-sidepanel__jenkins-logo">Jenkins</div>
-
   <l:app-bar title="Design Library" />
 
   <l:tasks>
