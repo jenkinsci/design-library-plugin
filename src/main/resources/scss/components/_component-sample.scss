@@ -30,6 +30,11 @@
 
   /* Component preview styling */
 
+  & > form > div > .jenkins-section {
+    border-top: none;
+    padding-top: 0;
+  }
+
   .jenkins-card {
     margin-bottom: 0;
   }
