@@ -1,15 +1,12 @@
 :root {
   --jdl-spacing: var(--section-padding);
-  --jdl-border-width: 1.5px;
-  --jdl-border: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 9%, var(--card-background));
-  --jdl-border-translucent: var(--jdl-border-width) solid color-mix(in srgb, var(--text-color-secondary) 9%, transparent);
-  --jdl-box-shadow: 0 0 0 var(--jdl-border-width) color-mix(in srgb, currentColor 5%, transparent),
+  --jdl-border-translucent: var(--jenkins-border-width) solid color-mix(in srgb, var(--text-color-secondary) 9%, transparent);
+  --jdl-box-shadow: 0 0 0 var(--jenkins-border-width) color-mix(in srgb, currentColor 5%, transparent),
   0 10px 15px rgba(0, 0, 0, 0.05);
 
   @media (prefers-contrast: more) {
-    --jdl-border: var(--jdl-border-width) solid var(--text-color);
-    --jdl-border-translucent: var(--jdl-border-width) solid var(--text-color);
-    --jdl-box-shadow: 0 0 0 var(--jdl-border-width) var(--text-color);
+    --jdl-border-translucent: var(--jenkins-border-width) solid var(--text-color);
+    --jdl-box-shadow: 0 0 0 var(--jenkins-border-width) var(--text-color);
   }
 }
 

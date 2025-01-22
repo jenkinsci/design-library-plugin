@@ -9,7 +9,7 @@
   z-index: 0;
   gap: 1rem;
   border-radius: 0.66rem;
-  border: var(--jdl-border);
+  border: var(--jenkins-border);
   background: linear-gradient(45deg, color-mix(in srgb, var(--pink) 7.5%, transparent),
           color-mix(in srgb, var(--light-indigo) 7.5%, transparent));
   background-attachment: fixed;
@@ -30,7 +30,7 @@
 
   /* Component preview styling */
 
-  & > form > div > .jenkins-section {
+  & > form > div > .jenkins-section, & > .jenkins-section {
     border-top: none;
     padding-top: 0;
   }
