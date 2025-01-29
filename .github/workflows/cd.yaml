@@ -18,7 +18,15 @@ jobs:
         run: cargo install lychee
 
       - name: Check external links
-        run: lychee --verbose --exclude-mail --no-progress ./**/*.md
+        id: check_links
+        run: lychee --verbose --exclude-mail --no-progress ./**/*.md | tee lychee-output.txt
+
+      - name: Fail CI if broken links exist
+        run: |
+          if grep -q "🚫" lychee-output.txt; then
+            echo "❌ Broken links found! CI is failing."
+            exit 1
+          fi
 
   maven-cd:
     needs: validate-urls

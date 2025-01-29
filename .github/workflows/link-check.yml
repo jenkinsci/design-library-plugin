@@ -1,4 +1,4 @@
-name: Check External Links
+name: Validate External Links
 
 on:
   pull_request:
@@ -18,4 +18,12 @@ jobs:
         run: cargo install lychee
 
       - name: Run lychee to check links
-        run: lychee --verbose --exclude-mail --no-progress ./**/*.md
+        id: lychee_check
+        run: lychee --verbose --exclude-mail --no-progress ./**/*.md | tee lychee-output.txt
+
+      - name: Fail CI if broken links exist
+        run: |
+          if grep -q "🚫" lychee-output.txt; then
+            echo "Broken links found! CI is failing."
+            exit 1
+          fi
