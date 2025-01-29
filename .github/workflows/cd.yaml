@@ -8,7 +8,20 @@ on:
       - completed
 
 jobs:
+  validate-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install lychee
+        run: cargo install lychee
+
+      - name: Check external links
+        run: lychee --verbose --exclude-mail --no-progress ./**/*.md
+
   maven-cd:
+    needs: validate-urls
     uses: jenkins-infra/github-reusable-workflows/.github/workflows/maven-cd.yml@v1
     secrets:
       MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}

@@ -1,0 +1,21 @@
+name: Check External Links
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install lychee
+        run: cargo install lychee
+
+      - name: Run lychee to check links
+        run: lychee --verbose --exclude-mail --no-progress ./**/*.md
