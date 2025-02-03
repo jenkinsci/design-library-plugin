@@ -3,8 +3,8 @@ package io.jenkins.plugins.designlibrary;
 import hudson.Extension;
 import jenkins.model.ModelObjectWithChildren;
 import jenkins.model.ModelObjectWithContextMenu;
-import org.kohsuke.stapler.StaplerRequest;
-import org.kohsuke.stapler.StaplerResponse;
+import org.kohsuke.stapler.StaplerRequest2;
+import org.kohsuke.stapler.StaplerResponse2;
 
 /**
  * @author Kohsuke Kawaguchi
@@ -29,7 +29,7 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
     /**
      * This method is called via AJAX to obtain the context menu for this model object.
      */
-    public ContextMenu doContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
+    public ContextMenu doContextMenu(StaplerRequest2 request, StaplerResponse2 response) throws Exception {
         if (false) {
             // this implementation is suffice for most ModelObjects. It uses sidepanel.jelly/.groovy to
             // generate the context menu
@@ -49,7 +49,7 @@ public class Links extends UISample implements ModelObjectWithContextMenu, Model
         }
     }
 
-    public ContextMenu doChildrenContextMenu(StaplerRequest request, StaplerResponse response) throws Exception {
+    public ContextMenu doChildrenContextMenu(StaplerRequest2 request, StaplerResponse2 response) throws Exception {
         // You implement this method in much the same way you do doContextMenu
         return new ContextMenu()
                 .add("https://yahoo.com/", "Yahoo")
