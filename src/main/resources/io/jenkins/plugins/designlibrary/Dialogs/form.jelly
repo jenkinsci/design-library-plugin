@@ -4,10 +4,10 @@
     <h1>Form submission result</h1>
     <s:preview>
       <div>
-      <h2>Hello ${request.getParameter("name")}</h2>
+      <h2>Hello ${request2.getParameter("name")}</h2>
       <b>Here are your order details</b><br/>
-      Quantity: ${request.getParameter("quantity")}<br/>
-      Flavor: ${request.getParameter("_.flavor")}<br/>
+      Quantity: ${request2.getParameter("quantity")}<br/>
+      Flavor: ${request2.getParameter("_.flavor")}<br/>
       </div>
     </s:preview>
   </s:layout>

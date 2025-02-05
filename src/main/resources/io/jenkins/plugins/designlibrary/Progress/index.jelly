@@ -45,7 +45,7 @@
     <s:section title="${%progressiveRendering}" description="${%progressiveRendering.description}">
       <s:group>
         <s:preview>
-          <j:set var="number" value="${request.getParameter('number')}"/>
+          <j:set var="number" value="${request2.getParameter('number')}"/>
           <form method="POST" action=".">
             <f:entry title="Enter a big number">
               <f:number name="number" value="${number}" />
