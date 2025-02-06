@@ -1,0 +1,29 @@
+name: Validate External Links
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install lychee
+        run: cargo install lychee
+
+      - name: Run lychee to check links
+        id: lychee_check
+        run: lychee --verbose --exclude-mail --no-progress ./**/*.md | tee lychee-output.txt
+
+      - name: Fail CI if broken links exist
+        run: |
+          if grep -q "🚫" lychee-output.txt; then
+            echo "Broken links found! CI is failing."
+            exit 1
+          fi
