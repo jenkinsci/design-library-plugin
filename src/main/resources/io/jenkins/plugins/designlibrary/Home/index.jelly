@@ -8,8 +8,6 @@
     </l:side-panel>
 
     <l:main-panel>
-      <l:app-bar title="Design Library" />
-
       <s:section hideBorder="true">
         <div class="app-card__container app-card__container--large">
           <div class="app-card__preview">
