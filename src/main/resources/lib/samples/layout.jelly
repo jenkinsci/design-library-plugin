@@ -48,7 +48,7 @@ THE SOFTWARE.
     <l:main-panel>
       <l:app-bar title="${it.displayName}">
         <j:if test="${it.since != null}">
-          <a href="https://www.jenkins.io/changelog-stable/${it.since}" class="jenkins-button jdl-since-tag" target="_blank">
+          <a href="https://www.jenkins.io/changelog/${it.since}" class="jenkins-button jdl-since-tag" target="_blank">
             <l:icon src="symbol-information-circle-outline plugin-ionicons-api" />
             Since ${it.since}
           </a>
