@@ -1,6 +1,6 @@
 .jdl-app-bars-page__example {
   padding: var(--jdl-spacing);
-  border: var(--jdl-border);
+  border: var(--jenkins-border);
 
   .jenkins-app-bar {
     margin-bottom: 0;
@@ -43,8 +43,8 @@
     &::after {
       top: 0;
       mask-image: linear-gradient(black 20%, transparent);
-      border-top-left-radius: calc(0.66rem - var(--jdl-border-width));
-      border-top-right-radius: calc(0.66rem - var(--jdl-border-width));
+      border-top-left-radius: calc(0.66rem - var(--jenkins-border-width));
+      border-top-right-radius: calc(0.66rem - var(--jenkins-border-width));
     }
   }
 }
