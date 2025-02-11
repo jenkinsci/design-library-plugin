@@ -78,7 +78,7 @@
   --box-color: var(--purple);
 
   position: relative;
-  border: var(--jdl-border-width) dashed var(--box-color);
+  border: var(--jenkins-border-width) dashed var(--box-color);
   border-radius: 0.66rem;
   transition: var(--elastic-transition);
   z-index: 0;
@@ -86,7 +86,7 @@
   &::before {
     content: "";
     position: absolute;
-    inset: calc(var(--jdl-border-width) * -1);
+    inset: calc(var(--jenkins-border-width) * -1);
     border-radius: inherit;
     background: var(--box-color);
     opacity: 0.2;
@@ -112,7 +112,7 @@
     --box-color: var(--blue);
 
     p {
-      border: var(--jdl-border-width) dashed var(--box-color);
+      border: var(--jenkins-border-width) dashed var(--box-color);
       border-radius: 0.2rem;
       background: var(--background);
       padding: 1rem;

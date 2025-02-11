@@ -9,11 +9,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
   grid-template-columns: 1fr auto;
   z-index: 0;
   border-radius: 0.66rem;
-  border: var(--jdl-border);
-
-  pre {
-    background-color: transparent !important;
-  }
+  border: var(--jenkins-border);
 
   &::before {
     content: "";
@@ -25,6 +21,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
   }
 
   &__code {
+    background-color: transparent !important;
+    border: none;
     margin: 0 !important;
     padding: 0;
 
@@ -46,8 +44,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
   &__tab-bar {
     background: var(--card-background);
-    border-left: var(--jdl-border);
-    border-right: var(--jdl-border);
+    border-left: var(--jenkins-border);
+    border-right: var(--jenkins-border);
     display: flex;
     gap: 0.9rem;
     padding: 1em;
@@ -82,10 +80,10 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
         &::before {
           background: color-mix(in srgb, var(--text-color-secondary) 4%, transparent);
-          border: var(--jdl-border);
+          border: var(--jenkins-border);
 
           @media (prefers-contrast: more) {
-            border: var(--jdl-border-width) solid var(--text-color);
+            border: var(--jenkins-border-width) solid var(--text-color);
           }
         }
       }
@@ -108,8 +106,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
 .jdl-tab-pane__text {
   padding: 0 1em 1em 1em;
-  border-left: var(--jdl-border);
-  border-right: var(--jdl-border);
+  border-left: var(--jenkins-border);
+  border-right: var(--jenkins-border);
   font-family: var(--font-family-mono) !important;
   color: var(--text-color-secondary);
   margin: 0;
