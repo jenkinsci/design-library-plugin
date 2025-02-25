@@ -91,7 +91,6 @@
     background: var(--box-color);
     opacity: 0.2;
     z-index: -1;
-    transition: var(--standard-transition);
   }
 
   &[class$="-0"] p {
@@ -118,10 +117,5 @@
       background: var(--background);
       padding: 1rem;
     }
-  }
-
-  .jenkins-copy-button {
-    aspect-ratio: 1;
-    padding: 0.5rem;
   }
 }
