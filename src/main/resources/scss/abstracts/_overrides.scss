@@ -11,10 +11,12 @@
 }
 
 #main-panel {
-  max-width: min(1200px, 60vw);
-  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 1200px) {
+    max-width: min(1200px, 60vw);
+  }
 }
 
 code {
