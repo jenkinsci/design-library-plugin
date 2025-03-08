@@ -36,7 +36,7 @@ THE SOFTWARE.
             <s:code file="simple.jelly"/>
           </s:code-pane>
           <s:code-pane title="Java">
-            <s:code language="java" file="simple.java"/>
+            <s:code language="java" file="Simple.java"/>
           </s:code-pane>
         </s:code-panes>
       </s:group>
