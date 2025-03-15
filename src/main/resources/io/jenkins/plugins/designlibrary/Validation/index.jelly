@@ -30,7 +30,7 @@
       <s:group>
         <s:preview>
           <form method="post">
-            <f:entry title="${%Positive integer}">
+            <f:entry title="${%Non-negative integer}">
               <f:number min="0" clazz="number"/>
             </f:entry>
           </form>
