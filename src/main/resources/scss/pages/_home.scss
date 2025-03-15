@@ -105,10 +105,12 @@
     @media (prefers-reduced-motion: no-preference) {
       animation: sunburst-rotation 100s infinite linear;
     }
-    z-index: -1;
-    opacity: 0.4;
-    border-radius: 100%;
-    flex: 1;
+    & {
+      z-index: -1;
+      opacity: 0.4;
+      border-radius: 100%;
+      flex: 1;
+    }
   }
 }
 
