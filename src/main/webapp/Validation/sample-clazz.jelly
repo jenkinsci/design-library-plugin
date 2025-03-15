@@ -1,0 +1,3 @@
+<f:entry title="${%Positive integer}" field="name">
+  <f:number min="0" clazz="number"/>
+</f:entry>

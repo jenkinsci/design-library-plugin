@@ -23,6 +23,21 @@
       <p class="jdl-paragraph">${%title}</p>
 
       <p class="jdl-paragraph">${%validation.description}</p>
+
+      <p class="jdl-paragraph">${%validation.clazz}</p>
+
+      <s:preview>
+        <form method="post">
+          <f:entry title="${%Positive integer}">
+            <f:number min="0" clazz="number"/>
+          </f:entry>
+        </form>
+      </s:preview>
+      <s:code-panes>
+        <s:code-pane title="sample-clazz.jelly">
+          <s:code file="sample-clazz.jelly" />
+        </s:code-pane>
+      </s:code-panes>
     </s:section>
   </s:layout>
 </j:jelly>
