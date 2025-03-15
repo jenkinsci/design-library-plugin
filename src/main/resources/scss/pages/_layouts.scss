@@ -21,7 +21,8 @@
     background: var(--header-bg-classic);
   }
 
-  &__sidebar, &__content {
+  &__sidebar,
+  &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -109,13 +110,18 @@
     #{ $self }__card {
       transform: scale(0.6);
 
-      &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(10) {
+      &:nth-of-type(5),
+      &:nth-of-type(6),
+      &:nth-of-type(10) {
         grid-column: span 2;
       }
     }
   }
 
-  &__header, &__button, &__line, &__card {
+  &__header,
+  &__button,
+  &__line,
+  &__card {
     position: relative;
     border-radius: 0.3rem;
   }
@@ -148,7 +154,6 @@
     #{ $self }__sidebar {
       left: 60px;
     }
-
 
     #{ $self }__content {
       right: 60px;

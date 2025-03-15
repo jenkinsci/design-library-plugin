@@ -10,8 +10,11 @@
   gap: 1rem;
   border-radius: 0.66rem;
   border: var(--jenkins-border);
-  background: linear-gradient(45deg, color-mix(in srgb, var(--pink) 7.5%, transparent),
-          color-mix(in srgb, var(--light-indigo) 7.5%, transparent));
+  background: linear-gradient(
+    45deg,
+    color-mix(in srgb, var(--pink) 7.5%, transparent),
+    color-mix(in srgb, var(--light-indigo) 7.5%, transparent)
+  );
   background-attachment: fixed;
   background-position: center;
   background-clip: padding-box;
@@ -30,7 +33,8 @@
 
   /* Component preview styling */
 
-  & > form > div > .jenkins-section, & > .jenkins-section {
+  & > form > div > .jenkins-section,
+  & > .jenkins-section {
     border-top: none;
     padding-top: 0;
   }
@@ -39,19 +43,21 @@
     margin-bottom: 0;
   }
 
-  .jenkins-form-item, .jenkins-search-container {
+  .jenkins-form-item,
+  .jenkins-search-container {
     min-width: 300px;
   }
 
   :nth-last-child(1 of .jenkins-form-item) {
     margin-bottom: 0;
   }
-  
+
   .repeated-container {
     min-width: 600px;
   }
 
-  .jenkins-alert, .CodeMirror {
+  .jenkins-alert,
+  .CodeMirror {
     margin-bottom: 0;
   }
 

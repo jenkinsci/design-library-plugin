@@ -77,7 +77,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 45%;
-    max-height: max(45%, 80px)
+    max-height: max(45%, 80px);
   }
 }
 
@@ -98,9 +98,9 @@
     aspect-ratio: 1;
     backdrop-filter: invert(2%) blur(100px);
     mask-image: repeating-conic-gradient(
-                    from 90deg,
-                    var(--background) 0deg,
-                    transparent 20deg
+      from 90deg,
+      var(--background) 0deg,
+      transparent 20deg
     );
     @media (prefers-reduced-motion: no-preference) {
       animation: sunburst-rotation 100s infinite linear;
@@ -121,7 +121,8 @@
 }
 
 .app-card__preview {
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -131,7 +132,10 @@
     background-repeat: no-repeat;
     --sidebar-width: 340px;
     --content-width: max(950px, 65vw);
-    background-position-x: calc(var(--sidebar-width) + ((100vw - (var(--content-width) + var(--sidebar-width))) / 2));
+    background-position-x: calc(
+      var(--sidebar-width) +
+        ((100vw - (var(--content-width) + var(--sidebar-width))) / 2)
+    );
     opacity: 0.25;
 
     @media (max-width: 970px) {
@@ -143,16 +147,16 @@
 
   &::before {
     background-image: radial-gradient(
-                    at 40% 20%,
-                    var(--light-orange) 0,
-                    transparent 50%
-    ),
-    radial-gradient(at 80% 0%, var(--light-cyan) 0, transparent 50%),
-    radial-gradient(at 0% 50%, var(--light-pink) 0, transparent 50%),
-    radial-gradient(at 80% 50%, var(--light-red) 0, transparent 50%),
-    radial-gradient(at 0% 100%, var(--light-yellow) 0, transparent 50%),
-    radial-gradient(at 80% 100%, var(--light-purple) 0, transparent 50%),
-    radial-gradient(at 0% 0%, var(--light-pink) 0, transparent 50%);
+        at 40% 20%,
+        var(--light-orange) 0,
+        transparent 50%
+      ),
+      radial-gradient(at 80% 0%, var(--light-cyan) 0, transparent 50%),
+      radial-gradient(at 0% 50%, var(--light-pink) 0, transparent 50%),
+      radial-gradient(at 80% 50%, var(--light-red) 0, transparent 50%),
+      radial-gradient(at 0% 100%, var(--light-yellow) 0, transparent 50%),
+      radial-gradient(at 80% 100%, var(--light-purple) 0, transparent 50%),
+      radial-gradient(at 0% 0%, var(--light-pink) 0, transparent 50%);
     @media (prefers-reduced-motion: no-preference) {
       animation: aurora-one 5s linear infinite;
     }
@@ -160,16 +164,16 @@
 
   &::after {
     background-image: radial-gradient(
-                    at 40% 20%,
-                    var(--light-cyan) 0,
-                    transparent 50%
-    ),
-    radial-gradient(at 80% 0%, var(--light-orange) 0, transparent 50%),
-    radial-gradient(at 0% 50%, var(--light-blue) 0, transparent 50%),
-    radial-gradient(at 80% 50%, var(--light-green) 0, transparent 50%),
-    radial-gradient(at 0% 100%, var(--light-red) 0, transparent 50%),
-    radial-gradient(at 80% 100%, var(--light-yellow) 0, transparent 50%),
-    radial-gradient(at 0% 0%, var(--light-cyan) 0, transparent 50%);
+        at 40% 20%,
+        var(--light-cyan) 0,
+        transparent 50%
+      ),
+      radial-gradient(at 80% 0%, var(--light-orange) 0, transparent 50%),
+      radial-gradient(at 0% 50%, var(--light-blue) 0, transparent 50%),
+      radial-gradient(at 80% 50%, var(--light-green) 0, transparent 50%),
+      radial-gradient(at 0% 100%, var(--light-red) 0, transparent 50%),
+      radial-gradient(at 80% 100%, var(--light-yellow) 0, transparent 50%),
+      radial-gradient(at 0% 0%, var(--light-cyan) 0, transparent 50%);
     @media (prefers-reduced-motion: no-preference) {
       animation: aurora-two 8s linear infinite;
     }

@@ -11,6 +11,7 @@
 Design Library makes it easy for developers to build complex and consistent interfaces using Jenkins UI components
 
 This plugin contains:
+
 - demonstration of UI components available in Jenkins
 - snippets of Jelly ready-to-use examples
 
@@ -20,7 +21,7 @@ You can open this project as a [Gitpod workspace](https://www.gitpod.io/) which 
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jenkinsci/design-library-plugin)
 
-If you prefer using IntelliJ IDEA, you can setup Gitpod integration with JetBrains Gateway using the instructions on [gitpod.io](https://www.gitpod.io/docs/ides-and-editors/intellij), 
+If you prefer using IntelliJ IDEA, you can setup Gitpod integration with JetBrains Gateway using the instructions on [gitpod.io](https://www.gitpod.io/docs/ides-and-editors/intellij),
 which will open the workspace in IntelliJ IDEA using JetBrains Gateway.
 
 Alternatively clone this project and run `mvn hpi:run`.
