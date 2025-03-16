@@ -46,7 +46,7 @@ public class Inputs extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-textbox";
+        return "symbol-textbox plugin-design-library";
     }
 
     @Override

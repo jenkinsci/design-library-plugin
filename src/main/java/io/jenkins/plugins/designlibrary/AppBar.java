@@ -13,7 +13,7 @@ public class AppBar extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-app-bar";
+        return "symbol-app-bar plugin-design-library";
     }
 
     @Override

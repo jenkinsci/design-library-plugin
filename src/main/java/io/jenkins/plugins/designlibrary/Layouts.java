@@ -8,7 +8,7 @@ public class Layouts extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-layouts";
+        return "symbol-layouts plugin-design-library";
     }
 
     @Override
