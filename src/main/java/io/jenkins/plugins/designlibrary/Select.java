@@ -21,7 +21,7 @@ import org.kohsuke.stapler.QueryParameter;
 public class Select extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-select";
+        return "symbol-select plugin-design-library";
     }
 
     @Override

@@ -6,7 +6,7 @@ import hudson.Extension;
 public class Spacing extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-spacing symbol-design-library";
+        return "symbol-spacing plugin-design-library";
     }
 
     @Override

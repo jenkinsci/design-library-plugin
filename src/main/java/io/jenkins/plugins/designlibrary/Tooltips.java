@@ -30,7 +30,7 @@ import hudson.Extension;
 public class Tooltips extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-tooltips";
+        return "symbol-tooltips plugin-design-library";
     }
 
     @Override

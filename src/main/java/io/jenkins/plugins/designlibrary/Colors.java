@@ -8,7 +8,7 @@ import java.util.List;
 public class Colors extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-water-outline plugins-ionicons-api";
+        return "symbol-water-outline plugin-ionicons-api";
     }
 
     @Override

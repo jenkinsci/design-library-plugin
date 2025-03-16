@@ -9,7 +9,7 @@ import hudson.Extension;
 public class Buttons extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-buttons";
+        return "symbol-buttons plugin-design-library";
     }
 
     @Override

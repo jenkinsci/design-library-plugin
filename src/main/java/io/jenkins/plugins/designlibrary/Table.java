@@ -9,7 +9,7 @@ import hudson.Extension;
 public class Table extends UISample {
     @Override
     public String getIconFileName() {
-        return "symbol-table";
+        return "symbol-table plugin-design-library";
     }
 
     @Override
