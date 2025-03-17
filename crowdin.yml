@@ -1,14 +1,14 @@
 files:
-  - source: '/src/main/resources/io/jenkins/plugins/designlibrary/**/*.properties'
+  - source: "/src/main/resources/io/jenkins/plugins/designlibrary/**/*.properties"
     ignore:
-      - '/src/main/resources/io/jenkins/plugins/designlibrary/**/%file_name%_%two_letters_code%.properties'
-    translation: '/src/main/resources/io/jenkins/plugins/designlibrary/**/%file_name%_%two_letters_code%.properties'
+      - "/src/main/resources/io/jenkins/plugins/designlibrary/**/%file_name%_%two_letters_code%.properties"
+    translation: "/src/main/resources/io/jenkins/plugins/designlibrary/**/%file_name%_%two_letters_code%.properties"
     escape_quotes: 1
     escape_special_characters: 0
-  - source: '/src/main/resources/lib/samples/**/*.properties'
+  - source: "/src/main/resources/lib/samples/**/*.properties"
     ignore:
-      - '/src/main/resources/lib/samples/**/%file_name%_%two_letters_code%.properties'
-    translation: '/src/main/resources/lib/samples/**/%file_name%_%two_letters_code%.properties'
+      - "/src/main/resources/lib/samples/**/%file_name%_%two_letters_code%.properties"
+    translation: "/src/main/resources/lib/samples/**/%file_name%_%two_letters_code%.properties"
     escape_quotes: 1
     escape_special_characters: 0
 

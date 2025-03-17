@@ -1,7 +1,16 @@
 @use "../abstracts/mixins";
 
 .jdl-colors-tag {
-  background-image: -webkit-linear-gradient(45deg, var(--red, red), var(--orange, orange), var(--yellow, yellow), var(--green, green), var(--blue, blue), var(--violet, violet), var(--red, red));
+  background-image: -webkit-linear-gradient(
+    45deg,
+    var(--red, red),
+    var(--orange, orange),
+    var(--yellow, yellow),
+    var(--green, green),
+    var(--blue, blue),
+    var(--violet, violet),
+    var(--red, red)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate-jdl-colors-tag-color 20s linear infinite;
@@ -25,11 +34,11 @@
   padding: 0;
   margin: 0;
 
-  @media(max-width: 1300px){
+  @media (max-width: 1300px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media(max-width: 970px){
+  @media (max-width: 970px) {
     grid-template-columns: 1fr;
   }
 
@@ -61,7 +70,8 @@
         font-size: 0.875rem;
         padding: 0.35rem 0.9rem;
         background: var(--color);
-        text-shadow: 0 2px 2px color-mix(in srgb, var(--text-color) 10%, transparent);
+        text-shadow: 0 2px 2px
+          color-mix(in srgb, var(--text-color) 10%, transparent);
         border-radius: 100px;
         color: var(--background);
 

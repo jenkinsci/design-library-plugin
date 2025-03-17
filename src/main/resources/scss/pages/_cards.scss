@@ -43,7 +43,11 @@
     bottom: calc(50% - 26px);
     left: 65px;
     right: 65px;
-    background: color-mix(in srgb, var(--text-color-secondary) 25%, var(--background));
+    background: color-mix(
+      in srgb,
+      var(--text-color-secondary) 25%,
+      var(--background)
+    );
     z-index: -1;
   }
 
@@ -81,7 +85,11 @@
         margin-block: 5px;
 
         &::after {
-          background: color-mix(in srgb, var(--text-color-secondary) 25%, var(--background));
+          background: color-mix(
+            in srgb,
+            var(--text-color-secondary) 25%,
+            var(--background)
+          );
         }
       }
 

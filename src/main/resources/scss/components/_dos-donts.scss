@@ -6,7 +6,8 @@
   flex-direction: column;
   gap: calc(var(--jdl-spacing) * 0.5);
 
-  thead, tbody {
+  thead,
+  tbody {
     display: contents;
   }
 
