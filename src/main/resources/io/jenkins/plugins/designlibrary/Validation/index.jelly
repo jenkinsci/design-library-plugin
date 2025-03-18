@@ -24,5 +24,19 @@
 
       <p class="jdl-paragraph">${%validation.description}</p>
     </s:section>
+
+    <s:section>
+      <p class="jdl-paragraph">${%validation.clazz}</p>
+      <s:group>
+        <s:preview>
+          <form method="post">
+            <f:entry title="${%Non-negative integer}">
+              <f:number min="0" clazz="number"/>
+            </f:entry>
+          </form>
+        </s:preview>
+        <s:code file="sample-clazz.jelly" />
+      </s:group>
+    </s:section>
   </s:layout>
 </j:jelly>

@@ -61,8 +61,8 @@ THE SOFTWARE.
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
     <jenkins.baseline>2.479</jenkins.baseline>
     <jenkins.version>2.496</jenkins.version>
-    <node.version>20.18.1</node.version>
-    <npm.version>10.9.2</npm.version>
+    <node.version>20.19.0</node.version>
+    <npm.version>11.2.0</npm.version>
     <spotless.check.skip>false</spotless.check.skip>
   </properties>
 
@@ -99,7 +99,7 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.27.0</version>
+      <version>3.27.3</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -126,6 +126,24 @@ THE SOFTWARE.
         <directory>src/main/java</directory>
       </resource>
     </resources>
-  </build>
 
+    <plugins>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>npm lint</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <phase>install</phase>
+            <configuration>
+              <arguments>run lint</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

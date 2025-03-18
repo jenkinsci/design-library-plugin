@@ -10,7 +10,7 @@
     <j:forEach var="s" items="${it.grouped.entrySet()}">
       <div class="app-sidepanel__heading">${s.key.displayName}</div>
       <j:forEach var="s" items="${s.value}">
-        <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName} plugin-design-library" />
+        <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName}" />
       </j:forEach>
     </j:forEach>
   </l:tasks>

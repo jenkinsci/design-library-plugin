@@ -27,7 +27,8 @@ $delay: 0.1;
     width: min(5vw, 2.5rem);
     opacity: 0.75;
     mix-blend-mode: overlay;
-    animation: scale-in-symbol var(--elastic-transition) calc(var(--animation-delay) + var(--animation-svg-delay))  both;
+    animation: scale-in-symbol var(--elastic-transition)
+      calc(var(--animation-delay) + var(--animation-svg-delay)) both;
 
     @for $i from 1 through 7 {
       &:nth-of-type(#{$i}) {

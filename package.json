@@ -6,7 +6,9 @@
     "build": "sass src/main/resources/scss/styles.scss src/main/resources/io/jenkins/plugins/designlibrary/styles.css && postcss src/main/resources/io/jenkins/plugins/designlibrary/styles.css --replace --use autoprefixer",
     "dev": "sass --watch src/main/resources/scss/styles.scss src/main/resources/io/jenkins/plugins/designlibrary/styles.css && postcss src/main/resources/io/jenkins/plugins/designlibrary/styles.css --replace --use autoprefixer",
     "mvntest": "npm run test",
-    "test": "exit 0"
+    "test": "exit 0",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,9 @@
   },
   "homepage": "https://github.com/jenkinsci/design-library-plugin#readme",
   "devDependencies": {
-    "autoprefixer": "10.4.20",
-    "postcss-cli": "11.0.0",
-    "sass": "1.80.4"
+    "autoprefixer": "10.4.21",
+    "postcss-cli": "11.0.1",
+    "sass": "1.85.1",
+    "prettier": "3.0.3"
   }
 }

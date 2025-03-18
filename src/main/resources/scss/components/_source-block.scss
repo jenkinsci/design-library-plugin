@@ -30,7 +30,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
       line-height: 1.66 !important;
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -67,8 +68,13 @@ $jdl-component-code-controls-spacing: 0.75rem;
         position: absolute;
         inset: -2px -5px;
         border-radius: 100px;
-        background: color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
-        border: 1px solid color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
+        background: color-mix(
+          in srgb,
+          var(--text-color-secondary) 0%,
+          transparent
+        );
+        border: 1px solid
+          color-mix(in srgb, var(--text-color-secondary) 0%, transparent);
       }
 
       &:hover {
@@ -79,7 +85,11 @@ $jdl-component-code-controls-spacing: 0.75rem;
         color: var(--text-color);
 
         &::before {
-          background: color-mix(in srgb, var(--text-color-secondary) 4%, transparent);
+          background: color-mix(
+            in srgb,
+            var(--text-color-secondary) 4%,
+            transparent
+          );
           border: var(--jenkins-border);
 
           @media (prefers-contrast: more) {

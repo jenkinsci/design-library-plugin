@@ -7,7 +7,7 @@ public class Cards extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-cards";
+        return "symbol-cards plugin-design-library";
     }
 
     @Override
