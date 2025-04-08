@@ -4,7 +4,7 @@ import hudson.Extension;
 
 @Extension
 public class File extends UISample {
-    
+
     @Override
     public String getIconFileName() {
         return "symbol-cloud-upload-outline plugin-ionicons-api";
