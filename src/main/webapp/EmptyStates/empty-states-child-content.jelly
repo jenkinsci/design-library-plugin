@@ -1,3 +1,7 @@
 <l:notice title="No jobs created" icon="symbol-weather-icon-health-00to19">
-    Click New Item to create your first job and start building
+    <button 
+        type="button"
+        class="jenkins-button jenkins-button--secondary">
+        Create your first job and start building
+    </button>
 </l:notice>

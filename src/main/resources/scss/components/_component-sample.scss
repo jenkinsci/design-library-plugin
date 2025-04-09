@@ -71,4 +71,10 @@
     animation: none;
     box-shadow: var(--jdl-box-shadow);
   }
+
+  .jenkins-notice {
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 650px;
+  }
 }

@@ -37,7 +37,6 @@ THE SOFTWARE.
       <ul class="jdl-list">
         <li>title - ${%parameters.title}</li>
         <li>icon - ${%parameters.icon}</li>
-        <li>text - ${%parameters.text}</li>
       </ul>
     </s:section>
 
@@ -45,7 +44,11 @@ THE SOFTWARE.
       <s:group>
         <s:preview>
           <l:notice title="${%childNoticeTitle}" icon="symbol-weather-icon-health-00to19">
-            ${%childNotionContent}
+            <button 
+              type="button"
+              class="jenkins-button jenkins-button--secondary">
+              ${%newJobText}
+            </button>
           </l:notice>
         </s:preview>
         <s:code file="empty-states-child-content.jelly" />
