@@ -1,0 +1,6 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core">
+  ${%How to localize texts in Jelly}
+  ${%longtext}
+  ${%hello('World')}
+</j:jelly>
