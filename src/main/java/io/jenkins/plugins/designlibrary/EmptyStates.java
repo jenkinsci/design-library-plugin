@@ -18,7 +18,7 @@ public class EmptyStates extends UISample {
 
     @Override
     public String getDescription() {
-        return "Displays informative messages when no data is available.";
+        return "For when there is no data, no configuration or no plugins installed that support the required feature an empty state can be provided instead.";
     }
 
     @Extension
