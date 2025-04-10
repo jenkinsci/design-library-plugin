@@ -3,6 +3,5 @@
         type="button"
         class="jenkins-button jenkins-button--secondary">
         Create your first job
-
     </button>
 </l:notice>
