@@ -29,7 +29,7 @@ THE SOFTWARE.
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>5.9</version>
+    <version>5.11</version>
     <relativePath />
   </parent>
 
@@ -71,7 +71,7 @@ THE SOFTWARE.
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
         <artifactId>bom-${jenkins.baseline}.x</artifactId>
-        <version>3482.vc10d4f6da_28a_</version>
+        <version>4607.v67a_4791074d7</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -79,15 +79,6 @@ THE SOFTWARE.
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
-      <groupId>io.jenkins.plugins</groupId>
-      <artifactId>commons-lang3-api</artifactId>
-    </dependency>
-    <!-- For some reason need to explicitly depend on commons-text-api and commons-lang3-api for plugin-util-api to load -->
-    <dependency>
-      <groupId>io.jenkins.plugins</groupId>
-      <artifactId>commons-text-api</artifactId>
-    </dependency>
     <dependency>
       <groupId>io.jenkins.plugins</groupId>
       <artifactId>ionicons-api</artifactId>
@@ -103,6 +94,7 @@ THE SOFTWARE.
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <repositories>
     <repository>
       <id>repo.jenkins-ci.org</id>
