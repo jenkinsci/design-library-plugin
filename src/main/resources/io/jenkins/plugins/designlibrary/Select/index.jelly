@@ -42,6 +42,26 @@ THE SOFTWARE.
       </s:group>
     </s:section>
 
+    <s:section title="${%Enum select}" description="${%usage.enum}">
+      <s:group>
+        <s:preview>
+          <f:entry title="Unit" field="unit">
+            <f:enum default="SECONDS">
+              ${it.description}
+            </f:enum>
+          </f:entry>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="Jelly">
+            <s:code file="enum.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="Java">
+            <s:code language="java" file="Enum.java"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
+
     <s:section title="Advanced select" description="${%usage.1}">
       <s:group>
         <s:preview>
