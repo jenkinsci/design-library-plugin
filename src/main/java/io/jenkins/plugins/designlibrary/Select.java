@@ -34,10 +34,8 @@ public class Select extends UISample {
         return null;
     }
 
-    private Unit unit;
-
     public Unit getUnit() {
-        return unit;
+        return Unit.SECONDS;
     }
 
     public DescriptorExtensionList<Fruit, Descriptor<Fruit>> getFruitDescriptors() {
