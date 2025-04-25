@@ -35,6 +35,7 @@ public class Select extends UISample {
     }
 
     private Unit unit;
+
     public Unit getUnit() {
         return unit;
     }
