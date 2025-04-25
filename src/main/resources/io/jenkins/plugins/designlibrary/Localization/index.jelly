@@ -24,16 +24,18 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:layout>
+    <p class="jdl-paragraph jenkins-!-margin-bottom-3">${%leadParagraph}</p>
     <s:section title="${%titlejava}" description="${%howtojava}">
       <s:group>
         <s:preview fullWidth="true">
-          <f:entry title="${it.message}">
+          <f:entry>
+            ${it.message}<br/>
             ${it.greet}
           </f:entry>
         </s:preview>
         <s:code-panes>
           <s:code-pane title="Localize.java">
-            <s:code file="Localize.java"/>
+            <s:code language="java" file="Localize.java"/>
           </s:code-pane>
           <s:code-pane title="Messages.properties">
             <s:code file="Messages.properties"/>
@@ -47,7 +49,9 @@ THE SOFTWARE.
     <s:section title="${%titlejelly}" description="${%howtojelly}">
       <s:group>
         <s:preview fullWidth="true">
-          <f:entry title="${%How to localize texts in Jelly}">
+          <f:entry>
+            ${%How to localize texts in Jelly}<br/>
+            ${%longtext}<br/>
             ${%hello('World')}
           </f:entry>
         </s:preview>

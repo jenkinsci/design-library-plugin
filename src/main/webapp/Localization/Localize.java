@@ -1,5 +1,3 @@
-package my.plugin.pkg;
-
 public class Localize {
     public String getMessage() {
         return Messages.Localize_message();

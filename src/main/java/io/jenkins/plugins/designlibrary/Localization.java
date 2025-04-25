@@ -7,7 +7,7 @@ public class Localization extends UISample {
 
     @Override
     public String getIconFileName() {
-        return "symbol-globe-outline plugin-ionicons-api";
+        return "symbol-language-outline plugin-ionicons-api";
     }
 
     @Override
