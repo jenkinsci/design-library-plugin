@@ -34,6 +34,11 @@ public class Select extends UISample {
         return null;
     }
 
+    private Unit unit;
+    public Unit getUnit() {
+        return unit;
+    }
+
     public DescriptorExtensionList<Fruit, Descriptor<Fruit>> getFruitDescriptors() {
         return Jenkins.get().getDescriptorList(Fruit.class);
     }
@@ -182,4 +187,22 @@ public class Select extends UISample {
         "Wisconsin",
         "Wyoming"
     };
+
+    public enum Unit {
+        MILLISECONDS("Milliseconds"),
+        SECONDS("Seconds"),
+        MINUTES("Minutes"),
+        HOURS("Hours"),
+        DAYS("Days");
+
+        private final String description;
+
+        Unit(String description) {
+            this.description = description;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+    }
 }

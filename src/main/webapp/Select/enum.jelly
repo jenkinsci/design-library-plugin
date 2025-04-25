@@ -1,0 +1,5 @@
+<f:entry title="Unit" field="unit">
+  <f:enum default="SECONDS">
+    ${it.description}
+  </f:enum>
+</f:entry>
