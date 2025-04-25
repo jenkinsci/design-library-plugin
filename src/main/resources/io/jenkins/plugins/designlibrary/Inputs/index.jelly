@@ -28,11 +28,12 @@
       <s:group>
         <s:preview>
           <f:entry title="Example" field="example">
-            <f:textbox />
+            <f:textbox placeholder="Enter an example"/>
           </f:entry>
         </s:preview>
         <s:code file="example.jelly" />
       </s:group>
+      <p class="jdl-paragraph">${%textbox.usage}</p>
     </s:section>
 
     <s:section title="${%Search}">
