@@ -12,7 +12,7 @@
       "matchDatasources": ["npm"],
       "addLabels": ["javascript"],
       "minimumReleaseAge": "3 days"
-    },
+    }
   ],
   "customManagers": [
     {
