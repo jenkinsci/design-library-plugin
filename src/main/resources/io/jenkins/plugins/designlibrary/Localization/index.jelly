@@ -68,5 +68,62 @@ THE SOFTWARE.
         </s:code-panes>
       </s:group>
     </s:section>
+    <s:section title="${%titlejs}">
+      <h3 class="jdl-section__subtitle">
+        ${%howtojs-jelly-title}
+      </h3>
+      <p class="jdl-paragraph">
+        ${%howtojs-jelly-description}
+      </p>
+      <s:group>
+        <s:preview fullWidth="true">
+          <f:entry>
+            ${%How to localize texts in JavaScript}<br/>
+            ${%longtext}<br/>
+            ${%hello("World")}
+          </f:entry>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="localize.jelly">
+            <s:code file="localize-js.jelly"/>
+          </s:code-pane>
+          <s:code-pane title="localize.js">
+            <s:code language="js" file="localize-jelly.js"/>
+          </s:code-pane>
+          <s:code-pane title="localize.properties">
+            <s:code file="localize.properties"/>
+          </s:code-pane>
+          <s:code-pane title="localize_de.properties">
+            <s:code file="localize_de.properties"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+      <h3 class="jdl-section__subtitle">
+        ${%howtojs-java-title}
+      </h3>
+      <p class="jdl-paragraph">
+        ${%howtojs-java-description}
+      </p>
+      <s:group>
+        <s:preview fullWidth="true">
+          <f:entry>
+            ${%How to localize texts in JavaScript}<br/>
+            ${%longtext}<br/>
+            ${%hello("World")}
+          </f:entry>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="localize.js">
+            <s:code language="js" file="localize-java.js"/>
+          </s:code-pane>
+          <s:code-pane title="localize.properties">
+            <s:code file="localize.properties"/>
+          </s:code-pane>
+          <s:code-pane title="localize_de.properties">
+            <s:code file="localize_de.properties"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+    </s:section>
   </s:layout>
 </j:jelly>
