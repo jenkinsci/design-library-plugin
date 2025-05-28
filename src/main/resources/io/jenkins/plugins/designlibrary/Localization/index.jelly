@@ -70,10 +70,10 @@ THE SOFTWARE.
     </s:section>
     <s:section title="${%titlejs}">
       <h3 class="jdl-section__subtitle">
-        ${%howtojs-jelly-title}
+        ${%howtojsJellyTitle}
       </h3>
       <p class="jdl-paragraph">
-        ${%howtojs-jelly-description}
+        ${%howtojsJellyDescription}
       </p>
       <s:group>
         <s:preview fullWidth="true">
@@ -99,10 +99,10 @@ THE SOFTWARE.
         </s:code-panes>
       </s:group>
       <h3 class="jdl-section__subtitle">
-        ${%howtojs-java-title}
+        ${%howtojsJavaTitle}
       </h3>
       <p class="jdl-paragraph">
-        ${%howtojs-java-description}
+        ${%howtojsJavaDescription}
       </p>
       <s:group>
         <s:preview fullWidth="true">
