@@ -48,6 +48,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
     border-left: var(--jenkins-border);
     border-right: var(--jenkins-border);
     display: flex;
+    flex-wrap: wrap;
     gap: 0.9rem;
     padding: 1em;
 
