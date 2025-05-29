@@ -1,8 +1,8 @@
-const i18n = await (
-  await fetch(
-    `${JENKINS_URL}/i18n/resourceBundle?baseName=package.path.to.generated.class`,
-  )
-).json();
+const response = await fetch(
+  `${JENKINS_URL}/i18n/resourceBundle?baseName=io.jenkins.plugins.designlibrary.localize`,
+)
+const json = await response.json();
+const i18n = json.data;
 
 const localization = i18n["How to localize texts in Jelly"];
 const longText = i18n.longtext;
