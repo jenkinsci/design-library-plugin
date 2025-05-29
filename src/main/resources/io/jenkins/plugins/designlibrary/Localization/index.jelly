@@ -24,7 +24,6 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:layout>
-    <p class="jdl-paragraph jenkins-!-margin-bottom-3">${%leadParagraph}</p>
     <s:section title="${%titlejava}" description="${%howtojava}">
       <s:group>
         <s:preview fullWidth="true">
@@ -96,6 +95,9 @@ THE SOFTWARE.
           <s:code file="localize_de.properties"/>
         </s:code-pane>
       </s:code-panes>
+    </s:section>
+    <s:section>
+      <p class="jdl-paragraph">${%moreInfo}</p>
     </s:section>
   </s:layout>
 </j:jelly>
