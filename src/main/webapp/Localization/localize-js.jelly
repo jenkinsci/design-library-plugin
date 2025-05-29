@@ -1,0 +1,8 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core">
+  <template
+    id="plugin-i18n"
+    data-longtext="${%longtext}"
+    data-hello="${%hello}"
+  />
+</j:jelly>

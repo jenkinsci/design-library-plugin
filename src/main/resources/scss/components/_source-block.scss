@@ -45,9 +45,13 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
   &__tab-bar {
     background: var(--card-background);
+    border-top: var(--jenkins-border);
     border-left: var(--jenkins-border);
     border-right: var(--jenkins-border);
+    border-top-left-radius: 0.66rem;
+    border-top-right-radius: 0.66rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.9rem;
     padding: 1em;
 
@@ -111,6 +115,16 @@ $jdl-component-code-controls-spacing: 0.75rem;
         }
       }
     }
+  }
+}
+
+.jdl-tab-panes {
+  .jdl-component-code {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 0;
+    border-top: none;
   }
 }
 
