@@ -2,7 +2,6 @@
 <j:jelly xmlns:j="jelly:core">
   <template
     id="plugin-i18n"
-    data-localization="${%How to localize texts in Jelly}"
     data-longtext="${%longtext}"
     data-hello="${%hello}"
   />

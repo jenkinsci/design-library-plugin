@@ -24,33 +24,11 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:s="/lib/samples">
   <s:layout>
-    <s:section title="${%titlejava}" description="${%howtojava}">
-      <s:group>
-        <s:preview fullWidth="true">
-          <f:entry>
-            ${it.message}<br/>
-            ${it.greet}
-          </f:entry>
-        </s:preview>
-        <s:code-panes>
-          <s:code-pane title="Localize.java">
-            <s:code language="java" file="Localize.java"/>
-          </s:code-pane>
-          <s:code-pane title="Messages.properties">
-            <s:code file="Messages.properties"/>
-          </s:code-pane>
-          <s:code-pane title="Messages_de.properties">
-            <s:code file="Messages_de.properties"/>
-          </s:code-pane>
-        </s:code-panes>
-      </s:group>
-    </s:section>
     <s:section title="${%titlejelly}" description="${%howtojelly}">
       <s:group>
         <s:preview fullWidth="true">
           <f:entry>
-            ${%How to localize texts in Jelly}<br/>
-            ${%longtext}<br/>
+            ${%longtext}<br/><br/>
             ${%hello('World')}
           </f:entry>
         </s:preview>
@@ -66,6 +44,19 @@ THE SOFTWARE.
           </s:code-pane>
         </s:code-panes>
       </s:group>
+    </s:section>
+    <s:section title="${%titlejava}" description="${%howtojava}">
+      <s:code-panes>
+        <s:code-pane title="Localize.java">
+          <s:code language="java" file="Localize.java"/>
+        </s:code-pane>
+        <s:code-pane title="Messages.properties">
+          <s:code file="Messages.properties"/>
+        </s:code-pane>
+        <s:code-pane title="Messages_de.properties">
+          <s:code file="Messages_de.properties"/>
+        </s:code-pane>
+      </s:code-panes>
     </s:section>
     <s:section title="${%titlejsJelly}" description="${%howtojsJelly}">
       <s:code-panes>
