@@ -107,6 +107,7 @@
             min-height: 0;
             padding: 0.5rem;
             margin: -0.5rem;
+            transition: color var(--standard-transition);
 
             &::before {
               border: none;
@@ -114,6 +115,11 @@
 
             .jenkins-copy-button__icon {
               scale: 0.9;
+              transition: color 0s;
+            }
+
+            &:hover {
+              --text-color: unset;
             }
           }
         }
