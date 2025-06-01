@@ -102,9 +102,9 @@
             --button-background--hover: transparent !important;
             --button-background--active: transparent !important;
             --button-box-shadow--focus: transparent !important;
+            --text-color: var(--text-color-secondary);
 
             min-height: 0;
-            color: var(--text-color-secondary) !important;
             padding: 0.5rem;
             margin: -0.5rem;
 
