@@ -17,7 +17,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   color: var(--text-color) !important;
   text-decoration: none !important;
   gap: 0.15rem;
@@ -26,7 +25,7 @@
     gap: var(--jdl-spacing);
 
     .jdl-section__title {
-      margin-bottom: calc(var(--jdl-spacing) * -0.75);
+      margin-bottom: calc(var(--jdl-spacing) * -0.25);
     }
 
     .jdl-section__description {

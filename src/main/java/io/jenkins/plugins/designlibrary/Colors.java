@@ -13,7 +13,7 @@ public class Colors extends UISample {
 
     @Override
     public String getDescription() {
-        return "Defines the palette for consistent use of color throughout the design system.";
+        return "Defines the palette for consistent use of color.";
     }
 
     @Override
@@ -23,24 +23,25 @@ public class Colors extends UISample {
 
     public List<Semantic> getSemantics() {
         return List.of(
-                new Semantic("Accent", "Use for branding", "accent-color"),
-                new Semantic("Text", "Use for text", "text-color"),
-                new Semantic("Secondary text", "Use for secondary text", "text-color-secondary"),
-                new Semantic("Success", "Use for success states", "success-color"),
-                new Semantic("Warning", "Use for warning states", "warning-color"),
-                new Semantic("Error", "Use for error states", "error-color"),
-                new Semantic("Build", "Use for build kickoff", "build-color", "play"),
-                new Semantic("Destructive", "Use for destructive actions", "destructive-color", "trash"));
+                new Semantic("Accent", "Use for primary actions.", "accent-color"),
+                new Semantic("Text", "Use for text.", "text-color"),
+                new Semantic("Secondary text", "Use for secondary text.", "text-color-secondary"),
+                new Semantic("Success", "Use for success states.", "success-color"),
+                new Semantic("Warning", "Use for warning states.", "warning-color"),
+                new Semantic("Error", "Use for error states.", "error-color"),
+                new Semantic("Build", "Use for build kickoff.", "build-color", "play"),
+                new Semantic("Destructive", "Use for destructive actions.", "destructive-color", "trash"));
     }
 
     public List<Color> getColors() {
         List<Color> colors = List.of(
                 new Color("Red", "red"),
-                new Color("Green", "green"),
                 new Color("Orange", "orange"),
                 new Color("Yellow", "yellow"),
+                new Color("Green", "green"),
                 new Color("Blue", "blue"),
                 new Color("Cyan", "cyan"),
+                new Color("Teal", "teal"),
                 new Color("Indigo", "indigo"),
                 new Color("Purple", "purple"),
                 new Color("Pink", "pink"),

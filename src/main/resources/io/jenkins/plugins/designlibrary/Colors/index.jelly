@@ -28,7 +28,7 @@ THE SOFTWARE.
     <d:tag name="item">
       <li>
         <div class="jdl-colors__item" style="--color: var(--${item.className ?: item.variable}, grey);">
-          <p class="jdl-colors__item__title" >
+          <p class="jdl-colors__item__title ${item.className.contains('light') ? 'jdl-colors__item__title--light' : ''} ${item.className.contains('dark') ? 'jdl-colors__item__title--dark' : ''}">
             <j:if test="${item.symbol != null}">
               <l:icon src="symbol-${item.symbol}" />
             </j:if>
@@ -39,12 +39,12 @@ THE SOFTWARE.
               <p class="jdl-colors__item__contents__description">${item.description}</p>
             </j:if>
             <div class="jdl-colors__item__contents__line">
-              <span>var(--${item.className ?: item.variable})</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="var(--${item.className ?: item.variable})" iconOnly="true" />
-            </div>
-            <div class="jdl-colors__item__contents__line">
-              <span>.jenkins-!-${item.variable}</span>
-              <l:copyButton message="${%successfullyCopied}" tooltip="${%clickToCopy}" text="jenkins-!-${item.variable}" iconOnly="true" />
+              <l:copyButton label="Class"
+                            text="jenkins-!-${item.variable}"
+                            iconOnly="true" />
+              <l:copyButton label="CSS variable"
+                            text="var(--${item.className ?: item.variable})"
+                            iconOnly="true" />
             </div>
           </div>
         </div>
@@ -62,13 +62,10 @@ THE SOFTWARE.
         <tr>
           <td>${%tip-third}</td>
         </tr>
-        <tr>
-          <td>${%tip-fourth}</td>
-        </tr>
       </s:dos-donts>
     </s:section>
 
-    <s:section title="${%Semantics}">
+    <s:section title="${%Semantic}">
       <ol class="jdl-colors">
         <j:forEach var="item" items="${it.semantics}">
           <local:item item="${item}" />
