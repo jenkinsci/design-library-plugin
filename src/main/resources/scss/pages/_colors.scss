@@ -98,27 +98,22 @@
           gap: 1.5rem;
 
           .jenkins-button {
-            --button-background: transparent !important;
-            --button-background--hover: transparent !important;
-            --button-background--active: transparent !important;
-            --button-box-shadow--focus: transparent !important;
             --text-color: var(--text-color-secondary);
 
             min-height: 0;
-            padding: 0.5rem;
-            margin: -0.5rem;
+            padding: 0.5rem 0.625rem;
+            margin: -0.5rem -0.625rem;
             transition: color var(--standard-transition);
-
-            &::before {
-              border: none;
-            }
 
             .jenkins-copy-button__icon {
               scale: 0.9;
-              transition: color 0s;
+              transition:
+                all var(--standard-transition),
+                color 0s;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
               --text-color: unset;
             }
           }

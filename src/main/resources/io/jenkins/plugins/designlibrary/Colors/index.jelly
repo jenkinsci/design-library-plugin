@@ -40,9 +40,11 @@ THE SOFTWARE.
             </j:if>
             <div class="jdl-colors__item__contents__line">
               <l:copyButton label="Class"
-                            text="jenkins-!-${item.variable}" />
+                            text="jenkins-!-${item.variable}"
+                            iconOnly="true" />
               <l:copyButton label="CSS variable"
-                            text="var(--${item.className ?: item.variable})" />
+                            text="var(--${item.className ?: item.variable})"
+                            iconOnly="true" />
             </div>
           </div>
         </div>
