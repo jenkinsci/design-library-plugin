@@ -33,7 +33,7 @@
             <l:icon src="symbol-open-outline plugin-ionicons-api" />
           </a>
         </j:if>
-        <l:copyButton text="${code}" message="${%Copied}" tooltip="${%Copy code block}" clazz="jenkins-button--tertiary" />
+        <l:copyButton text="${code}" clazz="jenkins-button--tertiary" />
       </div>
     </div>
   </div>
