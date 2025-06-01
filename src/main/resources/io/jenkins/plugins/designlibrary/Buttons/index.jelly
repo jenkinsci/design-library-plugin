@@ -88,7 +88,7 @@ THE SOFTWARE.
     <s:section title="${%copy}" description="${%copy.description}">
       <s:group>
         <s:preview>
-          <l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
+          <l:copyButton text="A shoulder of lemon fields" />
         </s:preview>
         <s:code file="copyButton.jelly" />
       </s:group>
