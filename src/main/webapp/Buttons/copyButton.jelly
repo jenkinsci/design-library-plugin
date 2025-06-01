@@ -1,1 +1,1 @@
-<l:copyButton message="text copied" text="A shoulder of lemon fields" tooltip="Click to copy" />
+<l:copyButton text="A shoulder of lemon fields" />
