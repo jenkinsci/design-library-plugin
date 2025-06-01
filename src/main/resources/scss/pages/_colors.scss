@@ -56,15 +56,16 @@
         gap: 0.5rem;
         font-weight: var(--font-bold-weight);
         margin: 0;
-        padding: 0.3125rem 1rem;
+        padding: 0 1rem;
+        min-height: 2.25rem;
         background: var(--color);
         border-radius: 100px;
         border: var(--jenkins-border--subtle);
         color: var(--background);
 
         svg {
-          width: 1rem;
-          height: 1rem;
+          width: 1.125rem;
+          height: 1.125rem;
         }
 
         &--light {
