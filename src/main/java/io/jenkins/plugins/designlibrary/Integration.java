@@ -12,7 +12,7 @@ public class Integration extends UISample {
 
     @Override
     public String getDescription() {
-        return "Defines the palette for consistent use of color.";
+        return "Guidance for integrating your plugin further into Jenkins.";
     }
 
     @Override
