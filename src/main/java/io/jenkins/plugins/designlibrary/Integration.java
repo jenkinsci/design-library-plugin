@@ -20,6 +20,11 @@ public class Integration extends UISample {
         return Category.PATTERN;
     }
 
+    @Override
+    public String getSince() {
+        return "2.515";
+    }
+
     @Extension
     public static final class DescriptorImpl extends UISampleDescriptor {}
 }
