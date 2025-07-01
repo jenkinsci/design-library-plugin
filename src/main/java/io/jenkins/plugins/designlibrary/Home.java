@@ -27,6 +27,11 @@ public class Home implements RootAction {
         return "design-library";
     }
 
+    @Override
+    public boolean isPrimaryAction() {
+        return true;
+    }
+
     public List<UISample> getAll() {
         return UISample.getAll();
     }
