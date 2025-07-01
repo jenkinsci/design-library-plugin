@@ -6,7 +6,6 @@ import hudson.model.RootAction;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
-
 import jenkins.model.Jenkins;
 
 /**
@@ -76,15 +75,15 @@ public class Home implements RootAction {
         private static final int LAYERS = 10;
 
         private static final String[] COLOURS = {
-                "var(--light-orange)",
-                "var(--light-cyan)",
-                "var(--light-pink)",
-                "var(--light-red)",
-                "var(--light-yellow)",
-                "var(--light-purple)",
-                "var(--light-teal)",
-                "var(--light-indigo)",
-                "var(--light-brown)"
+            "var(--light-orange)",
+            "var(--light-cyan)",
+            "var(--light-pink)",
+            "var(--light-red)",
+            "var(--light-yellow)",
+            "var(--light-purple)",
+            "var(--light-teal)",
+            "var(--light-indigo)",
+            "var(--light-brown)"
         };
 
         private GradientFactory() {}
@@ -98,10 +97,7 @@ public class Home implements RootAction {
                 int y = rnd.nextInt(101);
                 String colour = COLOURS[rnd.nextInt(COLOURS.length)];
 
-                css.append(String.format(
-                        "radial-gradient(at %d%% %d%%, %s 0, transparent 50%%)",
-                        x, y, colour
-                ));
+                css.append(String.format("radial-gradient(at %d%% %d%%, %s 0, transparent 50%%)", x, y, colour));
 
                 css.append(i < LAYERS - 1 ? ",\n  " : ";");
             }
