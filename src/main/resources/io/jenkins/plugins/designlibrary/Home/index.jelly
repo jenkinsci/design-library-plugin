@@ -8,6 +8,12 @@
     </l:side-panel>
 
     <l:main-panel>
+      <style>
+        :root {
+          ${it.buildGradientVar()}
+        }
+      </style>
+
       <s:section hideBorder="true">
         <div class="app-card__container app-card__container--large">
           <div class="app-card__preview">
@@ -15,8 +21,8 @@
               <img src="${imagesURL}/svgs/logo.svg" alt="${%Jenkins illustration}" />
             </div>
           </div>
-          <p class="jdl-section__title">${%welcome}</p>
-          <p class="jdl-section__description">${%description}</p>
+          <p class="app-card__title">${%welcome}</p>
+          <p class="app-card__description">${%description}</p>
         </div>
       </s:section>
 
