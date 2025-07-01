@@ -70,7 +70,7 @@ public class Home implements RootAction {
         return GradientFactory.buildGradientVar();
     }
 
-    public static final class GradientFactory {
+    private static final class GradientFactory {
 
         private static final int LAYERS = 10;
 
