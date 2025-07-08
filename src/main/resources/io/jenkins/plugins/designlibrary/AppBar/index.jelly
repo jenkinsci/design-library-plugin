@@ -28,6 +28,9 @@
           <td>${%topAppBar.do.2}</td>
           <td>${%topAppBar.dont.2}</td>
         </tr>
+        <tr>
+          <td>${%topAppBar.do.3}</td>
+        </tr>
       </s:dos-donts>
     </s:section>
 
