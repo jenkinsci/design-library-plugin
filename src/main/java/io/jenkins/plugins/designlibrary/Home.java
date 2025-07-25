@@ -5,6 +5,7 @@ import hudson.PluginWrapper;
 import hudson.model.RootAction;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 import jenkins.model.Jenkins;
 
 /**
@@ -25,6 +26,11 @@ public class Home implements RootAction {
 
     public String getUrlName() {
         return "design-library";
+    }
+
+    @Override
+    public boolean isPrimaryAction() {
+        return true;
     }
 
     public List<UISample> getAll() {
@@ -55,5 +61,47 @@ public class Home implements RootAction {
             return plugin.getVersion();
         }
         return "Version not available";
+    }
+
+    /**
+     * Generates a dynamic gradient for the Home cards
+     */
+    public String buildGradientVar() {
+        return GradientFactory.buildGradientVar();
+    }
+
+    private static final class GradientFactory {
+
+        private static final int LAYERS = 10;
+
+        private static final String[] COLOURS = {
+            "var(--light-orange)",
+            "var(--light-cyan)",
+            "var(--light-pink)",
+            "var(--light-red)",
+            "var(--light-yellow)",
+            "var(--light-purple)",
+            "var(--light-teal)",
+            "var(--light-indigo)",
+            "var(--light-brown)"
+        };
+
+        private GradientFactory() {}
+
+        public static String buildGradientVar() {
+            StringBuilder css = new StringBuilder("--aurora").append(": \n  ");
+
+            ThreadLocalRandom rnd = ThreadLocalRandom.current();
+            for (int i = 0; i < LAYERS; i++) {
+                int x = rnd.nextInt(101);
+                int y = rnd.nextInt(101);
+                String colour = COLOURS[rnd.nextInt(COLOURS.length)];
+
+                css.append(String.format("radial-gradient(at %d%% %d%%, %s 0, transparent 50%%)", x, y, colour));
+
+                css.append(i < LAYERS - 1 ? ",\n  " : ";");
+            }
+            return css.toString();
+        }
     }
 }
