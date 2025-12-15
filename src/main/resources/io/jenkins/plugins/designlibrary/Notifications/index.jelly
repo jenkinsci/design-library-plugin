@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:st="jelly:stapler">
   <s:layout>
     <s:section title="Default">
       <s:group>
@@ -17,6 +17,7 @@
         </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Default')"
+                callback="showDefault"
                 executable="true"/>
       </s:group>
     </s:section>
@@ -37,6 +38,7 @@
         </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Success', notificationBar.SUCCESS)"
+                callback="showSuccess"
                 executable="true"/>
       </s:group>
     </s:section>
@@ -57,6 +59,7 @@
         </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Warning', notificationBar.WARNING)"
+                callback="showWarning"
                 executable="true"/>
       </s:group>
     </s:section>
@@ -77,6 +80,7 @@
         </s:preview>
         <s:code language="java"
                 code="notificationBar.show('Error', notificationBar.ERROR)"
+                callback="showError"
                 executable="true"/>
       </s:group>
     </s:section>
@@ -84,7 +88,9 @@
     <s:section title="Closing notifications" description="${%usage.2}">
       <s:code language="java"
               code="notificationBar.hide()"
+              callback="hideNotification"
               executable="true"/>
     </s:section>
   </s:layout>
+  <st:adjunct includes="io.jenkins.plugins.designlibrary.Notifications.adjunct" />
 </j:jelly>
