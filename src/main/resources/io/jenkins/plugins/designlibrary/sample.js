@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const url = document.querySelector("head").dataset.rooturl;
 
   document.querySelectorAll(".callback-button").forEach((element) => {
-    let callback = element.dataset.callback
+    let callback = element.dataset.callback;
     element.onclick = () => {
       if (
         callback &&

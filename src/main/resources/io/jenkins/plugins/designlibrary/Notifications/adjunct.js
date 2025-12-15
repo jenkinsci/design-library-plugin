@@ -1,17 +1,17 @@
 function showDefault() {
-  notificationBar.show('Default');
+  notificationBar.show("Default");
 }
 
 function showSuccess() {
-  notificationBar.show('Success', notificationBar.SUCCESS);
+  notificationBar.show("Success", notificationBar.SUCCESS);
 }
 
 function showWarning() {
-  notificationBar.show('Warning', notificationBar.WARNING);
+  notificationBar.show("Warning", notificationBar.WARNING);
 }
 
 function showError() {
-  notificationBar.show('Error', notificationBar.ERROR);
+  notificationBar.show("Error", notificationBar.ERROR);
 }
 
 function hideNotification() {
