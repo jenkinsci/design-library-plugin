@@ -3,18 +3,26 @@
   <st:documentation>
     Displays a copyable code snippet.
 
-    <st:attribute name="code" />
-    <st:attribute name="file" />
+    <st:attribute name="code">
+      Code snippet to be displayed if and only if "file" is not set.
+    </st:attribute>
+    <st:attribute name="callback">
+      JavaScript function to be called when the "Execute code" button is clicked.
+      If "code" attribute is set, these two attributes should be in sync ("code" cannot be inline JS anymore due to CSP).
+    </st:attribute>
+    <st:attribute name="file">
+      File containing the code snippet to be displayed.
+      If the "callback" attribute is set, the file will be referenced in a script tag, so that it can be invoked.
+    </st:attribute>
     <st:attribute name="language" use="optional">
       Defaults to 'xml'.
     </st:attribute>
-    <st:attribute name="executable" type="boolean" />
     <st:attribute name="previewable" type="boolean" />
   </st:documentation>
 
   <div class="jdl-component-code">
     <pre class="jdl-component-code__code">
-      <code class="language-${language != null ? language : 'xml'} ${file != null ? 'sample-remote' : ''}" data-component-name="${it.class.simpleName}" data-sample="${file}" data-executable="${executable}">
+      <code class="language-${language != null ? language : 'xml'} ${file != null ? 'sample-remote' : ''}" data-component-name="${it.class.simpleName}" data-sample="${file}" data-executable="${callback != null}">
         ${code}
       </code>
     </pre>
@@ -22,9 +30,9 @@
       <div>
         <d:invokeBody />
 
-        <j:if test="${executable != null}">
+        <j:if test="${callback != null}">
           <!-- This only works if the 'code' attribute is set -->
-          <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color" onclick="${code}" tooltip="${%Execute code}">
+          <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color callback-button" data-callback="${callback}" tooltip="${%Execute code}">
             <l:icon src="symbol-play" />
           </button>
         </j:if>
