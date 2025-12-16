@@ -130,7 +130,7 @@ THE SOFTWARE.
             <goals>
               <goal>npm</goal>
             </goals>
-            <phase>install</phase>
+            <phase>verify</phase>
             <configuration>
               <arguments>run lint</arguments>
             </configuration>
