@@ -8,7 +8,7 @@
     <l:task title="${%Home}" href="${rootURL}/design-library" icon="symbol-design-library plugin-design-library" contextMenu="false" />
 
     <j:forEach var="s" items="${it.grouped.entrySet()}">
-      <div class="app-sidepanel__heading">${s.key.displayName}</div>
+      <div class="jenkins-side-nav__heading">${s.key.displayName}</div>
       <j:forEach var="s" items="${s.value}">
         <l:task title="${s.displayName}" href="${rootURL}/design-library/${s.urlName}" icon="${s.iconFileName}" />
       </j:forEach>

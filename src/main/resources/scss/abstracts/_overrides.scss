@@ -14,15 +14,6 @@
   }
 }
 
-#main-panel {
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 1200px) {
-    max-width: min(1200px, 60vw);
-  }
-}
-
 code {
   font-family: var(--font-family-mono) !important;
   color: var(--text-color-secondary);
@@ -34,11 +25,4 @@ a {
   code {
     color: unset;
   }
-}
-
-.app-sidepanel__heading {
-  font-size: 0.875rem;
-  color: var(--text-color-secondary);
-  font-weight: 450;
-  margin: 1rem 0 0.25rem 0;
 }
