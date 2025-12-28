@@ -1,19 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    ":semanticCommitsDisabled",
-    "schedule:monthly"
+    "github>jenkinsci/renovate-config"
   ],
-  "reviewers": ["team:sig-ux"],
   "automerge": true,
-  "packageRules": [
-    {
-      "matchDatasources": ["npm"],
-      "addLabels": ["javascript"],
-      "minimumReleaseAge": "3 days"
-    }
-  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -29,7 +19,5 @@
       "depNameTemplate": "npm",
       "datasourceTemplate": "npm"
     }
-  ],
-  "labels": ["dependencies"],
-  "rebaseWhen": "conflicted"
+  ]
 }
