@@ -1,0 +1,38 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <s:layout>
+    <s:section title="${%topAppBar}" description="${%topAppBar.description}">
+      <s:group>
+        <s:preview fullWidth="true">
+          <div class="jdl-app-bars-page__example jdl-app-bars-page__example--top">
+            <l:pageHeader title="${null}"
+                          logoAlt="${null}"
+                          searchPlaceholder="${null}"
+                          searchHelpUrl="$null}"
+                          logout="${null}"/>
+          </div>
+        </s:preview>
+        <s:code file="topAppBar.jelly" />
+      </s:group>
+
+      <div>
+        is your plugin tied to a single page/context? if so it should live on that page inside of the app bar.
+      </div>
+
+      <div>
+        is your plugin a management item? it should live in manage jenkins then
+      </div>
+
+      <s:dos-donts>
+        <tr>
+          <td>${%topAppBar.do.1}</td>
+          <td>${%topAppBar.dont.1}</td>
+        </tr>
+        <tr>
+          <td>${%topAppBar.do.2}</td>
+          <td>${%topAppBar.dont.2}</td>
+        </tr>
+      </s:dos-donts>
+    </s:section>
+  </s:layout>
+</j:jelly>
