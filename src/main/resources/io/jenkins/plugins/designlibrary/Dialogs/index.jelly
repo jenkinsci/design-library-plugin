@@ -1,5 +1,5 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form">
   <s:layout>
     <s:section hideBorder="true">
       <s:group>
@@ -23,28 +23,24 @@
                   <div class="setting-main">
                     <input name="username" id="username" type="text" class="jenkins-input" />
                   </div>
-                  <div class="validation-error-area"></div>
                 </div>
                 <div class="jenkins-form-item tr ">
                   <div class="jenkins-form-label help-sibling">Password</div>
                   <div class="setting-main">
                     <input name="password1" type="password" class="jenkins-input" />
                   </div>
-                  <div class="validation-error-area"></div>
                 </div>
                 <div class="jenkins-form-item tr ">
                   <div class="jenkins-form-label help-sibling">Confirm password</div>
                   <div class="setting-main">
                     <input name="password2" type="password" class="jenkins-input" />
                   </div>
-                  <div class="validation-error-area"></div>
                 </div>
-                <div class="jenkins-form-item tr ">
+                <div class="jenkins-form-item">
                   <div class="jenkins-form-label help-sibling">Full name</div>
                   <div class="setting-main">
                     <input name="fullname" type="text" class="jenkins-input" />
                   </div>
-                  <div class="validation-error-area"></div>
                 </div>
                 <div class="jenkins-bottom-app-bar__shadow jenkins-bottom-app-bar__shadow--stuck"></div>
                 <div id="bottom-sticker" class="">
@@ -54,13 +50,6 @@
                       Create
                     </button>
                   </div>
-                </div>
-                <div class="jenkins-!-display-contents">
-                  <input type="hidden" name="Jenkins-Crumb"
-                         value="528a5d48681a8ce66a3a73863b2aae668cf45ae14665be7f5f8c17ef08a9ad04" />
-                </div>
-                <div class="jenkins-!-display-contents">
-                  <input type="hidden" name="json" value="init" />
                 </div>
               </form>
             </div>
@@ -77,7 +66,7 @@
               </button>
             </s:code>
           </s:code-pane>
-          <s:code-pane title="Jelly">
+          <s:code-pane title="index.jelly">
             <s:code file="button.jelly"/>
           </s:code-pane>
         </s:code-panes>
@@ -85,17 +74,18 @@
       <p class="jdl-paragraph">${%modals}</p>
     </s:section>
 
-    <s:section title="Alerts">
+    <s:section title="${%Alerts}">
       <s:group>
         <s:preview>
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Example alert</div>
-            <div class="jenkins-dialog__contents">I'm an example of an error alert.</div>
-            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
-              <button data-id="ok" type="button"
-                      class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK
-              </button>
-              <button data-id="cancel" class="jenkins-button" style="display: none;">Cancel</button>
+            <div class="jenkins-dialog__contents">
+              <div class="jenkins-!-text-color-secondary">I'm an example of an error alert.</div>
+              <f:bottomButtonBar borderless="true">
+                <button data-id="ok" type="button"
+                        class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK
+                </button>
+              </f:bottomButtonBar>
             </div>
           </dialog>
         </s:preview>
@@ -109,10 +99,12 @@
         <s:preview>
           <dialog class="jenkins-dialog" open="" style="max-width: 475px; min-width: 450px;">
             <div class="jenkins-dialog__title">Do it</div>
-            <div class="jenkins-dialog__contents">Are you sure?</div>
-            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
-              <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary ">Yes</button>
-              <button data-id="cancel" class="jenkins-button">No</button>
+            <div class="jenkins-dialog__contents">
+              <div class="jenkins-!-text-color-secondary">Are you sure?</div>
+              <f:bottomButtonBar borderless="true">
+                <button data-id="cancel" class="jenkins-button">No</button>
+                <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary">Yes</button>
+              </f:bottomButtonBar>
             </div>
           </dialog>
         </s:preview>
@@ -121,7 +113,7 @@
       <p class="jdl-paragraph">${%confirmations}</p>
     </s:section>
 
-    <s:section title="Customizing the appearance and behaviour">
+    <s:section title="${%Customizing the appearance and behaviour}">
       <div class="jdl-paragraph">All dialogs take a second optional parameter with options that allow to change certain
         aspects.
       </div>
