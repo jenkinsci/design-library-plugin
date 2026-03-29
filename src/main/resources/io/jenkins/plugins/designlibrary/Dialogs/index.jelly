@@ -75,7 +75,7 @@
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Example alert</div>
             <div class="jenkins-dialog__contents">
-              <div class="jenkins-!-text-color-secondary">I'm an example of an error alert.</div>
+              <div class="jenkins-form-item jenkins-!-text-color-secondary">I'm an example of an error alert.</div>
               <f:bottomButtonBar borderless="true">
                 <button data-id="ok" type="button"
                         class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK
@@ -95,7 +95,7 @@
           <dialog class="jenkins-dialog" open="" style="max-width: 475px; min-width: 450px;">
             <div class="jenkins-dialog__title">Do it</div>
             <div class="jenkins-dialog__contents">
-              <div class="jenkins-!-text-color-secondary">Are you sure?</div>
+              <div class="jenkins-form-item jenkins-!-text-color-secondary">Are you sure?</div>
               <f:bottomButtonBar borderless="true">
                 <button data-id="cancel" class="jenkins-button">No</button>
                 <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary">Yes</button>
