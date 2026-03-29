@@ -38,9 +38,19 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
   &__controls {
     display: flex;
-    flex-direction: column;
+    align-items: start;
+    gap: var(--jenkins-border-width);
     height: 100%;
     padding: $jdl-component-code-controls-spacing;
+
+    .jenkins-button {
+      aspect-ratio: 1;
+      padding-inline: 0;
+    }
+
+    [data-message-insecure] {
+      display: contents;
+    }
   }
 
   &__tab-bar {

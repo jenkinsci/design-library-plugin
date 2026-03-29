@@ -1,0 +1,5 @@
+<button class="jenkins-button"
+        data-type="dialog-opener"
+        data-dialog-url="modalDialog">
+  Open dialog
+</button>

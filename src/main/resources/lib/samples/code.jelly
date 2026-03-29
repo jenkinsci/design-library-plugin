@@ -27,22 +27,20 @@
       </code>
     </pre>
     <div class="jdl-component-code__controls">
-      <div>
-        <d:invokeBody />
+      <d:invokeBody />
 
-        <j:if test="${callback != null}">
-          <!-- This only works if the 'code' attribute is set -->
-          <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color callback-button" data-callback="${callback}" tooltip="${%Execute code}">
-            <l:icon src="symbol-play" />
-          </button>
-        </j:if>
-        <j:if test="${previewable == 'true'}">
-          <a href="${file.replace('.jelly', '')}" class="jenkins-button jenkins-button--tertiary" tooltip="${%Preview in new tab}" target="_blank">
-            <l:icon src="symbol-open-outline plugin-ionicons-api" />
-          </a>
-        </j:if>
-        <l:copyButton text="${code}" clazz="jenkins-button--tertiary" />
-      </div>
+      <j:if test="${callback != null}">
+        <!-- This only works if the 'code' attribute is set -->
+        <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color callback-button" data-callback="${callback}" tooltip="${%Execute code}">
+          <l:icon src="symbol-play" />
+        </button>
+      </j:if>
+      <j:if test="${previewable == 'true'}">
+        <a href="${file.replace('.jelly', '')}" class="jenkins-button jenkins-button--tertiary" tooltip="${%Preview in new tab}" target="_blank">
+          <l:icon src="symbol-open-outline plugin-ionicons-api" />
+        </a>
+      </j:if>
+      <l:copyButton text="${code}" clazz="jenkins-button--tertiary" />
     </div>
   </div>
 </j:jelly>

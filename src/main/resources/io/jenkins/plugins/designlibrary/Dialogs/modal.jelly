@@ -1,11 +1,10 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:st="jelly:stapler"
-         xmlns:local="/hudson/security/HudsonPrivateSecurityRealm" xmlns:f="/lib/form">
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:st="jelly:stapler" xmlns:f="/lib/form">
   <st:setHeader name="X-Dialog-Title" value="${%Create User}" />
 
   <l:ajax>
     <form action="${rootURL}/securityRealm/createAccountByAdmin" method="post">
-      <local:_entryForm action="createAccountByAdmin" captcha="${captcha}" it="${it}" data="${data}" />
+      hello world
       <f:bottomButtonBar>
         <f:submit value="${%Create}" />
       </f:bottomButtonBar>
