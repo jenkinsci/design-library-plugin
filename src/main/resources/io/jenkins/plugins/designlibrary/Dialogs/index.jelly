@@ -16,21 +16,20 @@
               </button>
             </div>
             <div class="jenkins-dialog__contents jenkins-dialog__contents--modal">
-              <template></template>
-              <form method="post" action="/jenkins/securityRealm/createAccountByAdmin">
-                <div class="jenkins-form-item tr ">
+              <form method="post">
+                <div class="jenkins-form-item">
                   <div class="jenkins-form-label help-sibling">Username</div>
                   <div class="setting-main">
                     <input name="username" id="username" type="text" class="jenkins-input" />
                   </div>
                 </div>
-                <div class="jenkins-form-item tr ">
+                <div class="jenkins-form-item">
                   <div class="jenkins-form-label help-sibling">Password</div>
                   <div class="setting-main">
                     <input name="password1" type="password" class="jenkins-input" />
                   </div>
                 </div>
-                <div class="jenkins-form-item tr ">
+                <div class="jenkins-form-item">
                   <div class="jenkins-form-label help-sibling">Confirm password</div>
                   <div class="setting-main">
                     <input name="password2" type="password" class="jenkins-input" />
@@ -42,15 +41,11 @@
                     <input name="fullname" type="text" class="jenkins-input" />
                   </div>
                 </div>
-                <div class="jenkins-bottom-app-bar__shadow jenkins-bottom-app-bar__shadow--stuck"></div>
-                <div id="bottom-sticker" class="">
-                  <div class="bottom-sticker-inner jenkins-buttons-row jenkins-buttons-row--equal-width">
-                    <button formnovalidate="formNoValidate" name="Submit" value="Create"
-                            class="jenkins-button jenkins-submit-button jenkins-button--primary ">
-                      Create
-                    </button>
-                  </div>
-                </div>
+                <f:bottomButtonBar borderless="true">
+                  <button class="jenkins-button jenkins-submit-button jenkins-button--primary">
+                    Create
+                  </button>
+                </f:bottomButtonBar>
               </form>
             </div>
           </dialog>
@@ -61,7 +56,7 @@
               <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color"
                       data-type="dialog-opener"
                       data-dialog-url="modal"
-                      tooltip="${%Open dialog}">
+                      tooltip="${%Execute code}">
                 <l:icon src="symbol-play" />
               </button>
             </s:code>

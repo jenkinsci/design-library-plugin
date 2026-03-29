@@ -3,10 +3,35 @@
   <st:setHeader name="X-Dialog-Title" value="${%Create User}" />
 
   <l:ajax>
-    <form action="${rootURL}/securityRealm/createAccountByAdmin" method="post">
-      hello world
-      <f:bottomButtonBar>
-        <f:submit value="${%Create}" />
+    <form method="post">
+      <div class="jenkins-form-item">
+        <div class="jenkins-form-label help-sibling">Username</div>
+        <div class="setting-main">
+          <input name="username" id="username" type="text" class="jenkins-input" />
+        </div>
+      </div>
+      <div class="jenkins-form-item">
+        <div class="jenkins-form-label help-sibling">Password</div>
+        <div class="setting-main">
+          <input name="password1" type="password" class="jenkins-input" />
+        </div>
+      </div>
+      <div class="jenkins-form-item">
+        <div class="jenkins-form-label help-sibling">Confirm password</div>
+        <div class="setting-main">
+          <input name="password2" type="password" class="jenkins-input" />
+        </div>
+      </div>
+      <div class="jenkins-form-item">
+        <div class="jenkins-form-label help-sibling">Full name</div>
+        <div class="setting-main">
+          <input name="fullname" type="text" class="jenkins-input" />
+        </div>
+      </div>
+      <f:bottomButtonBar borderless="true">
+        <button class="jenkins-button jenkins-submit-button jenkins-button--primary">
+          Create
+        </button>
       </f:bottomButtonBar>
     </form>
   </l:ajax>
