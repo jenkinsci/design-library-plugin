@@ -4,43 +4,25 @@
     <s:section hideBorder="true">
       <s:group>
         <s:preview>
-          <dialog class="jenkins-dialog" open="" style="max-width: 475px; min-width: min(550px, 100vw);">
+          <dialog class="jenkins-dialog" style="max-width: 475px; min-width: min(550px, 100vw);">
             <div class="jenkins-dialog__title">
               <span>Create User</span>
               <button class="jenkins-dialog__title__button jenkins-dialog__title__close-button jenkins-button">
                 <span class="jenkins-visually-hidden">Close</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="32" d="M368 368L144 144M368 144L144 368"></path>
-                </svg>
+                <l:icon src="symbol-close" />
               </button>
             </div>
             <div class="jenkins-dialog__contents jenkins-dialog__contents--modal">
               <form method="post">
-                <div class="jenkins-form-item">
-                  <div class="jenkins-form-label help-sibling">Username</div>
-                  <div class="setting-main">
-                    <input name="username" id="username" type="text" class="jenkins-input" />
-                  </div>
-                </div>
-                <div class="jenkins-form-item">
-                  <div class="jenkins-form-label help-sibling">Password</div>
-                  <div class="setting-main">
-                    <input name="password1" type="password" class="jenkins-input" />
-                  </div>
-                </div>
-                <div class="jenkins-form-item">
-                  <div class="jenkins-form-label help-sibling">Confirm password</div>
-                  <div class="setting-main">
-                    <input name="password2" type="password" class="jenkins-input" />
-                  </div>
-                </div>
-                <div class="jenkins-form-item">
-                  <div class="jenkins-form-label help-sibling">Full name</div>
-                  <div class="setting-main">
-                    <input name="fullname" type="text" class="jenkins-input" />
-                  </div>
-                </div>
+                <f:entry title="Username">
+                  <f:textbox />
+                </f:entry>
+                <f:entry title="Email">
+                  <f:textbox />
+                </f:entry>
+                <f:entry title="Password">
+                  <f:password />
+                </f:entry>
                 <f:bottomButtonBar borderless="true">
                   <button class="jenkins-button jenkins-submit-button jenkins-button--primary">
                     Create
