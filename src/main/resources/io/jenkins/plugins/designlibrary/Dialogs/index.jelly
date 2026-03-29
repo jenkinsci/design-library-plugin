@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout">
   <s:layout>
-    <s:section title="${%Modals}">
+    <s:section hideBorder="true">
       <s:group>
         <s:preview>
           <dialog class="jenkins-dialog" open="" style="max-width: 475px; min-width: min(550px, 100vw);">

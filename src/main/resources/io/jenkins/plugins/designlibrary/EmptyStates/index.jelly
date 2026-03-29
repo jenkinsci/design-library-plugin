@@ -25,7 +25,7 @@ THE SOFTWARE.
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:f="/lib/form" xmlns:l="/lib/layout">
   <s:layout>
-    <s:section>
+    <s:section hideBorder="true">
       <s:group>
         <s:preview>
             <l:notice title="${%noticeTitle}" icon="symbol-plugins" />
@@ -44,7 +44,7 @@ THE SOFTWARE.
       <s:group>
         <s:preview>
           <l:notice title="${%childNoticeTitle}" icon="symbol-weather-icon-health-00to19">
-            <button 
+            <button
               type="button"
               class="jenkins-button jenkins-button--secondary">
               ${%newJobText}
