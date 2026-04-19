@@ -25,7 +25,7 @@ public class Dialogs extends UISample {
 
     @Override
     public String getSince() {
-        return "2.558";
+        return "2.560";
     }
 
     @Extension
