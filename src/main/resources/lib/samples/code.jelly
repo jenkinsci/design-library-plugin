@@ -20,9 +20,11 @@
     <st:attribute name="previewable" type="boolean" />
   </st:documentation>
 
+  <j:set var="code" value="${attrs.code ?: it.getCode(it.class.simpleName + '/' + attrs.file)}" />
+
   <div class="jdl-component-code">
     <pre class="jdl-component-code__code">
-      <code class="language-${language != null ? language : 'xml'} ${file != null ? 'sample-remote' : ''}" data-component-name="${it.class.simpleName}" data-sample="${file}" data-executable="${callback != null}">
+      <code class="language-${language != null ? language : 'xml'}" data-component-name="${it.class.simpleName}" data-executable="${callback != null}">
         ${code}
       </code>
     </pre>
@@ -30,7 +32,6 @@
       <d:invokeBody />
 
       <j:if test="${callback != null}">
-        <!-- This only works if the 'code' attribute is set -->
         <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color callback-button" data-callback="${callback}" tooltip="${%Execute code}">
           <l:icon src="symbol-play" />
         </button>
