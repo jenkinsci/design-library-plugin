@@ -8,7 +8,7 @@
   padding: var(--jdl-spacing);
   z-index: 0;
   gap: 1rem;
-  border-radius: 0.66rem;
+  border-radius: var(--form-input-border-radius);
   border: var(--jenkins-border);
   background: linear-gradient(
     45deg,

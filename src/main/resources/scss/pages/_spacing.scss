@@ -79,7 +79,7 @@
 
   position: relative;
   border: var(--jenkins-border-width) dashed var(--box-color);
-  border-radius: 0.66rem;
+  border-radius: var(--form-input-border-radius);
   transition: var(--elastic-transition);
   z-index: 0;
 
@@ -94,7 +94,7 @@
   }
 
   &[class$="-0"] p {
-    border-radius: 0.66rem;
+    border-radius: var(--form-input-border-radius);
   }
 
   p {
