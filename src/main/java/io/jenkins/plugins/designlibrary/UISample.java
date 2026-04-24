@@ -78,6 +78,10 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
     }
 
+    /**
+     * Loads a file from this plugin's web resources, for example {@code AppBar/bottomAppBar.jelly}.
+     * Returns the file contents as UTF-8 text and throws if the path is invalid or unreadable.
+     */
     @Restricted(NoExternalUse.class)
     public String getCode(String path) throws IOException {
         if (path == null || path.isBlank()) {
