@@ -40,6 +40,7 @@ $jdl-component-code-controls-spacing: 0.75rem;
   z-index: 0;
   border-radius: 0.66rem;
   border: var(--jenkins-border);
+  z-index: 1;
 
   &::before {
     content: "";
