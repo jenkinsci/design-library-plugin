@@ -38,7 +38,7 @@
 
       <s:dos-donts>
         <s:do>${%do.1}</s:do>
-        <s:do>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</s:do>
+        <s:do>${%do.2}</s:do>
         <s:do>${%do.3}</s:do>
         <s:dont>${%dont.1}</s:dont>
         <s:dont>${%dont.2}</s:dont>
