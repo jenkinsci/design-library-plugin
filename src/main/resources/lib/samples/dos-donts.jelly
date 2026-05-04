@@ -7,45 +7,48 @@
   <j:set var="titleLabel" value="${%title}" />
   <j:set var="doLabel" value="${%do}" />
   <j:set var="dontLabel" value="${%dont}" />
-  <j:set var="body" encode="false"><d:invokeBody escapeText="false" /></j:set>
-  <j:set var="content" value="${it.markdownRenderer.dosDontsContent(body)}" />
+  <j:scope>
+    <j:useList var="dos" />
+    <j:useList var="donts" />
+    <d:invokeBody escapeText="false" />
 
-  <j:choose>
-    <j:when test="${it.markdownView}">
-      <j:out value="${it.markdownRenderer.dosDonts(titleLabel, doLabel, dontLabel, body)}" />
-    </j:when>
-    <j:otherwise>
-      <j:if test="${!content.isEmpty()}">
-        <div class="jdl-dos-donts">
-          <j:if test="${!content.dos.isEmpty()}">
-            <section class="jdl-dos-donts__column jdl-dos-donts__column--do">
-              <h3 class="jdl-dos-donts__heading">${doLabel}</h3>
-              <ul class="jdl-dos-donts__list">
-                <j:forEach var="item" items="${content.dos}">
-                  <li class="jdl-dos-donts__item">
-                    <span class="jdl-dos-donts__marker" aria-hidden="true"></span>
-                    <div class="jdl-dos-donts__content"><j:out value="${item}" /></div>
-                  </li>
-                </j:forEach>
-              </ul>
-            </section>
-          </j:if>
+    <j:choose>
+      <j:when test="${it.markdownView}">
+        <j:out value="${it.markdownRenderer.dosDonts(titleLabel, doLabel, dontLabel, dos, donts)}" />
+      </j:when>
+      <j:otherwise>
+        <j:if test="${!dos.isEmpty() or !donts.isEmpty()}">
+          <div class="jdl-dos-donts">
+            <j:if test="${!dos.isEmpty()}">
+              <section class="jdl-dos-donts__column jdl-dos-donts__column--do">
+                <h3 class="jdl-dos-donts__heading">${doLabel}</h3>
+                <ul class="jdl-dos-donts__list">
+                  <j:forEach var="item" items="${dos}">
+                    <li class="jdl-dos-donts__item">
+                      <span class="jdl-dos-donts__marker" aria-hidden="true"></span>
+                      <div class="jdl-dos-donts__content"><j:out value="${item}" /></div>
+                    </li>
+                  </j:forEach>
+                </ul>
+              </section>
+            </j:if>
 
-          <j:if test="${!content.donts.isEmpty()}">
-            <section class="jdl-dos-donts__column jdl-dos-donts__column--dont">
-              <h3 class="jdl-dos-donts__heading">${dontLabel}</h3>
-              <ul class="jdl-dos-donts__list">
-                <j:forEach var="item" items="${content.donts}">
-                  <li class="jdl-dos-donts__item">
-                    <span class="jdl-dos-donts__marker" aria-hidden="true"></span>
-                    <div class="jdl-dos-donts__content"><j:out value="${item}" /></div>
-                  </li>
-                </j:forEach>
-              </ul>
-            </section>
-          </j:if>
-        </div>
-      </j:if>
-    </j:otherwise>
-  </j:choose>
+            <j:if test="${!donts.isEmpty()}">
+              <section class="jdl-dos-donts__column jdl-dos-donts__column--dont">
+                <h3 class="jdl-dos-donts__heading">${dontLabel}</h3>
+                <ul class="jdl-dos-donts__list">
+                  <j:forEach var="item" items="${donts}">
+                    <li class="jdl-dos-donts__item">
+                      <span class="jdl-dos-donts__marker" aria-hidden="true"></span>
+                      <div class="jdl-dos-donts__content"><j:out value="${item}" /></div>
+                    </li>
+                  </j:forEach>
+                </ul>
+              </section>
+            </j:if>
+          </div>
+        </j:if>
+      </j:otherwise>
+    </j:choose>
+  </j:scope>
 </j:jelly>

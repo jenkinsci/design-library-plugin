@@ -55,13 +55,9 @@ THE SOFTWARE.
   <s:layout xmlns:local="local">
     <s:section>
       <s:dos-donts>
-        <tr>
-          <td>${%tip-first}</td>
-          <td>${%tip-second}</td>
-        </tr>
-        <tr>
-          <td>${%tip-third}</td>
-        </tr>
+        <s:do>${%do.1}</s:do>
+        <s:do>${%do.2}</s:do>
+        <s:dont>${%dont.1}</s:dont>
       </s:dos-donts>
     </s:section>
 
