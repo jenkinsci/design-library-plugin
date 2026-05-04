@@ -1,0 +1,28 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
+  <st:documentation>
+    Displays a list.
+    <st:attribute name="id" use="optional" />
+  </st:documentation>
+
+  <j:choose>
+    <j:when test="${it.markdownView}">
+      <j:set var="body"><d:invokeBody /></j:set>
+      <j:out value="${it.markdownRenderer.list(body)}" />
+    </j:when>
+    <j:otherwise>
+      <j:choose>
+        <j:when test="${attrs.id != null}">
+          <ul class="jdl-list" id="${attrs.id}">
+            <d:invokeBody />
+          </ul>
+        </j:when>
+        <j:otherwise>
+          <ul class="jdl-list">
+            <d:invokeBody />
+          </ul>
+        </j:otherwise>
+      </j:choose>
+    </j:otherwise>
+  </j:choose>
+</j:jelly>

@@ -3,10 +3,16 @@ package io.jenkins.plugins.designlibrary;
 import hudson.Extension;
 import hudson.PluginWrapper;
 import hudson.model.RootAction;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 import jenkins.model.Jenkins;
+import org.kohsuke.accmod.Restricted;
+import org.kohsuke.accmod.restrictions.NoExternalUse;
+import org.kohsuke.stapler.StaplerRequest2;
+import org.kohsuke.stapler.StaplerResponse2;
 
 /**
  * Entry point to all the UI samples.
@@ -45,15 +51,53 @@ public class Home implements RootAction {
      * Dynamically retrieves the appropriate UI sample based on the current URL
      */
     public UISample getDynamic(String name) {
+        String normalizedName = name != null && name.endsWith(".md") ? name.substring(0, name.length() - 3) : name;
         for (UISample ui : getAll()) {
             String urlName = ui.getUrlName();
-            if (urlName != null && urlName.equals(name)) {
+            if (urlName != null && urlName.equals(normalizedName)) {
                 return ui;
             }
         }
         return null;
     }
 
+    public void doDynamic(StaplerRequest2 req, StaplerResponse2 rsp) throws IOException {
+        String restOfPath = req.getRestOfPath();
+        if (restOfPath.startsWith("/")) {
+            restOfPath = restOfPath.substring(1);
+        }
+
+        String content = resolveLlmContent(restOfPath, req);
+        if (content != null) {
+            rsp.setContentType("text/plain;charset=UTF-8");
+            try (PrintWriter w = rsp.getWriter()) {
+                w.write(content);
+            }
+            return;
+        }
+
+        rsp.sendError(404);
+    }
+
+    private String resolveLlmContent(String name, StaplerRequest2 req) {
+        String baseUrl = req.getContextPath() + "/" + getUrlName() + "/";
+
+        if ("llms.txt".equals(name)) {
+            return LlmContent.generateIndex(baseUrl);
+        }
+
+        if ("llms-all.txt".equals(name)) {
+            return LlmContent.generateAll();
+        }
+
+        return null;
+    }
+
+    /**
+     * Gets the plugin version number for the plugin for the home page
+     * @return the plugin version
+     */
+    @Restricted(NoExternalUse.class)
     public String getPluginVersion() {
         Jenkins jenkins = Jenkins.get();
         PluginWrapper plugin = jenkins.getPluginManager().getPlugin("design-library");

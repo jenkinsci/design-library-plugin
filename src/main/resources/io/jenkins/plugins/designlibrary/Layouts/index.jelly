@@ -41,12 +41,12 @@
 
     <l:tabPane title="${%Two column}">
       <s:section hideBorder="true">
-        <p class="jdl-paragraph">
+        <s:paragraph>
           Two column layouts are for 'hub' style pages, pages that have child pages
           for the user to navigate to.
-        </p>
+        </s:paragraph>
 
-        <p class="jdl-paragraph">Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</p>
+        <s:paragraph>Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</s:paragraph>
 
         <s:dos-donts>
           <tr>
@@ -69,38 +69,38 @@
       <s:section title="${%Usage}" description="The 'two-column' layout is default, so you don't need to do anything to use it.">
         <s:code file="twoColumn.jelly" previewable="true" />
 
-        <p class="jdl-paragraph">
+        <s:paragraph>
           The example above is all you need to set up a two-column page,
           it's complete with headings, sidebar items and content.
-        </p>
+        </s:paragraph>
       </s:section>
 
       <s:section title="${%Badges}">
-        <p class="jdl-paragraph">
+        <s:paragraph>
           You can include badges (instances of <a href="https://javadoc.jenkins.io/jenkins/management/Badge.html" target="_blank"><code>jenkins.management.badge</code></a>) in your sidebar to highlight important information.
           You should only use a badge if the information is useful to the user, for example:
-        </p>
+        </s:paragraph>
 
-        <ul class="jdl-list">
-          <li>
+        <s:list>
+          <s:list-item>
             Updates count on the 'Plugins' page
-          </li>
-          <li>
+          </s:list-item>
+          <s:list-item>
             Passing/failed tests count
-          </li>
-          <li>
+          </s:list-item>
+          <s:list-item>
             Unread notifications
-          </li>
-        </ul>
+          </s:list-item>
+        </s:list>
       </s:section>
     </l:tabPane>
 
     <l:tabPane title="${%One column}">
       <s:section hideBorder="true">
-        <p class="jdl-paragraph">
+        <s:paragraph>
           One column layouts are for pages that don't need navigation; they're ideal for standalone pages
           that don't have child navigation.
-        </p>
+        </s:paragraph>
 
         <s:dos-donts>
           <tr>
@@ -117,19 +117,19 @@
 
     <l:tabPane title="${%Fullscreen}">
       <s:section hideBorder="true">
-        <p class="jdl-paragraph">
+        <s:paragraph>
           Fullscreen layouts hide the Jenkins user interface, providing a blank canvas for your page.
 
           Such layouts aren't intended for the average page and should only be used if your page needs it.
-        </p>
+        </s:paragraph>
 
-        <p class="jdl-paragraph">
+        <s:paragraph>
           An example of such a page is
           <a class="jdl-link" href="https://plugins.jenkins.io/build-monitor-plugin/" target="_blank">
             Build Monitor View
             <l:icon src="symbol-open-outline plugin-ionicons-api" />
           </a>
-        </p>
+        </s:paragraph>
       </s:section>
 
       <s:section title="${%Usage}" description="Set the type attribute to 'full-screen' to use this layout:">

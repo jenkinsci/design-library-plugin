@@ -51,6 +51,21 @@
             </div>
           </s:section>
 
+          <s:section title="${%integrate}">
+            <div class="app-home__side-by-side">
+              <s:card icon="symbol-intellij plugin-design-library"
+                      title="${%get-plugin}"
+                      description="${%get-plugin-description}"
+                      href="https://plugins.jetbrains.com/plugin/1885-jenkins-development-support"
+                      tag="${%Updated}" />
+              <s:card icon="symbol-sparkles-outline plugin-ionicons-api"
+                      title="${%use-with-ai}"
+                      description="${%use-with-ai-description}"
+                      href="llms.txt"
+                      tag="${%New}" />
+            </div>
+          </s:section>
+
           <s:section title="${%get-involved}">
             <div class="app-home__side-by-side">
               <s:card icon="symbol-gitter plugin-design-library"

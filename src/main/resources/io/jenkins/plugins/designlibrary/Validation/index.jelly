@@ -20,13 +20,13 @@
         </s:code-panes>
       </s:group>
 
-      <p class="jdl-paragraph">${%title}</p>
+      <s:paragraph>${%title}</s:paragraph>
 
-      <p class="jdl-paragraph">${%validation.description}</p>
+      <s:paragraph>${%validation.description}</s:paragraph>
     </s:section>
 
     <s:section>
-      <p class="jdl-paragraph">${%validation.clazz}</p>
+      <s:paragraph>${%validation.clazz}</s:paragraph>
       <s:group>
         <s:preview>
           <form method="post">

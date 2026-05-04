@@ -31,17 +31,17 @@ THE SOFTWARE.
         </div>
       </s:preview>
 
-      <p class="jdl-paragraph">${%description.1}</p>
+      <s:paragraph>${%description.1}</s:paragraph>
 
-      <p class="jdl-paragraph">${%description.2}</p>
+      <s:paragraph>${%description.2}</s:paragraph>
 
       <s:code language="java" file="Foo.java" />
 
-      <p class="jdl-paragraph">${%description.3}</p>
+      <s:paragraph>${%description.3}</s:paragraph>
 
       <s:code file="sample.jelly" />
 
-      <p class="jdl-paragraph">${%description.4}</p>
+      <s:paragraph>${%description.4}</s:paragraph>
 
       <s:code language="java" file="sample-adjunct.js" />
 
@@ -51,21 +51,21 @@ THE SOFTWARE.
     </s:section>
 
     <s:section title="${%invokingMethod}">
-      <p class="jdl-paragraph">${%invokingMethod.description.1}</p>
+      <s:paragraph>${%invokingMethod.description.1}</s:paragraph>
 
-      <p class="jdl-paragraph">${%invokingMethod.description.2}</p>
+      <s:paragraph>${%invokingMethod.description.2}</s:paragraph>
 
-      <p class="jdl-paragraph">${%invokingMethod.description.3}</p>
+      <s:paragraph>${%invokingMethod.description.3}</s:paragraph>
     </s:section>
 
     <s:section title="${%tips.description.1}">
-      <p class="jdl-paragraph">${%tips.description.1.body}</p>
+      <s:paragraph>${%tips.description.1.body}</s:paragraph>
 
-      <p class="jdl-paragraph">${%tips.description.1.more}</p>
+      <s:paragraph>${%tips.description.1.more}</s:paragraph>
     </s:section>
 
     <s:section title="${%tips.description.2}">
-      <p class="jdl-paragraph">${%tips.description.2.body}</p>
+      <s:paragraph>${%tips.description.2.body}</s:paragraph>
     </s:section>
   </s:layout>
 </j:jelly>

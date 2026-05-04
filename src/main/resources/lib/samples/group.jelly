@@ -4,7 +4,15 @@
     Groups a <s:preview /> with a <s:code /> or <s:code-panes />
   </st:documentation>
 
-  <div class="jdl-component-group">
-    <d:invokeBody />
-  </div>
+  <j:choose>
+    <j:when test="${it.markdownView}">
+      <j:set var="body"><d:invokeBody /></j:set>
+      <j:out value="${it.markdownRenderer.group(body)}" />
+    </j:when>
+    <j:otherwise>
+      <div class="jdl-component-group">
+        <d:invokeBody />
+      </div>
+    </j:otherwise>
+  </j:choose>
 </j:jelly>

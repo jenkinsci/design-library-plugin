@@ -26,15 +26,14 @@
         <s:code file="html-tooltip.jelly" />
       </s:group>
 
-      <p class="jdl-paragraph">${%symbols-description}</p>
+      <s:paragraph>${%symbols-description}</s:paragraph>
       <s:group>
         <s:preview>
           <l:icon src="symbol-jenkins plugin-ionicons-api" htmlTooltip="${tooltip}" class="jdl-symbols__symbol" />
         </s:preview>
         <s:code file="symbol-tooltip.jelly" />
       </s:group>
-      <p class="jdl-important-point">${%warning}</p>
+      <s:important-point>${%warning}</s:important-point>
     </s:section>
   </s:layout>
 </j:jelly>
-

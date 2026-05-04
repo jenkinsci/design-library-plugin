@@ -41,11 +41,11 @@
         </div>
       </s:preview>
 
-      <p class="jdl-paragraph">${%description.1}</p>
+      <s:paragraph>${%description.1}</s:paragraph>
 
-      <p class="jdl-paragraph">${%description.2}</p>
+      <s:paragraph>${%description.2}</s:paragraph>
 
-      <p class="jdl-paragraph">${%description.3}</p>
+      <s:paragraph>${%description.3}</s:paragraph>
 
       <st:adjunct includes="io.jenkins.plugins.designlibrary.Spacing.spacing" />
     </s:section>

@@ -49,9 +49,9 @@ THE SOFTWARE.
             </s:code-pane>
           </s:code-panes>
         </s:group>
-        <p class="jdl-paragraph">
+        <s:paragraph>
           ${%description}
-        </p>
+        </s:paragraph>
       </s:section>
     </s:layout>
 </j:jelly>

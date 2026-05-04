@@ -6,13 +6,21 @@
     <st:attribute name="hideBorder" />
   </st:documentation>
 
-  <section class="jdl-section ${hideBorder ? 'jdl-section--no-border' : ''}">
-    <j:if test="${attrs.title != null}">
-      <h2 class="jdl-section__title">${attrs.title}</h2>
-    </j:if>
-    <j:if test="${attrs.description != null}">
-      <div class="jdl-section__description"><j:out value="${attrs.description}" /></div>
-    </j:if>
-    <d:invokeBody />
-  </section>
+  <j:choose>
+    <j:when test="${it.markdownView}">
+      <j:set var="body"><d:invokeBody /></j:set>
+      <j:out value="${it.markdownRenderer.section(attrs.title, attrs.description, body)}" />
+    </j:when>
+    <j:otherwise>
+      <section class="jdl-section ${hideBorder ? 'jdl-section--no-border' : ''}">
+        <j:if test="${attrs.title != null}">
+          <h2 class="jdl-section__title">${attrs.title}</h2>
+        </j:if>
+        <j:if test="${attrs.description != null}">
+          <div class="jdl-section__description"><j:out value="${attrs.description}" /></div>
+        </j:if>
+        <d:invokeBody />
+      </section>
+    </j:otherwise>
+  </j:choose>
 </j:jelly>

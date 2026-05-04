@@ -33,15 +33,15 @@ THE SOFTWARE.
         <s:code file="checkbox.jelly" />
       </s:group>
 
-      <p class="jdl-paragraph">${%checkbox.parameters}</p>
-      <ul class="jdl-list">
-        <li>id (optional) - ${%checkbox.parameters.id}</li>
-        <li>default (optional) - ${%checkbox.parameters.default}</li>
-        <li>field - ${%checkbox.parameters.field}</li>
-        <li>title - ${%checkbox.parameters.title}</li>
-      </ul>
+      <s:paragraph>${%checkbox.parameters}</s:paragraph>
+      <s:list>
+        <s:list-item>id (optional) - ${%checkbox.parameters.id}</s:list-item>
+        <s:list-item>default (optional) - ${%checkbox.parameters.default}</s:list-item>
+        <s:list-item>field - ${%checkbox.parameters.field}</s:list-item>
+        <s:list-item>title - ${%checkbox.parameters.title}</s:list-item>
+      </s:list>
 
-      <p class="jdl-paragraph">${%checkbox.additionalParameters}</p>
+      <s:paragraph>${%checkbox.additionalParameters}</s:paragraph>
     </s:section>
   </s:layout>
 </j:jelly>

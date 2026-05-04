@@ -56,9 +56,9 @@
           </form>
           <j:if test="${number != null}">
             <st:adjunct includes="io.jenkins.plugins.designlibrary.Progress.progressive-rendering"/>
-            <p class="jdl-paragraph">Factors of ${number}:</p>
+            <s:paragraph>Factors of ${number}:</s:paragraph>
             <l:progressiveRendering handler="${it.factor(number)}" callback="display" tooltip="Factoring…"/>
-            <ul class="jdl-list" id="factors"/>
+            <s:list id="factors"/>
           </j:if>
         </s:preview>
         <s:code-panes>
@@ -66,12 +66,11 @@
             <s:code file="progressiveRendering.jelly" />
           </s:code-pane>
           <s:code-pane title="JavaScript">
-          <p class="jdl-tab-pane__text">${%description.adjuncts}</p>
-          <s:code language="java" file="display.js" />
+            <s:paragraph>${%description.adjuncts}</s:paragraph>
+            <s:code language="java" file="display.js" />
           </s:code-pane>
         </s:code-panes>
       </s:group>
     </s:section>
   </s:layout>
 </j:jelly>
-

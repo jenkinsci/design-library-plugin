@@ -48,7 +48,7 @@
           </s:code-pane>
         </s:code-panes>
       </s:group>
-      <p class="jdl-paragraph">${%modals}</p>
+      <s:paragraph>${%modals}</s:paragraph>
     </s:section>
 
     <s:section title="${%Alerts}">
@@ -68,7 +68,7 @@
         </s:preview>
         <s:code language="java" file="alert.js" callback="showAlert"/>
       </s:group>
-      <p class="jdl-paragraph">${%alerts}</p>
+      <s:paragraph>${%alerts}</s:paragraph>
     </s:section>
 
     <s:section title="${%Confirmations}">
@@ -87,70 +87,70 @@
         </s:preview>
         <s:code language="java" file="confirm.js" code="showConfirm()" callback="showConfirm"/>
       </s:group>
-      <p class="jdl-paragraph">${%confirmations}</p>
+      <s:paragraph>${%confirmations}</s:paragraph>
     </s:section>
 
     <s:section title="${%Customizing the appearance and behaviour}">
-      <div class="jdl-paragraph">All dialogs take a second optional parameter with options that allow to change certain
-        aspects.
-      </div>
-      <ul class="jdl-list">
-        <li><code>message</code>: Adds a message to the dialog.
-        </li>
-        <li><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog.
-        </li>
-        <li><code>cancelText</code>: Adjust the text of the Cancel button, defaults to
+      <s:paragraph>
+        All dialogs take a second optional parameter with options that allow to change certain aspects.
+      </s:paragraph>
+      <s:list>
+        <s:list-item><code>message</code>: Adds a message to the dialog.
+        </s:list-item>
+        <s:list-item><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog.
+        </s:list-item>
+        <s:list-item><code>cancelText</code>: Adjust the text of the Cancel button, defaults to
           <code>Cancel</code>.
-        </li>
-        <li><code>type</code>: Change the color of the <code>OK</code> button. Allowed values:
+        </s:list-item>
+        <s:list-item><code>type</code>: Change the color of the <code>OK</code> button. Allowed values:
           <code>destructive</code>.
-        </li>
-        <li><code>minWidth</code>: Set the minimum width of the dialog, the default depends on the type of dialog.
-        </li>
-        <li><code>maxWidth</code>: Set the maximum width of the dialog. Defaults to
+        </s:list-item>
+        <s:list-item><code>minWidth</code>: Set the minimum width of the dialog, the default depends on the type of dialog.
+        </s:list-item>
+        <s:list-item><code>maxWidth</code>: Set the maximum width of the dialog. Defaults to
           <code>475px</code>.
-        </li>
-        <li><code>hideCloseButton</code>: Hides the close button in modal dialogs. Defaults to
+        </s:list-item>
+        <s:list-item><code>hideCloseButton</code>: Hides the close button in modal dialogs. Defaults to
           <code>false</code>.
-        </li>
-        <li><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
+        </s:list-item>
+        <s:list-item><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
           prompt dialog as long as the input field is empty or contains only whitespace. Defaults to
           <code>false</code>.
-        </li>
-        <li><code>submitButton</code>: Change the behaviour of the submit button in a form dialog. When
+        </s:list-item>
+        <s:list-item><code>submitButton</code>: Change the behaviour of the submit button in a form dialog. When
           <code>true</code>
           the form will be submitted to the <code>action</code> attribute of the form. When <code>false</code>, a
           <code>FormData</code>
           object is passed to the <code>resolve</code> method of the <code>Promise</code>.
           Defaults to
           <code>true</code>.
-        </li>
-        <li><code>preventCloseOnOutsideClick</code>: Prevents the dialog from closing when an outside click is performed.
+        </s:list-item>
+        <s:list-item><code>preventCloseOnOutsideClick</code>: Prevents the dialog from closing when an outside click is performed.
           Defaults to <code>false</code>.
-        </li>
-      </ul>
+        </s:list-item>
+      </s:list>
     </s:section>
 
     <s:section title="${%OK Button texts}">
-      <div class="jdl-paragraph">${%buttontexts}</div>
-      <ul class="jdl-list">
-        <li><code>ok</code>: OK
-        </li>
-        <li><code>cancel</code>: Cancel
-        </li>
-        <li><code>yes</code>: Yes
-        </li>
-        <li><code>no</code>: No
-        </li>
-        <li><code>add</code>: Add
-        </li>
-        <li><code>save</code>: Save
-        </li>
-        <li><code>apply</code>: Apply
-        </li>
-        <li><code>submit</code>: Submit
-        </li>
-      </ul>
+      <s:paragraph>${%buttontexts}</s:paragraph>
+      <s:list>
+        <s:list-item><code>ok</code>: OK
+        </s:list-item>
+        <s:list-item><code>cancel</code>: Cancel
+        </s:list-item>
+        <s:list-item><code>yes</code>: Yes
+        </s:list-item>
+        <s:list-item><code>no</code>: No
+        </s:list-item>
+        <s:list-item><code>add</code>: Add
+        </s:list-item>
+        <s:list-item><code>save</code>: Save
+        </s:list-item>
+        <s:list-item><code>apply</code>: Apply
+        </s:list-item>
+        <s:list-item><code>submit</code>: Submit
+        </s:list-item>
+      </s:list>
     </s:section>
   </s:layout>
 </j:jelly>

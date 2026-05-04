@@ -80,9 +80,9 @@ THE SOFTWARE.
         </s:preview>
         <s:code file="destructive.jelly" />
       </s:group>
-      <p class="jdl-section__description">
+      <s:paragraph>
         ${%destructive.description}
-      </p>
+      </s:paragraph>
     </s:section>
 
     <s:section title="${%copy}" description="${%copy.description}">

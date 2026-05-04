@@ -66,19 +66,33 @@ THE SOFTWARE.
     </s:section>
 
     <s:section title="${%Semantic}">
-      <ol class="jdl-colors">
-        <j:forEach var="item" items="${it.semantics}">
-          <local:item item="${item}" />
-        </j:forEach>
-      </ol>
+      <j:choose>
+        <j:when test="${it.markdownView}">
+          <j:out value="${it.markdownRenderer.colorsSemanticTable(it.semantics)}" />
+        </j:when>
+        <j:otherwise>
+          <ol class="jdl-colors">
+            <j:forEach var="item" items="${it.semantics}">
+              <local:item item="${item}" />
+            </j:forEach>
+          </ol>
+        </j:otherwise>
+      </j:choose>
     </s:section>
 
     <s:section title="${%Palette}">
-      <ol class="jdl-colors">
-        <j:forEach var="item" items="${it.colors}">
-          <local:item item="${item}" />
-        </j:forEach>
-      </ol>
+      <j:choose>
+        <j:when test="${it.markdownView}">
+          <j:out value="${it.markdownRenderer.colorsPaletteTable(it.colors)}" />
+        </j:when>
+        <j:otherwise>
+          <ol class="jdl-colors">
+            <j:forEach var="item" items="${it.colors}">
+              <local:item item="${item}" />
+            </j:forEach>
+          </ol>
+        </j:otherwise>
+      </j:choose>
     </s:section>
   </s:layout>
 </j:jelly>

@@ -2,7 +2,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 
 import io.jenkins.plugins.designlibrary.UISample;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 import org.htmlunit.html.DomNode;
@@ -22,6 +21,8 @@ class ValidRelativeUrlsTest {
 
     private List<UISample> samples;
 
+    private final List<String> otherUrls = List.of("llms.txt");
+
     @BeforeAll
     void beforeAll(JenkinsRule jenkins) {
         this.jenkins = jenkins;
@@ -39,8 +40,8 @@ class ValidRelativeUrlsTest {
             webClient.getOptions().setPrintContentOnFailingStatusCode(false);
             webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
 
-            List<String> validUrls =
-                    new ArrayList<>(samples.stream().map(UISample::getUrlName).toList());
+            List<String> validUrls = Stream.concat(samples.stream().map(UISample::getUrlName), otherUrls.stream())
+                    .toList();
 
             var page = webClient.goTo(url);
             var links = page.querySelectorAll(".jdl-section a");
