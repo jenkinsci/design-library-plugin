@@ -49,20 +49,12 @@
         <s:paragraph>Examples of such pages include 'Dashboard', 'Design Library' and 'Plugin Manager'.</s:paragraph>
 
         <s:dos-donts>
-          <tr>
-            <td>${%two-column.do.1}</td>
-            <td>${%two-column.dont.1}</td>
-          </tr>
-          <tr>
-            <td>${%two-column.do.2}</td>
-            <td>${%two-column.dont.2}</td>
-          </tr>
-          <tr>
-            <td>${%two-column.do.3}</td>
-          </tr>
-          <tr>
-            <td>${%two-column.do.4}</td>
-          </tr>
+          <s:do>${%two-column.do.1}</s:do>
+          <s:do>${%two-column.do.2}</s:do>
+          <s:do>${%two-column.do.3}</s:do>
+          <s:do>${%two-column.do.4}</s:do>
+          <s:dont>${%two-column.dont.1}</s:dont>
+          <s:dont>${%two-column.dont.2}</s:dont>
         </s:dos-donts>
       </s:section>
 
@@ -103,10 +95,8 @@
         </s:paragraph>
 
         <s:dos-donts>
-          <tr>
-            <td>${%one-column.do.1}</td>
-            <td>${%one-column.dont.1}</td>
-          </tr>
+          <s:do>${%one-column.do.1}</s:do>
+          <s:dont>${%one-column.dont.1}</s:dont>
         </s:dos-donts>
       </s:section>
 

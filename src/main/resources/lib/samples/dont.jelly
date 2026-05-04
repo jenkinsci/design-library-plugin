@@ -1,0 +1,11 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:st="jelly:stapler">
+  <st:documentation>
+    Adds an anti-pattern item inside &lt;s:dos-donts&gt;.
+  </st:documentation>
+
+  <j:if test="${donts != null}">
+    <j:set var="body" encode="false"><d:invokeBody escapeText="false" /></j:set>
+    <j:set var="ignored" value="${donts.add(body)}" />
+  </j:if>
+</j:jelly>

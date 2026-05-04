@@ -37,17 +37,11 @@
       <s:paragraph>${%leadParagraph}</s:paragraph>
 
       <s:dos-donts>
-        <tr>
-          <td>${%do.1}</td>
-          <td>${%dont.1}</td>
-        </tr>
-        <tr>
-          <td>${%do.2}<l:icon src="symbol-lock-closed-outline plugin-ionicons-api" />${%do.2Continued}</td>
-          <td>${%dont.2}</td>
-        </tr>
-        <tr>
-          <td>${%do.3}</td>
-        </tr>
+        <s:do>${%do.1}</s:do>
+        <s:do>${%do.2}</s:do>
+        <s:do>${%do.3}</s:do>
+        <s:dont>${%dont.1}</s:dont>
+        <s:dont>${%dont.2}</s:dont>
       </s:dos-donts>
     </s:section>
 

@@ -10,10 +10,6 @@ import java.util.regex.Pattern;
  */
 public final class MarkdownComponentRenderer {
 
-    private static final Pattern DOS_DONTS_ROW_PATTERN =
-            Pattern.compile("<tr\\b[^>]*>(.*?)</tr>", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
-    private static final Pattern DOS_DONTS_CELL_PATTERN =
-            Pattern.compile("<t[dh]\\b[^>]*>(.*?)</t[dh]>", Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     private static final Pattern HTML_TAG_PATTERN = Pattern.compile("<[^>]+>", Pattern.DOTALL);
     private static final Pattern NUMERIC_ENTITY_PATTERN = Pattern.compile("&#(x?)([0-9a-fA-F]+);");
 
@@ -69,21 +65,16 @@ public final class MarkdownComponentRenderer {
         return normalizedBody.isEmpty() ? "" : "- " + normalizedBody + "\n";
     }
 
-    public String dosDonts(String title, String doLabel, String dontLabel, String body) {
-        DosDontsContent content = dosDontsContent(body);
-        if (content.isEmpty()) {
+    public String dosDonts(String title, String doLabel, String dontLabel, List<String> dos, List<String> donts) {
+        if (dos.isEmpty() && donts.isEmpty()) {
             return "";
         }
 
         StringBuilder markdown = new StringBuilder();
         appendBlock(markdown, title == null || title.isBlank() ? null : "### " + normalizeInline(title));
-        appendBlock(markdown, markdownListBlock(doLabel, content.getDos()));
-        appendBlock(markdown, markdownListBlock(dontLabel, content.getDonts()));
+        appendBlock(markdown, markdownListBlock(doLabel, dos));
+        appendBlock(markdown, markdownListBlock(dontLabel, donts));
         return block(markdown.toString());
-    }
-
-    public DosDontsContent dosDontsContent(String body) {
-        return parseDosDonts(body);
     }
 
     public String colorsSemanticTable(List<Colors.Semantic> semantics) {
@@ -212,28 +203,6 @@ public final class MarkdownComponentRenderer {
         return normalizeInline(text).replace("|", "\\|");
     }
 
-    private DosDontsContent parseDosDonts(String body) {
-        DosDontsContent content = new DosDontsContent();
-        Matcher rowMatcher = DOS_DONTS_ROW_PATTERN.matcher(normalizeNewlines(body));
-        while (rowMatcher.find()) {
-            Matcher cellMatcher = DOS_DONTS_CELL_PATTERN.matcher(rowMatcher.group(1));
-            List<String> cells = new ArrayList<>();
-            while (cellMatcher.find()) {
-                String cell = cellMatcher.group(1).trim();
-                if (!cell.isEmpty()) {
-                    cells.add(cell);
-                }
-            }
-            if (!cells.isEmpty()) {
-                content.dos.add(cells.get(0));
-            }
-            if (cells.size() > 1) {
-                content.donts.add(cells.get(1));
-            }
-        }
-        return content;
-    }
-
     private String stripHtml(String text) {
         String normalized = normalizeNewlines(text);
         normalized = normalized.replaceAll("(?i)<br\\s*/?>", " ");
@@ -268,22 +237,5 @@ public final class MarkdownComponentRenderer {
             return "";
         }
         return text.replace("\r\n", "\n").replace('\r', '\n');
-    }
-
-    public static final class DosDontsContent {
-        private final List<String> dos = new ArrayList<>();
-        private final List<String> donts = new ArrayList<>();
-
-        public List<String> getDos() {
-            return dos;
-        }
-
-        public List<String> getDonts() {
-            return donts;
-        }
-
-        public boolean isEmpty() {
-            return dos.isEmpty() && donts.isEmpty();
-        }
     }
 }
