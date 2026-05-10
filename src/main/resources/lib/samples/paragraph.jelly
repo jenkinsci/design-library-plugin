@@ -1,12 +1,16 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
+  <st:documentation>
+    Displays a paragraph.
+  </st:documentation>
+
   <j:choose>
     <j:when test="${it.markdownView}">
       <j:set var="body"><d:invokeBody /></j:set>
-      <j:out value="${it.markdownRenderer.codePanes(body)}" />
+      <j:out value="${it.markdownRenderer.paragraph(body)}" />
     </j:when>
     <j:otherwise>
-      <div class="jdl-tab-panes">
+      <div class="jdl-paragraph">
         <d:invokeBody />
       </div>
     </j:otherwise>

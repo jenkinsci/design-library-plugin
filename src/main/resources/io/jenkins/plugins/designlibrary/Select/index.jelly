@@ -107,7 +107,7 @@ THE SOFTWARE.
     </s:section>
 
     <s:section title="${%searchable}" description="${%searchable.description}">
-      <div class="jdl-paragraph">${%combobox}</div>
+      <s:paragraph>${%combobox}</s:paragraph>
 
       <s:group>
         <s:preview>
@@ -128,7 +128,7 @@ THE SOFTWARE.
         </s:code-panes>
       </s:group>
 
-      <div class="jdl-paragraph">${%textbox}</div>
+      <s:paragraph>${%textbox}</s:paragraph>
 
       <s:group>
         <s:preview>

@@ -20,17 +20,11 @@
       </s:group>
 
       <s:dos-donts>
-        <tr>
-          <td>${%topAppBar.do.1}</td>
-          <td>${%topAppBar.dont.1}</td>
-        </tr>
-        <tr>
-          <td>${%topAppBar.do.2}</td>
-          <td>${%topAppBar.dont.2}</td>
-        </tr>
-        <tr>
-          <td>${%topAppBar.do.3}</td>
-        </tr>
+        <s:do>${%topAppBar.do.1}</s:do>
+        <s:do>${%topAppBar.do.2}</s:do>
+        <s:do>${%topAppBar.do.3}</s:do>
+        <s:dont>${%topAppBar.dont.1}</s:dont>
+        <s:dont>${%topAppBar.dont.2}</s:dont>
       </s:dos-donts>
     </s:section>
 

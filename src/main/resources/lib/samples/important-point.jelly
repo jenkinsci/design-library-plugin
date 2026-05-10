@@ -1,19 +1,16 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
   <st:documentation>
-    <st:attribute name="title" use="required">
-      The title of the tab
-    </st:attribute>
+    Displays an important point.
   </st:documentation>
 
   <j:choose>
     <j:when test="${it.markdownView}">
       <j:set var="body"><d:invokeBody /></j:set>
-      <j:out value="${it.markdownRenderer.codePane(attrs.title, body)}" />
+      <j:out value="${it.markdownRenderer.paragraph(body)}" />
     </j:when>
     <j:otherwise>
-      <div class="jdl-tab-pane">
-        <p class="jdl-tab-pane__title">${attrs.title}</p>
+      <div class="jdl-important-point">
         <d:invokeBody />
       </div>
     </j:otherwise>

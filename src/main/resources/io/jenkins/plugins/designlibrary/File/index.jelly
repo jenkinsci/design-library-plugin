@@ -33,11 +33,11 @@ THE SOFTWARE.
         <s:code file="file.jelly" />
       </s:group>
 
-      <p class="jdl-paragraph">${%parameters}</p>
-      <ul class="jdl-list">
-        <li>field - ${%parameters.field}</li>
-        <li>clazz - ${%parameters.clazz}</li>
-      </ul>
+      <s:paragraph>${%parameters}</s:paragraph>
+      <s:list>
+        <s:list-item>field - ${%parameters.field}</s:list-item>
+        <s:list-item>clazz - ${%parameters.clazz}</s:list-item>
+      </s:list>
     </s:section>
 
     <s:section title="Additional parameters" description="${%parameters.additional}">

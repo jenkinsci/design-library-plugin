@@ -95,17 +95,11 @@
       </s:preview>
 
       <s:dos-donts>
-        <tr>
-          <td>${%do.1}</td>
-          <td>${%dont.1}</td>
-        </tr>
-        <tr>
-          <td>${%do.2}</td>
-          <td>${%dont.2}</td>
-        </tr>
-        <tr>
-          <td>${%do.3}</td>
-        </tr>
+        <s:do>${%do.1}</s:do>
+        <s:do>${%do.2}</s:do>
+        <s:do>${%do.3}</s:do>
+        <s:dont>${%dont.1}</s:dont>
+        <s:dont>${%dont.2}</s:dont>
       </s:dos-donts>
     </s:section>
 
@@ -119,7 +113,7 @@
         <s:code file="card.jelly" />
       </s:group>
 
-      <p class="jdl-paragraph">${%creating-a-card.description}</p>
+      <s:paragraph>${%creating-a-card.description}</s:paragraph>
     </s:section>
 
     <s:section title="${%setting-actions-on-a-card.title}">
@@ -137,7 +131,7 @@
         <s:code file="actions.jelly" />
       </s:group>
 
-      <p class="jdl-paragraph">${%setting-actions-on-a-card.description}</p>
+      <s:paragraph>${%setting-actions-on-a-card.description}</s:paragraph>
     </s:section>
   </s:layout>
 </j:jelly>

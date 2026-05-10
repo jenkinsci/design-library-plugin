@@ -1,7 +1,6 @@
-#toggle-switch-formsubmit {
-  width: 100%;
-}
-
-.jdl-dialog-form--last {
-  margin-bottom: var(--section-padding) !important;
+// _component-sample.scss removes some margins, so let's force the margin
+.jenkins-dialog {
+  .jenkins-form-item {
+    margin-bottom: var(--section-padding) !important;
+  }
 }

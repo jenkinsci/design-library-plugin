@@ -33,7 +33,7 @@
         </s:preview>
         <s:code file="example.jelly" />
       </s:group>
-      <p class="jdl-paragraph">${%textbox.usage}</p>
+      <s:paragraph>${%textbox.usage}</s:paragraph>
     </s:section>
 
     <s:section title="${%Search}">
@@ -74,7 +74,7 @@
         </s:preview>
         <s:code file="codemirror.jelly" />
       </s:group>
-      <p class="jdl-paragraph">${%syntaxHighlight.description.2}</p>
+      <s:paragraph>${%syntaxHighlight.description.2}</s:paragraph>
     </s:section>
   </s:layout>
 </j:jelly>

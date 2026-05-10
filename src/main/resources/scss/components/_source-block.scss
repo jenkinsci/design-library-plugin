@@ -1,5 +1,35 @@
 $jdl-component-code-controls-spacing: 0.75rem;
 
+@property --left-fade {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --right-fade {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes scrollfade {
+  0% {
+    --left-fade: 0;
+    --right-fade: 1.5rem;
+  }
+
+  10%,
+  90% {
+    --left-fade: 1.5rem;
+    --right-fade: 1.5rem;
+  }
+
+  100% {
+    --left-fade: 1.5rem;
+    --right-fade: 0;
+  }
+}
+
 .jdl-component-code {
   --prism-background: var(--card-background);
   background: var(--card-background);
@@ -7,9 +37,9 @@ $jdl-component-code-controls-spacing: 0.75rem;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr auto;
-  z-index: 0;
-  border-radius: 0.66rem;
+  border-radius: var(--form-input-border-radius);
   border: var(--jenkins-border);
+  z-index: 1;
 
   &::before {
     content: "";
@@ -25,6 +55,15 @@ $jdl-component-code-controls-spacing: 0.75rem;
     border: none;
     margin: 0 !important;
     padding: 0;
+    mask: linear-gradient(
+      to right,
+      #0000,
+      #ffff var(--left-fade) calc(100% - var(--right-fade)),
+      #0000
+    );
+    animation: scrollfade;
+    animation-timeline: --scrollfade;
+    scroll-timeline: --scrollfade x;
 
     code {
       line-height: 1.66 !important;
@@ -38,9 +77,19 @@ $jdl-component-code-controls-spacing: 0.75rem;
 
   &__controls {
     display: flex;
-    flex-direction: column;
+    align-items: start;
+    gap: var(--jenkins-border-width);
     height: 100%;
     padding: $jdl-component-code-controls-spacing;
+
+    .jenkins-button {
+      aspect-ratio: 1;
+      padding-inline: 0;
+    }
+
+    [data-message-insecure] {
+      display: contents;
+    }
   }
 
   &__tab-bar {
@@ -48,8 +97,8 @@ $jdl-component-code-controls-spacing: 0.75rem;
     border-top: var(--jenkins-border);
     border-left: var(--jenkins-border);
     border-right: var(--jenkins-border);
-    border-top-left-radius: 0.66rem;
-    border-top-right-radius: 0.66rem;
+    border-top-left-radius: var(--form-input-border-radius);
+    border-top-right-radius: var(--form-input-border-radius);
     display: flex;
     flex-wrap: wrap;
     gap: 0.9rem;

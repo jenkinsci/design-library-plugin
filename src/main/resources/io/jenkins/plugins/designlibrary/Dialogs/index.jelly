@@ -1,43 +1,74 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout" xmlns:s="/lib/samples" xmlns:f="/lib/form" xmlns:st="jelly:stapler">
+<j:jelly xmlns:j="jelly:core" xmlns:s="/lib/samples" xmlns:l="/lib/layout" xmlns:f="/lib/form">
   <s:layout>
-    <s:section title="Alerts">
+    <s:section hideBorder="true">
+      <s:group>
+        <s:preview>
+          <dialog class="jenkins-dialog" style="max-width: 475px; min-width: min(550px, 100vw);">
+            <div class="jenkins-dialog__title">
+              <span>Create User</span>
+              <button class="jenkins-dialog__title__button jenkins-dialog__title__close-button jenkins-button">
+                <span class="jenkins-visually-hidden">Close</span>
+                <l:icon src="symbol-close" />
+              </button>
+            </div>
+            <div class="jenkins-dialog__contents jenkins-dialog__contents--modal">
+              <form method="post">
+                <f:entry title="Username">
+                  <f:textbox />
+                </f:entry>
+                <f:entry title="Email">
+                  <f:textbox />
+                </f:entry>
+                <f:entry title="Password">
+                  <f:password />
+                </f:entry>
+                <f:bottomButtonBar borderless="true">
+                  <button class="jenkins-button jenkins-submit-button jenkins-button--primary">
+                    Create
+                  </button>
+                </f:bottomButtonBar>
+              </form>
+            </div>
+          </dialog>
+        </s:preview>
+        <s:code-panes>
+          <s:code-pane title="modalDialog.jelly">
+            <s:code file="modal.jelly">
+              <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color"
+                      data-type="dialog-opener"
+                      data-dialog-url="modal"
+                      tooltip="${%Execute code}">
+                <l:icon src="symbol-play" />
+              </button>
+            </s:code>
+          </s:code-pane>
+          <s:code-pane title="index.jelly">
+            <s:code file="button.jelly"/>
+          </s:code-pane>
+        </s:code-panes>
+      </s:group>
+      <s:paragraph>${%modals}</s:paragraph>
+    </s:section>
+
+    <s:section title="${%Alerts}">
       <s:group>
         <s:preview>
           <dialog class="jenkins-dialog">
             <div class="jenkins-dialog__title">Example alert</div>
-            <div class="jenkins-dialog__contents">I'm an example of an error alert.</div>
-            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
-              <button data-id="ok" type="button"
-                      class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK
-              </button>
-              <button data-id="cancel" class="jenkins-button" style="display: none;">Cancel</button>
+            <div class="jenkins-dialog__contents">
+              <div class="jenkins-form-item jenkins-!-text-color-secondary">I'm an example of an error alert.</div>
+              <f:bottomButtonBar borderless="true">
+                <button data-id="ok" type="button"
+                        class="jenkins-button jenkins-button--primary jenkins-!-destructive-color">OK
+                </button>
+              </f:bottomButtonBar>
             </div>
           </dialog>
         </s:preview>
         <s:code language="java" file="alert.js" callback="showAlert"/>
       </s:group>
-      <p class="jdl-paragraph">${%alerts}</p>
-    </s:section>
-
-    <s:section title="${%Prompts}">
-      <s:group>
-        <s:preview>
-          <dialog class="jenkins-dialog">
-            <div class="jenkins-dialog__title">Welcome to the Dialog demo</div>
-            <div class="jenkins-dialog__contents">How should I call you?</div>
-            <div class="jenkins-dialog__input">
-              <input data-id="input" type="text" class="jenkins-input"/>
-            </div>
-            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
-              <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary " disabled="">OK</button>
-              <button data-id="cancel" class="jenkins-button">Cancel</button>
-            </div>
-          </dialog>
-        </s:preview>
-        <s:code language="java" file="prompt.js" callback="showPrompt"/>
-      </s:group>
-      <p class="jdl-paragraph">${%prompts}</p>
+      <s:paragraph>${%alerts}</s:paragraph>
     </s:section>
 
     <s:section title="${%Confirmations}">
@@ -45,180 +76,81 @@
         <s:preview>
           <dialog class="jenkins-dialog" open="" style="max-width: 475px; min-width: 450px;">
             <div class="jenkins-dialog__title">Do it</div>
-            <div class="jenkins-dialog__contents">Are you sure?</div>
-            <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
-              <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary ">Yes</button>
-              <button data-id="cancel" class="jenkins-button">No</button>
+            <div class="jenkins-dialog__contents">
+              <div class="jenkins-form-item jenkins-!-text-color-secondary">Are you sure?</div>
+              <f:bottomButtonBar borderless="true">
+                <button data-id="cancel" class="jenkins-button">No</button>
+                <button data-id="ok" type="button" class="jenkins-button jenkins-button--primary">Yes</button>
+              </f:bottomButtonBar>
             </div>
           </dialog>
         </s:preview>
         <s:code language="java" file="confirm.js" code="showConfirm()" callback="showConfirm"/>
       </s:group>
-      <p class="jdl-paragraph">${%confirmations}</p>
+      <s:paragraph>${%confirmations}</s:paragraph>
     </s:section>
 
-    <s:section title="${%Modals}">
-      <s:group>
-        <s:preview>
-          <dialog class="jenkins-dialog" open="" style="max-width: 550px; min-width: 450px;">
-            <div class="jenkins-dialog__title">Modal</div>
-            <div class="jenkins-dialog__contents jenkins-dialog__contents--modal">
-              <div>
-                <h2 class="jenkins-dialog__subtitle">Behaviour</h2>
-                Click on the "X" in the top right or outside to close me.
-                <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">You can include icons</h2>
-                <svg class="icon-sm" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 512 512">
-                  <title></title>
-                  <path
-                    d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z"
-                    fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path>
-                </svg>
-                Dialogs are cool.
-              </div>
-            </div>
-            <button class="jenkins-dialog__close-button jenkins-button">
-              <span class="jenkins-visually-hidden">Close</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
-                      d="M368 368L144 144M368 144L144 368"></path>
-              </svg>
-            </button>
-          </dialog>
-        </s:preview>
-        <s:code-panes>
-          <s:code-pane title="JavaScript">
-            <s:code language="java" file="modal.js" code="showModal()" callback="showModal"/>
-          </s:code-pane>
-          <s:code-pane title="Jelly">
-            <s:code file="modal.jelly"/>
-          </s:code-pane>
-        </s:code-panes>
-      </s:group>
-      <p class="jdl-paragraph">${%modals}</p>
-    </s:section>
-
-    <s:section title="${%Forms}">
-      <s:group>
-        <s:preview>
-          <dialog class="jenkins-dialog" style="max-width: 900px; min-width: 600px;" open="">
-            <div class="jenkins-dialog__title">Order your ice cream</div>
-            <div class="jenkins-dialog__contents">
-              <div width="100%">
-                <f:entry title="${%Name}">
-                  <f:textbox name="name"/>
-                </f:entry>
-                <f:entry title="${%Quantity}">
-                  <f:number name="quantity" min="1" max="9"/>
-                </f:entry>
-                <f:entry title="${%Choose flavor}" class="jdl-dialog-form--last">
-                  <f:select field="flavor"/>
-                </f:entry>
-              </div>
-              <div class="jenkins-buttons-row jenkins-buttons-row--equal-width jenkins-dialog__buttons">
-                <button data-id="ok" type="submit" class="jenkins-button jenkins-button--primary ">Order</button>
-                <button data-id="cancel" class="jenkins-button">Cancel</button>
-              </div>
-            </div>
-          </dialog>
-        </s:preview>
-        <s:code-panes>
-          <s:code-pane title="JavaScript">
-            <s:code language="java" file="form.js" code="showForm()" callback="showForm"/>
-          </s:code-pane>
-          <s:code-pane title="Jelly">
-            <s:code file="form.jelly"/>
-          </s:code-pane>
-        </s:code-panes>
-      </s:group>
-      <f:toggleSwitch id="formsubmit" checkedTitle="${%Submit form}" checked="true"
-                      title="${%Handle form in javascript}."
-      />
-
-      <p class="jdl-paragraph">${%forms}</p>
-    </s:section>
-
-    <template id="demo-template" data-title="${%Modal}">
-      <div>
-        <h2 class="jenkins-dialog__subtitle">${%Behaviour}</h2>
-        ${%closeme}
-        <h2 class="jenkins-dialog__subtitle jenkins-!-margin-top-3">${%You can include icons}</h2>
-        <l:icon src="symbol-chatbox-outline plugin-ionicons-api" class="icon-sm"/>
-        ${%Dialogs are cool}.
-      </div>
-    </template>
-
-    <div id="demo-form" class="jenkins-hidden" data-title="${%Order your ice cream}">
-      <f:form action="form" method="post">
-        <f:entry title="${%Name}">
-          <f:textbox name="name"/>
-        </f:entry>
-        <f:entry title="${%Quantity}">
-          <f:number name="quantity" min="1" max="9" default="1"/>
-        </f:entry>
-        <f:entry title="${%Choose flavor}">
-          <f:select field="flavor"/>
-        </f:entry>
-      </f:form>
-    </div>
-
-    <s:section title="Customizing the appearance and behaviour">
-      <div class="jdl-paragraph">All dialogs take a second optional parameter with options that allow to change certain
-        aspects.
-      </div>
-      <ul class="jdl-list">
-        <li><code>message</code>: Adds a message to the dialog
-        </li>
-        <li><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog
-        </li>
-        <li><code>cancelText</code>: Adjust the text of the Cancel button, defaults to
-          <code>Cancel</code>
-        </li>
-        <li><code>type</code>: Change the color of the <code>OK</code> button. Allowed values:
-          <code>destructive</code>
-        </li>
-        <li><code>minWidth</code>: Set the minimum width of the dialog, the default depends on the type of dialog
-        </li>
-        <li><code>maxWidth</code>: Set the maximum width of the dialog, defaults to
-          <code>475px</code>
-        </li>
-        <li><code>hideCloseButton</code>: Hides the close button in modal dialogs, defaults to
-          <code>false</code>
-        </li>
-        <li><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
-          prompt dialog as long as the input field is empty or contains only whitespace, defaults to
-          <code>false</code>
-        </li>
-        <li><code>submitButton</code>: Change the behaviour of the submit button in a form dialog. When
+    <s:section title="${%Customizing the appearance and behaviour}">
+      <s:paragraph>
+        All dialogs take a second optional parameter with options that allow to change certain aspects.
+      </s:paragraph>
+      <s:list>
+        <s:list-item><code>message</code>: Adds a message to the dialog.
+        </s:list-item>
+        <s:list-item><code>okText</code>: Adjust the text of the OK button, the default depends on the type of dialog.
+        </s:list-item>
+        <s:list-item><code>cancelText</code>: Adjust the text of the Cancel button, defaults to
+          <code>Cancel</code>.
+        </s:list-item>
+        <s:list-item><code>type</code>: Change the color of the <code>OK</code> button. Allowed values:
+          <code>destructive</code>.
+        </s:list-item>
+        <s:list-item><code>minWidth</code>: Set the minimum width of the dialog, the default depends on the type of dialog.
+        </s:list-item>
+        <s:list-item><code>maxWidth</code>: Set the maximum width of the dialog. Defaults to
+          <code>475px</code>.
+        </s:list-item>
+        <s:list-item><code>hideCloseButton</code>: Hides the close button in modal dialogs. Defaults to
+          <code>false</code>.
+        </s:list-item>
+        <s:list-item><code>allowEmpty</code>: When set to <code>false</code> the <code>OK</code> button will be disabled in the
+          prompt dialog as long as the input field is empty or contains only whitespace. Defaults to
+          <code>false</code>.
+        </s:list-item>
+        <s:list-item><code>submitButton</code>: Change the behaviour of the submit button in a form dialog. When
           <code>true</code>
           the form will be submitted to the <code>action</code> attribute of the form. When <code>false</code>, a
           <code>FormData</code>
           object is passed to the <code>resolve</code> method of the <code>Promise</code>.
           Defaults to
-          <code>true</code>
-        </li>
-      </ul>
+          <code>true</code>.
+        </s:list-item>
+        <s:list-item><code>preventCloseOnOutsideClick</code>: Prevents the dialog from closing when an outside click is performed.
+          Defaults to <code>false</code>.
+        </s:list-item>
+      </s:list>
     </s:section>
 
     <s:section title="${%OK Button texts}">
-      <div class="jdl-paragraph">${%buttontexts}</div>
-      <ul class="jdl-list">
-        <li><code>ok</code>: OK
-        </li>
-        <li><code>cancel</code>: Cancel
-        </li>
-        <li><code>yes</code>: Yes
-        </li>
-        <li><code>no</code>: No
-        </li>
-        <li><code>add</code>: Add
-        </li>
-        <li><code>save</code>: Save
-        </li>
-        <li><code>apply</code>: Apply
-        </li>
-        <li><code>submit</code>: Submit
-        </li>
-      </ul>
+      <s:paragraph>${%buttontexts}</s:paragraph>
+      <s:list>
+        <s:list-item><code>ok</code>: OK
+        </s:list-item>
+        <s:list-item><code>cancel</code>: Cancel
+        </s:list-item>
+        <s:list-item><code>yes</code>: Yes
+        </s:list-item>
+        <s:list-item><code>no</code>: No
+        </s:list-item>
+        <s:list-item><code>add</code>: Add
+        </s:list-item>
+        <s:list-item><code>save</code>: Save
+        </s:list-item>
+        <s:list-item><code>apply</code>: Apply
+        </s:list-item>
+        <s:list-item><code>submit</code>: Submit
+        </s:list-item>
+      </s:list>
     </s:section>
   </s:layout>
 </j:jelly>

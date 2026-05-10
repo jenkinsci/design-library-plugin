@@ -13,8 +13,10 @@
       <f:entry title="Password">
         <f:password />
       </f:entry>
-      <f:bottomButtonBar>
-        <f:submit value="${%Create}" />
+      <f:bottomButtonBar borderless="true">
+        <button class="jenkins-button jenkins-submit-button jenkins-button--primary">
+          Create
+        </button>
       </f:bottomButtonBar>
     </form>
   </l:ajax>

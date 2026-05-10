@@ -9,7 +9,10 @@ function showConfirm() {
         dialog.alert("You've done it.");
       },
       () => {
-        dialog.alert(null, { message: "OK, I'm not gonna do it." });
+        dialog.alert(null, {
+          title: "Alright then",
+          message: "I'm not gonna do it.",
+        });
       },
     );
 }

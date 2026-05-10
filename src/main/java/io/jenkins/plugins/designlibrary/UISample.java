@@ -2,9 +2,15 @@ package io.jenkins.plugins.designlibrary;
 
 import edu.umd.cs.findbugs.annotations.NonNull;
 import hudson.ExtensionPoint;
+import hudson.PluginWrapper;
 import hudson.model.Action;
 import hudson.model.Describable;
 import io.jenkins.plugins.prism.PrismConfiguration;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -15,11 +21,15 @@ import java.util.stream.Collectors;
 import jenkins.model.Jenkins;
 import org.kohsuke.accmod.Restricted;
 import org.kohsuke.accmod.restrictions.NoExternalUse;
+import org.kohsuke.stapler.Stapler;
+import org.kohsuke.stapler.StaplerRequest2;
 
 /**
  * @author Kohsuke Kawaguchi
  */
 public abstract class UISample implements ExtensionPoint, Action, Describable<UISample> {
+    private static final MarkdownComponentRenderer MARKDOWN_RENDERER = new MarkdownComponentRenderer();
+    static final String MARKDOWN_VIEW_ATTRIBUTE = UISample.class.getName() + ".markdownView";
 
     /**
      * Gets the URL-friendly name of the UI sample.
@@ -71,6 +81,51 @@ public abstract class UISample implements ExtensionPoint, Action, Describable<UI
 
     public UISampleDescriptor getDescriptor() {
         return (UISampleDescriptor) Jenkins.get().getDescriptorOrDie(getClass());
+    }
+
+    @Restricted(NoExternalUse.class)
+    public MarkdownComponentRenderer getMarkdownRenderer() {
+        return MARKDOWN_RENDERER;
+    }
+
+    @Restricted(NoExternalUse.class)
+    public boolean isMarkdownView() {
+        StaplerRequest2 request = Stapler.getCurrentRequest2();
+        if (request == null) {
+            return false;
+        }
+
+        Object forcedMarkdownView = request.getAttribute(MARKDOWN_VIEW_ATTRIBUTE);
+        if (Boolean.TRUE.equals(forcedMarkdownView)) {
+            return true;
+        }
+
+        String requestUri = request.getRequestURI();
+        return requestUri.endsWith(".md") || requestUri.endsWith(".md/");
+    }
+
+    /**
+     * Loads a file from this plugin's web resources, for example {@code AppBar/bottomAppBar.jelly}.
+     * Returns the file contents as UTF-8 text and throws if the path is invalid or unreadable.
+     */
+    @Restricted(NoExternalUse.class)
+    public String getCode(String path) throws IOException, URISyntaxException {
+        if (path == null || path.isBlank()) {
+            throw new IllegalArgumentException("Path must not be blank");
+        }
+
+        String normalizedPath = path.startsWith("/") ? path.substring(1) : path;
+        PluginWrapper wrapper = Jenkins.get().getPluginManager().getPlugin("design-library");
+
+        if (wrapper == null) {
+            throw new IllegalStateException("Could not resolve plugin wrapper for Design Library");
+        }
+
+        URL resource = wrapper.baseResourceURL.toURI().resolve(normalizedPath).toURL();
+
+        try (InputStream is = resource.openStream()) {
+            return new String(is.readAllBytes(), StandardCharsets.UTF_8);
+        }
     }
 
     @Restricted(NoExternalUse.class)

@@ -88,7 +88,7 @@ THE SOFTWARE.
       </s:code-panes>
     </s:section>
     <s:section>
-      <p class="jdl-paragraph">${%moreInfo}</p>
+      <s:paragraph>${%moreInfo}</s:paragraph>
     </s:section>
   </s:layout>
 </j:jelly>
