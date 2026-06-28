@@ -71,6 +71,7 @@
           </div>
         </s:preview>
         <s:code language="java"
+                code="notificationBar.show('Error', notificationBar.ERROR)"
                 callback="showError"
                 executable="true"/>
       </s:group>
