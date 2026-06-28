@@ -58,7 +58,7 @@
       </s:group>
     </s:section>
 
-    <s:section title="Error">
+    <s:section title="Error" description="Error notifications will persist until they've been manually dismissed.">
       <s:group>
         <s:preview>
           <div class="jenkins-notification jenkins-!-error-color">
