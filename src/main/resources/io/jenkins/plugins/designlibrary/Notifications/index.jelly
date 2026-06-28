@@ -14,7 +14,6 @@
           </div>
         </s:preview>
         <s:code language="java"
-                code="notificationBar.show('Default')"
                 callback="showDefault"
                 executable="true"/>
       </s:group>
@@ -33,7 +32,6 @@
           </div>
         </s:preview>
         <s:code language="java"
-                code="notificationBar.show('Success', notificationBar.SUCCESS)"
                 callback="showSuccess"
                 executable="true"/>
       </s:group>
@@ -52,7 +50,6 @@
           </div>
         </s:preview>
         <s:code language="java"
-                code="notificationBar.show('Warning', notificationBar.WARNING)"
                 callback="showWarning"
                 executable="true"/>
       </s:group>
@@ -78,7 +75,6 @@
 
     <s:section title="${%hide.title}" description="${%hide.description}">
       <s:code language="java"
-              code="notificationBar.hide()"
               callback="hideNotification"
               executable="true"/>
     </s:section>
