@@ -60,7 +60,7 @@ THE SOFTWARE.
     <gitHubRepo>jenkinsci/design-library-plugin</gitHubRepo>
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
     <jenkins.baseline>2.541</jenkins.baseline>
-    <jenkins.version>2.576</jenkins.version>
+    <jenkins.version>2.577</jenkins.version>
     <node.version>24.18.0</node.version>
     <npm.version>12.0.1</npm.version>
     <spotless.check.skip>false</spotless.check.skip>
