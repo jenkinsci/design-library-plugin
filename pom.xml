@@ -61,8 +61,8 @@ THE SOFTWARE.
     <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
     <jenkins.baseline>2.541</jenkins.baseline>
     <jenkins.version>2.577</jenkins.version>
-    <node.version>24.18.0</node.version>
-    <npm.version>12.0.1</npm.version>
+    <node.version>24.19.0</node.version>
+    <npm.version>12.0.2</npm.version>
     <spotless.check.skip>false</spotless.check.skip>
     <ban-junit4-imports.skip>false</ban-junit4-imports.skip>
   </properties>
@@ -72,7 +72,7 @@ THE SOFTWARE.
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
         <artifactId>bom-${jenkins.baseline}.x</artifactId>
-        <version>6751.v745d6a_31066a_</version>
+        <version>6815.v1fb_2a_fee3765</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
