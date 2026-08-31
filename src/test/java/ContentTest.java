@@ -43,8 +43,9 @@ class ContentTest {
                     .toList();
 
             links.forEach(e -> assertThat(e)
-                    .satisfiesAnyOf(listParam -> assertThat(listParam).endsWith("."), listParam -> assertThat(listParam)
-                            .endsWith(":")));
+                    .satisfiesAnyOf(
+                            listParam -> assertThat(listParam).endsWith("."),
+                            listParam -> assertThat(listParam).endsWith(":")));
         }
     }
 
