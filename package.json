@@ -24,6 +24,6 @@
     "autoprefixer": "10.6.1",
     "postcss-cli": "12.0.0",
     "sass": "1.105.2",
-    "prettier": "3.9.9"
+    "prettier": "3.9.10"
   }
 }
