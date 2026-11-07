@@ -17,7 +17,7 @@
       <div class="jenkins-app-bar jenkins-mobile-show">
         <div class="jenkins-app-bar__content">
           <h1>
-            ${it.displayName}
+            ${%Home}
           </h1>
         </div>
       </div>
