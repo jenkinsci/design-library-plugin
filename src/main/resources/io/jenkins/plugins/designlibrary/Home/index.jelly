@@ -15,9 +15,9 @@
       </style>
 
       <div class="jenkins-app-bar jenkins-mobile-show">
-        <div class="jenkins-app-bar__controls">
+        <div class="jenkins-app-bar__content">
           <h1>
-            ${%Design Library}
+            ${it.displayName}
           </h1>
         </div>
       </div>
