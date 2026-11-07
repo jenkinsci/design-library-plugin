@@ -14,7 +14,13 @@
         }
       </style>
 
-      <l:app-bar title="${%Design Library}" />
+      <div class="jenkins-app-bar jenkins-mobile-show">
+        <div class="jenkins-app-bar__controls">
+          <h1>
+            ${%Design Library}
+          </h1>
+        </div>
+      </div>
 
       <s:section hideBorder="true">
         <div class="app-card__container app-card__container--large">
