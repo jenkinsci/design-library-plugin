@@ -4,7 +4,7 @@
     <s:section hideBorder="true">
       <s:group>
         <s:preview>
-          <dialog class="jenkins-dialog" style="max-width: 475px; min-width: min(550px, 100vw);">
+          <dialog class="jenkins-dialog" style="max-width: min(475px, 100%); min-width: min(550px, 100%);">
             <div class="jenkins-dialog__title">
               <span>Create User</span>
               <button class="jenkins-dialog__title__button jenkins-dialog__title__close-button jenkins-button">
@@ -74,7 +74,7 @@
     <s:section title="${%Confirmations}">
       <s:group>
         <s:preview>
-          <dialog class="jenkins-dialog" open="" style="max-width: 475px; min-width: 450px;">
+          <dialog class="jenkins-dialog" open="" style="max-width: min(475px, 100%); min-width: min(450px, 100%);">
             <div class="jenkins-dialog__title">Do it</div>
             <div class="jenkins-dialog__contents">
               <div class="jenkins-form-item jenkins-!-text-color-secondary">Are you sure?</div>
