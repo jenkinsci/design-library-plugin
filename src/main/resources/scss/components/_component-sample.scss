@@ -68,8 +68,14 @@
   .jenkins-dialog {
     position: relative;
     width: 400px;
+    max-width: 100%;
     animation: none;
     box-shadow: var(--jdl-box-shadow);
+
+    // Let form items shrink with the dialog on narrow screens
+    .jenkins-form-item {
+      min-width: 0;
+    }
   }
 
   .jenkins-notice {

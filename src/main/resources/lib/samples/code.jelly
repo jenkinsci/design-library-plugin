@@ -38,6 +38,9 @@
           <d:invokeBody />
 
           <j:if test="${callback != null}">
+            <j:if test="${attrs.file != null}">
+              <script src="${rootURL}/plugin/design-library/${it.class.simpleName}/${attrs.file}" type="text/javascript" />
+            </j:if>
             <button class="jenkins-button jenkins-button--tertiary jenkins-!-build-color callback-button" data-callback="${callback}" tooltip="${%Execute code}">
               <l:icon src="symbol-play" />
             </button>
